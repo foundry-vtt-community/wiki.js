@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-10-05T17:14:27.262Z
+date: 2020-10-05T17:15:32.041Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -16,6 +16,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 <i class="fas fa-dice-d20"></i> [Foundry VTT Website](http://foundryvtt.com)
 <i class="fab fa-reddit"></i> [SubReddit](https://www.reddit.com/r/FoundryVTT/)
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/user/TamrielFoundry)
+<i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
 <i class="fab fa-gitlab"></i> [Gitlab](https://gitlab.com/foundrynet)
 <i class="fab fa-gitlab"></i> [Gitlab Issue Tracker](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
