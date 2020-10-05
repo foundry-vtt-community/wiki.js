@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-10-05T17:15:32.041Z
+date: 2020-10-05T17:52:11.968Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -31,9 +31,26 @@ dateCreated: 2020-09-18T19:13:46.176Z
 ## Public Foundry Demos
 Below you will find the offical Foundry VTT Demo, along with community maintained demos and systems.
 
+### [Foundry VTT](https://foundryvtt.com/demo/join)
+
+Password: `foundry`
+
+The official demo runs the latest release of FVTT and is available for anyone to test the system's features and interface
+
+### [The Forge](https://demo.forge-vtt.com/)
+
+Password: `forge`
+
+The Forge demo is hosted by The Forge . It includes a tutorial for first time users and additional tweaks to the Foundry VTT experience for The Forge hosting platform.
+
+### [Incarnate Gaming LLC](https://www.demo.incarnategamingllc.com:30000/)
+
+Password: `incarnate`
+
+The Incarnate demo is hosted by Incarnate Gaming LLC and includes an additional paid module that is not part of the official release
+
 ## Collaborative Modules
 Below are the Foundry VTT Community Wiki contributed modules. Anyone can share their content with the rest of the community via Pull request to be merged into a module update.
-      
       
 <i class="fas fa-magic"></i> [Foundry Community Macros](https://github.com/foundry-vtt-community/macros)
 Manifest:
@@ -41,12 +58,9 @@ Manifest:
 https://raw.githubusercontent.com/foundry-vtt-community/macros/master/module.json
 ```
 
-
 <i class="fas fa-table"></i> [Foundry Community Tables](https://github.com/foundry-vtt-community/tables)
 
 Manifest:
 ```
 https://raw.githubusercontent.com/foundry-vtt-community/tables/master/module.json
 ```
-
-
