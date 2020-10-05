@@ -1,14 +1,20 @@
 ---
-title: Community Game-Systems-In-Development
+title: Community Game-Systems
 description: 
 published: true
-date: 2020-09-23T01:32:54.451Z
+date: 2020-10-05T17:23:01.204Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
 ---
 
-The list below is an unofficial list of game systems that are still a work in progress. These are in various stages of development and may or may not be useable in their current state depending on your tolerance for bugs and rough edges.
+
+> ## Released Game Systems
+> Check the [Foundry Official package list](https://foundryvtt.com/packages/systems) to see a complete list of released game systems.
+
+## Game Systems in Development
+
+The list below is an unofficial and incomplete list of game systems that are still a work in progress. These are in various stages of development and may or may not be useable in their current state depending on your tolerance for bugs and rough edges.
 
 <!--tl=2-->	
 <!--ts-->
