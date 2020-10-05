@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-10-05T15:40:04.934Z
+date: 2020-10-05T17:14:27.262Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -21,10 +21,11 @@ dateCreated: 2020-09-18T19:13:46.176Z
 <i class="fab fa-gitlab"></i> [Gitlab Issue Tracker](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
 
 ## Discord Servers
-<i class="fab fa-discord"></i> [English](https://discordapp.com/invite/DDBZUDf) 
-<i class="fab fa-discord"></i> [Español](https://discord.gg/RSW3qsU)
-<i class="fab fa-discord"></i> [Français](https://discord.gg/pPSDNJk)
-<i class="fab fa-discord"></i> [Deutsches](https://discord.gg/XrKAZ5J)
+<i class="fab fa-discord"></i> [English](https://discordapp.com/invite/DDBZUDf) The official FoundryVTT Discord.
+<i class="fab fa-discord"></i> [Español](https://discord.gg/RSW3qsU) Unofficial Spanish community.
+<i class="fab fa-discord"></i> [Français](https://discord.gg/pPSDNJk) Unofficial French community.
+<i class="fab fa-discord"></i> [Deutsches](https://discord.gg/XrKAZ5J) Unofficial German community.
+<i class="fab fa-discord"></i> [Developers](https://discord.gg/2rHs78h) Unofficial module, system and content developers.
 
 ## Public Foundry Demos
 Below you will find the offical Foundry VTT Demo, along with community maintained demos and systems.
