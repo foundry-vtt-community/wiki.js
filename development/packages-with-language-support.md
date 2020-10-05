@@ -1,0 +1,418 @@
+---
+title: Packages With Language Support
+description: A list of packages with support for multiple languages and localization.
+published: true
+date: 2020-09-23T01:16:57.918Z
+tags: 
+editor: undefined
+dateCreated: 2020-09-21T19:17:29.991Z
+---
+
+The following is a list of modules that support localization either partially or completely.
+
+When editing, please maintain alphabetic order, and provide links to module, system, and translation repos where applicable.
+
+For new modules with support, please add the module to the *partial* support list until a translator verifies that your module is ready to be moved to the full support list. 
+
+**For translators:** I have created a Node.js script with KaKaRoTo's help, that can be used to check your own modules folder and generate a list similar to the one below, which will include a list of missing strings for each language file in each module. You can check out the [Gist here](https://gist.github.com/zeel01/02d4018b09794b20b3f237f949fd959e).
+
+# Systems With Complete Language Support
+- DnD 5e
+    - English
+# Systems With Partial Support
+- Toolkit13
+   - English
+# Modules With Complete Language Support
+- [Custom CSS](https://github.com/cswendrowski/FoundryVTT-Custom-CSS) - cswendrowski
+    - English
+- [Token Hotbar](https://github.com/janssen-io/foundry-token-hotbar) -Stan
+    - CN 中文（简体）
+    - DE Deutsch
+    - GB English
+    - ES Español
+    - FR Français
+    - JP 日本語
+    - KR 한국어
+    - NL Nederlands
+    - PL Polski
+    - BR Português (Brazil)
+    - RO Română
+
+# Modules With Partial Support
+- [5e Encounter Builder](https://github.com/RaySSharma/fvtt-encounter-builder) - RaySSharma
+    - EN - English
+- [5e Spell School Icons](https://gitlab.com/brunhine/Foundry-5e-SpellSchoolIcons) - Brunhine
+    - EN - English
+    - IT - Italian
+    - DE - German
+- [5e-Sheet Resources Plus](https://github.com/ardittristan/5eSheet-resourcesPlus/tree/master) - ardittristan#0001
+    - EN - English
+    - PT-BR - Português do Brasil
+    - ES - Castellano
+- [About Face](https://github.com/eadorin/about-face) - Eadorin (eadorin@gmail.com)
+    - EN - English
+    - PT-BR - Português (Brasil)
+    - ES - Castellano
+- [About Time](https://gitlab.com/tposney/about-time) - @tposney
+    - EN - English
+    - KO - Korean
+    - JA -  日本語
+    - FR - Français
+- [Adjusted Movement](https://github.com/eadorin/adjusted-movement) - Eadorin
+    - EN - English
+- [Adventure Importer / Exporter](https://github.com/cstadther/adventure-import-export) - Chris Stadther
+    - EN - English
+    - PT-BR - Português (Brasil)
+- [Background Volume](https://github.com/mtvjr/background-volume) - Michael Volling
+    - CN - 中文
+    - DE - Deutsch
+    - EN - English
+    - HI - हिन्दी
+- [Better NPC Sheet 5e](https://github.com/syl3r86/BetterNPCSheet5e) - Felix#6196
+    - EN - English
+    - JA - Japanese
+    - KO - Korean
+    - ES - Spanish
+- [Better Roll Tables](https://github.com/ultrakorne/better-rolltables) - Ultrakorne#6240
+    - EN - English
+    - KO - Korean
+    - PT-BR - Português (Brasil)
+    - ES-ES - Castellano
+- [Better Rolls for 5e](https://github.com/RedReign/FoundryVTT-BetterRolls5e/tree/master/betterrolls5e) - Red Reign#5128
+    - EN - English
+    - FR - Français (French)
+    - ES - Español (Spanish)
+    - PT-BR - Português (Brasil)
+    - JA - 日本語 (Japanese)
+    - KO - 한국어 (Korean)
+- [Better Rolls for Savage Worlds](https://github.com/javierriveracastro/betteroll-swade) - Javier Rivera
+    - EN - English
+- [BubbleRolls](https://gitlab.com/mesfoliesludiques/foundryvtt-bubblerolls) - U~man
+    - EN - English
+    - FR - French (FRANCE)
+    - JA - Japanese
+    - CN - Chinese
+- [Bullseye](https://gitlab.com/Ionshard/foundry-vtt-chatdamagebuttons-beyond20) - Victor Ling 
+    - EN - English
+- [Calendar/Weather](https://github.com/DasSauerkraut/calendar-weather) - Michael Sebelski [DasSauerkraut#3215], about-time by tposney#1462
+    - EN - English
+    - FR - Français
+    - KO - Korean
+    - DE - Deutsch
+    - JA - 日本語
+    - PT-BR - Português (Brasil)
+- [Card Deck Importer (SDF compatible) ](https://github.com/Brownie79/fvtt-cardimporter) - spacemandev
+    - EN - English
+- [Cautious Gamemaster's Pack](https://github.com/ShoyuVanilla/FoundryVTT-CGMP) - Shoyu Vanilla
+    - EN - English
+    - KO - 한국어 (Korean)
+    - JA - 日本語
+    - PT-BR - Português (Brasil)
+    - ES - Castellano
+- [Chat Damage Buttons - Beyond20 Edition](https://gitlab.com/Ionshard/foundry-vtt-bullseye) - Victor Ling  (http://ionshard.com)
+    - EN - English
+- [Chat Merge](https://github.com/FoundryModule/Modules/tree/master/ChatMerge) - Hello World
+    - EN - English
+    - KO - 한국어 (Korean)
+- [Chat Message Accessibility Indicators](https://github.com/schultzcole/FVTT-Chat-Message-Accessibility-Indicators) - Cole Schultz (cole#9640)
+    - EN - English
+- [Chat Portrait](https://github.com/ShoyuVanilla/FoundryVTT-Chat-Portrait) - Shoyu Vanilla
+    - EN - English
+    - KO - 한국어 (Korean)
+    - PT-BR - Português (Brasil)
+- [Combat Enhancements](https://gitlab.com/asacolips-projects/foundry-mods/combat-enhancements) - Asacolips
+    - EN - English
+- [Combat Ready!](https://github.com/JacobMcAuley/combatready) - Ken L. maintained by Shawn Milligan [n3rf_herder#9026]
+    - EN - English
+    - JA - 日本語 (Japanese)
+    - KO - 한국어 (Korean)
+    - PT-BR - Português (Brasil)
+    - FR - Français (French)
+    - NL - Nederlands (Dutch)
+    - IT - Italiano (Italian)
+    - ZH-SHAN - 简体中文 (Chinese [Simplified])
+- [Combat Utility Belt](https://github.com/death-save/combat-utility-belt) - Evan Clarke [errational#2007]
+    - EN - English
+    - JA - 日本語
+    - KO - 한국어
+    - PT-BR - português do Brasil
+- [Compendium Browser](https://github.com/syl3r86/compendium-browser) - Felix#6196
+    - EN - English
+    - JA - Japanese
+    - FR - French (FRANCE)
+- [Cursor Hider](https://gitlab.com/foundry-azzurite/cursor-hider) - Azzurite#2004
+    - EN - undefined
+- [Custom Css](https://github.com/cswendrowski/FoundryVTT-Custom-CSS) - Cody Swendrowski 
+    - EN - English
+- [Custom Hotbar](https://github.com/Norc/foundry-custom-hotbar) - Norc
+    - EN - English
+- [Cycle Token Stack](https://github.com/aka-beer-buddy/fvtt-cycle-token-stack) - BeerBuddy
+    - EN - English
+- [Data Toolbox for FoundryVTT](https://github.com/SvenWerlen/fvtt-data-toolbox) - Sven Werlen
+    - EN - English
+    - FR - French
+- [Default Image Overrider](https://github.com/schultzcole/FVTT-Default-Image-Overrider) - Cole Schultz (cole#9640)
+    - EN - English
+- [Dice So Nice!](https://gitlab.com/riccisi/foundryvtt-dice-so-nice) - Simone, JDW
+    - EN - English
+    - IT - Italian
+    - ES - Spanish
+    - CN - Chinese
+    - KO - Korean
+    - PT-BR - Português (Brasil)
+- [Dice So Pathfinder](https://gitlab.com/mistamichal/dice-so-pathfinder) - Simone, hacks by Cody Swendrowski, Pathfinder fork by Michael Tokarski
+    - EN - English
+    - IT - Italian
+    - CN - Chinese
+    - KR - Korean
+- [Discord Rich Presence](https://github.com/cswendrowski/FoundryVTT-Discord-Rich-Presence) - Cody Swendrowski 
+    - EN - English
+- [DnD5e Ui](https://gitlab.com/sasmira/dnd-ui) - Sasmira
+    - EN - English
+    - FR - French (French)
+    - PT-BR - Português (Brasil)
+- [DrawingTokenizer](https://github.com/KayelGee/DrawingTokenizer) - KayelGee - KayelGee#5241
+    - EN - undefined
+- [Dynamic Illumination](https://github.com/delVhariant/illumination) - delVhar
+    - EN - English
+- [Dynamic effects](https://gitlab.com/tposney/dynamiceffects) - tposney
+    - EN - English
+    - JA -  日本語
+    - KO - Korean
+    - CN - 中文
+    - PT-BR - Português (Brasil)
+    - FR - Français
+- [E-Z Roller](undefined) - Deuce
+    - EN - English
+- [Everybody Look](undefined) - Winks
+    - EN - English
+- [FXMaster](https://gitlab.com/mesfoliesludiques/foundryvtt-fxmaster) - U~man
+    - EN - English
+    - FR - French (FRANCE)
+    - CN - Chinese
+    - KO - Korean
+- [Forien's Custom Fonts](https://github.com/Forien/foundryvtt-forien-custom-fonts) - Forien — Forien#2130
+    - EN - English
+    - PL - Polski
+- [Forien's Easy Polls](https://github.com/Forien/foundryvtt-forien-easy-polls) - Forien — Forien#2130
+    - EN - English
+    - PL - Polski
+- [Forien's Quest Log](https://github.com/Forien/foundryvtt-forien-quest-log) - Forien — Forien#2130
+    - DE - Deutsch
+    - CN - 中文（简体
+    - EN - English
+    - ES - Español
+    - FR - Français
+    - JA - 日本語
+    - KO - 한국어
+    - PL - Polski
+    - PT-BR - Português (Brasil)
+- [Forien's Scene Navigator](https://github.com/Forien/foundryvtt-forien-scene-navigator) - Forien — Forien#2130
+    - EN - English
+    - PL - Polski
+- [Forien's Token Rotation](https://github.com/Forien/foundryvtt-forien-token-rotation) - Forien — Forien#2130
+    - EN - English
+    - PL - Polski
+- [Forien's Unidentified Items](https://github.com/Forien/foundryvtt-forien-unidentified-items) - Forien — Forien#2130
+    - EN - English
+    - KO - 한국어
+    - PL - Polski
+    - PT-BR - Português (Brasil)
+- [GM Notes](https://github.com/syl3r86/gm-notes) - Felix#6196
+    - EN - English
+    - JA - Japanese
+    - FR - French (FRANCE)
+- [GM Toolkit (WFRP4e)](https://github.com/Jagusti/fvtt-wfrp4e-gmtoolkit) - Jagusti
+    - EN - English
+    - FR - French
+- [Group Initiative](https://github.com/tonifisler/foundry-group-initiative) - thorni
+    - EN - English
+    - FR - French
+    - KO - Korean
+- [Health Estimate](https://gitlab.com/tsuki.no.mai/healthestimate) - Shylight
+    - EN - English
+    - RU - Русский (Russian)
+    - KO - 한국어 (Korean)
+    - FR - Français (French)
+- [Hidden Initiative](https://github.com/sfuqua/fvtt-hidden-intiative) - Steven Fuqua
+    - EN - English
+- [Hot Seat Observer](https://github.com/zzarek/FoundryHotSeatObserver) - Zzarek
+    - EN - English
+- [Inline Webviewer](https://github.com/ardittristan/VTTInlineWebviewer) - ardittristan#0001
+    - EN - English
+- [Item Containers](https://gitlab.com/tposney/itemcollection/tree/master) - tposney
+    - EN - English
+    - KO - Korean
+    - JA -  日本語
+    - PT-BR - Português (Brasil)
+    - DE - Deutsch
+- [Item Delete Check](https://gitlab.com/tposney/item-delete-check/tree/master) - tposney
+    - EN - English
+    - JA -  日本語
+- [Journal Sync](https://github.com/sytone/foundry-vtt-journal-sync) - Sytone
+    - EN - English
+- [Layer Hotkeys](https://github.com/Moerill/Layer-Hotkeys) - Moerill
+    - EN - English
+    - DE - Deutsch
+- [Let Me Roll That For You!](https://github.com/kakaroto/fvtt-module-lmrtfy) - KaKaRoTo & iotech
+    - EN - English
+    - JA - 日本語 (Japanese)
+    - DE - German
+    - PT-BR - Português (Brasil)
+- [Loot Sheet NPC Pathfinder1](https://github.com/SvenWerlen/fvtt-loot-sheet-npc-pf1) - Sven Werlen (originally from Jan Ole Peek (ChalkOne) and Charles Miller (Kage))
+    - EN - English
+    - FR - French
+- [Maestro](https://github.com/death-save/maestro) - Evan Clarke (errational#2007)
+    - EN - English
+    - JA - 日本語
+    - KO - 한국어
+- [Mageflame Expanded](https://github.com/cswendrowski/FoundryVTT-Mageflame-Expanded) - Cody Swendrowski 
+    - EN - English
+- [Magic Items](https://gitlab.com/riccisi/foundryvtt-magic-items) - Simone
+    - EN - English
+    - IT - Italian
+    - KO - Korean
+    - PT-BR - Português (Brasil)
+- [Mess - Moerills enhancing super-suit(e)](https://github.com/Moerill/mess) - Moerill
+    - EN - English
+    - DE - Deutsch
+    - JA - 日本語
+    - PT-BR - Português (Brasil)
+- [Metric System for D&D5e](https://gitlab.com/foundry-vtt/foundryvtt-metricsystem-module/-/tree/master) - Melithian539
+    - EN - English
+    - PT-BR - Português (Brasil)
+- [Minor Quality of Life Improvements](https://gitlab.com/tposney/minor-qol/tree/master) - tposney
+    - EN - English
+    - JA -  日本語
+    - KO - Korean
+    - CN - 中文
+    - FR - Français
+    - PT-BR - Português (Brasil)
+- [ModBox](https://gitlab.com/mesfoliesludiques/foundryvtt-modbox) - U~man
+    - EN - English
+    - FR - French (FRANCE)
+- [Monster Blocks](https://github.com/zeel01/MonsterBlocks) - zeel
+    - EN - English
+- [Mount Up!](https://github.com/Brunhine/MountUp) - Brunhine
+    - EN - English
+    - JA -  日本語
+- [Obsidian Character Sheets](https://bitbucket.org/Fyorl/obsidian) - Kim Mantas
+    - EN - English
+    - DE - Deutsch
+    - JA - 日本語
+- [OneJournal](https://gitlab.com/fvtt-modules-lab/one-journal) - Sunspots
+    - EN - English
+- [Pathfinder Ui](https://gitlab.com/sasmira/pathfinder-ui) - Sasmira
+    - EN - English
+    - FR - French (French)
+    - PT-BR - Português (Brasil)
+- [Personal Markers](https://github.com/ardittristan/VttPersonalMarkers) - ardittristan#0001
+    - EN - English
+- [Pin Cushion](https://github.com/death-save/pin-cushion) - Evan Clarke [errational#2007]
+    - EN - English
+- [Pings](https://gitlab.com/foundry-azzurite/pings) - Azzurite#2004
+    - EN - undefined
+- [Point of Vision](https://github.com/eadorin/point-of-vision) - Eadorin (eadorin@gmail.com)
+    - EN - English
+- [Printable /stream](https://github.com/ShoyuVanilla/FoundryVTT-Printable-Stream) - Shoyu Vanilla
+    - EN - English
+    - KO - 한국어 (Korean)
+- [RollTable Buttons](https://github.com/RaySSharma/fvtt-rolltable-buttons) - RaySSharma
+    - EN - English
+- [Route-Finder](https://github.com/Exote/foundry-vtt-pathfinding) - Exote (Moe#6034)
+    - EN - English
+- [SWADE Macros Simple](https://github.com/Brownie79/swade-macros-simple) - undefined
+    - EN - English
+    - FR - Français
+    - DE - Deutsch
+    - PT - Portugues
+- [SWADE Pulp Edition](https://gitlab.com/mesfoliesludiques/foundryvtt-swade-pulpedition) - U~man, Mark(qdwag)
+    - EN - English
+    - FR - French (FRANCE)
+- [SWADE Statblock Importer](https://github.com/Brownie79/fvtt-swade-stat-block-parser) - spacemandev
+    - EN - English
+    - ES - Spanish
+- [Search Anywhere](https://gitlab.com/riccisi/foundryvtt-search-anywhere) - Simone
+    - EN - English
+    - IT - Italian
+- [Show Door Controls](https://github.com/wsaunders1014/showdooricons) - undefined
+    - EN - English
+- [Show Drag Distance](https://github.com/wsaunders1014/showdragdistance) - undefined
+    - EN - English
+- [Sidebar Aesthetics](undefined) - Furyspark
+    - EN - English
+    - BR - Brazilian
+- [Tabbed Chatlog](https://github.com/cswendrowski/FoundryVTT-tabbed-chatlog) - Cody Swendrowski 
+    - EN - English
+- [Target Enhancements](https://github.com/eadorin/target-enhancements) - Eadorin
+    - EN - English
+- [The Furnace](https://github.com/kakaroto/fvtt-module-furnace) - KaKaRoTo
+    - EN - English
+    - PT-BR - Português (Brasil)
+- [Tidy5e Sheet](https://github.com/sdenec/tidy5e-sheet) - sdenec#3813
+    - EN - English
+    - DE - Deutsch
+    - IT - Italian
+    - JA - 日本語 (Japanese)
+    - KO - 한국어 (Korean)
+    - PT-BR - Brazilian Portuguese
+    - FR - Francais
+- [Token Action HUD](https://github.com/espositos/fvtt-tokenactionhud) - ^ and stick#0520
+    - EN - English
+    - KO - Korean
+    - PT-BR - Brazilian Portuguese
+    - ES - Spanish
+- [Token Auras](https://bitbucket.org/Fyorl/token-auras) - Kim Mantas
+    - EN - English
+    - PT-BR - Português (Brasil)
+- [Token Health](https://github.com/tonifisler/foundry-token-health) - thorni
+    - EN - English
+    - FR - Français
+- [Token Hotbar](https://github.com/janssen-io/foundry-token-hotbar) - Stan Janssen
+    - DE - Deutsch (German)
+    - EN - English
+    - ES - Español (Spanish)
+    - FR - Français (French)
+    - JA - 日本語 (Japanese)
+    - KO - 한국어 (Korean)
+    - NL - Nederlands (Dutch)
+    - PL - Polski (Polish)
+    - PT-BR - Português (Brasil)
+    - RO - Romănă (Romanian)
+    - ZH-HANS - 中文（简体）(Chinese)
+- [Tokenmagic](https://github.com/Feu-Secret/Tokenmagic) - SecretFire
+    - EN - English
+    - FR - French (FRANCE)
+- [Torch](undefined) - Deuce
+    - EN - English
+    - CN - 中文
+    - FR - Français
+- [Travel Pace for D&D 5e](undefined) - Innocenti
+    - PT-BR - Português (Brasil)
+    - EN - English
+    - ES - Español
+- [Turn Marker](https://github.com/Brunhine/TurnMarker) - Brunhine
+    - EN - English
+    - DE - German
+    - KO - Korean
+    - JA -  日本語
+- [Virtual Tabletop Assets - D&D Beyond Integration](https://www.vttassets.com/assets/vtta-dndbeyond) - Sebastian Will
+    - EN - English
+    - DE - Deutsch
+- [Virtual Tabletop Assets - Iconizer](https://www.vttassets.com/modules/vtta-iconizer) - Sebastian Will
+    - EN - English
+    - DE - Deutsch
+- [Virtual Tabletop Assets - Party overview](https://www.vttassets.com/assets/vtta-party) - Sebastian Will (vttassets@gmail.com)
+    - EN - English
+    - DE - Deutsch
+    - PT-BR - Português Brasileiro
+- [Virtual Tabletop Assets - Tokenizer](https://www.vttassets.com/assets/vtta-tokenizer) - Sebastian Will (vttassets@gmail.com)
+    - EN - English
+    - DE - Deutsch
+- [WFRP4 Forien's Armoury](https://github.com/Forien/foundryvtt-forien-armoury) - Forien — Forien#2130
+    - DE - Deutsch
+    - EN - English
+    - FR - Français
+    - PL - Polski
+- [World Anvil Integration](https://gitlab.com/foundrynet/world-anvil) - Atropos
+    - EN - English
