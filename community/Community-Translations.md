@@ -1,10 +1,10 @@
 ---
-title: Community Translations
+title: Translations
 description: 
 published: true
-date: 2020-09-23T01:33:30.137Z
+date: 2020-10-06T02:20:46.894Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
 ---
 
