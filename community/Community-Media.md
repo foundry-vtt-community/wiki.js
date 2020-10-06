@@ -1,10 +1,10 @@
 ---
-title: Community Media
+title: Maps, Art & Media
 description: 
 published: true
-date: 2020-09-23T01:33:07.808Z
+date: 2020-10-06T02:21:24.607Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:24:38.840Z
 ---
 
