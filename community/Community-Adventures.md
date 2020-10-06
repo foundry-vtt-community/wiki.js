@@ -1,10 +1,10 @@
 ---
-title: Community Adventures
+title: Adventures
 description: 
 published: true
-date: 2020-09-23T01:32:44.717Z
+date: 2020-10-06T02:21:43.534Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:24:10.616Z
 ---
 
