@@ -2,7 +2,7 @@
 title: Community Game-Systems
 description: 
 published: true
-date: 2020-10-06T00:08:19.035Z
+date: 2020-10-06T00:17:35.010Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:31.095Z
@@ -37,7 +37,7 @@ The list below is an unofficial list of game systems.
       * [7th Sea 2nd Edition](#7th-sea-2nd-edition)
    * [Runehammer Games](#runehammer-games)
       * [Index Card RPG](#index-card-rpg)
-   * [One-Page Systems](#one-page)	
+   * [One-Page Systems](#one-page-systems)	
       * [Everyone is John](#everyone-is-john)	
       * [Honey Heist](#honey-heist)	
       * [Lasers & Feelings](#lasers-and-feelings)	
@@ -303,6 +303,53 @@ This FoundryVTT System uses trademarks and/or copyrights owned by Chaosium Inc/M
 [Index Card RPG](https://www.icrpg.com/) (ICRPG) by [Runehammer Games](https://www.runehammer.online/) takes classic tabletop mechanics for telling stories, making monsters and rolling dice, but throws out all the clunky parts that keep most folks from trying an adventure or two.
 
 For more information, visit my [Personal Blog](https://alphacore.be/foundryvtt-icrpg/), the [Foundry VTT Package](https://foundryvtt.com/packages/icrpg/) page, or the [GitHub System Repository](https://github.com/TomCosaert/FoundryVTT-ICRPG/).
+
+---
+
+# One-Page Systems
+
+## Everyone is John
+
+* **Author**: Parker S. (sparkcities#2000 on Discord)
+* **Version**: 1.4	
+* **Foundry VTT Compatibility**: 0.6.6
+* **Translation Support**: EN (full)	
+
+### Link(s) to Game System	
+* [https://github.com/sparkcity/fvtt-eij](https://github.com/sparkcity/fvtt-eij)
+
+### Description	
+Everyone is John is a competitive roleplaying game by Michael Sullivan and designed to be played by three or more horrible people. This implementation of this adaptable, one-page system is based entirely on Atropos's Simple Worldbuilding System and provides the rules for Everyone in John, automated rolling, and a macro for determining the winner at the end of the game based on points accumulated.
+
+---
+
+## Honey Heist
+
+* **Author**: James Haywood
+* **Version**: 1.0	
+* **Foundry VTT Compatibility**: 0.6.6
+* **Translation Support**: EN (full)	
+
+### Link(s) to Game System	
+* [https://github.com/jbhaywood/foundryvtt-honeyheist/](https://github.com/jbhaywood/foundryvtt-honeyheist/)
+
+### Description	
+It’s Honeycon. You are going to undertake the greatest heist the world has ever seen. Two Things – One: You have a complex plan that requires precise timing. Two: You are a GODDAMN BEAR.
+
+---
+
+## Lasers & Feelings
+
+* **Author**: Parker S. (sparkcities#2000 on Discord)
+* **Version**: 0.6
+* **Foundry VTT Compatibility**: 0.6.6
+* **Translation Support**: EN (full)	
+
+### Link(s) to Game System	
+* [https://github.com/sparkcity/fvtt-laf](https://github.com/sparkcity/fvtt-laf)
+
+### Description	
+An implementation for Foundry VTT of the one-page system, Lasers & Feelings v1.3, by John Harper.
 
 ---
 
