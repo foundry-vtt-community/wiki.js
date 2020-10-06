@@ -2,13 +2,11 @@
 title: Compendia
 description: 
 published: true
-date: 2020-09-23T01:31:31.289Z
+date: 2020-10-06T02:57:48.847Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
 ---
-
-This page is currently missing content.
 
 # Tips and Tricks
 
