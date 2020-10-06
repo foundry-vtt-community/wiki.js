@@ -1,8 +1,8 @@
 ---
-title: WIP Game-Systems
+title: Game-Systems (WIP)
 description: 
 published: true
-date: 2020-10-06T02:19:06.252Z
+date: 2020-10-06T02:22:30.281Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
