@@ -2,7 +2,7 @@
 title: Community Game-Systems
 description: 
 published: true
-date: 2020-10-05T17:23:01.204Z
+date: 2020-10-06T00:00:20.372Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -398,6 +398,18 @@ To install, just import the system.json file to your FoundryVTT installation.
 * Coming soon!	
 ### Description	
 An implementation of the German RPG "Splittermond" (Uhrwerk Verlag) as a game system for Foundry VTT. Still in very early development.
+
+---	
+
+## (Unofficial) The Witcher TRPG	
+* **Author**: Parker S. (Discord: sparkcities#2000)
+* **Version**: v0.1
+* **Foundry VTT Compatibility**: 0.6.6	
+* **Translation Support**: English	
+### Link(s) to Game System	
+* https://github.com/sparkcity/fvtt-witcher
+### Description	
+An unofficial system to provide support for The Witcher TRPG by R. Talsorian Games in FVTT. Permitted for development and publishing on FVTT by R. Talsorian Games.
 
 ---	
 
