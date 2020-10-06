@@ -1,8 +1,8 @@
 ---
-title: Community Game-Systems
+title: Game-Systems
 description: 
 published: true
-date: 2020-10-06T00:17:35.010Z
+date: 2020-10-06T02:19:37.603Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:31.095Z
