@@ -2,7 +2,7 @@
 title: Game-Systems
 description: 
 published: true
-date: 2020-10-09T18:11:26.387Z
+date: 2020-10-09T19:26:13.403Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:31.095Z
@@ -11,42 +11,6 @@ dateCreated: 2020-09-23T00:24:31.095Z
 Get Game Systems for Foundry VTT on the official site: [https://foundryvtt.com/packages/](https://foundryvtt.com/packages/)
 
 The list below is an unofficial list of game systems.
-
-<!--tl=2-->	
-<!--ts-->
-   * [Dungeons &amp; Dragons](#dungeons--dragons)	
-      * [D&amp;D5e](#dd5e)	
-   * [Pathfinder](#pathfinder)	
-      * [Pathfinder 1e](#pathfinder-1e)	
-      * [Pathfinder 2e](#pathfinder-2e)	
-   * [Warhammer Fantasy](#warhammer-fantasy)	
-      * [WFRP 4E System](#wfrp-4e-system)	
-   * [13th Age](#13th-age)	
-      * [13th Age System (Archmage)](#13th-age-system-archmage)	
-   * [Fate](#fate)	
-      * [Fate Core &amp; Accelerated](#fate-core--accelerated)	
-   * [Starfinder](#starfinder)	
-      * [starfinder](#starfinder-1)	
-   * [Shadowrun](#shadowrun)	
-      * [Shadowrun 5th Edition](#shadowrun-5th-edition)	
-   * [Savage Worlds](#savage-worlds)	
-      * [Savage Worlds Adventure Edition](#savage-worlds-adventure-edition)	
-   * [Adventure Game Engine (AGE)](#adventure-game-engine-age)
-      * [Blue Rose](#blue-rose)
-   * [Chaosium](#chaosium)
-      * [7th Sea 2nd Edition](#7th-sea-2nd-edition)
-   * [Runehammer Games](#runehammer-games)
-      * [Index Card RPG](#index-card-rpg)
-   * [One-Page Systems](#one-page-systems)	
-      * [Everyone is John](#everyone-is-john)	
-      * [Honey Heist](#honey-heist)	
-      * [Lasers & Feelings](#lasers-and-feelings)	
-   * [Other](#other)	
-      * [Simple Worldbuilding System](#simple-worldbuilding-system)	
-   * [Appendix](#appendix)	
-      * [Appendix A: Adding a Game System](#appendix-a-adding-a-game-system)	
-      * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)	
-<!--te-->	
 
 # Dungeons & Dragons	
 
