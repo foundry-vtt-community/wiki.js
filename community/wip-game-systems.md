@@ -2,7 +2,7 @@
 title: Game-Systems (WIP)
 description: 
 published: true
-date: 2020-10-09T18:11:04.987Z
+date: 2020-10-09T19:45:11.919Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -15,38 +15,6 @@ dateCreated: 2020-09-23T00:24:22.792Z
 ## Game Systems in Development
 
 The list below is an unofficial and incomplete list of game systems that are still a work in progress. These are in various stages of development and may or may not be useable in their current state depending on your tolerance for bugs and rough edges.
-
-<!--tl=2-->	
-<!--ts-->
-   * [Star Wars](#star-wars)	
-      * [Star Wars FFG](#star-wars-ffg)
-   * [Powered by the Apocalypse](#powered-by-the-apocalypse)
-      * [Monster of the Week](#monster-of-the-week)
-   * [Blades in the Dark](#blades-in-the-dark)
-   * [Chronicles of Darkness](#chronicles-of-darkness)
-   * [Kryx RPG](#kryx-rpg)
-   * [Star Trek Adventures (2d20)](#star-trek-adventures-(2d20))
-   * [CyberpunkRED](#cyberpunkred)
-   * [ZWEIHÄNDER Grim & Perilous RPG](#zweihÄnder-grim--perilous-rpg)
-   * [B/X D&D](#bx-dd)
-   * [CallofCthulhu(7thEd.)](#callofcthulhu7thed)
-   * [Stars Without Number: Revised Edition](#stars-without-number-revised-edition)
-   * [Tales from the Loop / Things from the Flood](#things-from-the-flood)
-   * [Rêve de Dragon](#reve-de-dragon)
-   * [Call Of Cthulhu 7th Ed.](#call-of-cthulhu-7)
-   * [Lancer](#lancer)
-   * [RWBY](#rwby)
-   * [Torchbearer](#torchbearer)
-   * [Wolves of God](#wolves-of-god) 
-   * [Old School Essentials](#old-school-essentials)
-   * [FVTT Dishonored (2d20)](#fvtt-dishonored-2d20)
-   * [Pokemon Tabletop United (PTU)](#pokemon-tabletop-united)
-   * [Splittermond](#splittermond)
-   * [(Unofficial) The Witcher TRPG](#unofficial-the-witcher-trpg)
-   * [Appendix](#appendix)	
-      * [Appendix A: Adding a Game System](#appendix-a-adding-a-game-system)	
-      * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)
-<!--te-->	
 
 # Star Wars	
 
