@@ -2,7 +2,7 @@
 title: Game-Systems (WIP)
 description: 
 published: true
-date: 2020-10-09T19:45:11.919Z
+date: 2020-10-09T19:49:11.263Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -380,9 +380,23 @@ An implementation of the German RPG "Splittermond" (Uhrwerk Verlag) as a game sy
 ### Description	
 An unofficial system to provide support for The Witcher TRPG by R. Talsorian Games in FVTT. Permitted for development and publishing on FVTT by R. Talsorian Games.
 
----	
+---
 
-```		
+## Twodsix - Cepheus & Traveller (Unofficial)
+* **Author**: Runewell
+* **Version**: 0.6.23
+* **Foundry VTT Compatibility**: 0.6
+* **Translation Support**: ??
+### Link(s) to Game System
+* https://foundryvtt.com/packages/twodsix/
+### Description
+Twodsix: A system for use with the Cepheus Engine Core Rules, Traveller (unofficial), and other similar games.
+
+This Product is derived from the Traveller System Reference Document and other Open Gaming Content made available by the Open Gaming License, and does not contain closed content from products published by either Mongoose Publishing or Far Future Enterprises. This Product is not affiliated with either Mongoose Publishing or Far Future Enterprises, and it makes no claim to or challenge to any trademarks held by either entity. The use of the Traveller System Reference Document does not convey the endorsement of this Product by either Mongoose Publishing or Far Future Enterprises as a product of either of their product lines.
+
+Cepheus Engine and Samardan Press™ are the trademarks of Jason "Flynn" Kemp; we are not affiliated with Jason "Flynn" Kemp or Samardan Press™".
+
+---
 
 # Appendix	
 
