@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2020-10-12T18:09:08.167Z
+date: 2020-10-12T18:11:18.268Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -12,16 +12,15 @@ You can use Docker to run Foundry VTT. You may use several different approaches.
 
 Here is a table of the approaches detailed within as well as notes on their complexity and extra features.
 
-| Author      | Difficulty | Extra Features     | Notes                        |
-| ----------- | ---------- | ------------------ | ---------------------------- |
-| Felddy      | simple     |                    | Easy, Configurable           |
-| mikysan     | simple     |                    | Simple Dockerfile            |
-| Jake        | simple     |                    | Updated version of mikysan's |
-| trotroyanas | moderate   |                    |                              |
-| thomasfa18  | moderate   |                    |                              |
-| DireckHit   | complex    | Traefik, Portainer | Good for Remote Hosting      |
-| Vicknesh    | complex    | Caddy for TLS      |                              |
-
+| Author                                     | Difficulty | Extra Features     | Notes                        |
+| ------------------------------------------ | ---------- | ------------------ | ---------------------------- |
+| [Felddy](#mikysans-simple-dockerfile)      | simple     |                    | Easy, Configurable           |
+| [mikysan](#mikysans-simple-dockerfile)     | simple     |                    | Simple Dockerfile            |
+| [Jake](#jake)        | simple     |                    | Updated version of mikysan's |
+| [trotroyanas](#trotroyanass-docker-compose-setup) | moderate   |                    |                              |
+| [thomasfa18](#mikysans-simple-dockerfile)  | moderate   |                    |                              |
+| [DireckHit](#direckthits-guide-to-running-fvtt-docker-with-traefik-and-portainer)   | complex    | Traefik, Portainer | Good for Remote Hosting      |
+| [Vicknesh](#mikysans-simple-dockerfile)    | complex    | Caddy for TLS      |                              |
 
 ---
 
