@@ -2,19 +2,36 @@
 title: Docker
 description: 
 published: true
-date: 2020-09-23T01:36:41.240Z
+date: 2020-10-12T18:09:08.167Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
 ---
 
 You can use Docker to run Foundry VTT. You may use several different approaches.
 
-## mikysan's Dockerfile (Recommended Approach)
+Here is a table of the approaches detailed within as well as notes on their complexity and extra features.
+
+| Author      | Difficulty | Extra Features     | Notes                        |
+| ----------- | ---------- | ------------------ | ---------------------------- |
+| Felddy      | simple     |                    | Easy, Configurable           |
+| mikysan     | simple     |                    | Simple Dockerfile            |
+| Jake        | simple     |                    | Updated version of mikysan's |
+| trotroyanas | moderate   |                    |                              |
+| thomasfa18  | moderate   |                    |                              |
+| DireckHit   | complex    | Traefik, Portainer | Good for Remote Hosting      |
+| Vicknesh    | complex    | Caddy for TLS      |                              |
+
+
+---
+
+# mikysan's simple dockerfile
 
 Dockerfile and guides for manual and docker-compose setup available at [https://github.com/mikysan/simple-fvtt-dockerfile](https://github.com/mikysan/simple-fvtt-dockerfile).
 
-## DirecktHit's Guide to Running FVTT-Docker with Traefik and Portainer (Recommended for Cloud Hosting)
+---
+
+# DirecktHit's Guide to Running FVTT-Docker with Traefik and Portainer
 
 Please visit [DirecktHit's blog](https://benprice.dev/posts/fvtt-docker-tutorial/) for the most up to date directions.
 
@@ -22,7 +39,9 @@ Please visit [DirecktHit's blog](https://benprice.dev/posts/fvtt-docker-tutorial
 
 Please visit the README in the [fvtt-docker repository](https://github.com/BenjaminPrice/fvtt-docker) for the most up to date directions.
 
-## trotroyanas's docker-compose Setup
+---
+
+# trotroyanas's docker-compose Setup
 
 ### For this you only need 3 files.
 <!--ts-->
@@ -122,10 +141,15 @@ sudo docker run --restart=always --name FoundryVTT.x.x.x -p 30000:30000 \
 -d fvtt:1.11.0
 ```
 
-## Jake
+---
+
+# Jake
 updated version of mikysan's dockerfile.  
 Using the node version zip. Extract the contents into foundryvtt directory below. This dockerfile will copy your modules, worlds, assets, etc. into your docker image. 
+
 I created a directory structure as:
+
+```
 * FoundryVtt
     * foundryvtt
     * foundrydata
@@ -133,6 +157,7 @@ I created a directory structure as:
         * Data
         * Logs
     * Dockerfile
+```
 
 ### Contents of Docker File
 ```
@@ -168,7 +193,9 @@ after the build is finished
 docker run --rm -it  -p 80:30000/tcp {something/something}:latest
 ```
 
-## thomasfa18's dockerhub image
+---
+
+# thomasfa18's dockerhub image
  
 This is a prebuilt node image that expects to have two paths (pkg & data) mounted to it:
 /pkg - which is the contents of the node.js foundryvtt.zip from foundryvtt.com
@@ -200,7 +227,9 @@ It is a similar process to achieve the same using a computer, assuming you have 
 2. `docker run -v [your windows path to foundry data]:/data -v [your windows path to the extracted node.js foundry package]:/pkg -it -p 30000:30000 thomasfa18/node-foundry:latest`
 *Note:* using `-it` runs the container interactively, if you close the command window you will shut down the container. If you omit the `-it` form the command you will need to find the container name using `docker stats` or something to be able to shut it down via `docker kill [container name]`
 
-## [Felddy's Easy, One-Step, Docker Container](https://github.com/felddy/foundryvtt-docker#readme)
+---
+
+# [Felddy's Easy, One-Step, Docker Container](https://github.com/felddy/foundryvtt-docker#readme)
 
 <div align="center">
 <img width="230" src="https://raw.githubusercontent.com/felddy/foundryvtt-docker/develop/assets/logo.png">
@@ -254,7 +283,8 @@ docker run \
 
 For more information about the available configuration options please see the [project README](https://github.com/felddy/foundryvtt-docker#readme).  If you have any questions please feel free to contact me on the FoundryVTT discord: `@felddy`
 
+---
 
-### Vicknesh's Docker Deployment guide
+# Vicknesh's Docker Deployment guide
 
 Guide for setting up FoundryVTT with Caddy for TLS can be found [https://github.com/svicknesh/foundryvtt-docker-deploy](https://github.com/svicknesh/foundryvtt-docker-deploy)
