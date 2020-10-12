@@ -1,14 +1,12 @@
 ---
-title: API Learning-API
+title: Learning API
 description: 
 published: true
-date: 2020-09-23T01:33:43.220Z
+date: 2020-10-12T17:07:42.213Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:34:07.619Z
 ---
-
-# Learning API
 
 Foundry VTT API can be used to write [script macros](../Macros) (that can be used from hotbar or from chat) or to write your own [extension modules](../Community-Modules) or even your own [system implementations](../System-Development-for-Beginners).
 
