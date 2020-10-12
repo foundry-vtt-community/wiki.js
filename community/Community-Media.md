@@ -2,53 +2,11 @@
 title: Maps, Art & Media
 description: 
 published: true
-date: 2020-10-06T02:21:24.607Z
+date: 2020-10-12T13:26:40.360Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:38.840Z
 ---
-
-<!--tl=2-->
-<!--ts-->
-   * [Foundry Media](#foundry-media)
-   * [Free Media](#free-media)
-   * [Maps](#maps)
-      * [2-Minute Tabletop](#2-minute-tabletop)
-      * [Afternoonmaps](#afternoonmaps)
-      * [Caeora](#caeora)
-      * [Cze and Peku](#cze-and-peku)
-      * [Dungeon Mapster](#dungeon-mapster)
-      * [Eightfold](#eightfold)
-      * [Forgotten Adventures](#forgotten-adventures)
-      * [Gabriel Pickard](#gabriel-pickard)
-      * [Heroic Maps](#heroic-maps)
-      * [Jesper Nilsson Cyren](#jesper-nilsson-cyren)
-      * [Maphammer](#maphammer)
-      * [Neutral Party](#neutral-party)
-      * [PogS Props](#pogs-props)
-      * [The Drafting Table](#the-drafting-table)
-   * [Animated Maps](#animated-maps)
-      * [Animated Dungeon Maps](#animated-dungeon-maps)
-      * [Dynamic Dungeons](#dynamic-dungeons)
-      * [Living Realms](#living-realms)
-   * [Music and Audio](#music-and-audio)
-      * [Adventure Music](#adventure-music)
-      * [Michael Ghelfi](#michael-ghelfi)
-      * [Music d20](#music-d20)
-      * [Sword Coast Soundscapes](#sword-coast-soundscapes)
-      * [Vindsvept](#vindsvept)
-      * [[Bundle] GAMEAUDIOGDC BUNDLE](#bundle-gameaudiogdc-bundle)
-   * [Other](#other)
-      * [Game-icons.net](#game-iconsnet)
-      * [[Bundle] WOW-Icons](#bundle-wow-icons)
-   * [Appendix](#appendix)
-      * [Appendix A: Adding Media](#appendix-a-adding-media)
-      * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)
-<!--te-->
-
-# Foundry Media
-
-Foundry media, such as music and artwork, that can be legally shared.
 
 # Free Media
 
