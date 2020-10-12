@@ -1,8 +1,8 @@
 ---
-title: Game-Systems (WIP)
+title: Unlisted Game Systems
 description: 
 published: true
-date: 2020-10-09T19:49:11.263Z
+date: 2020-10-12T13:15:12.889Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -12,64 +12,28 @@ dateCreated: 2020-09-23T00:24:22.792Z
 > ## Released Game Systems
 > Check the [Foundry Official package list](https://foundryvtt.com/packages/systems) to see a complete list of released game systems.
 
-## Game Systems in Development
+The list below is an unofficial and incomplete list of game systems that are either unlisted or still a work in progress. These are in various stages of development and may or may not be useable in their current state depending on your tolerance for bugs and rough edges.
 
-The list below is an unofficial and incomplete list of game systems that are still a work in progress. These are in various stages of development and may or may not be useable in their current state depending on your tolerance for bugs and rough edges.
+# Installable Game Systems
 
-# Star Wars	
+Whether in progress or abandoned, these game systems have project URLs and can be tested/forked/etc.
 
-## Star Wars FFG	
-
-* **Author**: Blaze#0294 and Jaxxa#1375 on Discord	
-* **Version**: 0.060	
-* **Foundry VTT Compatibility**: 0.5.6+	
-* **Translation Support**: EN (full)	
-
+## B/X D&D	
+* **Author**: Norman J. Harman, njharman@gmail.com, BUTTER#4177 on discord
+* **Foundry VTT Compatibility**: 0.6.0
+* **Translation Support**: English
 ### Link(s) to Game System	
-* [https://github.com/StarWarsFoundryVTT/StarWarsFFG](https://github.com/StarWarsFoundryVTT/StarWarsFFG)	
-* [https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json](https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json)	
-
+* https://github.com/njharman/foundry_bx_system	
+* https://raw.githubusercontent.com/njharman/foundry_bx_system/master/system.json	
 ### Description	
-This is an implementation of the Fantasy Flight Games Star Wars roleplaying system by in Foundry Virtual Tabletop. Please feel free to post issues or Pull Requests on the GitHub repo or suggestions and feedback on Discord.
+Game System for playing 70's 80's old-school versions of Dungeons and Dragons. Focusing on automation. Supporting various optional house rules. Primarily the author's Wilderlands BX and Planet Eris OD&D.
 
-Requires the [Special Dice Roller](https://foundry-vtt-community.github.io/wiki/Community-Modules/#special-dice-roller) module for dice.
+* Basic/Expert D&D aka B/X
+* Original D&D aka OD&D
 
----
-
-# Powered by the Apocalypse
-
-## Monster of the Week
-* **Author**: U~man#2374 on Discord	
-* **Version**: 0.01	
-* **Foundry VTT Compatibility**: 0.5.5+	
-* **Translation Support**: EN, FR	
-
-### Link(s) to Game System	
-* [https://gitlab.com/mesfoliesludiques/foundryvtt-motw](https://gitlab.com/mesfoliesludiques/foundryvtt-motw)	
-* [https://gitlab.com/mesfoliesludiques/foundryvtt-motw/-/raw/master/system.json](https://gitlab.com/mesfoliesludiques/foundryvtt-motw/-/raw/master/system.json)
-
----
-
-# Blades in the Dark
-
-* **Author**: megastruktur#5704 on Discord	
-* **Version**: 0.1
-* **Foundry VTT Compatibility**: 0.5.3+	
-* **Translation Support**: EN
-
-### Link(s) to Game System	
-* [https://github.com/megastruktur/foundryvtt-blades-in-the-dark](https://github.com/megastruktur/foundryvtt-blades-in-the-dark)	
-* [https://raw.githubusercontent.com/megastruktur/foundryvtt-blades-in-the-dark/master/system.json](https://raw.githubusercontent.com/megastruktur/foundryvtt-blades-in-the-dark/master/system.json)
-
-### Description
-TBD
-All Abilities, Items, Background Details, Upgrades, Classes. etc are Foundry Items. So just drag them from the Compendium and edit if necessary.
-
----
-
+---	
 ## Chronicles of Darkness
 * **Author**: Burzghash#4196
-* **Version**: 0.40
 * **Foundry VTT Compatibility**: 0.5.5+
 * **Translation Support**: EN
 
@@ -84,7 +48,6 @@ A system for playing for Chronicles of Darkness, 2nd edition within Foundry Virt
 
 ## Kryx RPG
 * **Author**: shem / shemetz / itamarcu, shem#0226 on Discord
-* **Version**: 25.15.0-3
 * **Foundry VTT Compatibility**: 0.6.5+
 * **Translation Support**: EN
 
@@ -99,7 +62,6 @@ An implementation of the [Kryx RPG](https://www.kryxrpg.com/) system. It's based
 
 ## Mage the Awakening 2e
 * **Author**: SoulCake#7804 (Discord), happily accepting donations on [https://ko-fi.com/soulcake](https://ko-fi.com/soulcake) :)
-* **Version**: 0.2.3
 * **Foundry VTT Compatibility**: 0.6.2+
 * **Translation Support**: EN
 
@@ -112,6 +74,72 @@ For now purely a system for Mage the Awakening 2e, supporting Mages, Sleepwalker
 
 ---	
 
+## Monster of the Week
+* **Author**: U~man#2374 on Discord
+* **Foundry VTT Compatibility**: 0.5.5+	
+* **Translation Support**: EN, FR	
+
+### Link(s) to Game System	
+* [https://gitlab.com/mesfoliesludiques/foundryvtt-motw](https://gitlab.com/mesfoliesludiques/foundryvtt-motw)	
+* [https://gitlab.com/mesfoliesludiques/foundryvtt-motw/-/raw/master/system.json](https://gitlab.com/mesfoliesludiques/foundryvtt-motw/-/raw/master/system.json)
+
+---
+
+## Pokemon Tabletop United	
+* **Author**: Dylan Piera (Discord: SoaringDylan#0380), Tymo Wessel, Jeffrey Hollander & Cody Swendrowski	
+* **Foundry VTT Compatibility**: 0.6.5, 0.7.0+
+* **Translation Support**: English	
+### Link(s) to Game System	
+* https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System
+* https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/blob/master/system.json
+### Description	
+A Pen and Paper Roleplaying Game Set in the World of Pokemon. For a full list of currently supported features check out the github repo, as the system is constantly being updated. If you're looking to contribute, or to report any errors / suggestions, you can also do so over on the github, or DM me on Discord!
+
+To install, just import the system.json file to your FoundryVTT installation.
+
+---	
+
+## Star Wars FFG
+
+* **Author**: Blaze#0294 and Jaxxa#1375 on Discord
+* **Foundry VTT Compatibility**: 0.5.6+	
+* **Translation Support**: EN (full)	
+
+### Link(s) to Game System	
+* [https://github.com/StarWarsFoundryVTT/StarWarsFFG](https://github.com/StarWarsFoundryVTT/StarWarsFFG)	
+* [https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json](https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json)	
+
+### Description	
+This is an implementation of the Fantasy Flight Games Star Wars roleplaying system by in Foundry Virtual Tabletop. Please feel free to post issues or Pull Requests on the GitHub repo or suggestions and feedback on Discord.
+
+Requires the [Special Dice Roller](https://foundry-vtt-community.github.io/wiki/Community-Modules/#special-dice-roller) module for dice.
+
+---	
+
+## The Witcher TRPG	
+* **Author**: Parker S. (Discord: sparkcities#2000)
+* **Foundry VTT Compatibility**: 0.6.6	
+* **Translation Support**: English	
+### Link(s) to Game System	
+* https://github.com/sparkcity/fvtt-witcher
+### Description	
+An unofficial system to provide support for The Witcher TRPG by R. Talsorian Games in FVTT. Permitted for development and publishing on FVTT by R. Talsorian Games.
+
+---
+
+## Torchbearer
+* **Author**: Nick Serluco (Discord: yougotnick#9692)
+* **Foundry VTT Compatibility**: 0.6.x
+* **Translation Support**: English 
+### Link(s) to Game System	
+* https://github.com/lupinelegend/torchbearer
+### Description	
+Torchbearer system for Foundry, ongoing work by Nick Serluco and Jason Reid.
+
+---	
+# Unreleased Game Systems
+
+This list is a holdover from the previous Wiki's information and may be outdated. These systems had no project links at the time of cleanup and so their status couldn't be ascertained.
 
 ## Star Trek Adventures (2d20)
 * **Author**: NickEast#1311
@@ -121,102 +149,32 @@ The Modiphius 2d20-based RPG _Star Trek Adventures_ is in development for the Fo
 
 ---
 
-## CyberpunkRED	
-* **Author**: Gerdofal#0763	
-* **Version**: .04	
-* **Foundry VTT Compatibility**: Tested with 0.5.5	
-* **Translation Support**: EN only for now	
-
+## RWBY	
+* **Author**: Forien (Forien#2130) ([Patreon](https://www.patreon.com/forien))
+* **Foundry VTT Compatibility**: 0.6.0+  
+* **Translation Support**: English  	
 ### Link(s) to Game System	
-STABLE RELEASE (Use this!)
-* Readme: [https://github.com/Gerdofal/foundryvtt-cyberpunkred/blob/stable_release/README.md](https://github.com/Gerdofal/foundryvtt-cyberpunkred/blob/stable_release/README.md)
-* Manifest: [https://raw.githubusercontent.com/Gerdofal/foundryvtt-cyberpunkred/stable_release/system.json](https://raw.githubusercontent.com/Gerdofal/foundryvtt-cyberpunkred/stable_release/system.json)
+* System Repository: _none yet_
+* Manifest URL: _none yet_
+### Description	 
+Adaptation of [The Unofficial RWBY Tabletop RPG](https://www.reddit.com/r/Rwbytabletop/) by Andrew Diederich, prepared for Foundry VTT by Forien.
 
-MASTER RELEASE (May not work as intended, used as a beta)
-* Readme: [https://github.com/Gerdofal/foundryvtt-cyberpunkred/blob/master/README.md](https://github.com/Gerdofal/foundryvtt-cyberpunkred/blob/master/README.md)
-
-### Description	
-An in-progress game system for CyberpunkRED. Still very much in development as all we have are the jumpstart rules and the core rulebook isn't even out yet. Should be functional for the rules in the Cyberpunk RED Jumpstart Kit within a week or two.
-
-### Installing
-
-The stable release is now usable. Paste the manifest URL into FoundryVTT to download. See readme for current status and future plans.
-
----	
-
-## ZWEIHÄNDER Grim & Perilous RPG	
-* **Author**: Re4XN#8341 on Discord
-		
-### Description	
-An implementation of the ZWEIHÄNDER system for FoundryVTT. The system is still in very early development and, as such, unusable. If you wish to contribute, contact Re4XN#8341 on Discord.
-
----
-## CallofCthulhu(7thEd.)
-* **Author**:ただいま#0125	
-* **Version**:1.2.0  
-* **Foundry VTT Compatibility**:0.7.1  
-* **Translation Support**:Possible. You can also use translations to change the status display in the actor's sheet.  
- English and Japanese are registered by default.
-### Link(s) to Game System	
-* Download :[https://raw.githubusercontent.com/tadaimatrpg/callofcthulhu/master/system.json](https://raw.githubusercontent.com/tadaimatrpg/callofcthulhu/master/system.json)  
-* (The Unnamable) Manual and Source code disclosure (Github):[https://github.com/tadaimatrpg/callofcthulhu](https://github.com/tadaimatrpg/callofcthulhu)
-### Description  
-Specifications since version 1.0.0  
-The implementation of the dice command will make all 7thED supplements compatible.  
-The dice command is a system that lets you determine success and failure.  
-A system called the Dice Bot will be implemented.  
-This system will use a text-based system. This system will use a text-based system,  
- which will enable users to create characters and NPCs based on templates.  
-(However, it is necessary to prepare everything from scratch.)  
-The system assumes that everyone has a rulebook, so except for skill points, you need to look at the rulebook or supplements.  
-This system has cars and serves the obstacles, chase rules and MAP movement at will.  
-  
-![Image](https://raw.githubusercontent.com/tadaimatrpg/tadaima/master/kaihatuyou2.png)  
 
 ---
 
-## B/X D&D	
-* **Author**: Norman J. Harman, njharman@gmail.com, BUTTER#4177 on discord	
-* **Version**: 0.2 pre-alpha	
-* **Foundry VTT Compatibility**: 0.6.0
-* **Translation Support**: English
+## Splittermond	
+* **Author**: Peter Laubender (Discord: TritonSchaumherz#8529)
+* **Foundry VTT Compatibility**: 0.6.6	
+* **Translation Support**: German	
 ### Link(s) to Game System	
-* https://github.com/njharman/foundry_bx_system	
-* https://raw.githubusercontent.com/njharman/foundry_bx_system/master/system.json	
+* Coming soon!	
 ### Description	
-Game System for playing 70's 80's old-school versions of Dungeons and Dragons. Focusing on automation. Supporting various optional house rules. Primarily the author's Wilderlands BX and Planet Eris OD&D.
-
-* Basic/Expert D&D aka B/X
-* Original D&D aka OD&D
-
----
-
-## Stars Without Number: Revised Edition
-* **Author**: [Spice-King](https://github.com/Spice-King)/Spice_King#3128	
-* **Version**: unreleased
-* **Foundry VTT Compatibility**: 0.6.0
-* **Translation Support**: English, mostly translatable
-### Link(s) to Game System
-* Coming Soon™ once I have something usable.
-### Description
-_The year is 3200 and mankind's empire lies in ashes._
-
-_The Jump Gates fell six hundred years ago, severing the links between the myriad worlds of the human diaspora._
-
-_Now, the long isolation of the Silence falls away as men and women return to the skies above their scattered worlds._
-
-_Will you be among them once more?_
-
-Stars Without Number: Revised Edition is an old-school-inspired game of sci-fi adventure, one built from the ground up to encourage sandbox play and simplify a GM's job in providing it. Familiar mechanics are employed to forge new worlds and explore new possibilities, guidelines built on long experience used to help a group venture in wholly new directions.
-
-#### Sheet support and plans
-Currently the there is support for the PC character actor sheet, with plans for custom sheets for drones, ships, NPCs, transhuman players, and more. Some support for a small number of item sheets are planned, ranging from armor, weapons to consumables and ship hulls. I hope to have most of the base game content in compendium form from the free edition and I plan to reach out to Kevin Crawford about distribution of the paid content in compendium form in a way that respects his IP once the system is feature complete.
+An implementation of the German RPG "Splittermond" (Uhrwerk Verlag) as a game system for Foundry VTT. Still in very early development.
 
 ---	
 
 ## Tales from the Loop / Things from the Flood
 * **Author**: onf#2586
-* **Version**: 0.1
 * **Foundry VTT Compatibility**: 0.6.0+
 * **Translation Support**: English / Français
 ### Link(s) to Game System	
@@ -230,82 +188,9 @@ Being a content light system, making this system is mostly about making it's she
 
 ---
 
-## Rêve de Dragon
-* **Author**: LeRatierBretonnien	
-* **Version**: 0.1	
-* **Foundry VTT Compatibility**: 0.6.0
-* **Translation Support**: French
-### Link(s) to Game System	
-* URL : https://gitlab.com/LeRatierBretonnien/foundryvtt-reve-de-dragon	
-* Manifest : https://gitlab.com/LeRatierBretonnien/foundryvtt-reve-de-dragon/-/raw/master/system.json	
-### Description	
-
-This is the system for the French RPG "Reve de Dragon" (known also in english as Rêve : The Dream Ourobouros"). 
-In French : l'objectif de ce système est d'avoir un niveau d'automatisation élevé : haut rêve, potions, alchimie, combats, etc. A l'heure actuelle, le système n'est pas spécialement utilisable, mais les progrés sont régulièrement commités sous giltab.
-
----	
-
-## Call of Cthulhu 7
-* **Author**: [Vétérini](https://github.com/HavlockV/CoC7-FoundryVTT/), Discord : Vétérini#8953
-* **Version**: 0.2.1
-* **Foundry VTT Compatibility**: 0.6.0+
-* **Translation Support**: English (full), partial : French, Spanish, German.
-### Link(s) to Game System	
-* [https://github.com/HavlockV/CoC7-FoundryVTT/](https://github.com/HavlockV/CoC7-FoundryVTT/)
-* [https://raw.githubusercontent.com/HavlockV/CoC7-FoundryVTT/master/system.json](https://raw.githubusercontent.com/HavlockV/CoC7-FoundryVTT/master/system.json)
-### Description	
-An attempt to implement the Call of Cthulhu RPG into foundry VTT. Distributed without any material from the books. Keepers will need to write their own compendiums.
-
----	
-
-## LANCER
-* **Author**: Eranziel (Discord: Eranziel#0410)	
-* **Version**: Pre-release	
-* **Foundry VTT Compatibility**: 0.5.x, 0.6.x
-* **Translation Support**: English
-	
-### Link(s) to Game System	
-* Coming soon!	
-
-### Description	
-In Lancer, players adopt the roles of mechanized chassis pilots - mech pilots - comrades together in a galaxy of danger and hope. Some groups will fight to rectify the crimes of previous administrations; others will fight for their nation,  pieces in a greater game of hegemony. Others will carry the banner of a corpro-state or mercenary company, working to advance private interests while lining their pockets. Others still will fight for groups acting in opposition to those in power - for the underground, for the forgotten, agents of entropy and agents of yet more radical revolutions. 
-
-Lancer is an RPG focusing on tactical mech combat interspersed with narrative pilot-focused beats, set in an optimistic sci-fi future. 
-
-This Foundry system is in development, with an alpha release coming soon(tm). Initial release is planned to include a basic sheet for stat tracking, compendiums of the player-facing options from the core book, and basic macros for weapons and systems.
-
----
-
-## Torchbearer
-* **Author**: Nick Serluco (Discord: yougotnick#9692)
-* **Version**: 0.1
-* **Foundry VTT Compatibility**: 0.6.x
-* **Translation Support**: English 
-### Link(s) to Game System	
-* https://github.com/lupinelegend/torchbearer
-### Description	
-Torchbearer system for Foundry, ongoing work by Nick Serluco and Jason Reid.
-
----	
-
-
-## RWBY	
-* **Author**: Forien (Forien#2130) ([Patreon](https://www.patreon.com/forien))
-* **Version**: 0.0.1-alpha	
-* **Foundry VTT Compatibility**: 0.6.0+  
-* **Translation Support**: English  	
-### Link(s) to Game System	
-* System Repository: _none yet_
-* Manifest URL: _none yet_
-### Description	 
-Adaptation of [The Unofficial RWBY Tabletop RPG](https://www.reddit.com/r/Rwbytabletop/) by Andrew Diederich, prepared for Foundry VTT by Forien.
-
-
----
 
 ## Wolves of God
 * **Author**: Paul Umbers (Discord: 3rdDog (Paul)#6199)
-* **Version**: 0.1.0
 * **Foundry VTT Compatability**: 0.6.x
 * **Translation Support**: English
 ### Link(s) to Game System
@@ -315,86 +200,11 @@ Kevin Crawford's [Wolves of God - Adventures in Dark Ages England](https://www.d
 
 ---
 
-## Old School Essentials
-* **Author**: U~man#2374, contributions are welcome.
-* **Version**: 0.2
-* **Foundry VTT Compatibility**: 0.6
-* **Translation Support**: EN(full), fr(full)
-### Link(s) to Game System	
-* https://gitlab.com/mesfoliesludiques/foundryvtt-ose	
-* https://gitlab.com/mesfoliesludiques/foundryvtt-ose/-/raw/master/src/system.json
+## ZWEIHÄNDER Grim & Perilous RPG	
+* **Author**: Re4XN#8341 on Discord
+		
 ### Description	
-An Old School Essentials system with basic automation and a fine looking sheet. Fully compatible with B/X and with several options that can fit with other OSRs: Ascending AC, Individual initiative, Variable Weapon damage, and many more to come.
-
----
-
-## FVTT-Dishonored (2d20)
-* **Author**: Curtis Reet (Discord: KaitoR#2355)
-* **Version**: 0.2.4
-* **Foundry VTT Compatibility**: 0.6.5
-* **Translation Support**: English
-### Link(s) to Game System	
-* https://github.com/CurtR95/FVTT-Dishonored	
-* https://github.com/CurtR95/FVTT-Dishonored/blob/master/system.json
-### Description	
-Unofficial replication of the Modiphius 2D20 system with a Dishonored Flavour. Permitted by Modiphius. The system features the core basic functionality to feasibly play the Dishonored RPG. It features no automation currently; however, all features currently exist that are required to play the game. Any assistance is welcome. Currently I am solo developing this - but anyone willing to assist, either with translations or code would be welcome!
-
----
-
-## Pokemon Tabletop United	
-* **Author**: Dylan Piera (Discord: SoaringDylan#0380), Tymo Wessel, Jeffrey Hollander & Cody Swendrowski	
-* **Version**: 0.0.12	
-* **Foundry VTT Compatibility**: 0.6.5, 0.7.0+
-* **Translation Support**: English	
-### Link(s) to Game System	
-* https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System
-* https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/blob/master/system.json
-### Description	
-A Pen and Paper Roleplaying Game Set in the World of Pokemon. For a full list of currently supported features check out the github repo, as the system is constantly being updated. If you're looking to contribute, or to report any errors / suggestions, you can also do so over on the github, or DM me on Discord!
-
-To install, just import the system.json file to your FoundryVTT installation.
-
-![](https://i.imgur.com/gA6BO1X.png)
-
----	
-
-## Splittermond	
-* **Author**: Peter Laubender (Discord: TritonSchaumherz#8529)
-* **Version**: Pre-release	
-* **Foundry VTT Compatibility**: 0.6.6	
-* **Translation Support**: German	
-### Link(s) to Game System	
-* Coming soon!	
-### Description	
-An implementation of the German RPG "Splittermond" (Uhrwerk Verlag) as a game system for Foundry VTT. Still in very early development.
-
----	
-
-## (Unofficial) The Witcher TRPG	
-* **Author**: Parker S. (Discord: sparkcities#2000)
-* **Version**: v0.1
-* **Foundry VTT Compatibility**: 0.6.6	
-* **Translation Support**: English	
-### Link(s) to Game System	
-* https://github.com/sparkcity/fvtt-witcher
-### Description	
-An unofficial system to provide support for The Witcher TRPG by R. Talsorian Games in FVTT. Permitted for development and publishing on FVTT by R. Talsorian Games.
-
----
-
-## Twodsix - Cepheus & Traveller (Unofficial)
-* **Author**: Runewell
-* **Version**: 0.6.23
-* **Foundry VTT Compatibility**: 0.6
-* **Translation Support**: ??
-### Link(s) to Game System
-* https://foundryvtt.com/packages/twodsix/
-### Description
-Twodsix: A system for use with the Cepheus Engine Core Rules, Traveller (unofficial), and other similar games.
-
-This Product is derived from the Traveller System Reference Document and other Open Gaming Content made available by the Open Gaming License, and does not contain closed content from products published by either Mongoose Publishing or Far Future Enterprises. This Product is not affiliated with either Mongoose Publishing or Far Future Enterprises, and it makes no claim to or challenge to any trademarks held by either entity. The use of the Traveller System Reference Document does not convey the endorsement of this Product by either Mongoose Publishing or Far Future Enterprises as a product of either of their product lines.
-
-Cepheus Engine and Samardan Press™ are the trademarks of Jason "Flynn" Kemp; we are not affiliated with Jason "Flynn" Kemp or Samardan Press™".
+An implementation of the ZWEIHÄNDER system for FoundryVTT. The system is still in very early development and, as such, unusable. If you wish to contribute, contact Re4XN#8341 on Discord.
 
 ---
 
