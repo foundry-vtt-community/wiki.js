@@ -2,7 +2,7 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T19:07:27.146Z
+date: 2020-10-16T19:07:45.531Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -45,6 +45,6 @@ Les sujets aidant à l'installation
 
 ### Appel de Cthulhu
 
-### Warhammer 4
 
+### Warhammer 4
 [Page dédiée Warhammer 4](/fr/fr-wfrp4e)
