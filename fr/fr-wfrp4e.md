@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-16T18:54:36.683Z
+date: 2020-10-16T20:52:32.155Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -22,5 +22,6 @@ Une FAQ complémentaire en FR ici : http://www.lahiette.com/leratierbretonnien/w
 
 #### Modules à éviter
 
- - Pick-up-sixt
+ - Pick-up-sixt : Casse les fiches de personnage et nécessite souvent de re-créer le monde
+ - Chat Scrolling : Empêche l'édition des tests dans le tachat lorsque installé
  
