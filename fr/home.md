@@ -2,7 +2,7 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T18:39:53.667Z
+date: 2020-10-16T18:51:26.143Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -26,7 +26,12 @@ Les sujets aidant à l'installation
 
 ### 0.7.X
 
-#### Modules à éviter
+#### Modules à éviter avec la 0.7.X
+
+- Module RNHD (Rough Night Hard Days)
+- Module Eye-for-Eye
+- VTTA Tokenizer
+
 
 ## Les systèmes
 
@@ -38,3 +43,13 @@ Les sujets aidant à l'installation
 
 ### Warhammer 4
 
+Il convient de lire la FAQ de MooMan ici : https://github.com/moo-man/WFRP4e-FoundryVTT/wiki
+
+Une FAQ complémentaire en FR ici : http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/foundryvtt-warhammer-v4/
+
+#### Modules conseillé par la communauté
+
+#### Modules à éviter
+
+ - Pick-up-sixt
+ 
