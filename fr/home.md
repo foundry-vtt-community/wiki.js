@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-10-16T21:52:46.634Z
+date: 2020-10-16T21:54:44.290Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -23,8 +23,8 @@ Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à 
 #### - Sous Mac OS
 #### - Sous Linux
 
-## Les différentes Versions actuelles de FoundryVTT
-#### 0.6.X (version Stable)
+## Les différentes Versions de FoundryVTT
+#### 0.6.X (version release, Stable)
 #### 0.7.X (version beta, instable)
 
 
