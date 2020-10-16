@@ -2,7 +2,7 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T18:52:41.348Z
+date: 2020-10-16T18:55:34.281Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -43,4 +43,4 @@ Les sujets aidant à l'installation
 
 ### Warhammer 4
 
-Page spéciale
+[Page dédiée Warhammer 4](/fr/fr-wfrp4e)
