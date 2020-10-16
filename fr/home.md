@@ -1,8 +1,8 @@
 ---
-title: Wiki Français pour FoundryVTT
-description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
+title: Wiki Francophone pour FoundryVTT
+description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-10-16T21:50:13.488Z
+date: 2020-10-16T21:52:46.634Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
