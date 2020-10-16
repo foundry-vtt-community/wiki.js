@@ -2,7 +2,7 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T19:05:53.488Z
+date: 2020-10-16T19:07:27.146Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -41,6 +41,7 @@ Les sujets aidant à l'installation
 [Page dédiée DD5](/fr/fr-dd5)
 
 ### HND
+[Page dédiée HND](/fr/fr-hnd)
 
 ### Appel de Cthulhu
 
