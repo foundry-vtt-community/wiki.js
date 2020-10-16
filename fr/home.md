@@ -2,7 +2,7 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T18:51:26.143Z
+date: 2020-10-16T18:52:41.348Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -43,13 +43,4 @@ Les sujets aidant à l'installation
 
 ### Warhammer 4
 
-Il convient de lire la FAQ de MooMan ici : https://github.com/moo-man/WFRP4e-FoundryVTT/wiki
-
-Une FAQ complémentaire en FR ici : http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/foundryvtt-warhammer-v4/
-
-#### Modules conseillé par la communauté
-
-#### Modules à éviter
-
- - Pick-up-sixt
- 
+Page spéciale
