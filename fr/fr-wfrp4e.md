@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-16T20:52:32.155Z
+date: 2020-10-16T20:56:11.016Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -13,6 +13,14 @@ dateCreated: 2020-10-16T18:54:36.683Z
 Il convient de lire la FAQ de MooMan ici : https://github.com/moo-man/WFRP4e-FoundryVTT/wiki
 
 Une FAQ complémentaire en FR ici : http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/foundryvtt-warhammer-v4/
+
+## Pour la 0.6.6
+
+Pour cette version, installez tout simplement le module officiel en 2.0, via les fonctions d'installation de Foundry.
+
+## Pour les 0.7.X
+
+Il faut modifier le manifest et installer les versions 2.1.X : https://raw.githubusercontent.com/moo-man/WFRP4e-FoundryVTT/0.7.x/system.json
 
 #### Modules conseillé par la communauté
 
