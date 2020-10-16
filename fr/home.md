@@ -2,13 +2,13 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T21:46:19.159Z
+date: 2020-10-16T21:50:13.488Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
 ---
 
-# Support FoundryVTT
+# FoundryVTT, son support en français.
 Bienvenue à tous et à toutes ! sur la page d'accueil du Wiki Francophone pour FoundryVTT (http://www.foundryvtt.com). 
 Il est destiné à recevoir les informations importantes et "statiques", en complément du [Discord Francophone](https://discord.gg/pPSDNJk).
 
@@ -16,14 +16,14 @@ Pour toutes questions qui ne trouveraient pas sa réponse ici, nous vous inviton
 
 ## Les Questions Courantes
 
-Vous pourrez trouver une Foire Aux Questions en français sur Foundry répondant déjà à quelques interrogations [sur cette page](http://www.lahiette.com/leratierbretonnien/faq-fr-de-foundryvtt/) 
+Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à quelques interrogations [sur cette page](http://www.lahiette.com/leratierbretonnien/faq-fr-de-foundryvtt/) 
 
 ## L'Installation
+#### - Sous Windows
+#### - Sous Mac OS
+#### - Sous Linux
 
-Les sujets aidant à l'installation
-
-
-## Les différentes Versions de FoundryVTT
+## Les différentes Versions actuelles de FoundryVTT
 #### 0.6.X (version Stable)
 #### 0.7.X (version beta, instable)
 
