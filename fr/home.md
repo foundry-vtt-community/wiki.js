@@ -2,52 +2,42 @@
 title: Wiki Français pour FoundryVTT
 description: Cette page est la page d'accueil pour l'aide et l'assistance sur FoundryVTT
 published: true
-date: 2020-10-16T20:13:53.347Z
+date: 2020-10-16T21:46:19.159Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
 ---
 
 # Support FoundryVTT
-Bonjour à tous !
-Cette page est le portail d'entrée du Wiki Français concernant FoundryVTT (http://www.foundryvtt.com). Il est destiné à être recevoir les informations importantes et "statiques", en complément du Discord FR.
+Bienvenue à tous et à toutes ! sur la page d'accueil du Wiki Francophone pour FoundryVTT (http://www.foundryvtt.com). 
+Il est destiné à recevoir les informations importantes et "statiques", en complément du [Discord Francophone](https://discord.gg/pPSDNJk).
 
-Pour toute question qui ne trouverait pas sa réponse ici : https://discord.gg/pPSDNJk 
+Pour toutes questions qui ne trouveraient pas sa réponse ici, nous vous invitons à nous rejoindre sur [Discord Francophone](https://discord.gg/pPSDNJk). 
 
-## Questions courantes
+## Les Questions Courantes
 
-http://www.lahiette.com/leratierbretonnien/faq-fr-de-foundryvtt/ 
+Vous pourrez trouver une Foire Aux Questions en français sur Foundry répondant déjà à quelques interrogations [sur cette page](http://www.lahiette.com/leratierbretonnien/faq-fr-de-foundryvtt/) 
 
-## Installation
+## L'Installation
 
 Les sujets aidant à l'installation
 
-## Versions de FoundryVTT
 
-### 0.6.X
+## Les différentes Versions de FoundryVTT
+#### 0.6.X (version Stable)
+#### 0.7.X (version beta, instable)
 
-### 0.7.X
 
-#### Modules à éviter avec la 0.7.X
-
+#### Divers Modules à éviter avec les versions 0.7.x
+- Deselection : Built-in depuis la version 0.7.x
 - Module RNHD (Rough Night Hard Days)
 - Module Eye-for-Eye
 - VTTA Tokenizer
 
 
-## Les systèmes
-
-### Appel de Cthulhu
-[Page dédiée AdC](/fr/fr-adc)
-
-### Chroniques Oubliées
-[Page dédiée CO](/fr/fr-chrooubliees)
-
-### DD5
-[Page dédiée DD5](/fr/fr-dd5)
-
-### HND
-[Page dédiée HND](/fr/fr-hnd)
-
-### Warhammer 4
-[Page dédiée Warhammer 4](/fr/fr-wfrp4e)
+## Les systèmes en français 
+- [Appel de Cthulhu](/fr/fr-adc)
+- [Chroniques Oubliées Fantasy](/fr/fr-chrooubliees)
+- [Dungeons and Dragons 5e](/fr/fr-dd5)
+- [Héros & Dragons](/fr/fr-hnd)
+- [Warhammer 4e](/fr/fr-wfrp4e)
