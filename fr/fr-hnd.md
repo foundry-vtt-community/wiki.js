@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-16T19:06:47.166Z
+date: 2020-10-18T09:15:59.945Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
