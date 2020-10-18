@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-16T20:56:11.016Z
+date: 2020-10-18T08:09:27.603Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -11,6 +11,7 @@ dateCreated: 2020-10-16T18:54:36.683Z
 # Warhammer v4
 
 Il convient de lire la FAQ de MooMan ici : https://github.com/moo-man/WFRP4e-FoundryVTT/wiki
+La visualisation des vidéos est aussi très utile pour comprendre l'utilisation du système.
 
 Une FAQ complémentaire en FR ici : http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/foundryvtt-warhammer-v4/
 
