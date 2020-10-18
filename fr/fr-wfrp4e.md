@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-18T08:10:34.666Z
+date: 2020-10-18T08:37:13.385Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
