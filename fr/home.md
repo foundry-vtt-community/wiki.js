@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-10-18T09:14:21.617Z
+date: 2020-10-18T09:15:06.242Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -37,7 +37,7 @@ Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à 
 
 ## Les systèmes en français 
 - [Appel de Cthulhu](/fr/systemes/fr-adc)
-- [Chroniques Oubliées Fantasy](/fr/fr-chrooubliees)
+- [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
 - [Dungeons and Dragons 5e](/fr/fr-dd5)
     - [Héros & Dragons](/fr/fr-hnd) (Dépend de et nécessite DD5)
 - [SWADE - Savage Worlds](/fr/fr-swade)
