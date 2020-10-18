@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-10-05T17:52:11.968Z
+date: 2020-10-18T16:51:31.516Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -11,6 +11,9 @@ dateCreated: 2020-09-18T19:13:46.176Z
 # Welcome to the FVTT Community!
 
 **NOTE** : This wiki serves as a repository of community-curated information about the Foundry VTT and is 100% community-managed and run. We do not represent Foundry Gaming LLC in any way.
+
+## Wiki Localizations
+[French](https://foundryvtt.wiki/fr/home)
 
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry VTT Website](http://foundryvtt.com)
