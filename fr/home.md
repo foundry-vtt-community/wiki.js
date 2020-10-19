@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-10-19T09:25:44.484Z
+date: 2020-10-19T10:08:25.058Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -43,13 +43,17 @@ Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à 
 - **Module Eye-for-Eye**
 - **VTTA Tokenizer**
 
-## Les systèmes en français 
-- [Appel de Cthulhu](/fr/systemes/fr-adc)
+## Les systèmes en français
+- [Core-system](/fr/systemes/core-system)
+- [Appel de Cthulhu 7e](/fr/systemes/fr-adc)
 - [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
 - [Dungeons and Dragons 5e](/fr/fr-dd5)
-    - [Héros & Dragons](/fr/systemes/fr-hnd) (Dépend de et nécessite DD5)
+    - [Héros & Dragons](/fr/systemes/fr-hnd) (Dépendance: nécessite DD5)
+- [Pathfinder 1re édition](/fr/systemes/PF1)
+- [Pathfinder Seconde édition](/fr/systemes/PF2)
 - [SWADE - Savage Worlds](/fr/systemes/fr-swade)
-    - [Deadlands Reloaded](/fr/systemes/fr-deadlands) (Dépend de et nécessite SWADE)
+    - [Deadlands Reloaded](/fr/systemes/fr-deadlands) (Dépendance: nécessite SWADE)
+- [Starfinder](/fr/systemes/starfinder)
 - [Warhammer 4e](/fr/systemes/fr-wfrp4e)
 
 ## Démos publiques de Foundry
