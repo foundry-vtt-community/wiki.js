@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T19:05:35.032Z
+date: 2020-10-19T19:15:45.720Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -124,6 +124,8 @@ The maximum Foundry Core version you are confident to say that this package work
 
 # Version Control Host Specific Resources
 
+
+
 ## Github
 
 ### Releases
@@ -132,6 +134,8 @@ The maximum Foundry Core version you are confident to say that this package work
 
 ## Gitlab
 
+Stub, I'm not familiar with how Gitlab does things. [This](https://gitlab.com/fvtt-modules-lab/quick-insert/-/tree/master) is an example of a project that leverages Gitlab releases.
+
 ### Releases
 
-### Automation
+[Gitlab Releases Docs](https://docs.gitlab.com/ee/user/project/releases/)
