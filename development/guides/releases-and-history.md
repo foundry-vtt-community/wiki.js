@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T20:27:44.660Z
+date: 2020-10-19T21:26:19.734Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -125,6 +125,8 @@ The maximum Foundry Core version you are confident to say that this package work
 
 ## Package Files
 
+The files in the package zip that is downloaded and installed on the user's Foundry instance.
+
 ### Manifest JSON
 
 #### `download`
@@ -133,6 +135,18 @@ This field should be a url to only this package version's zip download. It shoul
 #### `manifest`
 This field should be a stable url that will always point to the latest manifest JSON without needing to change.
 
+
+## Foundry Package Admin Version Fields
+
+Fields for a given row on the Package Admin "Package Version" list.
+
+#### Package Manifest URL
+
+This should point to this specific version's manifest JSON. The reason for this is because only that specific manifest JSON has the `download` field pointing to that particular version's zip files.
+
+#### Required Core Version
+
+Keep this up to date at all times, especially when breaking changes happen.
 
 
 # Version Control Host Specific Resources
@@ -156,6 +170,11 @@ See the [full documentation](https://docs.github.com/en/free-pro-team@latest/git
 
 ### Automation (Github Actions)
 
+There is a lot of cool stuff you can leverage [Github Actions](https://docs.github.com/en/free-pro-team@latest/actions) to automate with this process. Below are a few repositories to give you some ideas.
+
+- [League-of-Foundry-Developers/FoundryVTT-Module-Template](https://github.com/League-of-Foundry-Developers/FoundryVTT-Module-Template) - Action triggers when a release is created which updates the `module.json` version/download fields, zips up the files, and attaches them to the release.
+- [League-of-Foundry-Developers/foundry-typescript-template](https://github.com/League-of-Foundry-Developers/foundry-typescript-template) - Action triggers on any push to master which creates a release, zips up the `/dist` directory and attaches both it and the `module.json` to the created release.
+- [Spice-King/foundry-swnr](https://github.com/Spice-King/foundry-swnr) - Action triggers when a tag with `v*` in the name is pushed which builds and zips the system files, creates a release with that tag's name, and attaches the built files to the release.
 
 
 ### Example Process
