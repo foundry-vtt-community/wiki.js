@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T18:54:43.543Z
+date: 2020-10-19T18:56:35.691Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
