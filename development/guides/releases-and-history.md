@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T18:32:09.250Z
+date: 2020-10-19T18:37:28.865Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -28,6 +28,7 @@ Outline:
 # Objectives
 
 > Create a safe workflow whereby package authors can rest easy knowing that users are at no risk of installing non-working code.
+{.is-info}
 
 Foundry's package installation and update process is robust enough to allow automatic update detection and installation, while also allowing users who wish to to install a specific version of a package.
 
@@ -68,9 +69,12 @@ Installation is fairly straightforward and can be done in one of two ways.
 After your submitted package is approved, you'll get access to a Package Management site at foundryvtt.com/admin. From here you can find a list of all of your approved packages. You can use this screen to manage other aspects of the how your Packages are displayed on the Official package list, but we're most concerned about the Versions for this guide.
 
 ## Package Versions
-This section directly populates the list of released versions on the foundryvtt.com page for your module. It also informs the package installation UI within Foundry which version to download.
+This section directly populates the list of released versions on the foundryvtt.com page for your module. It also informs the package installation UI within Foundry which version to download. 
 
-The following fields are present for each release entry at the time of this writing:
+> If a package has no Package Versions present, it will not be available on either the official package list or in the Foundry UI.
+{.is-warning}
+
+
 
 ### Version Number
 Should match the version number of the linked `module.json`.
