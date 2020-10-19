@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-10-19T09:13:54.725Z
+date: 2020-10-19T09:22:20.499Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -29,21 +29,19 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à quelques interrogations [sur cette page](http://www.lahiette.com/leratierbretonnien/faq-fr-de-foundryvtt/) 
 
 ## L'Installation
-#### - Sous Windows
-#### - Sous Mac OS
-#### - Sous Linux
+- [Sous Windows]()
+- [Sous Mac OS]()
+- [Sous Linux]()
 
 ## Les différentes Versions de FoundryVTT
-#### 0.6.X (version release, Stable)
-#### 0.7.X (version beta, instable)
-
+- **Version Stable, Release :** 0.6.x
+- **Version Instable, Alpha/Beta :** 0.7.x
 
 #### Divers Modules à éviter avec les versions 0.7.x
-- Deselection : Built-in depuis la version 0.7.x
-- Module RNHD (Rough Night Hard Days)
-- Module Eye-for-Eye
-- VTTA Tokenizer
-
+- **Deselection**, Built-in depuis la version 0.7.x
+- **Module RNHD (Rough Night Hard Days)**
+- **Module Eye-for-Eye**
+- **VTTA Tokenizer**
 
 ## Les systèmes en français 
 - [Appel de Cthulhu](/fr/systemes/fr-adc)
