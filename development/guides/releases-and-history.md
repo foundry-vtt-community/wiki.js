@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T18:56:35.691Z
+date: 2020-10-19T18:58:27.876Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -70,11 +70,6 @@ After your submitted package is approved, you'll get access to a Package Managem
 
 ## Package Versions
 
-> There is no limit to how many package versions you can have. Or if there is a limit, it's very high. We can leverage this to allow users to backtrack and install a previous version. This also allows us to "un-release" a version if it turns out there's problems with it.
-{.is-info}
-
-This section directly populates the list of released versions on the foundryvtt.com page for your module. It also informs the package installation UI within Foundry which version to download.
-
 > If a package has no Package Versions present, it will not be available on either the official package list or in the Foundry UI.
 {.is-warning}
 
@@ -85,7 +80,15 @@ This section directly populates the list of released versions on the foundryvtt.
 > See the [How Foundry checks for Package Updates](#how-foundry-checks-for-package-updates) section for more information.
 {.is-danger}
 
+This section directly populates the list of released versions on the foundryvtt.com page for your module. It also informs the package installation UI within Foundry which version to download.
+
+There is no limit to how many package versions you can have. Or if there is a limit, it's very high. We can leverage this to allow users to backtrack and install a previous version. This also allows us to "un-release" a version if it turns out there's problems with it.
+
 ### Version Number
+
+> If this increments but the linked manifest json's `version` field has not incremented, automatic updates will not pick up the change.
+{.is-warning}
+
 Should match the version number of the linked `module.json`.
 
 ### Package Manifest URL
@@ -100,14 +103,14 @@ It's common to include a changelog in the repository's README or to use your sou
 
 ### Required Core Version
 
-Should match the `minimumCoreVersion` field in the linked `module.json`.
-
-The minimum required Foundry Core version that this particular release requires to work.
-
 > This informs the Foundry Package Installer UI which version of the module to offer based on the Core version being used.
 >
 > Example: A package has two versions, one with the "Required Core Version" of `0.7.4` and one with `0.6.6`. A Foundry user looking for this package on a `0.6.6` version of foundry will be served the manifest url which satisfies this requirement.
 {.is-info}
+
+Should match the `minimumCoreVersion` field in the linked `module.json`.
+
+The minimum required Foundry Core version that this particular release requires to work.
 
 ### Compatible Core Version
 
