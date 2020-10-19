@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T18:45:27.937Z
+date: 2020-10-19T18:47:22.779Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -27,7 +27,7 @@ Outline:
 
 # Objectives
 
-> Create a safe workflow whereby package authors can rest easy knowing that users are at no risk of installing non-working code.
+> Promote an understanding of how Foundry installs and updates Packages with suggestions for how to create a safe workflow whereby package authors can rest easy knowing that users are at no risk of installing non-working code.
 {.is-info}
 
 Foundry's package installation and update process is robust enough to allow automatic update detection and installation, while also allowing users who wish to to install a specific version of a package.
