@@ -2,11 +2,13 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T18:21:59.694Z
+date: 2020-10-19T18:32:09.250Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
 ---
+
+
 
 Outline:
 - Foundry and Packages
@@ -23,33 +25,43 @@ Outline:
 	- Gitlab Releases
 	- Potential Automations
 
-# Foundry and Packages
+# Objectives
+
+> Create a safe workflow whereby package authors can rest easy knowing that users are at no risk of installing non-working code.
+
+Foundry's package installation and update process is robust enough to allow automatic update detection and installation, while also allowing users who wish to to install a specific version of a package.
+
+Setting up a package to make full use of this ability requires a little legwork, but for modules with frequent updates, the rewards are peace of mind.
+
+# Background
 
 Foundry prides itself on the ability to allow users the freedom to install packages from any source, not just the official list. So it's important to understand exactly how Foundry's client installs packages and checks for updates.
 
 ## How Foundry installs Packages
 
+Installation is fairly straightforward and can be done in one of two ways.
+
 ### From the UI
 
 0. User opens the UI, finds a package to install, clicks "Install."
 	UI is populated from packages submitted and accepted to https://foundryvtt.com/packages with at least one release.
-3. Foundry fetches the `module.json` from the latest release submitted to the module's `foundryvtt.com/admin` page to get the `download` url.
-4. Foundry downloads the `module.json` `download` url and checks if it is a zip file. If so, it unzips.
+3. Foundry fetches the manifest from the latest release submitted to the module's `foundryvtt.com/admin` page and looks for a `download` url within it.
+4. Foundry downloads the manifest's `download` url and checks if it is a zip file. If so, it unzips.
 
-### From a user-input module.json url
+### From a user-input manifest url
 
-0. User opens the UI and inputs a `module.json` url, clicks "Install."
-2. Foundry fetches the json from the input url and gets the `download` url.
-3. Foundry downloads the `module.json` `download` url and checks if it is a zip file. If so, it unzips.
+0. User opens the UI and inputs a manifest url, clicks "Install."
+2. Foundry fetches the manifest json and gets the `download` url from it.
+3. Foundry downloads the manifest's `download` url and checks if it is a zip file. If so, it unzips.
 
 ## How Foundry checks for Package Updates
 
 0. User initiates the flow by either clicking on "Check Update" an individual module or the "Update All" button.
-1. Foundry fetches the `module.json` from the url in the installed package's `module.json`.
-2. Foundry compares the `version` strings of the installed module against the fetched `module.json`.
-  2.a If the user is doing this on an individual module they have to then click the "Update" button.
-	Foundry uses its [`isNewerVersion` helper function](https://foundryvtt.com/api/global.html#isNewerVersion) to compare version strings.
-3. If Foundry determines that the fetched json has a newer version, it then downloads that json's `download` and checks if it is a zip file. If so, it unzips.
+1. Foundry fetches the manifest from the url in the currently installed package's manifest json.
+2. Foundry compares the `version` strings of the installed module's manifest against the fetched manifest.
+  2.a If the user is doing this on an individual package they have to then click the "Update" button.
+	Foundry uses its [`isNewerVersion` helper function](https://foundryvtt.com/api/global.html#isNewerVersion) to compare manifest version strings.
+3. If Foundry determines that the fetched manifest json has a newer version, it then downloads that manifest's `download` and checks if it is a zip file. If so, it unzips.
 
 # Package Administration
 
