@@ -1,29 +1,13 @@
 ---
-title: How to set up a Package to be Release History friendly
+title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2020-10-19T21:29:47.514Z
+date: 2020-10-19T21:30:26.877Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
 ---
 
-
-
-Outline:
-- Foundry and Packages
-  - How does Foundry install a Package
-  	- From UI?
-    - From module.json url?
-  - How does Foundry check for Updates
-
-- Module Admin
-	- How do you set up the Foundry Admin fields to allow a previous version to be downloaded
-
-- Repository Resources
-	- Github Releases
-	- Gitlab Releases
-	- Potential Automations
 
 # Objectives
 
