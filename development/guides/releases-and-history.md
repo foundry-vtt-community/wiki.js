@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T21:28:31.204Z
+date: 2020-10-19T21:28:54.858Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -156,7 +156,7 @@ The odds are good that whatever service you use to host your project repository 
 ## Github
 
 ### Releases
-Releases are Tags on Github that have extra metadata you can edit from the UI or from an API. Github provides a stable URL that will always point to the latest release: `user/repo/releases/latest`
+Releases are Tags on Github that have extra metadata you can edit from the UI or from an API. Github provides a stable URL that will always point to the latest release: `user/repo/releases/latest`.
 
 When a package author is ready to create a release version of their package, they can create a release to tag a particular commit in the history as that version's source. Then they can attach two artifacts to the release:
 
