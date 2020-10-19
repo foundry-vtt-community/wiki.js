@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T20:19:30.016Z
+date: 2020-10-19T20:27:44.660Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -121,6 +121,19 @@ Should match the `compatibleCoreVersion` field  in the linked `module.json`.
 
 The maximum Foundry Core version you are confident to say that this package works in. Note that nothing stops a user from installing the package on a version of Foundry Core that is higher than this.
 
+# General Guidelines for History-friendly Releases
+
+## Package Files
+
+### Manifest JSON
+
+#### `download`
+This field should be a url to only this package version's zip download. It should not point to a place where a user can find the latest version of the package.
+
+#### `manifest`
+This field should be a stable url that will always point to the latest manifest JSON without needing to change.
+
+
 
 # Version Control Host Specific Resources
 
@@ -142,6 +155,8 @@ See the [full documentation](https://docs.github.com/en/free-pro-team@latest/git
 
 
 ### Automation (Github Actions)
+
+
 
 ### Example Process
 
