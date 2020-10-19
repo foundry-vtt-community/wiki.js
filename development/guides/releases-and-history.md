@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T15:56:32.336Z
+date: 2020-10-19T16:03:21.209Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -24,6 +24,8 @@ Outline:
 	- Potential Automations
 
 # Foundry and Packages
+
+Foundry prides itself on the ability to allow users the freedom to install packages from any source, not just the official list. So it's important to understand exactly how Foundry's client installs and checks for updates.
 
 ## How Foundry installs Packages
 
@@ -56,8 +58,16 @@ After your submitted package is approved, you'll get access to a Package Managem
 ## Package Versions
 This section directly populates the list of released versions on the foundryvtt.com page for your module. It also informs the package installation UI within Foundry which version to download.
 
+The following fields are present for each release entry at the time of this writing:
+- Version Number
+- Package Manifest URL
+- Release Notes URL (optional)
+- Required Core Version
+- Compatible Core Version
 
 
+![example-package-versions-display.png](/development/guides/releases-and-history/example-package-versions-display.png)
+*Figure 1: Example of how these fields display at the bottom of a module's page.*
 
 # Version Control Host Specific Resources
 
