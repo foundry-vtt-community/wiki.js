@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T16:03:31.285Z
+date: 2020-10-19T16:17:21.149Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -59,12 +59,31 @@ After your submitted package is approved, you'll get access to a Package Managem
 This section directly populates the list of released versions on the foundryvtt.com page for your module. It also informs the package installation UI within Foundry which version to download.
 
 The following fields are present for each release entry at the time of this writing:
-- Version Number
-- Package Manifest URL
-- Release Notes URL (optional)
-- Required Core Version
-- Compatible Core Version
 
+### Version Number
+Should match the version number of the linked `module.json`.
+
+### Package Manifest URL
+Url to the `module.json` for this particular release.
+
+This `module.json` should have a `download` field that points at a `zip` of just this release. This is important as it allows a user to go back and download/install a specific version of the module from the history.
+
+### Release Notes URL (optional)
+A nice-to-have url which points to a release note for this particular release. It could link to a specific heading of a larger release notes file, or to a release-specific page.
+
+It's common to include a changelog in the repository's README or to use your source control host's release feature for this.
+
+### Required Core Version
+
+Should match the `minimumCoreVersion` field in the linked `module.json`.
+
+The minimum required Foundry Core version that this particular release requires to work.
+
+### Compatible Core Version
+
+Should match the `compatibleCoreVersion` field  in the linked `module.json`.
+
+The maximum Foundry Core version you are confident to say that this package works in. Note that nothing stops a user from installing the package on a version of Foundry Core that is higher than this.
 
 ![example-package-versions-display.png](/development/guides/releases-and-history/example-package-versions-display.png)
 *Figure 1: Example of how these fields display at the bottom of a module's page.*
