@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T19:15:45.720Z
+date: 2020-10-19T20:19:30.016Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -124,17 +124,57 @@ The maximum Foundry Core version you are confident to say that this package work
 
 # Version Control Host Specific Resources
 
-
+The odds are good that whatever service you use to host your project repository has some tools that can help keep distinct versions of your package.
 
 ## Github
 
 ### Releases
+Releases are Tags on Github that have extra metadata you can edit from the UI or from an API.
+
+When a package author is ready to create a release version of their package, they can create a release to tag a particular commit in the history as that version's source. Then they can attach two artifacts to the release:
+
+- Manifest: `module.json` -> `download` should point at the `package.zip` uploaded to this release
+- Package: `package.zip` -> this should include the same `module.json` as is attached
+
+From there, in the Foundry Admin Package Version list, provide the url for the release's manifest as the Manifest URL.
+
+See the [full documentation](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) for more information.
+
 
 ### Automation (Github Actions)
 
+### Example Process
+
+ElfFriend-DnD is a package author who is ready to release verson 2.23.1 of their module: "AmazingModule".
+
+Their `module.json` already leverages the `releases/latest` Github Repo url to ensure Foundry clients always look for the most recently released `module.json`:
+
+```json
+  "manifest": "https://github.com/ElfFriend-DnD/AmazingModule/releases/latest/download/module.json"
+```
+
+1. Update the following in `module.json`:
+  - `version` increment to 2.23.1
+  - `download` -> `https://github.com/ElfFriend-DnD/AmazingModule/releases/download/2.23.1/module.zip`
+2. Zip up all relevant module files into a file called `module.zip`.
+3. (Optional) Commit and push these changes.
+  *It is recommended to at least commit and push the `module.json` changes to keep your repo up to date with the latest version numbers.*
+4. [Create a Release](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository#creating-a-release) on the correct branch of the repository. 
+  4.a. Set the tag name to "2.23.1"
+  4.b. Add some change notes to the body of the release
+  4.c. Attach the `module.json` and `module.zip` files to the release
+5. Open AmazingModule's Foundry Package Admin page.
+6. At the very bottom of the Package Version list, fill in the fields for this new release.
+  - Version: `2.23.1`
+  - Manifest: `https://github.com/ElfFriend-DnD/AmazingModule/releases/download/2.23.1/module.json`
+  - Changelog:  `https://github.com/ElfFriend-DnD/AmazingModule/releases/tag/2.23.1`
+  - Required Core Version and Compatible Core Version as required.
+7. Hit Save.
+
+
 ## Gitlab
 
-Stub, I'm not familiar with how Gitlab does things. [This](https://gitlab.com/fvtt-modules-lab/quick-insert/-/tree/master) is an example of a project that leverages Gitlab releases.
+This is a Stub, I'm not familiar with how Gitlab does things, but I expect it's a similar process to the above. [This](https://gitlab.com/fvtt-modules-lab/quick-insert/-/tree/master) is an example of a project that leverages Gitlab releases.
 
 ### Releases
 
