@@ -2,7 +2,7 @@
 title: How to set up a Package to be Release History friendly
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: false
-date: 2020-10-19T18:58:27.876Z
+date: 2020-10-19T19:05:35.032Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -84,6 +84,9 @@ This section directly populates the list of released versions on the foundryvtt.
 
 There is no limit to how many package versions you can have. Or if there is a limit, it's very high. We can leverage this to allow users to backtrack and install a previous version. This also allows us to "un-release" a version if it turns out there's problems with it.
 
+![example-package-versions-display.png](/development/guides/releases-and-history/example-package-versions-display.png)
+*Figure 1: Example of how these fields display at the bottom of a module's page.*
+
 ### Version Number
 
 > If this increments but the linked manifest json's `version` field has not incremented, automatic updates will not pick up the change.
@@ -118,8 +121,6 @@ Should match the `compatibleCoreVersion` field  in the linked `module.json`.
 
 The maximum Foundry Core version you are confident to say that this package works in. Note that nothing stops a user from installing the package on a version of Foundry Core that is higher than this.
 
-![example-package-versions-display.png](/development/guides/releases-and-history/example-package-versions-display.png)
-*Figure 1: Example of how these fields display at the bottom of a module's page.*
 
 # Version Control Host Specific Resources
 
