@@ -2,24 +2,24 @@
 title: 1. Pour commencer
 description: 
 published: true
-date: 2020-10-20T11:53:17.182Z
+date: 2020-10-20T11:58:21.544Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z
 ---
 
-Please check out the [Official Tutorial](https://foundryvtt.com/article/tutorial/) available from FoundryVTT!
+Veuillez consulter le [Tutoriel officiel](https://foundryvtt.com/article/tutorial/) disponible auprès de FoundryVTT !
 
-In addition, we have created this guide to walk you through the basics of getting started.
+En complément, nous avons créé ce guide pour vous guider dans vos premiers pas.
 
-## Downloading
-Foundry is available via your user profile page on [FoundryVTT.com](https://foundryvtt.com).  Your user profile page is available by clicking your username on the top right of any page.  On this page, click on Purchased Licenses under your avatar and username.  You will find a list of download links for Windows, MacOS, and Linux under your licenses.
+## Téléchargement
+Foundry est disponible via votre page de profil d'utilisateur sur [FoundryVTT.com](https://foundryvtt.com).  Votre page de profil d'utilisateur est disponible en cliquant sur votre nom d'utilisateur en haut à droite de n'importe quelle page.  Sur cette page, cliquez sur "Licences achetées" sous votre avatar et votre nom d'utilisateur.  Vous trouverez une liste de liens de téléchargement pour Windows, MacOS et Linux sous vos licences.
 
-You will need to decide how you would like to host your foundry install, but there are 3 common setups: Self Hosted, Cloud Hosted and Partner Hosted. An [overview of these options](https://foundryvtt.com/article/hosting/) is available on the official site.
+Vous devrez décider comment vous souhaitez héberger votre installation de fonderie, mais il existe trois configurations communes : Auto-hébergement, hébergement en nuage et hébergement en partenariat. Un [aperçu de ces options](https://foundryvtt.com/article/hosting/) est disponible sur le site officiel.
 
-Once you have decided how you would like to host FoundryVTT, you should check the install guide for your set. We have a variety of [Setup Guides](/setup/hosting) for various cloud and self hosted options.
+Une fois que vous avez décidé de la manière dont vous souhaitez héberger FoundryVTT, vous devez consulter le guide d'installation de votre installation.
 
-## Connecting
-Foundry VTT is a self-hosted platform. This means that somebody is hosting a game on a server that they own or operate or rent. If you are not this person, you will need to contact the host for connection information. You will need an **IP & Port Number** or a **Domain Name**.
+## Connexion
+Foundry VTT est une plateforme auto-hébergée. Cela signifie que quelqu'un héberge un jeu sur un serveur qu'il possède, exploite ou loue. Si vous n'êtes pas cette personne, vous devrez contacter l'hébergeur pour obtenir des informations de connexion. Vous aurez besoin d'un **Numéro IP & Port** ou d'un **Nom de domaine**.
 
-Once connected to the host's server, click on the **Select Player** dropdown, and click the username the host created for you. You may also need an **Access Key** before you can connect to the game.
+Une fois connecté au serveur de l'hôte, cliquez sur le menu déroulant **Sélectionner un joueur**, et cliquez sur le nom d'utilisateur que l'hôte a créé pour vous. Vous pouvez également avoir besoin d'une **Clé d'accès** avant de pouvoir vous connecter au jeu.
