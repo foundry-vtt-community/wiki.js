@@ -1,14 +1,18 @@
 ---
-title: 3.
+title: 3. Créer une partie
 description: 
 published: true
-date: 2020-10-20T12:58:21.768Z
+date: 2020-10-20T13:04:33.811Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T12:58:21.768Z
 ---
 
 La première chose que nous voulons faire, c'est de créer notre partie afin de la faire jouer, voir rejouer avec nos amis.
+
+## Créer une partie
+
+La création d'une partie est assez simple et demande une préparation au préalable afin de pouvoir faire les choses simples et le plus rapidement possible. La première des choses commence donc par une bonne préparation.
 
 ## Comment faire une bonne préparation
 
