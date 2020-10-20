@@ -2,14 +2,31 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-20T10:47:55.596Z
+date: 2020-10-20T11:09:53.603Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
 ---
 
-# à quoi joue-t-on ?
+# à quoi joue-t-on ? Héros et dragons, voyons !
 Ce module est destiné à faire jouer **Héros et Dragons** sur la plateforme de jeu de rôle en ligne FoundryVTT
-Héros et dragons étant un dérivé du srd donjons et dragons 5e édition destiné au publique francophone quelques pré-requis sont necéssaire : 
-- avoir foundryVTT d'installé : https://foundryvtt.com/article/installation/
-- avoir le système dnd5e d'installé :
+Héros et dragons étant un dérivé du srd donjons et dragons 5e édition destiné au publique francophone quelques pré-requis sont necéssaire.
+
+### installer le soft et le système
+- avoir foundryVTT d'installé
+- avoir le système dnd5e d'installé
+
+voir la page https://foundryvtt.com/article/installation/ pour ces étapes
+
+
+### passer le soft et le système en français
+
+Pour afficher l'ensemble dans la langue de Patrick Sébastien 
+
+Installez les modules suivants vous devrez ouvrir foundryVTT ; dans la page "configuration and setup", allez à l'onglet "add-on modules", cliquez sur le bouton install module"
+
+recherchez : 
+**translation French [Core]** et installez-le
+**translation French [D&D5e]** et installez-le
+
+ 
