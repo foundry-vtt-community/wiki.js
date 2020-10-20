@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-20T11:45:40.814Z
+date: 2020-10-20T14:36:18.359Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -58,7 +58,7 @@ pour coller à la charte graphique de héros et dragons
 
 ### un accès direct au règles et au support
 
-en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous sera proposer 
+en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous sera proposé :  
 - d'acceder au site "héros et dragons" qui centralise les règles du jeu
 - d'acceder au discord de la communauté francophone de foundryVTT ou vous trouverez un salon dédié à **Héros et Dragons**
 
