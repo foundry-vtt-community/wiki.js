@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-20T16:15:38.851Z
+date: 2020-10-20T16:22:45.601Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -33,6 +33,9 @@ Il faut modifier le manifest et installer les versions 2.1.X : https://raw.githu
 - Token HUD
 - GM Toolkit
 - DungeonDraft Importer
+- Pings
+- AboutTime
+- Calendar/Weather
 
 #### Modules à éviter
 
