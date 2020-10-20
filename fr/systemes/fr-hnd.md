@@ -2,12 +2,13 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-20T11:37:28.043Z
+date: 2020-10-20T11:42:42.233Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
 ---
 
+#
 # à quoi joue-t-on ? Héros et dragons, voyons !
 Ce module est destiné à faire jouer **Héros et Dragons** sur la plateforme de jeu de rôle en ligne FoundryVTT
 Héros et dragons étant un dérivé du srd donjons et dragons 5e édition destiné au publique francophone quelques pré-requis sont necéssaire.
@@ -37,8 +38,10 @@ pour avoir les compendiums de traduits recherchez et installez
 
 toujours dans l'onglet "add-on modules" ; cherchez et installez :
 **héros et dragons**
-
+#
 # que propose ce module ?
+
+
 
 ### un ensemble de compendium 
 - les historiques et leurs capacités
@@ -55,9 +58,17 @@ pour coller à la charte graphique de héros et dragons
 
 ### un accès direct au règles et au support
 
-en cliquant sur l'icône en haut à gauche de la table virtuelle il vous sera proposer 
+en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous sera proposer 
 - d'acceder au site "héros et dragons" qui centralise les règles du jeu
 - d'acceder au discord de la communauté francophone de foundryVTT ou vous trouverez un salon dédié à **Héros et Dragons**
+
+### un résumé des règles de combats 
+en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles de combats. Cette aide de jeu à été produite par Endoril [forums.php?topic_id=15640](/fr/https://www.black-book-editions.fr/forums.php?topic_id=15640)
+
+
+
+
+
 
 
 
