@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-10-20T11:59:38.090Z
+date: 2020-10-20T12:00:02.847Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -103,9 +103,9 @@ Plusieurs options sont possibles. La première est d’utiliser le module géné
 
 Tout d'abord, il faut s’inscrire sur le Discord de FoundryVTT. Je sais, je me répète, mais c’est vraiment indispensable pour l’entraide. Ensuite, je dirais qu’il faut pour l’instant avoir des connaissances (ou les apprendre) dans les 3 domaines suivants :
 
-    Lire/écrire en anglais à peu près (à peu près, hein, pas d’inquiétude non plus) correctement, principalement pour comprendre la documentation, les principes et les messages échangés sur Discord.
-    Connaître les bases de la programmation en Javascript (ou avoir des bases de programmation dans un autre langage)
-    Connaître un peu le principe des CSS. Ce point n’est pas obligatoire tant que vous ne voulez pas changer l’apparence graphique par défaut.
+- Lire/écrire en anglais à peu près (à peu près, hein, pas d’inquiétude non plus) correctement, principalement pour comprendre la documentation, les principes et les messages échangés sur Discord.
+- Connaître les bases de la programmation en Javascript (ou avoir des bases de programmation dans un autre langage)
+- Connaître un peu le principe des CSS. Ce point n’est pas obligatoire tant que vous ne voulez pas changer l’apparence graphique par défaut.
 
 Autrement dit, c’est certain, si vous avez déjà une expérience en programmation (et encore mieux en programmation Web), ça sera beaucoup plus facile 🙂 ! Ensuite, le bon point d’entrée, c’est de regarder le code d’un module/système proche de celui que vous voulez réalisez sous Gitlab ou Github, puis de partir de là comme base.
 
