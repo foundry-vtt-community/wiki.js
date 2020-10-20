@@ -2,7 +2,7 @@
 title: FAQ Warhammer 4 sous FoundryVTT
 description: 
 published: true
-date: 2020-10-20T16:18:43.314Z
+date: 2020-10-20T16:24:02.649Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T16:18:43.314Z
@@ -37,11 +37,12 @@ A titre personnel, voici ce que j’utilise :
 
 Outre la gestion des feuilles de personnage et tout les mécanismes de base de FoundryVTT, le système développé par MooMan offre des automatisations très confortables :
 
-- commande /table <nom_de_table> pour effectuer un tirage sur une des tables pré-enregistrées (critiques, maladies, destinée, etc, etc. Tapez tout simplement /table pou en avoir la liste,
-- commande /cond <conditions> pour avoir le détail d’un état (assomé, en flammes, …),
-- commande /pay <somme> pour réclamer de l’argent aux joueurs (/pay pour avoir la syntaxe),
-- commande /avail <disponibilité> pour tirer aléatoirement la disponibilité d’un objet (/avail pour avoir la syntaxe),
-- commande /help pour obtenir l’aide intégrée des commandes disponibles,
+- commande `/table <nom_de_table>` pour effectuer un tirage sur une des tables pré-enregistrées (critiques, maladies, destinée, etc, etc. Tapez tout simplement /table pou en avoir la liste,
+- commande `/cond <conditions>` pour avoir le détail d’un état (assomé, en flammes, …),
+- commande  `/pay <somme>` pour réclamer de l’argent aux joueurs (/pay pour avoir la syntaxe),
+- commande `/avail <disponibilité>` pour tirer aléatoirement la disponibilité d’un objet (/avail pour avoir la syntaxe),
+- commande `/help` pour obtenir l’aide intégrée des commandes disponibles,
+- commande `/auberge` pour générer des menus d'auberges,
 - gestion des points de fortune et des sombres pactes : un clique droit sur la fiche d’un d’un joueur lui permet de dérouler un sous-menu affichant les options possibles,
 - gestion de l’initiative selon les 3 modes proposés par le livre de règle,
 - gestion intégrale de tout les atouts et défauts d’armes,
