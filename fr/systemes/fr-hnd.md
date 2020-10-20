@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-20T11:44:03.646Z
+date: 2020-10-20T11:44:59.794Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -63,7 +63,7 @@ en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous ser
 - d'acceder au discord de la communauté francophone de foundryVTT ou vous trouverez un salon dédié à **Héros et Dragons**
 
 ### un résumé des règles de combats 
-en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles de combats. Cette aide de jeu à été produite par Endoril [sur le forum black books](/fr/https://www.black-book-editions.fr/forums.php?topic_id=15640)
+en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles de combats. Cette aide de jeu à été produite par Endoril sur le forum black books (/fr/https://www.black-book-editions.fr/forums.php?topic_id=15640)
 
 
 
