@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-10-20T11:43:08.006Z
+date: 2020-10-20T11:45:31.567Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -37,7 +37,7 @@ Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’
 
 Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir des ports dans son modem ADSL‘ dans votre moteur de recherche…) et que vous savez installer un exécutable, il est probable que vous saurez vous en servir. Si tout ceci est déjà trop compliqué ou chiant (:)) pour vous, il faudra attendre les offres d’hébergement tiers qui vont arriver, comme The Forge. Sinon, si un de vos joueurs est un peu informaticien, il peut probablement vous aider dans cette tâche. Il faut compter 5-6 Mbs d’upload montant pour héberger une partie chez vous, donc il est possible que vous ayez besoin d’un serveur tiers si votre connexion est lente. Il existe de l’aide à ce sujet sur le Wiki de Foundry. Un certains nombres d’utilisateurs présents sur le Discord FR de Foundy sont également capables d’apporter du support sur ces sujets.
 
-## J’ai pas de serveur, je peux le mettre sur mon PC ?
+## Je n'ai pas de serveur, je peux le mettre sur mon PC ?
 
 Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous avez un .EXE qui va transformer votre PC en serveur Foundry. Vous aurez à ouvrir le port TCP 30000 (par défaut), et à l’autoriser dans votre firewall. Plus d’infos ici.
 
@@ -48,7 +48,7 @@ Bon si vous avez ça, l’installation ne devrait vous poser de problèmes, je v
 - https://foundryvtt.com/article/audio-video/
 - https://foundry-vtt-community.github.io/wiki/Ubuntu-VM/
 
-## Et y’a pas de services en lignes déjà disponibles ?
+## Et il n'y a pas de services en lignes déjà disponibles ?
 
 Si, il va y en avoir, et ça déjà démarré avec TheForge et FoundryServer.
 
