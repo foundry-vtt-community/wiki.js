@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-20T11:14:52.741Z
+date: 2020-10-20T11:37:28.043Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -37,5 +37,30 @@ pour avoir les compendiums de traduits recherchez et installez
 
 toujours dans l'onglet "add-on modules" ; cherchez et installez :
 **héros et dragons**
+
+# que propose ce module ?
+
+### un ensemble de compendium 
+- les historiques et leurs capacités
+- les dons 
+- les races et traits raciaux 
+- les classes et capacités de classes
+- l'ensemble de sorts (grimoire)
+- le bestiaire et leurs capacités
+- l'équipement d'aventurier
+- des tables aléatoires de  folies, de rencontres, d'évènements
+- un ensemble de pièges
+### un habillage graphique
+pour coller à la charte graphique de héros et dragons
+
+### un accès direct au règles et au support
+
+en cliquant sur l'icône en haut à gauche de la table virtuelle il vous sera proposer 
+- d'acceder au site "héros et dragons" qui centralise les règles du jeu
+- d'acceder au discord de la communauté francophone de foundryVTT ou vous trouverez un salon dédié à **Héros et Dragons**
+
+
+
+
 
  
