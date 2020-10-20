@@ -2,7 +2,7 @@
 title: 1. Pour commencer
 description: 
 published: true
-date: 2020-10-20T11:58:21.544Z
+date: 2020-10-20T12:36:58.727Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z
@@ -23,3 +23,20 @@ Une fois que vous avez décidé de la manière dont vous souhaitez héberger Fou
 Foundry VTT est une plateforme auto-hébergée. Cela signifie que quelqu'un héberge un jeu sur un serveur qu'il possède, exploite ou loue. Si vous n'êtes pas cette personne, vous devrez contacter l'hébergeur pour obtenir des informations de connexion. Vous aurez besoin d'un **Numéro IP & Port** ou d'un **Nom de domaine**.
 
 Une fois connecté au serveur de l'hôte, cliquez sur le menu déroulant **Sélectionner un joueur**, et cliquez sur le nom d'utilisateur que l'hôte a créé pour vous. Vous pouvez également avoir besoin d'une **Clé d'accès** avant de pouvoir vous connecter au jeu.
+
+## Quelques Outils utiles
+il arrive souvent que les gens cherchent des outils de conversions et qu'ils ne savent pas trop quoi choisir ou utiliser.
+Afin de bien commencer dans FVTT et son utilisation, nous avons fait une liste d'outils de confort afin pouvoir vous aider du mieux possible.
+
+***Les logiciels suivants sont gratuits et à usage personnel.***
+- [Audio: converter.](https://www.freac.org/) Ce logiciel vous permettra de transformer presque tous les sons d'un type de fichier en un autre type, mp3, ogg, wav, etc, etc.
+- [Audio: enregistrement, découpage.](https://audacity.fr/) Ce logiciel vous permettra d'enregistrer ou de faire des retouches/découpages/montages audio dans la plupart des formats existants.
+- [Retouche d'Image.](https://www.gimp.org/) Version GNU du célèbre Photoshop, ce logiciel vous permettra de faire la plupart de vos retouches d'image sans pour autant dépenser une fortune.
+- [video transcoder.](https://handbrake.fr/) Ce logiciel vous permettra de changer le format ou la taille des vidéos.
+- [Visionneuse/convertisseur d'Images](https://www.xnview.com/fr/xnviewmp/) Ce logiciel vous permettra de visionner, retailler et changer le type d'image sous des formats comme jpg, png et webp.
+
+***Les logiciels sous licences payantes.***
+- [DungeonDraft.](https://dungeondraft.net/) **Prix actuel de 19.99$, Windows64, MacOS64**. 
+La première particularité de ce logiciel payant, c'est que vous achetez une fois la licence, pas d'abonnement et vous avez un logiciel permettant de créer des Donjons, Maisons etc ... pour vos parties. La deuxième c'est qu'il existe un module pour FVTT permettant l'importation de vos cartes directement avec les murs/portes/lumière dynamique, si vous exporter au format **.dd2vtt**
+- [WonderDraft.](https://www.wonderdraft.net/) **Prix actuel de 29.99$, Windows64, MacOS64, Linux64**. 
+Logiciel payant permettant de créer des cartes de monde.
