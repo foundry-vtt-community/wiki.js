@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-10-20T11:45:31.567Z
+date: 2020-10-20T11:59:38.090Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -91,7 +91,7 @@ A chacun de venir piocher ce qu’il lui plaît !
 
 Mon choix – partial s’il en est – est expliqué sur cette page. De plus, sur le fond, je pense que l’on est un peu tous responsable des hégémonies technologiques que l’on observe : Facebook serait-il devenu Facebook si on avait pas cédé à la « masse » et donner sa chance à un autre outil ? Idem pour Windows, Google et autres. On se plaint de l’hégémonie de tel ou telle société/outil/méthode, mais nous sommes – je m’inclus là dedans – souvent les premiers à l’entretenir. Donc à un tout petit niveau, à l’échelle excessivement modeste des « tables virtuelles », j’essaye également très modestement de faire connaître un outil auquel je trouve des qualités techniques et de jeu assez abouties pour éviter que Roll20 ne devienne le choix par défaut, fautes d’autres combattants. L’objectif est bien entretenir le choix, pas de rentrer dans des batailles trollesques de qualité/défaut de chaque outil ! 🙂
 
-##Est-ce qu’il a des coupures audio/video ou autres ?
+## Est-ce qu’il a des coupures audio/video ou autres ?
 
 Tout n’est pas parfait, le soft est en fin de bêta et a encore quelques bugs, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session [Jitsi](http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
 
