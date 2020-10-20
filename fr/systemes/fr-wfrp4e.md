@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-18T08:37:52.714Z
+date: 2020-10-20T16:15:38.851Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -18,7 +18,7 @@ https://www.youtube.com/watch?v=XMEJt5OB4Bc
 https://www.youtube.com/watch?v=-CthIoE9o2E
 
 
-Une FAQ complémentaire en FR ici : http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/foundryvtt-warhammer-v4/
+Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/faq-wfrp4e)
 
 ## Pour la 0.6.6
 
