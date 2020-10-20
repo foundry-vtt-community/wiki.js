@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-10-20T11:40:16.089Z
+date: 2020-10-20T11:43:08.006Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -111,7 +111,7 @@ Autrement dit, c’est certain, si vous avez déjà une expérience en programma
 
 Je suis – raisonnablement – disponible sur le Discord de Foundry (@LeRatierBretonnien), vous pouvez me contacter sur ce type de sujet en message privé.
 
-## Je suis paumé, ça marche pas
+## Je suis paumé ... ça ne fonctionne pas !
 
 Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de Foundry. Vous n’avez rien à installer, tout se passe via un navigateur. Il existe plusieurs canaux de discussion, donc essayez de choisir le bon. Si votre problème est lié à l’installation, ben… #installation. Si c’est lié à un JDR (ie un système), et bien #systeme-discussion. Si c’est un #module-discussion. Et si c’est une question générale, plutôt dans #vtt-discussions ou #testing-question. Vous pouvez me contacter sur ces canaux en préfixant votre message avec @LeRatierBretonnien.
 
@@ -119,7 +119,7 @@ Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de 
 
 Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme Roll20, Astral, FantasyGrounds, Foundry etc offrent toutefois des capacités des gestion des scènes, des actions, des PNJs qui sont difficilement atteignables avec un simple outil de meeting. Mais l’important c’est de jouer de toute manière.
 
-## Bon je veux bien regarder, y’a pas une vidéo de démonstration ?
+## Bon je veux bien regarder, il n'y a pas une vidéo de démonstration ?
 
 La modernité veut systématiquement des vidéos pour tout et n’importe quoi, donc OK, allons-y :
 [cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
