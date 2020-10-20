@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-10-20T11:08:51.817Z
+date: 2020-10-20T11:15:46.756Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -26,8 +26,7 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 <i class="fab fa-gitlab"></i> [Gitlab Issue Tracker](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
 
 ## ... et plus en français
-Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à quelques interrogations [sur cette page](http://www.lahiette.com/leratierbretonnien/faq-fr-de-foundryvtt/) 
-[FAQ Foundry](/fr/faq/faq-main)
+Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à quelques interrogations : [FAQ Foundry](/fr/faq/faq-main)
 
 ## L'Installation
 - [Sous Windows]()
