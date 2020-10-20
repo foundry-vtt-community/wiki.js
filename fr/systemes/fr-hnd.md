@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-10-20T11:09:53.603Z
+date: 2020-10-20T11:14:52.741Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -28,5 +28,14 @@ Installez les modules suivants vous devrez ouvrir foundryVTT ; dans la page "con
 recherchez : 
 **translation French [Core]** et installez-le
 **translation French [D&D5e]** et installez-le
+
+pour avoir les compendiums de traduits recherchez et installez 
+**babele**
+
+
+### acceder au contenu de Héros et dragons
+
+toujours dans l'onglet "add-on modules" ; cherchez et installez :
+**héros et dragons**
 
  
