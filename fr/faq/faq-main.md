@@ -2,14 +2,14 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-10-20T11:15:11.878Z
+date: 2020-10-20T11:40:16.089Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
 ---
 
 ## FoundryVTT, c'est quoi ?
-FoundryVTT est un logiciel permettant de jouer à des jeux de rôles sur table en mode connecté. La table physique devient ainsi "virtuelle", et le MJ et ses joueurs communiquent à distance via micro et webcam. Un choix de ce outil expliqué ici : http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/
+FoundryVTT est un logiciel permettant de jouer à des jeux de rôles sur table en mode connecté. La table physique devient ainsi "virtuelle", et le MJ et ses joueurs communiquent à distance via micro et webcam. [Un choix de cet outil expliqué ici](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/)
 
 ## OK, ça ressemble vachement à Roll20
 Oui, tout à fait, c'est dans la même catégorie de logiciels. Il existe à mon sens deux grandes catégories de logiciels de table virtuelles : les "clients lourds" et les applications webs. Les clients lourds sont des applications (des .exe quoi, pour les Windoziens) à installer sur<strong> chaque</strong> poste des joueurs. Les applications Web nécessitent un serveur (soit auto-hébergé, soit hébergé par un tiers) et le MJ et les joueurs utilisent simplement un navigateur (Chrome conseillé) pour y accéder. FoundryVTT  est dans la catégorie des applications web, comme Roll20 ou AstralTableTop.
@@ -41,9 +41,12 @@ Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir de
 
 Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous avez un .EXE qui va transformer votre PC en serveur Foundry. Vous aurez à ouvrir le port TCP 30000 (par défaut), et à l’autoriser dans votre firewall. Plus d’infos ici.
 
-## J’ai déjà un serveur, comme je fais ?
+## J’ai déjà un serveur, comment je fais ?
 
-Bon si vous avez ça, l’installation ne devrait vous poser de problèmes, je vous conseille les liens suivants : https://foundryvtt.com/article/hosting/ https://foundryvtt.com/article/audio-video/ et https://foundry-vtt-community.github.io/wiki/Ubuntu-VM/
+Bon si vous avez ça, l’installation ne devrait vous poser de problèmes, je vous conseille les liens suivants : 
+- https://foundryvtt.com/article/hosting/ 
+- https://foundryvtt.com/article/audio-video/
+- https://foundry-vtt-community.github.io/wiki/Ubuntu-VM/
 
 ## Et y’a pas de services en lignes déjà disponibles ?
 
@@ -51,7 +54,25 @@ Si, il va y en avoir, et ça déjà démarré avec TheForge et FoundryServer.
 
 ## Y’a quoi comme jeu dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 03/09/2020, on recense 57 « systems » : 13th age, D&D5, Fate, Pathfinder 1/2, Shadowrun 5, Starfinder, Savage Worlds, Warhammer 4 , DeltGree, Appel de Cthulhu, etc, etc. La liste à jour est ici. D’autres systèmes sont en développement, je cite en vrac : Degenesis, Numenera, Monster of the Week, Dungeon Crawl Classics, Runequest…. Un système générique permet de plus de rapidement démarrer une table autour d’un jeu non supporté.
+Dans Foundry, les « jeux » sont appelés « systems ». Au 03/09/2020, on recense 57 « systems » : 
+- 13th age,
+- Appel de Cthulhu, DeltGree
+- D&D5,
+- Fate, 
+- Pathfinder 1/2, 
+- Shadowrun 5, 
+- Starfinder, 
+- Savage Worlds, 
+- Warhammer 4, etc ...
+
+D’autres systèmes sont en développement, tel que : 
+- Degenesis,
+- Dungeon Crawl Classics,
+- Monster of the Week,
+- Numenera,
+- Runequest…. 
+
+Un système générique permet de plus de rapidement démarrer une table autour d’un jeu non supporté.
 
 ## C’est tout en anglais ce machin !
 
@@ -59,7 +80,12 @@ Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxon
 
 ## J’ai vu qu’il y avait des modules, c’est quoi ?
 
-Les modules sont des extensions, comme des plugins, qui viennent ajouter des fonctionnalités au logiciel. Ces modules viennent donc ajouter des compléments aux « systèmes », en offrant des aides pour les MJ et les joueurs : effets spéciaux, navigation dans les fichiers images, communication, etc, etc. A chacun de venir piocher ce qu’il lui plaît !
+Les modules sont des extensions, comme des plugins, qui viennent ajouter des fonctionnalités au logiciel. Ces modules viennent donc ajouter des compléments aux « systèmes », en offrant des aides pour les MJ et les joueurs : 
+- effets spéciaux, 
+- navigation dans les fichiers images, 
+- communication, etc, etc. 
+
+A chacun de venir piocher ce qu’il lui plaît !
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
@@ -67,7 +93,7 @@ Mon choix – partial s’il en est – est expliqué sur cette page. De plus, s
 
 ##Est-ce qu’il a des coupures audio/video ou autres ?
 
-Tout n’est pas parfait, le soft est en fin de bêta et a encore quelques bugs, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session Jitsi (http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
+Tout n’est pas parfait, le soft est en fin de bêta et a encore quelques bugs, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session [Jitsi](http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
 
 ## Mon JDR « Borglur of Daemon of Death Doomesque » est pas dispo ! Que faire ?
 
@@ -95,4 +121,5 @@ Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme R
 
 ## Bon je veux bien regarder, y’a pas une vidéo de démonstration ?
 
-La modernité veut systématiquement des vidéos pour tout et n’importe quoi, donc OK, allons-y : cette vidéo est fréquemment citée comme une excellente introduction : https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m
+La modernité veut systématiquement des vidéos pour tout et n’importe quoi, donc OK, allons-y :
+[cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
