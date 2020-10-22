@@ -2,9 +2,9 @@
 title: PIXI
 description: 
 published: true
-date: 2020-09-24T22:28:02.689Z
+date: 2020-10-22T14:39:38.435Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T07:01:33.581Z
 ---
 
@@ -153,6 +153,37 @@ Now your square should be rotating around it's center point instead of a corner,
 ## Containers
 ## Sprites
 ## Masks
+## Filters
+
+Here is a list of [all default available Filters](http://pixijs.download/release/docs/PIXI.filters.html) for PIXI.
+
+Some things to note about filters:
+- Filters can only be applied to `PIXI.Sprite` and `PIXI.Graphic` elements.
+- Filters are applied last in the render order, thus they cannot be applied to Masks.
+
+
+### Filters and References
+
+The reference for a given filter is preserved after it is applied to a PIXI elment. This allows for easy on-the-fly changes to filters if you set them up like so:
+
+```js
+// assume `someChild` is an existing PIXI.Sprite
+
+const blurFilter = new PIXI.BlurFilter();
+blurFilter.blur = 10; // 10 strength blur
+
+someChild.filters = [blurFilter];
+
+// ...
+
+/**
+ * Update the blurFilter strength
+ */
+function updateBlurFilterStrength(strength) {
+  blurFilter.blur = strength;
+}
+```
+
 ## Coordinates
 - ### Translating coordinates from global to local
 - ### Mouse position
