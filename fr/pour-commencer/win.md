@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T20:59:20.424Z
+date: 2020-10-23T21:21:49.905Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -100,7 +100,7 @@ Le premier module à télécharger est le pack de langue **fr-FR - Core Game** a
 ![8_module.png](/setup/winstall/8_module.png)
 
 - en face de ***Translation : French [Core]***, cliquez sur la case ***Install***
-- Attendre la fin de l'installation. La case ***Install*** sera taquée ***Installed***
+- Attendre la fin de l'installation. La case ***Install*** sera tag ***Installed***
 - Fermer la fenêtre d'install Module, en cliquant en haut à droite sur ***Close***
 - Le module apparaitra désormais dans la liste des modules installés
 ![8_module_installed.png](/setup/winstall/8_module_installed.png)
