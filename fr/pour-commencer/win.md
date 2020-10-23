@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T19:29:37.414Z
+date: 2020-10-23T20:21:41.784Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -16,6 +16,7 @@ Une fois que vous avez téléchargé l'exécutable pour Windows, il va falloir f
 - plusieurs Partitions
 - un ou plusieurs HDD/SSD/M2 Internes
 - un ou plusieurs HDD/SSD Externes
+- un Nas etc ...
 
 Cette question est importante car elle va déterminer le choix d'installation que vous allez faire pour les données utilisateurs. 
 La chose fondamentale qu'il faut savoir avec Foundry VTT, c'est que l'application sépare le coeur du logiciel, des données utilisateurs. 
@@ -46,6 +47,46 @@ Cette règle est vraiment importante à garder en tête, car il est littéraleme
 - Lorsque l'installation est terminée, cliquez sur ***Fermer*** afin de lancer Foundry VTT
 ![3_launch.png](/setup/winstall/3_launch.png)
 
+5. Lors du premier démarrage de Foundry VTT, le logiciel vous demandera la clé de licence.
+Vous pouvez récupérer facilement sur le [site officiel de Foundry VTT](https://foundryvtt.com) :
+- Cliquez sur Login, entrain vos identifiants, puis cliquez sur **Log In**
+- Lorsque vous êtes sur votre Profil Utilisateur, cliquez sur Purchased Licenses
+- Dans la fenêtre de droite, copier la licence se trouvant en dessous du texte** Purchased Software Licenses**
+
 ## Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
-- Grace au paramétrage de l'Explorateur Windows que nous avons fait au début de l'installation, nous avons désormais la visibilité sur les répertoires cachés
+- Grace au paramétrage de l'Explorateur Windows que nous avons fait au début de l'installation, nous avons désormais la visibilité sur les répertoires cachés.
+- Cela va nous permettre d'accéder avec simplicité au répertoire utilisateur de Foundry VTT. C'est à cet endroit que vous trouverez toutes les installations dans des répertoires portant le même nom, de vos **Modules**, de vos **Systems** et de vos **Worlds** ***(Worlds étant le répertoire ou vous retrouverez toutes les parties/campagnes que vous allez créer)***.
+- Le répertoire utilisateur par défaut se trouve à l'endroit suivant : 
+***c:\ > utilisateurs > NomDeVotreProfil > AppData > FoundryVTT***
+![5_profil.png](/setup/winstall/5_profil.png)
+
+- Pour une question d'accessibilité rapide, je vous invite à créer un raccourci sur votre bureau à partir du répertoire FoundryVTT.
+	- Réduisez la fenêtre de l'Explorateur Windows
+  - Clic droit sur le répertoire ***FoundryVTT***
+  - Sans relacher le clic droit déplacer le répertoire sur le Bureau
+  - Lorsque vous êtes sur le Bureau, lachez le clic droit et sélectionner ***Créer les raccourcis ici*** afin de pouvoir accéder plus rapidement au répertoire dont vous aurez besoin par la suite.
+
+## Vous disposez d'un ou plusieurs disques durs ou de plusieurs partitions etc ... 
+Comme je vous l'indiquais au début du tutoriel, c'est ici que la question va se poser afin de savoir ce que voulez faire exactement de vos données utilisateurs.
+- Les mettre sur un disque Extérieur, parce que vous avez plusieurs PC
+- Changer simplement d'endroit, car vous avez plus de place, etc ... 
+
+Le tout étant bien sur d'avoir un accès rapide aux divers répertoires utilisateurs.
+Prenons donc le cas d'une autre partition ou d'un autre disque avec plus d'espace de stockage ou réservé aux Jeux de Rôle.
+
+En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans le profil utilisateur 
+- Pour rappel, le répertoire utilisateur par défaut se trouve à l'endroit suivant : 
+***c:\ > utilisateurs > NomDeVotreProfil > AppData > FoundryVTT***
+![5_profil.png](/setup/winstall/5_profil.png)
+- **Copier le répertoire FoundryVTT** (Touches raccourcis CTRL+C)
+- **Coller le répertoire FoundryVTT** dans la nouvelle destination. Je prendrais ici **la partition E:\ comme exemple**
+- Je vous invite à renommer le répertoire ***FoundryVTT*** par ***FoundryVTT_Data***,afin de ne pas faire la confusion avec le répertoire du coeur du logiciel.
+- Exécuter Foundry VTT, puis sélectionnez l'onglet Configuration
+- Dans le champ ***User Data Path***, remplacer le Path actuel par celui que vous venez de choisir en mettant des **"/"** comme sur l'exemple ci-dessous.
+- Lorsque vous avez fait la modification, cliquez sur ***Save Changes***, puis ***OK***
+![6_configuration.png](/setup/winstall/6_configuration.png)
+
+- Relancer Foundry VTT
+- *Il est possible qu'il vous redemande le numéro de votre licence*
+- Retourner dans l'onglet ***Configuration*** et vérifier que le changement à bien été pris en compte. Si tout est bon, pas besoin de refaire une Sauvegarde, il vous suffira de naviguer dans les divers onglets afin de commencer l'exploration en détails de Foundry.
