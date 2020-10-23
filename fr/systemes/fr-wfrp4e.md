@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-20T16:22:45.601Z
+date: 2020-10-23T07:31:13.324Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -16,7 +16,6 @@ La visualisation des vidéos présentées sur le README est aussi très utile po
 https://youtu.be/HMjXCLDDfWE
 https://www.youtube.com/watch?v=XMEJt5OB4Bc
 https://www.youtube.com/watch?v=-CthIoE9o2E
-
 
 Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/faq-wfrp4e)
 
@@ -40,5 +39,5 @@ Il faut modifier le manifest et installer les versions 2.1.X : https://raw.githu
 #### Modules à éviter
 
  - Pick-up-sixt : Casse les fiches de personnage et nécessite souvent de re-créer le monde
- - Chat Scrolling : Empêche l'édition des tests dans le tachat lorsque installé
+ - Chat Scrolling : Empêche l'édition des tests dans le tchat lorsque installé
  
