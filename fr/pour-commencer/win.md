@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T19:17:56.122Z
+date: 2020-10-23T19:24:30.875Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -16,6 +16,10 @@ Une fois que vous avez téléchargé l'excécutable pour Windows, il va falloir 
 - plusieurs Partitions
 - un ou plusieurs HDD/SSD/M2 Internes
 - un ou plusieurs HDD/SSD Externes
+
+Cette question est importante car elle va déterminer le choix d'installation que vous allez faire pour les données utilisateurs. 
+La chose fondamentale qu'il faut savoir avec Foundry VTT, c'est que l'application sépare le coeur du logiciel, des données utilisateurs. 
+Cette règle est vraiment importante à garder en tête, car il est litéralement **impossible de démarrer** Foundry VTT, si vous tentez de mettre les données utilisateurs dans le même répertoire que le coeur du logiciel.
 
 ## Installation de Foundry Virtual Tabletop
 1. En premier, nous allons faire un petit paramétrage de votre explorateur windows afin de faciliter la navigation dans les fichiers. Ouvrez l'Explorateur windows (touche Win+E), cliquez sur ***Affichage*** en haut de la fenêtre puis cochez :
