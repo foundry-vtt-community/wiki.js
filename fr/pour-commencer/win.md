@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T20:55:30.654Z
+date: 2020-10-23T20:59:20.424Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -84,7 +84,7 @@ En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans l
 - Je vous invite à renommer le répertoire ***FoundryVTT*** par ***FoundryVTT_Data***,afin de ne pas faire la confusion avec le répertoire du coeur du logiciel.
 - Exécuter Foundry VTT, puis sélectionnez l'onglet Configuration
 - Dans le champ ***User Data Path***, remplacer le Path actuel par celui que vous venez de choisir en mettant des **"/"** comme sur l'exemple ci-dessous.
-- Lorsque vous avez fait la modification, cliquez sur ***Save Changes***, puis ***OK***
+- Lorsque vous avez fait la modification, cliquez sur ***Save Changes***, puis ***YES***
 ![6_configuration.png](/setup/winstall/6_configuration.png)
 
 - Relancer Foundry VTT
@@ -108,4 +108,7 @@ Le premier module à télécharger est le pack de langue **fr-FR - Core Game** a
 - Sélectionner l'onglet ***Configuration***, puis cliquez sur le menu déroulant en face de ***Default Language*** et sélectionnez ***Français fr-FR - Core Game***
 ![9_langage.png](/setup/winstall/9_langage.png)
 
-- Cliquez sur ***Save Changes***, ***OK*** et redémarrer Foundry VTT
+- Cliquez sur ***Save Changes***, ***YES*** et redémarrer Foundry VTT
+
+Vous avez désormais l'interface de Foundry Virtual Tabletop en français
+![10_frfr.png](/setup/winstall/10_frfr.png)
