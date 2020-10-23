@@ -2,7 +2,7 @@
 title: FAQ Warhammer 4 sous FoundryVTT
 description: 
 published: true
-date: 2020-10-20T16:24:02.649Z
+date: 2020-10-23T07:34:03.142Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T16:18:43.314Z
@@ -57,6 +57,11 @@ Outre la gestion des feuilles de personnage et tout les mécanismes de base de F
 - gestion automatique des nuits de repos,
 - et j’en oublie probablement !
 
+## J'ai l'impression qu'il ny a plus de données/compendiums ?
+
+Oui, depuis la mise en légalité du système, il n'y a plus de distribution des compendiums dans le système à partir des versions supérieures à 2.X. Il est possible de rester en 1.6.X, avec les compendiums en cherchant sur le github de MooMan. 
+Cependant, un module complet et produit par C7 avec tout le contenu verrra le jour d'ici quelques temps, mettant à nouveau toutes les données/compendiums dans le système.
+ 
 ## OK, super, mais comment j’apprends à me servir de tout ça ?
 
 Je vous conseille fortement de prendre 20 minutes de votre temps pour regarder les 3 vidéos de MooMan concernant le système : https://www.youtube.com/watch?v=-CthIoE9o2E , https://www.youtube.com/watch?v=XMEJt5OB4Bc et https://youtu.be/HMjXCLDDfWE
