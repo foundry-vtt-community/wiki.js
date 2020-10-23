@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T20:25:40.754Z
+date: 2020-10-23T20:30:14.804Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -23,7 +23,7 @@ La chose fondamentale qu'il faut savoir avec Foundry VTT, c'est que l'applicatio
 Cette règle est vraiment importante à garder en tête, car il est littéralement **impossible de démarrer** Foundry VTT, si vous tentez de mettre les données utilisateurs dans le même répertoire que le coeur du logiciel.
 
 ## Installation de Foundry Virtual Tabletop
-1. En premier, nous allons faire un petit paramétrage de votre Explorateur Windows afin de faciliter la navigation dans les fichiers. Ouvrez l'Explorateur Windows (touche Win+E), cliquez sur ***Affichage*** en haut de la fenêtre puis cochez :
+1. En premier, nous allons faire un petit paramétrage de votre Explorateur Windows afin de faciliter la navigation dans les fichiers. Ouvrez l'Explorateur Windows (raccourci Win+E), cliquez sur ***Affichage*** en haut de la fenêtre puis cochez :
 - Extensions de noms de fichiers
 - Eléments masqués
 ![4_affichage.png](/setup/winstall/4_affichage.png)
@@ -79,8 +79,8 @@ En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans l
 - Pour rappel, le répertoire utilisateur par défaut se trouve à l'endroit suivant : 
 ***c:\ > utilisateurs > NomDeVotreProfil > AppData > FoundryVTT***
 ![5_profil.png](/setup/winstall/5_profil.png)
-- **Copier le répertoire FoundryVTT** (Touches raccourcis CTRL+C)
-- **Coller le répertoire FoundryVTT** dans la nouvelle destination. Je prendrais ici **la partition E:\ comme exemple**
+- **Copier le répertoire FoundryVTT** (raccourci CTRL+C)
+- **Coller le répertoire FoundryVTT** (raccourci CTRL+V) dans la nouvelle destination. Je prendrais ici **la partition E:\ comme exemple**
 - Je vous invite à renommer le répertoire ***FoundryVTT*** par ***FoundryVTT_Data***,afin de ne pas faire la confusion avec le répertoire du coeur du logiciel.
 - Exécuter Foundry VTT, puis sélectionnez l'onglet Configuration
 - Dans le champ ***User Data Path***, remplacer le Path actuel par celui que vous venez de choisir en mettant des **"/"** comme sur l'exemple ci-dessous.
