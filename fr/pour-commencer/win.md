@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T20:30:14.804Z
+date: 2020-10-23T20:55:30.654Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -89,4 +89,23 @@ En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans l
 
 - Relancer Foundry VTT
 - *Il est possible qu'il vous redemande le numéro de votre licence*
-- Retourner dans l'onglet ***Configuration*** et vérifier que le changement à bien été pris en compte. Si tout est bon, pas besoin de refaire une Sauvegarde, il vous suffira de naviguer dans les divers onglets afin de commencer l'exploration en détails de Foundry.
+- Retourner dans l'onglet ***Configuration*** et vérifier que le changement a bien été pris en compte. Si tout est bon, pas besoin de refaire une Sauvegarde, il vous suffira de naviguer dans les divers onglets afin de commencer l'exploration en détails de Foundry.
+
+## Passage de l'interface de Foundry VTT en français
+Le premier module à télécharger est le pack de langue **fr-FR - Core Game** afin de passer Foundry VTT en français.
+- Sélectionner l'onglet ***Add-on Module***, puis cliquez sur ***Install Module*** en bas à gauche de la fenêtre
+![7_coregame.png](/setup/winstall/7_coregame.png)
+
+- Dans le champ de recherche ***Filter Package***, tapez ***Translation***
+![8_module.png](/setup/winstall/8_module.png)
+
+- en face de ***Translation : French [Core]***, cliquez sur la case ***Install***
+- Attendre la fin de l'installation. La case ***Install*** sera taquée ***Installed***
+- Fermer la fenêtre d'install Module, en cliquant en haut à droite sur ***Close***
+- Le module apparaitra désormais dans la liste des modules installés
+![8_module_installed.png](/setup/winstall/8_module_installed.png)
+
+- Sélectionner l'onglet ***Configuration***, puis cliquez sur le menu déroulant en face de ***Default Language*** et sélectionnez ***Français fr-FR - Core Game***
+![9_langage.png](/setup/winstall/9_langage.png)
+
+- Cliquez sur ***Save Changes***, ***OK*** et redémarrer Foundry VTT
