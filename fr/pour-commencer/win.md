@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T20:21:41.784Z
+date: 2020-10-23T20:25:40.754Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -51,7 +51,7 @@ Cette règle est vraiment importante à garder en tête, car il est littéraleme
 Vous pouvez récupérer facilement sur le [site officiel de Foundry VTT](https://foundryvtt.com) :
 - Cliquez sur Login, entrain vos identifiants, puis cliquez sur **Log In**
 - Lorsque vous êtes sur votre Profil Utilisateur, cliquez sur Purchased Licenses
-- Dans la fenêtre de droite, copier la licence se trouvant en dessous du texte** Purchased Software Licenses**
+- Dans la fenêtre de droite, copier la licence se trouvant en dessous du texte **Purchased Software Licenses**
 
 ## Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
