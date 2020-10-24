@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T12:04:31.109Z
+date: 2020-10-24T12:08:27.362Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -119,6 +119,7 @@ Maintenant que le plus gros du travail est fait, nous allon activer l'Audio/Vide
 
 Dans Foundry VTT, il vous faudra :
 1. Télécharger le module ***'jitsi WebRTC client'***
+Ce module améliore considérablement les performances l'audio/vidéo ainsi que la consommation réseau. Par contre à terme, il vous faudra sans doute créer votre propre serveur jitsi.
 
 2. Ouvrir une partie :
 - Cliquez sur les engrenages en haut à droite, dernier Onglet, puis **'Gestion des modules'**
