@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T10:22:32.907Z
+date: 2020-10-24T10:23:27.317Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -67,7 +67,7 @@ Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE d
 - `C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
 *(Le chemin d'accès ci-dessus correspond, au chemin d'accès aux ressources utilisateur par défaut. Si vous avez changé votre chemin d'accès aux ressources utilisateur, il faudra remplacer **C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT** par votre propre chemin d'accès)*
 
-- Lancer foundry VTT. Lors des opérations suivantes, il faut absolument que Foundry VTT en fonction.
+- ***Lancer foundry VTT. Lors des opérations suivantes, il faut absolument que Foundry VTT soit en fonction.***
 
 
 
