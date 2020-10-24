@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T11:27:35.995Z
+date: 2020-10-24T12:04:31.109Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -113,5 +113,35 @@ Maintenant nous allons devoir activer le SSL dans la VTT.
 - Redémmarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commançant par HTTPS.
 
 ## Paramétrage de l'Audio/Vidéo dans Foundry VTT
+Maintenant que le plus gros du travail est fait, nous allon activer l'Audio/Video pour les joueurs.
+- Pour que l'Audio/Video fonctionne à travers votre navigateur, vos joueurs devront ***OBLIGATOIREMENT*** posséder une Webcam. Si ce n'est pas le cas, il est toujours possible de se servir de votre smartphone comme Webcam pour le biais d'application telle que [IVCam](https://www.e2esoft.com/ivcam/) ou [Iriun Webcam](https://iriun.com/).
+- Dans tous les cas et même si vos joueurs ne veulent pas que l'on voit leur tête, il faudra une Webcam pour que le navigateur vous propose l'utilisation de l'Audio/Vidéo.
+
+Dans Foundry VTT, il vous faudra :
+1. Télécharger le module ***'jitsi WebRTC client'***
+
+2. Ouvrir une partie :
+- Cliquez sur les engrenages en haut à droite, dernier Onglet, puis **'Gestion des modules'**
+	- Cocher Jitsi ***'WebRTC client'***
+  - Cliquer sur ***'Sauvegarder les paramètres de modules'***
+- Cliquez sur les engrenages en haut à droite, dernier Onglet, puis **'Configuration des Options'**
+- Dans la fenêtre **'Configuration générale'**, cliquez sur ***'Ouvrir la Configuration des droits'***
+	- Cocher pour Joueur (Player) :
+  	1.Autoriser la diffusion Audio
+    2.Autoriser la diffusion Vidéo
+    3.Sauvegarder
+- Dans la fenêtre **'Configuration générale'**, cliquez sur ***'Configurer Audio/Vidéo'***
+	- Dans l'onglet **'Général'**
+  **'Mode de Conférence audio/vidéo'**, activer ***'Audio/Video Enabled'***
+  **'Mode de capture de la voix'**, activer ***'Voice Activation'***
+  Cliquez sur **'Save Changes'**
+  ![av_config_general.png](/setup/winstall/av_config_general.png)
+- Cliquez sur les engrenages en haut à droite, dernier Onglet, puis **'Configuration des Options'**
+- Dans la fenêtre **'Configuration générale'**, cliquez sur ***'Configurer Audio/Vidéo'***
+  - Dans l'onglet **'Périphériques'**
+  Laissez par défaut si vous n'avez pas plusieurs sources de captures vidéos ou audios.
+  
+La configuration Audio/Vidéo devra être faite pour chaque nouveau World, par chaque utilisateur et à chaque fois qu'il y aura un changement de navigateur ou de machine.  
+  
 
 
