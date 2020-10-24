@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T09:20:19.763Z
+date: 2020-10-24T10:15:59.154Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -38,8 +38,6 @@ En fonction de votre Fournisseur d'Accès Internet (FAI) et de votre connexion, 
 - Il est possible d'avoir un **Nom de Domaine** gratuitement par l'intermédiaire du site [Freenom](https://www.freenom.com/fr/index.html?lang=fr). ( à voir si freenom a les réglages suffisants)
 - Pour ma part, et cela reste un avis personnel, je préfère m'orienter vers [OVH](https://www.ovh.com/fr/domaines/), afin d'avoir mon propre Nom de domaine ([OVH, Extensions et Tarifs](https://www.ovh.com/fr/domaines/tarifs/)).
 
-## Box Internet et Ouverture de Port.
-
 ## Connexion sécurisée, HTTPS
 ### Parlons un peu boutique
 L'abréviation HTTPS signifie littéralement **"HyperText Transfer Protocol Secure"**. Ce "protocole de transfert hypertexte sécurisé" combine le protocole de communication client-serveur, ou HTTP, avec un certificat d'authentification du site exploré.
@@ -54,6 +52,12 @@ Connectés par défaut au port TCP 443, les serveurs HTTPS associent le HTTP à 
 Pour avoir l'audio/vidéo fonctionnel sur Foundry VTT il faut un serveur sécurisé SSL.
 Seul hic, sur les machines locales, avec le client Foundry classique, le process implique généralement un certificat SSL auto-signé qui provoque un warning pour les clients navigateurs et potentiellement le blocage des images et autres ressources par certains antivirus.
 
+### Box Internet et Ouverture du Port 80.
+Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
+Pour cela, il vous faudra vous connecter à votre Box Internet.
+- **En IPv4**, il faudra dans un premier temps :
+	- `rediriger le port 30000 vers le port 80 en TCP.`
+
 ### Générer un Certificat SSL
 Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](https://github.com/do-know/Crypt-LE/releases) dans sa version 64bits.
 - Le logiciel Crypt-Le qui va gérer les intéractions avec la plateforme [Let's Encrypt](https://letsencrypt.org/fr/). 
@@ -62,6 +66,7 @@ Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](ht
 Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE dans un répertoire spécifique avec le nom :
 - `C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
 *(Le chemin d'accès ci-dessus correspond, au chemin d'accès aux ressources utilisateur par défaut. Si vous avez changé votre chemin d'accès aux ressources utilisateur, il faudra remplacer **C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT** par votre propre chemin d'accès)*
+
 
 
 
