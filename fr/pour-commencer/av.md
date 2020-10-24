@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T09:12:06.576Z
+date: 2020-10-24T09:20:19.763Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -60,7 +60,8 @@ Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](ht
 - Let's Encrypt est une autorité de certification à but non lucratif fournissant leurs certificats TLS à plusieurs millions de sites Web. Let's Encrypt permet d'avoir une certification valide qu'il faudra renouveler tous les 3 mois. Vous serez prévenu par mail quelques jours avant la fin de l'échéance afin de pouvoir faire votre renouvellement.
 
 Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE dans un répertoire spécifique avec le nom :
-- `C:\Users\<VotreNom>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
+- `C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
+*(Le chemin d'accès ci-dessus correspond, au chemin d'accès aux ressources utilisateur par défaut. Si vous avez changé votre chemin d'accès aux ressources utilisateur, il faudra remplacer **C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT** par votre propre chemin d'accès)*
 
-(le chemin d'accès ci-dessus correspond, au chemin d'accès aux ressources utilisateur par défaut. Si vous avez changer votre chemin d'accès aux ressources utilisateur, il faudra remplacer ***C:\Users\<>\AppData\Local\FoundryVTT*** par votre propre chemin d'accès  
+
 
