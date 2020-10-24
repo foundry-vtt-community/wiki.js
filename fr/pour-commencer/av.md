@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T12:10:11.461Z
+date: 2020-10-24T12:12:12.617Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -60,7 +60,7 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 
 ### Générer un Certificat SSL
 Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](https://github.com/do-know/Crypt-LE/releases) dans sa version 64bits.
-- Le logiciel Crypt-Le qui va gérer les intéractions avec la plateforme [Let's Encrypt](https://letsencrypt.org/fr/). 
+- Le logiciel Crypt-Le qui va gérer les interactions avec la plateforme [Let's Encrypt](https://letsencrypt.org/fr/). 
 - Let's Encrypt est une autorité de certification à but non lucratif fournissant leurs certificats TLS à plusieurs millions de sites Web. Let's Encrypt permet d'avoir une certification valide qu'il faudra renouveler tous les 3 mois. Vous serez prévenu par mail quelques jours avant la fin de l'échéance afin de pouvoir faire votre renouvellement.
 
 Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE dans un répertoire spécifique avec le nom :
@@ -110,7 +110,7 @@ Maintenant nous allons devoir activer le SSL dans la VTT.
   `../Data/.well-known/acme-challenge/domain.key`
   ![ssl.png](/setup/winstall/ssl.png)
 - Cliquez sur ***Save Changes*** puis ***YES***
-- Redémmarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commançant par HTTPS.
+- Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commançant par HTTPS.
 
 ## Paramétrage de l'Audio/Vidéo dans Foundry VTT
 Maintenant que le plus gros du travail est fait, nous allon activer l'Audio/Video pour les joueurs.
