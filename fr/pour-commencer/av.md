@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T12:39:02.169Z
+date: 2020-10-24T12:40:52.240Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -113,7 +113,7 @@ Maintenant nous allons devoir activer le SSL dans la VTT.
 - Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commençant par HTTPS.
 
 ## Paramétrage de l'Audio/Vidéo dans Foundry VTT
-Maintenant que le plus gros du travail est fait, nous allon activer l'Audio/Video pour les joueurs.
+Maintenant que le plus gros du travail est fait, nous allons activer l'Audio/Video pour les joueurs.
 - Pour que l'Audio/Video fonctionne à travers votre navigateur, vos joueurs devront ***OBLIGATOIREMENT*** posséder une Webcam. Si ce n'est pas le cas, il est toujours possible de se servir de votre smartphone comme Webcam pour le biais d'application telle que [IVCam](https://www.e2esoft.com/ivcam/) ou [Iriun Webcam](https://iriun.com/).
 - Dans tous les cas et même si vos joueurs ne veulent pas que l'on voit leur tête, il faudra une Webcam pour que le navigateur vous propose l'utilisation de l'Audio/Vidéo.
 
