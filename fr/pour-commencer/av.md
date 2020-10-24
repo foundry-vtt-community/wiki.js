@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T12:13:37.308Z
+date: 2020-10-24T12:39:02.169Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -56,7 +56,7 @@ Seul hic, sur les machines locales, avec le client Foundry classique, le process
 Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4**, il faudra dans un premier temps :
-	- `rediriger le port 30000 vers le port 80 en TCP.`
+	- `rediriger le port externe 80 vers le port de destination 30000 en TCP.`
 
 ### Générer un Certificat SSL
 Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](https://github.com/do-know/Crypt-LE/releases) dans sa version 64bits.
@@ -97,8 +97,8 @@ Après quelques instants votre certificat SSL va être validé.
 Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4** :
-	- il faudra supprimer la `redirection du port 30000 vers le port 80 en TCP.`
-  - il faudra `rediriger désormais le port 30000 vers le port 443 en TCP.`
+	- il faudra supprimer la `redirection du port externe 80 vers le port de destination 30000 en TCP.`
+  - il faudra `rediriger désormais le port externe 443 vers le port de destination 30000 en TCP.`
 
 ### Activation du SSL dans Foundry VTT
 Maintenant nous allons devoir activer le SSL dans la VTT.
