@@ -2,7 +2,7 @@
 title: Dungeons & Dragons 5
 description: Support pour Dungeons & Dragons 5e édition
 published: true
-date: 2020-10-24T21:01:06.185Z
+date: 2020-10-24T21:11:13.724Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:05:10.408Z
@@ -30,11 +30,13 @@ Une précision néanmoins : en Français peut se rajouter le droit de l'auteur d
 
 - Le système Dnd 5ème édition est implémenté directement par le créateur de FoundryVTT, ce qui lui assure de fait une bonne stabilité vis à vis du core.
 
-- Pour bénéficier de la traduction française : il vous faudra installer -en plus du systeme DnD5- le ***module de traduction FR*** pour avoir la fiche de persos etc... en Francais et pour bénéficier des compendiums ( recueil des listes de monstres , classe, talents ... ), mais aussi de différents poetits plus (passage des scènes en mètre par défaut, adaptation des mesures au système métrique ... )  il vous faudra installer et activer le module ***Babele***. 
+- Pour bénéficier de la traduction française : il vous faudra installer et activer -en plus du systeme DnD5- : 
+-- le ***module de traduction FR*** pour avoir la fiche de persos etc... en Francais 
+-- le ***module Babele***  pour bénéficier des compendiums ( recueil des listes de monstres , classe, talents ... ), mais aussi de différents petits plus (passage des scènes en mètre par défaut, adaptation des mesures au système métrique ... ). 
 
 - La traduction Fr est basée sur un mix entre des termes librements traduit, présents dans les livres, proposés sur le site d'[AideDD](https://www.aidedd.org)
-		*note : si possible c'est le Livre édité qui fait foi.*
-    La traduction des compendiums est par contre repris depusi le site [AideDD](https://www.aidedd.org)
+		*note : le Livre édité fait foi en cas de doute.*
+    La traduction des compendiums est par contre entièrement reprise depuis le site [AideDD](https://www.aidedd.org)
 - Plusieurs contributeurs ont participés / participent à cette traduction (il ne tient qu'à vous d'apporter votre Aide :) ) : `Baktov, Rwanoux, Olirin, thorni, jyah, Temvaryen`
 
 ---
