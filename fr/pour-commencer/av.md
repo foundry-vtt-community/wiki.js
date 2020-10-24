@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T12:12:12.617Z
+date: 2020-10-24T12:13:37.308Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -80,7 +80,7 @@ Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE d
 - Après quelques instants la commande va se mettre en pause, vous allez devoir de créer un fichier avec un nom particulier contenant une clé :
 	- Créer un fichier.txt, éditer son contenu en mettant la clé indiquée dans le message,
   - Renommer le fichier.txt avec le nom particulier indiqué dans le message,
-  - Supprimer l'extension ".txt" du fichier, valider le warning windows,
+  - Supprimer l'extension ".txt" du fichier, valider le warning Windows,
   - Placez ce fichier rempli dans le dossier :
   	- `C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
 
@@ -110,7 +110,7 @@ Maintenant nous allons devoir activer le SSL dans la VTT.
   `../Data/.well-known/acme-challenge/domain.key`
   ![ssl.png](/setup/winstall/ssl.png)
 - Cliquez sur ***Save Changes*** puis ***YES***
-- Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commançant par HTTPS.
+- Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commençant par HTTPS.
 
 ## Paramétrage de l'Audio/Vidéo dans Foundry VTT
 Maintenant que le plus gros du travail est fait, nous allon activer l'Audio/Video pour les joueurs.
