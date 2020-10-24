@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T10:23:27.317Z
+date: 2020-10-24T10:39:44.599Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -69,6 +69,10 @@ Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE d
 
 - ***Lancer foundry VTT. Lors des opérations suivantes, il faut absolument que Foundry VTT soit en fonction.***
 
+- Lancer l'invite de commande dans le répertoire contenant l'exécutable Crypt-LE :
+	- Sélectionner le répertoire **'acme-challenge'** dans votre Explorateur Windows
+  - Cliquez sur **'Fichier'** puis sélectionner **'Ouvrir Windows PowerShell'** et cliquez sur **'Ouvrir Windows PowerShell en tant qu'administrateur'**
+  ![powershell.png](/setup/winstall/powershell.png)
 
 
 
