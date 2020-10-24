@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T08:21:24.219Z
+date: 2020-10-24T09:12:06.576Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -14,27 +14,13 @@ Pour ceux en ADSL/ADSL2+ cela devient plus compliqué et un serveur VPS ou servi
 
 - Dans tous les cas, pour activer ce mode, plusieurs paramètres doivent être pris en compte et malheureusement cette partie n'est pas la plus simple qu'il soit. 
 **Pour cela il faudra :**
-	- *Une connexion à votre serveur sécurisée (l’URL commence par « http**s** »),*
 	- *Une Adresse IPv4 fixe,*
 	- *Un nom de domaine,*
 	- *Un accès à votre Box Internet,*
+	- *Une connexion à votre serveur sécurisée (l’URL commence par « http**s** »),*
 	- *Donner les droits aux joueurs,*
 	- *Une Webcam.*
 	- *Une licence Foundry VTT*
-
-## Connexion sécurisée, HTTPS
-### Parlons un peu boutique
-L'abréviation HTTPS signifie littéralement **"HyperText Transfer Protocol Secure"**. Ce "protocole de transfert hypertexte sécurisé" combine le protocole de communication client-serveur, ou HTTP, avec un certificat d'authentification du site exploré.
-
-- *À quoi sert le HTTPS ?*
-Le protocole HTTPS est une garantie pour un internaute de naviguer sur un site Internet respectueux des règles de confidentialité. Le visiteur est alors assuré de la fiabilité d'un site sur lequel il peut être amené à communiquer des données personnelles. C'est dans le cadre des transactions financières que le HTTPS trouve sa plus grande application, même s'il n'est pas rare, aujourd'hui, de voir des réseaux sociaux ou des services de courriers électroniques s'en doter ; de nombreuses boutiques en ligne utilisent d'ailleurs ce système de sécurité.
-
-- *Comment fonctionne le HTTPS ?*
-Connectés par défaut au port TCP 443, les serveurs HTTPS associent le HTTP à un algorithme de chiffrement de type **Secure Sockets Layer (SSL)** ou **Transport Layer Security (TLS)**. Le SSL et le TLS constituent des protocoles qui permettent de sécuriser les échanges sur Internet. Développés par Netscape puis par l'Internet Engineering Task Force, ces protocoles permettent une vérification du site visité via la délivrance d'un certificat d'authentification attribué par une autorité indépendante. Parmi les objectifs de sécurité assurés par le HTTPS figurent notamment l'authentification du serveur, l'intégrité et la confidentialité des données échangées.
-
-### Foundry VTT & le HTTPS
-Pour avoir l'audio/vidéo fonctionnel sur Foundry VTT il faut un serveur sécurisé SSL.
-Seul hic, sur les machines locales, avec le client Foundry classique, le process implique généralement un certificat SSL auto-signé qui provoque un warning pour les clients navigateurs et potentiellement le blocage des images et autres ressources par certains antivirus.
 
 ## Adresse IPv4 fixe
 En ce qui concerne l'adressage IP, nous vous conseillons d'utiliser l'adressage IPv4 et de désactiver sur votre Box Internet ou sur votre Machine, l'adressage IPv6.
@@ -53,3 +39,28 @@ En fonction de votre Fournisseur d'Accès Internet (FAI) et de votre connexion, 
 - Pour ma part, et cela reste un avis personnel, je préfère m'orienter vers [OVH](https://www.ovh.com/fr/domaines/), afin d'avoir mon propre Nom de domaine ([OVH, Extensions et Tarifs](https://www.ovh.com/fr/domaines/tarifs/)).
 
 ## Box Internet et Ouverture de Port.
+
+## Connexion sécurisée, HTTPS
+### Parlons un peu boutique
+L'abréviation HTTPS signifie littéralement **"HyperText Transfer Protocol Secure"**. Ce "protocole de transfert hypertexte sécurisé" combine le protocole de communication client-serveur, ou HTTP, avec un certificat d'authentification du site exploré.
+
+- *À quoi sert le HTTPS ?*
+Le protocole HTTPS est une garantie pour un internaute de naviguer sur un site Internet respectueux des règles de confidentialité. Le visiteur est alors assuré de la fiabilité d'un site sur lequel il peut être amené à communiquer des données personnelles. C'est dans le cadre des transactions financières que le HTTPS trouve sa plus grande application, même s'il n'est pas rare, aujourd'hui, de voir des réseaux sociaux ou des services de courriers électroniques s'en doter ; de nombreuses boutiques en ligne utilisent d'ailleurs ce système de sécurité.
+
+- *Comment fonctionne le HTTPS ?*
+Connectés par défaut au port TCP 443, les serveurs HTTPS associent le HTTP à un algorithme de chiffrement de type **Secure Sockets Layer (SSL)** ou **Transport Layer Security (TLS)**. Le SSL et le TLS constituent des protocoles qui permettent de sécuriser les échanges sur Internet. Développés par Netscape puis par l'Internet Engineering Task Force, ces protocoles permettent une vérification du site visité via la délivrance d'un certificat d'authentification attribué par une autorité indépendante. Parmi les objectifs de sécurité assurés par le HTTPS figurent notamment l'authentification du serveur, l'intégrité et la confidentialité des données échangées.
+
+### Foundry VTT & le HTTPS
+Pour avoir l'audio/vidéo fonctionnel sur Foundry VTT il faut un serveur sécurisé SSL.
+Seul hic, sur les machines locales, avec le client Foundry classique, le process implique généralement un certificat SSL auto-signé qui provoque un warning pour les clients navigateurs et potentiellement le blocage des images et autres ressources par certains antivirus.
+
+### Générer un Certificat SSL
+Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](https://github.com/do-know/Crypt-LE/releases) dans sa version 64bits.
+- Le logiciel Crypt-Le qui va gérer les intéractions avec la plateforme [Let's Encrypt](https://letsencrypt.org/fr/). 
+- Let's Encrypt est une autorité de certification à but non lucratif fournissant leurs certificats TLS à plusieurs millions de sites Web. Let's Encrypt permet d'avoir une certification valide qu'il faudra renouveler tous les 3 mois. Vous serez prévenu par mail quelques jours avant la fin de l'échéance afin de pouvoir faire votre renouvellement.
+
+Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE dans un répertoire spécifique avec le nom :
+- `C:\Users\<VotreNom>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
+
+(le chemin d'accès ci-dessus correspond, au chemin d'accès aux ressources utilisateur par défaut. Si vous avez changer votre chemin d'accès aux ressources utilisateur, il faudra remplacer ***C:\Users\<>\AppData\Local\FoundryVTT*** par votre propre chemin d'accès  
+
