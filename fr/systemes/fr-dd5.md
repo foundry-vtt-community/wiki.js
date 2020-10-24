@@ -2,7 +2,7 @@
 title: Dungeons & Dragons 5
 description: Support pour Dungeons & Dragons 5e édition
 published: true
-date: 2020-10-24T21:21:36.192Z
+date: 2020-10-24T21:54:59.521Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:05:10.408Z
@@ -11,11 +11,9 @@ dateCreated: 2020-10-16T19:05:10.408Z
 
 ## Quelques points à savoir sur le systeme Dnd5 sur FoundryVTT : 
 
-
-
-
+   ![logo dd5](https://theme.zdassets.com/theme_assets/1990310/9a78bfafe808700a64f63952979e3c6b6e9d6a59.png) 
 ### L'implémentation par défaut ne porte pas sur l'ensemble des règles de DD5, mais sur la version "open gaming licence" de celui-ci : 
-[le SRD - System Document Reference](https://dnd.wizards.com/articles/features/systems-reference-document-srd) ou en français communément : DRS - Document de Référence du Système.
+[le SRD - Systems Reference Document](https://dnd.wizards.com/articles/features/systems-reference-document-srd) ou en français communément : DRS - Document de Référence du Système.
 C'est une diffusion 'libre' du système autorisé à la diffusion et à la réutilisation, adaptation etc .. d'où les jeux 'dérivés' qu'on voit fleurir 'compatible 5ème (je ne rentre pas plus dans le détail, je vous laisse googlé ^^).
 Une précision néanmoins : en Français peut se rajouter le droit de l'auteur de la traduction.  
 
