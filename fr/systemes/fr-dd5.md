@@ -2,11 +2,41 @@
 title: Dungeons & Dragons 5
 description: Support pour Dungeons & Dragons 5e édition
 published: true
-date: 2020-10-19T09:47:42.594Z
+date: 2020-10-24T21:01:06.185Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:05:10.408Z
 ---
 
-# Header
-Your content here
+
+## Quelques points à savoir sur le systeme Dnd5 sur FoundryVTT : 
+
+ 
+- L'implémentation par défaut `ne porte pas sur l'ensemble des règles de DD5, mais sur la version "open gaming licence" de celui-ci` : [le SRD - System Document Reference
+](https://dnd.wizards.com/articles/features/systems-reference-document-srd) ou en français communément : DRS - Document de Référence du Système.
+C'est une diffusion 'libre' du système autorisé à la diffusion et à la réutilisation, adaptation etc .. d'où les jeux 'dérivés' qu'on voit fleurir 'compatible 5ème (je ne rentre pas plus dans le détail, je vous laisse googlé ^^).
+Une précision néanmoins : en Français peut se rajouter le droit de l'auteur de la traduction.  
+
+- en tout état de cause : le SRD vs règles complètes, cela donne ça ( [@Xapur]( https://discordapp.com/channels/715943353409339425/716213970297552897/764781880816959509) ) :
+--	les neuf races mais avec une seule sous-race
+-- les douze classes, mais chacune n’a qu’un archétype ou sous-classe
+-- un seul background au lieu d’une douzaine
+-- un seul Don (Feat) au lieu des 42 
+-- 319 sorts contre 362 pour le PHB
+-- 324 monstres et PNJ contre 428 pour le Monster Manual
+-- aucune référence à un lore officiel 
+
+---
+
+- Le système Dnd 5ème édition est implémenté directement par le créateur de FoundryVTT, ce qui lui assure de fait une bonne stabilité vis à vis du core.
+
+- Pour bénéficier de la traduction française : il vous faudra installer -en plus du systeme DnD5- le ***module de traduction FR*** pour avoir la fiche de persos etc... en Francais et pour bénéficier des compendiums ( recueil des listes de monstres , classe, talents ... ), mais aussi de différents poetits plus (passage des scènes en mètre par défaut, adaptation des mesures au système métrique ... )  il vous faudra installer et activer le module ***Babele***. 
+
+- La traduction Fr est basée sur un mix entre des termes librements traduit, présents dans les livres, proposés sur le site d'[AideDD](https://www.aidedd.org)
+		*note : si possible c'est le Livre édité qui fait foi.*
+    La traduction des compendiums est par contre repris depusi le site [AideDD](https://www.aidedd.org)
+- Plusieurs contributeurs ont participés / participent à cette traduction (il ne tient qu'à vous d'apporter votre Aide :) ) : `Baktov, Rwanoux, Olirin, thorni, jyah, Temvaryen`
+
+---
+
+- En anglais existe des modules d'intégrations plus poussés avec DndBeyond et également des utilitaires d'import de campagne roll20 dnd5
