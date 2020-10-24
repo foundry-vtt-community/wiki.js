@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T12:58:04.748Z
+date: 2020-10-24T13:47:14.801Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -93,7 +93,7 @@ Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE d
   - Une fois que la vérification de l'accessibilité est valide, revenez sur l'invite de commande et appuyez sur Entrée.
 Après quelques instants votre certificat SSL va être validé.
 
-### Box Internet, Redirection du Port 80 vers le Port 443.
+### Box Internet, Ouverture du Port 443.
 Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4** :
