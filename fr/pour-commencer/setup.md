@@ -2,7 +2,7 @@
 title: 1. Pour commencer
 description: 
 published: true
-date: 2020-10-20T14:30:58.400Z
+date: 2020-10-24T11:11:26.573Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z
@@ -40,3 +40,8 @@ Afin de bien commencer dans FVTT et son utilisation, nous avons fait une liste d
 La première particularité de ce logiciel payant, c'est que vous achetez une fois la licence, pas d'abonnement et vous avez un logiciel permettant de créer des Donjons, Maisons etc ... pour vos parties. La deuxième c'est qu'il existe un module pour FVTT permettant l'importation de vos cartes directement avec les murs/portes/lumière dynamique, si vous exporter au format **.dd2vtt**
 - [WonderDraft.](https://www.wonderdraft.net/) **Prix actuel de 29.99$, Windows64, MacOS64, Linux64**. 
 Logiciel payant permettant de créer des cartes de monde.
+
+***les logiciels avec ou sans abonnement.***
+- [Dungeonfog.](https://www.dungeonfog.com/) Logiciel de cartes de batailles en tous genre. Abonnement de **4.90€/mois** ou **49.90€/an**, possibilités d'avoir une license commerciale **99.90€/an**
+- [Inkarnate.](https://inkarnate.com/) Logiciel de cartes de batailles ou de villes-régions-mondes, soit gratuite accès à peu d'assets mais suffisant pour y faire des cartes basiques. ou un abonnement de **5€/mois** ou de **25€/an**.
+- [Pyromancers.](http://pyromancers.com/) Logiciel de cartes de batailles gratuites, avec la possibilité d'acheter une version sur [steam de Dungeon painter online](https://store.steampowered.com/app/592260/Dungeon_Painter_Studio/) pour la somme de **14.99€** une fois. Cette dernière vous offrira la possibilités d'avoir une quantité d'assets plus importante que la version gratuite. 
