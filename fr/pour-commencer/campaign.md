@@ -1,14 +1,16 @@
 ---
-title: 3. Créer une partie
+title: 4. Créer une partie
 description: 
 published: true
-date: 2020-10-20T13:04:33.811Z
+date: 2020-10-24T07:12:00.409Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T12:58:21.768Z
 ---
 
 La première chose que nous voulons faire, c'est de créer notre partie afin de la faire jouer, voir rejouer avec nos amis.
+
+**Cette page est largement incomplète  est sera mise à jour prochainement**
 
 ## Créer une partie
 
