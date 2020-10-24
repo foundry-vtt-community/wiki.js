@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T10:39:44.599Z
+date: 2020-10-24T11:27:35.995Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -52,7 +52,7 @@ Connectés par défaut au port TCP 443, les serveurs HTTPS associent le HTTP à 
 Pour avoir l'audio/vidéo fonctionnel sur Foundry VTT il faut un serveur sécurisé SSL.
 Seul hic, sur les machines locales, avec le client Foundry classique, le process implique généralement un certificat SSL auto-signé qui provoque un warning pour les clients navigateurs et potentiellement le blocage des images et autres ressources par certains antivirus.
 
-### Box Internet et Ouverture du Port 80.
+### Box Internet, Ouverture du Port 80.
 Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4**, il faudra dans un premier temps :
@@ -73,6 +73,45 @@ Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE d
 	- Sélectionner le répertoire **'acme-challenge'** dans votre Explorateur Windows
   - Cliquez sur **'Fichier'** puis sélectionner **'Ouvrir Windows PowerShell'** et cliquez sur **'Ouvrir Windows PowerShell en tant qu'administrateur'**
   ![powershell.png](/setup/winstall/powershell.png)
+  - Dans l'invite de commande, tapez la ligne suivante :
+`  .\le64.exe --key account.key --email "mon@email.fr" --csr domain.csr --csr-key domain.key --crt domain.crt --generate-missing --domains "mondomaine.fr" --live`
+***ATTENTION - N'appuyez pas sur entrée de suite après avoir lancé la commande.***
 
+- Après quelques instants la commande va se mettre en pause, vous allez devoir de créer un fichier avec un nom particulier contenant une clé :
+	- Créer un fichier.txt, éditer son contenu en mettant la clé indiquée dans le message,
+  - Renommer le fichier.txt avec le nom particulier indiqué dans le message,
+  - Supprimer l'extension ".txt" du fichier, valider le warning windows,
+  - Placez ce fichier rempli dans le dossier :
+  	- `C:\Users\<NomDeVotreProfil>\AppData\Local\FoundryVTT\Data\.well-known\acme-challenge`
+
+
+- Lorsque le fichier spécifique est dans le bon répertoire, nous allons vérifier qu'il est bien accessible via votre navigateur :
+	- Lancer votre navigateur,
+  - taper dans votre navigateur URL suivante :
+  	`http://LeNomDeMonDomaine.fr/.well-known/acme-challenge/LeNomDeVotreFichier`
+  - Si votre navigateur nous demande de télécharger le fichier, c'est que votre paramétrage de Nom de Domaine et/ou Redirection de port sont valides.
+  - Une fois que la vérification de l'accessibilité est valide, revenez sur l'invite de commande et appuyez sur Entrée.
+Après quelques instants votre certificat SSL va être validé.
+
+### Box Internet, Redirection du Port 80 vers le Port 443.
+Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
+Pour cela, il vous faudra vous connecter à votre Box Internet.
+- **En IPv4** :
+	- il faudra supprimer la `redirection du port 30000 vers le port 80 en TCP.`
+  - il faudra `rediriger désormais le port 30000 vers le port 443 en TCP.`
+
+### Activation du SSL dans Foundry VTT
+Maintenant nous allons devoir activer le SSL dans la VTT.
+- Selectionner Foundry VTT qui doit encore tourner en fond de tache sur votre machine
+- Cliquez sur l'onglet Configuration et remplisser les champs suivants par :
+	- Certificat SSL (Secure Socket Layer) 
+  `../Data/.well-known/acme-challenge/domain.crt`
+  - Clé privée SSL (Secure Socket Layer)
+  `../Data/.well-known/acme-challenge/domain.key`
+  ![ssl.png](/setup/winstall/ssl.png)
+- Cliquez sur ***Save Changes*** puis ***YES***
+- Redémmarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commançant par HTTPS.
+
+## Paramétrage de l'Audio/Vidéo dans Foundry VTT
 
 
