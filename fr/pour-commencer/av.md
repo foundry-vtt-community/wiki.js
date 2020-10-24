@@ -2,25 +2,25 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T08:07:13.927Z
+date: 2020-10-24T08:21:24.219Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
 ---
 
 Lorsque nous parlons ici d'Audio/Vidéo dans Foundry VTT, nous entendons par la, un mode de visio conférence intégré à la VTT.
-- Soyons clair dès le départ,pour les MJ, l'utilisation Audio/Vidéo, voir de Foundry VTT en général, est une ressource réservée aux MJ ayant une très bonne connexion comme la Fibre Optique voir la VDSL.
+- Soyons clair dès le départ,pour les MJs, l'utilisation Audio/Vidéo, voir de Foundry VTT en général, est une ressource réservée aux MJs ayant une très bonne connexion comme la Fibre Optique voir la VDSL.
+Pour ceux en ADSL/ADSL2+ cela devient plus compliqué et un serveur VPS ou service tierce, comme The Forge par exemple, sera conseillé.
 
-- Pour les MJs en ADSL/ADSL2+ cela devient plus compliqué et un serveur VPS ou service Tierce sera conseillé.
-
-- Pour activer ce mode, plusieurs paramètres doivent être activés et malheureusement cette partie n'est pas la plus simple qu'il soit. Pour cela il faudra :
-	- Une connexion à votre serveur sécurisée (l’URL commence par « http**s** »),
-	- Une Adresse IP fixe,
-	- Un nom de domaine,
-	- Un accès à votre Box Internet,
-	- Donner les droits aux joueurs,
-	- Une Webcam.
-	- Une licence Foundry VTT
+- Dans tous les cas, pour activer ce mode, plusieurs paramètres doivent être pris en compte et malheureusement cette partie n'est pas la plus simple qu'il soit. 
+**Pour cela il faudra :**
+	- *Une connexion à votre serveur sécurisée (l’URL commence par « http**s** »),*
+	- *Une Adresse IPv4 fixe,*
+	- *Un nom de domaine,*
+	- *Un accès à votre Box Internet,*
+	- *Donner les droits aux joueurs,*
+	- *Une Webcam.*
+	- *Une licence Foundry VTT*
 
 ## Connexion sécurisée, HTTPS
 ### Parlons un peu boutique
@@ -36,8 +36,10 @@ Connectés par défaut au port TCP 443, les serveurs HTTPS associent le HTTP à 
 Pour avoir l'audio/vidéo fonctionnel sur Foundry VTT il faut un serveur sécurisé SSL.
 Seul hic, sur les machines locales, avec le client Foundry classique, le process implique généralement un certificat SSL auto-signé qui provoque un warning pour les clients navigateurs et potentiellement le blocage des images et autres ressources par certains antivirus.
 
-## Adresse IP fixe
-En fonction de votre connexion
+## Adresse IPv4 fixe
+En ce qui concerne l'adressage IP, nous vous conseillons d'utiliser l'adressage IPv4 et de désactiver sur votre Box Internet ou sur votre Machine, l'adressage IPv6.
+En fonction de votre Fournisseur d'Accès Internet (FAI) et de votre connexion, vous aurez le droit à un adressage IPv4 fixe ou dynamique. Je vous invite à consulter le site de [lafibre.info](https://lafibre.info/dyndns/les-ip-fixes-ou-dynamiques-des-operateurs-francais/) pour les opérateurs français.
+- Si vous êtes dans le cas d'un adressage IPv4 en dynamique vous serez obligé de changer manuellement votre adresse IP sur le site de votre Nom de Domaine ou de passer par un service de DynDNS.
 
 ## Nom de domaine
 - Une adresse Internet ou nom de domaine est l'équivalent de votre adresse postale sur Internet. C'est la manière dont vos contacts et clients vont trouver votre site Internet sur le web. Un nom de domaine est donc indispensable lors de la création de votre site web !
@@ -49,3 +51,5 @@ En fonction de votre connexion
 
 - Il est possible d'avoir un **Nom de Domaine** gratuitement par l'intermédiaire du site [Freenom](https://www.freenom.com/fr/index.html?lang=fr). ( à voir si freenom a les réglages suffisants)
 - Pour ma part, et cela reste un avis personnel, je préfère m'orienter vers [OVH](https://www.ovh.com/fr/domaines/), afin d'avoir mon propre Nom de domaine ([OVH, Extensions et Tarifs](https://www.ovh.com/fr/domaines/tarifs/)).
+
+## Box Internet et Ouverture de Port.
