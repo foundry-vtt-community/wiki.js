@@ -2,7 +2,7 @@
 title: 3. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-10-24T13:47:14.801Z
+date: 2020-10-24T13:53:54.672Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -37,6 +37,20 @@ En fonction de votre Fournisseur d'Accès Internet (FAI) et de votre connexion, 
 
 - Il est possible d'avoir un **Nom de Domaine** gratuitement par l'intermédiaire du site [Freenom](https://www.freenom.com/fr/index.html?lang=fr). ( à voir si freenom a les réglages suffisants)
 - Pour ma part, et cela reste un avis personnel, je préfère m'orienter vers [OVH](https://www.ovh.com/fr/domaines/), afin d'avoir mon propre Nom de domaine ([OVH, Extensions et Tarifs](https://www.ovh.com/fr/domaines/tarifs/)).
+
+### Nom de Domaine Freenom
+1. créer un compte sur Freenom
+2. Aller dans Services -> Register a new Domain
+3. Tapez le nom de domaine que vous souhaitez puis cliquez sur **"Check Availability"**
+4. Choisissez une extension gratuite (parmi .tk, .ml, .ga, .cf, .gq) et cliquez sur **"Get it now"** à sa droite
+5. Elle devient **"Selected"** en vert, Cliquez sur **"Checkout"** en haut de la page
+6. Votre nom de domaine avec l'extension sélectionné apparait
+7. Choisissez **"12 Month @ FREE"** dans le menu déroulant à droite
+8. Cliquez sur **"Use DNS"** et remplissez les 2 champs **"IP adress"** avec votre adresse IP fixe
+9. Cliquez sur **"Continue"**
+10. Un résumé apparait, cochez la case **"I have read..."** puis cliquez sur **"Complete Order"**
+11. Freenom vous donne un uméro de commande, cliquez sur **"Click here to go to your Client Area"**
+12. Attendez 10/15mn pour que l'adresse soit effective
 
 ## Connexion sécurisée, HTTPS
 ### Parlons un peu boutique
