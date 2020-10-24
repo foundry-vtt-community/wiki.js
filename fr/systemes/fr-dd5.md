@@ -2,7 +2,7 @@
 title: Dungeons & Dragons 5
 description: Support pour Dungeons & Dragons 5e édition
 published: true
-date: 2020-10-24T21:54:59.521Z
+date: 2020-10-24T21:58:53.488Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:05:10.408Z
@@ -42,3 +42,6 @@ Une précision néanmoins : en Français peut se rajouter le droit de l'auteur d
 ---
 
 - En anglais existe des modules d'intégrations plus poussés avec DndBeyond et également des utilitaires d'import de campagne roll20 dnd5
+
+
+*Note : comme pour le logo ci-dessus, [un fan-kit est dispo](https://dnd.wizards.com/articles/features/fan-site-kit)*
