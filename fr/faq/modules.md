@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-10-31T00:55:02.791Z
+date: 2020-10-31T00:56:22.355Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -12,7 +12,7 @@ dateCreated: 2020-10-31T00:54:43.133Z
 
 **Disclaimer :**
 
-*c'est une liste de fait 'statique' pour aiguiller les premières recherches, soumise aux aléas des versions et des màj 
+*c'est une liste 'statique' pour aiguiller les premières recherches, soumise aux aléas des versions et des màj 
 En cas de soucis sur un module, posez la question sur le discord, et signalez les màj necessaires sur cette liste !*
 
 **Sources :**  
