@@ -2,13 +2,13 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-10-31T00:54:43.133Z
+date: 2020-10-31T00:55:02.791Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
 ---
 
-# Une petite sélection de modules à connaitre :#
+# Une petite sélection de modules à connaitre :
 
 **Disclaimer :**
 
