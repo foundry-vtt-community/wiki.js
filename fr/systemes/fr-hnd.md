@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-11-02T12:35:18.050Z
+date: 2020-11-02T15:09:56.015Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -18,7 +18,7 @@ Héros et dragons étant un dérivé du srd donjons et dragons 5e édition desti
 - avoir foundryVTT d'installé
 - avoir le système dnd5e d'installé
 
-voir la page https://foundryvtt.com/article/installation/ pour ces étapes
+voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 
 
 ### passer le soft et le système en français
