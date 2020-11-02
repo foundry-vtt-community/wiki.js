@@ -2,14 +2,15 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-11-02T12:30:26.204Z
+date: 2020-11-02T12:35:18.050Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
 ---
 
-
+---
 # à quoi joue-t-on ? Héros et dragons, voyons !
+---
 Ce module est destiné à faire jouer **Héros et Dragons** sur la plateforme de jeu de rôle en ligne FoundryVTT
 Héros et dragons étant un dérivé du srd donjons et dragons 5e édition destiné au publique francophone quelques pré-requis sont necéssaire.
 
@@ -40,9 +41,9 @@ toujours dans l'onglet "add-on modules" ; cherchez et installez :
 **héros et dragons**
 
 
-
+---
 # que propose ce module ?
-
+---
 
 
 ### un ensemble de compendium 
