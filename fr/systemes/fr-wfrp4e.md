@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-07T22:58:09.384Z
+date: 2020-11-07T22:58:20.012Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -23,6 +23,7 @@ Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/
 
 Si vous avez mis à jour le système Warhammer en v3, vous devez faire les manips suivantes: 
 
+- Arrêter votre monde
 - Supprimer le module de traduction FR
 - Le réinstaller en copiant ce lien : https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/v3/module.json 
 - Relancer votre monde
