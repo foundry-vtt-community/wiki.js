@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-10-23T07:31:13.324Z
+date: 2020-11-07T22:57:38.503Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -18,6 +18,15 @@ https://www.youtube.com/watch?v=XMEJt5OB4Bc
 https://www.youtube.com/watch?v=-CthIoE9o2E
 
 Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/faq-wfrp4e)
+
+## Pour le système warhammer 3.X
+
+Si vous avez mis à jour le système Warhammer en v3, vous devez faire les manips suivantes: 
+
+- Supprimer le module de traduction FR
+- Le réinstaller en copiant ce lien : https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/v3/module.json 
+
+Seuls le contenu officiel de C7 est désormais supporté en termes de compendiums.
 
 ## Pour la 0.6.6
 
