@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-09T06:37:35.107Z
+date: 2020-11-09T06:39:15.187Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -55,7 +55,7 @@ Vous pouvez récupérer facilement sur le [site officiel de Foundry VTT](https:/
 
 ## Pare-feu et redirection de Port sur votre Box Internet.
 ### Pare-feu
-Une fois que Foundry VTT sera installé en fonction de votre choix, comme il est décrit ci-dessous, Windows devrait vous demander une autorisation d'ouverture d'accès à internet, qu'il faudra accepter afin que vous puissiez avoir accès Foundry VTT via Internet.
+Une fois que Foundry VTT sera installé en fonction de votre choix, Windows devrait vous demander une autorisation d'ouverture d'accès à internet, qu'il faudra accepter afin que vous puissiez avoir accès Foundry VTT via Internet.
 Il peut arriver que Windows ne vous le propose pas par défaut.
 - Ouvrez **Paramètres**
 - Dans *Rechercher un paramètre*, 
