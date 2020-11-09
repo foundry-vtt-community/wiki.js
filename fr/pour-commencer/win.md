@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-09T15:07:37.720Z
+date: 2020-11-09T15:08:05.128Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
