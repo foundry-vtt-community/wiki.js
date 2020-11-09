@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-10-18T16:51:31.516Z
+date: 2020-11-09T13:18:15.202Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -28,7 +28,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 <i class="fab fa-discord"></i> [English](https://discordapp.com/invite/DDBZUDf) The official FoundryVTT Discord.
 <i class="fab fa-discord"></i> [Español](https://discord.gg/RSW3qsU) Unofficial Spanish community.
 <i class="fab fa-discord"></i> [Français](https://discord.gg/pPSDNJk) Unofficial French community.
-<i class="fab fa-discord"></i> [Deutsches](https://discord.gg/XrKAZ5J) Unofficial German community.
+<i class="fab fa-discord"></i> [Deutsch](https://discord.gg/XrKAZ5J) Unofficial German community.
 <i class="fab fa-discord"></i> [Developers](https://discord.gg/2rHs78h) Unofficial module, system and content developers.
 
 ## Public Foundry Demos
