@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-09T06:48:29.099Z
+date: 2020-11-09T15:07:37.720Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -90,7 +90,7 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 
 ***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.*** 
 
-Par défaut, le port utilisait par Foundry VTT est le **Port 30000** et il faudra donc ouvrir ce dernier sur le NAT de votre Box Internet.
+Par défaut, le port utilisé par Foundry VTT est le **Port 30000** et il faudra donc ouvrir ce dernier sur le NAT de votre Box Internet.
 Afin que vous puissiez utiliser Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4**, il faudra dans un premier temps :
