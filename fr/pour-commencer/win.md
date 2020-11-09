@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-10-23T21:21:49.905Z
+date: 2020-11-09T06:05:42.907Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -52,6 +52,24 @@ Vous pouvez récupérer facilement sur le [site officiel de Foundry VTT](https:/
 - Cliquez sur Login, entrain vos identifiants, puis cliquez sur **Log In**
 - Lorsque vous êtes sur votre Profil Utilisateur, cliquez sur Purchased Licenses
 - Dans la fenêtre de droite, copier la licence se trouvant en dessous du texte **Purchased Software Licenses**
+
+## Pare-feu et ouverture de Port sur votre Box Internet.
+### Pare-feu
+Une fois que Foundry VTT sera installé en fonction de votre choix, comme il est décrit ci-dessous, Windows devrait vous demander une autorisation d'ouverture d'accès à internet, qu'il faudra accepter afin que vous puissiez avoir accès Foundry VTT via Internet.
+Il peut arriver que Windows ne vous le propose pas par défaut.
+- Ouvrez **Paramètres**
+- Dans *Rechercher un paramètre*, 
+	- tapez **Pare-feu**
+  - Sélectionnez **Autoriser une application via Pare-feu Windows**
+- Dans la fnêtre *Applications Autorisées*,
+	- Cliquez sur **Modifier les paramètres**
+- Une fois la modification des paramètres autirisée,
+	- Cliquez sur **Autoriser une autre application ...**
+- Dans la fenêtre *Ajouter une application*,
+	- Cliquez sur **Parcourir...**
+  - Allez chercher l'executable du foundry dans *c:\program files\foundryVTT*,
+  - Cliquez sur **Ouvrir**,
+  - Cliquez sur **OK**.
 
 ## Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
