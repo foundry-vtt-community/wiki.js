@@ -2,7 +2,7 @@
 title: Modules
 description: 
 published: true
-date: 2020-11-09T19:38:35.538Z
+date: 2020-11-09T19:39:52.047Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:50.901Z
@@ -11,7 +11,7 @@ dateCreated: 2020-09-23T00:22:50.901Z
 Modules enhance or replace functionality within Foundry VTT. Most modules consist of a `module.json` file that describes the module and contains some metadata about it, and a `<module name>.js` file that contains the module code. Some modules also include `css` and `html` files.
 
 # Finding Modules
-Community created modules can be found via the [Community Modules](https://foundry-vtt-community.github.io/wiki/Community-Modules/) wiki page, or in the [Community Modules Repo](https://github.com/foundry-vtt-community/modules)
+Browsing the official module list is the easiest way to find Moudules. Some unlisted modules can be found via the [Unlisted Modules](/en/community/community-unlisted-modules) wiki page.
 
 # Installing Modules
 
