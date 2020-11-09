@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-09T06:41:55.628Z
+date: 2020-11-09T06:45:33.188Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -85,7 +85,7 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 	- Dans les **Adresses Statiques**, reservez une adresse locale de type **192.168.x.x** à l'**Adresse MAC** de votre ordinateur. [Obtenir l'adresse Mac sous Windows](https://www.commentcamarche.net/faq/10935-trouver-son-adresse-mac#obtenir-l-adresse-mac-sous-windows)
 
 ### Box Internet, Ouverture du Port 80.
-**ATTENTION** : Lorsque vous avez ouvrir des ports sur votre Box, il faudra décocher dans la partie **NAT**, 
+**ATTENTION** : Lorsque vous allez ouvrir des ports sur votre Box, il faudra décocher dans la partie **NAT**, 
 - ***L'activation de l'UPnP***. 
 
 Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties. 
