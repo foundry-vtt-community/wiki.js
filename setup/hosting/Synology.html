@@ -2,7 +2,7 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2020-11-10T07:01:18.475Z
+date: 2020-11-10T07:06:24.896Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
@@ -39,7 +39,7 @@ dateCreated: 2020-11-10T02:09:22.459Z
 </blockquote>
 <p><strong>You will now be in the root directory for your NAS, this next step changes depending on where you put your VTT, the volumes of your NAS and your file structure, these are the commands I use.</strong></p>
 <blockquote>
-  <p>node /volume1/homes/&lt;NAShostname&gt;/Drive/FoundryVTT/foundryvtt/resources/app/main.js --dataPath=/volume1/homes/&lt;NASHostname&gt;/Drive/FoundryVTT/foundrydata</p>
+  <p>cd /volume1/homes/&lt;hostname&gt;/Drive/FoundryVTT<br>node foundryvtt/resources/app/main.js --dataPath=foundrydata</p>
 </blockquote>
 <p>Once you close the SSH window this instance will stop working, it is a one time launch option.</p>
 <h1>Running your FoundryVTT server continuously</h1>
