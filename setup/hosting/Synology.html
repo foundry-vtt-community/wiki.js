@@ -1,0 +1,44 @@
+<!--
+title: Synology
+description: A brief guide on setting up foundry on synology.
+published: true
+date: 2020-11-10T02:09:22.459Z
+tags: 
+editor: ckeditor
+dateCreated: 2020-11-10T02:09:22.459Z
+-->
+
+<p>Setting up Foundry on Synology is similar in execution as a base linux operation with some slight changes in the steps. Some things such as directory locations can be adjusted based on your own setup. If anyone has suggestions for other ways to execute the server instance please, by all means, share. &nbsp;</p>
+<h1>Basic Setup</h1>
+<ol>
+  <li>Enable admin user in DSM</li>
+</ol>
+<figure class="image image_resized" style="width:58.49%;"><img src="/images/screen_shot_2020-11-09_at_8.42.18_pm.jpg">
+  <figcaption>enable admin account</figcaption>
+</figure>
+<p>2. Enable SSH in DSM</p>
+<figure class="image image_resized" style="width:58.5%;"><img src="/images/screen_shot_2020-11-09_at_8.28.02_pm_copy.jpg">
+  <figcaption>enable SSH</figcaption>
+</figure>
+<p>3. Install node.js to synology using DSM, I don't know if both are needed but I did it just in case and it seems to work just fine.</p>
+<figure class="image image_resized" style="width:57.99%;"><img src="/images/screen_shot_2020-11-09_at_8.54.29_pm.jpg"></figure>
+<p>4. Create the foundry directories (the exact location of your directories is up to personal preference)<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; In this example I have created my directories in home/Drive/FoundryVTT/&nbsp;<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The data folder will contain your modules, worlds, and configurations<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The other folder contains the application files</p>
+<figure class="image image_resized" style="width:58.29%;"><img src="/images/screen_shot_2020-11-09_at_8.51.37_pm.png">
+  <figcaption>directories</figcaption>
+</figure>
+<p>5. Download your node.js Foundry instance, this is located in your account page under purchased licenses. Download this file with DSM and extract the contents of the zip file into your foundryvtt (or whatever you chose) folder. &nbsp;It should look like below.</p>
+<figure class="image image_resized" style="width:59.2%;"><img src="/images/screen_shot_2020-11-09_at_8.58.20_pm.jpg"></figure>
+<h1>Start your Foundry VTT instance</h1>
+<p><strong>SSH into your synology NAS, this is using your SSH client of choice. I use MacOS and utilize the built in terminal option. &nbsp;Once you open your terminal/SSH client you'll connect to it:</strong></p>
+<blockquote>
+  <p>'yourusername@yourcomputername ~ % ssh admin@&lt;insert NAS IP&gt;</p>
+</blockquote>
+<p><strong>Enter your password for the NAS and then enter the following:&nbsp;</strong></p>
+<blockquote>
+  <p>sudo -i</p>
+</blockquote>
+<p><strong>You will now be in the root directory for your NAS, this next step changes depending on where you put your VTT, the volumes of your NAS and your file structure, these are the commands I use.</strong></p>
+<blockquote>
+  <p>node /volume1/homes/&lt;NAShostname&gt;/Drive/FoundryVTT/foundryvtt/resources/app/main.js --dataPath=/volume1/homes/&lt;NASHostname&gt;/Drive/FoundryVTT/foundrydata</p>
+</blockquote>
+<p>&nbsp;</p>
