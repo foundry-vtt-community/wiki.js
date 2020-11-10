@@ -2,7 +2,7 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2020-11-10T02:29:58.914Z
+date: 2020-11-10T02:43:43.914Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
@@ -41,9 +41,22 @@ dateCreated: 2020-11-10T02:09:22.459Z
 <blockquote>
   <p>node /volume1/homes/&lt;NAShostname&gt;/Drive/FoundryVTT/foundryvtt/resources/app/main.js --dataPath=/volume1/homes/&lt;NASHostname&gt;/Drive/FoundryVTT/foundrydata</p>
 </blockquote>
+<h1>Running your FoundryVTT server continuously</h1>
+<p>If you would like to use your foundry VTT server AFTER closing the SSH client window then you'll need to use Forever. &nbsp;To install and operate forever on your system run the following commands:</p>
+<blockquote>
+  <p>npm&nbsp;install&nbsp;forever&nbsp;-g</p>
+</blockquote>
+<p>You MIGHT need to do this with sudo, but if you have already gained root this shouldn't be required. Once forever has been installed you'll change the start-up command to the following, note you do not need to use the ‘node’ command for this to work:</p>
+<blockquote>
+  <p>forever start &lt;directory to main.js&gt; --dataPath=&lt;directory to data path&gt;</p>
+</blockquote>
+<p>Finally to stop the foundry server you'd use the following:</p>
+<blockquote>
+  <p>forever start &lt;directory to main.js&gt; --dataPath=&lt;directory to data path&gt;</p>
+</blockquote>
 <h3>Notes</h3>
 <ul>
-  <li>Using this setup you will need to keep your SSH client open while the server runs, I am looking into an option to keep this running.</li>
-  <li>If you close the SSH client without properly shutting down the foundry instance it will make you reboot your NAS before it will allow you to launch a second instance. &nbsp;</li>
-  <li>To properly shutdown your foundry instance, ctrl-c (or similar hotkey in your client) shuts down the instance properly.</li>
+  <li>Using this setup you will need to keep your SSH client open while the server runs, unless you use Forever to keep it running.</li>
+  <li>If you close the SSH client without properly shutting down the foundry instance or utilizing Forever it will make you reboot your NAS before it will allow you to launch FoundryVTT again.</li>
+  <li>To properly shutdown your foundry instance, ctrl-c (or similar hotkey in your client) shuts down the instance properly (note using Forever you need to use a different shutdown process).</li>
 </ul>
