@@ -2,7 +2,7 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2020-11-10T02:12:57.377Z
+date: 2020-11-10T02:29:58.914Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
@@ -41,4 +41,9 @@ dateCreated: 2020-11-10T02:09:22.459Z
 <blockquote>
   <p>node /volume1/homes/&lt;NAShostname&gt;/Drive/FoundryVTT/foundryvtt/resources/app/main.js --dataPath=/volume1/homes/&lt;NASHostname&gt;/Drive/FoundryVTT/foundrydata</p>
 </blockquote>
-<p>&nbsp;</p>
+<h3>Notes</h3>
+<ul>
+  <li>Using this setup you will need to keep your SSH client open while the server runs, I am looking into an option to keep this running.</li>
+  <li>If you close the SSH client without properly shutting down the foundry instance it will make you reboot your NAS before it will allow you to launch a second instance. &nbsp;</li>
+  <li>To properly shutdown your foundry instance, ctrl-c (or similar hotkey in your client) shuts down the instance properly.</li>
+</ul>
