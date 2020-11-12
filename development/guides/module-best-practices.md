@@ -1,8 +1,8 @@
 ---
-title: Module Development Best Practices Checklist
+title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-12T14:11:24.684Z
+date: 2020-11-12T14:11:45.570Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
