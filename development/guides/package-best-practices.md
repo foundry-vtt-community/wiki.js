@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-12T14:18:18.277Z
+date: 2020-11-12T19:42:45.775Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -15,14 +15,14 @@ For more details about how Foundry installs and updates packages, see the full a
 ## `version`
 - Use a `string` for the version number instead of a `float` because for example `0.9` would be superior to `0.10` if using floats.
 - Use [Semantic Versioning](https://semver.org/).
-- Every change, even something that only changes the manfest and does not change the package contents, should increment something in the version number.
+- Every change, even something that only changes the manifest and does not change the package contents, should increment something in the version number.
 
 > You should never have two different versions of your package with the exact same version number.
 {.is-danger}
 
 
 ## `manifest`
-- A package's `manifest` URL should use a stable url that always points at the Latest manfest JSON.
+- A package's `manifest` URL should use a stable url that always points at the Latest manifest JSON.
 - A package's `manifest` URL should be Raw JSON or a download link, not the github html view of the JSON.
 
 > ### Bad Examples
