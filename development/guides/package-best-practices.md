@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-12T14:17:33.745Z
+date: 2020-11-12T14:18:18.277Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -53,5 +53,6 @@ For more details about how Foundry installs and updates packages, see the full a
 
 # Files and Dependencies
 - Paths to your files use the exact same case-sensitive directories as in the download zip. Windows, Linux, and OSX treat capitalization of directories differently.
+- Do not use spaces in file names or directory names.
 - Never do a relative import (esmodule) from one module to another (or to a system). If you need access to something, contact the developer and ask them to expose it instead.
 - A dependency on another module should be resolved by `CONFIG` variables defined by that dependency or namespaced classes or Hooks.
