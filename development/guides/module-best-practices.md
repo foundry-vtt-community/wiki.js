@@ -2,7 +2,7 @@
 title: Module Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-12T14:05:47.367Z
+date: 2020-11-12T14:11:24.684Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -24,6 +24,27 @@ For more details about how Foundry installs and updates packages, see the full a
 ## `manifest`
 - A package's `manifest` URL should use a stable url that always points at the Latest manfest JSON.
 - A package's `manifest` URL should be Raw JSON or a download link, not the github html view of the JSON.
+
+> ### Bad Examples
+> ```
+>   https://github.com/ElfFriend-DnD/foundryvtt-compactBeyond5eSheet/blob/master/src/module.json
+> ```
+> This is a link to the HTML view of the module.json
+>
+> ```
+> C://Users/elffriend/moduleDev/foundryvtt-compactBeyond5eSheet/src/module.json
+> ```
+> This is a local file on your machine.
+{.is-warning}
+
+
+> ### Good Examples
+> `https://github.com/ElfFriend-DnD/foundryvtt-compactBeyond5eSheet/blob/master/src/module.json`
+> This is a link to the HTML view of the module.json
+>
+> `C://Users/elffriend/moduleDev/foundryvtt-compactBeyond5eSheet/src/module.json`
+> This is a local file on your machine.
+{.is-success}
 
 ## `download`
 - The package `download` URL should point to a specific zip that matches the version.
