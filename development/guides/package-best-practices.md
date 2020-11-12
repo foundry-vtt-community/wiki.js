@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-12T14:14:56.729Z
+date: 2020-11-12T14:17:33.745Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -47,12 +47,11 @@ For more details about how Foundry installs and updates packages, see the full a
 - Package manifest should never download the "latest" zip (e.g. a zip of the current `master` branch) but rather each version's module.json `manifest` url would download that specific version.
 
 # Localization
+- Don't hardcode your strings, use localization right from the start. It is easier to localize from the start.
 - Make use of as many existing strings as possible.
-- Keep your localization strings confined to your module's namespace.
-- Don't hardcode your strings, use localization right from the start. It will be much harder to adapt it later.
+- Keep your localization strings confined to your package's namespace.
 
 # Files and Dependencies
 - Paths to your files use the exact same case-sensitive directories as in the download zip. Windows, Linux, and OSX treat capitalization of directories differently.
-
 - Never do a relative import (esmodule) from one module to another (or to a system). If you need access to something, contact the developer and ask them to expose it instead.
 - A dependency on another module should be resolved by `CONFIG` variables defined by that dependency or namespaced classes or Hooks.
