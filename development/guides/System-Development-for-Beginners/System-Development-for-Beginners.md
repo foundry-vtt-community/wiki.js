@@ -2,9 +2,9 @@
 title: System Development-for-Beginners
 description: 
 published: true
-date: 2020-09-23T01:35:40.731Z
+date: 2020-11-13T18:25:05.812Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:37:42.801Z
 ---
 
@@ -26,12 +26,12 @@ This guide is a highly condensed form of a much bigger and more detailed guide s
     
 
 ### Chapters
-* [Part 1: I Made This](https://github.com/foundry-vtt-community/wiki/wiki/System-Development-Part-1-I-Made-This)
-* [Part 2: Whirlwind Tour](https://github.com/foundry-vtt-community/wiki/wiki/System-Development-Part-2-Whirlwind-Tour)
-* [Part 3: Breaking Everything](https://github.com/foundry-vtt-community/wiki/wiki/System-Development-Part-3-Breaking-Everything)
-* [Part 4: Bureaucracy](https://github.com/foundry-vtt-community/wiki/wiki/System-Development-Part-4-Bureaucracy)
-* [Part 5: Wandering in 000000](https://github.com/foundry-vtt-community/wiki/wiki/System-Development-Part-5-Wandering-in-000000)
-* [Part 6: (optional) Derivation is not a 5e Magic School](https://github.com/foundry-vtt-community/wiki/wiki/System-Development-Part-6-(optional)-Derivation-is-not-a-5e-Magic-School)
+* [Part 1: I Made This](/development/guides/System-Development-for-Beginners/System-Development-Part-1-I-Made-This)
+* [Part 2: Whirlwind Tour](/development/guides/System-Development-for-Beginners/System-Development-Part-2-Whirlwind-Tour)
+* [Part 3: Breaking Everything](/development/guides/System-Development-for-Beginners/System-Development-Part-3-Breaking-Everything)
+* [Part 4: Bureaucracy](/development/guides/System-Development-for-Beginners/System-Development-Part-4-Bureaucracy)
+* [Part 5: Wandering in 000000](/development/guides/System-Development-for-Beginners/System-Development-Part-5-Wandering-in-000000)
+* [Part 6: (optional) Derivation is not a 5e Magic School](/development/guides/System-Development-for-Beginners/System-Development-Part-6-(optional)-Derivation-is-not-a-5e-Magic-School)
 
 
 This guide is designed for people who have at least rudimentary knowledge of HTML and CSS, and are sufficiently capable of reading a piece of Javascript to make an educated guess what it does. Engaging with a coding language may be scary, but Javascript is reasonably friendly to new users.
