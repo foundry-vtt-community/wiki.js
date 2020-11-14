@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-11-14T01:14:28.282Z
+date: 2020-11-14T01:15:46.860Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -74,7 +74,7 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 
 ### Version 1.8.6 - 12/11/2020
-Refonte du Compendium H&D - Capacités de Classes
+Maj du Compendium H&D - Capacités de Classes
 - Uniformisation de la mise en page
 - Remplacement, quand cela était possible, de tous les liens pointant vers le site heros-et-dragons.fr par des liens internes aux Compendiums
 - Ajout des cout en ressouce pour les compétences en demandant (restera à selectionner la ressource appropriée)
