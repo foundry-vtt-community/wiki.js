@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-10-20T12:00:02.847Z
+date: 2020-11-14T21:55:11.395Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -40,6 +40,10 @@ Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir de
 ## Je n'ai pas de serveur, je peux le mettre sur mon PC ?
 
 Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous avez un .EXE qui va transformer votre PC en serveur Foundry. Vous aurez à ouvrir le port TCP 30000 (par défaut), et à l’autoriser dans votre firewall. Plus d’infos ici.
+
+## Et il faut de la bande passante ?
+
+Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra au moins 4 Mbs montant (je dis bien montant) pour jouer confortablement. Donc si vous avez la fibtre ou un "gros" ADSL, ca doit marcher. Sinon, il faut vous orienter vers un hébergement tiers.
 
 ## J’ai déjà un serveur, comment je fais ?
 
