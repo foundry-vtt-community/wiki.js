@@ -2,7 +2,7 @@
 title: Translations
 description: 
 published: true
-date: 2020-10-06T02:20:46.894Z
+date: 2020-11-14T18:31:12.831Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -264,6 +264,27 @@ Instalación: En la pestaña de Add-On Modules, hacer clic en Install Module e i
 This module adds the option to translate the FoundryVTT Dungeons and Dragons 5th Edition System to Spanish (Español). This module only translates words related to the D&D 5E system, like sheets and rolls. (Soon: Compendium)
 
 Este módulo agrega el idioma Español (Spanish) como una opción para traducir el sistema de FoundryVTT Dungeons and Dragons 5th Edition. Este módulo solo traduce lo relacionado con el sistema de D&D, como hojas de personajes, o tiradas. (Próximamente: Compendio)
+
+---
+
+## Swedish
+
+### Core Game FoundryVTT 
+
+* **Author**: xdy#3735 on Discord
+* **Version**: 0.2.1
+* **Foundry VTT Compatibility**: 0.7.6+
+
+### Link(s) to Translation
+* Github : [https://github.com/xdy/FoundryVTT-lang-sv](https://github.com/xdy/foundryvtt-lang-sv)
+* Manifest : [https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json](https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json)
+
+### Description
+Swedish language support for Foundry VTT.
+Svenskt språkstöd för Foundry VTT.
+
+Currently mostly machine translated, slowly going through and improving the translations.
+För närvarande mestadels maskinöversatt, går långsamt igenom och förbättrar översättningarna.
 
 ---
 
