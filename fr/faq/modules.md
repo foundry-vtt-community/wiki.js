@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-10-31T00:56:22.355Z
+date: 2020-11-14T01:24:02.047Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -61,7 +61,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **combat utility belt** : pas mal de petite chose bien utiles pour le MJ
 - **let me roll that for you** : Permet de demander directement au joueur le jet à faire. avec Midi quality of life, permet de demander directement le bon test de sauvegarde avec les sorts par exemple.
 - **Not Your Turn !**: Pour éviter qu'un joueur bouge son perso quand ce n'est pas son tour, il a un message et son token est bloqué, pratique avec certains joueurs indiciplinés :)
-- **token mold** : petit mod pratique qui permet de configuré automatiquement des token quand tu les poses
+- **token mold** : petit mod pratique qui permet de configurer automatiquement des tokens quand on les pose
 - **Combat Enhancements** : Ce petit module ajoute une barre de santé radiale et permet de réordonner par glisser/déposer sur le traqueur de combat.
 
 ### Utilitaires d'importation *(Content Importers)*
@@ -69,7 +69,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 
 ### Amélioration de la gestion des dés *(Dice Rolling)*
 - **dice-so-nice** : le lancé de dés en 3D ... indispensable :)
-- **dice tray** : c'est une ligne sous le chat avec les forme de dés un peu comme sur FG qui permet de lancé les dés
+- **dice tray** : c'est une ligne sous le chat avec les formes de dés un peu comme sur FG qui permet de lancer les dés
 - **simple dice roller** : ajoute un icone a gauche permettant de lancer les dés
 
 ### Intégrations externes *(External Integrations)*
@@ -100,10 +100,9 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **popOut!** : permet de sortir une fenêtre de la table (depuis un navigateur), pratique pour la fiche perso par exemple
 - **response times** : ajoute un chiffre à coté du nom du joueur et sa réponse serveur, quand ça monte trop c'est signe que le refresch s'impose :)
 - **rolltable buttons** : un bouton a coté du chat pour rouler les tables aléatoires
-- **Show Drag Distance** : permet de voir rapidement combien tu bouge de case sans utilsier le ruban à chaque fois
+- **Show Drag Distance** : permet de voir rapidement combien tu bouge de case sans utiliser le ruban à chaque fois
 - **tidy UI game settings** : un management plus pratique des menus et surtout de la liste des modules
-- **Tokenizer - v0.7.5 edition** : Permet de créer rapidement des token avec une image depuis internet ou ton disque
-- **pings** : pour "pinger" sur la carte et indiquer aux joueurs ou regarder 
+- **Tokenizer - v0.7.5 edition** : Permet de créer rapidement des tokens avec une image depuis internet ou ton disque
  
 ### Effets Visuels *(Visual Effects)*
 - **animated spell effects** : Un pack d'images animées pour les sorts ;	
@@ -127,7 +126,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **Enhanced Movement** : limite les mouvements des joueurs en combat suivant le nombre de mètre autorisé et gère les terrain difficile du module terrain layer
 - **lazymoney** : permet de "compacter" l'argent automatiquement sans calculer, si tu as 1PP et 53 Po 153 pa et 250 pc, ben il transforme direct en 08 pp 00 po 08 pa 00 pc
 - **magic items** : permet de créer des objets magiques, super pratique
-- **midi-qol** : Pratique pour automatisé (vérification automatique de la CA et du jet de sauvegarde par ex)
+- **midi-qol** : Pratique pour automatiser (vérification automatique de la CA et du jet de sauvegarde par ex)
 - **tidy5e Sheet** : fiche perso alternative
 - **[KO 0.7.5 pour l'instant]** **I See You 5e** : I see U petit bouton sur le token du perso qui permet de faire les vérif de discrétion vs perception et révéler les PNJ sur la carte **[KO 0.7.5 pour l'instant]**
 
