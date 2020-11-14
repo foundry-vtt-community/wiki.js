@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-11-14T01:07:55.042Z
+date: 2020-11-14T01:13:08.542Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -25,7 +25,7 @@ voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 
 Pour afficher l'ensemble dans la langue de Patrick Sébastien 
 
-Installez les modules suivants vous devrez ouvrir foundryVTT ; dans la page "configuration and setup", allez à l'onglet "add-on modules", cliquez sur le bouton install module"
+Installez les modules suivants vous devrez ouvrir foundryVTT ; dans la page "configuration and setup", allez à l'onglet "Modules", cliquez sur le bouton install module"
 
 recherchez : 
 **translation French [Core]** et installez-le
@@ -37,8 +37,8 @@ pour avoir les compendiums de traduits recherchez et installez
 
 ### acceder au contenu de Héros et dragons
 
-toujours dans l'onglet "add-on modules" ; cherchez et installez :
-**héros et dragons**
+toujours dans l'onglet "Modules" ; cherchez et installez :
+**SRD-heros-et-dragons**
 
 
 ---
