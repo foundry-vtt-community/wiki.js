@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-11-02T15:09:56.015Z
+date: 2020-11-14T01:07:55.042Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -68,12 +68,17 @@ en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous ser
 ### un résumé des règles de combats 
 en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles de combats. Cette aide de jeu à été produite par **Endoril** sur le forum black books (/https://www.black-book-editions.fr/forums.php?topic_id=15640)
 
+---
+# Notes de Mises à jour
+---
 
-
-
-
-
-
+### Version 1.8.6 - 12/11/2020
+Refonte du Compendium H&D - Capacités de Classes
+- Uniformisation de la mise en page
+- Remplacement, quand cela était possible, de tous les liens pointant vers le site heros-et-dragons.fr par des liens internes aux Compendiums
+- Ajout des cout en ressouce pour les compétences en demandant (restera à selectionner la ressource appropriée)
+- Suppression de 31 Capacités de classe
+- Ajout de 173 Capacités de Classe
 
 
 
