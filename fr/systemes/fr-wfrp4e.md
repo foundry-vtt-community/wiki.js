@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-16T08:25:22.770Z
+date: 2020-11-16T08:25:48.341Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -38,7 +38,7 @@ Pour cette version, installez tout simplement le module officiel en 2.0, via les
 
 Il faut modifier le manifest et installer les versions 2.1.X : https://raw.githubusercontent.com/moo-man/WFRP4e-FoundryVTT/0.7.x/system.json
 
-* Pour versions 3.1 et inférieures (16/11/2020) : Si vous avez le module RNHD de C7, il vient avec une jolie horloge et une option de synchronisation avec l'horloge de About/Time : **ne l'utilisez pas, elle provoque des grosses latences pour tout les joueurs**. En cours de fix par MooMan
+* Pour wfrp4e versions 3.1 et inférieures (16/11/2020) : Si vous avez le module RNHD de C7, il vient avec une jolie horloge et une option de synchronisation avec l'horloge de About/Time : **ne l'utilisez pas, elle provoque des grosses latences pour tout les joueurs**. En cours de fix par MooMan
 
 #### Modules conseillé par la communauté
 
