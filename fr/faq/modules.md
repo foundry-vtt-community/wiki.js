@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-11-17T08:37:19.818Z
+date: 2020-11-17T08:53:51.542Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -79,6 +79,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **forien's quest log** : ajoute un onglet "suivi des quêtes en cours" pour permettre de donner des "quêtes" au joueurs.
 - **GMnotes** : un petit onglet sur les objets, perso, etc... avec note du GM  **[dégradé en 0.7.5]**
 - **chat images** : pour facilement copier coller (drag and drop) des images dnas le tchat 
+- **Permission Viewer** : permet d'affiner la granularité de partage des entités acteurs/articles/item... aux différents joueurs
 
 ### Surcharge des interfaces (thèmes) et des fonctionnalités *(Overhauls or Feature Suites)*
 - **Terrain Layer** :  ajoute la possibilité de définir des cases en terrain difficile et permet de gérer les déplacements des joueurs en combats
