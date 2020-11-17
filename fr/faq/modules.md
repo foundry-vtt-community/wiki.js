@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-11-14T01:24:02.047Z
+date: 2020-11-17T08:37:19.818Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -111,6 +111,8 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **token magic FX** :  mettre des effets (animés) à ses tokens, tuiles, template etc ...  
 - **torch** : allume et eteint une torche directement depuis le token
 - **multilevel tokens** : permet de gérer les téléportations, les clones de tokens, et par laà les pièces à étages etc ... 
+- **scene transitions** : permet de diffuser une petite animation (texte/image..) au changement de scène [tuto fr par Ceizyl](https://www.youtube.com/watch?v=0bYxYCjegZY)
+
 
 ### Pack de contenu *(Content Packs)* & Contenu partagés en 'exclusivité' *(Exclusive Content)*
 - **adventure music** :un pack de musique comme son nom l'indique
