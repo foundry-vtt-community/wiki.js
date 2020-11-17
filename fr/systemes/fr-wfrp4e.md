@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-17T09:34:14.957Z
+date: 2020-11-17T09:34:58.081Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -32,7 +32,7 @@ Si vous avez mis à jour le système Warhammer en v3, vous devez faire les manip
 
 ## Pour la 0.6.6
 
-Pour cette version, installez tout simplement le module officiel en 2.0, via les fonctions d'installation de Foundry.
+Pour cette version, installez tout simplement le module officiel en 2.0, via les fonctions d'installation de Foundry. **ATENTION**: Vous ne devez pas utiliser le système Warhammer4 v3.X avec Foundry 0.6.6, cela ne marchera pas.
 
 ## Pour les 0.7.X
 
