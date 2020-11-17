@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-16T08:25:48.341Z
+date: 2020-11-17T09:25:57.926Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=-CthIoE9o2E
 
 Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/faq-wfrp4e)
 
-## Pour le système warhammer 3.X
+## Pour le système WarhammerV4 version 3.X (ie version 3.X du système Warhammer v4)
 
 Si vous avez mis à jour le système Warhammer en v3, vous devez faire les manips suivantes: 
 
