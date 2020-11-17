@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-17T09:25:57.926Z
+date: 2020-11-17T09:33:32.126Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -36,7 +36,7 @@ Pour cette version, installez tout simplement le module officiel en 2.0, via les
 
 ## Pour les 0.7.X
 
-Il faut modifier le manifest et installer les versions 2.1.X : https://raw.githubusercontent.com/moo-man/WFRP4e-FoundryVTT/0.7.x/system.json
+Seules les versions 3.X du système Warhammer4 sont compatibles avec les versions 0.7.X. Si vous utilisez encore des versions inférieures, sachez qu'il y aun gros risque quasi certain que vos acteurs, compendiums et données soient inutilisables. Il vus faut rester en Fundry v0.6.X obligatoirement pour ne pas avoir d'effets de bord.
 
 * Pour wfrp4e versions 3.1 et inférieures (16/11/2020) : Si vous avez le module RNHD de C7, il vient avec une jolie horloge et une option de synchronisation avec l'horloge de About/Time : **ne l'utilisez pas, elle provoque des grosses latences pour tout les joueurs**. En cours de fix par MooMan
 
