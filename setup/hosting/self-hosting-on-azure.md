@@ -2,7 +2,7 @@
 title: Self Hosting on Azure
 description: Simple Steps to follow to setup an Azure Free Tier VM
 published: true
-date: 2020-11-19T05:34:12.177Z
+date: 2020-11-19T05:34:55.784Z
 tags: azure,hosting,setup,getting started,vm
 editor: markdown
 dateCreated: 2020-11-19T05:34:12.177Z
@@ -58,7 +58,7 @@ Go to azure.com and click Try free. You can sign in with your existing Microsoft
 
 1. On the page for your new VM, select the public IP address and copy it to clipboard. Paste it somewhere to reference in the next step.
 
-# 4. Connecting to your VM
+## 4. Connecting to your VM
 
 You'll need the key pair you downloaded in order to log in via ssh. Before you log in, though, you'll need to change the permissions on the keyfile so other users on your computer can't read it. On Linux/MacOS, you can do so with the following command:
 
