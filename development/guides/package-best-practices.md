@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-19T16:46:01.321Z
+date: 2020-11-19T16:46:48.577Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -51,7 +51,7 @@ For more details about how Foundry installs and updates packages, see the full a
 > There's a lot of nuance to localization that can't be summed up quickly. Take a look at the dedicated [Localization Best Practices](/en/development/guides/localization-best-practices) article for more in depth best practices.
 {.is-info}
 
-- Don't hardcode your strings, use localization right from the start. It is easier to localize from the start.
+- Don't hardcode your strings, use localization right from the start. It is easier to localize from the start rather than going back through at the end.
 - Make use of as many existing strings as possible.
 - Keep your localization strings confined to your package's namespace.
 
