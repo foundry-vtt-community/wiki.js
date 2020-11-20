@@ -2,7 +2,7 @@
 title: Packages With Language Support
 description: A list of packages with support for multiple languages and localization.
 published: true
-date: 2020-11-14T18:25:32.614Z
+date: 2020-11-20T12:19:45.506Z
 tags: localization
 editor: markdown
 dateCreated: 2020-09-21T19:17:29.991Z
@@ -28,8 +28,9 @@ For new modules with support, please add the module to the *partial* support lis
 
 - [Twodsix](https://github.com/xdy/twodsix-foundryvtt) - xdy, ultrakev
     - EN - English
-    - ES - Español
     - SV - Svenska
+    - ES - Español
+    - DE - Deutsch
     
 # Systems With Partial Support
 - Toolkit13
