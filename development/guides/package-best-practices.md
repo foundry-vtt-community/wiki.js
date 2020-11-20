@@ -2,13 +2,14 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-19T16:52:55.284Z
+date: 2020-11-20T14:28:05.104Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
 ---
 
 # Releases and Updates
+This section was last updated for Foundry Core 0.7.7.
 
 For more details about how Foundry installs and updates packages, see the full article [Package Releases and Version History](/en/development/guides/releases-and-history).
 
@@ -60,3 +61,11 @@ For more details about how Foundry installs and updates packages, see the full a
 - Do not use spaces in file names or directory names. All directories should be URL-compatible. We recommend using `kebabCase` where your spaces are replaced with `-`.
 - Never do a relative import (esmodule) from one module to another (or to a system). If you need access to something, contact the developer and ask them to expose it instead.
 - A dependency on another module should be resolved by `CONFIG` variables defined by that dependency or namespaced classes or Hooks.
+
+# Code Practices
+This section was last updated for Foundry Core 0.7.7.
+
+- The [`libWrapper` library module](https://github.com/ruipin/fvtt-lib-wrapper) is an excellent dependency to aid in the "patching" of core functions.
+- Foundry Core has a keyboard manager class accessible `game.keyboard`. It is recommended to leverage this when your module needs to know the state of the keyboard.
+- Consider using [WeakMaps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) when you need to attach additional properties to core objects that don't have flags.
+
