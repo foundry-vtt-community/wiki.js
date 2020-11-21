@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2020-10-06T02:20:39.414Z
+date: 2020-11-21T07:20:06.497Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -341,6 +341,7 @@ These are modules which have had their functionality merged into core.
 
 - Arcane Viewing
 - Better FilePicker
+- Deselection
 - Entity Order
 - GM Roll Message
 - Mother, May I?
@@ -365,7 +366,8 @@ These modules have either been directly subsumed by other modules, or discontinu
 | [Chat Damage Buttons - Better Rolls Edition](https://github.com/syl3r86/chatdamagebuttons-betterrolls) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) |
 | [DDB Popper](https://github.com/death-save/ddb-popper) | [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) |
 | [DnD Beyond Character Importer](https://github.com/sillvva/foundry-vtt-modules/tree/master/ddb-importer) | [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) |
-| [Dynamic Items](https://gitlab.com/tposney/dynamicitems) | [Dynamic Effects](https://foundryvtt.com/packages/dynamiceffects/) |
+| [Dynamic Items](https://gitlab.com/tposney/dynamicitems) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
+| [Dynamic Effects](https://foundryvtt.com/packages/dynamiceffects/) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
 | [D&D 5e Conditions](https://github.com/trdischat/conditions5e) | [Combat Utility Belt](https://foundryvtt.com/packages/combat-utility-belt/) |
 | [Encumbrance Variant](https://gitlab.com/hooking/foundry-vtt---encumbrance-variant-5e) | [Variant Encumbrance](https://foundryvtt.com/packages/VariantEncumbrance/) |
 | [FVTT-Party](https://github.com/shwill/fvtt-party) | [VTTA-Party](https://foundryvtt.com/packages/vtta-party/) |
@@ -374,6 +376,7 @@ These modules have either been directly subsumed by other modules, or discontinu
 | [Request Roll](https://github.com/JacobMcAuley/request_roll) | [Let me roll that for you](https://foundryvtt.com/packages/lmrtfy/) |
 | [Roll20 NPC Importer, for 5e](https://github.com/syl3r86/roll20npcimporter) | [R20 Converter](#roll20-converter) |
 | [Spell Browser](https://github.com/syl3r86/Spell-Browser) | [Compendium Browser](https://foundryvtt.com/packages/compendium-browser/) |
+| [CursorZoom](https://github.com/itamarcu/CursorZoom) | [Zoom/Pan Options](https://foundryvtt.com/packages/zoom-pan-options/) |
 
 
 ## Discontinued or Abandoned Modules
