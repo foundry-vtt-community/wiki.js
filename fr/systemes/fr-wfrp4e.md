@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-23T22:00:06.013Z
+date: 2020-11-26T09:05:37.819Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -19,6 +19,13 @@ https://www.youtube.com/watch?v=-CthIoE9o2E
 
 Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/faq-wfrp4e)
 
+# Système et modules nécessaires
+ 
+ - Le système Warhammer (of course !)
+ - La traduction 'core-FR' de Foundry
+ - Le module 'Babele'
+ - Le module de traduction FR de Warhammer
+ 
 ## Pour le système WarhammerV4 version 3.X (ie version 3.X du système Warhammer v4)
 
 Si vous avez mis à jour le système Warhammer en v3, vous devez faire les manips suivantes: 
