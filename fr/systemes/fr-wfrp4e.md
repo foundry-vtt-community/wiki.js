@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-26T09:05:37.819Z
+date: 2020-11-26T09:09:37.235Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -24,7 +24,9 @@ Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/
  - Le système Warhammer (of course !)
  - La traduction 'core-FR' de Foundry
  - Le module 'Babele'
- - Le module de traduction FR de Warhammer
+ - Le module de traduction FR de Warhammer installé cmme indiqué ci-dessous
+ 
+ **Les versions du système Warhammer inférieures à 3.X ne sont plus supportées. Le module 'core' officiel de C7 (environ 15 EUR) est obligatoire pour avoir les compendiums**
  
 ## Pour le système WarhammerV4 version 3.X (ie version 3.X du système Warhammer v4)
 
