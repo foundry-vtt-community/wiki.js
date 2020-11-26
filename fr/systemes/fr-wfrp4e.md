@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-26T09:09:37.235Z
+date: 2020-11-26T14:31:24.435Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -30,7 +30,7 @@ Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/
  
 ## Pour le système WarhammerV4 version 3.X (ie version 3.X du système Warhammer v4)
 
-Si vous avez mis à jour le système Warhammer en v3, vous devez faire les manips suivantes: 
+Si vous avez mis à jour le système Warhammer en v3 avec le "core" de Cubicle7, vous devez faire les manips suivantes: 
 
 - Arrêter votre monde
 - Supprimer le module de traduction FR
