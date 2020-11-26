@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-11-14T21:55:11.395Z
+date: 2020-11-26T15:38:54.002Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -98,6 +98,19 @@ Mon choix – partial s’il en est – est expliqué sur cette page. De plus, s
 ## Est-ce qu’il a des coupures audio/video ou autres ?
 
 Tout n’est pas parfait, le soft est en fin de bêta et a encore quelques bugs, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session [Jitsi](http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
+
+## Y'a plein de versions, j'y comprends rien.
+
+Foundry est basé sur des paliers et des canaux de "releases" : alpha, beta et release.
+Un palier, c'est la première partie des numéros de versions. Par exemple, dans 0.5.3, le palier c'est "0.5". Dans un palier donné, il y a un ensemble de nouvelles fonctionnalités qui sont implémentées.  Dans un même palier, les derniers numéros indiquent les versions au sein du palier. Par exemple 0.7.0 est la première version du palier "0.7", puis 0.7.1 la seconde, etc..
+Tant que le palier n'a pas atteint un niveau release (stable), les versions sont soient en alpha, soit en beta.
+
+Au sein d'un même palier, les modules et systèmes indiquant le support du palier sont tous compatibles. Autrement dit, si votre système/module marche en 0.7.5, il marchera en 0.7.7.
+
+**Règle 1** : Ne jamais mettre à jour juste avant une partie
+**Règle 2** ; Si vous n'êtes pas développeur, n'installez pas les releases alpha ni les premières beta. Attendez les betas "tardives" ou les premières "releases".
+
+
 
 ## Mon JDR « Borglur of Daemon of Death Doomesque » est pas dispo ! Que faire ?
 
