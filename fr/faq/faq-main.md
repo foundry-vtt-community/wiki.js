@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-11-26T15:38:54.002Z
+date: 2020-11-26T17:32:56.687Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -140,3 +140,12 @@ Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme R
 
 La modernité veut systématiquement des vidéos pour tout et n’importe quoi, donc OK, allons-y :
 [cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
+
+## J'ai le soft, mais mes joueurs ne peuvent pas se connecter
+
+La règle pour déterminer les origines des soucis c'est ça : 
+1 - Tout les joueurs ont **tous** des problèmes de connexions -> Le problème est côté serveur (donc chez celui héberge typiquement).
+2 - Soit **1 ou 2 joueurs** (toujours les mêmes) ont des problèmes de connexions -> le problème est chez eux. Cela peut venir de leur connexion à eux, de leur PC ou de toute autre merdouille informatique. 
+
+Si le problème est côté serveur, il faut vérifier votre bande passante et probablement faire des essais sans UPnP.
+Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
