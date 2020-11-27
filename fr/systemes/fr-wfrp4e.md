@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-27T15:12:59.010Z
+date: 2020-11-27T15:14:53.349Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -34,7 +34,7 @@ Si vous avez mis à jour le système Warhammer en v3 avec le "core" de Cubicle7,
 
 - Arrêter votre monde
 - Supprimer le module de traduction FR dans la liste des modules. Si vous n'avez pas de module intitulé "Traduction du module WH4 en Français", vous pouvez ignorer cet étape. Pour le supprimer, il suffit de cliquer sur le bouton "Désinstaller"
-- Le réinstaller en copiant ce lien : https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/v3/module.json 
+- Le réinstaller en copiant ce lien : `https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/v3/module.json` 
 - Relancer votre monde
 
 **Seuls le contenu officiel de C7 est désormais supporté en termes de compendiums.**
