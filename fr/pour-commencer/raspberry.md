@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-28T21:25:16.572Z
+date: 2020-11-28T21:25:56.260Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -17,7 +17,7 @@ Pensez à éteindre la RasPi quand vous ne l'utilisez pas, sans quoi votre conne
 
 # HÉBÉGER UN SERVEUR FOUNDRY VTT À MOINDRE COÛT
 
-### 1ère ÉTAPE : ACHETER UNE RASPBERRY PI
+## 1ère ÉTAPE : ACHETER UNE RASPBERRY PI
 
 Rendez vous sur un revendeur de Raspberry Pi (Kubii, Materiel.net, Amazon, ...) et acheter une Rapsberry répondant à la configuration minimale : Raspberry Pi 3 B et supérieur, une alimentation correspondant à la version de la RasPi, une carte microSD et un boitier si vous le souhaitez.
 
@@ -25,7 +25,7 @@ Rendez vous sur un revendeur de Raspberry Pi (Kubii, Materiel.net, Amazon, ...) 
 
 Le plus simple : prendre un starter kit [Raspberry 3](fr/https://www.kubii.fr/168-kits-raspberry-pi-3-et-3) ou [Raspberry 4](fr/https://www.kubii.fr/175-kits-raspberry-pi-4)
 
-### 2ème ÉTAPE : PARAMÈTRER LA RASPBERRY PI
+## 2ème ÉTAPE : PARAMÈTRER LA RASPBERRY PI
 
 Installer sur microSD l'OS Raspbian et le mettre à jour ou avoir une microSD avec une préinstallation et le mettre à jour. Il y a plein de [tuto en ligne pour débuter et paramétrer.](/fr/https://www.gotronic.fr/blog/guides/raspberry/)
 
@@ -39,7 +39,7 @@ Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran
 
 ![unfj1zw.jpg](/images/raspberry/unfj1zw.jpg)
 
-### 3ème ÉTAPE : INSTALLER Node.js SUR LA RASPBERRY PI
+## 3ème ÉTAPE : INSTALLER Node.js SUR LA RASPBERRY PI
 
 [Issu de la doc sur Foundry VTT](fr/https://foundryvtt.com/article/hosting/)
 
@@ -64,7 +64,7 @@ Lancer le serveur
 
 NE PAS FERMER LA FENÊTRE DU TERMINAL
 
-### 4ème ÉTAPE : LANCER LE SERVEUR À CHAQUE DÉMARRAGE DE LA RASPBERRY PI
+## 4ème ÉTAPE : LANCER LE SERVEUR À CHAQUE DÉMARRAGE DE LA RASPBERRY PI
 
 Dans le terminal, faire :
 
@@ -77,17 +77,17 @@ Entrer le texte suivant et sauvegarder (Ctrl+X, puis O et Entrée)
 `# Foundry VTT server`
 `sudo node /home/foundryvtt/resources/app/main.js --dataPath=/home/foundrydata`
 
-### 5ème ÉTAPE : SÉCURISER LE SERVEUR
+## 5ème ÉTAPE : SÉCURISER LE SERVEUR
 
 Dans un navigateur internet, taper l'ip locale de la Raspberry (généralement sous la forme 192.168.1.X:30000)
 
 Créez un mot de passe d'accè au serveur et si besoin à vos Mondes.
 
-### 6ème ÉTAPE : OUVRIR LES PORTS DE LA BOX
+## 6ème ÉTAPE : OUVRIR LES PORTS DE LA BOX
 
 Si la box est configurée pour l'UPnP rien à faire, sinon ouvrir le port 30000 en redirigeant bien vers l'IP local de la Raspberry Pi.
 
-### 7ème ÉTAPE OPTIONNELLE : REDIRECTION DYNDNS
+## 7ème ÉTAPE OPTIONNELLE : REDIRECTION DYNDNS
 
 Si vous jouez entre ami, fournissez simplement l'adresse à entrer dans un navigateur : votre-ip:30000
 
