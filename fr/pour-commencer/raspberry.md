@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: 
 published: true
-date: 2020-11-28T21:16:51.595Z
+date: 2020-11-28T21:19:53.587Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -21,7 +21,7 @@ Pensez à éteindre la RasPi quand vous ne l'utilisez pas, sans quoi votre conne
 
 Rendez vous sur un revendeur de Raspberry Pi (Kubii, Materiel.net, Amazon, ...) et acheter une Rapsberry répondant à la configuration minimale : Raspberry Pi 3 B et supérieur, une alimentation correspondant à la version de la RasPi, une carte microSD et un boitier si vous le souhaitez.
 
-[IMAGE]
+![phj3bxv.jpg](/images/raspberry/phj3bxv.jpg){.align-center}
 
 Le plus simple : prendre un starter kit Raspberry 3 ou Raspberry 4
 
@@ -37,7 +37,7 @@ Pour mettre à jour correctement une RasPi, ouvrez la console, copier ci dessous
 
 Activer VNC (partage de l'écran) ou SSH (terminal) comme ci dessous si vous souhaitez un contrôle à distance pour vous passer de brancher en hdmi/microhdmi votre RasPi.
 
-[IMAGE]
+![unfj1zw.jpg](/images/raspberry/unfj1zw.jpg)
 
 ### 3ème ÉTAPE : INSTALLER Node.js SUR LA RASPBERRY PI
 
