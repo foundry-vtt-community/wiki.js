@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: 
 published: true
-date: 2020-11-28T21:12:59.337Z
+date: 2020-11-28T21:14:55.806Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -58,15 +58,37 @@ Installer le serveur, remplacer dans la 2ème commande ci dessous <token-de-tél
 `sudo wget -O foundryvtt.zip "<token-de-téléchargement-du-serveur>"`
 `sudo unzip foundryvtt.zip`
 
+Lancer le serveur
 
+`sudo node resources/app/main.js --dataPath=/home/foundrydata`
 
+NE PAS FERMER LA FENÊTRE DU TERMINAL
 
+### 4ème ÉTAPE : LANCER LE SERVEUR À CHAQUE DÉMARRAGE DE LA RASPBERRY PI
 
+Dans le terminal, faire :
 
+`sudo nano /etc/rc.local`
 
+Avant la fin du fichier `exit 0`
 
+Entrer le texte suivant et sauvegarder (Ctrl+X, puis O et Entrée)
 
+`# Foundry VTT server`
+`sudo node /home/foundryvtt/resources/app/main.js --dataPath=/home/foundrydata`
 
+### 5ème ÉTAPE : SÉCURISER LE SERVEUR
 
+Dans un navigateur internet, taper l'ip locale de la Raspberry (généralement sous la forme 192.168.1.X:30000)
 
+Créez un mot de passe d'accè au serveur et si besoin à vos Mondes.
 
+### 6ème ÉTAPE : OUVRIR LES PORTS DE LA BOX
+
+Si la box est configurée pour l'UPnP rien à faire, sinon ouvrir le port 30000 en redirigeant bien vers l'IP local de la Raspberry Pi.
+
+### 7ème ÉTAPE OPTIONNELLE : REDIRECTION DYNDNS
+
+Si vous jouez entre ami, fournissez simplement l'adresse à entrer dans un navigateur : votre-ip:30000
+
+Sinon, utiliser un service DynDNS (nom de domaine) à paramétrer dans votre box. Il en existe des gratuits (DynDNS, No-IP, ChangeIP, DNSdynamic). Faite juste attention à ce que votre FAI accepte.
