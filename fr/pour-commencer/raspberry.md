@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-28T21:25:56.260Z
+date: 2020-11-28T21:29:13.109Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -79,7 +79,7 @@ Entrer le texte suivant et sauvegarder (Ctrl+X, puis O et Entrée)
 
 ## 5ème ÉTAPE : SÉCURISER LE SERVEUR
 
-Dans un navigateur internet, taper l'ip locale de la Raspberry (généralement sous la forme 192.168.1.X:30000)
+Dans un navigateur internet, taper l'ip locale de la Raspberry (dépendant du FAI, mais généralement sous la forme 192.168.1.X:30000)
 
 Créez un mot de passe d'accè au serveur et si besoin à vos Mondes.
 
