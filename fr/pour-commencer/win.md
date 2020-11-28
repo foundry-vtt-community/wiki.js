@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-09T15:08:05.128Z
+date: 2020-11-28T08:23:26.591Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -86,9 +86,9 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 
 ### Box Internet, Ouverture du Port 80.
 **ATTENTION** : Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, 
-- ***L'activation de l'UPnP***. 
+- ***Désactivation de l'UPnP***. 
 
-***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.*** 
+***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties. La désactivation de cette dernière est obligatoire pour le bon fonctionnement de la VTT*** 
 
 Par défaut, le port utilisé par Foundry VTT est le **Port 30000** et il faudra donc ouvrir ce dernier sur le NAT de votre Box Internet.
 Afin que vous puissiez utiliser Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
