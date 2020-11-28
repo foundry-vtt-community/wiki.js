@@ -1,9 +1,9 @@
 ---
 title: Installation sous Raspberry Pi
-description: 
+description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-28T21:24:29.580Z
-tags: 
+date: 2020-11-28T21:25:16.572Z
+tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
 ---
