@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-28T08:23:26.591Z
+date: 2020-11-28T08:40:21.532Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -86,9 +86,10 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 
 ### Box Internet, Ouverture du Port 80.
 **ATTENTION** : Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, 
-- ***Désactivation de l'UPnP***. 
+- ***L'Activation de l'UPnP***. 
 
-***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties. La désactivation de cette dernière est obligatoire pour le bon fonctionnement de la VTT*** 
+***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
+La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT***.
 
 Par défaut, le port utilisé par Foundry VTT est le **Port 30000** et il faudra donc ouvrir ce dernier sur le NAT de votre Box Internet.
 Afin que vous puissiez utiliser Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
@@ -127,7 +128,14 @@ En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans l
 - Je vous invite à renommer le répertoire ***FoundryVTT*** par ***FoundryVTT_Data***,afin de ne pas faire la confusion avec le répertoire du coeur du logiciel.
 - Exécuter Foundry VTT, puis sélectionnez l'onglet Configuration
 - Dans le champ ***User Data Path***, remplacer le Path actuel par celui que vous venez de choisir en mettant des **"/"** comme sur l'exemple ci-dessous.
-- Lorsque vous avez fait la modification, cliquez sur ***Save Changes***, puis ***YES***
+
+**ATTENTION** : Avant de valider tous changements, merci de bien vérifier, comme sur la capture d'écran ci-dessous : 
+- ***Que "Enable UPnP ? (ou Activer UPnP ? en français)" soit bien décoché.***. 
+
+***Pour rappel, cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
+La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT***.
+
+- Lorsque vous avez fait la/les modification(s), cliquez sur ***Save Changes***, puis ***YES***
 ![6_configuration.png](/setup/winstall/6_configuration.png)
 
 - Relancer Foundry VTT
