@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: 
 published: true
-date: 2020-11-28T21:21:20.256Z
+date: 2020-11-28T21:23:56.998Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -23,11 +23,11 @@ Rendez vous sur un revendeur de Raspberry Pi (Kubii, Materiel.net, Amazon, ...) 
 
 ![phj3bxv.jpg](/images/raspberry/phj3bxv.jpg){.align-center}
 
-Le plus simple : prendre un starter kit Raspberry 3 ou Raspberry 4
+Le plus simple : prendre un starter kit [Raspberry 3](fr/https://www.kubii.fr/168-kits-raspberry-pi-3-et-3) ou [Raspberry 4](fr/https://www.kubii.fr/175-kits-raspberry-pi-4)
 
 ### 2ème ÉTAPE : PARAMÈTRER LA RASPBERRY PI
 
-Installer sur microSD l'OS Raspbian et le mettre à jour ou avoir une microSD avec une préinstallation et le mettre à jour. Il y a plein de tuto en ligne pour débuter et paramétrer.
+Installer sur microSD l'OS Raspbian et le mettre à jour ou avoir une microSD avec une préinstallation et le mettre à jour. Il y a plein de [tuto en ligne pour débuter et paramétrer.](/fr/https://www.gotronic.fr/blog/guides/raspberry/)
 
 Connecter la WiFi ou se brancher à l'Ethernet.
 
@@ -35,7 +35,7 @@ Pour mettre à jour correctement une RasPi, ouvrez la console, copier ci dessous
 
 `sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo rpi-update`
 
-Activer VNC (partage de l'écran) ou SSH (terminal) comme ci dessous si vous souhaitez un contrôle à distance pour vous passer de brancher en hdmi/microhdmi votre RasPi.
+Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran) ou [SSH](fr/https://raspberry-pi.fr/connecter-ssh-raspberry-pi/) (terminal) comme ci dessous si vous souhaitez un contrôle à distance pour vous passer de brancher en hdmi/microhdmi votre RasPi.
 
 ![unfj1zw.jpg](/images/raspberry/unfj1zw.jpg)
 
