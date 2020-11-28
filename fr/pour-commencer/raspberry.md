@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: 
 published: true
-date: 2020-11-28T21:23:56.998Z
+date: 2020-11-28T21:24:29.580Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -41,7 +41,7 @@ Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran
 
 ### 3ème ÉTAPE : INSTALLER Node.js SUR LA RASPBERRY PI
 
-Issu de la doc sur Foundry VTT
+[Issu de la doc sur Foundry VTT](fr/https://foundryvtt.com/article/hosting/)
 
 Entrer successivement les commandes suivantes dans le terminal pour installer Node.js.
 Copier puis clic droit et coller dans le terminal, faire entrée et attendre de pouvoir entrer une nouvelle commande, si vous obtenez en fin de terminal [O/n], taper O puis Entrée.
@@ -52,7 +52,7 @@ Copier puis clic droit et coller dans le terminal, faire entrée et attendre de 
 
 Créer ensuite les répertoires qui vont accueillir les dossiers et fichiers du serveur Foundry VTT
 
-Installer le serveur, remplacer dans la 2ème commande ci dessous <token-de-téléchargement-du-serveur> par le lien copier sur son compte de Foundry VTT dans Purchases Licenses. Garder les guillements
+Installer le serveur, remplacer dans la 2ème commande ci dessous [<token-de-téléchargement-du-serveur>](fr/https://i.imgur.com/igtqAs9.jpg) par le lien copier sur son compte de Foundry VTT dans Purchases Licenses. Garder les guillements
 
 `cd Foundryvtt`
 `sudo wget -O foundryvtt.zip "<token-de-téléchargement-du-serveur>"`
