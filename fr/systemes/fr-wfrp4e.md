@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-27T15:14:53.349Z
+date: 2020-11-29T18:22:02.888Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -42,10 +42,6 @@ Si vous avez mis à jour le système Warhammer en v3 avec le "core" de Cubicle7,
 ## Pour la 0.6.6
 
 Pour cette version, installez tout simplement le module officiel en 2.0, via les fonctions d'installation de Foundry. **ATTENTION**: Vous ne devez pas utiliser le système Warhammer4 v3.X avec Foundry 0.6.6, cela ne marchera pas.
-
-## Pour les 0.7.X
-
-Seules les versions 3.X du système Warhammer4 sont compatibles avec les versions 0.7.X de Foundry. Si vous utilisez encore des versions inférieures à la 3.X, sachez qu'il y a un gros risque quasi certain que vos acteurs, compendiums et données soient inutilisables. Il vous faut dans ce cas rester en Foundry v0.6.X obligatoirement pour ne pas avoir d'effets de bord.
 
 
 #### Modules conseillé par la communauté
