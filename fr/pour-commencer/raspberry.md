@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-29T10:18:19.951Z
+date: 2020-11-30T11:33:00.066Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -33,7 +33,7 @@ Connecter la WiFi ou se brancher à l'Ethernet.
 
 Pour mettre à jour correctement une RasPi, ouvrez la console, copier ci dessous et dans le terminal faire clic droit, coller et Entrée.
 
-`sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo rpi-update`
+`sudo apt update && sudo apt full-upgrade -y && sudo apt-get dist-upgrade -y && sudo rpi-update`
 
 Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran) ou [SSH](fr/https://raspberry-pi.fr/connecter-ssh-raspberry-pi/) (terminal) comme ci dessous si vous souhaitez un contrôle à distance pour vous passer de brancher en hdmi/microhdmi votre RasPi.
 
