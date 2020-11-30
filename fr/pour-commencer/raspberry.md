@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-30T11:46:39.381Z
+date: 2020-11-30T11:48:34.020Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -97,3 +97,5 @@ Si la box est configurée pour l'UPnP rien à faire, sinon ouvrir le port 30000 
 Si vous jouez entre ami, fournissez simplement l'adresse à entrer dans un navigateur : votre-ip:30000
 
 Sinon, utiliser un service DynDNS (nom de domaine) à paramétrer dans votre box. Il en existe des gratuits (DynDNS, No-IP, ChangeIP, DNSdynamic). Faite juste attention à ce que votre FAI accepte.
+
+AVERTISSEMENT : ne confier son adresse IP qu'à des personnes de confiance. Ouvrir le serveur à la demande pour plus de sécurité.
