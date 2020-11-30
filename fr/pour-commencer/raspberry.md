@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-30T11:33:00.066Z
+date: 2020-11-30T11:36:47.427Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -43,8 +43,8 @@ Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran
 
 [Issu de la doc sur Foundry VTT](fr/https://foundryvtt.com/article/hosting/)
 
-Entrer successivement les commandes suivantes dans le terminal pour installer Node.js.
-Copier puis clic droit et coller dans le terminal, faire entrée et attendre de pouvoir entrer une nouvelle commande, si vous obtenez en fin de terminal [O/n], taper O puis Entrée.
+Entrer successivement les commandes ci-après dans le terminal pour installer Node.js.
+Pour rappel : copier puis clic droit et coller dans le terminal, faire Entrée et attendre de pouvoir entrer une nouvelle commande, si vous obtenez en fin de terminal [O/n], taper O puis Entrée.
 
 `sudo apt install -y libssl-dev`
 `curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -`
