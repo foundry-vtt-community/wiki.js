@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-30T11:36:47.427Z
+date: 2020-11-30T11:46:39.381Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -31,7 +31,7 @@ Installer sur microSD l'OS Raspbian et le mettre à jour ou avoir une microSD av
 
 Connecter la WiFi ou se brancher à l'Ethernet.
 
-Pour mettre à jour correctement une RasPi, ouvrez la console, copier ci dessous et dans le terminal faire clic droit, coller et Entrée.
+Pour mettre à jour correctement une RasPi, ouvrez la console, copier ci dessous et dans le terminal faire clic droit, coller et Entrée (valable seulement si vous utilisez un contrôle à distance : VNC ou SSH, sinon taper à la main).
 
 `sudo apt update && sudo apt full-upgrade -y && sudo apt-get dist-upgrade -y && sudo rpi-update`
 
@@ -44,23 +44,28 @@ Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran
 [Issu de la doc sur Foundry VTT](fr/https://foundryvtt.com/article/hosting/)
 
 Entrer successivement les commandes ci-après dans le terminal pour installer Node.js.
-Pour rappel : copier puis clic droit et coller dans le terminal, faire Entrée et attendre de pouvoir entrer une nouvelle commande, si vous obtenez en fin de terminal [O/n], taper O puis Entrée.
+
+Pour rappel et uniquement via VNC ou SSH : copier, puis sur dans le terminal de la Raspberry faire clic droit et coller, faire Entrée et attendre de pouvoir entrer la commande suivante.
 
 `sudo apt install -y libssl-dev`
 `curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -`
 `sudo apt install -y nodejs`
 
-Créer ensuite les répertoires qui vont accueillir les dossiers et fichiers du serveur Foundry VTT
+Créer ensuite les répertoires qui vont accueillir les dossiers et fichiers du serveur Foundry VTT.
 
-Installer le serveur, remplacer dans la 2ème commande ci dessous [<token-de-téléchargement-du-serveur>](fr/https://i.imgur.com/igtqAs9.jpg) par le lien copier sur son compte de Foundry VTT dans Purchases Licenses. Garder les guillements
+`cd /home`
+`sudo mkdir /home/foundryvtt`
+`sudo mkdir /home/foundrydata`
 
-`cd Foundryvtt`
+Installer le serveur, remplacer dans la 2ème commande ci dessous [<token-de-téléchargement-du-serveur>](fr/https://i.imgur.com/igtqAs9.jpg) par le lien copié sur son compte Foundry VTT dans Purchases Licenses. Garder les guillements !
+
+`cd foundryvtt`
 `sudo wget -O foundryvtt.zip "<token-de-téléchargement-du-serveur>"`
 `sudo unzip foundryvtt.zip`
 
 Lancer le serveur
 
-`node resources/app/main.js --dataPath=/home/foundrydata`
+`node /home/foundryvtt/resources/app/main.js --dataPath=/home/foundrydata`
 
 NE PAS FERMER LA FENÊTRE DU TERMINAL
 
