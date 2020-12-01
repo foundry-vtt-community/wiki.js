@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-11-28T02:44:21.631Z
+date: 2020-12-01T14:38:44.104Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -14,6 +14,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 
 ## Wiki Localizations
 [French](https://foundryvtt.wiki/fr/home)
+[Japanese （日本語）](https://foundryvtt.wiki/ja/home)
 
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry VTT Website](http://foundryvtt.com)
@@ -30,7 +31,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 <i class="fab fa-discord"></i> [Français](https://discord.gg/pPSDNJk) Unofficial French community.
 <i class="fab fa-discord"></i> [Deutsch](https://discord.gg/XrKAZ5J) Unofficial German community.
 <i class="fab fa-discord"></i> [Italian](https://discord.gg/hsRcTby) Unofficial Italian community.
-<i class="fab fa-discord"></i> [Japanese](https://discord.gg/vM4YM27) Unofficial Japanese community.
+<i class="fab fa-discord"></i> [日本語](https://discord.gg/vM4YM27) Unofficial Japanese community.
 <i class="fab fa-discord"></i> [Korean](https://discord.gg/DRbbn5w) Unofficial Korean community.
 <i class="fab fa-discord"></i> [Portuguese](https://discord.gg/XNC86FBnQ2) Unofficial Portuguese community.
 <i class="fab fa-discord"></i> [Russian](https://discord.gg/Z2CXFy35WF) Unofficial Russian community.
