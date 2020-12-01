@@ -2,7 +2,7 @@
 title: オンセ工房（Foundry VTT）Wikiへようこそ！
 description: 
 published: true
-date: 2020-12-01T14:32:37.818Z
+date: 2020-12-01T14:36:22.926Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -34,3 +34,8 @@ dateCreated: 2020-12-01T14:32:37.818Z
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
 <i class="fab fa-gitlab"></i> [Gitlab](https://gitlab.com/foundrynet)
 <i class="fab fa-gitlab"></i> [Gitlab 要望・問題点トラッカー（英語のみ）](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
+  
+  ## サポート
+  これから導入をする方は日本語便利リンクより、ディスコードサーバへ入り、旧Wikiやツイッターの紹介を御覧ください。
+  このWikiでも情報を少しつづあげていく予定ですが、なにか便利な情報を載せたい方はディスコードにてBrother Sharpまで送ってください。
+  
