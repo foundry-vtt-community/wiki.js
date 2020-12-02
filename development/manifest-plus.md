@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T05:17:52.292Z
+date: 2020-12-02T05:19:07.192Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -199,17 +199,17 @@ In addition to the extra fields in the `authors` array, the following are added 
 		]
 	},
 
-  /* conflicts: Same as "dependencies" but the opposite, any known conflicts */
+	/* conflicts: Same as "dependencies" but the opposite, any known conflicts */
 	"conflicts": [
 		{
-      "name": "module_name",
-      "type": "module",
-      
-      /* versionMin/Max: If defined, this is the range of the other package's versions in which the conflict manifests */
-      "versionMin": "version number in x.y.z format",
-      "versionMax": "version number in x.y.z format"
-    }
-  ]
+			"name": "module_name",
+			"type": "module",
+			
+			/* versionMin/Max: If defined, this is the range of the other package's versions in which the conflict manifests */
+			"versionMin": "version number in x.y.z format",
+			"versionMax": "version number in x.y.z format"
+		}
+	]
 }
 ```
 
