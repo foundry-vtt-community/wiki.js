@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T05:15:21.804Z
+date: 2020-12-02T05:17:52.292Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -201,7 +201,7 @@ In addition to the extra fields in the `authors` array, the following are added 
 
   /* conflicts: Same as "dependencies" but the opposite, any known conflicts */
 	"conflicts": [
-    {
+		{
       "name": "module_name",
       "type": "module",
       
