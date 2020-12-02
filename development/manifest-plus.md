@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T06:06:25.245Z
+date: 2020-12-02T06:31:39.527Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -94,43 +94,63 @@ Anything that should go into an `<img>` HTML element: `.png`, `.gif`, `.webp`. T
 
 ##### Video
 Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
-```
-	/* library: Set to true if this module is a library module and should not be shown in a UI, or shouldn't be user browsable/installable */
+
+### Library
+The `library` property is a boolean field that indicates whether or not the package is "library" intended for other packages to depend on. This property should be `true` if your package doesn't present any user-facing features, but rather provides functionality for other packages to utilize and rely upon. Packages with this property set to `true` may be hidden from third party package lists to avoid confusing users.
+```json
 	"library": true,
+```
+When omitted, the default value of this property is `false` so it is not nessesary to explcitly set this value unless it needs to be `true`.
 
-	/* includes: List the files to be included in this package. Can be useful for automatic CI/CD pipelines 
-		generating a zip archive or to make sure that no file is missing from a package */
-	"includes": ["relative/path/to/files"],
+### Includes
+This special property is intended to allow developers to create improved deployment tools. The `includes` property is an array of strings, each string should contain the relative path of a file which should be included in the package .zip archive. Special CI/CD tools can use this field along with the official fields for scripts, laguages, and styles to generate the archive with only the desired files, without needing to create an additional configuration file.
+```json
+"includes": [
+	"relative/path/to/files/script.js", 
+  "relative/path/to/templates/template.html", 
+  "path/to/image/assets/folder"
+]
+```
+### Deprecated
+This property is intended to be added to the manifest of a package that is no longer being maintained, and is no longer functional/useful. This may be because the author created a new better alternative, because the features were integrated into Core or a System, or because the author has abandoned the package and no longer intends to keep it up to date. 
 
-	/* deprecated: details added by a module author to explain that it should not be used any more */
-	"deprecated": {
-		/* coreVersion: If set, this module is assumed to have been deprecated by a core update */
-		"coreVersion": "0.7.0",
+The `deprecated` property is an object which contains a number of fields explaining the nature of the deprecation status.
 
-		/* reason: Human readable string explaining why this is deprecated */
-		"reason": "This was added to foundry core.",
+#### Fields
+- `"coreVersion"` - If set, this module is assumed to have been deprecated by a core update, this field is the core version number as a string.
+- `"reason"` - A human readable string explaining why the package was deprecated.
+- `"alternatives"` - An array of objects each providing data about another package which could act as a replacement for this one.
+ 	- `alternatives.name` - The `name` property of the alternative package.
+ 	- `alternatives.manifest` - The URL of the `manifest.json` file for the alternative package, from which it can be downloaded.
 
-		/* alternatives: Array of alternative modules with the same fiels as dependencies */
-		"alternatives": [
-			{
-				"name": "module_name",
-				"manifest": "https://link.com/to/manifest.json"
-			}
-		]
-	},
-
-	/* conflicts: Same as "dependencies" but the opposite, any known conflicts */
-	"conflicts": [
+```json
+"deprecated": {
+	"coreVersion": "0.7.0",
+	"reason": "This was added to foundry core.",
+	"alternatives": [
 		{
 			"name": "module_name",
-			"type": "module",
-			
-			/* versionMin/Max: If defined, this is the range of the other package's versions in which the conflict manifests */
-			"versionMin": "version number in x.y.z format",
-			"versionMax": "version number in x.y.z format"
+			"manifest": "https://link.com/to/manifest.json"
 		}
 	]
 }
+```
+### Conflicts
+Similar to the `dependencies` in the standard manifest, but the opposite. The `conflicts` property is an array of objects which define another package with which this package can not inter-opperate. 
+
+Each conflic object has a `name` property which matches the name of the other package, and a `type` which is the type of the other package.
+
+Additionally, the optional `versionMin` and `versionMax` properties can be used to define a range of version numbers for the other package withing which the conflic occurs.
+
+```json
+"conflicts": [
+	{
+		"name": "module_name",
+		"type": "module",
+		"versionMin": "a.b.c",
+		"versionMax": "a.c.d"
+	}
+]
 ```
 
 
