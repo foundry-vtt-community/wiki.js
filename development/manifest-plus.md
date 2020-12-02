@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T16:32:12.505Z
+date: 2020-12-02T17:04:19.283Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -26,7 +26,7 @@ The Core manifest has two ways of defining the package Author. Either through th
 
 The `authors` field is an array of objects, each object provides information about one of the authors of the package. This could be one author, or many. The standard version includes `name`, `website`, and `email` fields. Only `name` is required.
 
-For Manifest+, we wanted to recognize that a personal website and Email address are not nessesarily the best/only ways to contact the author. To that end, we introduce `discord`, `twitter`, and `reddit` fields as well.
+For Manifest+, we wanted to recognize that a personal website and Email address are not nessesarily the best/only ways to contact the author. To that end, we introduce `discord`, `twitter`, `patreon`, and `reddit` fields as well.
 
 ```json
 "author": "Name of the author",
@@ -37,6 +37,7 @@ For Manifest+, we wanted to recognize that a personal website and Email address 
     "email": "email@example.com",
     "discord": "discordID#0001",
     "twitter": "@TwitterHandle",
+    "patreon": "patreonName",
     "reddit": "u/RedditUsername"
   }
 ]
