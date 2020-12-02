@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T05:02:17.805Z
+date: 2020-12-02T05:07:52.221Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -199,7 +199,15 @@ In addition to the extra fields in the `authors` array, the following are added 
 		]
 	},
 
-	
+  /* conflicts: Same as "dependencies" but the opposite, any known conflicts */
+	"conflicts": [
+    {
+      "name": "module_name",
+      "type": "module",
+      "versionMin": "version number in x.y.z format",
+      "versionMax": "version number in x.y.z format"
+    }
+  ]
 }
 ```
 
@@ -208,6 +216,9 @@ In addition to the extra fields in the `authors` array, the following are added 
 There is no guarantee how the media files will be used, but these are the recommended dimensions and known existing usages.
 
 #### Cover
+
+Avoid putting large text on the cover image, it should showcase the package rather than the name of the package.
+
 - Width: 1200px
 - Aspect Ratio: 2:1
 
