@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2020-12-02T03:06:45.078Z
+date: 2020-12-02T03:06:56.285Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -347,7 +347,7 @@ These modules have either been directly subsumed by other modules, or discontinu
 | Defunct Module | Successor |
 |---|---|
 | [Always Show Notes](https://github.com/Pingar5/alwaysshownotes) | [Show Notes](https://foundryvtt.com/packages/foundryvtt-show-notes/) |
-| [Chat Damage Buttons](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons); [Minor-QOL](https://foundryvtt.com/packages/minor-qol/) |  [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
+| [Chat Damage Buttons](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons) |  [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
 | [Chat Damage Buttons - Better Rolls Edition](https://github.com/syl3r86/chatdamagebuttons-betterrolls) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) |
 | [DDB Popper](https://github.com/death-save/ddb-popper) | [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) |
 | [DnD Beyond Character Importer](https://github.com/sillvva/foundry-vtt-modules/tree/master/ddb-importer); [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) | [ddb-importer](https://github.com/MrPrimate/ddb-importer) |
