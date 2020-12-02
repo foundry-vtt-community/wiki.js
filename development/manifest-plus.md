@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T06:31:58.322Z
+date: 2020-12-02T06:37:21.858Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -50,16 +50,15 @@ All Manifest+ properties are *optional* but they are all usful. We recommend inc
 One of the largest additions, the `media` preperty is an array of objects which each provide data for a single multimedia item. This data includes a special `type` field which indicates what kind of media is being provided, as well as a `url` property which provieds the address of the media resource.
 
 ```json
-
 "media": [
-	{
-		"type": "screenshot",
-		"url": "link/to/media/file"
-	},
   {
-		"type": "cover",
-		"url": "https://somereposite.com/author/repo/raw/images/cover.png"
-	}
+    "type": "screenshot",
+    "url": "link/to/media/file"
+  },
+  {
+    "type": "cover",
+    "url": "https://somereposite.com/author/repo/raw/images/cover.png"
+  }
 ]
 ```
 
@@ -107,8 +106,8 @@ This special property is intended to allow developers to create improved deploym
 ```json
 "includes": [
 	"relative/path/to/files/script.js", 
-  "relative/path/to/templates/template.html", 
-  "path/to/image/assets/folder"
+	"relative/path/to/templates/template.html", 
+	"path/to/image/assets/folder"
 ]
 ```
 ### Deprecated
@@ -125,14 +124,14 @@ The `deprecated` property is an object which contains a number of fields explain
 
 ```json
 "deprecated": {
-	"coreVersion": "0.7.0",
-	"reason": "This was added to foundry core.",
-	"alternatives": [
-		{
-			"name": "module_name",
-			"manifest": "https://link.com/to/manifest.json"
-		}
-	]
+  "coreVersion": "0.7.0",
+  "reason": "This was added to foundry core.",
+  "alternatives": [
+    {
+      "name": "module_name",
+      "manifest": "https://link.com/to/manifest.json"
+    }
+  ]
 }
 ```
 ### Conflicts
