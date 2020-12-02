@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2020-12-02T03:09:56.108Z
+date: 2020-12-02T04:19:13.697Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -324,9 +324,10 @@ Foundry VTT modules that no longer work are noted here. Modules included here ha
 
 These are modules which have had their functionality merged into core.
 
+### 0.6.x and previous
+
 - Arcane Viewing
 - Better FilePicker
-- Deselection
 - Entity Order
 - GM Roll Message
 - Mother, May I?
@@ -334,6 +335,13 @@ These are modules which have had their functionality merged into core.
 - Tiles Browser
 - Z Order
 - ZoomKey
+
+### 0.7.x
+- [Deselection](https://github.com/Sky-Captain-13/foundry/tree/master/deselection)
+- [Noback](https://github.com/VanceCole/noback)
+- [No Summon Vision](https://github.com/schultzcole/FVTT-No-Summon-Vision)
+- [Token Owner Selection Tweak](https://github.com/ElfFriend-DnD/foundryvtt-tokenOwnerSelectionTweak)
+
 
 ### Integrated into Core DND5E System
 
