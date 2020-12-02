@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T16:08:05.310Z
+date: 2020-12-02T16:31:13.530Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -111,6 +111,8 @@ Anything that should go into an `<img>` HTML element: `.png`, `.gif`, `.webp`. T
 
 ##### Video
 Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
+
+Additionally, some Manifest+ consumers may supported embedding video from common providers like YouTube and Vimeo, the address of the video can be provided in the `url` field. Consumers should take care to parse this field appropriately to avoid loading a YouTube video in a `<video>` element, or an `.mp4` in a YouTube embed.
 
 ##### Video Thumbnail
 Should be a static image.
