@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T14:11:27.776Z
+date: 2020-12-02T14:18:47.952Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -106,6 +106,9 @@ The `library` property is a boolean field that indicates whether or not the pack
 	"library": true,
 ```
 When omitted, the default value of this property is `false` so it is not nessesary to explcitly set this value unless it needs to be `true`.
+
+> The `library` key might be coming to Foundry Core in 0.8.x. [Issue on Gitlab.](https://gitlab.com/foundrynet/foundryvtt/-/issues/4129)
+{.is-info}
 
 ### Includes
 This special property is intended to allow developers to create improved deployment tools. The `includes` property is an array of strings, each string should contain the relative path of a file which should be included in the package .zip archive. Special CI/CD tools can use this field along with the official fields for scripts, laguages, and styles to generate the archive with only the desired files, without needing to create an additional configuration file.
