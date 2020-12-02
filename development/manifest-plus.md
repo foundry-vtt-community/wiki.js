@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T15:58:34.610Z
+date: 2020-12-02T16:06:43.517Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -74,6 +74,10 @@ One of the largest additions, the `media` preperty is an array of objects which 
     "url": "https://somereposite.com/author/repo/raw/videos/demo.webm",
     "loop": true,
     "thumbnail": "https://somereposite.com/author/repo/raw/images/thumb.png"
+  },
+  {
+    "type": "video",
+    "embed": "https://youtube.com/rickroll",
   }
 ]
 ```
@@ -114,6 +118,9 @@ Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
 
 ##### Video Thumbnail
 Should be a static image.
+
+##### Video Embed
+If you are using Youtube or Vimeo to host videos, provide the embed url here instead of the `url` field.
 
 - Dimensions: 1280px by 720px
 
