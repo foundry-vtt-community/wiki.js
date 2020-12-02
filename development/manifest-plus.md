@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T15:53:08.267Z
+date: 2020-12-02T15:58:34.610Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -50,10 +50,10 @@ All Manifest+ properties are *optional* but they are all usful. We recommend inc
 ### Version
 Document Version: 1.0.0
 
-It is recommended to include a `manifestPlus` property in your manifest which denotes which version of Manifest+ you have implemented. We do not intend for breaking changes to this spec, but if they do happen we will increment the major version in accordance with [Semver](https://semver.org/).
+It is recommended to include a `manifestPlusVersion` property in your manifest which denotes which version of Manifest+ you have implemented. We do not intend for breaking changes to this spec, but if they do happen we will increment the major version in accordance with [Semver](https://semver.org/).
 
 ```json
-"manifestPlus": "1.0.0"
+"manifestPlusVersion": "1.0.0"
 ```
 
 ### Media
