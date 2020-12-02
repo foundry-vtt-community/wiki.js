@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T14:29:24.122Z
+date: 2020-12-02T15:52:26.549Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -46,6 +46,12 @@ Each of these additional fields follow the naming convention of the platform, fo
 ## Manifest+
 
 All Manifest+ properties are *optional* but they are all usful. We recommend including as many of these properties as reasonable in order to provide enriched metadata.
+
+### Version
+Document Version: 1.0.0
+
+It is recommended to include a `manifestPlus` property in your manifest which denotes which version of Manifest+ you have implemented. We do not intend for breaking changes to this spec, but if they do happen we will increment the major version in accordance with [Semver](https://semver.org/).
+
 
 ### Media
 One of the largest additions, the `media` preperty is an array of objects which each provide data for a single multimedia item. This data includes a special `type` field which indicates what kind of media is being provided, as well as a `url` property which provides the address of the media resource.
