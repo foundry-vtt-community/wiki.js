@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T16:07:34.700Z
+date: 2020-12-02T16:08:05.310Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -74,10 +74,6 @@ One of the largest additions, the `media` preperty is an array of objects which 
     "url": "https://somereposite.com/author/repo/raw/videos/demo.webm",
     "loop": true,
     "thumbnail": "https://somereposite.com/author/repo/raw/images/thumb.png"
-  },
-  {
-    "type": "video",
-    "embed": "https://youtube.com/rickroll",
   }
 ]
 ```
@@ -87,7 +83,7 @@ The following type of media are defined by the Manifest+ specification:
 - `"cover"` - A "cover image" which is intended to be displayed along with the package description.
 - `"icon"` - A small image icon such as a logo or author avatar.
 - `"screenshot"` - An image of the package in action.
-- `"video"` - A video file or embed which can be played.
+- `"video"` - A video file which can be played.
 	- `"loop"` - Optional Field specific to Video type media. If loop is true, the video is expected to be treated as an animated image, like a GIF (i.e. muted and looped).
   - `"thumbnail"` - Optional url to provide a video thumbnail.
 
@@ -118,9 +114,6 @@ Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
 
 ##### Video Thumbnail
 Should be a static image.
-
-##### Video Embed
-If you are using Youtube or Vimeo to host videos, provide the embed url here instead of the `url` field.
 
 - Dimensions: 1280px by 720px
 
