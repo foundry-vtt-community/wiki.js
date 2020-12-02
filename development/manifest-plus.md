@@ -2,12 +2,15 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T05:01:27.160Z
+date: 2020-12-02T05:02:17.805Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
 ---
 
+The Manifest+ specification is an unofficial community developed extension of the official Foundry manifest intended to add additional data which can be used by packages within Foundry and by external application.
+
+This specification was developed by The League of FVTT developers. While the Core Foundry software simply ignores these additions, the full data of the manifest is still available to packages running within Foundry. Additionally, a number of external applications including The Bazaar package browser on The Forge use this extended data to give users a more rich experience by adding cover images, icons, enhanced contact details, and more.
 
 ## Package Manifest Standard Fields
 
