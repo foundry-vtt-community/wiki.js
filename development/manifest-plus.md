@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T04:59:52.917Z
+date: 2020-12-02T05:01:27.160Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -217,9 +217,11 @@ Currently used on the [Forge's Bazaar](https://forge-vtt.com/bazaar).
 Fallback on the Bazaar if Cover is not defined.
 
 #### Screenshot
+Anything that should go into an `<img>` HTML element: `.png`, `.gif`, `.webp`.
+
 - Width: 900
 - Aspect Ratio: 4:3
 
 #### Video
-- Anything that must be placed into an `<video>` HTML element.
+Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
 
