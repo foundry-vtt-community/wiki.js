@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T06:37:21.858Z
+date: 2020-12-02T06:38:52.723Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -30,14 +30,14 @@ For Manifest+, we wanted to recognize that a personal website and Email address 
 ```json
 "author": "Name of the author",
 "authors": [
-	{
-		"name": "Name of the author",
-		"url": "https://website.com/of/the/author",
-		"email": "email@example.com",
-		"discord": "discordID#0001",
-		"twitter": "@TwitterHandle",
-		"reddit": "u/RedditUsername"
-	}
+  {
+    "name": "Name of the author",
+    "url": "https://website.com/of/the/author",
+    "email": "email@example.com",
+    "discord": "discordID#0001",
+    "twitter": "@TwitterHandle",
+    "reddit": "u/RedditUsername"
+  }
 ]
 ```
 Each of these additional fields follow the naming convention of the platform, for example with Twitter handles the `@TwitterHandle` format is used.
@@ -143,12 +143,12 @@ Additionally, the optional `versionMin` and `versionMax` properties can be used 
 
 ```json
 "conflicts": [
-	{
-		"name": "module_name",
-		"type": "module",
-		"versionMin": "a.b.c",
-		"versionMax": "a.c.d"
-	}
+  {
+    "name": "module_name",
+    "type": "module",
+    "versionMin": "a.b.c",
+    "versionMax": "a.c.d"
+  }
 ]
 ```
 
