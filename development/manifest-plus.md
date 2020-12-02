@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T16:06:43.517Z
+date: 2020-12-02T16:07:34.700Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -87,7 +87,7 @@ The following type of media are defined by the Manifest+ specification:
 - `"cover"` - A "cover image" which is intended to be displayed along with the package description.
 - `"icon"` - A small image icon such as a logo or author avatar.
 - `"screenshot"` - An image of the package in action.
-- `"video"` - A video file which can be played.
+- `"video"` - A video file or embed which can be played.
 	- `"loop"` - Optional Field specific to Video type media. If loop is true, the video is expected to be treated as an animated image, like a GIF (i.e. muted and looped).
   - `"thumbnail"` - Optional url to provide a video thumbnail.
 
