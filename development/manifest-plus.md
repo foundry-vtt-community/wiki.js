@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T14:24:40.498Z
+date: 2020-12-02T14:29:24.122Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -48,7 +48,7 @@ Each of these additional fields follow the naming convention of the platform, fo
 All Manifest+ properties are *optional* but they are all usful. We recommend including as many of these properties as reasonable in order to provide enriched metadata.
 
 ### Media
-One of the largest additions, the `media` preperty is an array of objects which each provide data for a single multimedia item. This data includes a special `type` field which indicates what kind of media is being provided, as well as a `url` property which provieds the address of the media resource.
+One of the largest additions, the `media` preperty is an array of objects which each provide data for a single multimedia item. This data includes a special `type` field which indicates what kind of media is being provided, as well as a `url` property which provides the address of the media resource.
 
 ```json
 "media": [
@@ -63,7 +63,8 @@ One of the largest additions, the `media` preperty is an array of objects which 
   {
     "type": "video",
     "url": "https://somereposite.com/author/repo/raw/videos/demo.webm",
-    "loop": true
+    "loop": true,
+    "thumbnail": "https://somereposite.com/author/repo/raw/images/thumb.png"
   }
 ]
 ```
@@ -75,6 +76,7 @@ The following type of media are defined by the Manifest+ specification:
 - `"screenshot"` - An image of the package in action.
 - `"video"` - A video file which can be played.
 	- `"loop"` - Optional Field specific to Video type media. If loop is true, the video is expected to be treated as an animated image, like a GIF (i.e. muted and looped).
+  - `"thumbnail"` - Optional url to provide a video thumbnail.
 
 #### Media Recommendations
 There is no guarantee how the media files will be used, but these are the recommended dimensions and known existing usages.
@@ -84,7 +86,7 @@ Media `url`s can be relative to the package location, however we recommend absol
 ##### Cover
 Avoid putting large text on the cover image, it should showcase the package rather than the name of the package.
 
-- Width: 1200px
+- Width: 1280px
 - Aspect Ratio: 2:1
 
 Currently used on the [Forge's Bazaar](https://forge-vtt.com/bazaar).
@@ -100,6 +102,11 @@ Anything that should go into an `<img>` HTML element: `.png`, `.gif`, `.webp`. T
 
 ##### Video
 Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
+
+##### Video Thumbnail
+Should be a static image.
+
+- Dimensions: 1280px by 720px
 
 ### Library
 The `library` property is a boolean field that indicates whether or not the package is "library" intended for other packages to depend on. This property should be `true` if your package doesn't present any user-facing features, but rather provides functionality for other packages to utilize and rely upon. Packages with this property set to `true` may be hidden from third party package lists to avoid confusing users.
