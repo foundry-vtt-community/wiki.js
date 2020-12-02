@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2020-12-02T03:06:56.285Z
+date: 2020-12-02T03:09:56.108Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -349,7 +349,8 @@ These modules have either been directly subsumed by other modules, or discontinu
 | [Always Show Notes](https://github.com/Pingar5/alwaysshownotes) | [Show Notes](https://foundryvtt.com/packages/foundryvtt-show-notes/) |
 | [Chat Damage Buttons](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons) |  [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
 | [Chat Damage Buttons - Better Rolls Edition](https://github.com/syl3r86/chatdamagebuttons-betterrolls) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) |
-| [DDB Popper](https://github.com/death-save/ddb-popper) | [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) |
+| [Dancing Lights](https://github.com/BlitzKraig/fvtt-DancingLights) | [Community Lighting](https://github.com/BlitzKraig/fvtt-CommunityLighting) |
+| [DDB Popper](https://github.com/death-save/ddb-popper) | [Inline Webviewer](https://github.com/ardittristan/VTTInlineWebviewer) |
 | [DnD Beyond Character Importer](https://github.com/sillvva/foundry-vtt-modules/tree/master/ddb-importer); [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) | [ddb-importer](https://github.com/MrPrimate/ddb-importer) |
 | [Dynamic Items](https://gitlab.com/tposney/dynamicitems); [Dynamic Effects](https://foundryvtt.com/packages/dynamiceffects/) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
 | [D&D 5e Conditions](https://github.com/trdischat/conditions5e) | [Combat Utility Belt](https://foundryvtt.com/packages/combat-utility-belt/) |
