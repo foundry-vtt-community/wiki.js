@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T04:49:38.816Z
+date: 2020-12-02T04:59:52.917Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -205,7 +205,21 @@ In addition to the extra fields in the `authors` array, the following are added 
 There is no guarantee how the media files will be used, but these are the recommended dimensions and known existing usages.
 
 #### Cover
-- Recommended width: 1200px
-- Recommended aspect Ratio: 2:1
+- Width: 1200px
+- Aspect Ratio: 2:1
 
 Currently used on the [Forge's Bazaar](https://forge-vtt.com/bazaar).
+
+#### Icon
+- Width: 400px
+- Aspect Ratio: 1:1
+
+Fallback on the Bazaar if Cover is not defined.
+
+#### Screenshot
+- Width: 900
+- Aspect Ratio: 4:3
+
+#### Video
+- Anything that must be placed into an `<video>` HTML element.
+
