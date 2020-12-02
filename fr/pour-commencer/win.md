@@ -2,7 +2,7 @@
 title: 2. Installation Windows
 description: 
 published: true
-date: 2020-11-28T08:40:21.532Z
+date: 2020-12-02T01:07:42.458Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -84,7 +84,7 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 - Aller dans la partie **DHCP** de votre Box Internet
 	- Dans les **Adresses Statiques**, reservez une adresse locale de type **192.168.x.x** à l'**Adresse MAC** de votre ordinateur. [Obtenir l'adresse Mac sous Windows](https://www.commentcamarche.net/faq/10935-trouver-son-adresse-mac#obtenir-l-adresse-mac-sous-windows)
 
-### Box Internet, Ouverture du Port 80.
+### Box Internet, Ouverture du Port 30000.
 **ATTENTION** : Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, 
 - ***L'Activation de l'UPnP***. 
 
@@ -95,7 +95,7 @@ Par défaut, le port utilisé par Foundry VTT est le **Port 30000** et il faudra
 Afin que vous puissiez utiliser Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4**, il faudra dans un premier temps :
-	- `rediriger le port externe 80 vers le port de destination 30000 en TCP.`
+	- `rediriger le port externe 30000 vers le port de destination 30000 en TCP.`
 
 ## Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
