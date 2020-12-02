@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2020-11-21T07:20:06.497Z
+date: 2020-12-02T03:06:45.078Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -300,21 +300,6 @@ To install, simply add `arcane-marks-careers` into the modules folder in the `pu
 Once installed, you'll find the careers in the Arcane Careers Compendium, and you can roll on any Arcane Mark table with the chat command `/table <wind-name>`, e.g. `/table aqshy`.
 
 ---
-## Rough Nights & Hard Days
-
-* **Author**: Jagusti#3610
-* **Foundry VTT Compatibility**: 0.4.5+
-* **System Compatibility**: WFRP4e 0.9.0+
-
-### Link to Module
-* [https://github.com/Jagusti/fvtt-wfrp4e-rnhd/](https://github.com/Jagusti/fvtt-wfrp4e-rnhd/)
-
-### Description
-
-* Extends the character creation capabilities to gnomes, including their stats, background, features. 
-* Also includes pub games
-* Adds campaign scenario content (see [readme.md](https://github.com/Jagusti/fvtt-wfrp4e-rnhd/blob/master/README.md) for current coverage)
----
 ## Gerwin Waffenhalter’s Magnificent Weapons Gallery
 * **Author**: DasSauerkraut#3215
 * **Version**: 1.0
@@ -362,16 +347,16 @@ These modules have either been directly subsumed by other modules, or discontinu
 | Defunct Module | Successor |
 |---|---|
 | [Always Show Notes](https://github.com/Pingar5/alwaysshownotes) | [Show Notes](https://foundryvtt.com/packages/foundryvtt-show-notes/) |
-| [Chat Damage Buttons](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons) | [Minor-QOL](https://foundryvtt.com/packages/minor-qol/) or [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
+| [Chat Damage Buttons](https://gitlab.com/hooking/foundry-vtt---chat-damage-buttons); [Minor-QOL](https://foundryvtt.com/packages/minor-qol/) |  [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
 | [Chat Damage Buttons - Better Rolls Edition](https://github.com/syl3r86/chatdamagebuttons-betterrolls) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) |
 | [DDB Popper](https://github.com/death-save/ddb-popper) | [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) |
-| [DnD Beyond Character Importer](https://github.com/sillvva/foundry-vtt-modules/tree/master/ddb-importer) | [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) |
-| [Dynamic Items](https://gitlab.com/tposney/dynamicitems) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
-| [Dynamic Effects](https://foundryvtt.com/packages/dynamiceffects/) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
+| [DnD Beyond Character Importer](https://github.com/sillvva/foundry-vtt-modules/tree/master/ddb-importer); [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) | [ddb-importer](https://github.com/MrPrimate/ddb-importer) |
+| [Dynamic Items](https://gitlab.com/tposney/dynamicitems); [Dynamic Effects](https://foundryvtt.com/packages/dynamiceffects/) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
 | [D&D 5e Conditions](https://github.com/trdischat/conditions5e) | [Combat Utility Belt](https://foundryvtt.com/packages/combat-utility-belt/) |
 | [Encumbrance Variant](https://gitlab.com/hooking/foundry-vtt---encumbrance-variant-5e) | [Variant Encumbrance](https://foundryvtt.com/packages/VariantEncumbrance/) |
 | [FVTT-Party](https://github.com/shwill/fvtt-party) | [VTTA-Party](https://foundryvtt.com/packages/vtta-party/) |
-| [Item Sheet Buttons](https://gitlab.com/hooking/foundry-vtt---item-sheet-buttons) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) or [Minor-QOL](https://foundryvtt.com/packages/minor-qol/) or [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
+| [Item Sheet Buttons](https://gitlab.com/hooking/foundry-vtt---item-sheet-buttons) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) or [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
+| [Minor-QOL](https://foundryvtt.com/packages/minor-qol/) | [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
 | [NPC Browser](https://github.com/syl3r86/npc-browser) | [Compendium Browser](https://foundryvtt.com/packages/compendium-browser/) |
 | [Request Roll](https://github.com/JacobMcAuley/request_roll) | [Let me roll that for you](https://foundryvtt.com/packages/lmrtfy/) |
 | [Roll20 NPC Importer, for 5e](https://github.com/syl3r86/roll20npcimporter) | [R20 Converter](#roll20-converter) |
