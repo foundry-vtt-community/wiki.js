@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T06:38:52.723Z
+date: 2020-12-02T14:11:27.776Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -58,6 +58,11 @@ One of the largest additions, the `media` preperty is an array of objects which 
   {
     "type": "cover",
     "url": "https://somereposite.com/author/repo/raw/images/cover.png"
+  },
+  {
+    "type": "video",
+    "url": "https://somereposite.com/author/repo/raw/videos/demo.webm",
+    "loop": true
   }
 ]
 ```
@@ -68,6 +73,7 @@ The following type of media are defined by the Manifest+ specification:
 - `"icon"` - A small image icon such as a logo or author avatar.
 - `"screenshot"` - An image of the package in action.
 - `"video"` - A video file which can be played.
+	- `"loop"` - Optional Field specific to Video type media. If loop is true, the video is expected to be treated as an animated image, like a GIF (i.e. muted and looped).
 
 #### Media Recommendations
 There is no guarantee how the media files will be used, but these are the recommended dimensions and known existing usages.
