@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-11-26T17:32:56.687Z
+date: 2020-12-02T08:30:11.536Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -108,7 +108,8 @@ Tant que le palier n'a pas atteint un niveau release (stable), les versions sont
 Au sein d'un même palier, les modules et systèmes indiquant le support du palier sont tous compatibles. Autrement dit, si votre système/module marche en 0.7.5, il marchera en 0.7.7.
 
 **Règle 1** : Ne jamais mettre à jour juste avant une partie
-**Règle 2** ; Si vous n'êtes pas développeur, n'installez pas les releases alpha ni les premières beta. Attendez les betas "tardives" ou les premières "releases".
+**Règle 2** : Si vous n'êtes pas développeur, n'installez pas les releases alpha ni les premières beta. Attendez les betas "tardives" ou les premières "releases".
+**Règle 3**  : Au sein d'un même palier, placez vous toujours sur la dernière version du palier.
 
 
 
