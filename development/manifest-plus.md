@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T05:11:33.693Z
+date: 2020-12-02T05:15:21.804Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -204,6 +204,8 @@ In addition to the extra fields in the `authors` array, the following are added 
     {
       "name": "module_name",
       "type": "module",
+      
+      /* versionMin/Max: If defined, this is the range of the other package's versions in which the conflict manifests */
       "versionMin": "version number in x.y.z format",
       "versionMax": "version number in x.y.z format"
     }
@@ -225,7 +227,7 @@ Avoid putting large text on the cover image, it should showcase the package rath
 Currently used on the [Forge's Bazaar](https://forge-vtt.com/bazaar).
 
 #### Icon
-- Width: 400px
+- Width: 512px
 - Aspect Ratio: 1:1
 
 Fallback on the Bazaar if Cover is not defined.
