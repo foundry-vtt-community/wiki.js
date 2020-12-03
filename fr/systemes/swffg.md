@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2020-12-03T07:48:22.688Z
+date: 2020-12-03T07:55:17.316Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -32,10 +32,10 @@ Merci à toute la team **StarWarsFoundryVTT**
 
 Voici une liste des modules conseillés par la communauté Discord FR pour profiter au maximum du système Star Wars FFG:
 
-- Maestro pour la musique et certains automatismes
-- Multilevel token qui permet de déplacer les tokens entre map et bien d'autres choses
-- Parallaxia qui permet de faire de la parallaxe
-- Permission Viewer, petit mais puissant indique avec des couleurs les permissions de chaque item/table/objets
-- Pings pour déplacer les gens sur un ping ou encore montrer des choses sur la map
-- PopOut permet de sortir des fiches de ta fenêtre navigateur
-The Furnace gros module, à voir si tu en trouvera l'utilité
+- [Maestro](https://foundryvtt.com/packages/maestro/) - Pour la musique et certains automatismes
+- [Multilevel token](https://foundryvtt.com/packages/multilevel-tokens/) - Permet de déplacer les tokens entre map et bien d'autres choses encore
+- [Parallaxia](https://foundryvtt.com/packages/parallaxia/) - Permet de faire de la parallaxe
+- [Permission Viewer](https://foundryvtt.com/packages/permission_viewer/) - Petit mais puissant indique avec des couleurs les permissions de chaque item/table/objets
+- [Pings](https://foundryvtt.com/packages/pings/) - Permet déplacer les gens sur un ping ou encore montrer des choses sur la map
+- [PopOut](https://foundryvtt.com/packages/popout/) - Permet de sortir des fiches de ta fenêtre navigateur
+- [The Furnace](https://foundryvtt.com/packages/furnace/) - Gros module visant à améliorer la vie des Joueurs et MJ
