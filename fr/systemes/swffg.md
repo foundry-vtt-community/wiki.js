@@ -2,13 +2,13 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2020-12-03T07:55:17.316Z
+date: 2020-12-03T07:58:54.432Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
 ---
 
-# Star Wars de Fantasy Flight Games
+![logo SWFFG](https://gamersplane.com/images/logos/starwarsffg.jpg) 
 Ceci est une implémentation communautaire du jeu de rôle Star Wars de Fantasy Flight Games pour le programme Foundry Virtual Tabletop.
 
 ## Installation
