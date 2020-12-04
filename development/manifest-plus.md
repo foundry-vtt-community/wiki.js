@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-02T22:04:27.978Z
+date: 2020-12-04T22:15:12.567Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
