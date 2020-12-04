@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-12-04T06:21:51.022Z
+date: 2020-12-04T06:22:49.863Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -55,11 +55,10 @@ Créer ensuite les répertoires qui vont accueillir les dossiers et fichiers du 
 
 `sudo mkdir /home/pi/foundryvtt`
 `sudo mkdir /home/pi/foundrydata`
-`cd /home/pi`
 
 Installer le serveur, remplacer dans la 2ème commande ci dessous [<token-de-téléchargement-du-serveur>](fr/https://i.imgur.com/igtqAs9.jpg) par le lien copié sur son compte Foundry VTT dans Purchases Licenses. Garder les guillements !
 
-`cd foundryvtt`
+`cd /home/pi/foundryvtt`
 `sudo wget -O foundryvtt.zip "<token-de-téléchargement-du-serveur>"`
 `sudo unzip foundryvtt.zip`
 
