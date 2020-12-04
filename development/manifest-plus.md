@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-04T22:15:12.567Z
+date: 2020-12-04T22:44:42.015Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -19,7 +19,7 @@ Manifest+ does not replace the standard manifest, but enhances it. Most of the p
 
 ### Authors
 
-The Core manifest has two ways of defining the package Author. Either through the `author` field which expects a simple string, or through the more complex `authors` filed. We *highly* recommend including the `authors` field in your package as it provides much more flexibility.
+The Core manifest has two ways of defining the package Author. Either through the `author` field which expects a simple string, or through the more complex `authors` field. We *highly* recommend including the `authors` field in your package as it provides much more flexibility.
 
 > Currently while `authors` is a part of the standard manifest, Foundry does not actually utilize this field, and you should also include the `author` field until such a time as that changes.
 {.is-info}
