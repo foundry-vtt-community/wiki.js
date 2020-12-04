@@ -2,13 +2,13 @@
 title: Token Configuration
 description: 
 published: true
-date: 2020-09-23T01:32:27.071Z
+date: 2020-12-04T00:04:20.721Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:23:45.372Z
 ---
 
-First, an important distinction. There are two different kinds of token configuration windows. The first, opened directly from an actor sheet on the sidebar is the **default token configuration**, that is to say, how new tokens dragged on the scene will be initially created. Once on the scene, a specific token’s configuration can be **changed from the default**. The window to do so can either be opened by double right-clicking the token itself, or clicking the cogwheel in the token HUD.
+First, an important distinction. There are two different kinds of token configuration windows. The first, opened directly from an actor sheet on the sidebar is the **prototype token configuration**, that is to say, how new tokens dragged on the scene will be initially created for this specific actor. Once on the scene, a specific token’s configuration can be **changed from the default**. The window to do so can either be opened by double right-clicking the token itself, or clicking the cogwheel in the token HUD.
 
 In the token configuration screen, multiple tabs at the top let you access different settings for the token, whichever template you are editing (default or specific). The Update Token button is essentially a “save settings” button, which updates the token’s settings. The Assign Token button, only visible in the default token window, let’s you set a selected token’s specific token configuration become the default.
 
