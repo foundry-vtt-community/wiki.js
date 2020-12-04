@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-11-30T19:40:36.576Z
+date: 2020-12-04T06:21:51.022Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -53,9 +53,9 @@ Pour rappel et uniquement via VNC ou SSH : copier, puis sur dans le terminal de 
 
 Créer ensuite les répertoires qui vont accueillir les dossiers et fichiers du serveur Foundry VTT.
 
-`cd /home`
-`sudo mkdir /home/foundryvtt`
-`sudo mkdir /home/foundrydata`
+`sudo mkdir /home/pi/foundryvtt`
+`sudo mkdir /home/pi/foundrydata`
+`cd /home/pi`
 
 Installer le serveur, remplacer dans la 2ème commande ci dessous [<token-de-téléchargement-du-serveur>](fr/https://i.imgur.com/igtqAs9.jpg) par le lien copié sur son compte Foundry VTT dans Purchases Licenses. Garder les guillements !
 
@@ -65,7 +65,7 @@ Installer le serveur, remplacer dans la 2ème commande ci dessous [<token-de-té
 
 Lancer le serveur
 
-`node /home/foundryvtt/resources/app/main.js --dataPath=/home/foundrydata`
+`node /home/pi/foundryvtt/resources/app/main.js --dataPath=/home/pi/foundrydata`
 
 NE PAS FERMER LA FENÊTRE DU TERMINAL
 
@@ -80,7 +80,7 @@ Avant la fin du fichier `exit 0`
 Entrer le texte suivant et sauvegarder (Ctrl+X, puis O et Entrée)
 
 `# Foundry VTT server`
-`sudo node /home/foundryvtt/resources/app/main.js --dataPath=/home/foundrydata`
+`sudo node /home/pi/foundryvtt/resources/app/main.js --dataPath=/home/pi/foundrydata`
 
 ## 5ème ÉTAPE : SÉCURISER LE SERVEUR
 
