@@ -2,7 +2,7 @@
 title: Translations
 description: 
 published: true
-date: 2020-11-14T18:31:12.831Z
+date: 2020-12-04T22:38:15.970Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -19,6 +19,7 @@ dateCreated: 2020-09-23T00:25:06.218Z
       * [Portuguese (BR)](#portuguese-br)
       * [Russian (Foundry, D&amp;D5, Dungeon World)](#russian-foundry-dd5-dungeon-world)
       * [Spanish](#spanish)
+      * [Swedish](#swedish)
    * [Appendix](#appendix)
       * [Appendix A: Adding a Translation](#appendix-a-adding-a-translation)
       * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)
