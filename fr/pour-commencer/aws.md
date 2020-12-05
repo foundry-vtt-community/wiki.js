@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T15:34:52.930Z
+date: 2020-12-05T15:39:32.805Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -95,9 +95,13 @@ https://bucket-prolice-s3.s3.eu-west-3.amazonaws.com/Installation/modele-ec2-pro
 7. Remplissez tous les paramètres de la pile. La plupart d’entre-eux ont une description détaillée mais vous trouverez quelques explications complémentaires ci-dessous: 
 
 ![prolice-screen-aws-deploy-008.png](/images/prolice-screen-aws-deploy-008.png){.align-center}
-`- AdminUserPW: Ce script créé un compte Administrateur pour votre compte AWS, ce qui permet de ne pas utiliser systématique votre accès “root”. Ce paramètre sera le mot de passe de ce compte.` 
 
-`- FoundryDownloadLink: Ce paramètre nécessite un lien de téléchargement, que ce soit sur Patreon ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choississez de placer votre fichier FoundryVTT.zip sur Google. `
+- **AdminUserPW**: 
+Ce script créé un compte Administrateur pour votre compte AWS, ce qui permet de ne pas utiliser systématique votre accès “root”. Ce paramètre sera le mot de passe de ce compte. 
+
+- **FoundryDownloadLink**: 
+Ce paramètre nécessite un lien de téléchargement, que ce soit sur Patreon ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choississez de placer votre fichier FoundryVTT.zip sur Google.
+
 > N’oubliez pas de LE RETIRER après l’installation. 
 {.is-warning}
 
