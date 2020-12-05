@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T14:13:51.223Z
+date: 2020-12-05T14:29:59.994Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -14,7 +14,7 @@ dateCreated: 2020-12-05T13:54:41.441Z
 {.is-info}
 
 
-En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelques options supplémentaires pour rendre les choses plus facile sont incluses pour un coût minimal. 
+En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelques options supplémentaires pour rendre les choses plus faciles sont incluses pour un coût minimal. 
 Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options supplémentaires mais ce sera de l’ordre de quelques cents à 1€ par mois. Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en terme de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
 
 > Note: Utilisé cette option (S3) en connaissance de cause en ayant bien lu les tarifs AWS.
@@ -23,13 +23,14 @@ Une fois la période gratuite expirée le **Coût peut vraiment monter**.
 
 
 
-#### Options Supplémentaires:
+#### Options Supplémentaires :
 1. Sauvegarde automatique de votre instance EC2. 
 - a. Ces sauvegardes sont appelées “Snapshots”, avec le modèle vous pourrez le programmer de manière quotidienne ou hebdomadaire. 
 - b. AWS garde les 5 derniers “Snapshots”, et supprime le plus vieux chaque fois qu’un nouveau est créé. 
 - c. https://aws.amazon.com/ebs/pricing/
-2. IP publique Dédiée (Elastic IP). a. Permet d’avoir une IP fixe pour votre instance. Chaque fois que vous coupé et redémmaré votre instance. b. Le coût ne sera activé que lorsque vous réservé une IP que vous n’utilisé pas. Il faut que cette IP soit affectée à un server actif. c. https://aws.amazon.com/premiumsupport/knowledge-center/elastic-ip-charges/
-3. Instance de type “Large”. a. Par défaut, le modèle utilise un t2.micro qui est éligibe à la gratuité sur AWS. Je propose également une option pour avoir une instance plus large. b. https://aws.amazon.com/ec2/pricing/on-demand/
+2. IP publique Dédiée (Elastic IP). a. Permet d’avoir une IP fixe pour votre instance. Chaque fois que vous coupé et redémarré votre instance. b. Le coût ne sera activé que lorsque vous réservé une IP que vous n’utilisé pas. Il faut que cette IP soit affectée à un server actif. c. https://aws.amazon.com/premiumsupport/knowledge-center/elastic-ip-charges/
+3. Instance de type “Large”. 
+- a. Par défaut, le modèle utilise un t2.micro qui est éligible à la gratuité sur AWS. Je propose également une option pour avoir une instance plus large. b. https://aws.amazon.com/ec2/pricing/on-demand/
 
 ## Détails du Modèle :
 Actuellement le modèle ne fonctionne qu’avec les régions suivantes:
@@ -46,7 +47,9 @@ Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapsho
 ## Avant de commencer:
 
 1. Se connecter à AWS, et dans le coin en haut à droite sur la page principale vous devriez voir votre emplacement (localisation).
-2. Cliquez sur la liste déroulante. Il y a 6 régions disponible pour le déploiement. Sélectionnez en une. 
+![prolice-screen-aws-deploy-001.png](/images/prolice-screen-aws-deploy-001.png)
+![prolice-screen-aws-deploy-002.png](/images/prolice-screen-aws-deploy-002.png)
+2. Cliquez sur la liste déroulante. Il y a 6 régions disponible pour le déploiement. Sélectionnez-en une. 
 
 a. US East (N. Virginia) us-east-1
 b. US West (Oregon) us-west-2
@@ -63,19 +66,25 @@ La seule étape manuelle sur AWS consiste à créer une paire/clé SSH, si vous 
 pouvez passer cette étape, et passer à la ligne suivante. 
 
 1. Connecter vous à AWS, et accéder à EC2 dans le tableau de bord. Pour trouver le service EC2, rendez-vous dans le menu “services” en haut à gauche de la page. C’est le premier service en- dessous de Compute.
+![prolice-screen-aws-deploy-003.png](/images/prolice-screen-aws-deploy-003.png)
 2. Dans le menu de gauche, cliquez sur l’option “Paires de clés”.
-3. Dans le coin supérieure droit cliquez sur “Create key pair”. 4. Entrez un nom pour votre clé. 5. Sélectionnez pem ou ppk (si vous ne maitrisez pas ce type de fichier, choississez pem car vous pourrez toujours le convertir facilement en ppk plus tard.
+![prolice-screen-aws-deploy-004.png](/images/prolice-screen-aws-deploy-004.png)
+3. Dans le coin supérieure droit cliquez sur “Créer Paires de clés”. 
+4. Entrez un nom pour votre clé. 
+5. Sélectionnez pem ou ppk (si vous ne maitrisez pas ce type de fichier, choississez pem car vous pourrez toujours le convertir facilement en ppk plus tard.
 6. La clé/pair devrait se télécharger automatiquement. 
 
-***ATTENTION GARDEZ CE FICHIER, C’EST VOTRE SEULE VOIE D’ENTREE SUR VOTRE SERVEUR ...***
-~*Même amazon ne pourra pas vous en produire une nouvelle. *~
+> ***ATTENTION GARDEZ CE FICHIER, C’EST VOTRE SEULE VOIE D’ENTRÉE SUR VOTRE SERVEUR ...***
+> *Même amazon ne pourra pas vous en produire une nouvelle.*
+{.is-danger}
+
 
 ## 2ème Etape:
 Cette étape permettra de déployer le serveur Foundry VTT dans son entièreté
 1. Téléchargez “modele-ec2-prolice” avec le lien ci-dessous
 https://bucket-prolice-s3.s3.eu-west-3.amazonaws.com/Installation/modele-ec2-prolice
-2. Si vous n’êtes pas encore connecté à AWS, faites-le maintenant. 3. Sur la page principale d’AWS, chercher “CloudFormation” et cliquez dessus dans les résultats de
-recherche.
+2. Si vous n’êtes pas encore connecté à AWS, faites-le maintenant. 
+3. Sur la page principale d’AWS, chercher “CloudFormation” et cliquez dessus dans les résultats de recherche.
 4. A partir du tableau de bord de CloudFormation cliquez sur le bouton “Créer un pile”.
 5. Sur la page suivante activez les options “Le modèle est prêt” et “Charger un fichier du modèle”,
 6. Choississez “Charger un fichier de modèle”, puis appuyez sur “Suivant”.
