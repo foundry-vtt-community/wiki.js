@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T15:47:00.845Z
+date: 2020-12-05T16:19:57.309Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -29,9 +29,13 @@ Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options 
 - a. Ces sauvegardes sont appelées “Snapshots”, avec le modèle vous pourrez le programmer de manière quotidienne ou hebdomadaire. 
 - b. AWS garde les 5 derniers “Snapshots”, et supprime le plus vieux chaque fois qu’un nouveau est créé. 
 - c. https://aws.amazon.com/ebs/pricing/
-2. IP publique Dédiée (Elastic IP). a. Permet d’avoir une IP fixe pour votre instance. Chaque fois que vous coupé et redémarré votre instance. b. Le coût ne sera activé que lorsque vous réservé une IP que vous n’utilisé pas. Il faut que cette IP soit affectée à un server actif. c. https://aws.amazon.com/premiumsupport/knowledge-center/elastic-ip-charges/
+2. IP publique Dédiée (Elastic IP). 
+- a. Permet d’avoir une IP fixe pour votre instance. Chaque fois que vous coupé et redémarré votre instance. 
+- b. Le coût ne sera activé que lorsque vous réservé une IP que vous n’utilisé pas. Il faut que cette IP soit affectée à un server actif. 
+- c. https://aws.amazon.com/premiumsupport/knowledge-center/elastic-ip-charges/
 3. Instance de type “Large”. 
-- a. Par défaut, le modèle utilise un t2.micro qui est éligible à la gratuité sur AWS. Je propose également une option pour avoir une instance plus large. b. https://aws.amazon.com/ec2/pricing/on-demand/
+- a. Par défaut, le modèle utilise un t2.micro qui est éligible à la gratuité sur AWS. Je propose également une option pour avoir une instance plus large. 
+- b. https://aws.amazon.com/ec2/pricing/on-demand/
 
 ## Détails du Modèle :
 Actuellement le modèle ne fonctionne qu’avec les régions suivantes:
