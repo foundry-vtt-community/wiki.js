@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T14:46:36.672Z
+date: 2020-12-05T15:15:18.468Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -18,8 +18,9 @@ En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelq
 Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options supplémentaires mais ce sera de l’ordre de quelques cents à 1€ par mois. Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
 
 > Note: Utilisé cette option (S3) en connaissance de cause en ayant bien lu les tarifs AWS.
-Une fois la période gratuite expirée le **Coût peut vraiment monter**. 
-{.is-info}
+> Une fois la période gratuite expirée le **Coût peut vraiment monter**. 
+{.is-warning}
+
 
 
 
