@@ -2,7 +2,7 @@
 title: Installation sous Linux
 description: 
 published: true
-date: 2020-11-30T19:35:13.243Z
+date: 2020-12-05T18:00:57.943Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
@@ -18,7 +18,7 @@ L'utilisation de ces derniers et de Linux en général, nécessite de comprendre
 
 - Pour utiliser FoundryVTT sous Linux via PM2, ce [tutoriel est parfait](https://foundryvtt.wiki/en/setup/Ubuntu-VM).
 
-- Pour utiliser FoundryVTT sur des serveurs AWS d'Amazon, nous vous invitons à suivre le guide [Bryan's AWS Setup Guide For FoundryVTT](https://github.com/bryancasler/Bryans-AWS-Setup-Guide-for-FoundryVTT)
+- Pour utiliser FoundryVTT sur des serveurs AWS d'Amazon, nous vous invitons à suivre le guide [Bryan's AWS Setup Guide For FoundryVTT](https://foundryvtt.wiki/en/setup/hosting/Self-Hosting-on-AWS)
 
 - Enfin Pour utiliser FoundryVTT sur un ***Raspberry-Pi***, le [Guide d'Installation sous Raspberry-Pi de Neural Noise](https://foundryvtt.wiki/fr/pour-commencer/raspberry) est à votre disposition sur le wiki.
 
