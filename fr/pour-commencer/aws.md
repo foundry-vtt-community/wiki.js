@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T15:39:32.805Z
+date: 2020-12-05T15:41:27.850Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -52,13 +52,13 @@ Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapsho
 ![prolice-screen-aws-deploy-002.png](/images/prolice-screen-aws-deploy-002.png){.align-center}
 2. Cliquez sur la liste déroulante. Il y a 6 régions disponible pour le déploiement. Sélectionnez-en une. 
 
-a. US East (N. Virginia) us-east-1
-b. US West (Oregon) us-west-2
-c. Europe (Ireland) eu-west-1
-d. Europe (Paris) eu-west-3
-e. Europe (Frankfurt) eu-central-1
-f. South America (São Paulo) sa-east-1
-g. Asia Pacific (Sydney) ap-southeast-2
+- a. US East (N. Virginia) us-east-1
+- b. US West (Oregon) us-west-2
+- c. Europe (Ireland) eu-west-1
+- d. Europe (Paris) eu-west-3
+- e. Europe (Frankfurt) eu-central-1
+- f. South America (São Paulo) sa-east-1
+- g. Asia Pacific (Sydney) ap-southeast-2
 
 3. Prenez celle qui est la plus proche de vous. Mais si vous n’êtes pas proche d’une de ces régions ça devrait fonctionner aussi avec une légère latence. Vous pouvez toujours ajouter une instance dans votre région par la suite.
 
