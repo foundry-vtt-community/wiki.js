@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T15:41:27.850Z
+date: 2020-12-05T15:47:00.845Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -45,7 +45,7 @@ Actuellement le modèle ne fonctionne qu’avec les régions suivantes:
 
 Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapshots” se font tous les jours à 12h00 GMT si vous choississez “Quotidien”, et chaque lundi à 12h00 GMT si vous choississez hebdommadaire. Par défaut le port 22 est le seul port ouvert pour les autres intances dans le même VPC. Si vous voulez vous connecter via une console SSH (Putty, Ssh windows, ...). 
 
-## Avant de commencer:
+## Avant de commencer :
 
 1. Se connecter à AWS, et dans le coin en haut à droite sur la page principale vous devriez voir votre emplacement (localisation).
 ![prolice-screen-aws-deploy-001.png](/images/prolice-screen-aws-deploy-001.png){.align-center}
@@ -62,7 +62,7 @@ Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapsho
 
 3. Prenez celle qui est la plus proche de vous. Mais si vous n’êtes pas proche d’une de ces régions ça devrait fonctionner aussi avec une légère latence. Vous pouvez toujours ajouter une instance dans votre région par la suite.
 
-## 1ère Etape:
+## 1ère Etape :
 La seule étape manuelle sur AWS consiste à créer une paire/clé SSH, si vous en avez déjà une vous
 pouvez passer cette étape, et passer à la ligne suivante. 
 
@@ -80,7 +80,7 @@ pouvez passer cette étape, et passer à la ligne suivante.
 {.is-danger}
 
 
-## 2ème Etape:
+## 2ème Etape :
 Cette étape permettra de déployer le serveur Foundry VTT dans son entièreté
 1. Téléchargez “modele-ec2-prolice” avec le lien ci-dessous
 https://bucket-prolice-s3.s3.eu-west-3.amazonaws.com/Installation/modele-ec2-prolice
@@ -124,7 +124,7 @@ Copier ce lien dans le bon paramètre de la pile.
 11. Faites le fou et cliquez sur le picto rafraîchir et priez pour qu’il n’y ait pas d’erreur. 
 12. Le script se lance, puis effectue un redémarrage. Ensuite, laissez lui un peu de temps pour éxécuter le script de déploiement avant de continuer (environs 5 minutes). 
 
-## 3ème Etape:
+## 3ème Etape :
 > Félicitations ! Si vous avez atteint cette étape c’est que vous avez votre propre serveur FoundryVTT avec un lien au stockage S3. 
 {.is-success}
 
