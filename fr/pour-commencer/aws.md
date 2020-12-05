@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T19:04:53.466Z
+date: 2020-12-05T19:05:13.016Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -162,5 +162,5 @@ Vous devrez renseigner une carte de crédit même sur le niveau gratuit, la cart
 Après la confirmation par e-amil le compte est actif et vous pourrez vous connecter.
 
 # Note d'administration
-Ceci est un tutorial vivant, n'hésité pas à remonter les problèmes que vous rencontrez pendant votre installation/déploiement afin d'adapter le texte.
+Ceci est un tutorial vivant, n'hésitez pas à remonter les problèmes que vous rencontrez pendant votre installation/déploiement afin d'adapter le texte.
 Sur la communauté [discord francophone](https://discord.gg/pPSDNJk)
