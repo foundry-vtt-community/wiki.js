@@ -2,13 +2,13 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T16:19:57.309Z
+date: 2020-12-05T17:07:12.922Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
 ---
 
-# Déploiement automatique de Foundry VTT
+# Déploiement automatique de Foundry VTT (10-40 min)
 
 > Ce guide est dédié aux utilisateurs novices qui veulent déployer un serveur de Foundry VTT sur AWS en utilisant “CloudFormation”. Le processus prend moins de 30 minutes après lesquelles vous aurez un serveur Foundry VTT complétement fonctionnel. 
 {.is-info}
