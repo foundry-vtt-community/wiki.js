@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-11-26T16:28:21.935Z
+date: 2020-12-05T05:25:44.599Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -50,11 +50,15 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - **VTTA Tokenizer**
 
 ## Les systèmes en français
-- [Core-system](/fr/systemes/core-system)
 - [Appel de Cthulhu 7e](/fr/systemes/fr-adc)
+- [Brigandyne](https://foundryvtt.wiki/fr/systemes/brigandyne)
 - [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
+- [Core-system](/fr/systemes/core-system)
+- [Cthulhu Hack](https://foundryvtt.wiki/fr/systemes/Chthulhu-Hack)
 - [Dungeons and Dragons 5e](/fr/systemes/fr-dd5)
     - [Héros & Dragons](/fr/systemes/fr-hnd) (Dépendance: nécessite DD5)
+- [Free League](https://foundryvtt.wiki/fr/systemes/free-league)
+- [Legende les Cinq Anneaux 5e](https://foundryvtt.wiki/fr/systemes/l5r)
 - [Pathfinder 1re édition](/fr/systemes/PF1)
 - [Pathfinder Seconde édition](/fr/systemes/PF2)
 - [Rêve de Dragon](/fr/systemes/rdd)
@@ -63,6 +67,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - [Starfinder](/fr/systemes/starfinder)
 - [Starwars FFG](/fr/systemes/swffg)
 - [Warhammer 4e](/fr/systemes/fr-wfrp4e)
+- [World of Darkness](https://foundryvtt.wiki/fr/systemes/wod)
 
 ## Démos publiques de Foundry
 Vous trouverez ci-dessous la démo officielle de la VTT Foundry, ainsi que les démos et systèmes maintenus par la communauté.
