@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T19:05:13.016Z
+date: 2020-12-05T21:04:59.564Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -54,7 +54,7 @@ Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapsho
 1. Se connecter à AWS, et dans le coin en haut à droite sur la page principale vous devriez voir votre emplacement (localisation).
 ![prolice-screen-aws-deploy-001.png](/images/prolice-screen-aws-deploy-001.png){.align-center}
 ![prolice-screen-aws-deploy-002.png](/images/prolice-screen-aws-deploy-002.png){.align-center}
-2. Cliquez sur la liste déroulante. Il y a 6 régions disponible pour le déploiement. Sélectionnez-en une. 
+2. Cliquez sur la liste déroulante. Il y a 7 régions disponibles pour le déploiement. Sélectionnez-en une. 
 
 - a. US East (N. Virginia) us-east-1
 - b. US West (Oregon) us-west-2
@@ -76,7 +76,7 @@ pouvez passer cette étape, et passer à la ligne suivante.
 ![prolice-screen-aws-deploy-004.png](/images/prolice-screen-aws-deploy-004.png){.align-center}
 3. Dans le coin supérieure droit cliquez sur “Créer Paires de clés”. 
 4. Entrez un nom pour votre clé. 
-5. Sélectionnez pem ou ppk (si vous ne maitrisez pas ce type de fichier, choississez pem car vous pourrez toujours le convertir facilement en ppk plus tard.
+5. Sélectionnez pem ou ppk (si vous ne maitrisez pas ce type de fichier, choisissez pem car vous pourrez toujours le convertir facilement en ppk plus tard.
 6. La clé/pair devrait se télécharger automatiquement. 
 
 > ***ATTENTION GARDEZ CE FICHIER, C’EST VOTRE SEULE VOIE D’ENTRÉE SUR VOTRE SERVEUR ...***
