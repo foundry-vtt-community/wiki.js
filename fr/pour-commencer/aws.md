@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T14:29:59.994Z
+date: 2020-12-05T14:43:14.103Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -47,8 +47,8 @@ Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapsho
 ## Avant de commencer:
 
 1. Se connecter à AWS, et dans le coin en haut à droite sur la page principale vous devriez voir votre emplacement (localisation).
-![prolice-screen-aws-deploy-001.png](/images/prolice-screen-aws-deploy-001.png)
-![prolice-screen-aws-deploy-002.png](/images/prolice-screen-aws-deploy-002.png)
+![prolice-screen-aws-deploy-001.png](/images/prolice-screen-aws-deploy-001.png){.align-center}
+![prolice-screen-aws-deploy-002.png](/images/prolice-screen-aws-deploy-002.png){.align-center}
 2. Cliquez sur la liste déroulante. Il y a 6 régions disponible pour le déploiement. Sélectionnez-en une. 
 
 a. US East (N. Virginia) us-east-1
@@ -66,9 +66,9 @@ La seule étape manuelle sur AWS consiste à créer une paire/clé SSH, si vous 
 pouvez passer cette étape, et passer à la ligne suivante. 
 
 1. Connecter vous à AWS, et accéder à EC2 dans le tableau de bord. Pour trouver le service EC2, rendez-vous dans le menu “services” en haut à gauche de la page. C’est le premier service en- dessous de Compute.
-![prolice-screen-aws-deploy-003.png](/images/prolice-screen-aws-deploy-003.png)
+![prolice-screen-aws-deploy-003.png](/images/prolice-screen-aws-deploy-003.png){.align-center}
 2. Dans le menu de gauche, cliquez sur l’option “Paires de clés”.
-![prolice-screen-aws-deploy-004.png](/images/prolice-screen-aws-deploy-004.png)
+![prolice-screen-aws-deploy-004.png](/images/prolice-screen-aws-deploy-004.png){.align-center}
 3. Dans le coin supérieure droit cliquez sur “Créer Paires de clés”. 
 4. Entrez un nom pour votre clé. 
 5. Sélectionnez pem ou ppk (si vous ne maitrisez pas ce type de fichier, choississez pem car vous pourrez toujours le convertir facilement en ppk plus tard.
@@ -85,31 +85,45 @@ Cette étape permettra de déployer le serveur Foundry VTT dans son entièreté
 https://bucket-prolice-s3.s3.eu-west-3.amazonaws.com/Installation/modele-ec2-prolice
 2. Si vous n’êtes pas encore connecté à AWS, faites-le maintenant. 
 3. Sur la page principale d’AWS, chercher “CloudFormation” et cliquez dessus dans les résultats de recherche.
+![prolice-screen-aws-deploy-005.png](/images/prolice-screen-aws-deploy-005.png){.align-center}
 4. A partir du tableau de bord de CloudFormation cliquez sur le bouton “Créer un pile”.
+![prolice-screen-aws-deploy-005.png](/images/prolice-screen-aws-deploy-006.png){.align-center}
 5. Sur la page suivante activez les options “Le modèle est prêt” et “Charger un fichier du modèle”,
-6. Choississez “Charger un fichier de modèle”, puis appuyez sur “Suivant”.
-7. Remplissez tous les paramètres de la pile. La plupart d’entre-eux ont une description détaillée mais vous trouverez quelques explications complémentaires ci-dessous: The Foundry server screen should load, and you will then need to enter your license key. 
+![prolice-screen-aws-deploy-007.png](/images/prolice-screen-aws-deploy-007.png){.align-center}
+6. Choisissez “Charger un fichier de modèle”, puis appuyez sur “Suivant”.
+7. Remplissez tous les paramètres de la pile. La plupart d’entre-eux ont une description détaillée mais vous trouverez quelques explications complémentaires ci-dessous: 
 
-AdminUserPW: Ce script créé un compte Administrateur pour votre compte AWS, ce qui permet de ne pas
-utiliser systématique votre accès “root”. Ce paramètre sera le mot de passe de ce compte. FoundryDownloadLink: Ce paramètre nécessite un lien de téléchargement, que ce soit sur Patreon ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choississez de placer votre fichier FoundryVTT.zip sur Google, n’oubliez pas de LE RETIRER après l’installation. 
+![prolice-screen-aws-deploy-008.png](/images/prolice-screen-aws-deploy-008.png){.align-center}
+`- AdminUserPW: Ce script créé un compte Administrateur pour votre compte AWS, ce qui permet de ne pas utiliser systématique votre accès “root”. Ce paramètre sera le mot de passe de ce compte.` 
+
+FoundryDownloadLink: Ce paramètre nécessite un lien de téléchargement, que ce soit sur Patreon ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choississez de placer votre fichier FoundryVTT.zip sur Google. 
+> N’oubliez pas de LE RETIRER après l’installation. 
+{.is-warning}
+
 
 ### Guide pour le lien Patreon:
 Rendez-vous sur votre page patreon et récupérez le lien pour la version Linux de FoundryVTT, cela
 devrait ressembler à ceci:
-https://foundryvtt.s3-us-west-2.amazonaws.com/releases/[AccessKey]/FoundryVirtualTabletop-linux- x64.zip
+https://foundryvtt.s3-us-west-2.amazonaws.com/releases/[AccessKey]/FoundryVirtualTabletop-linux-x64.zip
 Copier ce lien dans le bon paramètre de la pile. 
 
 ### Passez de FoundryVTT à Google Drive:
-1. Télécharger l’installation Linux .zip de FoundryVTT sur https://foundryvtt.com/
-2. Importer le fichier zip sur Google Drive. 
-3. Bouton droit sur le fichier, et “Obtenir le lien”. 
-4. Cliquez sur “Copier le lien” et coller le dans le paramètre de la pile.
-5. Appuyez sur “Suivant” 
-6. Appuyez encore sur “Suivant”. 
-7. Descendez au bas de la page pour accepter le texte légal et puis “Créer la pile” 11.Faites le fou et cliquez sur le picto rafraîchir et priez pour qu’il n’y ait pas d’erreur. 12.Le script se lance, puis effectue un redémarrage. Ensuite, laissez lui un peu de temps pour éxécuter le script de déploiement avant de continuer (environs 5 minutes). 
+- a. Télécharger l’installation Linux .zip de FoundryVTT sur https://foundryvtt.com/
+- b. Importer le fichier zip sur Google Drive. 
+- c. Bouton droit sur le fichier, et “Obtenir le lien”. 
+- d. Cliquez sur “Copier le lien” et coller le dans le paramètre de la pile.
+
+8. Appuyez sur “Suivant” 
+9. Appuyez encore sur “Suivant”. 
+10. Descendez au bas de la page pour accepter le texte légal et puis “Créer la pile".
+11. Faites le fou et cliquez sur le picto rafraîchir et priez pour qu’il n’y ait pas d’erreur. 
+12. Le script se lance, puis effectue un redémarrage. Ensuite, laissez lui un peu de temps pour éxécuter le script de déploiement avant de continuer (environs 5 minutes). 
 
 ## 3ème Etape:
-Félicitations ! Si vous avez atteint cette étape c’est que vous avez votre propre serveur FoundryVTT avec un lien au stockage S3. Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AWS et vous connecter. 
+> Félicitations ! Si vous avez atteint cette étape c’est que vous avez votre propre serveur FoundryVTT avec un lien au stockage S3. 
+{.is-success}
+
+Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AWS et vous connecter: 
 1. Rendez-vous sur le tableau de bord EC2, pour ce faire cliquez sur Service en haut à gauche de la page principale et recherchez EC2
 2. Sur la page principale, cliquez sur “Intances en cours d’éxécution”.
 3. Vous devriez voir apparaître dans la des instances, une instance nommée “FoundryServer”. A la droite du nom vous trouverez les colonnes “DNS IPv4 publique” & “Adresse IPv4 publique”. Copiez une des deux valeurs. 
