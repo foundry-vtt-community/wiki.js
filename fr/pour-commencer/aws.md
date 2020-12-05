@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T17:07:12.922Z
+date: 2020-12-05T17:33:48.683Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -143,4 +143,20 @@ Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AW
 6. Profitez de FoundryVTT et de toutes ses possibilités. 
 > NOTE IMPORTANTE: Renseignez-vous bien sur AWS car le cloud n’est jamais sûr !!
 {.is-danger}
+
+# Notes complémentaires
+
+## Création d'un compte AWS
+
+Pour accéder aux différentes possibilités expliquées dans cette page, il faut au préalable créer un compte AWS.
+
+Pour ce faire rendez-vous sur https://portal.aws.amazon.com/billing/signup#/start
+et suivez les instructions de création:
+
+![prolice-screen-aws-deploy-011.png](/images/prolice-screen-aws-deploy-011.png){.align-center}
+![prolice-screen-aws-deploy-012.png](/images/prolice-screen-aws-deploy-012.png){.align-center}
+
+Vous devrez renseigner une carte de crédit même sur le niveau gratuit, la carte sera testée avec un débit de 1 USD qui vous sera crédité quelques jours plus tard.
+
+Après la confirmation par e-amil le compte est actif et vous pourrez vous connecter.
 
