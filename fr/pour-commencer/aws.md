@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T17:33:48.683Z
+date: 2020-12-05T18:35:40.850Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -126,6 +126,7 @@ Copier ce lien dans le bon paramètre de la pile.
 9. Appuyez encore sur “Suivant”. 
 10. Descendez au bas de la page pour accepter le texte légal et puis “Créer la pile".
 11. Faites le fou et cliquez sur le picto rafraîchir et priez pour qu’il n’y ait pas d’erreur. 
+![prolice-screen-aws-deploy-013.png](/images/prolice-screen-aws-deploy-013.png){.align-center}
 12. Le script se lance, puis effectue un redémarrage. Ensuite, laissez lui un peu de temps pour éxécuter le script de déploiement avant de continuer (environs 5 minutes). 
 
 ## 3ème Etape :
