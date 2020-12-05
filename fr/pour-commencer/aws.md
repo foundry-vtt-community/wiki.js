@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T14:43:14.103Z
+date: 2020-12-05T14:46:36.672Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -15,7 +15,7 @@ dateCreated: 2020-12-05T13:54:41.441Z
 
 
 En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelques options supplémentaires pour rendre les choses plus faciles sont incluses pour un coût minimal. 
-Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options supplémentaires mais ce sera de l’ordre de quelques cents à 1€ par mois. Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en terme de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
+Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options supplémentaires mais ce sera de l’ordre de quelques cents à 1€ par mois. Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
 
 > Note: Utilisé cette option (S3) en connaissance de cause en ayant bien lu les tarifs AWS.
 Une fois la période gratuite expirée le **Coût peut vraiment monter**. 
@@ -125,10 +125,13 @@ Copier ce lien dans le bon paramètre de la pile.
 
 Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AWS et vous connecter: 
 1. Rendez-vous sur le tableau de bord EC2, pour ce faire cliquez sur Service en haut à gauche de la page principale et recherchez EC2
-2. Sur la page principale, cliquez sur “Intances en cours d’éxécution”.
+2. Sur la page principale, cliquez sur “Instances en cours d’exécution”.
+![prolice-screen-aws-deploy-009.png](/images/prolice-screen-aws-deploy-009.png){.align-center}
 3. Vous devriez voir apparaître dans la des instances, une instance nommée “FoundryServer”. A la droite du nom vous trouverez les colonnes “DNS IPv4 publique” & “Adresse IPv4 publique”. Copiez une des deux valeurs. 
 4. Collez cette valeur dans votre navigateur internet et ajoutez “:30000” à la fin (sans les guillemets).
-5. FoundryVTT vous demandera d’introduire votre numéro de licence. 6. Profitez de FoundryVTT et de toutes ses possibilités. 
-> NOTE IMPORTANTE: Renseignez vous bien sur AWS car le cloud n’est jamais sûr !!
+![prolice-screen-aws-deploy-010.png](/images/prolice-screen-aws-deploy-010.png){.align-center}
+5. FoundryVTT vous demandera d’introduire votre numéro de licence. 
+6. Profitez de FoundryVTT et de toutes ses possibilités. 
+> NOTE IMPORTANTE: Renseignez-vous bien sur AWS car le cloud n’est jamais sûr !!
 {.is-danger}
 
