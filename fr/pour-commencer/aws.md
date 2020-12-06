@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T10:46:50.502Z
+date: 2020-12-06T10:59:14.294Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -145,7 +145,47 @@ Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AW
 > NOTE IMPORTANTE: Renseignez-vous bien sur AWS car le cloud n’est jamais sûr !!
 {.is-danger}
 
-# Problèmes pouvant être rencontrés
+# Quelque chose ne s'est pas bien passé ?
+
+Testez foundryvtt
+```
+node ~/foundry/resources/app/main.js --dataPath=/foundrydata 
+```
+Vous devriez voir apparaître ceci ou quelque chose de similaire:
+```
+FoundryVTT | 2020-12-06 10:56:09 | [info] Foundry Virtual Tabletop - Version 0.7.8
+FoundryVTT | 2020-12-06 10:56:09 | [info] Running on Node.js - Version 14.15.1
+FoundryVTT | 2020-12-06 10:56:09 | [info] Loading data from user directory - /home/ec2-user/foundrydata
+FoundryVTT | 2020-12-06 10:56:09 | [info] Application Options:
+{
+  "port": 30000,
+  "upnp": true,
+  "fullscreen": false,
+  "hostname": null,
+  "routePrefix": null,
+  "sslCert": null,
+  "sslKey": null,
+  "awsConfig": "******/AWS.json",
+  "dataPath": "/home/ec2-user/foundrydata",
+  "proxySSL": false,
+  "proxyPort": null,
+  "minifyStaticFiles": true,
+  "updateChannel": "release",
+  "language": "fr.fr-FR",
+  "world": null,
+  "serviceConfig": null,
+  "isElectron": false,
+  "isNode": true,
+  "isSSL": false,
+  "demo": false,
+  "noupdate": false,
+  "adminKey": "****************"
+}
+FoundryVTT | 2020-12-06 10:56:09 | [info] License verification succeeded
+FoundryVTT | 2020-12-06 10:56:09 | [info] Configured AWS credentials using /home/ec2-user/foundrydata/Config/AWS.json
+FoundryVTT | 2020-12-06 10:56:09 | [info] Requesting UPnP port forwarding to destination 30000
+FoundryVTT | 2020-12-06 10:56:09 | [info] Server started and listening on port 30000
+```
 
 ### Dossier ~/foundry/\<vide\>
 *Diagnostique*
