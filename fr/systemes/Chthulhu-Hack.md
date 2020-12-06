@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2020-12-06T15:37:32.957Z
+date: 2020-12-06T15:50:40.397Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -24,7 +24,6 @@ Lorsqu’un investigateur tente de découvrir un indice, ou se bat pour sa propr
 Le **MJ** prépare et raconte l’histoire. Il décrit le monde, les PNJ, les péripéties et fournit des détails lorsque les investigateurs utilisent leurs sens ou demandent des précisions sur le contexte, la temporalité, les PNJ, le décor… tout ce qui ne relève pas de leurs personnages.
 Le **MJ** écoute les joueurs et collabore avec eux pour créer une histoire palpitante, souvent en s’appuyant sur l’imagination fertile des joueurs et parfois même en retournant contre eux les idées et les craintes verbalisées pour leurs personnages.
 
-
 ### installer le soft et le système
 - avoir foundryVTT d'installé
 - avoir le système Cthulhu Hack d'installé
@@ -33,6 +32,8 @@ voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 
 
 ## Ce que propose le système de Cthulhu Hack VF
+Système créer par **Kristov**
+
 **Fonctionnalités** : 
 - Fiche de personnage avec ajout/modification/suppression des objets et des capacités spéciales
 - Jet de sauvegarde avec avantage/désavantage
@@ -44,3 +45,12 @@ voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 - Adrénaline : option, avec affichage sous le portrait
 - Opposant : création, ajout des attaques sous forme d'Item
 - Capacité : gestion du nombre d'utilisations et de la date de dernier usage
+
+## Notes de Mise à Jour
+**La dernière version sur gitlab :** 5 Décembre 2020
+* Possibilité d'avoir un bonus ou malus sur le jet de dés
+* Fix de l'avantage/désavantage
+* Ajout d'un champ optionnel qui affiche les cas d'avantage en fonction des capacités spéciales : +X pour un bonus, -X pour un malus
+
+**La dernière version sur gitlab 0.1.5 :** 6 Décembre 2020
+* Affichage fixé pour les bonus/malus. C'est affiché uniquement dans le cas des jets de Sauvegarde.
