@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T14:51:37.154Z
+date: 2020-12-06T18:49:21.147Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -100,6 +100,16 @@ https://bucket-prolice-s3.s3.eu-west-3.amazonaws.com/Installation/modele-ec2-pro
 
 - **AdminUserPW**: 
 Ce script crée un compte Administrateur pour votre compte AWS, ce qui permet de ne pas utiliser systématiquement votre accès “root”. Ce paramètre sera le mot de passe de ce compte. 
+
+> Attention, il faut que votre mot de passe administrateur soit fort. Au minimum: 
+a. entre 8 et 128 caractères
+b. au moins une minuscule
+c. au moins une majuscule
+d. au moins un caractère spécial
+e. au moins un chiffre
+{.is-warning}
+
+Veillez à produire votre mot de passe avec les règles ci-dessus annoncées pour éviter un "rollback" de la pile avant la fin d'installation. Ce qui vous obligera à tout recommencer ;-)
 
 - **FoundryDownloadLink**: 
 Ce paramètre nécessite un lien de téléchargement, que ce soit sur Patreon ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choississez de placer votre fichier FoundryVTT.zip sur Google  ...
