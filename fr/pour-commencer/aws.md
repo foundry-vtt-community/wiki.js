@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-05T22:42:08.601Z
+date: 2020-12-06T08:21:46.322Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -119,8 +119,10 @@ Copiez ce lien dans le bon paramètre de la pile.
 ### Passer de FoundryVTT à Google Drive:
 - a. Télécharger l’installation Linux .zip de FoundryVTT sur https://foundryvtt.com/
 - b. Importer le fichier zip sur Google Drive. 
-- c. Bouton droit sur le fichier, et “Obtenir le lien”. 
-- d. Cliquer sur “Copier le lien” et le coller dans le paramètre de la pile.
+- c. Assurez-vous que le lien est n'est pas en mode limité.
+![prolice-screen-aws-deploy-015.png](/images/prolice-screen-aws-deploy-015.png){.align-center}
+- d. Bouton droit sur le fichier, et “Obtenir le lien”. 
+- e. Cliquer sur “Copier le lien” et le coller dans le paramètre de la pile.
 
 8. Appuyez sur “Suivant” 
 9. Appuyez encore sur “Suivant”. 
@@ -164,3 +166,6 @@ Après la confirmation par e-mail le compte est actif et vous pourrez vous conne
 # Note d'administration
 Ceci est un tutorial vivant, n'hésitez pas à remonter les problèmes que vous rencontrez pendant votre installation/déploiement afin d'adapter le texte.
 Sur la communauté [discord francophone](https://discord.gg/pPSDNJk)
+
+---
+[Prolice - 12-06-2020 09:16]
