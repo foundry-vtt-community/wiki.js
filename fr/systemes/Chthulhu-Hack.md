@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2020-12-06T12:48:41.290Z
+date: 2020-12-06T15:37:32.957Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -30,3 +30,17 @@ Le **MJ** écoute les joueurs et collabore avec eux pour créer une histoire pal
 - avoir le système Cthulhu Hack d'installé
 
 voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
+
+
+## Ce que propose le système de Cthulhu Hack VF
+**Fonctionnalités** : 
+- Fiche de personnage avec ajout/modification/suppression des objets et des capacités spéciales
+- Jet de sauvegarde avec avantage/désavantage
+- Jet de ressource avec avantage/désavantage et gestion de la diminution
+- Archétype : Drag and drop sur la fiche de perso pour mettre à jour les valeurs
+- Capacité spéciale : drag and drop depuis les capacités spéciales standards, avec prise en compte des capacités multiples (qui peuvent être prises plusieurs fois)
+- Capacité spéciale : pour les capacités qui donnent un avantage, affichage de l'information sur la fenêtre de lancer de dés sur la partie Type de jets
+- Fortune : option, avec affichage sous le portrait et possibilité de dépenser
+- Adrénaline : option, avec affichage sous le portrait
+- Opposant : création, ajout des attaques sous forme d'Item
+- Capacité : gestion du nombre d'utilisations et de la date de dernier usage
