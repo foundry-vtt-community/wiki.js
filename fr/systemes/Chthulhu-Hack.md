@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2020-12-06T12:45:47.457Z
+date: 2020-12-06T12:48:41.290Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -23,3 +23,10 @@ Lorsqu’un investigateur tente de découvrir un indice, ou se bat pour sa propr
 
 Le **MJ** prépare et raconte l’histoire. Il décrit le monde, les PNJ, les péripéties et fournit des détails lorsque les investigateurs utilisent leurs sens ou demandent des précisions sur le contexte, la temporalité, les PNJ, le décor… tout ce qui ne relève pas de leurs personnages.
 Le **MJ** écoute les joueurs et collabore avec eux pour créer une histoire palpitante, souvent en s’appuyant sur l’imagination fertile des joueurs et parfois même en retournant contre eux les idées et les craintes verbalisées pour leurs personnages.
+
+
+### installer le soft et le système
+- avoir foundryVTT d'installé
+- avoir le système Cthulhu Hack d'installé
+
+voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
