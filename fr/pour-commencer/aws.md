@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T11:08:54.153Z
+date: 2020-12-06T11:13:34.490Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -187,6 +187,8 @@ FoundryVTT | 2020-12-06 10:56:09 | [info] Configured AWS credentials using /home
 FoundryVTT | 2020-12-06 10:56:09 | [info] Requesting UPnP port forwarding to destination 30000
 FoundryVTT | 2020-12-06 10:56:09 | [info] Server started and listening on port 30000
 ```
+`Ctrl+C`
+
 ## Transfert du fichier zip
 ### Dossier ~/foundry/\<vide\>
 *Diagnostique*
@@ -230,6 +232,8 @@ Ajouter la ligne après "sslkey":null,
 ```
 "awsConfig": "~/foundrydata/Config/AWS.json",
 ```
+`Ctrl+X`
+
 Et redémarrer le serveur
 ```
 sudo reboot now
