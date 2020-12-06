@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T11:48:32.832Z
+date: 2020-12-06T12:49:21.595Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -149,13 +149,13 @@ Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AW
 ## Instance FoundryVTT
 Testez foundryvtt
 ```
-node ~/foundry/resources/app/main.js --dataPath=/foundrydata 
+node /foundry/resources/app/main.js --dataPath=/foundrydata 
 ```
 Vous devriez voir apparaître ceci ou quelque chose de similaire:
 ```
 FoundryVTT | 2020-12-06 10:56:09 | [info] Foundry Virtual Tabletop - Version 0.7.8
 FoundryVTT | 2020-12-06 10:56:09 | [info] Running on Node.js - Version 14.15.1
-FoundryVTT | 2020-12-06 10:56:09 | [info] Loading data from user directory - /home/ec2-user/foundrydata
+FoundryVTT | 2020-12-06 10:56:09 | [info] Loading data from user directory - /foundrydata
 FoundryVTT | 2020-12-06 10:56:09 | [info] Application Options:
 {
   "port": 30000,
@@ -166,7 +166,7 @@ FoundryVTT | 2020-12-06 10:56:09 | [info] Application Options:
   "sslCert": null,
   "sslKey": null,
   "awsConfig": "******/AWS.json",
-  "dataPath": "/home/ec2-user/foundrydata",
+  "dataPath": "/foundrydata",
   "proxySSL": false,
   "proxyPort": null,
   "minifyStaticFiles": true,
@@ -189,7 +189,7 @@ FoundryVTT | 2020-12-06 10:56:09 | [info] Server started and listening on port 3
 `Ctrl+C`
 
 ## Transfert du fichier zip
-### Dossier ~/foundry/\<vide\>
+### Dossier /foundry/\<vide\>
 *Diagnostique*
 
 Le serveur ne se lance pas et le dossier foundry sur l'instance est vide !
@@ -201,16 +201,16 @@ Vous pouvez toujours monter le fichier manuellement:
 Connectez-vous en ssh à la console linux et suivez les instructions ci-dessous:
 
 ```
-cd ~/foundry/
+cd /foundry/
 wget -O foundry.zip \<lien google drive\>
 unzip foundry.zip
 rm foundry.zip
-node ~/foundry/resources/app/main.js --dataPath=/foundrydata >> /etc/rc.local
+node /foundry/resources/app/main.js --dataPath=/foundrydata >> /etc/rc.local
 ```
 Il faudra dès lors configurer manuellement le S3
 
 ```
-nano ~/foundrydata/Config/AWS.json
+nano /foundrydata/Config/AWS.json
 ```
 Ajouter le texte suivant:
 ```
@@ -225,11 +225,11 @@ Ajouter le texte suivant:
 Ensuite il faut renseigner le fichier de configuration AWS.json dans les options de FoundryVTT
 
 ```
-nano ~/foundrydata/Config/option.json
+nano /foundrydata/Config/option.json
 ```
 Ajouter la ligne après "sslkey":null,
 ```
-"awsConfig": "~/foundrydata/Config/AWS.json",
+"awsConfig": "/foundrydata/Config/AWS.json",
 ```
 `Ctrl+X`
 
