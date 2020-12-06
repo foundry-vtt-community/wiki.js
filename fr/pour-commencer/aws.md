@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T12:51:39.645Z
+date: 2020-12-06T14:46:53.622Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -205,6 +205,9 @@ cd /foundry/
 sudo wget -O foundry.zip \<lien google drive\>
 sudo unzip foundry.zip
 sudo rm foundry.zip
+echo '#!/bin/bash' >> rc.local
+echo 'node /foundry/resources/app/main.js --dataPath=/foundrydata' >>/etc/rc.local
+sudo chmod a+x /etc/rc.local
 sudo node /foundry/resources/app/main.js --dataPath=/foundrydata >> /etc/rc.local
 ```
 Il faudra dès lors configurer manuellement le S3
