@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T10:59:14.294Z
+date: 2020-12-06T11:02:02.015Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -219,7 +219,7 @@ Ajouter le texte suivant:
     "region" : "<votre région> ex: EU (Paris) eu-west-3"
 }
 ```
-Ctrl+X
+`Ctrl+X`
 
 Ensuite il faut renseigner le fichier de configuration AWS.json dans les options de FoundryVTT
 
