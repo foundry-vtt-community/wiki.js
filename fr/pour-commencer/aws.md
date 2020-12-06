@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T12:49:21.595Z
+date: 2020-12-06T12:51:39.645Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -202,15 +202,15 @@ Connectez-vous en ssh à la console linux et suivez les instructions ci-dessous:
 
 ```
 cd /foundry/
-wget -O foundry.zip \<lien google drive\>
-unzip foundry.zip
-rm foundry.zip
-node /foundry/resources/app/main.js --dataPath=/foundrydata >> /etc/rc.local
+sudo wget -O foundry.zip \<lien google drive\>
+sudo unzip foundry.zip
+sudo rm foundry.zip
+sudo node /foundry/resources/app/main.js --dataPath=/foundrydata >> /etc/rc.local
 ```
 Il faudra dès lors configurer manuellement le S3
 
 ```
-nano /foundrydata/Config/AWS.json
+sudo nano /foundrydata/Config/AWS.json
 ```
 Ajouter le texte suivant:
 ```
@@ -225,7 +225,7 @@ Ajouter le texte suivant:
 Ensuite il faut renseigner le fichier de configuration AWS.json dans les options de FoundryVTT
 
 ```
-nano /foundrydata/Config/option.json
+sudo nano /foundrydata/Config/option.json
 ```
 Ajouter la ligne après "sslkey":null,
 ```
