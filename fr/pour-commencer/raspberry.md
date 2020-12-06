@@ -2,7 +2,7 @@
 title: Installation sous Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-12-04T07:13:44.089Z
+date: 2020-12-06T10:51:28.120Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -11,7 +11,7 @@ dateCreated: 2020-11-28T19:43:36.702Z
 # Raspberry Pi et Serveur Foundry VTT
 # À DESTINATION DE QUI?
 
-Ceux qui n'ont pas envie de payer un hébergement de serveur et qui ne disposent pas d'une connexion suffisante pour héberger depuis l'application (4 à 5 Mbs, soit 32 à 40 Mbps en débit montant donc VDSL puissante, VDSL2 ou fibre).
+Ceux qui n'ont pas envie de payer un hébergement de serveur et qui ne disposent pas d'une machine suffisante pour héberger depuis l'application.
 
 Pensez à éteindre la RasPi quand vous ne l'utilisez pas, sans quoi votre connexion pourrait être prise par le serveur.
 
