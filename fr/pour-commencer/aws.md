@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T11:02:02.015Z
+date: 2020-12-06T11:04:53.084Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -147,6 +147,7 @@ Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AW
 
 # Quelque chose ne s'est pas bien passé ?
 
+## Instance FoundryVTT
 Testez foundryvtt
 ```
 node ~/foundry/resources/app/main.js --dataPath=/foundrydata 
@@ -186,7 +187,7 @@ FoundryVTT | 2020-12-06 10:56:09 | [info] Configured AWS credentials using /home
 FoundryVTT | 2020-12-06 10:56:09 | [info] Requesting UPnP port forwarding to destination 30000
 FoundryVTT | 2020-12-06 10:56:09 | [info] Server started and listening on port 30000
 ```
-
+## Transfert du fichier zip
 ### Dossier ~/foundry/\<vide\>
 *Diagnostique*
 
