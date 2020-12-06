@@ -1,8 +1,8 @@
 ---
 title: Cthulhu Hack
-description: 
+description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2020-12-05T22:52:41.796Z
+date: 2020-12-06T12:03:19.835Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
