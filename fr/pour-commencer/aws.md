@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T10:45:49.021Z
+date: 2020-12-06T10:46:50.502Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -147,7 +147,7 @@ Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AW
 
 # Problèmes pouvant être rencontrés
 
-### Dossier - /home/ec2-user/foundry/\<vide\>
+### Dossier ~/foundry/\<vide\>
 *Diagnostique*
 
 Le serveur ne se lance pas et le dossier foundry sur l'instance est vide !
