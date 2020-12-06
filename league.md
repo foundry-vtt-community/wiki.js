@@ -2,7 +2,7 @@
 title: League of FoundryVTT Developers
 description: 
 published: true
-date: 2020-12-06T16:27:03.690Z
+date: 2020-12-06T16:28:08.637Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-21T20:52:48.566Z
@@ -16,5 +16,6 @@ We are a collection of FoundryVTT package developers dedicated to helping make F
 
 Some of the things we do:
 - Moderate a more spread out discord environment for developers to ask and answer questions that has more elbow room than the primary foundry discord offers.
-- Collaborate on Module Ideas via a [Trello Board](https://trello.com/b/xYiqr7js/league-of-extraordinary-foundryvtt-developers) which aims to reduce duplicated effort.
+- Discuss package concepts and leverage a [Trello Board](https://trello.com/b/xYiqr7js/league-of-extraordinary-foundryvtt-developers) which aims to reduce duplicated effort.
 - Support the adoption of [Abandoned/Endangered Packages](https://trello.com/b/FmfN4LHZ/endangered-packages).
+- Collaborate with the Foundry Community to run the wiki.
