@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T18:49:21.147Z
+date: 2020-12-06T21:54:15.600Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -45,7 +45,7 @@ Actuellement le modèle ne fonctionne qu’avec les régions suivantes:
 - ap-southeast-2
 - eu-west-3 (Europe Paris)
 
-Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapshots” se font tous les jours à 12h00 GMT si vous choississez “Quotidien”, et chaque lundi à 12h00 GMT si vous choisissez hebdomadaire. Par défaut le port 22 est le seul port ouvert pour les autres instances dans le même VPC. Si vous voulez vous connecter via une console SSH (Putty, Ssh windows, ...). 
+Le modèle utilise un serveur de type vanilla Amazon Linux 2 AMI. Les “Snapshots” se font tous les jours à 12h00 GMT si vous choississez “Quotidien”, et chaque lundi à 12h00 GMT si vous choisissez hebdomadaire. Par défaut le port 22 est le seul port ouvert pour les autres instances dans le même VPC. Si vous voulez vous connecter via une console SSH (Putty, Ssh windows, ...), il vous faudra ouvrir le port 22 vers l'extérieur.
 
 ## Avant de commencer :
 
