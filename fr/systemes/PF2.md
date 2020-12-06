@@ -2,7 +2,7 @@
 title: Pathfinder Seconde édition
 description: Support pour Pathfinder Seconde édition
 published: true
-date: 2020-12-06T09:03:58.181Z
+date: 2020-12-06T09:06:00.154Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:41:07.004Z
@@ -14,4 +14,7 @@ Si vous souhaitez avoir le contenu de Pathfinder 2 en version française sous Fo
 *Vous bénéficiez alors de toute l'interface Foundry VTT en francais*
 
 **Foundry VTT Pathfinder 2e French** https://gitlab.com/pathfinder-fr/foundryvtt-pathfinder2e-lang-fr 
-*Vous bénéficiez grâce à ce module des conpendiums Pathfinder 2 en français : Bestiaire 1, armes et équipement, classes, dons, sorts, historiques etc etc. Ce module est en perpétuelle mise à jour.* A noter : Il faut faut pour intégrer ces compendiums utiliser le module Babele (https://gitlab.com/riccisi/foundryvtt-babele)
+*Vous bénéficiez grâce à ce module des conpendiums Pathfinder 2 en français : Bestiaire 1, armes et équipement, classes, dons, sorts, historiques etc etc. Ce module est en perpétuelle mise à jour.* 
+> A noter : Il faut pour intégrer ces compendiums FR issus de ce module utiliser le module Babele (https://gitlab.com/riccisi/foundryvtt-babele)
+{.is-info}
+
