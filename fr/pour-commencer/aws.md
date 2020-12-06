@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T08:21:46.322Z
+date: 2020-12-06T08:42:18.180Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -20,8 +20,6 @@ Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options 
 > Note: Utilisez cette option (S3) en connaissance de cause en ayant bien lu les tarifs AWS.
 > Une fois la période gratuite expirée le **Coût peut vraiment monter**. 
 {.is-warning}
-
-
 
 
 #### Options Supplémentaires :
@@ -146,6 +144,43 @@ Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AW
 6. Profitez de FoundryVTT et de toutes ses possibilités. 
 > NOTE IMPORTANTE: Renseignez-vous bien sur AWS car le cloud n’est jamais sûr !!
 {.is-danger}
+
+# Problèmes pouvant être rencontrés
+
+### Dossier - /home/ec2-user/foundry/\<vide\>
+*Diagnostique*
+
+Le serveur ne se lance pas et le dossier foundry sur l'instance est vide !
+Il s'agit probablement d'un problème au téléchargement du fichier *.zip
+
+*Solution*
+
+Vous pouvez toujours monter le fichier manuellement:
+Connectez-vous en ssh à la console linux et suivez les instructions ci-dessous:
+
+```
+cd /home/ec2-user/foundry/
+wget -O foundry.zip \<lien google drive\>
+unzip foundry.zip
+rm foundry.zip
+node /foundry/resources/app/main.js --dataPath=/foundrydata >> /etc/rc.local
+reboot now
+```
+Il faudra dès lors configurer manuellement le S3
+
+```
+nano ~/foundrydata/Config/AWS.json
+```
+Ajouter le texte suivant:
+```
+{
+    "accessKeyId": "votre clé"
+    "secretAccessKey" : "votre clé secrète"
+    "region" : "ex: EU (Paris) eu-west-3"
+}
+```
+Ctrl+X
+`reboot now`
 
 # Notes complémentaires
 
