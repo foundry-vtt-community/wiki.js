@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-06T11:04:53.084Z
+date: 2020-12-06T11:06:20.866Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -233,7 +233,7 @@ Ajouter la ligne après "sslkey":null,
 ```
 Et redémarrer le serveur
 ```
-reboot now
+sudo reboot now
 ```
 
 # Notes complémentaires
