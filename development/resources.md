@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2020-12-07T19:49:37.434Z
+date: 2020-12-07T20:12:09.975Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -39,9 +39,9 @@ There are a variety of community-created module and system starter kits out ther
 
 ### [TyphonJS's Demo Rollup Module](https://github.com/typhonjs-fvtt/demo-rollup-module)
 - Very Opinionated
-- Uses Rollup to bundle node module libraries into final package
-- **Supports:** SCSS, Javascript
-- **Description:** A starter module template focused on allowing npm packages to be included by levaging Rollup as a bundler.
+- Uses Rollup to bundle your module with examples of cleanly including node module libraries into final package
+- **Supports:** Javascript, Sass / SCSS / PostCSS, minification / mangling w/ sourcemaps
+- **Description:** A starter project template demonstrating Rollup to bundle your module code regardless if you plan to include Node modules or not.
 
 ## Development Tools
 
@@ -49,7 +49,7 @@ There are a variety of community-created module and system starter kits out ther
 - As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point.
 
 ### [TyhponJS's @eslint/foundry](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js)
-- A plug and play eslint configuration package containing all exported globals for module / system development.
+- A plug and play eslint configuration package containing all exported globals from `foundry.js` that when combined w/ the `no-shadow` rule prevents overwriting core Foundry VTT functionality. Useful for module / system development
 - [Demo of it in action](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc)
 
 ## Macros and Code examples
