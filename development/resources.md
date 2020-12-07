@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2020-12-07T19:47:55.515Z
+date: 2020-12-07T19:49:37.434Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -44,6 +44,9 @@ There are a variety of community-created module and system starter kits out ther
 - **Description:** A starter module template focused on allowing npm packages to be included by levaging Rollup as a bundler.
 
 ## Development Tools
+
+### [NickEast's Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types)
+- As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point.
 
 ### [TyhponJS's @eslint/foundry](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js)
 - A plug and play eslint configuration package containing all exported globals for module / system development.
