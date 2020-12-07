@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2020-12-07T20:12:09.975Z
+date: 2020-12-07T20:13:47.819Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -40,7 +40,7 @@ There are a variety of community-created module and system starter kits out ther
 ### [TyphonJS's Demo Rollup Module](https://github.com/typhonjs-fvtt/demo-rollup-module)
 - Very Opinionated
 - Uses Rollup to bundle your module with examples of cleanly including node module libraries into final package
-- **Supports:** Javascript, Sass / SCSS / PostCSS, minification / mangling w/ sourcemaps
+- **Supports:** Javascript, Sass / SCSS / PostCSS, minification / mangling w/ sourcemaps, and auto creates versions using Github Actions.
 - **Description:** A starter project template demonstrating Rollup to bundle your module code regardless if you plan to include Node modules or not.
 
 ## Development Tools
