@@ -2,9 +2,9 @@
 title: Development Resources
 description: 
 published: true
-date: 2020-09-28T20:17:07.313Z
-tags: 
-editor: undefined
+date: 2020-12-07T16:14:56.197Z
+tags: development, resource, tutorial, template, macro
+editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
 ---
 
@@ -27,6 +27,11 @@ There are a variety of community-created module and system starter kits out ther
 - Very Opinionated
 - **Description:** The Foundry Project Creator is a tool that developers can use to create modules and systems for the Foundry Virtual Tabletop software. It is designed to provide a (partially opinionated) boilerplate project and a set of scripts to quickly get started.
 
+
+### [DJ Addi's VSCode Debugging Enabled Template](https://gitlab.com/DJ.Addi/fvtt-project-template)
+- Basically no Opinions
+- Has VS Code Debugger integration out of the box
+- **Description:** A bare bones template that plugs into the debugger features of Visual Studio Code.
 
 ## Macros and Code examples
 
