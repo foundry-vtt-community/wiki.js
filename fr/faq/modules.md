@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-12-08T17:19:50.684Z
+date: 2020-12-08T17:20:14.373Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -105,7 +105,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **Show Drag Distance** : permet de voir rapidement combien tu bouge de case sans utiliser le ruban à chaque fois
 - **tidy UI game settings** : un management plus pratique des menus et surtout de la liste des modules
 - **Tokenizer - v0.7.5 edition** : Permet de créer rapidement des tokens avec une image depuis internet ou ton disque
-- **Token Attacher** Attachez n'importe quoi (sauf un autre jeton) aux jetons de sorte qu'ils se déplacent lorsque le jeton se déplace et tourne lorsque le jeton tourne. *Nécessite "**select tool everywhere**" pour lier des lumières, des sons, des modèles de mesure et journaux à un jeton.*
+- **Token Attacher** Attachez n'importe quoi (sauf un autre jeton) aux jetons de sorte qu'ils se déplacent lorsque le jeton se déplace et tournent lorsque le jeton tourne. *Nécessite "**select tool everywhere**" pour lier des lumières, des sons, des modèles de mesure et journaux à un jeton.*
  
 ### Effets Visuels *(Visual Effects)*
 - **animated spell effects** : Un pack d'images animées pour les sorts ;	
