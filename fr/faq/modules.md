@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-12-08T17:05:11.562Z
+date: 2020-12-08T17:13:26.297Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -127,6 +127,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 ## Spécifiques Systèmes
 
 ### Dnd 5 et dérivés srd
+- **Token Mold** : Ce module vous fournit un "moule" personnalisable pour vos jetons. Il permet entre autre de générer un nom aléatoire à vos jetons, de rouler les points de vie (dd5e) de mettre les jetons à la bonne taille sur la table (dd5e), ajout de prefixe aléatoire (le méchant, le calme,...) définir la configuration des tokens, ajouter des overlay sur le jeton,...)
 - **Enhanced Movement** : limite les mouvements des joueurs en combat suivant le nombre de mètre autorisé et gère les terrain difficile du module terrain layer
 - **lazymoney** : permet de "compacter" l'argent automatiquement sans calculer, si tu as 1PP et 53 Po 153 pa et 250 pc, ben il transforme direct en 08 pp 00 po 08 pa 00 pc
 - **magic items** : permet de créer des objets magiques, super pratique
