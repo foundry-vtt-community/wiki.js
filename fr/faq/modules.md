@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-12-08T16:52:51.005Z
+date: 2020-12-08T17:05:11.562Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -77,7 +77,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **webrtc tweaks** : une amélioration de la vidéo / son en jeu.
 
 ### Journal & Notes *(Journals and Notes)*
-- **forien's quest log** : ajoute un onglet "suivi des quêtes en cours" pour permettre de donner des "quêtes" au joueurs.
+- **forien's quest log** : ajoute un onglet "suivi des quêtes en cours" pour permettre de donner des "quêtes" au joueurs. *(Risque de compatibilité, manque de suivi de l'auteur)*.
 - **GMnotes** : un petit onglet sur les objets, perso, etc... avec note du GM  **[dégradé en 0.7.5]**
 - **chat images** : pour facilement copier coller (drag and drop) des images dnas le tchat 
 - **Permission Viewer** : permet d'affiner la granularité de partage des entités acteurs/articles/item... aux différents joueurs
@@ -114,7 +114,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **torch** : allume et eteint une torche directement depuis le token
 - **multilevel tokens** : permet de gérer les téléportations, les clones de tokens, et par laà les pièces à étages etc ... 
 - **scene transitions** : permet de diffuser une petite animation (texte/image..) au changement de scène [tuto fr par Ceizyl](https://www.youtube.com/watch?v=0bYxYCjegZY)
-
+- **Perfect Vision** : Permet de gérer la vision nocturne et chromatique *(n&b ; vert type vision lunette nocturne )* compatible dnd5e ; Pf2e ; ...
 
 ### Pack de contenu *(Content Packs)* & Contenu partagés en 'exclusivité' *(Exclusive Content)*
 - **adventure music** :un pack de musique comme son nom l'indique
