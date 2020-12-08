@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-11-17T08:53:51.542Z
+date: 2020-12-08T16:52:51.005Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -63,6 +63,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 - **Not Your Turn !**: Pour éviter qu'un joueur bouge son perso quand ce n'est pas son tour, il a un message et son token est bloqué, pratique avec certains joueurs indiciplinés :)
 - **token mold** : petit mod pratique qui permet de configurer automatiquement des tokens quand on les pose
 - **Combat Enhancements** : Ce petit module ajoute une barre de santé radiale et permet de réordonner par glisser/déposer sur le traqueur de combat.
+- **Combat Focus** : Ce module permet de séparer le combat tracker en deux et d'ajouter le chat en dessous. Pratique pour les petits écrans.
 
 ### Utilitaires d'importation *(Content Importers)*
 - **Dungeondraft Importer** : import automatique des cartes créées sur  .... dungeondraft (sisi ! )
