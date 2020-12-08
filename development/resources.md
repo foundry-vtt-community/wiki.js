@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2020-12-07T20:13:47.819Z
+date: 2020-12-08T15:24:47.194Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -74,3 +74,6 @@ There are a variety of community-created module and system starter kits out ther
 
 ### [Mougli's FoundryVTT System Development Video Series](https://www.youtube.com/watch?v=gcSN4AQcUzM&list=PLFV9z59nkHDccUbRXVt623UdloPTclIrz)
 - Video Series for those looking to create their own Systems.
+
+### [Svelte and Foundry](https://sunspots.eu/posts/foundry-svelte/)
+- A quick guide by Sunspots detailing their strategy for using Svelte to make Foundry Modules.
