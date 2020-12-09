@@ -2,7 +2,7 @@
 title: Installation sous AWS
 description: 
 published: true
-date: 2020-12-07T11:39:15.643Z
+date: 2020-12-09T07:55:08.290Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -21,6 +21,10 @@ Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options 
 > Une fois la période gratuite expirée le **Coût peut vraiment monter**. 
 {.is-warning}
 
+#### Prérequis
+
+Il faut avoir un compte chez Amazon (AWS).
+Voir *Notes complémentaires* dans ce même article (ça prend 5 min)
 
 #### Options Supplémentaires :
 1. Sauvegarde automatique de votre instance EC2. 
