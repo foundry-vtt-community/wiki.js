@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-11-29T18:22:02.888Z
+date: 2020-12-09T10:45:50.393Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -18,6 +18,8 @@ https://www.youtube.com/watch?v=XMEJt5OB4Bc
 https://www.youtube.com/watch?v=-CthIoE9o2E
 
 Une FAQ complémentaire sur le système est disponible sur [cette page](/fr/faq/faq-wfrp4e)
+
+Une vidéo de demo en Français [sur la création de personnages par Herve Darrichton](https://www.youtube.com/watch?v=AO6ONw1Zmxs).
 
 # Système et modules nécessaires
  
