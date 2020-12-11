@@ -1,8 +1,8 @@
 ---
-title: 03.0. Audio, Vidéo, HTTPS
+title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-12-11T00:19:20.227Z
+date: 2020-12-11T00:20:39.676Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
