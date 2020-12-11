@@ -2,7 +2,7 @@
 title: Installation sous Linux
 description: 
 published: true
-date: 2020-12-05T18:00:57.943Z
+date: 2020-12-11T00:02:30.337Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
@@ -13,14 +13,20 @@ dateCreated: 2020-10-25T19:02:17.055Z
 Si vous êtes en natif sous Linux, vous n'aurez pas vraiment besoin d'un tutoriel pour installer FoundryVTT.
 Je vous conseille tout de même de faire tourner FoundryVTT avec [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/). Il permet de contrôler finement le démarrage/arrêt du service.
 
-Pour les personnes qui découvrent Linux ou qui ont une connaissane Junior de Linux, nous avons selectionné quelques **Guides  spécialisés (en anglais)**.
-L'utilisation de ces derniers et de Linux en général, nécessite de comprendre au moins l'anglais technique.
+Pour les personnes découvrant Linux ou d'une connaissance Junior de Linux, nous avons selectionné quelques **Guides  spécialisés en anglais et français**.
+L'utilisation de ces derniers et de Linux en général, nécessite la compréhension de l'anglais technique.
+Nous mettons actuellement à notre disposition plusieurs tutoriels disponibles en fonction de la plateforme d'installation que vous souhaitez exploiter.
 
-- Pour utiliser FoundryVTT sous Linux via PM2, ce [tutoriel est parfait](https://foundryvtt.wiki/en/setup/Ubuntu-VM).
+## Différentes installations pour l'utilisation de Foundry VTT.
+- [Installation sous LINUX](https://foundryvtt.wiki/en/setup/Ubuntu-VM)
+Nous utilisons ici l'installation de foundryVTT sur la distribution UBUNTU et ses dérivés.
+Nous utiliserons ici le logiciel [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/) permettant de contrôler finement le démarrage/arrêt du service.
 
-- Pour utiliser FoundryVTT sur des serveurs AWS d'Amazon, nous vous invitons à suivre le guide [Bryan's AWS Setup Guide For FoundryVTT](https://foundryvtt.wiki/en/setup/hosting/Self-Hosting-on-AWS)
+- [Installation sur des serveurs AWS d'Amazon](https://foundryvtt.wiki/fr/pour-commencer/aws)
+Guide d'installation en français, rédigé par **prolice#9101** sur le discord francophone.
 
-- Enfin Pour utiliser FoundryVTT sur un ***Raspberry-Pi***, le [Guide d'Installation sous Raspberry-Pi de Neural Noise](https://foundryvtt.wiki/fr/pour-commencer/raspberry) est à votre disposition sur le wiki.
+- [Installation sur un ***Raspberry-Pi***](https://foundryvtt.wiki/fr/pour-commencer/raspberry) est à votre disposition sur le wiki.
+Guide d'installation en français, rédigé par **Neuralnoise#7374** sur le discord francophone.
 
 
-Dans tous les cas,si vous rencontrez des soucis,que vous n'y arrivez pas, que vous soyez débutant ou expert Linux, nous vous invitons à poser vos questions dans le salon [#support-technique](https://discord.gg/pPSDNJk) sur le Discord Communautaire francophone de Foundry, en décrivant votre problème le plus précisement possible.
+Dans tous les cas, si vous rencontrez des soucis,que vous n'y arrivez pas, que vous soyez débutant ou expert Linux, nous vous invitons à poser vos questions dans le salon [#support-technique](https://discord.gg/pPSDNJk) sur le Discord Communautaire francophone de Foundry, en décrivant votre problème le plus précisement possible.
