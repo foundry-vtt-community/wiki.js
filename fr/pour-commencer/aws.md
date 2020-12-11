@@ -1,8 +1,8 @@
 ---
-title: 02.01. Installation sous AWS
+title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2020-12-11T00:08:12.479Z
+date: 2020-12-11T00:21:37.524Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
