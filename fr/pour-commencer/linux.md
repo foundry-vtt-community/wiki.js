@@ -1,8 +1,8 @@
 ---
-title: 02.00. Installation sous Linux
+title: 2.0. Installation sous Linux
 description: 
 published: true
-date: 2020-12-11T00:06:58.746Z
+date: 2020-12-11T00:23:55.910Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
@@ -13,9 +13,10 @@ dateCreated: 2020-10-25T19:02:17.055Z
 Si vous êtes en natif sous Linux, vous n'aurez pas vraiment besoin d'un tutoriel pour installer FoundryVTT.
 Je vous conseille tout de même de faire tourner FoundryVTT avec [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/). Il permet de contrôler finement le démarrage/arrêt du service.
 
-Pour les personnes découvrant Linux ou d'une connaissance Junior de Linux, nous avons selectionné quelques **Guides  spécialisés en anglais et français**.
-L'utilisation de ces derniers et de Linux en général, nécessite la compréhension de l'anglais technique.
-Nous mettons actuellement à notre disposition plusieurs tutoriels disponibles en fonction de la plateforme d'installation que vous souhaitez exploiter.
+>Pour les personnes découvrant Linux ou d'une connaissance Junior de Linux, nous avons selectionné quelques **Guides  spécialisés en anglais et français**.
+>L'utilisation de ces derniers et de Linux en général, nécessite la compréhension de l'anglais technique.
+>Nous mettons actuellement à notre disposition plusieurs tutoriels disponibles en fonction de la plateforme d'installation que vous souhaitez exploiter.
+{.is-info}
 
 ## Différentes installations pour l'utilisation de Foundry VTT.
 - [Installation sous LINUX](https://foundryvtt.wiki/en/setup/Ubuntu-VM)
