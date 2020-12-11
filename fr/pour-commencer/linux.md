@@ -1,8 +1,8 @@
 ---
-title: Installation sous Linux
+title: 02.00. Installation sous Linux
 description: 
 published: true
-date: 2020-12-11T00:02:30.337Z
+date: 2020-12-11T00:06:58.746Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
