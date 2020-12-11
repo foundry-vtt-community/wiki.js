@@ -1,8 +1,8 @@
 ---
-title: 03.00. Audio, Vidéo, HTTPS
+title: 03.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-12-11T00:09:01.507Z
+date: 2020-12-11T00:19:20.227Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -67,10 +67,9 @@ Pour avoir l'audio/vidéo fonctionnel sur Foundry VTT il faut un serveur sécuri
 Seul hic, sur les machines locales, avec le client Foundry classique, le process implique généralement un certificat SSL auto-signé qui provoque un warning pour les clients navigateurs et potentiellement le blocage des images et autres ressources par certains antivirus.
 
 ### Box Internet, Ouverture du Port 80.
-**ATTENTION** : Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT** :
-- ***L'activation de l'UPnP***.
-
-***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.*** 
+>ATTENTION: Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, **L'activation de l'UPnP**.
+>***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.***
+{.is-warning}
 
 Afin que vous puissiez utiliser l'audio/vidéo avec Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
 Pour cela, il vous faudra vous connecter à votre Box Internet.
@@ -94,7 +93,8 @@ Afin de générer le Certificat SSL, nous allons placer l'exécutable Crypt-LE d
   ![powershell.png](/setup/winstall/powershell.png)
   - Dans l'invite de commande, tapez la ligne suivante :
 `  .\le64.exe --key account.key --email "mon@email.fr" --csr domain.csr --csr-key domain.key --crt domain.crt --generate-missing --domains "mondomaine.fr" --live`
-***ATTENTION - N'appuyez pas sur entrée de suite après avoir lancé la commande.***
+>**ATTENTION - N'appuyez pas sur entrée de suite après avoir lancé la commande.**
+{.is-warning}
 
 - Après quelques instants la commande va se mettre en pause, vous allez devoir de créer un fichier avec un nom particulier contenant une clé :
 	- Créer un fichier.txt, éditer son contenu en mettant la clé indiquée dans le message,
