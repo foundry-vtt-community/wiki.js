@@ -1,8 +1,8 @@
 ---
-title: 01.00. Installation Windows
+title: 1.0. Installation Windows
 description: 
 published: true
-date: 2020-12-11T00:06:02.882Z
+date: 2020-12-11T00:32:29.098Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -12,11 +12,12 @@ Il existe différentes manières de faire l'installation d'un logiciel vous alle
 
 Une fois que vous avez téléchargé l'exécutable pour Windows, il va falloir faire des choix afin d'optimiser votre temps pour la suite de l'aventure en compagnie de Foundry VTT.
 
-**La première question importante, est de savoir si vous disposez ou non d'au moins un des éléments suivants :**
-- plusieurs Partitions
-- un ou plusieurs HDD/SSD/M2 Internes
-- un ou plusieurs HDD/SSD Externes
-- un Nas etc ...
+>La première question importante, est de savoir si vous disposez ou non d'au moins un des éléments suivants :
+>Plusieurs Partitions ?
+>Un ou plusieurs HDD/SSD/M2 Internes ?
+>Un ou plusieurs HDD/SSD Externes ?
+>Un Nas etc ...
+{.is-warning}
 
 Cette question est importante car elle va déterminer le choix d'installation que vous allez faire pour les données utilisateurs. 
 La chose fondamentale qu'il faut savoir avec Foundry VTT, c'est que l'application sépare le coeur du logiciel, des données utilisateurs. 
@@ -85,11 +86,10 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 	- Dans les **Adresses Statiques**, reservez une adresse locale de type **192.168.x.x** à l'**Adresse MAC** de votre ordinateur. [Obtenir l'adresse Mac sous Windows](https://www.commentcamarche.net/faq/10935-trouver-son-adresse-mac#obtenir-l-adresse-mac-sous-windows)
 
 ### Box Internet, Ouverture du Port 30000.
-**ATTENTION** : Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, 
-- ***L'Activation de l'UPnP***. 
-
-***Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
-La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT***.
+>**ATTENTION:** Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, **L'Activation de l'UPnP**. 
+>*Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
+La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT*.
+{.is-warning}
 
 Par défaut, le port utilisé par Foundry VTT est le **Port 30000** et il faudra donc ouvrir ce dernier sur le NAT de votre Box Internet.
 Afin que vous puissiez utiliser Foundry VTT, nous allons devoir utiliser la [redirection de port](https://fr.wikipedia.org/wiki/Redirection_de_port) (ou port forwarding) sur votre Box Internet.
@@ -129,11 +129,10 @@ En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans l
 - Exécuter Foundry VTT, puis sélectionnez l'onglet Configuration
 - Dans le champ ***User Data Path***, remplacer le Path actuel par celui que vous venez de choisir en mettant des **"/"** comme sur l'exemple ci-dessous.
 
-**ATTENTION** : Avant de valider tous changements, merci de bien vérifier, comme sur la capture d'écran ci-dessous : 
-- ***Que "Enable UPnP ? (ou Activer UPnP ? en français)" soit bien décoché.***. 
-
-***Pour rappel, cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
-La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT***.
+>**ATTENTION:** Avant de valider tous changements, merci de bien vérifier, comme sur la capture d'écran ci-dessous **Que "Enable UPnP ? (ou Activer UPnP ? en français)" soit bien décoché.**
+>**Pour rappel,** cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
+La désactivation de cette dernière est **OBLIGATOIRE** pour le bon fonctionnement de la VTT.
+{.is-warning}
 
 - Lorsque vous avez fait la/les modification(s), cliquez sur ***Save Changes***, puis ***YES***
 ![6_configuration.png](/setup/winstall/6_configuration.png)
