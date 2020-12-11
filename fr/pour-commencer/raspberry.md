@@ -1,8 +1,8 @@
 ---
-title: Installation sous Raspberry Pi
+title: 02.02. Installation Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-12-06T10:54:03.386Z
+date: 2020-12-11T00:09:43.069Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
