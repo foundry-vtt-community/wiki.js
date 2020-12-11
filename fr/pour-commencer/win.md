@@ -1,8 +1,8 @@
 ---
-title: 2. Installation Windows
+title: 01.00. Installation Windows
 description: 
 published: true
-date: 2020-12-02T01:07:42.458Z
+date: 2020-12-11T00:06:02.882Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
