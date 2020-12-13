@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-13T14:25:26.945Z
+date: 2020-12-13T14:27:24.514Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -73,9 +73,9 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 # Notes de Mises à jour
 ---
 ### Version 1.9.9 - 13/12/2020
-- débug pour compatibilité Libwrapper
-- l'affichage des ressources spécifique aux classes dépend maintenant d'une option du module
-- les ressources spéciales ne sont plus sous-lignées
+-débug pour compatibilité Libwrapper
+-l'affichage des ressources spécifique aux classes dépend maintenant d'une option du module
+-les ressources spéciales ne sont plus sous-lignées
 
 ### Version 1.9.8 - 10/12/2020
 Maj du Compendium H&D - Capacités de Classes
@@ -84,12 +84,13 @@ Maj du Compendium H&D - Capacités de Classes
 Maj du Compendium H&D - Equipement d'aventurier
 - Correction de Poids, prix, quantité
 - Ajout de quelques équipements manquants
+
 Maj du Compendium H&D - Classes et spécialisation
 - Uniformisation de la mise en page
 - Ajout de lien interne vers les Compendiums
 - Ajout  [Druide] Cercle de la Vie
 - Ajout  [Guerrier] Kal'Thori
-Ajout de la fonction de montée automatique de Niveau (optionnelle)
+-Ajout de la fonction de montée automatique de Niveau (optionnelle)
 - Encore en cours de developpement
 
 ### Version 1.8.6 - 12/11/2020
