@@ -2,7 +2,7 @@
 title: Macros
 description: Les macros du module `pf1-fr`
 published: true
-date: 2020-12-13T21:37:57.996Z
+date: 2020-12-13T21:55:05.095Z
 tags: pf1, macros
 editor: markdown
 dateCreated: 2020-12-13T20:46:13.112Z
@@ -50,3 +50,25 @@ Cette macro affiche un texte dans les messages pour annoncer l'utilisation d'une
 * La macro recherche dans le personnage sélectionné un élément dont le nom correspond à celui spécifié (configuration)
 * La macro vérifie le nombre d'utilisations restantes (`preparedAmount`) puis le réduit de `1`
 * La macro affiche le texte demandé
+
+## Aperçu des PJs
+
+Cette macro est dédiée au maître du jeu (MJ). Elle présente une vue d'ensemble de tous les attributs et compétences des personnages joueurs. Elle permet également de rapidement faire un jet pour un pj ou pour l'ensemble du groupe.
+
+![pc-overview.png](/community/french/pf1/macros/pc-overview.png =500x)
+
+**Étapes**
+
+* **Prérequis** : assurez-vous d'avoir assigné un personnage à chaque joueur
+1. Exécutez la macro
+1. Passez votre souris sur la fenêtre pour mettre en évidence une ligne
+1. Cliquer sur le nom d'un attribut ou d'une compétence pour lancer les dés pour tout le groupe
+1. Cliquer sur la valeur d'un attribut ou d'une compétence pour lancer les dés pour le pj correspondant
+
+**Comment ça fonctionne ?**
+
+* La macro récupère l'acteur de chacun des joueurs, puis affiche toutes les valeurs sous la forme d'une table
+* Pour les jets supportés, la macro ajoute un événement pour réagir au clics. Le curseur de la souris change de forme lorsque c'est le cas.
+* Il est possible de configurer les compétences à afficher en modifiant la constante `SKILLS`
+* Il est possible de configurer les éléments à afficher en modifiant la constante `DISPLAY`
+* Il est possible de modifier le format d'affichage de chaque type de valeur en modifiant les fonctions de la macro
