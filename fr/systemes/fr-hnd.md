@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-10T13:01:36.255Z
+date: 2020-12-13T14:25:26.945Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -72,6 +72,10 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 # Notes de Mises à jour
 ---
+### Version 1.9.9 - 13/12/2020
+- débug pour compatibilité Libwrapper
+- l'affichage des ressources spécifique aux classes dépend maintenant d'une option du module
+- les ressources spéciales ne sont plus sous-lignées
 
 ### Version 1.9.8 - 10/12/2020
 Maj du Compendium H&D - Capacités de Classes
