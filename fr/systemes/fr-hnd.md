@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-13T14:27:24.514Z
+date: 2020-12-13T14:29:51.450Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -44,7 +44,7 @@ toujours dans l'onglet "Modules" ; cherchez et installez :
 ---
 # que propose ce module ?
 ---
-
+###[aperçu en vidéo](/fr/https://www.youtube.com/watch?v=mBiFIh7yb-s)
 
 ### un ensemble de compendium 
 - les historiques et leurs capacités
