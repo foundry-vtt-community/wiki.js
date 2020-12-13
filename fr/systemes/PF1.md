@@ -2,7 +2,7 @@
 title: Pathfinder 1re édition
 description: Support pour Pathfinder 1re édition
 published: true
-date: 2020-12-13T22:02:30.253Z
+date: 2020-12-13T22:04:30.060Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:38:37.925Z
@@ -16,7 +16,7 @@ dateCreated: 2020-10-19T09:38:37.925Z
 
 * [Translation: French [Core]](https://foundryvtt.com/packages/fr-FR/) : traductions francophones pour Foundry VTT.
 
-* [Pathfinder 1 - Improvements for French](https://foundryvtt.com/packages/pf1-fr/) : ce module fournit des compendiums entièrement en français dont les données proviennent de www.pathfinder-fr.org. Le module propose également une multitude de macros pour le système et quelques options modifiant le comportement général (ex: masquer les compendiums anglophones d'origine).
+* [Pathfinder 1 - Improvements for French](/fr/systemes/pf1/pf1-fr) : ce module fournit des compendiums entièrement en français dont les données proviennent de www.pathfinder-fr.org. Le module propose également une [multitude de macros](/fr/systemes/pf1/pf1-fr/macros) pour le système et quelques options modifiant le comportement général (ex: masquer les compendiums anglophones d'origine).
 
 ## Modules recommandés
 
