@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-12-14T14:30:45.021Z
+date: 2020-12-14T14:34:00.126Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -33,6 +33,9 @@ Vidéos de démos en Français :
  **Les versions du système Warhammer inférieures à 3.X ne sont plus supportées. Le module 'core' officiel de C7 (environ 15 EUR) est obligatoire pour avoir les compendiums**
  
 ## Installation du module de traduction FR pour le système WarhammerV4 version 3.X (ie version 3.X du système Warhammer v4)
+
+- Installez le en copiant ce lien : `https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/v3/module.json`.
+- Lancer votre monde, puis activez dans les options.
 
 Si vous avez mis à jour le système Warhammer en v3 avec le "core" de Cubicle7, vous devez faire les manips suivantes: 
 
