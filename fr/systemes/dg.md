@@ -2,7 +2,7 @@
 title: Delta Green
 description: 
 published: true
-date: 2020-12-14T11:28:42.132Z
+date: 2020-12-14T12:39:32.352Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-14T09:13:27.349Z
@@ -28,5 +28,8 @@ Au début du XXIe siècle, le gouvernement rétablit cependant l’opération, d
 ## Modules conseillés
 Afin de profiter un maximum du système et du thème Delta Green, voici quelques modules conseillés à ajouter directement dans l'application Foundry depuis l'onglet MODULE:
 
-- Dice so Nice
+- [Bubble Rolls](https://foundryvtt.com/packages/bubblerolls/) - Les jets de dés s'effectuent sous forme de bulles au dessus des tokens
+- [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) - Ajoute le modèle 3D des jets de dés
+- [Permission viewer](https://foundryvtt.com/packages/permission_viewer/) - Permet de distinguer les permissions accordés grâce aux couleurs des joueurs
+- [PnP Pointers and Ping](https://foundryvtt.com/packages/pointer/) - Ajoute l'affichage d'un pointeur qui suit votre souris, ainsi que l'option de faire un ping à un certain endroit.
 - 
