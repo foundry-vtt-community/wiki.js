@@ -2,7 +2,7 @@
 title: Delta Green
 description: 
 published: true
-date: 2020-12-14T12:39:46.325Z
+date: 2020-12-14T12:40:42.309Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-14T09:13:27.349Z
@@ -32,4 +32,3 @@ Afin de profiter un maximum du système et du thème Delta Green, voici quelques
 - [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) - Ajoute le modèle 3D des jets de dés
 - [Permission viewer](https://foundryvtt.com/packages/permission_viewer/) - Permet de distinguer les permissions accordés grâce aux couleurs des joueurs
 - [PnP Pointers and Ping](https://foundryvtt.com/packages/pointer/) - Ajoute l'affichage d'un pointeur qui suit votre souris, ainsi que l'option de faire un ping à un certain endroit.
-- 
