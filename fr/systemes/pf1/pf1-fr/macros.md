@@ -2,7 +2,7 @@
 title: Macros
 description: Les macros du module `pf1-fr`
 published: true
-date: 2020-12-13T21:55:05.095Z
+date: 2020-12-14T07:08:16.700Z
 tags: pf1, macros
 editor: markdown
 dateCreated: 2020-12-13T20:46:13.112Z
@@ -67,7 +67,17 @@ Cette macro est dédiée au maître du jeu (MJ). Elle présente une vue d'ensemb
 
 **Comment ça fonctionne ?**
 
-* La macro récupère l'acteur de chacun des joueurs, puis affiche toutes les valeurs sous la forme d'une table
+* La macro récupère le personnage associé à chacun des joueurs, puis affiche toutes les valeurs pour ceux-ci sous la forme d'une table
+> Si un des joueurs contrôle plusieurs personnages, seul celui qui lui est associé dans la configuration des joueurs apparaitra dans le tableau. Pour remédier à ce comportement, il est possible de modifier la macro afin de changer la sélection des `actors` par défaut et sélectionner par exemple tous les `actors` de type `character`(PJ) et dont le droit par défaut est positionné à `Observateur`. Pour cela, situez la ligne suivante en fin de macro :
+> {.is-info}
+
+> `game.users.forEach( function(u) { if( !u.isGM ) { actorIds.push(u.data.character) } } )`
+
+> Une fois la ligne trouvée, remplacez-la par la ligne suivante  :
+> {.is-info}
+
+> `game.actors.forEach( function(a) { if (a.data.type == "character" && a.data.permission.default == "2") { actorIds.push(a.id) } } )`
+
 * Pour les jets supportés, la macro ajoute un événement pour réagir au clics. Le curseur de la souris change de forme lorsque c'est le cas.
 * Il est possible de configurer les compétences à afficher en modifiant la constante `SKILLS`
 * Il est possible de configurer les éléments à afficher en modifiant la constante `DISPLAY`
