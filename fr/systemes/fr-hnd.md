@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-14T09:54:20.081Z
+date: 2020-12-14T09:55:30.999Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -95,8 +95,9 @@ Maj du Compendium H&D - Classes et spécialisation
 - Ajout de lien interne vers les Compendiums
 - Ajout  [Druide] Cercle de la Vie
 - Ajout  [Guerrier] Kal'Thori
--Ajout de la fonction de montée automatique de Niveau (optionnelle)
-- Encore en cours de developpement
+
+Ajout de la fonction de montée automatique de Niveau (optionnelle)
+
 
 ### Version 1.8.6 - 12/11/2020
 Maj du Compendium H&D - Capacités de Classes
