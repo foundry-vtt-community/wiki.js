@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-13T14:31:49.443Z
+date: 2020-12-14T09:54:04.516Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -72,10 +72,15 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 # Notes de Mises à jour
 ---
+### Version 2.0.1 - 1/12/2020
+- débug pour les montées de niveaux avec ajout de capacitées automatiques;
+- ajout de la lignée protéenne et des ses capacitées
+- ajout des variantes Homme serpent Kubea ghinduk, et Homme serpent Kubea ssyere et leurs capacitées
+
 ### Version 1.9.9 - 13/12/2020
--débug pour compatibilité Libwrapper
--l'affichage des ressources spécifique aux classes dépend maintenant d'une option du module
--les ressources spéciales ne sont plus sous-lignées
+- débug pour compatibilité Libwrapper
+- l'affichage des ressources spécifique aux classes dépend maintenant d'une option du module
+- les ressources spéciales ne sont plus sous-lignées
 
 ### Version 1.9.8 - 10/12/2020
 Maj du Compendium H&D - Capacités de Classes
