@@ -2,7 +2,7 @@
 title: Delta Green
 description: 
 published: true
-date: 2020-12-14T09:16:17.972Z
+date: 2020-12-14T11:28:42.132Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-14T09:13:27.349Z
@@ -10,5 +10,23 @@ dateCreated: 2020-12-14T09:13:27.349Z
 
 ![DeltaGreen](https://theunspeakableoath.com/home/wp-content/uploads/2017/08/Delta-Green-Logo-Horizontal-Transparent-1.jpg)
 
-# Header
-Your content here
+>Née du raid du gouvernement américain en 1928 sur la ville côtière dégénérée d'Innsmouth, dans le Massachusetts, l'agence secrète connue sous le nom de Delta Green s'oppose aux forces des ténèbres avec honneur mais sans gloire. Les agents de Delta Green se battent pour sauver l'humanité d'horreurs contre nature - souvent pour un coût personnel accablant.
+
+## Qu'est-ce que Delta Green ?
+Delta Green est un jeu de rôle d'horreur contemporaine, d'inspiration lovecraftienne, dans lequel les PJ sont les agents de l'organisation éponyme, dédiée à protéger les USA des menaces surnaturelles.
+
+L'organisation est née dans les années 40, d'un département lui-même fondé suite au tristement célèbre raid des fédéraux sur Innsmouth, pour contrer les agissements des forces de l'Axe dans le domaine occulte. 
+Suite à une débâcle dans les années 60, Delta Green fut dissoute par le gouvernement américain, mais ses membres reprirent leur activité de façon secrète, notamment pour s'opposer au groupe MJ-12 accusé de pactiser avec des créatures d'outre-espace au détriment des intérêts des citoyens américains. 
+
+Au début du XXIe siècle, le gouvernement rétablit cependant l’opération, dans un cadre non officiel.
+
+## Installer le système et sa traduction
+- Installer le système [Delta Green](https://foundryvtt.com/packages/deltagreen/) depuis l'application Foundry dans la catégorie SYSTEME (Auteur: [TheLastScrub](https://foundryvtt.com/community/thelastscrub))
+- Installer le module de traduction de [Delta Green](https://foundryvtt.com/packages/DeltaGreen_fr-FR/) dans la catégorie MODULE (Auteur: [Hrunh](https://foundryvtt.com/community/hrunh))
+
+
+## Modules conseillés
+Afin de profiter un maximum du système et du thème Delta Green, voici quelques modules conseillés à ajouter directement dans l'application Foundry depuis l'onglet MODULE:
+
+- Dice so Nice
+- 
