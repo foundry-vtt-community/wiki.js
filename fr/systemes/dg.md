@@ -2,7 +2,7 @@
 title: Delta Green
 description: 
 published: true
-date: 2020-12-14T12:39:32.352Z
+date: 2020-12-14T12:39:46.325Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-14T09:13:27.349Z
@@ -26,7 +26,7 @@ Au début du XXIe siècle, le gouvernement rétablit cependant l’opération, d
 
 
 ## Modules conseillés
-Afin de profiter un maximum du système et du thème Delta Green, voici quelques modules conseillés à ajouter directement dans l'application Foundry depuis l'onglet MODULE:
+Afin de profiter un maximum du système et du thème Delta Green, voici quelques modules conseillés à ajouter directement dans l'application Foundry depuis l'onglet MODULE :
 
 - [Bubble Rolls](https://foundryvtt.com/packages/bubblerolls/) - Les jets de dés s'effectuent sous forme de bulles au dessus des tokens
 - [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) - Ajoute le modèle 3D des jets de dés
