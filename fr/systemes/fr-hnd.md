@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-14T09:54:04.516Z
+date: 2020-12-14T09:54:20.081Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -72,7 +72,7 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 # Notes de Mises à jour
 ---
-### Version 2.0.1 - 1/12/2020
+### Version 2.0.1 - 14/12/2020
 - débug pour les montées de niveaux avec ajout de capacitées automatiques;
 - ajout de la lignée protéenne et des ses capacitées
 - ajout des variantes Homme serpent Kubea ghinduk, et Homme serpent Kubea ssyere et leurs capacitées
