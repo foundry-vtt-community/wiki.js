@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-12-14T09:14:35.010Z
+date: 2020-12-15T12:19:27.856Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -51,6 +51,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - **VTTA Tokenizer**
 
 ## Les systèmes en français
+- [Aria - Game of Roles](https://foundryvtt.wiki/fr/systemes/aria)
 - [Appel de Cthulhu 7e](/fr/systemes/fr-adc)
 - [Brigandyne](https://foundryvtt.wiki/fr/systemes/brigandyne)
 - [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
