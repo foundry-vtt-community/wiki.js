@@ -2,13 +2,15 @@
 title: Aria
 description: 
 published: true
-date: 2020-12-16T13:26:19.386Z
+date: 2020-12-16T13:28:02.869Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
 ---
 
 # Aria - Game of Roles
+
+![aria.jpg](/logos/aria.jpg)
 
 Jeu de la série Game of Rôles imaginée par [FibreTigre](https://www.fibretigre.com/).
 
