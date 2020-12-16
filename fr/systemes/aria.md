@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2020-12-16T13:28:02.869Z
+date: 2020-12-16T13:37:18.951Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -17,6 +17,8 @@ Jeu de la série Game of Rôles imaginée par [FibreTigre](https://www.fibretigr
 Popularisé sur Twitch / Youtube, lien :  [Saison 1](https://www.youtube.com/playlist?list=PLTJVtKcBdMNWKJxAnpSf1fj4CUp49148Z), [Saison 2](https://www.youtube.com/playlist?list=PLTJVtKcBdMNV9tpuHa_YRKlsMspnXFEbx), [Saison 3](https://www.youtube.com/playlist?list=PL4ILyHtnURFrTkuFoje8KhBIoV63ATuwe) et [son final](https://www.youtube.com/playlist?list=PLTJVtKcBdMNW2XAbHVhU1FWR9e_4N8vsm).
 
 Jeu publié chez [Elder Craft](https://www.elder-craft.com/).
+
+
 
 **Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).
 
