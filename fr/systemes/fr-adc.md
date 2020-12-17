@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2020-12-17T15:47:01.892Z
+date: 2020-12-17T15:58:01.632Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -22,3 +22,8 @@ Le système CoC7 essaie (*modestement*) de décharger le gardien (maître de jeu
 Historiquement les aventures pour l’appel de Cthulhu se déroulent dans les années 1920, mais peuvent être facilement transposées dans d’autres époques.
 
 Le système CoC7 propose aussi une implémentation succincte des règles de Pulp Cthulhu.
+
+## Installer le système
+- [Installer l'application foundry VTT](https://foundryvtt.wiki/fr/pour-commencer/setup)
+- Dans l'onglet Game System de l'application foundry chercher et installer "[Call of Cthulhu 7th edition](https://foundryvtt.com/packages/CoC7/)"
+
