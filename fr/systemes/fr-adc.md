@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2020-12-17T16:14:40.632Z
+date: 2020-12-17T16:14:56.281Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -45,4 +45,14 @@ N’hésitez pas à rapporter vos bugs/suggestion sur la page [github du projet]
 
 ## Fonctionnalités
 - Les fiches de personnage. Les attributs dérivés sont calculés automatiquement. Les champs des fiches sont clickables 
+
+
+
+
+
+
+
+
+
+
 
