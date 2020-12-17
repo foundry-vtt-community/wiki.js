@@ -2,7 +2,7 @@
 title: Unlisted Game Systems
 description: 
 published: true
-date: 2020-12-17T18:44:12.827Z
+date: 2020-12-17T18:44:29.313Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -146,6 +146,8 @@ This list is a holdover from the previous Wiki's information and may be outdated
 * **Foundry VTT Compatibility**: 0.7.7 (haven't tested other versions yet)
 ### Description	
 A dark and esoteric fantasy setting where human subsistence is in peril, as an eldritch cataclysm has exiled mankind from its homeworld, Earth. The Black Void RPG introduces action, adventure, intrigue and horror, as you and your fellow players seek to claim your rightful place in a vast and unfamiliar Cosmos or seek enlightenment in the mysterious Void filled with wonder, delight and dread.
+
+---
 
 ## Star Trek Adventures (2d20)
 * **Author**: NickEast#1311
