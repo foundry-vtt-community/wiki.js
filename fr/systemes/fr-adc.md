@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2020-12-17T16:14:56.281Z
+date: 2020-12-17T16:27:43.749Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -44,15 +44,19 @@ De plus l'AdC est un système très ouvert et il est courant que chaque gardien 
 N’hésitez pas à rapporter vos bugs/suggestion sur la page [github du projet](https://github.com/HavlockV/CoC7-FoundryVTT/issues).
 
 ## Fonctionnalités
-- Les fiches de personnage. Les attributs dérivés sont calculés automatiquement. Les champs des fiches sont clickables 
+- Fiches de personnage. Les attributs dérivés sont calculés automatiquement. Les champs des fiches sont cliquables et vont déclencher le jet correspondant.
 
+- Jets de compétences, avec les système de redoublement, et dépense de chance.
 
+- Automatisation de la création de personnages. 3 types d'objet existent pour se faire.
+  - Les setup, qui permettent de définir une ensemble de compétences/caractéristiques. Une fois l'objet créé il suffit de le glisser sur la fiche de personnage pour créer un personnage 'vierge'.
+  - Les occupations, qui permettent de définir une profession ainsi que de calculer les points a distribuer parmi les différentes compétences. Comme pour les setup, il suffit de glisser une occupation sur un PJ. Les points peuvent ensuite être distribués dans l'onglet 'développement' de la fiche de personnage. Pour se faire votre gardien doit activer le mode création de personnage.
+  - Les archétypes, fonctionnent comme les occupations et sont spécifiques a Pulp Cthulhu
 
+- Implémentation du système d'expérience.
 
+- Fiches de créatures. Fonctionnent de la même manière que les fiches de PJ. Elle permettent en plus d'avoir des jet de dès pour les caractéristiques.
 
+- Jets de SAN.
 
-
-
-
-
-
+- Automatisation des combats. Calcul des différents jets de dés, distance, balles tirées, difficultés etc...
