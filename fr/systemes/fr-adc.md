@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2020-12-17T15:58:01.632Z
+date: 2020-12-17T16:14:08.664Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -26,4 +26,23 @@ Le système CoC7 propose aussi une implémentation succincte des règles de Pulp
 ## Installer le système
 - [Installer l'application foundry VTT](https://foundryvtt.wiki/fr/pour-commencer/setup)
 - Dans l'onglet Game System de l'application foundry chercher et installer "[Call of Cthulhu 7th edition](https://foundryvtt.com/packages/CoC7/)"
+
+## Module recommendé
+- [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/): Ajoute des dés en 3D.
+
+## FAQ
+**Pourquoi je n'ai qu'un contenu limité et en anglais livré avec le système ?**
+>Le jeu de rôle l’AdC est propriété de Chaosium. Tout le texte des livre tombe sous le coup du de la propriété intellectuelle. Pour cette raison aucun contenu ne peut être distribué et chaque gardien devra rentrer son contenu pour pouvoir utiliser le système.
+Quelques exemples sont livrés avec le système, ils ne contiennent aucun texte issu des livres. Jouant essentiellement en anglais j’ai fourni quelques exemples en anglais.
+
+**Pourquoi les personnages que je créé n'ont aucune compétences ?**
+>Encore une fois pour des raisons de propriété intellectuelle aucun contenu (compétence ou autre n'est livré avec le système)
+De plus l'AdC est un système très ouvert et il est courrant que chaque gardien créé ses propres compétences.
+
+**J'ai trouvé un bug ou j'ai une question que faire ?**
+>Vous pouvez contacter *Vétérini#8953* sur le discord de foundry ou sur le discord de la communauté française.
+N’hésitez pas à rapporter vos bugs/suggestion sur la page [github du projet](https://github.com/HavlockV/CoC7-FoundryVTT/issues).
+
+## Fonctionnalités
+- Les fiches de personnage. Les attributs dérivés sont calculés automatiquement. Les champs des fiches sont clickables 
 
