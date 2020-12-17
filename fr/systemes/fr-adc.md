@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2020-12-17T16:28:50.038Z
+date: 2020-12-17T16:29:59.946Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -43,7 +43,7 @@ De plus l'AdC est un système très ouvert et il est courant que chaque gardien 
 >Vous pouvez contacter *Vétérini#8953* sur le discord de foundry ou sur le discord de la communauté française.
 N’hésitez pas à rapporter vos bugs/suggestion sur la page [github du projet](https://github.com/HavlockV/CoC7-FoundryVTT/issues).
 
-## Fonctionnalités
+## Fonctionnalités principales
 - Fiches de personnage. Les attributs dérivés sont calculés automatiquement. Les champs des fiches sont cliquables et vont déclencher le jet correspondant.
 
 - Jets de compétences, avec les système de redoublement, et dépense de chance.
