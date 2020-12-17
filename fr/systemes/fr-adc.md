@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2020-12-17T16:14:08.664Z
+date: 2020-12-17T16:14:40.632Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -27,7 +27,7 @@ Le système CoC7 propose aussi une implémentation succincte des règles de Pulp
 - [Installer l'application foundry VTT](https://foundryvtt.wiki/fr/pour-commencer/setup)
 - Dans l'onglet Game System de l'application foundry chercher et installer "[Call of Cthulhu 7th edition](https://foundryvtt.com/packages/CoC7/)"
 
-## Module recommendé
+## Module recommandé
 - [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/): Ajoute des dés en 3D.
 
 ## FAQ
@@ -37,7 +37,7 @@ Quelques exemples sont livrés avec le système, ils ne contiennent aucun texte 
 
 **Pourquoi les personnages que je créé n'ont aucune compétences ?**
 >Encore une fois pour des raisons de propriété intellectuelle aucun contenu (compétence ou autre n'est livré avec le système)
-De plus l'AdC est un système très ouvert et il est courrant que chaque gardien créé ses propres compétences.
+De plus l'AdC est un système très ouvert et il est courant que chaque gardien créé ses propres compétences.
 
 **J'ai trouvé un bug ou j'ai une question que faire ?**
 >Vous pouvez contacter *Vétérini#8953* sur le discord de foundry ou sur le discord de la communauté française.
