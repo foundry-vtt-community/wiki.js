@@ -2,7 +2,7 @@
 title: Unlisted Game Systems
 description: 
 published: true
-date: 2020-10-12T13:15:12.889Z
+date: 2020-12-17T18:44:12.827Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -140,6 +140,12 @@ Torchbearer system for Foundry, ongoing work by Nick Serluco and Jason Reid.
 # Unreleased Game Systems
 
 This list is a holdover from the previous Wiki's information and may be outdated. These systems had no project links at the time of cleanup and so their status couldn't be ascertained.
+	
+## Black Void
+* **Author**: Corndog
+* **Foundry VTT Compatibility**: 0.7.7 (haven't tested other versions yet)
+### Description	
+A dark and esoteric fantasy setting where human subsistence is in peril, as an eldritch cataclysm has exiled mankind from its homeworld, Earth. The Black Void RPG introduces action, adventure, intrigue and horror, as you and your fellow players seek to claim your rightful place in a vast and unfamiliar Cosmos or seek enlightenment in the mysterious Void filled with wonder, delight and dread.
 
 ## Star Trek Adventures (2d20)
 * **Author**: NickEast#1311
