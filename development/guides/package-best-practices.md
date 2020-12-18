@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2020-11-20T14:28:05.104Z
+date: 2020-12-18T16:03:18.524Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -68,4 +68,12 @@ This section was last updated for Foundry Core 0.7.7.
 - The [`libWrapper` library module](https://github.com/ruipin/fvtt-lib-wrapper) is an excellent dependency to aid in the "patching" of core functions.
 - Foundry Core has a keyboard manager class accessible `game.keyboard`. It is recommended to leverage this when your module needs to know the state of the keyboard.
 - Consider using [WeakMaps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) when you need to attach additional properties to core objects that don't have flags.
+
+# Overwriting Foundry Core Behavior
+- Code as defensively as possible when writing a module which aims to overwrite or replace Core functionality/logic.
+
+From Atropos:
+> The risk of this kind of failure will always be higher for modules which fundamentally exist for the purpose of overwriting core functions to behave differently in ways that are not allowed by the supported API. Not to pick on the "Perfect Vision" module - but it excavates most of the vision/lighting rendering of Foundry VTT and replaces it with different logic. A module like this is extremely vulnerable to all sorts of breaks in ways that I cannot possibly account for when I am making development decisions.
+>
+> If you're writing a module that carves out the guts of a core Foundry function and replaces it with entirely different logic - it would be prudent to have some way to abort or fall-back to the core logic in cases where your overridden logic fails
 
