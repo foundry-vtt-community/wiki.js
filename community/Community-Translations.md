@@ -2,7 +2,7 @@
 title: Translations
 description: 
 published: true
-date: 2020-12-04T22:38:15.970Z
+date: 2020-12-18T21:17:57.638Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -17,7 +17,7 @@ dateCreated: 2020-09-23T00:25:06.218Z
       * [Italian](#italian)
       * [Korean](#korean)
       * [Portuguese (BR)](#portuguese-br)
-      * [Russian (Foundry, D&amp;D5, Dungeon World)](#russian-foundry-dd5-dungeon-world)
+      * [Russian](#russian)
       * [Spanish](#spanish)
       * [Swedish](#swedish)
    * [Appendix](#appendix)
@@ -29,14 +29,14 @@ dateCreated: 2020-09-23T00:25:06.218Z
 
 ## Chinese 中文（简体）
 
-### Core Game FoundryVTT 中文核心系统
+### Core Game Foundry VTT 中文核心系统
 * **Authors**: Chivell
 * **Version**: 0.1
 * **Foundry VTT Compatibility**: 0.4+
 
 #### Link(s) to Translation 链接
-* Gitlab : [https://gitlab.com/xtlcme/foundry-vtt-chn/cn-CN](https://gitlab.com/xtlcme/foundry-vtt-chn/cn-CN)
-* Manifest : [https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json](https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
+* GitLab: [https://gitlab.com/xtlcme/foundry-vtt-chn](https://gitlab.com/xtlcme/foundry-vtt-chn)
+* Manifest: [https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json](https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
 
 #### Description 描述
 将中文添加到FoundryVTT的核心系统中。之后在游戏世界中的设置选择语言为【中文（简体）】即可。
@@ -46,14 +46,14 @@ dateCreated: 2020-09-23T00:25:06.218Z
 
 ## French
 
-### Core Game FoundryVTT 
+### Core Game Foundry VTT 
 * **Authors**: Dreygon, Rwanoux, baktov#5773, DamonReborn(Naoki#9313)
 * **Version**: 0.4.3.1
 * **Foundry VTT Compatibility**: 0.3+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr)
-* Manifest : [https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr/raw/master/fr-FR/module.json](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr/raw/master/fr-FR/module.json)
+* GitLab: [https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr)
+* Manifest: [https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr/raw/master/fr-FR/module.json](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr/raw/master/fr-FR/module.json)
 
 #### Description
 This module adds the option to select the French (FRANCE) language from the FoundryVTT settings menu. Selecting this option will translate various aspects of the program interface.
@@ -69,8 +69,8 @@ For issue or translation problem, contact baktov#5773 or Naoki#9313 on Discord!
 * **Foundry VTT Compatibility**: 0.4+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr](https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr)
-* Manifest : [https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/raw/master/dnd5e_fr-FR/module.json](https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/raw/master/dnd5e_fr-FR/module.json)
+* GitLab: [https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr](https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr)
+* Manifest: [https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/raw/master/dnd5e_fr-FR/module.json](https://gitlab.com/baktov.sugar/foundryvtt-dnd5e-lang-fr-fr/raw/master/dnd5e_fr-FR/module.json)
 
 #### Description
 This module adds the option to translate in French (FRANCE) language Dungeon and Dragon 5th edition System. 
@@ -84,8 +84,8 @@ Installation : Dans le menu des modules, cliquer sur install module" et dans le 
 * **Foundry VTT Compatibility**: 0.4+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr](https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr)
-* Manifest : [https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr/raw/master/starfinder_fr-FR/module.json](https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr/raw/master/starfinder_fr-FR/module.json)
+* GitLab: [https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr](https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr)
+* Manifest: [https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr/raw/master/starfinder_fr-FR/module.json](https://gitlab.com/baktov.sugar/foundryvtt-starfinder-lang-fr-fr/raw/master/starfinder_fr-FR/module.json)
 
 #### Description
 This module adds the option to translate in French (FRANCE) language Starfinder System. 
@@ -99,8 +99,8 @@ Installation : Dans le menu des modules, cliquer sur install module" et dans le 
 * **Foundry VTT Compatibility**: 0.5+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr](https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr)
-* Manifest : [https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/master/module.json](https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/master/module.json)
+* GitLab: [https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr](https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr)
+* Manifest: [https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/master/module.json](https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/master/module.json)
 
 #### Description
 This module adds the option to translate in French (FRANCE) language Warhammer 4 FRP system. 
@@ -112,31 +112,31 @@ Installation : Dans le menu des modules, cliquer sur install module" et dans le 
 
 ## German
 
+### Core Game Foundry VTT 
 * **Author**: Hydroxi#0366, lutece#8413 on Discord
 * **Version**: 0.3.9.4
 * **Foundry VTT Compatibility**: 0.3+
 
+#### Link(s) to Translation
+* GitLab: [https://gitlab.com/Hydroxi/foundryvtt-lang-de-de](https://gitlab.com/Hydroxi/foundryvtt-lang-de-de)
+* Manifest: [https://gitlab.com/Hydroxi/foundryvtt-lang-de-de/-/raw/master/de-DE/module.json](https://gitlab.com/Hydroxi/foundryvtt-lang-de-de/-/raw/master/de-DE/module.json)
 
-### Link(s) to Translation
-* [https://github.com/Hydroxi/foundryvtt-german](https://github.com/Hydroxi/foundryvtt-german)
-* [https://raw.githubusercontent.com/Hydroxi/foundryvtt-german/master/de-DE/module.json](https://raw.githubusercontent.com/Hydroxi/foundryvtt-german/master/de-DE/module.json)
-
-### Description
+#### Description
 This module adds the option to select the German (GERMANY) language from the FoundryVTT settings menu.
-Installation In the Add-On Modules option click on Install Module and place the following link in the field Manifest URL `https://raw.githubusercontent.com/Hydroxi/foundryvtt-german/master/de-DE/module.json`
+Installation In the Add-On Modules option click on Install Module and place the following link in the field Manifest URL `https://gitlab.com/Hydroxi/foundryvtt-lang-de-de/-/raw/master/de-DE/module.json`
 
 ---
 
 ## Italian
 
-### Core Game FoundryVTT 
+### Core Game Foundry VTT 
 * **Author**: Simone
 * **Version**: 0.2
 * **Foundry VTT Compatibility**: 0.4+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/riccisi/foundryvtt-lang-it-it](https://gitlab.com/riccisi/foundryvtt-lang-it-it)
-* Manifest : [https://gitlab.com/riccisi/foundryvtt-lang-it-it/raw/master/it-IT/module.json](https://gitlab.com/riccisi/foundryvtt-lang-it-it/raw/master/it-IT/module.json)
+* GitLab: [https://gitlab.com/riccisi/foundryvtt-lang-it-it](https://gitlab.com/riccisi/foundryvtt-lang-it-it)
+* Manifest: [https://gitlab.com/riccisi/foundryvtt-lang-it-it/raw/master/it-IT/module.json](https://gitlab.com/riccisi/foundryvtt-lang-it-it/raw/master/it-IT/module.json)
 
 #### Description
 This module adds the option to select the Italian language from the FoundryVTT settings menu. Selecting this option will translate various aspects of the program interface.
@@ -149,8 +149,8 @@ Questo modulo aggiunge l'opzione per selezionare la lingua italiana (ITALIA) dal
 * **Foundry VTT Compatibility**: 0.4+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it](https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it)
-* Manifest : [https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it/raw/master/it-IT/module.json](https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it/raw/master/it-IT/module.json)
+* GitLab: [https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it](https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it)
+* Manifest: [https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it/raw/master/it-IT/module.json](https://gitlab.com/riccisi/foundryvtt-dnd5e-lang-it-it/raw/master/it-IT/module.json)
 
 #### Description
 This module adds the option to translate in Italian language the "Dungeon and Dragon" 5th edition System. 
@@ -163,14 +163,14 @@ For issues or translation problems, contact ariakas81#9664 or Simone#6710 on Dis
 
 ## Korean
 
-### Core Game FoundryVTT 
+### Core Game Foundry VTT 
 * **Author**: Shoyu Vanilla#3445 on Discord
 * **Version**: 0.1.2
 * **Foundry VTT Compatibility**: 0.47+
 
 #### Link(s) to Translation
-* Github : [https://github.com/ShoyuVanilla/FoundryVTT-lang-ko-KR](https://github.com/ShoyuVanilla/FoundryVTT-lang-ko-KR)
-* Manifest : [https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-lang-ko-KR/master/module.json](https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-lang-ko-KR/master/module.json)
+* GitHub : [https://github.com/ShoyuVanilla/FoundryVTT-lang-ko-KR](https://github.com/ShoyuVanilla/FoundryVTT-lang-ko-KR)
+* Manifest: [https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-lang-ko-KR/master/module.json](https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-lang-ko-KR/master/module.json)
 
 #### Description
 This module adds the option to select the Korean language from the FoundryVTT settings menu. Selecting this option will translate various aspects of the program interface.
@@ -181,16 +181,17 @@ This module adds the option to select the Korean language from the FoundryVTT se
 
 ## Portuguese (BR)
 
+### Core Game Foundry VTT 
 * **Authors**: Miriadis#9152, Bellenus#5269, Thomaz M.#7564 and Melithian539#0625 on Discord
 * **Version**: 0.3.1
 * **Foundry VTT Compatibility**: 0.5+
 
-### Link(s) to Translation
-* [https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese)
-* [https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/raw/master/pt-BR/module.json](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/raw/master/pt-BR/module.json)
+#### Link(s) to Translation
+* GitLab: [https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese)
+* Manifest: [https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/raw/master/pt-BR/module.json](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/raw/master/pt-BR/module.json)
 
-### Description
-This module adds the option to select the Português (Brasil) language from the FoundryVTT settings menu. Selecting this option will translate various aspects of the program interface.  
+#### Description
+This module adds the option to select the Português (Brasil) language from the FoundryVTT settings menu. Selecting this option will translate various aspects of the program interface.
 
 Esse módulo adiciona a opção de selecionar o idioma Português (Brasil) no menu de configurações do FoundryVTT. Ao selecionar essa opção você obterá a tradução de diversos aspectos da interface do programa.
 
@@ -200,25 +201,27 @@ Esse módulo adiciona a opção de selecionar o idioma Português (Brasil) no me
 * **Foundry VTT Compatibility**: 0.5+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/Caua539/foundryvtt-dnd5e-brazilian-portuguese](https://gitlab.com/Caua539/foundryvtt-dnd5e-brazilian-portuguese)
-* Manifest : [https://gitlab.com/Caua539/foundryvtt-dnd5e-brazilian-portuguese/raw/master/dnd5e_pt-BR/module.json](https://gitlab.com/Caua539/foundryvtt-dnd5e-brazilian-portuguese/raw/master/dnd5e_pt-BR/module.json)
+* GitLab: [https://gitlab.com/foundryvtt-pt-br/foundryvtt-dnd5e-brazilian-portuguese](https://gitlab.com/foundryvtt-pt-br/foundryvtt-dnd5e-brazilian-portuguese)
+* Manifest: [https://gitlab.com/foundryvtt-pt-br/foundryvtt-dnd5e-brazilian-portuguese/-/raw/master/dnd5e_pt-BR/module.json](https://gitlab.com/foundryvtt-pt-br/foundryvtt-dnd5e-brazilian-portuguese/-/raw/master/dnd5e_pt-BR/module.json)
 
 #### Description
-This module adds the option to translate to Portuguese language the FoundryVTT Dungeons and Dragons 5th Edition System. This modules only translates words in places related to the DND 5E system, like sheets and rolls. This module doesn't translate other parts of the FoundryVTT interface.  
+This module adds the option to translate to Portuguese language the FoundryVTT Dungeons and Dragons 5th Edition System. This modules only translates words in places related to the DND 5E system, like sheets and rolls. This module doesn't translate other parts of the FoundryVTT interface.
 
 Adiciona o idioma Português (Brasil) para o sistema de jogo D&D 5E no FoundryVTT. Esse módulo traduz somente os termos relacionados ao sistema de D&D 5E, como as fichas e rolagens. Esse módulo não traduz outras partes do FoundryVTT.
 
 ---
 
-## Russian (Foundry, D&D5, Dungeon World)
+## Russian
 
+### Core Game Foundry VTT, D&D5, OSE, Coriolis, Dungeon World, Savage Worlds, Cypher, Traveller
 * **Author**: Phenomen [Discord: Phenomen#1337]
 * **Version**: 0.6.0.1
 * **Foundry VTT Compatibility**: 0.6.0
 
 ### Links to Translation
-* Github: [https://github.com/Phenomen/foundry-vtt-ru](https://github.com/Phenomen/foundry-vtt-ru)
-* Manifest: [https://github.com/Phenomen/foundry-vtt-ru/raw/master/module.json](https://github.com/Phenomen/foundry-vtt-ru/raw/master/module.json)
+* GitHub: [https://github.com/Phenomen/foundry-vtt-ru](https://github.com/Phenomen/foundry-vtt-ru)
+* Manifest: [https://raw.githubusercontent.com/Phenomen/foundry-vtt-ru/master/module.json](https://raw.githubusercontent.com/Phenomen/foundry-vtt-ru/master/module.json)
+
 ### Description
 Russian language for FoundryVTT and D&D5, Dungeon World system.
 
@@ -231,16 +234,14 @@ Russian language for FoundryVTT and D&D5, Dungeon World system.
 
 ## Spanish
 
-### Core Game FoundryVTT 
-
+### Core Game Foundry VTT 
 * **Author**: Cosmo Corban#4840 on Discord
 * **Version**: 0.1
 * **Foundry VTT Compatibility**: 0.5+
 
-
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/carlosjrlu/foundryvtt-es/](https://gitlab.com/carlosjrlu/foundryvtt-es/)
-* Manifest : [https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es-ES/module.json](https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es-ES/module.json)
+* GitLab: [https://gitlab.com/carlosjrlu/foundryvtt-es/](https://gitlab.com/carlosjrlu/foundryvtt-es/)
+* Manifest: [https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es/module.json](https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es/module.json)
 
 #### Description
 This module adds the option to select the Spanish (Español) language from the FoundryVTT settings menu.
@@ -252,14 +253,13 @@ Incluye la traducción completa de la interfaz del programa.
 Instalación: En la pestaña de Add-On Modules, hacer clic en Install Module e introduzca el siguiente enlace en el apartado que dice Manifest URL 'https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es-ES/module.json'
 
 ### Dungeons & Dragons 5th Edition System [Author : Atropos]
-
 * **Author**: Cosmo Corban#4840 on Discord
 * **Version**: 0.1
 * **Foundry VTT Compatibility**: 0.5+
 
 #### Link(s) to Translation
-* Gitlab : [https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es](https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es)
-* Manifest : [https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es/-/raw/master/es-ES/module.json](https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es/-/raw/master/es-ES/module.json)
+* GitLab: [https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es](https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es)
+* Manifest: [https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es/-/raw/master/es-ES/module.json](https://gitlab.com/carlosjrlu/foundryvtt-dnd5e-lang-es/-/raw/master/es-ES/module.json)
 
 #### Description
 This module adds the option to translate the FoundryVTT Dungeons and Dragons 5th Edition System to Spanish (Español). This module only translates words related to the D&D 5E system, like sheets and rolls. (Soon: Compendium)
@@ -270,17 +270,16 @@ Este módulo agrega el idioma Español (Spanish) como una opción para traducir 
 
 ## Swedish
 
-### Core Game FoundryVTT 
-
+### Core Game Foundry VTT 
 * **Author**: xdy#3735 on Discord
 * **Version**: 0.2.1
 * **Foundry VTT Compatibility**: 0.7.6+
 
-### Link(s) to Translation
-* Github : [https://github.com/xdy/FoundryVTT-lang-sv](https://github.com/xdy/foundryvtt-lang-sv)
-* Manifest : [https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json](https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json)
+#### Link(s) to Translation
+* GitHub : [https://github.com/xdy/FoundryVTT-lang-sv](https://github.com/xdy/foundryvtt-lang-sv)
+* Manifest: [https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json](https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json)
 
-### Description
+#### Description
 Swedish language support for Foundry VTT.
 Svenskt språkstöd för Foundry VTT.
 
@@ -302,8 +301,8 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 * **Foundry VTT Compatibility**: (Note which versions of Foundry Virtual Tabletop the translation is compatible with.)
 
 ### Link(s) to Translation
-* (Put a web URL here to find the translation.)
-* (Put the manifest url here to update/install the translation.)
+* GitLab/GitHub: (Put a web URL here to find the translation.)
+* Manifest: (Put the manifest url here to update/install the translation.)
 
 ### Description
 (Describe the translation here. This should include installation instructions, and anything important to note. Due to the particular oddities of some archiving programs (WinRar, 7zip), and GitHub zip folders, including a screenshot of what the translation should look like file-wise in the “public/systems/examplesystem” is appreciated, though not required.)
@@ -315,7 +314,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 - Links to translations should link to the author’s page for it, if such exists. This helps emphasize the translation author’s control over their creation, and allows users to see information that the translation author deems important. If you have the translation author’s permission otherwise, or you are the creator, feel free to link directly to the translation download link. 
 - Translations are sorted by system compatibility and then alphabetically.
-- Ensure that Foundry is noted as “Foundry VTT” or “Foundry Virtual Tabletop” in writing. This helps emphasize Foundry’s role as a unique, standalone tabletop, and helps distinguish it from other brands using the word “foundry”.   
+- Ensure that Foundry is noted as “Foundry VTT” or “Foundry Virtual Tabletop” in writing. This helps emphasize Foundry’s role as a unique, standalone tabletop, and helps distinguish it from other brands using the word “foundry”.
 - Ideally, each translation should be separated by a single line break. This is just to help it look neat. 
 - Translations should not be listed if they violate existing copyright law.
 
