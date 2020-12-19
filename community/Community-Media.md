@@ -2,15 +2,14 @@
 title: Maps, Art & Media
 description: 
 published: true
-date: 2020-10-12T13:26:40.360Z
-tags: 
+date: 2020-12-19T18:16:16.758Z
+tags: maps, art, media, icons, music, sounds
 editor: markdown
 dateCreated: 2020-09-23T00:24:38.840Z
 ---
 
 # Free Media
-
-A short overview of free to use vtt media. Note that a lot of other sources on this page might also be free or offer free media.
+A short overview of free to use media for Foundry VTT. Note that a lot of other sources on this page might also be free or offer free media.
 
 * **Map-Packs**
    * [Forgotten Adventures](https://www.forgotten-adventures.net/live-gallery/): Note: You can use the Google Drive link on the site for easy access.
@@ -27,8 +26,8 @@ A short overview of free to use vtt media. Note that a lot of other sources on t
 # Maps
 
 ## 2-Minute Tabletop
-
-"2-Minute Tabletop is creating Hand-Drawn Maps & Assets for D&D", *Eightfold Paper, Patreon*
+> "2-Minute Tabletop is creating Hand-Drawn Maps & Assets for D&D"
+> — *Eightfold Paper, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/2minutetabletop)
@@ -39,9 +38,8 @@ A short overview of free to use vtt media. Note that a lot of other sources on t
 ---
 
 ## Afternoonmaps
-
-"Afternoon Maps
-is creating RPG and DnD battlemaps", *Afternoon Maps, Patreon*
+> "Afternoon Maps is creating RPG and DnD battlemaps"
+> — *Afternoon Maps, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/afternoonmaps/posts)
@@ -51,8 +49,8 @@ is creating RPG and DnD battlemaps", *Afternoon Maps, Patreon*
 ---
 
 ## Caeora
-
-"Caeora is creating Tabletop Maps & Tokens", *Caeora, Patreon*
+> "Caeora is creating Tabletop Maps & Tokens"
+> — *Caeora, Patreon*
 
 ### Link(s) to Media
 * [Creator](https://www.caeora.com/map-gallery)
@@ -63,9 +61,8 @@ is creating RPG and DnD battlemaps", *Afternoon Maps, Patreon*
 ---
 
 ## Cze and Peku
-
-"Cze and Peku are creating maps for DnD, Pathfinder and other RPGs", *Cze and
-Peku, Patreon*
+> "Cze and Peku are creating maps for DnD, Pathfinder and other RPGs"
+> — *Cze and Peku, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/czepeku/posts)
@@ -75,9 +72,8 @@ Peku, Patreon*
 ---
 
 ## Dungeon Mapster
-
-"Dungeon Mapster is creating maps for pathfinder, tabletop games, and dungeons
-and dragons", *Dungeon Mapster, Patreon*
+> "Dungeon Mapster is creating maps for pathfinder, tabletop games, and dungeons and dragons"
+> — *Dungeon Mapster, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/dungeonmapster/posts)
@@ -87,8 +83,8 @@ and dragons", *Dungeon Mapster, Patreon*
 ---
 
 ## Eightfold
-
-"Eightfold Paper is creating Battlemaps and Item Cards for Tabletop RPGs", *Eightfold Paper, Patreon*
+> "Eightfold Paper is creating Battlemaps and Item Cards for Tabletop RPGs"
+> — *Eightfold Paper, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/EightfoldPaper/posts)
@@ -98,9 +94,8 @@ and dragons", *Dungeon Mapster, Patreon*
 ---
 
 ## Forgotten Adventures
-
-"Forgotten Adventures are creating Digital Assets and resources for Tabletop
-RPGs.", *Forgotten Adventures, Patreon*
+> "Forgotten Adventures are creating Digital Assets and resources for Tabletop RPGs."
+> — *Forgotten Adventures, Patreon*
 
 ### Link(s) to Media
 * [Creator](https://www.forgotten-adventures.net/)
@@ -111,10 +106,8 @@ RPGs.", *Forgotten Adventures, Patreon*
 ---
 
 ## Gabriel Pickard
-
-"Gabriel Pickard is a long time rpg lover residing in the Seattle Washington,
-he's traded chef's knives for digital art and apparently talking in the third
-person.", *Gabriel Pickard, Roll20*
+> "Gabriel Pickard is a long time rpg lover residing in the Seattle Washington, he's traded chef's knives for digital art and apparently talking in the third person."
+> — *Gabriel Pickard, Roll20*
 
 ### Link(s) to Media
 * [Roll 20 Marketplace](https://marketplace.roll20.net/browse/publisher/64/gabriel-pickard)
@@ -124,8 +117,8 @@ person.", *Gabriel Pickard, Roll20*
 ---
 
 ## Heroic Maps
-
-"Heroic Maps are creating battlemaps for tabletop RPGs", *Heroic Maps, Patreon*
+> "Heroic Maps are creating battlemaps for tabletop RPGs"
+> — *Heroic Maps, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/heroicmaps/posts)
@@ -135,8 +128,8 @@ person.", *Gabriel Pickard, Roll20*
 ---
 
 ## Jesper Nilsson Cyren
-
-"Jesper Nilsson Cyren is creating RPG maps", *Jesper Nilsson Cyren, Patreon*
+> "Jesper Nilsson Cyren is creating RPG maps"
+> — *Jesper Nilsson Cyren, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/CyrensMaps/posts)
@@ -146,9 +139,8 @@ person.", *Gabriel Pickard, Roll20*
 ---
 
 ## Maphammer
-
-"Maphammer is creating battle maps for D&D, Pathfinder and other tabletop
-games", *Maphammer, Patreon*
+> "Maphammer is creating battle maps for D&D, Pathfinder and other tabletop games"
+> — *Maphammer, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/maphammer/posts)
@@ -158,8 +150,8 @@ games", *Maphammer, Patreon*
 ---
 
 ## Neutral Party
-
-"Neutral Party is creating RPG Maps", *Neutral Party, Patreon*.
+> "Neutral Party is creating RPG Maps"
+> — *Neutral Party, Patreon*.
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/neutralparty/posts)
@@ -169,9 +161,8 @@ games", *Maphammer, Patreon*
 ---
 
 ## PogS Props
-
-"PogS Props
-is creating Battlemaps, maps, tokens, stuff for RPGs", *PogS Props, Patreon*
+> "PogS Props is creating Battlemaps, maps, tokens, stuff for RPGs"
+> — *PogS Props, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/PogS_Props)
@@ -181,9 +172,8 @@ is creating Battlemaps, maps, tokens, stuff for RPGs", *PogS Props, Patreon*
 ---
 
 ## The Drafting Table
-
-"The Drafting Table
-is creating Map assets, battlemaps, RPG Maps, and more!", *The Drafting Table, Patreon*
+> "The Drafting Table is creating Map assets, battlemaps, RPG Maps, and more!"
+> — *The Drafting Table, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/draftingtable)
@@ -195,10 +185,8 @@ is creating Map assets, battlemaps, RPG Maps, and more!", *The Drafting Table, P
 # Animated Maps
 
 ## Animated Dungeon Maps
-
-"Animated Dungeon Maps
-is creating animated maps for D&D and other tabletop games", *Animated Dungeon
-Maps, Patreon*
+> "Animated Dungeon Maps is creating animated maps for D&D and other tabletop games"
+> — *Animated Dungeon Maps, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/animatedmaps/posts)
@@ -208,9 +196,8 @@ Maps, Patreon*
 ---
 
 ## Dynamic Dungeons
-
-"Dynamic Dungeons is creating animated maps for tabletop RPG and miniature
-games", *Dynamic Dungeons, Patreon*
+> "Dynamic Dungeons is creating animated maps for tabletop RPG and miniature games"
+> — *Dynamic Dungeons, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/dynamicdungeons/overview)
@@ -220,9 +207,8 @@ games", *Dynamic Dungeons, Patreon*
 ---
 
 ## Living Realms
-
-"Living Realms
-is creating Animated Maps for Tabletop RPG Games", *Living Realms, Patreon*
+> "Living Realms is creating Animated Maps for Tabletop RPG Games"
+> — *Living Realms, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/LivingRealms/posts)
@@ -236,9 +222,8 @@ is creating Animated Maps for Tabletop RPG Games", *Living Realms, Patreon*
 Music and ambient sounds for your tabletop game.
 
 ## Adventure Music
-
-"Adventure Music is creating Instrumental Music for Dnd, Pathfinder and other
-RPG's", *Adventure Music, Patreon*
+> "Adventure Music is creating Instrumental Music for Dnd, Pathfinder and other RPG's"
+> — *Adventure Music, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/adventuremusicjr)
@@ -248,12 +233,8 @@ RPG's", *Adventure Music, Patreon*
 ---
 
 ## Michael Ghelfi
-
-"My name is Michael Ghelfi and I'm a self-taught music and ambiences composer
-from Switzerland. [...]. I'm working on
-creating new music albums and expanding my RPG ambiences library to make it the
-biggest, the fullest and the most immersive ambience library ever, and for
-free.", *Michael Ghelfi, Michael Ghalfi Official Website*
+> "My name is Michael Ghelfi and I'm a self-taught music and ambiences composer from Switzerland. [...]. I'm working on creating new music albums and expanding my RPG ambiences library to make it the biggest, the fullest and the most immersive ambience library ever, and for free."
+> — *Michael Ghelfi, Michael Ghelfi Official Website*
 
 ### Link(s) to Media
 * [Creator](https://michaelghelfi.com/)
@@ -266,12 +247,8 @@ free.", *Michael Ghelfi, Michael Ghalfi Official Website*
 ---
 
 ## Music d20
-
-"My name is Will Savino, and when I'm not creating music and sound effects for
-video games, I'm a tabletop DM. I know how important audio can be for setting
-the mood of your adventures, and over time, I've created enough music for my own
-players that I figured I could share this audio with other tabletop DMs and
-parties." *Will Savino, Patreon*
+> "My name is Will Savino, and when I'm not creating music and sound effects for video games, I'm a tabletop DM. I know how important audio can be for setting the mood of your adventures, and over time, I've created enough music for my own players that I figured I could share this audio with other tabletop DMs and parties."
+> — *Will Savino, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/musicd20)
@@ -281,9 +258,8 @@ parties." *Will Savino, Patreon*
 ---
 
 ## Sword Coast Soundscapes
-
-"Sword Coast Soundscapes
-is creating Ambient Soundscapes", *Sword Coast Soundscapes, Patreon*
+> "Sword Coast Soundscapes is creating Ambient Soundscapes"
+> — *Sword Coast Soundscapes, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/swordcoastsoundscapes)
@@ -295,9 +271,8 @@ is creating Ambient Soundscapes", *Sword Coast Soundscapes, Patreon*
 ---
 
 ## Vindsvept
-
-"Vindsvept
-is creating Fantasy Music", *Vindsvept, Patreon*
+> "Vindsvept is creating Fantasy Music"
+> — *Vindsvept, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/Vindsvept)
@@ -308,13 +283,11 @@ is creating Fantasy Music", *Vindsvept, Patreon*
 
 ---
 
-## [Bundle] GAMEAUDIOGDC BUNDLE
+## [Bundle] GameaudioGDC BUNDLE
+> "90 GB+ of "high-quality sound effects from many of the best sound recordists and designers in the world"
+> — *[sonniss.com](https://sonniss.com/)*
 
-90 GB+ of "high-quality sound effects from many of the best sound recordists and
-designers in the world", *soniss.com*.
-Everything is royalty-free and commercially usable.
-The files are uncompressed and will need to be compressed to be used
-effectively in Foundry VTT.
+Everything is royalty-free and commercially usable. The files are uncompressed and will need to be compressed to be used effectively in Foundry VTT.
 
 * **Artist**: various
 
@@ -328,7 +301,7 @@ Compressed files by a community member:
 * [Google Drive Download](https://drive.google.com/file/d/1CCWQm7lGDHR0ssMUCKC-lWU0CXTBoDQ1/view?usp=sharing)
 Note: *always scan for viruses*
 
-### Foundry modules
+### Foundry VTT Modules
 
 The above converted to ogg and reindexed into 4 packages for Foundry
 
@@ -353,7 +326,6 @@ The above converted to ogg and reindexed into 4 packages for Foundry
 # Other
 
 ## Game-icons.net
-
 More then 3800 free icons for your games. All in SVG.
 
 ### Link(s) to Media
@@ -361,7 +333,7 @@ More then 3800 free icons for your games. All in SVG.
 
 ![https://i.imgur.com/YTvfY9p.png](https://i.imgur.com/YTvfY9p.png)
 
-### Foundry module
+### Foundry VTT Module
 
 [Game-icons.net repackaged for Foundry VTT](https://github.com/datdamnzotz/icons/blob/master/README-FoundryVTT.md)
 
@@ -370,14 +342,11 @@ Downloads all white and black background icons to your `Data/modules/game-icons-
 ---
 
 ## [Bundle] WOW-Icons
-
 2692 icons from World of Warcraft.
 
-Note: You will need to use a BLPNG Converter to convert the internally used BLP
-file format into generally usable PNG images.
+Note: You will need to use a BLPNG Converter to convert the internally used BLP file format into generally usable PNG images.
 
-There is a dictionary available. It's created by the vtta-iconizer
-community and can be used to quickly search through the icons by keywords.
+There is a dictionary available. It's created by the vtta-iconizer community and can be used to quickly search through the icons by keywords.
 
 ### Link(s) to Media
 * [Icons](https://www.wowinterface.com/downloads/info24559-CleanIcons-ThinFanUpdate.html)
