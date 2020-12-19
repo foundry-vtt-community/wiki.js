@@ -2,7 +2,7 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2020-11-10T01:36:08.361Z
+date: 2020-12-19T17:45:49.141Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z
@@ -43,15 +43,14 @@ Let's start with
 
 ### Installing node.js and it's Package Manager
 
-This guide is for linux, sinde all cheaper hosts on the internet are running Linux, so there's that. I will be using Ubuntu, if you are using a different Linux distribution, your commands and packages might differ.
+This guide is for linux, since all cheaper hosts on the internet are running Linux, so there's that. I will be using Ubuntu, if you are using a different Linux distribution, your commands and packages might differ.
 
 ```
-curl -sL https://deb.nodesource.com/setup_13.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-This installs both nodejs and the node package manager npm. Check both with 
-`node --version` and `npm --version`, at this time of writing node.js is at version 13.10.1 and npm at version 6.13.7.
+This installs both nodejs and the node package manager npm. Check both with `node --version` and `npm --version`, at this time of writing node.js is at version 14.15.1 and npm at version 6.14.9.
 
 ### Install the Reverse Proxy and the Unzip Utility
 
