@@ -1,9 +1,9 @@
 ---
-title: Game-Systems
+title: Game Systems
 description: 
 published: true
-date: 2020-10-09T19:26:13.403Z
-tags: 
+date: 2020-12-19T17:52:12.872Z
+tags: game systems
 editor: markdown
 dateCreated: 2020-09-23T00:24:31.095Z
 ---
