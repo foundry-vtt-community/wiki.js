@@ -2,8 +2,8 @@
 title: Adventures
 description: 
 published: true
-date: 2020-12-19T18:00:58.806Z
-tags: 
+date: 2020-12-19T18:01:57.661Z
+tags: adventures
 editor: markdown
 dateCreated: 2020-09-23T00:24:10.616Z
 ---
@@ -20,7 +20,7 @@ dateCreated: 2020-09-23T00:24:10.616Z
 
 # Foundry VTT Adventures for DnD 5E
 
-Foundry adventures that work within Dungeons and Dragons 5th Edition are noted here.
+Foundry VTT adventures that work within Dungeons and Dragons 5th Edition are noted here.
 
 ## A World Far Far Away
 
