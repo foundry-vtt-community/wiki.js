@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-14T09:55:30.999Z
+date: 2020-12-19T17:07:36.641Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -72,6 +72,9 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 # Notes de Mises à jour
 ---
+### Version 2.0.6 - 19/12/2020
+- correction à l'aide à la création : les capacité de classe niv1 sont données;
+- prise en compte de capacité défense sans armure des barbares et moines pour le calcul de CA
 ### Version 2.0.1 - 14/12/2020
 - débug pour les montées de niveaux avec ajout de capacitées automatiques;
 - ajout de la lignée protéenne et des ses capacitées
