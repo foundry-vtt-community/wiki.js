@@ -2,9 +2,9 @@
 title: SD11.1 Creating-rollable-buttons-with-event-listeners
 description: 
 published: true
-date: 2020-09-23T01:34:44.044Z
+date: 2020-12-20T21:54:36.155Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:24.667Z
 ---
 
@@ -75,5 +75,5 @@ And with that, we've successfully made rollable attributes!
 
 ---
 
-* **Prev:** [Extending the ItemSheet class](https://foundry-vtt-community.github.io/wiki/SD10-Extending-the-ItemSheet-class)
-* **Next:** [Grouping items by type](https://foundry-vtt-community.github.io/wiki/SD11.3-Grouping-items-by-type)
+* **Prev:** [Extending the ItemSheet class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD10-Extending-the-ItemSheet-class)
+* **Next:** [Grouping items by type](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD113-Grouping-items-by-type)
