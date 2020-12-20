@@ -1,8 +1,8 @@
 ---
-title: SD16 Adding-macrobar-support-to-your-Items
+title: SD16 Adding macrobar support to your Items
 description: 
 published: true
-date: 2020-12-20T22:09:38.419Z
+date: 2020-12-20T22:12:08.806Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:43.369Z
