@@ -2,9 +2,9 @@
 title: SD 13.0-Localization
 description: 
 published: true
-date: 2020-09-23T01:33:52.831Z
+date: 2020-12-20T21:57:59.396Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:12.564Z
 ---
 
@@ -148,5 +148,5 @@ When you reload the web page and view an actor, the abbreviations should now rea
 
 ---
 
-* **Prev:** [Adding macrobar support to your Items](https://foundry-vtt-community.github.io/wiki/SD16-Adding-macrobar-support-to-your-Items/)
+* **Prev:** [Adding macrobar support to your Items](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD16-Adding-macrobar-support-to-your-Items)
 * **Next:** To be continued...
