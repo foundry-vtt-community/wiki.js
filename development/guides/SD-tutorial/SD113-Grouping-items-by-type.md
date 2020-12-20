@@ -2,9 +2,9 @@
 title: SD11.3 Grouping-items-by-type
 description: 
 published: true
-date: 2020-09-23T01:34:48.090Z
+date: 2020-12-20T21:55:16.089Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:30.378Z
 ---
 
@@ -231,5 +231,5 @@ And that's it for changes to our character sheet's JS! Now let's make some chang
 
 ---
 
-* **Prev:** [Creating rollable buttons with event listeners](https://foundry-vtt-community.github.io/wiki/SD11.1-Creating-rollable-buttons-with-event-listeners)
-* **Next:** [Separating item types into tabs](https://foundry-vtt-community.github.io/wiki/SD11.4-Separating-item-types-into-tabs)
+* **Prev:** [Creating rollable buttons with event listeners](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD111-Creating-rollable-buttons-with-event-listeners)
+* **Next:** [Separating item types into tabs](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD114-Separating-item-types-into-tabs)
