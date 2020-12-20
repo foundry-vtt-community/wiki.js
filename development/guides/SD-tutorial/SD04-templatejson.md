@@ -2,9 +2,9 @@
 title: SD04 template.json
 description: 
 published: true
-date: 2020-09-23T01:34:14.301Z
+date: 2020-12-20T21:49:56.600Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z
 ---
 
@@ -179,5 +179,5 @@ For example, this snippet would add three different item types to your system, s
 
 ---
 
-* **Prev:** [system.json](https://foundry-vtt-community.github.io/wiki/SD03-system.json)
-* **Next:** [Creating your main system javascript file](https://foundry-vtt-community.github.io/wiki/SD05-Creating-your-main-JS-file)
+* **Prev:** [system.json](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD03-systemjson)
+* **Next:** [Creating your main system javascript file](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD05-Creating-your-main-JS-file)
