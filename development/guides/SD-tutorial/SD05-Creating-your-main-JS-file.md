@@ -2,9 +2,9 @@
 title: SD05 Creating-your-main-JS-file
 description: 
 published: true
-date: 2020-09-23T01:34:18.118Z
+date: 2020-12-20T21:50:51.142Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:47.008Z
 ---
 
@@ -94,5 +94,5 @@ Now let's take a look at the extended Actor class.
 
 ---
 
-* **Prev:** [template.json](https://foundry-vtt-community.github.io/wiki/SD04-template.json)
-* **Next:** [Extending the Actor class](https://foundry-vtt-community.github.io/wiki/SD06-Extending-the-Actor-class)
+* **Prev:** [template.json](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD04-templatejson)
+* **Next:** [Extending the Actor class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD06-Extending-the-Actor-class)
