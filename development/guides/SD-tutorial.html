@@ -1,0 +1,75 @@
+<!--
+title: System Development Tutorial - Start to Finish
+description: 
+published: true
+date: 2020-12-20T21:45:49.612Z
+tags: 
+editor: ckeditor
+dateCreated: 2020-12-20T21:45:49.612Z
+-->
+
+<p>Welcome to my system development tutorial for FoundryVTT! My goal is to guide you through system development with little to no knowledge of Foundry or the languages it uses. At first we'll walk through the steps to create relatively simple systems that allow you to collect data for things like stats and attributes and calculate modifiers for them, but eventually we'll get into more advanced topics like making dice rolls from your sheet or letting items be converted into macros.</p>
+<p>If you have any questions, you can find me on the Foundry discord as @Asacolips#1867. And with that, let's move onto to the tutorial!</p>
+<ul>
+  <li>Getting an empty system together<ul>
+      <li>Start with a boilerplate system</li>
+      <li>Using SWS</li>
+      <li>Using a CLI</li>
+    </ul>
+  </li>
+  <li>Stuff to be aware of<ul>
+      <li>Scripts or ES6 modules?</li>
+      <li>CSS preprocessors</li>
+      <li>Handlebars</li>
+      <li>What about 3rd party libraries?</li>
+      <li>Localization</li>
+    </ul>
+  </li>
+  <li>system.json</li>
+  <li>template.json<ul>
+      <li>Defining actor and item types</li>
+    </ul>
+  </li>
+  <li>Creating your main system javascript file</li>
+  <li>Extending the Actor class<ul>
+      <li>Basic data vs. derived data</li>
+      <li>Creating derived values with prepareData()</li>
+      <li>_prepareCharacterData()</li>
+    </ul>
+  </li>
+  <li>Extending the ActorSheet class<ul>
+      <li>defaultOptions</li>
+      <li>getData()</li>
+      <li>activateListeners()</li>
+    </ul>
+  </li>
+  <li>Creating HTML templates for your actor sheets</li>
+  <li>Extending the Item class</li>
+  <li>Extending the ItemSheet class</li>
+  <li>Other things to do on actor sheets<ul>
+      <li>Creating rollable buttons with event listeners</li>
+      <li>Grouping items by type</li>
+      <li>Separating item types into tabs</li>
+      <li>Adding macrobar support for your items</li>
+    </ul>
+  </li>
+</ul>
+<h2>Sections that are Work-in-Progress</h2>
+<p>In addition to the above, there are several more sections that will be added to this tutorial over time! Check back in every few weeks to see if any additions have been made. If there's a topic related to system development that you would like to see added to this list, shoot me a message on Discord!</p>
+<ul>
+  <li>Other things to do on actor sheets<ul>
+      <li>Creating rollable buttons with dialogs</li>
+      <li>Creating item-like data structures</li>
+      <li>Querying for entities with map and filter</li>
+      <li>When in doubt, look at other systems</li>
+    </ul>
+  </li>
+  <li>CONFIG and things to do with it</li>
+  <li>More Localization</li>
+  <li>TabsV2</li>
+  <li>Flags</li>
+  <li>System Settings</li>
+  <li>Making things draggable in your sheet</li>
+  <li>Overriding core behaviors (like the combat tracker)</li>
+  <li>Development patterns to be aware of in the API</li>
+</ul>
