@@ -2,9 +2,9 @@
 title: SD07 Extending-the-ActorSheet-class
 description: 
 published: true
-date: 2020-09-23T01:34:26.905Z
+date: 2020-12-20T21:52:13.102Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
 ---
 
@@ -157,5 +157,5 @@ And since these examples have all been the individual sections, don't forget you
 
 ---
 
-* **Prev:** [Extending the Actor class](https://foundry-vtt-community.github.io/wiki/SD06-Extending-the-Actor-class)
-* **Next:** [Creating HTML templates for your actor sheets](https://foundry-vtt-community.github.io/wiki/SD08-Creating-HTML-templates-for-your-actor-sheets)
+* **Prev:** [Extending the Actor class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD06-Extending-the-Actor-class)
+* **Next:** [Creating HTML templates for your actor sheets](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD08-Creating-HTML-templates-for-your-actor-sheets)
