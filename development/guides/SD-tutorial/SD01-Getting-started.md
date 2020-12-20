@@ -2,9 +2,9 @@
 title: SD01 Getting-started
 description: 
 published: true
-date: 2020-09-23T01:33:56.972Z
+date: 2020-12-20T21:43:09.818Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
 ---
 
@@ -48,8 +48,8 @@ From here, you can skip to the next page or keep reading if you'd like to read a
 
 ## Other options
 
-If you'd like to see other options for getting started with building a new system to start from, see the [Other options](https://foundry-vtt-community.github.io/wiki/SD01.2-Other-options) page.
+If you'd like to see other options for getting started with building a new system to start from, see the [Other options](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD012-Other-options) page.
 
 ---
 
-* **Next**: [Stuff to be aware of](https://foundry-vtt-community.github.io/wiki/SD02-Stuff-to-be-aware-of)
+* **Next**: [Stuff to be aware of](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD02-Stuff-to-be-aware-of)
