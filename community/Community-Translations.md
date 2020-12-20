@@ -2,32 +2,15 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-19T18:19:11.647Z
+date: 2020-12-20T19:56:00.125Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
 ---
 
-<!--tl=2-->
-<!--ts-->
-   * [Languages](#languages)
-      * [Chinese 中文（简体）](#chinese-中文简体)
-      * [French](#french)
-      * [German](#german)
-      * [Italian](#italian)
-      * [Korean](#korean)
-      * [Portuguese (BR)](#portuguese-br)
-      * [Russian](#russian)
-      * [Spanish](#spanish)
-      * [Swedish](#swedish)
-   * [Appendix](#appendix)
-      * [Appendix A: Adding a Translation](#appendix-a-adding-a-translation)
-      * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)
-<!--te-->
+# Translations
 
-# Languages
-
-## Chinese 中文（简体）
+## Chinese (Simplified) 中文（简体）
 
 ### Core Game Foundry VTT 中文核心系统
 * **Authors**: Chivell
@@ -41,6 +24,47 @@ dateCreated: 2020-09-23T00:25:06.218Z
 #### Description 描述
 将中文添加到FoundryVTT的核心系统中。之后在游戏世界中的设置选择语言为【中文（简体）】即可。
 目前仅汉化了核心系统提供的部分，后续会继续根据翻译。
+
+---
+
+## Catalan
+
+### Core Game Foundry VTT 
+* **Author**: montver / Dr.Slump
+* **Version**: 0.2
+* **Foundry VTT Compatibility**: 0.7.7+
+
+#### Link(s) to Translation
+* GitLab: [https://gitlab.com/montver/foundry-vtt-catala/](https://gitlab.com/montver/foundry-vtt-catala/)
+* Manifest: [https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json)
+
+#### Description
+This module allows to choose the Catalonian in FoundryVTT.
+
+In the 'Add-On Modules' tab of the main menu, click on 'Install Module' and write down this to the pop-up window: https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json
+
+If that doesn't work, you could try downloading the file ca.zip and unzip it in the 'Data\modules' folder and rename it to FoundryVTT-CAT. Also, you have to activate the module in your world, and then choose the language catalonian from the dropdown menu in the general settings.
+
+---
+
+## Czech
+
+### Core Game Foundry VTT 
+* **Author**: Mrkew#3758, Yancho, Exi, DeznekCZ, Pan Bača
+* **Version**: 0.7.7.2
+* **Foundry VTT Compatibility**: 0.6.5+
+
+#### Link(s) to Translation
+* GitLab: [https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz)
+* Manifest: [https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/raw/master/cs-CZ/module.json](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/raw/master/cs-CZ/module.json)
+
+#### Description
+This module allows to choose the Czech in FoundryVTT. Includes the complete translation of the program interface.
+
+In the 'Add-On Modules' tab of the main menu, click on 'Install Module' and find module named Translation: Czech [Core].
+
+If the search engine finds nothing then write down this link bellow to 'Manifest URL'.
+https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json
 
 ---
 
@@ -161,6 +185,44 @@ For issues or translation problems, contact ariakas81#9664 or Simone#6710 on Dis
 
 ---
 
+## Japanese
+
+### Core Game Foundry VTT 
+* **Author**: Asami#8627, Brother Sharp#6921
+* **Version**: 0.4.5
+* **Foundry VTT Compatibility**: 0.6.0+
+
+#### Link(s) to Translation
+* GitHub: [https://github.com/BrotherSharper/foundryVTTja](https://github.com/BrotherSharper/foundryVTTja)
+* Manifest: [https://raw.githubusercontent.com/BrotherSharper/foundryVTTja/master/module.json](https://raw.githubusercontent.com/BrotherSharper/foundryVTTja/master/module.json)
+
+#### Description
+オンセ工房Foundry VTTの本体用の日本語化に必要なファイルを追加するモッドです。
+
+以下のリンクをモッドとしてインストールしてください。
+* リンク： https://raw.githubusercontent.com/BrotherSharper/foundryVTTja/master/module.json
+
+または
+* Add-on Modulesタブ→Module Installを開いて「日本語」と検索すればモッドブラウザに出てきますのでそこからインストールしてください。
+
+### Dungeons & Dragons 5th Edition System [Author : Atropos]
+* **Authors**: Asami#8627, Brother Sharp#6921
+* **Version**: 0.8.1
+* **Foundry VTT Compatibility**: 0.6.0+
+
+#### Link(s) to Translation
+* GitHub: [https://github.com/BrotherSharper/dnd5eja](https://github.com/BrotherSharper/dnd5eja)
+* Manifest: [https://raw.githubusercontent.com/BrotherSharper/dnd5eja/master/module.json](https://raw.githubusercontent.com/BrotherSharper/dnd5eja/master/module.json)
+
+#### Description
+D&D5版システム用の翻訳ファイルよび辞典が追加されます。追加機能として既存の英語の辞典を消して日本語版のみを見えるようにしてくれます（SRDのみ、日本語の無いものは英語のままで残る）
+
+このモッドを使用するには先にモッドとしてインストールし、ゲーム内でモッドを有効化する必要があります。
+
+以下のリンクをモッドとしてインストールしてください。
+* リンク： https://raw.githubusercontent.com/BrotherSharper/dnd5eja/master/module.json
+
+---
 ## Korean
 
 ### Core Game Foundry VTT 
@@ -179,7 +241,7 @@ This module adds the option to select the Korean language from the FoundryVTT se
 
 ---
 
-## Portuguese (BR)
+## Portuguese (Brazil)
 
 ### Core Game Foundry VTT 
 * **Authors**: Miriadis#9152, Bellenus#5269, Thomaz M.#7564 and Melithian539#0625 on Discord
