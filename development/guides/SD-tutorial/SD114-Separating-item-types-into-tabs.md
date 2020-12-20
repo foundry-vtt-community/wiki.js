@@ -2,9 +2,9 @@
 title: SD11.4 Separating-item-types-into-tabs
 description: 
 published: true
-date: 2020-09-23T01:34:52.357Z
+date: 2020-12-20T21:55:50.199Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:36.715Z
 ---
 
@@ -150,5 +150,5 @@ That's all we have to do to get item grouping working! While this works for sepa
 
 ---
 
-* **Prev:** [Grouping items by type](https://foundry-vtt-community.github.io/wiki/SD11.3-Grouping-items-by-type)
-* **Next:** [Adding macrobar support to your items](https://foundry-vtt-community.github.io/wiki/SD16-Adding-macrobar-support-to-your-Items)
+* **Prev:** [Grouping items by type](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD113-Grouping-items-by-type)
+* **Next:** [Adding macrobar support to your items](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD16-Adding-macrobar-support-to-your-Items)
