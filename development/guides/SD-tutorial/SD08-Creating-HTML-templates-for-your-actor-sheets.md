@@ -2,9 +2,9 @@
 title: SD08 Creating-HTML-templates-for-your-actor-sheets
 description: 
 published: true
-date: 2020-09-23T01:34:32.161Z
+date: 2020-12-20T21:52:49.604Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z
 ---
 
@@ -420,5 +420,5 @@ Jumping back over to the actor-sheet.html template, we've covered the list of th
 
 ---
 
-* **Prev:** [Extending the ActorSheet class](https://foundry-vtt-community.github.io/wiki/SD07-Extending-the-ActorSheet-class)
-* **Next:** [Extending the Item class](https://foundry-vtt-community.github.io/wiki/SD09-Extending-the-Item-class)
+* **Prev:** [Extending the ActorSheet class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD07-Extending-the-ActorSheet-class)
+* **Next:** [Extending the Item class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD09-Extending-the-Item-class)
