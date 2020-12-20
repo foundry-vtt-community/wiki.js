@@ -2,9 +2,9 @@
 title: SD06 Extending-the-Actor-class
 description: 
 published: true
-date: 2020-09-23T01:34:22.536Z
+date: 2020-12-20T21:51:30.480Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
 ---
 
@@ -133,5 +133,5 @@ And with that, we're done deriving new values! We don't have to return anything;
 
 ---
 
-* **Prev:** [Creating your main system javascript file](https://foundry-vtt-community.github.io/wiki/SD05-Creating-your-main-JS-file)
-* **Next:** [Extending the ActorSheet class](https://foundry-vtt-community.github.io/wiki/SD07-Extending-the-ActorSheet-class)
+* **Prev:** [Creating your main system javascript file](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD05-Creating-your-main-JS-file)
+* **Next:** [Extending the ActorSheet class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD07-Extending-the-ActorSheet-class)
