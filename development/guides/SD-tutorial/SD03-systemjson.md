@@ -2,9 +2,9 @@
 title: SD03 system.json
 description: 
 published: true
-date: 2020-09-23T01:34:10.473Z
+date: 2020-12-20T21:49:18.053Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:35.124Z
 ---
 
@@ -18,8 +18,8 @@ Once you've created your system, you'll need to make some changes to system.json
   "title": "Boilerplate",
   "description": "The Boilerplate system for FoundryVTT!",
   "version": "1.0.0",
-  "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion": "0.5.5",
+  "minimumCoreVersion": "0.7.5",
+  "compatibleCoreVersion": "0.7.9",
   "templateVersion": 2,
   "author": "Asacolips",
   "esmodules": ["module/boilerplate.js"],
@@ -63,5 +63,5 @@ For a full breakdown of each of those properties head to [https://foundryvtt.com
 
 ---
 
-* **Prev:** [Stuff to be aware of](https://foundry-vtt-community.github.io/wiki/SD02-Stuff-to-be-aware-of)
-* **Next:** [template.json](https://foundry-vtt-community.github.io/wiki/SD04-template.json)
+* **Prev:** [Stuff to be aware of](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD02-Stuff-to-be-aware-of)
+* **Next:** [template.json](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD04-templatejson)
