@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-20T23:41:55.599Z
+date: 2020-12-20T23:42:54.457Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -352,7 +352,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 # Localization Teams & Tools
 
-| Language Code | Language (English) | Repository | License | Community | Translation Tool |
+| Language Code | Language | Repository | License | Community | Translation Tool |
 |-|-|-|-|-|-|
 | ca-ES | Catalan / català | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/montver/foundry-vtt-catala) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Spanish) | *none* |
 | zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn) | *none* | ? | ? |
