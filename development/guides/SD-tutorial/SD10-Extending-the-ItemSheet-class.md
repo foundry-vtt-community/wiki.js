@@ -2,9 +2,9 @@
 title: SD10 Extending-the-ItemSheet-class
 description: 
 published: true
-date: 2020-09-23T01:34:40.047Z
+date: 2020-12-20T21:54:02.498Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:18.600Z
 ---
 
@@ -132,5 +132,5 @@ Don't forget closing brackets!
 
 ---
 
-* **Prev:** [Extending the Item class](https://foundry-vtt-community.github.io/wiki/SD09-Extending-the-Item-class)
-* **Next:** [Creating rollable buttons with event listeners](https://foundry-vtt-community.github.io/wiki/SD11.1-Creating-rollable-buttons-with-event-listeners)
+* **Prev:** [Extending the Item class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD08-Creating-HTML-templates-for-your-actor-sheets)
+* **Next:** [Creating rollable buttons with event listeners](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD111-Creating-rollable-buttons-with-event-listeners)
