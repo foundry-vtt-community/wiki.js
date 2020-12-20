@@ -2,30 +2,13 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-20T19:56:00.125Z
+date: 2020-12-20T21:57:12.568Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
 ---
 
 # Translations
-
-## Chinese (Simplified) 中文（简体）
-
-### Core Game Foundry VTT 中文核心系统
-* **Authors**: Chivell
-* **Version**: 0.1
-* **Foundry VTT Compatibility**: 0.4+
-
-#### Link(s) to Translation 链接
-* GitLab: [https://gitlab.com/xtlcme/foundry-vtt-chn](https://gitlab.com/xtlcme/foundry-vtt-chn)
-* Manifest: [https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json](https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
-
-#### Description 描述
-将中文添加到FoundryVTT的核心系统中。之后在游戏世界中的设置选择语言为【中文（简体）】即可。
-目前仅汉化了核心系统提供的部分，后续会继续根据翻译。
-
----
 
 ## Catalan
 
@@ -44,6 +27,23 @@ This module allows to choose the Catalonian in FoundryVTT.
 In the 'Add-On Modules' tab of the main menu, click on 'Install Module' and write down this to the pop-up window: https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json
 
 If that doesn't work, you could try downloading the file ca.zip and unzip it in the 'Data\modules' folder and rename it to FoundryVTT-CAT. Also, you have to activate the module in your world, and then choose the language catalonian from the dropdown menu in the general settings.
+
+---
+
+## Chinese (Simplified) 中文（简体）
+
+### Core Game Foundry VTT 中文核心系统
+* **Authors**: Chivell
+* **Version**: 0.1
+* **Foundry VTT Compatibility**: 0.4+
+
+#### Link(s) to Translation 链接
+* GitLab: [https://gitlab.com/xtlcme/foundry-vtt-chn](https://gitlab.com/xtlcme/foundry-vtt-chn)
+* Manifest: [https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json](https://gitlab.com/xtlcme/foundry-vtt-chn/raw/master/cn-CN/module.json)
+
+#### Description 描述
+将中文添加到FoundryVTT的核心系统中。之后在游戏世界中的设置选择语言为【中文（简体）】即可。
+目前仅汉化了核心系统提供的部分，后续会继续根据翻译。
 
 ---
 
