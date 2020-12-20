@@ -2,7 +2,7 @@
 title: SD02 Stuff-to-be-aware-of
 description: 
 published: true
-date: 2020-12-20T21:48:02.359Z
+date: 2020-12-20T22:08:58.836Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:29.131Z
@@ -43,11 +43,13 @@ FoundryVTT uses [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
 
 Sometimes you need to include 3rd party libraries to do additional things, such as if you wanted to use [Tagify](https://github.com/yairEO/tagify) to make a tagging widget. Using those libraries is beyond the scope of this tutorial, but whenever I need to install additional libraries, I make a <!-- {% raw %} -->`lib`<!-- {% endraw %} --> directory inside my system to place their files, and then include them in the <!-- {% raw %} -->`scripts`<!-- {% endraw %} --> and <!-- {% raw %} -->`styles`<!-- {% endraw %} --> section of system.json
 
-## Localization (i18n)
+## A Note About Localization (i18n)
 
 **Localization is extremely important if you're making a publicly available system!**
 
 It's always more effort to go back and localize a system after it's developed, so if you're making a publicly available system, I strongly recommend localizing it from the start. I'll go into more detail on this as we begin developing our system, but to localize your system you'll need to make an <!-- {% raw %} -->`en.json`<!-- {% endraw %} --> file (or whatever your default language is) in your system's <!-- {% raw %} -->`lang`<!-- {% endraw %} --> dir, and add that to your system.json file. <!-- {% raw %} -->`en.json`<!-- {% endraw %} --> consists of key/value pairs where you can specify what the text should be for the keys, and then in your templates you would do <!-- {% raw %} -->`{{localize "KEY.name" }}`<!-- {% endraw %} --> to output its localized version.
+
+Localization is explained in more detail later in the tutorial ([see here](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD13-Localization)).
 
 ---
 
