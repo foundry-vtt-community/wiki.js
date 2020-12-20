@@ -2,9 +2,9 @@
 title: SD16 Adding-macrobar-support-to-your-Items
 description: 
 published: true
-date: 2020-09-23T01:34:56.531Z
+date: 2020-12-20T21:57:24.610Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:43.369Z
 ---
 
@@ -144,7 +144,7 @@ In your <!-- {% raw %} -->`activeListeners()`<!-- {% endraw %} --> method, add t
 ```js
 // Drag events for macros.
 if (this.actor.owner) {
-  let handler = ev => this._onDragItemStart(ev);
+  let handler = ev => this._onDragStart(ev);
   // Find all items on the character sheet.
   html.find('li.item').each((i, li) => {
     // Ignore for the header row.
@@ -162,5 +162,5 @@ If this is the actor's owner, we're going through all <!-- {% raw %} -->`<li>`<!
 
 ---
 
-* **Prev:** [Separating item types into tabs](https://foundry-vtt-community.github.io/wiki/SD11.4-Separating-item-types-into-tabs)
-* **Next:** [Localization](https://foundry-vtt-community.github.io/wiki/SD-13.0-Localization/)
+* **Prev:** [Separating item types into tabs](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD114-Separating-item-types-into-tabs)
+* **Next:** [Localization](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD-130-Localization)
