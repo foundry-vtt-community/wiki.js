@@ -2,7 +2,7 @@
 title: SD13 Localization
 description: 
 published: true
-date: 2020-12-20T22:06:29.592Z
+date: 2020-12-20T22:10:54.293Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T22:06:29.592Z
@@ -147,5 +147,5 @@ When you reload the web page and view an actor, the abbreviations should now rea
 
 ---
 
-* **Prev:** [Adding macrobar support to your Items](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD16-Adding-macrobar-support-to-your-Items)
-* **Next:** To be continued...
+* **Prev:** [Separating item types into tabs](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD114-Separating-item-types-into-tabs)
+* **Next:** [Adding macrobar support to your items](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD16-Adding-macrobar-support-to-your-Items)
