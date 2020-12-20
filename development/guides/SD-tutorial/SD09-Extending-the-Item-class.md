@@ -2,9 +2,9 @@
 title: SD09 Extending-the-Item-class
 description: 
 published: true
-date: 2020-09-23T01:34:35.998Z
+date: 2020-12-20T21:53:23.872Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:36:12.667Z
 ---
 
@@ -38,5 +38,5 @@ The Boilerplate system doesn't actually include any other modifications to its I
 
 ---
 
-* **Prev:** [Creating HTML templates for your actor sheets](https://foundry-vtt-community.github.io/wiki/SD08-Creating-HTML-templates-for-your-actor-sheets)
-* **Next:** [Extending the ItemSheet class](https://foundry-vtt-community.github.io/wiki/SD10-Extending-the-ItemSheet-class)
+* **Prev:** [Creating HTML templates for your actor sheets](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD08-Creating-HTML-templates-for-your-actor-sheets)
+* **Next:** [Extending the ItemSheet class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD10-Extending-the-ItemSheet-class)
