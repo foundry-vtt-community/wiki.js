@@ -2,7 +2,7 @@
 title: SD16 Adding-macrobar-support-to-your-Items
 description: 
 published: true
-date: 2020-12-20T21:57:24.610Z
+date: 2020-12-20T22:09:38.419Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:43.369Z
@@ -162,5 +162,4 @@ If this is the actor's owner, we're going through all <!-- {% raw %} -->`<li>`<!
 
 ---
 
-* **Prev:** [Separating item types into tabs](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD114-Separating-item-types-into-tabs)
-* **Next:** [Localization](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD-130-Localization)
+* **Prev:** [Localization](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD13-Localization)
