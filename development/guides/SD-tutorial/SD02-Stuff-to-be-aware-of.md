@@ -2,9 +2,9 @@
 title: SD02 Stuff-to-be-aware-of
 description: 
 published: true
-date: 2020-09-23T01:34:06.436Z
+date: 2020-12-20T21:48:02.359Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:35:29.131Z
 ---
 
@@ -51,5 +51,5 @@ It's always more effort to go back and localize a system after it's developed, s
 
 ---
 
-**Prev:** [Getting an empty system together](https://foundry-vtt-community.github.io/wiki/SD01-Getting-started)
-**Next:** [system.json](https://foundry-vtt-community.github.io/wiki/SD03-system.json)
+**Prev:** [Getting an empty system together](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD01-Getting-started)
+**Next:** [system.json](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD03-systemjson)
