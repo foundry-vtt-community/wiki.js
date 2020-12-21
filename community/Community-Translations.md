@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-21T08:34:17.589Z
+date: 2020-12-21T13:31:50.462Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -375,7 +375,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 | pt-BR | Portuguese (Brazil) / Português (Brasil) | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese) | [MIT](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/-/blob/master/LICENSE) | <i class="fab fa-discord"></i> [Discord: Foundry VTT Brasil](https://discord.gg/XNC86FBnQ2) | [Transifex](https://www.transifex.com/foundryvtt-brasil/public/) (shared with Finnish) |
 | ru-RU | Russian / русский | <i class="fab fa-github"></i> [GitHub](https://github.com/Phenomen/foundry-vtt-ru) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) | [i18n editor](https://github.com/jcbvm/i18n-editor) (locally) |
 | es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Catalan) | POEditor, [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Catalan), custom R code (locally) |
-| sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | *none* | *none* | [IntelliJ IDEA](https://www.jetbrains.com/idea/) (locally) |
+| sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | [MIT](https://github.com/xdy/foundryvtt-lang-sv/blob/master/LICENSE) | *none* | [IntelliJ IDEA](https://www.jetbrains.com/idea/) (locally) |
 
 # Appendix
 
