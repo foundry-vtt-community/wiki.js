@@ -2,7 +2,7 @@
 title: Koti
 description: 
 published: true
-date: 2020-12-21T21:58:36.761Z
+date: 2020-12-21T22:32:51.309Z
 tags: kokeiluversiot, kielet, viralliset sivustot, yhteisöt
 editor: markdown
 dateCreated: 2020-12-21T19:04:14.538Z
@@ -21,6 +21,7 @@ Tämä wiki toimii yhteisön tuottaman **Foundry Virtual Tabletop** -pelin tiedo
 ## Viralliset sivustot
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop -verkkosivut](http://foundryvtt.com)
 <i class="fab fa-discord"></i> [Discord](https://discordapp.com/invite/DDBZUDf)
+<i class="fab fa-twitter"></i> [Twitter](https://twitter.com/FoundryVTT)
 <i class="fab fa-reddit"></i> [Subreddit](https://www.reddit.com/r/FoundryVTT/)
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
