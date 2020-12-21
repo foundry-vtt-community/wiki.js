@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-20T23:52:54.211Z
+date: 2020-12-21T08:34:17.589Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -363,19 +363,19 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 | Language Code | Language | Repository | License | Community | Translation Tool |
 |-|-|-|-|-|-|
-| ca-ES | Catalan / català | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/montver/foundry-vtt-catala) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Spanish) | *none* |
+| ca-ES | Catalan / català | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/montver/foundry-vtt-catala) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Spanish) | [Visual Studio Code](https://code.visualstudio.com/) (locally), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn) | *none* | ? | ? |
 | cs-CZ | Czech / čeština | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz) | *none* | <i class="fab fa-discord"></i> [Discord: The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) | [Transifex](https://www.transifex.com/foundryvtt-czech/public/) |
 | fi-FI | Finnish / suomi | ? | *none* | *coming soon* | [Transifex](https://www.transifex.com/foundryvtt-brasil/public/) (shared with Portuguese) |
-| fr-FR | French / français | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr) | *none* | <i class="fab fa-discord"></i> [Discord: La Fonderie](https://discord.gg/pPSDNJk) | ? |
+| fr-FR | French / français | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr) | *none* | <i class="fab fa-discord"></i> [Discord: La Fonderie](https://discord.gg/pPSDNJk) | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
 | de-DE | German / Deutsch | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/Hydroxi/foundryvtt-lang-de-de) | *none* | <i class="fab fa-discord"></i> [Discord: Die Gießerei (FoundryVTT)](https://discord.gg/XrKAZ5J) | ? |
 | it-IT | Italian / italiano | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/riccisi/foundryvtt-lang-it-it) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry_ITA](https://discord.gg/hsRcTby) | [Transifex](https://www.transifex.com/foundryvtt-ita/public) |
-| ja-JP | Japanese / 日本語 | <i class="fab fa-github"></i> [GitHub](https://github.com/BrotherSharper/foundryVTTja) | *none* | <i class="fab fa-discord"></i> [Discord: オンセ工房日本支部(Foundry VTT)](https://discord.gg/vM4YM27) | ? |
+| ja-JP | Japanese / 日本語 | <i class="fab fa-github"></i> [GitHub](https://github.com/BrotherSharper/foundryVTTja) | *none* | <i class="fab fa-discord"></i> [Discord: オンセ工房日本支部(Foundry VTT)](https://discord.gg/vM4YM27) | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
 | ko-KR | Korean / 한국어 | <i class="fab fa-github"></i> [GitHub](https://github.com/ShoyuVanilla/FoundryVTT-lang-ko-KR) | *none* | <i class="fab fa-discord"></i> [Discord: FVTT Korea(비공식)](https://discord.gg/DRbbn5w) | ? |
 | pt-BR | Portuguese (Brazil) / Português (Brasil) | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese) | [MIT](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/-/blob/master/LICENSE) | <i class="fab fa-discord"></i> [Discord: Foundry VTT Brasil](https://discord.gg/XNC86FBnQ2) | [Transifex](https://www.transifex.com/foundryvtt-brasil/public/) (shared with Finnish) |
-| ru-RU | Russian / русский | <i class="fab fa-github"></i> [GitHub](https://github.com/Phenomen/foundry-vtt-ru) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) | [i18n editor](https://github.com/jcbvm/i18n-editor) |
-| es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Catalan) | POEditor, [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) |
-| sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | *none* | *none* | *none* |
+| ru-RU | Russian / русский | <i class="fab fa-github"></i> [GitHub](https://github.com/Phenomen/foundry-vtt-ru) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) | [i18n editor](https://github.com/jcbvm/i18n-editor) (locally) |
+| es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Catalan) | POEditor, [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Catalan), custom R code (locally) |
+| sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | *none* | *none* | [IntelliJ IDEA](https://www.jetbrains.com/idea/) (locally) |
 
 # Appendix
 
