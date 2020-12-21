@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2020-12-21T22:27:45.025Z
+date: 2020-12-21T22:32:34.197Z
 tags: languages, communities, demos, official websites
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -21,6 +21,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop website](http://foundryvtt.com)
 <i class="fab fa-discord"></i> [Discord](https://discordapp.com/invite/DDBZUDf)
+<i class="fab fa-twitter"></i> [Twitter](https://twitter.com/FoundryVTT)
 <i class="fab fa-reddit"></i> [Subreddit](https://www.reddit.com/r/FoundryVTT/)
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
