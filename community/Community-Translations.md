@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-21T22:33:40.209Z
+date: 2020-12-22T08:15:46.972Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -157,6 +157,18 @@ Installation : Dans le menu des modules, cliquer sur install module" et dans le 
 #### Description
 This module adds the option to select the German (GERMANY) language from the FoundryVTT settings menu.
 Installation In the Add-On Modules option click on Install Module and place the following link in the field Manifest URL `https://gitlab.com/Hydroxi/foundryvtt-lang-de-de/-/raw/master/de-DE/module.json`
+
+### Dungeons & Dragons 5th Edition System [Author : Atropos]
+* **Authors**: Fallayn#6414, Hydroxi#0366, Smicman#1404, ThoGri#6692, Morvar#0915
+* **Version**: 0.7.1
+* **Foundry VTT Compatibility**: 0.6.4+
+
+#### Link(s) to Translation
+* Github: [https://github.com/League-of-Foundry-Developers/foundryvtt-dnd5e-lang-de](https://github.com/League-of-Foundry-Developers/foundryvtt-dnd5e-lang-de)
+* Manifest: [https://github.com/League-of-Foundry-Developers/foundryvtt-dnd5e-lang-de/releases/latest/download/module.json](https://github.com/League-of-Foundry-Developers/foundryvtt-dnd5e-lang-de/releases/latest/download/module.json)
+
+#### Description
+German translation of the dnd5e system for Foundry Virtual Tabletop
 
 ---
 
