@@ -1,8 +1,8 @@
 ---
-title: Chroniques Oubliées Fantasy : Règles Additionnelles 
+title: Règles Additionnelles 
 description: Des options de jeu différentes
 published: true
-date: 2020-12-23T18:22:50.709Z
+date: 2020-12-23T18:35:44.037Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:22:50.709Z
