@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:55:24.116Z
+date: 2020-12-23T17:59:25.207Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -93,11 +93,16 @@ Cette opération m'ouvre le **Compendium des Profils**. Je clique sur celui du B
 
 J'ouvre ensuite le **Compendium des Equipements** et je fais glisser sur ma fiche de personnage tous les équipements correspondants 
 
-![créa_pj_inventaire.png](/images/images/chroniquesoubliees/créa_pj_inventaire.png)
+[créa_pj_inventaire.png](/images/chroniquesoubliees/customisation/créa_pj_inventaire.png)
 
 Je peux ensuite décider d'équiper ou non certains équipements en cliquant sur le petit bouclier. Les Items équipés se retrouvent dans l'onglet "Combat".
 > **Un Item "Equipé" modifie automatiquement les Caractéristiques associées**
 Exemple : L'armure de cuir équipée ajoute +2 en DEF automatiquement
 {.is-success}
 
-![pj_inventaire_2.png](/images/images/chroniquesoubliees/pj_inventaire_2.png)
+![pj_inventaire_2.png](/images/chroniquesoubliees/customisation/pj_inventaire_2.png)
+
+
+> **FELICITATIONS !** Votre personnage est prêt à partir à l'aventure !
+{.is-success}
+
