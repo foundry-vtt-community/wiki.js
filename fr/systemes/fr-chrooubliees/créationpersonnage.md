@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:36:42.618Z
+date: 2020-12-23T17:37:37.279Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -27,11 +27,11 @@ Dans l'onglet "Type" : selectionnez "Character"
 
 ![créa_pj.png](/images/chroniquesoubliees/créa_pj.png)
 
-### 2. Un Héro à mon image :
+## 2. Un PJ à mon image
 En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
 ![créa_pj_portrait.png](/images/chroniquesoubliees/créa_pj_portrait.png)
 
-### 3. La Race de mon PJ:
+## 3. La Race de mon PJ:
 Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de double-cliquer sur la case blanche à côté de l'onglet race.
 Cela ouvre le Compendium Race du Système. Faites glisser la race choisie dans la case. 
 > **Les caractéristiques liées à la Race se mettent à jour automatiquement.**
@@ -43,7 +43,7 @@ Vous pouvez aussi y glisser une Race de votre imagination.
 
 ![créa_pj_choixrace.png](/images/chroniquesoubliees/créa_pj_choixrace.png)
 
-### 4. Le Profil de mon PJ:
+## 4. Le Profil de mon PJ:
 Il est temps maintenant de choisir le Profil de votre PJ : pour cela il suffit de double-cliquer sur la case blanche à côté de l'onglet Profil.
 Cela ouvre le Compendium Profil du Système. Faites glisser le Profil choisi dans la case. 
 > **Les voies et capacités liées au Profil se mettent à jour automatiquement (dans l'onglet Voies & Capacitées).**
@@ -55,7 +55,7 @@ Vous pouvez aussi y glisser un Profil de votre imagination.
 
 ![créa_pj_choixprofil.png](/images/chroniquesoubliees/créa_pj_choixprofil.png)
 
-### 5. Les Caractérisques de mon PJ:
+## 5. Les Caractérisques de mon PJ:
 Revenons ensuite sur l'onglet "Caractéristiques".
 Vous pouvez choisir vous même les scores de Caractéristiques en modifiant la case "Base"
 Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."** au dessus de la Case FOR
