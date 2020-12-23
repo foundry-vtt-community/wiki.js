@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2020-12-03T07:58:54.432Z
+date: 2020-12-23T16:07:53.761Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -27,6 +27,54 @@ https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.j
 https://raw.githubusercontent.com/Mandaar/StarWarsFFG/master/system.json
 
 Merci à toute la team **StarWarsFoundryVTT**
+
+## Créer un monde
+
+Maintenant que le système est installé, vous devez créer un monde.
+Retournez à la page Mondes de jeu, cliquez sur Créer un monde, et assurez-vous de sélectionner **Star Wars FFG** dans le menu déroulant Système de jeu.
+
+![créer un monde](https://cdn.discordapp.com/attachments/722396272505389087/791333007659106324/screenNewWorld.jpg)
+
+## Importer des données
+
+Comme le contenu de FFG Star Wars est protégé par des droits d'auteur, vous devrez remplir le contenu vous-même. Pour vous aider dans cette tâche, les développeurs ont créé plusieurs outils qui vous permettent d'importer des données à partir d'autres outils plus courants.
+
+###### Importer des données OggDude
+
+Pour importer la grande majorité des données d'articles, vous pouvez utiliser l'importateur "OggDude Dataset Importer".
+
+- Dans votre monde, sélectionnez Paramètres du jeu
+- Cliquez sur Configurer les paramètres
+- Sélectionnez les paramètres du système
+- Cliquez sur OggDude Dataset Importer
+- Agrandissez le dossier Data de votre générateur de personnages OggDude (photo ci-dessous)
+- Sélectionnez votre fichier de données zippé à l'aide du sélecteur de fichiers "Choose File
+- Cliquez sur Charger le fichier
+- Sélectionnez les types de choses que vous souhaitez importer
+- Cliquez sur Démarrer l'importation
+
+Les données qui en résultent sont ajoutées aux Compendiums.
+
+![Le fichier de données zippé](https://camo.githubusercontent.com/8ee0498bce3adcaf3abb4873645598d767481a5758ff38ccebaaf6100597e989/68747470733a2f2f692e696d6775722e636f6d2f726651504a73732e706e67)
+
+**Remarque :** Si l'un des Compendiums est vide, cela signifie généralement qu'il y a un problème avec votre jeu de données, mais si, vous-êtes sur la branche de développement, il peut également s'agir d'un bogue.
+
+###### Importer des données sur les adversaires
+
+Vous pouvez également importer tous les PNJ figurant sur [Star Wars Adversaries](http://swa.stoogoff.com).
+Pour ce faire, il suffit de :
+
+- Naviguer vers la page Github
+- Cliquez sur le bouton vert "Code" et sélectionnez "Télécharger ZIP
+- Dans votre monde, sélectionnez Paramètres du jeu
+- Cliquez sur Configurer les paramètres
+- Sélectionnez les paramètres du système
+- Sélectionner les adversaires de SW Importateur
+- Sélectionnez le ZIP que vous avez téléchargé à l'étape 2
+- Cliquez sur "Démarrer l'importation".
+
+**Note :**
+Comme ces données sur les adversaires ne sont pas configurées pour utiliser les données OggDude, les adversaires importés n'auront aucun élément de ces compendiums, donc s'il y a une faute de frappe dans les données sur les adversaires, le donné n'apparaîtra pas.
 
 ## Modules conseillés par la communauté
 
