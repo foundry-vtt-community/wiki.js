@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T18:40:35.889Z
+date: 2020-12-23T18:45:49.286Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -106,3 +106,4 @@ Exemple : L'armure de cuir équipée ajoute +2 en DEF automatiquement
 > **FELICITATIONS !** Votre personnage est prêt à partir à l'aventure !
 {.is-success}
 
+> [Retour au sommaire](/fr/systemes/fr-chrooubliees)
