@@ -2,7 +2,7 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-23T12:19:28.061Z
+date: 2020-12-23T12:19:54.062Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -41,4 +41,4 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 {.is-info}
 ---	
 ### Bon... c'est beau tout ça mais mois je veux personnaliser ma façon de jouer:
-Et bien venez voir par là[customisation](/fr/systemes/fr-chrooubliees/customisation) ... 
+Et bien venez voir par là : [customisation](/fr/systemes/fr-chrooubliees/customisation).
