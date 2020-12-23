@@ -2,7 +2,7 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-23T15:06:10.330Z
+date: 2020-12-23T18:01:57.103Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -41,10 +41,10 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 {.is-info}
 ---	
 
-## 1. La Création de Perso (en cours)
-- Créer son personnage
-- Gérer son inventaire
-- Test de Caractéristique et Combat
+## 1. La Création des Personnages de vos aventures
+- [Créer un Personnage Joueur (PJ)](/fr/systemes/fr-chrooubliees/créationpersonnage)
+- Créer un PNJ : en cours
+- Créer un Adversaire (Rencontre) : En cours
 
 
 ## 2. Bon... c'est beau tout ça mais mois je veux personnaliser ma façon de jouer:
