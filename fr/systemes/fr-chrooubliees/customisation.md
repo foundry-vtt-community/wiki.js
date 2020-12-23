@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2020-12-23T14:00:43.409Z
+date: 2020-12-23T14:06:18.247Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -73,5 +73,12 @@ Sur l'onglet "Description", vous pouvez écrire toute la description de votre "V
 Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisques qui vous intéressent.
 ![créa_capacité_détail.png](/images/chroniquesoubliees/créa_capacité_détail.png)
 
+---
 # 4. Y'a plus qu'à :
 Maintenant que vos "Capacités" sont créées, il faut remplir vos "Voies" avec. Les "Voies" iront remplir votre "Profil"
+
+###### Utilisation du Drag and Drop à partir de l'onglet Objet
+![dragdrop_cvc.png](/images/chroniquesoubliees/dragdrop_cvc.png)
+
+###### Le PJ avec son Profil Custom
+![pjprofilcustom.png](/images/chroniquesoubliees/pjprofilcustom.png)
