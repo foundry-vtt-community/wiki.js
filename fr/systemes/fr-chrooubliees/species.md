@@ -2,7 +2,7 @@
 title: Création de Races
 description: Alors on veut jouer au Créateur ? A l'alchimie des Corps et de l'âme ? Alors vous êtes au bon endroit
 published: true
-date: 2020-12-23T15:03:05.767Z
+date: 2020-12-23T15:03:15.573Z
 tags: custom, cof, species
 editor: markdown
 dateCreated: 2020-12-23T14:28:48.110Z
@@ -29,7 +29,7 @@ Sur l'onglet "Description", vous pouvez écrire toute la description de votre "r
 ![créa_race_description.png](/images/chroniquesoubliees/customisation/créa_race_description.png)
 
 Sur l'onglet "Details", n'avez plus qu'à remplir les "Bonus Raciaux". 
-(/fr/systemes/fr-chrooubliees/customisation).
+
 
 ![créa_race_détail.png](/images/chroniquesoubliees/customisation/créa_race_détail.png)
 
