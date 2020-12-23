@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T16:56:13.497Z
+date: 2020-12-23T16:58:41.602Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -48,3 +48,6 @@ Cela ouvre le Compendium Profil du Système. Faites glisser le Profil choisi dan
 Vous pouvez aussi y glisser un Profil de votre imagination.
 > Pour des infos sur la création des Profils, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
+
+![créa_pj_choixprofil.png](/images/chroniquesoubliees/créa_pj_choixprofil.png)
+
