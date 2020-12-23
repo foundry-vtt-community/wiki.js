@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:04:51.098Z
+date: 2020-12-23T17:16:34.738Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -19,7 +19,6 @@ Sur cette page nous traiterons de la façon de créer son personnage et comment 
 ---
 
 # A. La création d'un PJ
----
 ### 1. La Naissance :
 Pour créer un "PJ" il faut d'abord aller dans l'onglet "Personnage" de la barre d'outils. 
 Cliquez ensuite sur "Créer Personnage".
@@ -57,3 +56,13 @@ Vous pouvez aussi y glisser un Profil de votre imagination.
 ![créa_pj_choixprofil.png](/images/chroniquesoubliees/créa_pj_choixprofil.png)
 
 ### 5. Les Caractérisques de mon PJ:
+Revenons ensuite sur l'onglet "Caractéristiques".
+Vous pouvez choisir vous même les scores de Caractéristiques en modifiant la case "Base"
+Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."**
+> Un message vous demandera si vous souhaitez vraiment remplacer les caractéristiques"
+{.is-warning}
+
+> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiatives** se mettent automatiquement à jour
+{.is-success}
+
+![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
