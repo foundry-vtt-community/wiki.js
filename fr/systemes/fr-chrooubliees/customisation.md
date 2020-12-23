@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2020-12-23T13:05:23.439Z
+date: 2020-12-23T13:11:19.775Z
 tags: custom, voies, profiles
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -12,6 +12,7 @@ dateCreated: 2020-12-23T12:17:20.011Z
 Pour créer un nouveau "profil" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos profils personnalisés.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Profile".
+![créa_voies.png](/images/chroniquesoubliees/créa_voies.png)
 
 Votre "Profil" est maintenant prêt.
 
