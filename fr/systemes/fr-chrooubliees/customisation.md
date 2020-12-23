@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2020-12-23T14:06:18.247Z
+date: 2020-12-23T14:08:16.866Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -25,7 +25,7 @@ Votre "Profil" est maintenant prêt à être rempli.
 
 Sur l'onglet "Description", vous pouvez écrire toute la description de votre "Profil".
 
- ###### Comparaison avec un Profil RAW et Custom
+ ###### Comparaison avec un Profil DRS et Custom
 ![voies_description.png](/images/chroniquesoubliees/voies_description.png)
 
 Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisques qui vous intéressent.
@@ -43,7 +43,7 @@ Votre "Voie" est maintenant prête à etre remplie.
 
 Sur l'onglet "Description", vous pouvez écrire toute la description de votre "Voie".
 
-###### Comparaison avec une Voie RAW et Custom
+###### Comparaison avec une Voie DRS et Custom
 En genérale les "Voies" n'ont pas besoin de description
 ![créa_voie_description.png](/images/chroniquesoubliees/créa_voie_description.png)
 
@@ -63,7 +63,7 @@ Votre "Capacité" est maintenant prête à être remplie.
 
 Sur l'onglet "Description", vous pouvez écrire toute la description de votre "Voie".
 
-###### Comparaison avec une Capacité RAW et Custom
+###### Comparaison avec une Capacité DRS et Custom
 > Attention : Bien remplir la partie Description car c'est elle que le PJ verra sur sa fiche
 {.is-warning}
 
