@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2020-12-23T16:07:53.761Z
+date: 2020-12-23T16:18:26.013Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -69,7 +69,7 @@ Pour ce faire, il suffit de :
 - Dans votre monde, sélectionnez Paramètres du jeu
 - Cliquez sur Configurer les paramètres
 - Sélectionnez les paramètres du système
-- Sélectionner les adversaires de SW Importateur
+- Sélectionner l'Importateur Star Wars Adversaries
 - Sélectionnez le ZIP que vous avez téléchargé à l'étape 2
 - Cliquez sur "Démarrer l'importation".
 
