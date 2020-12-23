@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:03:52.779Z
+date: 2020-12-23T17:04:02.812Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -55,4 +55,4 @@ Vous pouvez aussi y glisser un Profil de votre imagination.
 
 ![créa_pj_choixprofil.png](/images/chroniquesoubliees/créa_pj_choixprofil.png)
 
-### 3. Les Caractérisques de mon PJ:
+### 5. Les Caractérisques de mon PJ:
