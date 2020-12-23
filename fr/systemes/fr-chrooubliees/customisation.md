@@ -1,9 +1,9 @@
 ---
 title: Customisation
-description: Vous ne trouvez pas de Profils, de Voies qui correspondent à votre style de jeu ? Créez les !
+description: Vous ne trouvez pas de Profils, de Voies, les Objets qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2020-12-23T13:13:39.118Z
-tags: custom, voies, profiles
+date: 2020-12-23T13:16:18.964Z
+tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
 ---
