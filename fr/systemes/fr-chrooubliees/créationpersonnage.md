@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:38:00.647Z
+date: 2020-12-23T17:55:24.116Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -84,3 +84,20 @@ On a tous besoin d'un peu de background pour faire vivre son PJ.
 Et bien vous pouvez remplir toutes les infos sur sa vie dans l'onglet "Description":
 du plus simple avec les zones à remplir, en allant vers la longue tirade des ses origines ... en cliquant sur le bouton modifier de la zone "Description"
 ![créa_pj_description.png](/images/chroniquesoubliees/créa_pj_description.png)
+
+## 8. Son inventaire de base:
+Votre profil vous donne droit à un inventaire de base.
+Pour retrouver cet Inventaire, ouvrez la description de votre Profil.
+Ici je double clique sur "Barde".
+Cette opération m'ouvre le **Compendium des Profils**. Je clique sur celui du Barde et je vois dans la Description les **"Possessions de départs"**.
+
+J'ouvre ensuite le **Compendium des Equipements** et je fais glisser sur ma fiche de personnage tous les équipements correspondants 
+
+![créa_pj_inventaire.png](/images/images/chroniquesoubliees/créa_pj_inventaire.png)
+
+Je peux ensuite décider d'équiper ou non certains équipements en cliquant sur le petit bouclier. Les Items équipés se retrouvent dans l'onglet "Combat".
+> **Un Item "Equipé" modifie automatiquement les Caractéristiques associées**
+Exemple : L'armure de cuir équipée ajoute +2 en DEF automatiquement
+{.is-success}
+
+![pj_inventaire_2.png](/images/images/chroniquesoubliees/pj_inventaire_2.png)
