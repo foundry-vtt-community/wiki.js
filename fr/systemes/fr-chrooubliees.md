@@ -2,7 +2,7 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-23T18:24:16.827Z
+date: 2020-12-23T18:26:51.057Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -47,7 +47,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 - Créer un Adversaire (Rencontre) : En cours
 
 
-## 2. Bon... c'est beau tout ça mais mois je veux personnaliser ma façon de jouer:
+## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer:
 - [Je veux jouer avec des Règles additionnelles](/fr/systemes/fr-chrooubliees/reglesaddtionnelles) 
 - [J'aimerais créer mes Profils, Voies et Capacités](/fr/systemes/fr-chrooubliees/customisation).
 -  [Je ne trouve pas la Race qui me convient](/fr/systemes/fr-chrooubliees/species)
