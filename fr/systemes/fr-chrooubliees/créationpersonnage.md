@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:27:23.670Z
+date: 2020-12-23T17:34:08.558Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
