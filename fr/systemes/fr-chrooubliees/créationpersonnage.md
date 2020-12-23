@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:16:34.738Z
+date: 2020-12-23T17:27:23.670Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -58,11 +58,29 @@ Vous pouvez aussi y glisser un Profil de votre imagination.
 ### 5. Les Caractérisques de mon PJ:
 Revenons ensuite sur l'onglet "Caractéristiques".
 Vous pouvez choisir vous même les scores de Caractéristiques en modifiant la case "Base"
-Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."**
+Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."** au dessus de la Case FOR
 > Un message vous demandera si vous souhaitez vraiment remplacer les caractéristiques"
 {.is-warning}
 
-> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiatives** se mettent automatiquement à jour
+> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiatives** se mettent **automatiquement à jour**
 {.is-success}
 
 ![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
+
+### 6. Les points de vie de mon PJ:
+En cliquant sur le "Dé Vitalité" au dessus de la Case PV.
+
+> Un message vous demandera si vous souhaitez vraiment remplacer les points de vie"
+{.is-warning}
+
+> Le système calcul automatiquement les PV de votre PJ en prenant la formule:
+**Dé de vie** (lié au profil) + **Modificateur de CONSTITUTION**
+{.is-success}
+
+![créa_pj_pv.png](/images/chroniquesoubliees/créa_pj_pv.png)
+
+### 7. L'histoire de mon PJ:
+On a tous besoin d'un peu de background pour faire vivre son PJ.
+Et bien vous pouvez remplir toutes les infos sur sa vie dans l'onglet "Description":
+du plus simple avec les zones à remplir, en allant vers la longue tirade des ses origines ... en cliquant sur le bouton modifier de la zone "Description"
+![créa_pj_description.png](/images/chroniquesoubliees/créa_pj_description.png)
