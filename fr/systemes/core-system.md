@@ -2,7 +2,7 @@
 title: Core-system
 description: Support pour le Core-system
 published: true
-date: 2020-10-27T21:13:56.197Z
+date: 2020-12-23T14:15:58.814Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:56:23.255Z
@@ -20,7 +20,7 @@ Ce socle permet
 - Soit de déployer la partie serveur sur un .. serveur :) et donc de ne pas être pénalisé par une connection faible. 
 	Ce déploiement à distance peut être 'manuel' parce que vous êtes un geek qui roxxe du ponay, ou sinon il existe des solutions -payantes- clé en main ( 'the forge' par ex).
 
-Une petite note sur la charge demandée : la solution fait clairement porter la charge (en puissance machine) sur le client (rendu de l'éclairage dynamique, etc) donc un serveur peut être 'léger' (offre T2 micro d'aws par ex. ou même un raspberry pi), par contre cela nécessite de fait une machine assez récente et surtout un prérequis de supporter WebGL (accélération graphique matérielle).  
+Une petite note sur la charge demandée : la solution fait clairement porter la charge (en puissance machine) sur le client (rendu de l'éclairage dynamique, etc) qui nécessitera de fait une machine assez récente et surtout un prérequis de supporter WebGL (accélération graphique matérielle), la partie serveur est beaucoup plus 'légère' (une offre T2 micro d'aws suffit par ex. ou un raspberry pi, un viueux pc recyclé).  
  
 ## Avoir un beau core français 
 beaucoup de sport, du vin modérement ... euh non je m'égare :
