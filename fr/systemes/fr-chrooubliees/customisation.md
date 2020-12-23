@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2020-12-23T13:56:51.417Z
+date: 2020-12-23T14:00:43.409Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -15,7 +15,7 @@ dateCreated: 2020-12-23T12:17:20.011Z
 
 
 
-1. # Créer des "Profils" personnalisés
+# 1. Créer des "Profils" personnalisés
 Pour créer un nouveau "profil" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos profils personnalisés.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Profile".
@@ -33,7 +33,7 @@ Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisqu
 
 - L'onglet "Ressources" permet d'ajouter des "Voies" existantes ou personnalisée. Vous pouvez faire du drag&drop à partir du Compendium des Voies ou de votre liste personnelles.
 ---
-2. # Créer des "Voies" personnalisées
+# 2. Créer des "Voies" personnalisées
 Pour créer une nouvelle "Voie" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos "Voies" personnalisées.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Path".
@@ -53,7 +53,7 @@ Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisqu
 
 - L'onglet "Capacités" permet d'ajouter des "Capacités" existantes ou personnalisées. Vous pouvez faire du drag&drop à partir du Compendium des Capacitées ou de votre liste personnelles.
 ---
-3. # Créer des "Capacitées" personnalisées
+# 3.  Créer des "Capacitées" personnalisées
 Pour créer une nouvelle "Capacité" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos "Capacités" personnalisées.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Capacity".
@@ -73,4 +73,5 @@ Sur l'onglet "Description", vous pouvez écrire toute la description de votre "V
 Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisques qui vous intéressent.
 ![créa_capacité_détail.png](/images/chroniquesoubliees/créa_capacité_détail.png)
 
-
+# 4. Y'a plus qu'à :
+Maintenant que vos "Capacités" sont créées, il faut remplir vos "Voies" avec. Les "Voies" iront remplir votre "Profil"
