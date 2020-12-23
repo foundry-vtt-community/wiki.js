@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:37:37.279Z
+date: 2020-12-23T17:38:00.647Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -67,7 +67,7 @@ Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons 
 
 ![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
 
-### 6. Les points de vie de mon PJ:
+## 6. Les points de vie de mon PJ:
 En cliquant sur le "Dé Vitalité" au dessus de la Case PV.
 
 > Un message vous demandera si vous souhaitez vraiment remplacer les points de vie"
@@ -79,7 +79,7 @@ En cliquant sur le "Dé Vitalité" au dessus de la Case PV.
 
 ![créa_pj_pv.png](/images/chroniquesoubliees/créa_pj_pv.png)
 
-### 7. L'histoire de mon PJ:
+## 7. L'histoire de mon PJ:
 On a tous besoin d'un peu de background pour faire vivre son PJ.
 Et bien vous pouvez remplir toutes les infos sur sa vie dans l'onglet "Description":
 du plus simple avec les zones à remplir, en allant vers la longue tirade des ses origines ... en cliquant sur le bouton modifier de la zone "Description"
