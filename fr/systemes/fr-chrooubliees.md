@@ -2,7 +2,7 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-23T14:24:33.186Z
+date: 2020-12-23T14:30:05.532Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -42,6 +42,6 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 ---	
 ## 1. Bon... c'est beau tout ça mais mois je veux personnaliser ma façon de jouer:
 - J'aimerais créer mes profils, voies et Capacités : [customisation](/fr/systemes/fr-chrooubliees/customisation).
-- Je ne trouve pas la race qui me convient : 
+- Je ne trouve pas la race qui me convient : [Création des Races](/fr/systemes/fr-chrooubliees/species)
 - Je voudrais créer des Objets : (en cours)
 
