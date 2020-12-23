@@ -2,7 +2,7 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-23T12:19:54.062Z
+date: 2020-12-23T14:12:55.722Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -40,5 +40,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 > Project URL : https://github.com/ZigmundKreud/cof
 {.is-info}
 ---	
-### Bon... c'est beau tout ça mais mois je veux personnaliser ma façon de jouer:
-Et bien venez voir par là : [customisation](/fr/systemes/fr-chrooubliees/customisation).
+## 1. Bon... c'est beau tout ça mais mois je veux personnaliser ma façon de jouer:
+- J'aimerais créer mes profils, voies et Capacités : [customisation](/fr/systemes/fr-chrooubliees/customisation).
+- Je voudrais créer des Objets : (en cours)
+
