@@ -2,7 +2,7 @@
 title: Création de Personnage
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T17:04:02.812Z
+date: 2020-12-23T17:04:51.098Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -19,6 +19,7 @@ Sur cette page nous traiterons de la façon de créer son personnage et comment 
 ---
 
 # A. La création d'un PJ
+---
 ### 1. La Naissance :
 Pour créer un "PJ" il faut d'abord aller dans l'onglet "Personnage" de la barre d'outils. 
 Cliquez ensuite sur "Créer Personnage".
