@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-24T15:29:20.181Z
+date: 2020-12-24T15:36:00.917Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -22,3 +22,5 @@ Sur cette page nous traiterons de la façon de créer une Rencontre
 {.is-warning}
 
 ## 1. Récupérer une rencontre depuis le Compendium
+
+## 2. Créer soit même sa Rencontre
