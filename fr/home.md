@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2020-12-21T22:50:13.725Z
+date: 2020-12-24T11:08:31.917Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -56,6 +56,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - [Aria - Game of Roles](https://foundryvtt.wiki/fr/systemes/aria)
 - [Appel de Cthulhu 7e](/fr/systemes/fr-adc)
 - [Brigandyne](https://foundryvtt.wiki/fr/systemes/brigandyne)
+- [Chroniques Oubliées Contemporain](https://foundryvtt.wiki/fr/systemes/Chroniques-Oubliées-Contemporain)
 - [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
 - [Core-system](/fr/systemes/core-system)
 - [Cthulhu Hack](https://foundryvtt.wiki/fr/systemes/Chthulhu-Hack)
