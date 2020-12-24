@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Contemporain
 description: Le Wiki de COC
 published: true
-date: 2020-12-24T11:50:56.131Z
+date: 2020-12-24T14:48:48.535Z
 tags: coc, chroniques oubliée, contemporain
 editor: markdown
 dateCreated: 2020-12-24T10:01:27.183Z
@@ -31,3 +31,19 @@ Chaque chapitre vous permet d’adapter la règle au monde dans lequel vous alle
 
 > Le systeme des Chroniques Oubliées Contemporain ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
 {.is-success}
+---	
+
+## 1. Définir dans quel environnement je veux jouer
+
+
+## 2. La Création des Personnages de vos aventures
+- Créer un Personnage Joueur 
+- Créer un PNJ
+- Créer un Adversaire (Rencontre) 
+
+
+## 3. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer:
+- Je veux jouer avec des Règles additionnelles
+- J'aimerais créer mes Profils, Voies et Capacités
+- Je ne trouve pas la Race qui me convient
+- Je voudrais créer des Objets : 
