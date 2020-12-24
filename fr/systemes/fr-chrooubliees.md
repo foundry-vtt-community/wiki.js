@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-24T12:57:38.477Z
+date: 2020-12-24T14:38:12.650Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -29,7 +29,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 ### Oui mais sur Foundry VTT alors ? 
 > 1. - Aller dans la page d'accueil de Foundry VTT.
 > 2. - Cliquer sur Game Systems.
-> 3. - Cliquer sur "Install System" et coller le "Manifest URL"
+> 3. - Cliquer sur "Install System" et chercher le système "Chroniques Oubliées Fantasy" par Zigmund
 > 1. - Cliquer sur "Install", CoF s'installe.
 
 > Le systeme des Chroniques Oubliées Fantasy ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
