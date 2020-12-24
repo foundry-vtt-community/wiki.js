@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-23T18:45:49.286Z
+date: 2020-12-24T15:19:15.929Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -96,6 +96,10 @@ J'ouvre ensuite le **Compendium des Equipements** et je fais glisser sur ma fich
 ![créa_pj_inventaire.png](/images/chroniquesoubliees/customisation/créa_pj_inventaire.png)
 
 Je peux ensuite décider d'équiper ou non certains équipements en cliquant sur le petit bouclier. Les Items équipés se retrouvent dans l'onglet "Combat".
+
+> Pour des infos sur la création des Objets, c'est ici
+{.is-info}
+
 > **Un Item "Equipé" modifie automatiquement les Caractéristiques associées**
 Exemple : L'armure de cuir équipée ajoute +2 en DEF automatiquement
 {.is-success}
