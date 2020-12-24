@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Contemporain
 description: Le Wiki de COC
 published: true
-date: 2020-12-24T11:43:37.142Z
+date: 2020-12-24T11:47:38.035Z
 tags: coc, chroniques oubliée, contemporain
 editor: markdown
 dateCreated: 2020-12-24T10:01:27.183Z
@@ -14,7 +14,7 @@ dateCreated: 2020-12-24T10:01:27.183Z
 {.is-warning}
 
 
-### Qu’est-ce que CoC:
+### Qu’est-ce que CoC :
 Construit sur la base du célèbre D20 et de la licence OGL, Chroniques Oubliées utilise tous les dés classiques et propose des profils de personnages déclinés en voies, choisies par le joueur et dans lesquelles il progresse à mesure qu'il monte de niveau. 
 Facile et modulaire, le système voit sa simplicité varier au gré des envies des joueurs et du meneur de jeu. Une boîte à outils qui a fait ses preuves.
 
