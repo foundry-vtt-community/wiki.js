@@ -2,7 +2,7 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-24T10:10:17.818Z
+date: 2020-12-24T11:48:08.598Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -11,7 +11,7 @@ dateCreated: 2020-10-16T20:12:43.951Z
 
 ![utilrequest_(3).jpg](/images/chroniquesoubliees/utilrequest_(3).jpg)
 ---
-### Qu’est-ce que CoF :
+### Qu’est-ce que CoF : 
 Le jeu et l'univers sont basés sur celui de Donjons & Dragons tout en adoptant un système 1d20 simplifié.
 
 Le joueur choisit un peuple (humain, elfe sylvain, nain...) et un profil (guerrier, magicien, rôdeur...), qui correspond à la classe de Donjons et Dragons.
