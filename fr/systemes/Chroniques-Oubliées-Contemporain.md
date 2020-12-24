@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Contemporain
 description: Le Wiki de COC
 published: true
-date: 2020-12-24T11:47:38.035Z
+date: 2020-12-24T11:50:56.131Z
 tags: coc, chroniques oubliée, contemporain
 editor: markdown
 dateCreated: 2020-12-24T10:01:27.183Z
@@ -22,3 +22,12 @@ Facile et modulaire, le système voit sa simplicité varier au gré des envies d
 CO Contemporain est une boîte à outils. 
 Chaque chapitre vous permet d’adapter la règle au monde dans lequel vous allez jouer. Horreur à la Lovecraft ? Aventure pulp à la Indiana Jones ? Invasion de zombies ? Intrigues entre créatures fantastiques dans un monde gothique qui est leur terrain de jeu depuis des siècles ? Super-héros contre super-méchants ? Cyberpunk crasseux ? 
 **Tout est possible.**
+
+### Oui mais sur Foundry VTT alors ? 
+> 1. - Aller dans la page d'accueil de Foundry VTT.
+> 2. - Cliquer sur Game Systems.
+> 3. - Cliquer sur "Install System" et chercher "Chroniques Oubliées Contemporain" par Zygmund
+> 1. - Cliquer sur "Install", CoC s'installe.
+
+> Le systeme des Chroniques Oubliées Contemporain ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
+{.is-success}
