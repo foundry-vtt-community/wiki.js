@@ -2,14 +2,14 @@
 title: Chroniques Oubliées
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-23T18:56:24.256Z
+date: 2020-12-24T10:09:01.004Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
 ---
 
 # Les Chroniques Oubliées Fantasy
-![cof_00_logo_fond_blanc-removebg-preview.png](/logos/cof_00_logo_fond_blanc-removebg-preview.png)
+![utilrequest_(3).jpg](/images/chroniquesoubliees/utilrequest_(3).jpg)
 ---
 ### Qu’est-ce que CoF :
 Le jeu et l'univers sont basés sur celui de Donjons & Dragons tout en adoptant un système 1d20 simplifié.
