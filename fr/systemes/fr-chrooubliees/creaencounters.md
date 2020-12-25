@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-25T09:49:13.880Z
+date: 2020-12-25T10:06:54.408Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -40,3 +40,12 @@ Vous pouvez aussi mettre l'image correspondante à votre vision de la Rencontre.
 ## 2. Créer soit même sa Rencontre
 **La technique personnalisable à volonté**
 
+### 1. La Naissance
+Pour créer une "Rencontre" il faut d'abord aller dans l'onglet "Personnage" de la barre d'outils. 
+Cliquez ensuite sur "Créer Personnage".
+Dans l'onglet "Nom" : c'est le nom de votre "Rencontre"
+Dans l'onglet "Type" : selectionnez "Encounter"
+![crea_encounter.png](/images/chroniquesoubliees/customisation/crea_encounter.png)
+
+### 2. Un Monstre moche comme je souhaite
+En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
