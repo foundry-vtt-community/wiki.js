@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-25T08:56:01.999Z
+date: 2020-12-25T09:49:13.880Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -38,3 +38,5 @@ Vous pouvez aussi mettre l'image correspondante à votre vision de la Rencontre.
 
 
 ## 2. Créer soit même sa Rencontre
+**La technique personnalisable à volonté**
+
