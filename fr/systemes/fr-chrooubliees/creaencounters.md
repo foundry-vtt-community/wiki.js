@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-25T08:54:27.390Z
+date: 2020-12-25T08:56:01.999Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -31,8 +31,9 @@ Je le fais glisser du Compendium vers mon onglet Personnage.
 La Fiche du Perso s'ouvre automatiquement
 ![crea_renc_compendium.png](/images/chroniquesoubliees/customisation/crea_renc_compendium.png)
 
-> **Pour tous les personnages issus du Compendium, les caractéristiques, attaques, voies et capacités sont déjà pré-remplis selon les règles du DRS**
-Vous pouvez toute fois les modifier à votre guise.
+> **Pour tous les personnages issus du Compendium, les Caractéristiques, Attaques, Voies et Vapacités sont déjà pré-remplis selon les règles du DRS**
+Vous pouvez toutefois les modifier à votre guise.
+Vous pouvez aussi mettre l'image correspondante à votre vision de la Rencontre.
 {.is-success}
 
 
