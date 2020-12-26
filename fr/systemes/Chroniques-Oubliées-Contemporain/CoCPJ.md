@@ -2,7 +2,7 @@
 title: CréationPJCoC
 description: 
 published: true
-date: 2020-12-26T20:37:07.205Z
+date: 2020-12-26T20:44:32.129Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T19:59:08.041Z
@@ -104,7 +104,7 @@ Comme annoncé en préambule, ce système est une boite à outil. Vous êtes lib
 
 Nous allons devoir créer beaucoup d'équipements
 
-> Pour des infos sur la création des Objets, c'est ICI
+> Pour des infos sur la création des Objets, c'est [ici](/fr/systemes/Chroniques-Oubliées-Contemporain/objets)
 {.is-info}
 
 Il est toutefois possible de trouver de l'équipement déjà prêt
