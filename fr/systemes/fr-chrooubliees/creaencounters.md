@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T14:25:03.393Z
+date: 2020-12-26T14:26:07.263Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -115,3 +115,6 @@ Ici j'aurais besoin de créer la "Capacité" *Immobilité*
 
 ### 8. L'Onglet "Description"
 Tout ce que vous pouvez écrire, décrire, inventez sur votre "Rencontre"
+
+> **FELICITATIONS** ! Vous être prêt à ~~faire mordre la poussière à vos PJ~~ proposer un peu de résistance à vos PJ
+{.is-success}
