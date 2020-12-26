@@ -2,7 +2,7 @@
 title: CréationPJCoC
 description: 
 published: true
-date: 2020-12-26T20:36:31.630Z
+date: 2020-12-26T20:37:07.205Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T19:59:08.041Z
@@ -124,7 +124,7 @@ Exemple : Le Gilet pare-balle ajoute +2 en DEF automatiquement
 ![pj9_coc.png](/images/chroniques-oubliées-contemporain/coc/pj9_coc.png)
 
 
-> **FELICITATIONS !** Votre personnage est prêt à partir à l'aventure !
+> **FELICITATIONS !** Nom de Zeus!!! Votre personnage est prêt à partir à l'aventure !
 {.is-success}
 
 >[Retour au sommaire](/fr/systemes/Chroniques-Oubliées-Contemporain)
