@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-26T17:02:03.253Z
+date: 2020-12-26T17:34:34.597Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -55,5 +55,5 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 
 
 ## 3. Je suis prêt ! Mais euh... je lance comment les dés sur mon ordi ? 
-- Les tests via la fiche PJ/Rencontres
+- [Les tests via la fiche PJ/Rencontres](/fr/systemes/fr-chrooubliees/testdés)
 - Les tests via les macros systèmes
