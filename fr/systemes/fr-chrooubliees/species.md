@@ -2,7 +2,7 @@
 title: Création de Races
 description: Alors on veut jouer au Créateur ? A l'alchimie des Corps et de l'âme ? Alors vous êtes au bon endroit
 published: true
-date: 2020-12-24T12:42:11.214Z
+date: 2020-12-26T17:39:06.838Z
 tags: custom, cof, species
 editor: markdown
 dateCreated: 2020-12-23T14:28:48.110Z
@@ -37,3 +37,5 @@ Sur l'onglet "Details", n'avez plus qu'à remplir les "Bonus Raciaux".
 
 > Pour en savoir plus sur la création de Voies et de Capacités par [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
+
+> [Retour au sommaire](/fr/systemes/fr-chrooubliees)
