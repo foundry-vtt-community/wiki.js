@@ -2,7 +2,7 @@
 title: COF : Test Macro
 description: Tu es flemmard du double click ? Bienvenue ici !
 published: true
-date: 2020-12-26T18:08:32.073Z
+date: 2020-12-26T18:08:44.433Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T17:43:57.857Z
@@ -32,7 +32,7 @@ Les Objets équipables peuvent être aussi importer depuis l'onglet combat vers 
 > Sur l'image au-dessus on peut voir la Rapière de Finn
 {.is-info}
 
-> **ASTUCE** : Un sort (par Exemple Boule de Feu), une fois sur votre fiche de PJ. Modifier le pour lui ajouter : "Equipement" et "Equipable". Vous pourrez ensuite le voir dans l'onglet "Combat" et le faire glisser vers la barre de macro.
+> **ASTUCE** : Un sort (par Exemple Boule de Feu), une fois sur votre fiche de PJ. Modifiez le pour lui ajouter : "Equipement" et "Equipable". Vous pourrez ensuite le voir dans l'onglet "Combat" et le faire glisser vers la barre de macro.
 {.is-info}
 
 ---
