@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2020-12-26T16:33:56.035Z
+date: 2020-12-26T16:55:38.002Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -79,3 +79,53 @@ A sélectionner dès que votre objet peut être utilisé pour attaquer et faire 
 - "**Compétence**" : La compétence utilisée pour le jet de dés
 - "**Compétence (Bonus)**" : Si besoin rajouter un bonus au résultat du jet de dés
 - "**Critique**" : Défini la valeur à partir de laquelle le jet est considéré en réussite critique. Prend la valeur comprise entre "x" et 20
+- "**Propriété** (possible d'en affecter plusieurs à un objet) : " : Des options en plus
+
+> Mon Armure n'étant pas une Arme, voici un exemple d'Arc Court
+{.is-info}
+
+![armure2.png](/images/chroniquesoubliees/customisation/armure2.png)
+
+### 3. Le trait "Protection"
+A sélectionner si votre objet vous apporte de la défense et/ou une réduction de DM.
+
+**Protection** :
+- "**Défense (Base)**" : La valeur d'armure de base de l'objet
+- "**Défense (Bonus)**" : Le bonus accordé par l'Objet
+- "**Propriétés**" : Cocher si l'objet accorde une réduction de dommages
+- "**Réduction de dégâts**" : Donne la valeur de dégât réduit
+
+> Mon Armure de Cuir de l'Ombre est un objet Magique :
+Elle accorde +2 en DEF, +1 en DEF(bonus) et sa bonne conception accorde une résistance de dégât de 1
+{.is-info}
+
+![armure_3.png](/images/chroniquesoubliees/customisation/armure_3.png)
+
+### 4. Le trait "A distance"
+A sélectionner si votre objet peut être utiliser/lancé lors d'un combat à distance.
+
+**Propriété d'Armes à Distance**
+- **"Portée"** : la portée en mètres
+- **"Classe"** : Choisir le type d'arme
+- **"Propriétés"** : Choisir si l'arme est rechargeable ou pas
+- **"Rechargement"** : Si la propriété "rechargeable" est choisie, alors défini la façon dont l'arme peut être rechargée : Pas d'action / Action Simple / Action Longue
+
+> Mon Armure n'étant pas une Arme à distance, voici un exemple d'Arc Court
+{.is-info}
+
+![armure_4.png](/images/chroniquesoubliees/customisation/armure_4.png)
+
+### 5. Le trait "A distance"
+A sélectionner si votre objet peut être utiliser/lancé comme un sort.
+Ce trait sert avant tout à définir l'objet comme un sort.
+
+> Voici un exemple de 2 Sorts: 1 sort offensif et un Sort défensif.
+> Vous remarquerez qu'ils ont été construit comme respecticement une Arme à distance et une Protection
+{.is-info}
+
+![armure5.png](/images/chroniquesoubliees/customisation/armure5.png)
+
+> **FELICITATIONS !** Vous êtes un expert Artisan !
+{.is-success}
+
+> [Retour au sommaire](/fr/systemes/fr-chrooubliees)
