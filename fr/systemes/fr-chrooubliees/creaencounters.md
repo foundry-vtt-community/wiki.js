@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T14:04:12.801Z
+date: 2020-12-26T14:22:49.117Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -84,3 +84,32 @@ En général les attaques de la Rencontre sont inscrites dans sa description. Et
 {.is-success}
 
 ![créa_renc_combat.png](/images/chroniquesoubliees/customisation/créa_renc_combat.png)
+
+### 8. L'Onglet "Inventaire"
+En général les Rencontres ne possèdent pas ou peu d'inventaire.
+Mais vous pouvez y glisser des Bourses pleines d'argent, ou des Objets Magiques par Exemple.
+
+> Pour la création d'Objet c'est par 
+{.is-info}
+
+
+
+
+
+### 7. L'Onglet "Voies & Capacités"
+Vous trouverez tout en tas de Capacité dans le **Compendium "Capacités des Rencontres**", ainsi que des Voies dans le **Compendium "Voies"**.
+
+Vous les faites glisser dans la fiche pour que la créature la possède.
+
+> **Une fois une Voie ou Capacité importée vous pouvez la modifier depuis votre fiche de Rencontre**.
+C'est ce que je vais faire pour la Capacité "Vol (Pixie)" en Modifiant juste l'intitulé de la Capacité.
+{.is-info}
+
+![créa_rencontre_cap1.png](/images/chroniquesoubliees/customisation/créa_rencontre_cap1.png)
+
+> Si vous ne trouvez pas de "**Voies**" ou "**Capacités**" qui vous correspondent vous pouvez en créer de nouvelles. 
+Voir [ici](/fr/systemes/fr-chrooubliees/customisation)
+{.is-info}
+
+Ici j'aurais besoin de créer la "Capacité" *Immobilité*
+![créa_renc_cap3.png](/images/chroniquesoubliees/customisation/créa_renc_cap3.png)
