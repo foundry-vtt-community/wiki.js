@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Contemporain
 description: Le Wiki de COC
 published: true
-date: 2020-12-24T15:00:34.434Z
+date: 2020-12-26T18:22:14.848Z
 tags: coc, chroniques oubliée, contemporain
 editor: markdown
 dateCreated: 2020-12-24T10:01:27.183Z
@@ -37,6 +37,8 @@ Chaque chapitre vous permet d’adapter la règle au monde dans lequel vous alle
 Le système permet de choisir entre 2 type de jeux (et donc 2 style graphiques) : 
 - le mode de base (que l'on nommera **CoC**) 
 - le mode Cthulhu (que l'on nommera **CoCth**)
+
+[Choisir les options de son environnement](/fr/systemes/Chroniques-Oubliées-Contemporain/skin)
 
 
 ## 2. La Création des Personnages de mes aventures
