@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T14:26:15.351Z
+date: 2020-12-26T14:27:10.871Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -118,3 +118,5 @@ Tout ce que vous pouvez écrire, décrire, inventer sur votre "Rencontre"
 
 > **FELICITATIONS** ! Vous être prêt à ~~faire mordre la poussière à vos PJ~~ proposer un peu de résistance à vos PJ
 {.is-success}
+
+> [Retour au sommaire](/fr/systemes/fr-chrooubliees)
