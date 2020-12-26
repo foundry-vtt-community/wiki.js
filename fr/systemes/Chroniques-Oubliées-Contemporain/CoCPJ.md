@@ -2,7 +2,7 @@
 title: CréationPJCoC
 description: 
 published: true
-date: 2020-12-26T19:59:08.041Z
+date: 2020-12-26T20:02:06.927Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T19:59:08.041Z
@@ -43,7 +43,7 @@ Cela ouvre le Compendium "Traits" du Système. Faites glisser le trait choisie d
 > - *Nerd* : Spécifique à un/plusieurs test(s) particulier(s) donc à utiliser à ce moment.
 
 Vous pouvez aussi y glisser un Trait de votre imagination.
-> Pour des infos sur la création des Trait, c'est ICI
+> Pour des infos sur la création des Trait, c'est [ici](/fr/systemes/Chroniques-Oubliées-Contemporain/customisation)
 {.is-info}
 
 ![pj3_coc.png](/images/chroniques-oubliées-contemporain/coc/pj3_coc.png)
@@ -55,7 +55,7 @@ Cela ouvre le Compendium Profils du Système. Faites glisser le Profil choisi da
 {.is-success}
 
 Vous pouvez aussi y glisser un Profil de votre imagination.
-> Pour des infos sur la création des Profils, c'est ICI
+> Pour des infos sur la création des Profils, c'est [ici](/fr/systemes/Chroniques-Oubliées-Contemporain/customisation)
 {.is-info}
 
 ![pj4_coc.png](/images/chroniques-oubliées-contemporain/coc/pj4_coc.png)
