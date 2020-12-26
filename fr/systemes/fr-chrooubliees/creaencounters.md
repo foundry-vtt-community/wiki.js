@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T14:23:52.817Z
+date: 2020-12-26T14:25:03.393Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -110,4 +110,8 @@ Voir [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
 
 Ici j'aurais besoin de créer la "Capacité" *Immobilité*
+
 ![créa_renc_cap3.png](/images/chroniquesoubliees/customisation/créa_renc_cap3.png)
+
+### 8. L'Onglet "Description"
+Tout ce que vous pouvez écrire, décrire, inventez sur votre "Rencontre"
