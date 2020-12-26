@@ -2,7 +2,7 @@
 title: Création PNJ
 description: Toute aventure mérite un bon PNJ, bon ou méchant. A vous de choisir maintenant
 published: true
-date: 2020-12-23T18:55:23.476Z
+date: 2020-12-26T20:53:56.355Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:48:09.541Z
@@ -24,7 +24,7 @@ Sur cette page nous traiterons de la façon de créer un PNJ
 Je vous invite à retourner sur la page :
 
 - [Création d'un PJ](/fr/systemes/fr-chrooubliees/créationpersonnage)
-- Création d'une Rencontre
+- [Création d'une Rencontre](/fr/systemes/fr-chrooubliees/creaencounters)
 
 
 > [Retour au sommaire](/fr/systemes/fr-chrooubliees)
