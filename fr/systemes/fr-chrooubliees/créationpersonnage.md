@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-24T15:22:26.780Z
+date: 2020-12-26T18:14:58.763Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -62,7 +62,7 @@ Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons 
 > Un message vous demandera si vous souhaitez vraiment remplacer les caractéristiques"
 {.is-warning}
 
-> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiatives** se mettent **automatiquement à jour**
+> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiative** se mettent **automatiquement à jour**
 {.is-success}
 
 ![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
