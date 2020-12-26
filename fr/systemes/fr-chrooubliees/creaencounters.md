@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-25T10:06:54.408Z
+date: 2020-12-26T13:56:45.143Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -37,8 +37,9 @@ Vous pouvez aussi mettre l'image correspondante à votre vision de la Rencontre.
 {.is-success}
 
 
-## 2. Créer soit même sa Rencontre
+## 2. Créer soit même sa "Rencontre"
 **La technique personnalisable à volonté**
+Suivons l'étape de création d'une Gargouille (parce que j'aime aussi les Gargouilles...)
 
 ### 1. La Naissance
 Pour créer une "Rencontre" il faut d'abord aller dans l'onglet "Personnage" de la barre d'outils. 
@@ -49,3 +50,23 @@ Dans l'onglet "Type" : selectionnez "Encounter"
 
 ### 2. Un Monstre moche comme je souhaite
 En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
+
+### 3. La Carte d'identité de la "Rencontre"
+A partir de maintenant, on voit la grande différence avec les feuilles de PJ et PNJ.Il n'est plus question de Profils et de Race.
+
+A vous de choisir les points suivants en fonction du Livre de Règles p.211 :
+- NC
+- Taille
+- Archétype
+- Catégorie
+- Boss
+![crea_rencontre_id.png](/images/chroniquesoubliees/customisation/crea_rencontre_id.png)
+
+### 4. Les Caractéristiques de la "Rencontre"
+Ici aussi un changement majeur : **Vous ne rentrez que les MOD**, c'est la valeur qui sera mise automatiquement à jour.
+
+Vous definissez aussi vous-même les valeurs des **Attaques** (CONTACT, DISTANCE, MAGIQUE)
+
+La DEF, les PV, et l'INIT sont à remplir aussi manuellement
+
+![crea_renc_caract.png](/images/chroniquesoubliees/customisation/crea_renc_caract.png)
