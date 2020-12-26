@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2020-12-26T16:57:44.591Z
+date: 2020-12-26T23:06:27.823Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -38,6 +38,10 @@ Il suffit de choisir dans la liste de la **"Sous-Catégorie**"
 ![créa_objet_type.png](/images/chroniquesoubliees/customisation/créa_objet_type.png)
 
 Je choisis ensuite un ou plusieurs traits pour mon Objet.
+
+> Je peux aussi ne choisir aucun "Trait" ni "Sous-Catégorie" afin de créer un objet "Cosmétique" : par exemple l'instrument de musique dans le profil de Barde.
+{.is-info}
+
 
 # 2. Le trait "Equipement"
 C'est le trait de base pour tout objet physique.
