@@ -2,7 +2,7 @@
 title: COF : Test Macro
 description: Tu es flemmard du double click ? Bienvenue ici !
 published: true
-date: 2020-12-26T18:01:41.918Z
+date: 2020-12-26T18:01:52.607Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T17:43:57.857Z
@@ -31,7 +31,7 @@ Les Objet équipable peuvent être aussi importer depuis l'onglet combat vers la
 
 > Sur l'image au-dessus on peut voir la Rapière de Finn
 {.is-info}
-
+---
 
 > **FELICITATIONS** ! Vous savez maintenant comment économiser quelques clics :)!
 {.is-success}
