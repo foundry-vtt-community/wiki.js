@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-24T15:39:11.741Z
+date: 2020-12-26T14:28:18.939Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -44,7 +44,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 ## 1. La Création des Personnages de vos aventures
 - [Créer un Personnage Joueur (PJ)](/fr/systemes/fr-chrooubliees/créationpersonnage)
 - [Créer un PNJ](/fr/systemes/fr-chrooubliees/créapnj)
-- [Créer un Adversaire (Rencontre)](/fr/systemes/fr-chrooubliees/creaencounters) : En cours
+- [Créer un Adversaire (Rencontre)](/fr/systemes/fr-chrooubliees/creaencounters)
 
 
 ## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer:
