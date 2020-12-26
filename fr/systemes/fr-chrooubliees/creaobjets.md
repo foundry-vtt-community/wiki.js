@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2020-12-26T16:57:12.656Z
+date: 2020-12-26T16:57:44.591Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -115,7 +115,7 @@ A sélectionner si votre objet peut être utiliser/lancé lors d'un combat à di
 
 ![armure_4.png](/images/chroniquesoubliees/customisation/armure_4.png)
 
-# 6. Le trait "A distance"
+# 6. Le trait "Sort"
 A sélectionner si votre objet peut être utiliser/lancé comme un sort.
 Ce trait sert avant tout à définir l'objet comme un sort.
 
