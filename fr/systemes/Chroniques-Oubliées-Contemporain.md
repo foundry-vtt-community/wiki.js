@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Contemporain
 description: Le Wiki de COC
 published: true
-date: 2020-12-26T20:42:40.472Z
+date: 2020-12-26T20:43:08.488Z
 tags: coc, chroniques oubliée, contemporain
 editor: markdown
 dateCreated: 2020-12-24T10:01:27.183Z
@@ -50,4 +50,4 @@ Le système permet de choisir entre 2 type de jeux (et donc 2 style graphiques) 
 
 - J'aimerais créer mes Profils, Voies et Capacités
 - Je ne trouve pas la Race qui me convient
-- Je voudrais créer des Objets : 
+- [Je voudrais créer des Objets](/fr/systemes/Chroniques-Oubliées-Contemporain/objets) 
