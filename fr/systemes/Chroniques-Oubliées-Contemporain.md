@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Contemporain
 description: Le Wiki de COC
 published: true
-date: 2020-12-26T20:43:32.871Z
+date: 2020-12-26T21:49:30.918Z
 tags: coc, chroniques oubliée, contemporain
 editor: markdown
 dateCreated: 2020-12-24T10:01:27.183Z
@@ -43,7 +43,7 @@ Le système permet de choisir entre 2 type de jeux (et donc 2 style graphiques) 
 
 ## 2. La Création des Personnages de mes aventures
 - Créer un Personnage Joueur : [CoC](/fr/systemes/Chroniques-Oubliées-Contemporain/CoCPJ) / CoCth
-- Créer un PNJ et/ou un Adversaire : CoC / CoCth
+- Créer un PNJ et/ou un Adversaire : [CoC](/fr/systemes/Chroniques-Oubliées-Contemporain/CoCPNJ) / CoCth
 
 
 ## 3. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer:
