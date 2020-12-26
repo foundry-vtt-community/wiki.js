@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2020-12-26T16:55:38.002Z
+date: 2020-12-26T16:57:12.656Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -31,7 +31,7 @@ Dans "**Type**" : Item
 {.is-info}
 
 
-### 1. Le Type d'équipement
+# 1. Le Type d'équipement
 C'est dans l'onglet "Détail" que vous pourrez choisir le type d'Objet que vous aller créer.
 Il suffit de choisir dans la liste de la **"Sous-Catégorie**"
 
@@ -39,7 +39,7 @@ Il suffit de choisir dans la liste de la **"Sous-Catégorie**"
 
 Je choisis ensuite un ou plusieurs traits pour mon Objet.
 
-### 2. Le trait "Equipement"
+# 2. Le trait "Equipement"
 C'est le trait de base pour tout objet physique.
 
 **Propriété** (possible d'en affecter plusieurs à un objet) : 
@@ -69,7 +69,7 @@ Endroit du corps où doit être équipé l'objet
 
 ![armurecuir1.png](/images/chroniquesoubliees/customisation/armurecuir1.png)
 
-### 3. Le trait "Arme"
+# 3. Le trait "Arme"
 A sélectionner dès que votre objet peut être utilisé pour attaquer et faire des dégâts
 
 **Propriétés d'armes** : 
@@ -86,7 +86,7 @@ A sélectionner dès que votre objet peut être utilisé pour attaquer et faire 
 
 ![armure2.png](/images/chroniquesoubliees/customisation/armure2.png)
 
-### 3. Le trait "Protection"
+# 4. Le trait "Protection"
 A sélectionner si votre objet vous apporte de la défense et/ou une réduction de DM.
 
 **Protection** :
@@ -101,7 +101,7 @@ Elle accorde +2 en DEF, +1 en DEF(bonus) et sa bonne conception accorde une rés
 
 ![armure_3.png](/images/chroniquesoubliees/customisation/armure_3.png)
 
-### 4. Le trait "A distance"
+# 5. Le trait "A distance"
 A sélectionner si votre objet peut être utiliser/lancé lors d'un combat à distance.
 
 **Propriété d'Armes à Distance**
@@ -115,7 +115,7 @@ A sélectionner si votre objet peut être utiliser/lancé lors d'un combat à di
 
 ![armure_4.png](/images/chroniquesoubliees/customisation/armure_4.png)
 
-### 5. Le trait "A distance"
+# 6. Le trait "A distance"
 A sélectionner si votre objet peut être utiliser/lancé comme un sort.
 Ce trait sert avant tout à définir l'objet comme un sort.
 
