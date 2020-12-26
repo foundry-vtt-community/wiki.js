@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T14:23:10.136Z
+date: 2020-12-26T14:23:52.817Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -89,7 +89,7 @@ En général les attaques de la Rencontre sont inscrites dans sa description. Et
 En général les Rencontres ne possèdent pas ou peu d'inventaire.
 Mais vous pouvez y glisser des Bourses pleines d'argent, ou des Objets Magiques par Exemple.
 
-> Pour la création d'Objet c'est par 
+> Pour la création d'Objet c'est par [ici](/fr/systemes/fr-chrooubliees/creaobjets) 
 {.is-info}
 
 
