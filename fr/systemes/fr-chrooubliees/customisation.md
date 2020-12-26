@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2020-12-23T14:08:16.866Z
+date: 2020-12-26T17:36:38.758Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -82,3 +82,5 @@ Maintenant que vos "Capacités" sont créées, il faut remplir vos "Voies" avec.
 
 ###### Le PJ avec son Profil Custom
 ![pjprofilcustom.png](/images/chroniquesoubliees/pjprofilcustom.png)
+
+> [Retour au sommaire](/fr/systemes/fr-chrooubliees)
