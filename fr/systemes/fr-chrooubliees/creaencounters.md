@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T13:56:58.006Z
+date: 2020-12-26T14:04:12.801Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -70,3 +70,17 @@ Vous definissez aussi vous-même les valeurs des **Attaques** (CONTACT, DISTANCE
 La **DEF**, les **PV**, et l'**INIT** sont à remplir aussi manuellement
 
 ![crea_renc_caract.png](/images/chroniquesoubliees/customisation/crea_renc_caract.png)
+
+### 5. L'Onglet Combat
+Ici pas d'arme à équiper.
+En général les attaques de la Rencontre sont inscrites dans sa description. Etant souvent propre à la créature il est plus simple de la créer soit même.
+
+- Il vous faut définir un "**NOM**".
+- Puis dans la case "**MOD**" y inscrire la valeur de "touche".
+- **La plage des critiques** est modifiable. Vous pouvez par exemple choisir qu'un adversaire à un coup critique à partir de 17. Vous inscrivez donc 17, le système prendra en Critique tous dés compris entre 17 et 20.
+- Dans la Case "**DM**" vous entez la formule de dégats.
+
+> La créature est prête à attaquer, une fois en combat **cliquez sur le petit D20** pour lancer l'attaque.
+{.is-success}
+
+![créa_renc_combat.png](/images/chroniquesoubliees/customisation/créa_renc_combat.png)
