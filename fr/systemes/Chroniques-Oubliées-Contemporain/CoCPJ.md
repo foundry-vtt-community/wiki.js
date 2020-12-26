@@ -2,7 +2,7 @@
 title: CréationPJCoC
 description: 
 published: true
-date: 2020-12-26T20:03:58.731Z
+date: 2020-12-26T20:36:31.630Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T19:59:08.041Z
@@ -70,7 +70,7 @@ Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons 
 > Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiative** se mettent **automatiquement à jour**
 {.is-success}
 
-![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
+![pj5_coc.png](/images/chroniques-oubliées-contemporain/coc/pj5_coc.png)
 
 ## 6. Les points de vie de mon PJ:
 En cliquant sur le "Dé Vitalité" au dessus de la Case PV.
@@ -82,37 +82,49 @@ En cliquant sur le "Dé Vitalité" au dessus de la Case PV.
 **Dé de vie** (lié au profil) + **Modificateur de CONSTITUTION**
 {.is-success}
 
-![créa_pj_pv.png](/images/chroniquesoubliees/créa_pj_pv.png)
+![pj6_coc.png](/images/chroniques-oubliées-contemporain/coc/pj6_coc.png)
 
 ## 7. L'histoire de mon PJ:
 On a tous besoin d'un peu de background pour faire vivre son PJ.
-Et bien vous pouvez remplir toutes les infos sur sa vie dans l'onglet "Description":
-du plus simple avec les zones à remplir, en allant vers la longue tirade des ses origines ... en cliquant sur le bouton modifier de la zone "Description"
-![créa_pj_description.png](/images/chroniquesoubliees/créa_pj_description.png)
+Et bien vous pouvez remplir toutes les infos sur sa vie en cliquant sur le bouton modifier dans l'onglet "Description":
+
+![pj7_coc.png](/images/chroniques-oubliées-contemporain/coc/pj7_coc.png)
 
 ## 8. Son inventaire de base:
-Votre profil vous donne droit à un inventaire de base.
+Les Différentes voies de votre profil vous donnent droit à un inventaire de base.
 Pour retrouver cet Inventaire, ouvrez la description de votre Profil.
-Ici je double clique sur "Barde".
-Cette opération m'ouvre le **Compendium des Profils**. Je clique sur celui du Barde et je vois dans la Description les **"Possessions de départs"**.
+Ici je double clique sur "Diletante".
+Cette opération m'ouvre les informations de mon profil. Je clique sur l'onglet "Détail" et je clique ensuite sur chacune des "Voies". Dans la description des voies, je regarde ce que je peux avoir comme équipement.
 
-J'ouvre ensuite le **Compendium des Equipements** et je fais glisser sur ma fiche de personnage tous les équipements correspondants 
+![pj8_coc.png](/images/chroniques-oubliées-contemporain/coc/pj8_coc.png)
 
-![créa_pj_inventaire.png](/images/chroniquesoubliees/customisation/créa_pj_inventaire.png)
+> **ATTENTION** : Contrairement au système *Chroniques Oubliées Fantasy*, le compendium équipement du Système CoC ne contient que quelques armes.
+Comme annoncé en préambule, ce système est une boite à outil. Vous êtes libre de créer tout ce que votre immagination vous dicte.
+{.is-warning}
 
-Je peux ensuite décider d'équiper ou non certains équipements en cliquant sur le petit bouclier. Les Items équipés se retrouvent dans l'onglet "Combat".
+Nous allons devoir créer beaucoup d'équipements
 
-> Pour des infos sur la création des Objets, c'est [ici](/fr/systemes/fr-chrooubliees/creaobjets)
+> Pour des infos sur la création des Objets, c'est ICI
 {.is-info}
 
+Il est toutefois possible de trouver de l'équipement déjà prêt
+
+#### Equiper un objet
+Pour équiper un objet il faut qu'il ai un petit bouclier cliquable.
+Une fois "Actif" l'objet et considéré comme équipé et apparait aussi dans l'onglet "Combat'
+
 > **Un Item "Equipé" modifie automatiquement les Caractéristiques associées**
-Exemple : L'armure de cuir équipée ajoute +2 en DEF automatiquement
+Exemple : Le Gilet pare-balle ajoute +2 en DEF automatiquement
 {.is-success}
 
-![pj_inventaire_2.png](/images/chroniquesoubliees/customisation/pj_inventaire_2.png)
+> Admettons que Marty:
+>- possède et soit équipé d'un Gilet Par Balle, sa défense passera automatiquement de 11 à 13 s'il le porte
+>- possède et soit équipé d'une batte de base-ball
+
+![pj9_coc.png](/images/chroniques-oubliées-contemporain/coc/pj9_coc.png)
 
 
 > **FELICITATIONS !** Votre personnage est prêt à partir à l'aventure !
 {.is-success}
 
-> [Retour au sommaire](/fr/systemes/fr-chrooubliees)
+>[Retour au sommaire](/fr/systemes/Chroniques-Oubliées-Contemporain)
