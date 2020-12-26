@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2020-12-26T13:56:45.143Z
+date: 2020-12-26T13:56:58.006Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -67,6 +67,6 @@ Ici aussi un changement majeur : **Vous ne rentrez que les MOD**, c'est la valeu
 
 Vous definissez aussi vous-même les valeurs des **Attaques** (CONTACT, DISTANCE, MAGIQUE)
 
-La DEF, les PV, et l'INIT sont à remplir aussi manuellement
+La **DEF**, les **PV**, et l'**INIT** sont à remplir aussi manuellement
 
 ![crea_renc_caract.png](/images/chroniquesoubliees/customisation/crea_renc_caract.png)
