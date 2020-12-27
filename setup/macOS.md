@@ -2,7 +2,7 @@
 title: macOS
 description: 
 published: true
-date: 2020-12-27T22:47:07.280Z
+date: 2020-12-27T22:47:23.509Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:33:56.065Z
@@ -10,4 +10,4 @@ dateCreated: 2020-09-23T00:33:56.065Z
 
 ## Installation
 
-See the [official knowledgebase](https://foundryvtt.com/article/installation/) for installation on OSX.
+See the [official knowledge base](https://foundryvtt.com/article/installation/) for installation on OSX.
