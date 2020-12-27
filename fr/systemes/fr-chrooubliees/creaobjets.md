@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2020-12-26T23:06:27.823Z
+date: 2020-12-27T15:28:33.416Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -14,8 +14,6 @@ Sur cette page nous traiterons de la façon de créer des Objets de différents 
 Armure - Arme de Contact - Arme à distance - Bouclier - Sort - Bijou - Munition - Contenant - Monture - Monnaie - Divers
 {.is-info}
 
-> Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à chaque type de personnage que vous aller créer.
-{.is-info}
 ---
 
 **Pour créer un Objet, il suffit de cliquer sur Créer un Objet.
