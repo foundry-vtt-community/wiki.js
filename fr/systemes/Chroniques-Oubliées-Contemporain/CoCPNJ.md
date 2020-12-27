@@ -2,7 +2,7 @@
 title: Création PNJ
 description: Toute histoire mérite un PNJ.Bon ou méchant? A vous de choisir maintenant
 published: true
-date: 2020-12-27T14:44:35.686Z
+date: 2020-12-27T14:48:07.637Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T20:57:40.086Z
@@ -119,5 +119,6 @@ Tout ce que vous pouvez écrire, décrire, inventer sur votre "PNJ"
 
 > **FELICITATIONS** ! Vous être prêt à ~~faire mordre la poussière à vos PJ~~ proposer un peu de résistance à vos PJ
 {.is-success}
+
 
 >[Retour au sommaire](/fr/systemes/Chroniques-Oubliées-Contemporain)
