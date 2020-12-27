@@ -2,7 +2,7 @@
 title: Création PJ CoCth
 description: 
 published: true
-date: 2020-12-27T18:38:50.540Z
+date: 2020-12-27T18:41:24.186Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T21:54:02.816Z
@@ -18,6 +18,7 @@ Sur cette page nous traiterons de la façon de créer son personnage et comment 
 
 > Avant de Créer un monde dans le Système CoC Cthulhu pensez bien à paramérer votre partie. 
 **Voir Comment faire [ici](/fr/systemes/Chroniques-Oubliées-Contemporain/skin)**
+N'oubliez pas d'activer les Points de Chances qui auront ici le Rôle de **Points de Choc**
 {.is-warning}
 
 # La création d'un PJ
