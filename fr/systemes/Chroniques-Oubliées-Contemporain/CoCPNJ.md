@@ -2,7 +2,7 @@
 title: Création PNJ
 description: Toute histoire mérite un PNJ.Bon ou méchant? A vous de choisir maintenant
 published: true
-date: 2020-12-26T21:48:04.155Z
+date: 2020-12-27T14:44:35.686Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T20:57:40.086Z
@@ -61,6 +61,13 @@ La **DEF**, les **PV**, et l'**INIT** sont à remplir aussi manuellement
 > **Pour Biff**, je vais m'inspirer du profil "Jeune Voyou" p303 du Livre de Règles. Je lui ajoute le trait "Bagarreur"
 
 ![pnj3_coc.png](/images/chroniques-oubliées-contemporain/coc/pnj3_coc.png)
+
+> ***Les Caractéritiques Supérieures*** : Dans les livres il peut arriver qu'une caractéristiques soit accompagnée par "*". La créature doit alors jeter 2d20 et garder le meilleur. 
+**C'est possible ici en cochant la case avant la Carac :** 
+![pnj_carac_ameliorée.png](/images/chroniques-oubliées-contemporain/coc/pnj_carac_ameliorée.png)
+**Automatiquement lors du test, le type de dé est changé.**
+{.is-info}
+
 
 ## 5. L'Onglet Combat
 Ici pas d'arme à équiper.
