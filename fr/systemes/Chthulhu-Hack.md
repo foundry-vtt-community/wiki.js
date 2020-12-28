@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2020-12-06T15:50:40.397Z
+date: 2020-12-28T23:58:35.662Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -32,25 +32,52 @@ voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 
 
 ## Ce que propose le système de Cthulhu Hack VF
-Système créer par **Kristov**
+Système créé par **Kristov**
 
-**Fonctionnalités** : 
-- Fiche de personnage avec ajout/modification/suppression des objets et des capacités spéciales
-- Jet de sauvegarde avec avantage/désavantage
-- Jet de ressource avec avantage/désavantage et gestion de la diminution
-- Archétype : Drag and drop sur la fiche de perso pour mettre à jour les valeurs
-- Capacité spéciale : drag and drop depuis les capacités spéciales standards, avec prise en compte des capacités multiples (qui peuvent être prises plusieurs fois)
-- Capacité spéciale : pour les capacités qui donnent un avantage, affichage de l'information sur la fenêtre de lancer de dés sur la partie Type de jets
-- Fortune : option, avec affichage sous le portrait et possibilité de dépenser
-- Adrénaline : option, avec affichage sous le portrait
-- Opposant : création, ajout des attaques sous forme d'Item
-- Capacité : gestion du nombre d'utilisations et de la date de dernier usage
+### Actor
+
+- Personnage
+  - Ajout/modification/suppression des objets et des capacités spéciales
+  - Jet de sauvegarde avec avantage/désavantage/bonus/malus, affichage de l'avantage éventuel donné par une capacité
+  - Jet de ressource avec avantage/désavantage/bonus/malus et gestion de la diminution
+
+- Opposant
+	- Les attaques sont sous forme d'item
+
+
+### Item
+
+- Ability : capacité spéciale
+- Item : gestion du dé de matériel avec possibilité de faire un jet (limitation connue : en cas de perte de ressource, il faut diminuer le dé à la main)
+- Weapon : pour les armes, à faire glisser sur la fiche de personnage
+- Attack : les attaques, à faire glisser sur la fiche d'opposant
+
+### Options
+
+- **Fortune** : active/désactive l'affichage sur la fiche
+Le MJ active l'option et met le nombre de jetons disponibles pour les joueurs
+Affichage du nombre de jetons sous le portrait et possibilité de dépenser pour un joueur (limitation connue : après la dépense, il faut fermer et ouvrir la fiche pour voir le nombre restant mis à jour)
+
+- **Adrenaline** : active/désactive l'affichage sur la fiche
+Sous le portrait : éclair jeton pour le joueur, tête de mort jeton pour le MJ
+
+- **Dé de vie en tant que ressource** : active/désactive l'affichage sur la fiche
+- **Richesse en tant que ressource** : active/désactive l'affichage sur la fiche
+
+### Compendiums
+
+- **Archétypes standards** (avec les variations pour le savant) : Drag and drop sur la fiche de perso qui remplace les valeurs de la fiche par celles de l'archetype
+- **Capacités spéciales** : contient toutes les capacités standards
+
+- Drag and drop pour ajouter à la fiche (avec prise en compte des capacités multiples)
+- Gestion du nombre d'utilisations et affichage de la date de dernier usage lors du clic sur l'utilisation
+- Clic sur le nom pour déplier la description
 
 ## Notes de Mise à Jour
-**La dernière version sur gitlab :** 5 Décembre 2020
-* Possibilité d'avoir un bonus ou malus sur le jet de dés
-* Fix de l'avantage/désavantage
-* Ajout d'un champ optionnel qui affiche les cas d'avantage en fonction des capacités spéciales : +X pour un bonus, -X pour un malus
 
-**La dernière version sur gitlab 0.1.5 :** 6 Décembre 2020
-* Affichage fixé pour les bonus/malus. C'est affiché uniquement dans le cas des jets de Sauvegarde.
+**Le projet** : https://gitlab.com/foundryvtt2/FoundryVTT-Cthulhu-Hack
+
+**La dernière version sur gitlab :** 29 Décembre 2020
+* Compendium des armes spéciales
+* Champ description sur l'item attack
+
