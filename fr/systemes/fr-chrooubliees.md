@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-28T10:31:01.264Z
+date: 2020-12-28T10:33:28.656Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -36,7 +36,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 {.is-success}
 ---
 ### Je Cherche ou je partage des macros:
-> ici
+> [La boite à macros](/fr/systemes/fr-chrooubliees/macros)
 {.is-info}
 ---	
 
