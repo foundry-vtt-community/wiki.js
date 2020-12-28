@@ -2,9 +2,9 @@
 title: Windows
 description: 
 published: true
-date: 2020-09-23T01:36:26.041Z
+date: 2020-12-28T03:20:34.515Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:33:50.041Z
 ---
 
@@ -73,3 +73,34 @@ Now the GM must append :30000 to his ZeroTier Managed IP (see point 7 above). Vo
 
 WARNING:
 Zerotier installs on your pc as an automatic service. It means unless you set it as manual on you Services list it will run as soon as your OS is started, so you don't need to "run" it, unlike Hamachi. You are always connected to the vpn it creates.
+  
+# ngrok
+
+ngrok is an option to host games even if port forwarding and VPNs (Hamachi/ZeroTier) failed you.
+Basically, it's a program which does port forwarding for you while bypassing NATs and firewalls.
+
+## Preparation
+  
+1. Get the file here: https://ngrok.com/download
+2. Unzip it in any convenient location.
+  
+The last two steps are not necessary, but without them your players may experience connection problems.
+  
+3. Sign in on the site and get your authtoken. 
+4. Launch the program and enter `/ngrok authtoken <your_auth_token> ` with the code provided after signing up.
+
+You need to do this only once. Every launch afterwards will remember you.
+  
+## Hosting
+
+1. Launch the program
+2. Enter `/ngrok http <foundry_port>` with Foundry port usually being `30000`
+3. Copy the provided link directly from Forwarding line OR firstly open the link in Web Interface line and copy the URL from there.
+  
+  You can bookmark the page with Web Interface for future ease of use. It's address does not change on subsequent launches, but the page becomes inactive when you close ngrok.
+  
+  4. Send the URL to your players.
+  
+## Joining
+  
+  1. Open the link. That's it.
