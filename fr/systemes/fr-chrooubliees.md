@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-28T10:30:42.403Z
+date: 2020-12-28T10:31:01.264Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -35,7 +35,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 > Le systeme des Chroniques Oubliées Fantasy ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
 {.is-success}
 ---
-### Je Cherche des macros:
+### Je Cherche ou je partage des macros:
 > ici
 {.is-info}
 ---	
