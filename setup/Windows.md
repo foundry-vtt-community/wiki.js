@@ -2,7 +2,7 @@
 title: Windows
 description: 
 published: true
-date: 2020-12-28T03:20:34.515Z
+date: 2020-12-28T03:26:24.477Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:33:50.041Z
@@ -78,6 +78,8 @@ Zerotier installs on your pc as an automatic service. It means unless you set it
 
 ngrok is an option to host games even if port forwarding and VPNs (Hamachi/ZeroTier) failed you.
 Basically, it's a program which does port forwarding for you while bypassing NATs and firewalls.
+  
+It's free, but some people get confused because there are paid subscription options that list 4/8/12/20 tunnels. Tunnels seemingly have nothing to do with the number of players the GM can host.
 
 ## Preparation
   
@@ -103,4 +105,6 @@ You need to do this only once. Every launch afterwards will remember you.
   
 ## Joining
   
-  1. Open the link. That's it.
+  1. Open the link. 
+  
+  That's it.
