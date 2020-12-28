@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-26T18:09:47.400Z
+date: 2020-12-28T10:30:42.403Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -35,9 +35,8 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 > Le systeme des Chroniques Oubliées Fantasy ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
 {.is-success}
 ---
-### Ok, mais je le trouve où le lien pour l'installer :
-> Manifest : https://raw.githubusercontent.com/ZigmundKreud/cof/master/system.json
-> Project URL : https://github.com/ZigmundKreud/cof
+### Je Cherche des macros:
+> ici
 {.is-info}
 ---	
 
