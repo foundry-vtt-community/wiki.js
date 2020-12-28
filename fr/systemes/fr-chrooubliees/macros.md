@@ -2,7 +2,7 @@
 title: Boite à Macros
 description: Bienvenue ici pauvre pêcheur
 published: true
-date: 2020-12-28T11:22:59.956Z
+date: 2020-12-28T11:26:18.853Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-28T10:32:38.629Z
@@ -15,7 +15,7 @@ dateCreated: 2020-12-28T10:32:38.629Z
 
 ---
 ## Point de récupération
-Cette macro permet de lancer un point de récupération automatiquement en prenant en compte, selon la formule des PR, le dé de vie, le niveau et le Mod. de CHA du personnage.
+Cette macro permet de consommer un point de récupération en prenant automatiquement en compte, selon la formule des PR, le dé de vie, le niveau et le Mod. de CHA du personnage.
 
 Cliquez sur le token qui doit consommer un PR et lancer la macro. Le nombre de PV gagné sera calculé et assigné au personnage automatiquement. Le nombre de PR sera aussi mis à jour après l'utilisation.
 
