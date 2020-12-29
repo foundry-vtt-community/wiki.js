@@ -2,7 +2,7 @@
 title: Windows
 description: 
 published: true
-date: 2020-12-28T03:26:24.477Z
+date: 2020-12-29T09:42:40.658Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:33:50.041Z
@@ -86,7 +86,7 @@ It's free, but some people get confused because there are paid subscription opti
 1. Get the file here: https://ngrok.com/download
 2. Unzip it in any convenient location.
   
-The last two steps are not necessary, but without them your players may experience connection problems.
+The next two steps are not necessary, but without them your players may experience connection problems.
   
 3. Sign in on the site and get your authtoken. 
 4. Launch the program and enter `/ngrok authtoken <your_auth_token> ` with the code provided after signing up.
