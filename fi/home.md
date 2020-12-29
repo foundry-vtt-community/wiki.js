@@ -2,7 +2,7 @@
 title: Koti
 description: 
 published: true
-date: 2020-12-21T22:32:51.309Z
+date: 2020-12-29T19:26:21.292Z
 tags: kokeiluversiot, kielet, viralliset sivustot, yhteisöt
 editor: markdown
 dateCreated: 2020-12-21T19:04:14.538Z
@@ -15,8 +15,8 @@ Tämä wiki toimii yhteisön tuottaman **Foundry Virtual Tabletop** -pelin tiedo
 ## Wiki muilla kielillä
 - [日本語 （japani）](https://foundryvtt.wiki/ja/home)
 - [English （englanti）](https://foundryvtt.wiki/en/home)
-- [français (ranska)](https://foundryvtt.wiki/fr/home)
-- [suomi （suomi）](https://foundryvtt.wiki/fi/home)
+- [Français (ranska)](https://foundryvtt.wiki/fr/home)
+- [Suomi （suomi）](https://foundryvtt.wiki/fi/home)
 
 ## Viralliset sivustot
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop -verkkosivut](http://foundryvtt.com)
