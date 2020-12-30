@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-30T23:26:30.347Z
+date: 2020-12-30T23:29:30.740Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -65,6 +65,7 @@ en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous ser
 - d'acceder au site "héros et dragons" qui centralise les règles du jeu
 - d'acceder au discord de la communauté francophone de foundryVTT ou vous trouverez un salon dédié à **Héros et Dragons**
 - d'acceder au Wiki de la communauté francophone de foundryVTT ou vous trouverez une page dédiée à **Héros et Dragons**
+- d'accéder à un tipee (https://fr.tipeee.com/rwan) où est récolté des fonds afin de pouvoir acheter des icônes / graphismes / etc... afin de produire un module de qualité
 
 ### un résumé des règles de combats 
 en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles de combats. Cette aide de jeu à été produite par **Endoril** sur le forum black books (/https://www.black-book-editions.fr/forums.php?topic_id=15640)
