@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-19T17:07:36.641Z
+date: 2020-12-30T23:26:30.347Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -72,6 +72,10 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 # Notes de Mises à jour
 ---
+
+### Version 2.0.8 - 29/12/2020
+- correction calcul CA
+- lien vers le tipee : https://fr.tipeee.com/rwan
 ### Version 2.0.6 - 19/12/2020
 - correction à l'aide à la création : les capacité de classe niv1 sont données;
 - prise en compte de capacité défense sans armure des barbares et moines pour le calcul de CA
