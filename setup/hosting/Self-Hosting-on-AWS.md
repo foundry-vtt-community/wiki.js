@@ -2,9 +2,9 @@
 title: Self Hosting-on-AWS
 description: 
 published: true
-date: 2020-09-23T01:36:56.292Z
+date: 2020-12-31T17:01:26.924Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-23T00:34:51.723Z
 ---
 
@@ -204,9 +204,9 @@ For Windows users, I advise using the free terminal emulator PuTTY.  AWS themsel
 
 After you've set up Foundry, you'll want to add in the information that Foundry needs to connect to S3.  First, you need to create a .json file to contain the access key ID and secret access key, as well as your preferred region.  You can place this anywhere you like, but for simplicity's sake, I like to put it alongside my options.json file, like so.
 
-    nano ~/.local/share/FoundryVTT/Config/s3.json
+    nano ~/.local/share/FoundryVTT/Config/aws.json
 
-The precise path will vary based on how you installed it.  The keys you need are in the .csv file you made all the way back in IAM, part 1.  The region is the AWS-compliant name of the region your bucket is located in -- if you hit the Regions dropdown in the top right, it'll be in all lower case next to the friendlier name.  Copy and paste the following into your s3.json file, replace the accessKeyId, secretAccessKey, and region with the appropriate selections:
+The precise path will vary based on how you installed it.  The keys you need are in the .csv file you made all the way back in IAM, part 1.  The region is the AWS-compliant name of the region your bucket is located in -- if you hit the Regions dropdown in the top right, it'll be in all lower case next to the friendlier name (e.g. us-west-2).  Copy and paste the following into your aws.json file, replace the accessKeyId, secretAccessKey, and region with the appropriate selections:
 
     {
         "accessKeyId": "<your access key id>",
