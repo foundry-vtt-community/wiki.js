@@ -2,7 +2,7 @@
 title: Warhammer 4
 description: Support pour Warhammer 4 fr
 published: true
-date: 2020-12-14T15:26:53.079Z
+date: 2021-01-02T16:56:27.431Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
@@ -43,7 +43,9 @@ Si vous avez mis à jour le système Warhammer en v3 avec le "core" de Cubicle7,
 - Le réinstaller en copiant ce lien : `https://gitlab.com/LeRatierBretonnien/foundryvtt-wh4-lang-fr-fr/-/raw/v3/module.json` 
 - Relancer votre monde
 
-**Seuls le contenu officiel de C7 est désormais supporté en termes de compendiums.**
+**Seuls le contenu officiel de C7 est désormais supporté en termes de compendiums : 
+https://www.cubicle7games.com/product/foundrys-warhammer-fantasy-roleplay-core-module/
+**
 
 ## Pour la 0.6.6
 
