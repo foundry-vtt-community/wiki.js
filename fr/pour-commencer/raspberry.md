@@ -2,7 +2,7 @@
 title: 2.2. Installation Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2020-12-11T00:21:05.985Z
+date: 2021-01-04T12:49:32.966Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -80,7 +80,7 @@ Avant la fin du fichier `exit 0`
 Entrer le texte suivant et sauvegarder (Ctrl+X, puis O et Entrée)
 
 `# Foundry VTT server`
-`sudo node /home/pi/foundryvtt/resources/app/main.js --dataPath=/home/pi/foundrydata`
+`node /home/pi/foundryvtt/resources/app/main.js --dataPath=/home/pi/foundrydata`
 
 ## 5ème ÉTAPE : SÉCURISER LE SERVEUR
 
