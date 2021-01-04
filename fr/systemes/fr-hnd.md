@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2020-12-30T23:29:30.740Z
+date: 2021-01-04T10:08:04.485Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -74,6 +74,11 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 # Notes de Mises à jour
 ---
 
+### release 2.0.9 - 04/01/202
+- les babioles équippées qui ont un score en ca donne automatiquement leur bonus
+- prise en compte nouvelle version tidy sheet
+- ajout de la sous classe druide cercle des chatiments
+- complément de l'équipement d'aventurier
 ### Version 2.0.8 - 29/12/2020
 - correction calcul CA
 - lien vers le tipee : https://fr.tipeee.com/rwan
