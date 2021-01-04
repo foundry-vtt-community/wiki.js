@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2021-01-04T11:23:48.589Z
+date: 2021-01-04T11:31:39.562Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -56,6 +56,7 @@ toujours dans l'onglet "Modules" ; cherchez et installez :
 - l'équipement d'aventurier
 - des tables aléatoires de  folies, de rencontres, d'évènements
 - un ensemble de pièges
+
 ### un habillage graphique
 pour coller à la charte graphique de héros et dragons
 
@@ -70,6 +71,16 @@ en cliquant sur **l'icône en haut à gauche** de la table virtuelle il vous ser
 
 ### un résumé des règles de combats 
 en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles de combats. Cette aide de jeu à été produite par **Endoril** sur le forum black books (/https://www.black-book-editions.fr/forums.php?topic_id=15640)
+
+### quelques améliorations et automatisations 
+
+- la Classe d'armure peut être calculée automatiquement
+- les compétences sont remis dans l'ordre alphabétique
+- les ressources spécifiques aux classes et sous-classes sont affichées automatiquement (rage, inspiration bardique, canalisation d'énergie divine etc...)
+- on peut appliquer un code couleur aux compendium pour s'y retrouver
+- on peut masquer les compendiums issus du system dnd5
+- on peut donner les capacités de classes automatiquement aux montées de niveau
+
 
 ---
 # Notes de Mises à jour
