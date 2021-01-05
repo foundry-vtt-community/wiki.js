@@ -2,7 +2,7 @@
 title: 2.2. Installation Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2021-01-05T15:11:17.182Z
+date: 2021-01-05T15:12:02.386Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -96,6 +96,6 @@ Si vous jouez entre ami, fournissez simplement l'adresse à entrer dans un navig
 
 **AVERTISSEMENT** : ne confier son adresse IP qu'à des personnes de confiance. Ouvrir le serveur à la demande pour plus de sécurité. Éteindre la Raspberry quand elle n'est pas utile.
 
-Sinon, pour plus de sécurité, utiliser un serveur web tel que [Nginx](/fr/https://foundryvtt.com/article/nginx/) et un service DynDNS (nom de domaine) à paramétrer dans votre box. Il en existe des gratuits (DynDNS, No-IP, ChangeIP, DNSdynamic). Faite juste attention à ce que votre FAI accepte.
+Sinon, pour plus de sécurité, utiliser un serveur web tel que [Nginx](/fr/https://foundryvtt.com/article/nginx/) ou [Apache](/fr/https://foundryvtt.com/article/apache/) et un service DynDNS (nom de domaine) à paramétrer dans votre box. Il en existe des gratuits (DynDNS, No-IP, ChangeIP, DNSdynamic). Faite juste attention à ce que votre FAI accepte.
 
 
