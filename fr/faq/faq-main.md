@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2020-12-02T08:30:11.536Z
+date: 2021-01-05T16:02:51.776Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -93,7 +93,7 @@ A chacun de venir piocher ce qu’il lui plaît !
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
-Mon choix – partial s’il en est – est expliqué sur cette page. De plus, sur le fond, je pense que l’on est un peu tous responsable des hégémonies technologiques que l’on observe : Facebook serait-il devenu Facebook si on avait pas cédé à la « masse » et donner sa chance à un autre outil ? Idem pour Windows, Google et autres. On se plaint de l’hégémonie de tel ou telle société/outil/méthode, mais nous sommes – je m’inclus là dedans – souvent les premiers à l’entretenir. Donc à un tout petit niveau, à l’échelle excessivement modeste des « tables virtuelles », j’essaye également très modestement de faire connaître un outil auquel je trouve des qualités techniques et de jeu assez abouties pour éviter que Roll20 ne devienne le choix par défaut, fautes d’autres combattants. L’objectif est bien entretenir le choix, pas de rentrer dans des batailles trollesques de qualité/défaut de chaque outil ! 🙂
+Mon choix – partial s’il en est – est expliqué sur [cette page](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/). De plus, sur le fond, je pense que l’on est un peu tous responsable des hégémonies technologiques que l’on observe : Facebook serait-il devenu Facebook si on avait pas cédé à la « masse » et donner sa chance à un autre outil ? Idem pour Windows, Google et autres. On se plaint de l’hégémonie de tel ou telle société/outil/méthode, mais nous sommes – je m’inclus là dedans – souvent les premiers à l’entretenir. Donc à un tout petit niveau, à l’échelle excessivement modeste des « tables virtuelles », j’essaye également très modestement de faire connaître un outil auquel je trouve des qualités techniques et de jeu assez abouties pour éviter que Roll20 ne devienne le choix par défaut, fautes d’autres combattants. L’objectif est bien entretenir le choix, pas de rentrer dans des batailles trollesques de qualité/défaut de chaque outil ! 🙂
 
 ## Est-ce qu’il a des coupures audio/video ou autres ?
 
