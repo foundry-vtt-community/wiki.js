@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2020-12-05T14:37:54.961Z
+date: 2021-01-05T09:31:59.762Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -17,4 +17,4 @@ dateCreated: 2020-12-05T05:17:17.707Z
 
 ## Installer tous ce qu'il faut pour jouer
 
-
+(note pour la release : Systeme + Module Babele + Module Compendium FR)
