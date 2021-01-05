@@ -2,7 +2,7 @@
 title: 2.0. Installation sous Linux
 description: 
 published: true
-date: 2020-12-11T00:23:55.910Z
+date: 2021-01-05T15:21:06.388Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
@@ -27,7 +27,7 @@ Nous utiliserons ici le logiciel [PM2](https://pm2.keymetrics.io/docs/usage/pm2-
 Guide d'installation en français, rédigé par **prolice#9101** sur le discord francophone.
 
 - [Installation sur un ***Raspberry-Pi***](https://foundryvtt.wiki/fr/pour-commencer/raspberry) est à votre disposition sur le wiki.
-Guide d'installation en français, rédigé par **Neuralnoise#7374** sur le discord francophone.
+Guide d'installation en français, rédigé par **Neuralnoise** sur le discord francophone.
 
 
 Dans tous les cas, si vous rencontrez des soucis,que vous n'y arrivez pas, que vous soyez débutant ou expert Linux, nous vous invitons à poser vos questions dans le salon [#support-technique](https://discord.gg/pPSDNJk) sur le Discord Communautaire francophone de Foundry, en décrivant votre problème le plus précisement possible.
