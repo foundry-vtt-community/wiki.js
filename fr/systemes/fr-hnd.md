@@ -2,7 +2,7 @@
 title: Héros et Dragons
 description: Support Héros et Dragons
 published: true
-date: 2021-01-04T11:31:39.562Z
+date: 2021-01-05T14:11:30.218Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
@@ -85,8 +85,12 @@ en bas à gauche du chat un bouton vous permet d'ouvrir un résumé des règles 
 ---
 # Notes de Mises à jour
 ---
-
-### release 2.0.9 - 04/01/202
+### release 3.0.1 - 05/01/2021
+ - ajout sur l'option de création de personnage :
+-- des boutons pour valider les choix
+-- calcul de caractéristiques selon les différentes méthodes
+-- voir https://www.youtube.com/watch?v=xiNazTFWcYk&feature=emb_logo pour les détails
+### release 2.0.9 - 04/01/2021
 - les babioles équippées qui ont un score en ca donne automatiquement leur bonus
 - prise en compte nouvelle version tidy sheet
 - ajout de la sous classe druide cercle des chatiments
