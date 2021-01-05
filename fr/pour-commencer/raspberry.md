@@ -2,7 +2,7 @@
 title: 2.2. Installation Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2021-01-05T15:19:49.005Z
+date: 2021-01-05T15:19:58.242Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -33,7 +33,7 @@ Pour mettre à jour correctement une RasPi, ouvrez la console, copier ci dessous
 
 `sudo apt update && sudo apt full-upgrade -y && sudo apt-get dist-upgrade -y && sudo rpi-update`
 
-Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran) ou [SSH](fr/https://raspberry-pi.fr/connecter-ssh-raspberry-pi/) (terminal) comme ci dessous si vous souhaitez un contrôle à distance pour vous passer de brancher en hdmi/microhdmi votre RasPi. Vous utiliserez par la suite [VNC](fr/https://www.realvnc.com/de/connect/download/viewer/) ou un logiciel SSH tel que Putty [Putty](fr/https://www.putty.org/).
+Activer [VNC](fr/https://raspberry-pi.fr/vnc-raspberry-pi/) (partage de l'écran) ou [SSH](fr/https://raspberry-pi.fr/connecter-ssh-raspberry-pi/) (terminal) comme ci dessous si vous souhaitez un contrôle à distance pour vous passer de brancher en hdmi/microhdmi votre RasPi. Vous utiliserez par la suite [VNC](fr/https://www.realvnc.com/de/connect/download/viewer/) ou un logiciel SSH tel que [Putty](fr/https://www.putty.org/).
 
 L'autorisation du SSH peut aussi vous être utile dans les transferts de fichier via un client FTP tel que [Filezilla](fr/https://filezilla-project.org/) en paramétrant une connexion en utilisant le protocole *SSH File Transfert Protocol*. Exemple : ajouter des musiques pour vos parties.
 
