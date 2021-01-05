@@ -2,7 +2,7 @@
 title: 2.2. Installation Raspberry Pi
 description: Tutoriel d'installation d'un serveur Foundry VTT sur une Raspberry Pi
 published: true
-date: 2021-01-04T12:49:32.966Z
+date: 2021-01-05T15:11:17.182Z
 tags: raspberry pi serveur foundry vtt héberger host
 editor: markdown
 dateCreated: 2020-11-28T19:43:36.702Z
@@ -11,9 +11,7 @@ dateCreated: 2020-11-28T19:43:36.702Z
 # Raspberry Pi et Serveur Foundry VTT
 # À DESTINATION DE QUI?
 
-Ceux qui n'ont pas envie de payer un hébergement de serveur et qui ne disposent pas d'une machine suffisante pour héberger depuis l'application.
-
-Pensez à éteindre la RasPi quand vous ne l'utilisez pas, sans quoi votre connexion pourrait être prise par le serveur.
+Ce tutoriel s'adresse aux personnes qui ne veulent pas payer un hébergement de serveur et/ou ne possèdent pas un PC assez puissant pour héberger un serveur et jouer en même temps. Cela requière toujours une connexion suffisante pour héberger depuis l'application (4 à 5 Mbs, soit 32 à 40 Mbps en débit montant donc VDSL blindée, VDSL2 ou fibre).
 
 # HÉBÉGER UN SERVEUR FOUNDRY VTT À MOINDRE COÛT
 
@@ -90,13 +88,13 @@ Créez un mot de passe d'accè au serveur et si besoin à vos Mondes.
 
 ## 6ème ÉTAPE : OUVRIR LES PORTS DE LA BOX
 
-Si la box est configurée pour l'UPnP rien à faire, sinon ouvrir le port 30000 en redirigeant bien vers l'IP local de la Raspberry Pi.
+Si la box est configurée pour l'UPnP rien à faire (mais peu poser des problèmes par la suite, tout comme l'IPV6), sinon ouvrir le port 30000 en redirigeant bien vers l'IP local de la Raspberry Pi.
 
 ## 7ème ÉTAPE OPTIONNELLE : REDIRECTION DYNDNS
 
 Si vous jouez entre ami, fournissez simplement l'adresse à entrer dans un navigateur : votre-ip:30000
 
-**AVERTISSEMENT** : ne confier son adresse IP qu'à des personnes de confiance. Ouvrir le serveur à la demande pour plus de sécurité.
+**AVERTISSEMENT** : ne confier son adresse IP qu'à des personnes de confiance. Ouvrir le serveur à la demande pour plus de sécurité. Éteindre la Raspberry quand elle n'est pas utile.
 
 Sinon, pour plus de sécurité, utiliser un serveur web tel que [Nginx](/fr/https://foundryvtt.com/article/nginx/) et un service DynDNS (nom de domaine) à paramétrer dans votre box. Il en existe des gratuits (DynDNS, No-IP, ChangeIP, DNSdynamic). Faite juste attention à ce que votre FAI accepte.
 
