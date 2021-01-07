@@ -2,7 +2,7 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2021-01-07T20:48:03.690Z
+date: 2021-01-07T20:48:51.666Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z
@@ -150,7 +150,7 @@ It seems to be working. I can start processes with `pm2 start [options]` and fre
 
 Let's start Foundry using pm2: `pm2 start "node /home/ubuntu/foundry/resources/app/main.js --port=8080" --name "foundry"`. If you adjust the port number, please take note of it, we will be needing it later on.
 
-If you proceeded through the guide and the above command does not make the server reachable, first make sure that manually running Foundry works outside of `pm2` with `node /home/ubuntu/foundry/resources/app/main.js --port=8080"`.
+If you proceeded through the guide and the above command does not make the server reachable, first make sure that manually running Foundry works outside of `pm2` with `node /home/ubuntu/foundry/resources/app/main.js --port=8080`.
 
 ```
 [PM2] Starting /home/ubuntu/foundry/resources/app/main.js in fork_mode (1 instance)
