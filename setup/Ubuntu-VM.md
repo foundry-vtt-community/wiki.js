@@ -2,7 +2,7 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2020-12-19T17:45:49.141Z
+date: 2021-01-07T20:48:03.690Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z
@@ -148,9 +148,9 @@ $ pm2 unstartup systemd
 
 It seems to be working. I can start processes with `pm2 start [options]` and freeze the currently running process list with `pm2 freeze`, so all of those processes will be started on server reboot, too. Neat.
 
-Let's start Foundry using pm2: `pm2 start "node /home/ubuntu/foundry/resources/app/main.js" --name "foundry" -- --port=8080`. Please note the two dashes `--` followed by a blank ` ` and the parameter for Foundry itself: `--port=8080`. If you adjust the port number, please take note of it, we will be needing it later on.
+Let's start Foundry using pm2: `pm2 start "node /home/ubuntu/foundry/resources/app/main.js --port=8080" --name "foundry"`. If you adjust the port number, please take note of it, we will be needing it later on.
 
-If proceeded through the guide and the above command does not make the server reachable, first make sure that manually running Foundry works, and if not try with the following command instead: `pm2 start "node /home/ubuntu/foundry/resources/app/main.js --port=8080" --name "foundry"`. You can delete entries with `pm2 delete <id>` while replacing the id with the value shown in `pm2 list`.
+If you proceeded through the guide and the above command does not make the server reachable, first make sure that manually running Foundry works outside of `pm2` with `node /home/ubuntu/foundry/resources/app/main.js --port=8080"`.
 
 ```
 [PM2] Starting /home/ubuntu/foundry/resources/app/main.js in fork_mode (1 instance)
