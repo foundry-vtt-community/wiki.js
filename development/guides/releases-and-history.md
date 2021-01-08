@@ -2,7 +2,7 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2020-10-19T21:30:26.877Z
+date: 2021-01-08T17:14:59.210Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -190,10 +190,19 @@ Their `module.json` already leverages the `releases/latest` Github Repo url to e
 7. Hit Save.
 
 
-## Gitlab
-
-This is a Stub, I'm not familiar with how Gitlab does things, but I expect it's a similar process to the above. [This](https://gitlab.com/fvtt-modules-lab/quick-insert/-/tree/master) is an example of a project that leverages Gitlab releases.
+## GitLab
 
 ### Releases
 
-[Gitlab Releases Docs](https://docs.gitlab.com/ee/user/project/releases/)
+GitLab releases work a lot like the Github releases; they associate a git tag with some additional data. GitLab releases unfortunately do not allow file upload, so you cannot use GitLab releases alone to host a manually uploaded manifest or zip file.
+
+See the [Gitlab Releases Docs](https://docs.gitlab.com/ee/user/project/releases/) for more information.
+
+### Automation (GitLab CI/CD)
+Gitlab CI/CD jobs can be as simple as creating a zip file, to something more complex like compilation (e.g. TypeScript or Babel.js), dynamic  `module.json`, downloading and bundling dependencies, etc. Files created with GitLab CI/CD can be automatically archived to distribute your module.
+
+- [Dice So Nice](https://gitlab.com/riccisi/foundryvtt-dice-so-nice) - The easiest way to get started - simply creates a zip file when a new tag is created
+- [QuickInsert](https://gitlab.com/fvtt-modules-lab/quick-insert/-/tree/master) - Runs Gulp tasks that compile and bundle TypeScript with dependencies, dynamically creates module.json, etc. 
+- [Pathfinder 2e](https://gitlab.com/hooking/foundry-vtt---pathfinder-2e) - Compiles TypeScript and packages with Webpack
+
+Read more in the [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/introduction/).
