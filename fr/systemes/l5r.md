@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T15:58:17.193Z
+date: 2021-01-10T16:01:18.963Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -30,7 +30,7 @@ dateCreated: 2020-12-05T05:17:17.707Z
 ## Fonctionnement et utilisation
 Le système comprend la gestion des dés spécifiques au système. Que ce soit au travers d'un lanceur dédié ou en cliquant directement sur les compétences et champs dédié aux jets.
 
-![lanceur](https://drive.google.com/file/d/1FbduVDMGWafAwRoGSXGVcpgIjigWfN_0/view?usp=sharing)
+![lanceur2.png](/"images/lanceur2.png)
 
 A ce jour, il ne comprend pas la gestion intégré des dés explosifs, mais ceu-ci peuvent se gérer grâce au lanceur extérieur.
 
