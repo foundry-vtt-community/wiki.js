@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T16:24:57.731Z
+date: 2021-01-10T16:30:26.068Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -20,6 +20,10 @@ dateCreated: 2020-12-05T05:17:17.707Z
 - Development : [Mandar](https://foundryvtt.com/community/mandar) & [Vlyan](https://foundryvtt.com/community/vlyan)
 - Contribution: [Sasmira](https://foundryvtt.com/community/sasmira)
 - Compendiums : Carter & [Hrunh](https://foundryvtt.com/community/hrunh)
+
+Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
+
+---
 
 ## Installer le système et sa traduction
 - Installer le système L5R5E (à venir) depuis l'application Foundry dans la catégorie SYSTEME
@@ -41,8 +45,8 @@ Pour l'instant, il ne comprend pas la gestion intégré des dés explosifs, mais
 
 L'intégralité des élements à remplir (Avantages / Désavantages / Techniques / Armes / Armures / Inventaire) peut l'être directement depuis la fiche mais aussi depuis le compendium (si l'item existe) ou via les objets sur Foundry grâce à un simple glisser-déplacer.
 
-![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png)
-![techniques.png](/images/techniques.png) ![compendium.png](/images/compendium.png)
+![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png) ![techniques.png](/images/techniques.png)
+![compendium.png](/images/compendium.png)
 
 
 
