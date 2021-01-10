@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T16:31:18.633Z
+date: 2021-01-10T16:33:40.240Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -49,6 +49,5 @@ Pour l'instant, il ne comprend pas la gestion intégré des dés explosifs, mais
 
 L'intégralité des élements à remplir (Avantages / Désavantages / Techniques / Armes / Armures / Inventaire) peut l'être directement depuis la fiche mais aussi depuis le compendium (si l'item existe) ou via les objets sur Foundry grâce à un simple glisser-déplacer.
 
-![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png) ![techniques.png](/images/techniques.png)
-![compendium.png](/images/compendium.png)
+![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png) ![technique_1.png](/images/technique_1.png) ![compendium.png](/images/compendium.png)
 
