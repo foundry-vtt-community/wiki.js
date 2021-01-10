@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T16:22:52.674Z
+date: 2021-01-10T16:24:57.731Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -36,10 +36,13 @@ Le lanceur intégré aux compétences permet de renseigner le lanceur avec toute
 
 Pour l'instant, il ne comprend pas la gestion intégré des dés explosifs, mais ceux-ci peuvent se gérer grâce au lanceur extérieur:
 
-![lanceur2.png](/images/lanceur2.png) ![lanceur_3.png](/images/lanceur_3.png)
+![lanceur2.png](/images/lanceur2.png) 
+![lanceur_3.png](/images/lanceur_3.png)
 
-L'intégralité des élements à remplir (Avantages / Désavantages / Techniques / Armes / Armures / Inventaire) peut l'être directement depuis la fiche mais aussi depuis le compendium (si l'item existe) ou via les objets sur FOundry grâce à un simple glisser-déplacer.
+L'intégralité des élements à remplir (Avantages / Désavantages / Techniques / Armes / Armures / Inventaire) peut l'être directement depuis la fiche mais aussi depuis le compendium (si l'item existe) ou via les objets sur Foundry grâce à un simple glisser-déplacer.
 
+![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png)
+![techniques.png](/images/techniques.png) ![compendium.png](/images/compendium.png)
 
 
 
