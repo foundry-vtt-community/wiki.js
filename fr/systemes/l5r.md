@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T16:30:26.068Z
+date: 2021-01-10T16:31:18.633Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -31,6 +31,10 @@ Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
 - Installer le module [Babele](https://foundryvtt.com/packages/babele/) depuis la catégorie MODULE. Celui-ci en charge la traduction de l'Anglais au Français
 - Installer le module [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) depuis la catégorie MODULE, si vous aimez jouer avec des dés 3D
 
+## Création de personnage
+
+(A venir)
+
 ## Fonctionnement et utilisation
 Le système comprend la gestion des dés spécifiques au système. Que ce soit au travers d'un lanceur dédié ou en cliquant directement sur les compétences et champs dédié aux jets.
 
@@ -48,6 +52,3 @@ L'intégralité des élements à remplir (Avantages / Désavantages / Techniques
 ![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png) ![techniques.png](/images/techniques.png)
 ![compendium.png](/images/compendium.png)
 
-
-
-(note pour la release : Systeme + Module Babele + Module Compendium FR)
