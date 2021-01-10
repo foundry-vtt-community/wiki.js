@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T16:01:18.963Z
+date: 2021-01-10T16:22:52.674Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -30,10 +30,15 @@ dateCreated: 2020-12-05T05:17:17.707Z
 ## Fonctionnement et utilisation
 Le système comprend la gestion des dés spécifiques au système. Que ce soit au travers d'un lanceur dédié ou en cliquant directement sur les compétences et champs dédié aux jets.
 
-![lanceur2.png](/"images/lanceur2.png)
+Le lanceur intégré aux compétences permet de renseigner le lanceur avec toutes les données nécessaires pour le jet de dés:
 
-A ce jour, il ne comprend pas la gestion intégré des dés explosifs, mais ceu-ci peuvent se gérer grâce au lanceur extérieur.
+![skill_1.png](/images/skill_1.png) ![skill_2.png](/images/skill_2.png)
 
+Pour l'instant, il ne comprend pas la gestion intégré des dés explosifs, mais ceux-ci peuvent se gérer grâce au lanceur extérieur:
+
+![lanceur2.png](/images/lanceur2.png) ![lanceur_3.png](/images/lanceur_3.png)
+
+L'intégralité des élements à remplir (Avantages / Désavantages / Techniques / Armes / Armures / Inventaire) peut l'être directement depuis la fiche mais aussi depuis le compendium (si l'item existe) ou via les objets sur FOundry grâce à un simple glisser-déplacer.
 
 
 
