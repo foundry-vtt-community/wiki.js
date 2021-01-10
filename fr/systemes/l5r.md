@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-10T17:40:01.233Z
+date: 2021-01-10T19:52:54.807Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
