@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2020-12-04T22:44:42.015Z
+date: 2021-01-11T13:31:16.424Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -58,7 +58,7 @@ It is recommended to include a `manifestPlusVersion` property in your manifest w
 ```
 
 ### Media
-One of the largest additions, the `media` preperty is an array of objects which each provide data for a single multimedia item. This data includes a special `type` field which indicates what kind of media is being provided, as well as a `url` property which provides the address of the media resource.
+One of the largest additions, the `media` property is an array of objects which each provide data for a single multimedia item. This data includes a special `type` field which indicates what kind of media is being provided, as well as a `url` property which provides the address of the media resource.
 
 ```json
 "media": [
