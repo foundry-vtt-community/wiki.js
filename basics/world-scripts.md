@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: false
-date: 2021-01-11T18:28:27.426Z
+date: 2021-01-11T18:33:32.814Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -63,25 +63,31 @@ As mentioned above, world scripts are great for initial configuration tasks that
 
 ### Basic use of Hooks
 ```js
-// This example greets players with an on-screen notification once Foundry has finished its initial loading
+// This example greets players with an on-screen notification once Foundry
+// has finished its initial loading
 Hooks.on("ready", () => ui.notifications.notify("Welcome to the World!"));
 ```
 
 ### Setting the default angle of a cone template
 ```js
-// The default Foundry cone angle is 53.13 degrees. This world script will set the default angle for this world to 90 degrees.
+// The default Foundry cone angle is 53.13 degrees.
+// This world script will set the default angle for this world to 90 degrees.
 Hooks.on("setup", () => CONFIG.MeasuredTemplate.defaults.angle = 90);
 ```
 
 ### Adding a new status effect icon
 ```js
-// This world script will add a new status effect icon (a blue circle) that can be applied to tokens
-Hooks.on("setup", () => CONFIG.statusEffects.push({ id: "bluecircle", label: "Blue Circle", icon: "path/to/blue-circle.png" }));
+// This world script will add a new status effect icon (a blue circle)
+// that can be applied to tokens
+Hooks.on("setup", () => {
+  CONFIG.statusEffects.push({ id: "bluecircle", label: "Blue Circle", icon: "path/to/blue-circle.png" })
+});
 ```
 
 ### Setting the default token config
 ```js
-// This script will change the default token configuration for newly created actors (does not affect actors already in the world)
+// This script will change the default token configuration for newly created actors
+//   (does not affect actors already in the world).
 // It changes the following:
 // - Show the token's name when an owner of the token hovers over it
 // - Always show all resource bars for owners of the token
@@ -103,8 +109,8 @@ Hooks.on("init", () => {
 
 ### Adding an additional custom damage type (D&D 5e)
 ```js
-// Adds a new "plasma" damage type that will be selectable as a type of damage that attacks can apply,
-// and as a damage resistance that actors can have.
+// Adds a new "plasma" damage type that will be selectable as a new type of damage for weapons
+// and a new type of resistance for actors.
 // Note that this *might* not play well with modules which auto apply damage and resistances.
 Hooks.on("setup", () => {
   CONFIG.DND5E.damageTypes.plasma = "Plasma";
