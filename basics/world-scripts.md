@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: false
-date: 2021-01-11T17:33:01.931Z
+date: 2021-01-11T18:28:27.426Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -77,6 +77,28 @@ Hooks.on("setup", () => CONFIG.MeasuredTemplate.defaults.angle = 90);
 ```js
 // This world script will add a new status effect icon (a blue circle) that can be applied to tokens
 Hooks.on("setup", () => CONFIG.statusEffects.push({ id: "bluecircle", label: "Blue Circle", icon: "path/to/blue-circle.png" }));
+```
+
+### Setting the default token config
+```js
+// This script will change the default token configuration for newly created actors (does not affect actors already in the world)
+// It changes the following:
+// - Show the token's name when an owner of the token hovers over it
+// - Always show all resource bars for owners of the token
+// - Sets the first bar to display the token's hit points (dnd5e)
+Hooks.on("init", () => {
+    const old_ActorCreate = Actor.create;
+    Actor.create = function (data) {
+        data.token = data.token ?? {};
+        mergeObject(data.token, {
+            displayName: CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
+            displayBars: CONST.TOKEN_DISPLAY_MODES.OWNER,
+            bar1: { attribute: "attributes.hp" },
+        }, { overwrite: false });
+      
+        return old_ActorCreate.apply(this, arguments);
+    };
+});
 ```
 
 ### Adding an additional custom damage type (D&D 5e)
