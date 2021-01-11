@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: false
-date: 2021-01-11T04:57:22.587Z
+date: 2021-01-11T17:33:01.931Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -27,14 +27,14 @@ Another difference between world scripts and modules is that modules can be enab
 World scripts and macros fill quite different niches in terms of 3rd party code. Their main similarity is that both are relatively easy to set up when compared to a module.
 
 #### Structure
-Macros take the form of entities within a Foundry world or compendium. They are written in the built in Foundry macro editor. Since they are entities, they get the concept of user permissions for "free", they can be manipulated programmatically like other Foundry entities, and stored in compendia.
+Macros take the form of entities within a Foundry world or compendium. They are written in the built-in Foundry macro editor. Since macros are entities, they get the concept of user permissions for "free", they can be manipulated programmatically like other Foundry entities, and can be stored in compendia.
 
-World script's on the other hand, are javscript files which are written and edited in an external editor like Visual Studio Code. They are statically served to clients and thus can't be mutated in the same ways as macros.
+World scripts, on the other hand, are javscript files which are written and edited in an external editor like Visual Studio Code. They are statically served to clients and thus can't be mutated in the same ways as macros.
 
 #### Execution
-World scripts are loaded and executed as soon as the Foundry page loads, while Macros are latent until explicitly executed by a user (in core Foundry, at least). This is a massive difference that makes some very important concepts possible in world scripts that are not possible with macros, such as usage of hooks and sockets.
+World scripts are loaded and executed as soon as the Foundry page loads, while Macros are latent until explicitly executed by a user (in core Foundry, at least). This is a massive difference that makes some very important concepts feasible in world scripts that are not feasible with macros, such as usage of hooks and sockets.
 
-This also adds an additional consideration that developers must take into account compared to authoring macros: world scripts are executed on every client. Developers must be careful when handling hook calls that updates are only called from one client to avoid doing duplicate work, and avoid permissions issues from trying to update entities that the client does not have access to update.
+This also adds an additional consideration that developers must take into account compared to authoring macros: world scripts are executed on every client. Developers must be careful to ensure that updates are only called from one client to avoid doing duplicate work, and avoid permissions issues from trying to update entities that the client does not have access to update.
 
 ### Summary
 To summarize the difference between world scripts, modules, and macros:
@@ -47,6 +47,8 @@ In order to use a world script you must: (a) have a javscript file you want to a
 
 Your javscript file will usually live within the world directory for the world in which it is used, but in reality, it could live anywhere in your Foundry user data folder (see [Where Is My Data Stored?](https://foundryvtt.com/article/configuration/#where-user-data) on the Foundry knowledgebase for more information). This guide assumes that your javscript is in the root of the world directory (i.e. `Data/worlds/my-world/`).
 
+
+### Adding a world script to your world manifest
 To point your world manifest to point to your javascript code:
 1. Navigate to your world's directory in your user data folder.
 2. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
