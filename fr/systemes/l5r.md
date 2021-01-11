@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-11T14:34:54.859Z
+date: 2021-01-11T14:35:14.348Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -53,7 +53,7 @@ L'intégralité des élements à remplir (Avantages / Désavantages / Techniques
 
 ![av_des.png](/images/av_des.png) ![equipement.png](/images/equipement.png) ![technique_1.png](/images/technique_1.png) ![compendium.png](/images/compendium.png)
 
-Notez que le **système monétaire** a été implementé par défaut et que, par conséquent, la fiche de personage réalisera automatiquement la conversion Zeni->Bu->Koku.
+Notez que le **système monétaire** a été implementé par défaut et que, par conséquent, la fiche de personnage réalisera automatiquement la conversion Zeni->Bu->Koku.
 
 *ex: Si j'ajoute 12 Zeni, il me notera automatiquement 1 Bu et 2 Zeni. Dans le même sens, si j'ajoute 65 Zeni, il me le transformera en 1 Koku, 1 Bu et 5 Zeni.*
 
