@@ -2,7 +2,7 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2021-01-07T20:48:51.666Z
+date: 2021-01-12T03:41:41.096Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z
@@ -118,7 +118,15 @@ Foundry VTT | 2019-07-08 10:26:50 | [info] Application Options:
 Foundry VTT | 2019-07-08 10:26:51 | [info] Server started and listening on port 8080
 ```
 
-Great! Let's kill the process with `CTRL-C`.
+A common error to get at this point is:
+
+```
+Error: The fallback data path /home/<username>/.local/share/FoundryVTT does not exist.
+```
+
+Many Ubuntu server installs don't come with the `.local/share` directory already set up.  You can fix this by running `mkdir -p ~/.local/share/FoundryVTT`.
+
+Everything working?  Great! Let's kill the process with `CTRL-C`.
 
 ## Run Foundry Using the Process Manager pm2
 
