@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-12T21:01:30.529Z
+date: 2021-01-12T21:29:44.826Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -38,8 +38,15 @@ Suite à l'installation du système et des modules, n'oubliez pas de les activer
 L5R est doté d'un système de création qui se traduit sous la forme de 20 questions.
 Ces 20 questions ont été intégrés dans le système afin d'être le plus fidèle possible au jeu et à son univers.
 
-Avant de lancer les 20 questions, vous devrez au préalable créer la feuille de personnage.
+Avant de lancer les 20 questions, vous devrez au préalable créer la feuille de personnage dans la section adéquate, et ensuite cliquer en haut de la fiche sur "20Q" :
 
+![20q-01.png](/images/20q-01.png) ![20q-02.png](/images/20q-02.png)
+
+Une fois activé, vous aurez accès aux 20 questions et pourrez dérouler le processus soit en cliquant sur suivant soit en cliquant sur les différentes à gauche.
+
+![20q-03.png](/images/20q-03.png) ![20q-04.png](/images/20q-04.png)
+
+Notez que chacune des infos de ces 20 Questions restera stocké et que, par conséquent, vous pourrez jongler entre chacune des sections 
 
 ## Fonctionnement et utilisation
 Le système comprend la gestion des dés spécifiques au système. Que ce soit au travers d'un lanceur dédié ou en cliquant directement sur les compétences et champs dédiés aux jets.
