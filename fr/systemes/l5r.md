@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-12T21:35:42.878Z
+date: 2021-01-12T21:51:01.718Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -74,3 +74,13 @@ Notez que le **système monétaire** a été implementé par défaut et que, par
 *ex: Si j'ajoute 12 Zeni, il me notera automatiquement 1 Bu et 2 Zeni. Dans le même sens, si j'ajoute 65 Zeni, il me le transformera en 1 Koku, 1 Bu et 5 Zeni.*
 
 Enfin, la fiche de personnage inclut également une **gestion de l'expérience** gagnée et dépensée, se basant sur le système de gestion de l'expérience des règles de Legends of the Five Rings.
+
+## Informations
+
+Vous trouverez grâce à l'icone L5R situé en haut à gauche de votre écran, des liens qui vous permettront d'accéder à des sites en rapport avec L5R, que ce soit le site d'Edge Studio, celui de la boutique Drivethrurpg d'Edge et le lien vers le discord francophone de Foundry.
+
+![anneaux.png](/images/anneaux.png)
+
+> Nous vous souhaitons un bon jeu et espérons que vous l'apprécierez autant que nous avons pris du plaisir à le réaliser.
+{.is-success}
+
