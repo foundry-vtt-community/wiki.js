@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-12T21:32:36.763Z
+date: 2021-01-12T21:35:16.427Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -46,7 +46,7 @@ Une fois activé, vous aurez accès aux 20 questions et pourrez dérouler le pro
 
 ![20q-03.png](/images/20q-03.png) ![20q-04.png](/images/20q-04.png)
 
-Notez que chacune des infos de ces 20 Questions restera stocké et que, par conséquent, vous pourrez jongler entre chacune des sections sans que les éléments que vous y avez insérer ne soit perdus. De même lorsque la fiche sera validé, tout ce que vous aurez renseigné sera conservé.
+Notez que chacune des infos de ces 20 Questions restera stockée et que, par conséquent, vous pourrez jongler entre chacune des sections sans que les éléments que vous y avez insérer ne soit perdus. De même lorsque le questionnaire aura généré les éléments de la feuille de personnage, tout ce que vous aurez renseigné durant le questionnaire sera conservé et consultable a posteriori.
 
 > **Attention !!**
 Chaque fois que vous validerez la dernière section des 20 questions en cliquant sur "Générer le personnage", cela écrasera toutes les données déjà inscrites sur la feuille.
