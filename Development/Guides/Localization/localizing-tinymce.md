@@ -2,7 +2,7 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: false
-date: 2021-01-13T16:22:09.358Z
+date: 2021-01-13T16:23:12.784Z
 tags: localization, translation, guide, tinymce
 editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
@@ -42,8 +42,8 @@ To avoid doubling the length of this guide, and to save you from replacing code 
 
 ## Load TinyMCE Localization
 There are two methods for loading the TinyMCE localization:
-1. A [more involved method](#the-two-json-files-method) of using two `.json` files and some extra JavaScript code.
-1. A [quick and easy method](#the-quick-easy-method) of configuring TinyMCE to load the downloaded `.js` as-is.
+1. A [more involved method](#two-json-files-method) of using two `.json` files and some extra JavaScript code.
+1. A [quick and easy method](#quick-easy-method) of configuring TinyMCE to load the downloaded `.js` as-is.
 
 Both methods will yield the same result for the end-user but the **first method is recommended** if you have a more complex translation workflow than simply editing text files or you are using an online translation service. Additionally it will make translating the custom Foundry VTT menus easier.
 
@@ -61,6 +61,90 @@ Additionally this method will allow you to more cleanly translate custom menus a
 tinymce.addI18n('<TinyMCE lang code>',<multiline
 JSON data>);
 ```
+
+2. To translate **custom Foundry VTT menus**, simply add the strings shown in the GUI (**exactly** as written) into a JSON file at `<path to your module>/lang/tinymce/fvtt_<language code>.json`. For example, you would translate the menu pictured above by adding the keys **Custom** and **Secret** to a JSON object:
+```json
+{
+  "Custom": "Mukautetut",
+  "Secret": "Salainen"
+}
+```
+
+3. Copy the following code into a new file at `<path to your module>/scripts/tinymce.js`.
+> **NOTE:** Replace the 4 **\<placeholder\>** texts at the start with the correct values!
+{.is-info}
+```js
+const lang_code = "<language code>";
+const lang_name = "<language name>";
+const localization_path = "/modules/<your module name>/lang/tinymce/";
+const tinymce_lang_code = "<TinyMCE lang code>";
+
+fetch(`${localization_path}fvtt_${lang_code}.json`)
+    .then(response => {
+        "use strict";
+        if (response.ok) {
+            return response.json();
+        }
+
+        console.error(`${lang_code} | Failed to load TinyMCE ${lang_name} localization (Foundry VTT additions): ` + response.status);
+        return null;
+    })
+    .then(json => {
+        "use strict";
+        let localization = json;
+
+        fetch(`${localization_path}${lang_code}.json`)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+
+                console.error(`${lang_code} | Failed to load TinyMCE ${lang_name} localization (core): ` + response.status);
+                return null;
+            })
+            .then(json => {
+                if (localization && json) {
+                    localization = mergeObject(json, localization);
+                } else if (json) {
+                    localization = json;
+                }
+
+                if (localization) {
+                    tinyMCE.addI18n(tinymce_lang_code, localization);
+                    console.log(`${lang_code} | Loaded TinyMCE ${lang_name} localization.`);
+                }
+            });
+    });
+```
+
+4. Modify the original TinyMCE configuration to use the custom localization by copying the following code to a new file at `<path to your module>/scripts/<language code>.js`:
+> **NOTE:** Replace the **\<placeholder\>** texts with the correct values!
+{.is-info}
+```js
+Hooks.once("init", () => {
+    CONFIG.TinyMCE = mergeObject(CONFIG.TinyMCE, {
+        "use strict";
+
+        language: "<TinyMCE language code>",
+        language_url: "/modules/<your module name>/scripts/tinymce.js"
+    });
+});
+```
+
+5. Add the following code into your **module.json** at `<path to your module>/module.json`.
+> **NOTE:** Replace the **\<placeholder\>** text with the correct value!
+{.is-info}
+```json
+"esmodules": [
+        "scripts/<language code>.js"
+    ],
+```
+
+6. Enable your module in a world. Core Foundry VTT localization will load without enabling the module, but the TinyMCE localization requires enabling it.
+7. After completing all steps successfully, when you open a TinyMCE editor for the first time (e.g., when writing a journal entry) you should see no error messages relating to TinyMCE and a message similar to this in the console (open with <kbd>F12</kbd>):
+> ### Console
+> fi-FI | Loaded TinyMCE Finnish localization.
+
 
 #### Quick & Easy Method
 1. Copy the TinyMCE `.js` localization file you downloaded into `<path to your module>/lang/tinymce/<TinyMCE language code>.js`.
