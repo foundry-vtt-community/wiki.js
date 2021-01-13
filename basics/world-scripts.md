@@ -1,8 +1,8 @@
 ---
 title: World Scripts
 description: 
-published: false
-date: 2021-01-11T18:33:32.814Z
+published: true
+date: 2021-01-13T19:46:30.478Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
