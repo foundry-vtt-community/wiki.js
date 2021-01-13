@@ -2,13 +2,16 @@
 title: API Snippets
 description: 
 published: true
-date: 2020-09-23T01:33:34.625Z
-tags: 
-editor: undefined
+date: 2021-01-13T21:56:27.915Z
+tags: dnd5e, javascript, api, code
+editor: markdown
 dateCreated: 2020-09-23T00:25:21.757Z
 ---
 
-Code snippets seen on the discord channel, make sure to backup before trying these:
+Code snippets seen on the Discord channel.
+
+> Make sure to backup before trying these! Use at your own risk.
+{.is-warning}
 
 ## Bulk Update Tokens
 This example updates all tokens in game.
@@ -268,9 +271,9 @@ export async function promptDistanceNSomethingElse(fromToken, toToken) {
 ```
 
 
-## Specific to d&d 5
+# D&D 5e Game System Code Snippets
 
-### Assorted methods that work both on character-actors and on npc-actors:
+## Assorted methods that work both on character-actors and on npc-actors:
 
 ```js
 actor.useSpell(
