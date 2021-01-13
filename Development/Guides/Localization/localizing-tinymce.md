@@ -2,7 +2,7 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: false
-date: 2021-01-13T17:07:56.709Z
+date: 2021-01-13T19:36:36.987Z
 tags: localization, translation, guide, tinymce
 editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
@@ -67,7 +67,7 @@ Your Module Directory
 │ │ 
 │ └─┬─tinymce
 │   ├── fi-FI.json      : Core TinyMCE translation
-│   └── fvtt_fi-FI.json : Custom TinyMCE menu translation
+│   └── fi-FI_fvtt.json : Custom TinyMCE menu translation
 │
 └─┬─scripts
   ├── fi-FI.js          : Script to configure TinyMCE
@@ -84,7 +84,7 @@ tinymce.addI18n('<TinyMCE lang code>',<multiline
 JSON data>);
 ```
 
-2. To translate **custom Foundry VTT menus**, simply add the strings shown in the GUI (**exactly** as written) into a JSON file at `<path to your module>/lang/tinymce/fvtt_<language code>.json`. For example, you would translate the menu pictured above by adding the keys **Custom** and **Secret** to a JSON object:
+2. To translate **custom Foundry VTT menus**, simply add the strings shown in the GUI (**exactly** as written) into a JSON file at `<path to your module>/lang/tinymce/<language code>_fvtt.json`. For example, you would translate the menu pictured above by adding the keys **Custom** and **Secret** to a JSON object:
 ```json
 {
   "Custom": "Mukautetut",
@@ -101,7 +101,7 @@ const lang_name = "<language name>";
 const localization_path = "/modules/<your module name>/lang/tinymce/";
 const tinymce_lang_code = "<TinyMCE lang code>";
 
-fetch(`${localization_path}fvtt_${lang_code}.json`)
+fetch(`${localization_path}${lang_code}_fvtt.json`)
     .then(response => {
         "use strict";
         if (response.ok) {
