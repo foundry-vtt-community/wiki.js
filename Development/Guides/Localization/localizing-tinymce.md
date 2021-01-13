@@ -2,7 +2,7 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: false
-date: 2021-01-13T16:23:12.784Z
+date: 2021-01-13T16:29:25.120Z
 tags: localization, translation, guide, tinymce
 editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
@@ -35,7 +35,7 @@ To avoid doubling the length of this guide, and to save you from replacing code 
 1. Figure out the current version of TinyMCE used by Foundry VTT by looking at the **version** key in the file: `<path to Foundry VTT>/resources/app/node_modules/tinymce/package.json`
 
 2. Download a language package for your language and for the appropriate TinyMCE version from the official website: https://www.tiny.cloud/get-tiny/language-packages/
-> **NOTE:** Not all languages are 100% translated.
+> :pencil2: Not all languages are 100% translated.
 {.is-info}
 
 3. Extract the downloaded archive. It contains the TinyMCE localization in a `.js` file.
@@ -71,7 +71,7 @@ JSON data>);
 ```
 
 3. Copy the following code into a new file at `<path to your module>/scripts/tinymce.js`.
-> **NOTE:** Replace the 4 **\<placeholder\>** texts at the start with the correct values!
+> :pencil2: Replace the 4 **\<placeholder\>** texts at the start with the correct values!
 {.is-info}
 ```js
 const lang_code = "<language code>";
@@ -118,7 +118,7 @@ fetch(`${localization_path}fvtt_${lang_code}.json`)
 ```
 
 4. Modify the original TinyMCE configuration to use the custom localization by copying the following code to a new file at `<path to your module>/scripts/<language code>.js`:
-> **NOTE:** Replace the **\<placeholder\>** texts with the correct values!
+> :pencil2: Replace the **\<placeholder\>** texts with the correct values!
 {.is-info}
 ```js
 Hooks.once("init", () => {
@@ -132,7 +132,7 @@ Hooks.once("init", () => {
 ```
 
 5. Add the following code into your **module.json** at `<path to your module>/module.json`.
-> **NOTE:** Replace the **\<placeholder\>** text with the correct value!
+> :pencil2: Replace the **\<placeholder\>** text with the correct value!
 {.is-info}
 ```json
 "esmodules": [
@@ -142,7 +142,6 @@ Hooks.once("init", () => {
 
 6. Enable your module in a world. Core Foundry VTT localization will load without enabling the module, but the TinyMCE localization requires enabling it.
 7. After completing all steps successfully, when you open a TinyMCE editor for the first time (e.g., when writing a journal entry) you should see no error messages relating to TinyMCE and a message similar to this in the console (open with <kbd>F12</kbd>):
-> ### Console
 > fi-FI | Loaded TinyMCE Finnish localization.
 
 
@@ -164,10 +163,10 @@ tinymce.addI18n('fi',{
 "Secret": "Salainen"
 });
 ```
-> **REMEMBER:** Add a comma (`,`) after the last item in the JSON array (line 4 in the example).
+> :grey_exclamation: Add a comma (`,`) after the last item in the JSON array (line 4 in the example).
 {.is-info}
 3. Configure TinyMCE to use the localization by copying the following code to a new file at `<path to your module>/scripts/<language code>.js`.
-> **NOTE:** Replace the **\<placeholder\>** texts with the correct values!
+> :pencil2: Replace the **\<placeholder\>** texts with the correct values!
 {.is-info}
 ```js
 Hooks.once("init", () => {
@@ -181,7 +180,7 @@ Hooks.once("init", () => {
 ```
 
 4. Add the following code into your **module.json** at `<path to your module>/module.json`.
-> **NOTE:** Replace the **\<placeholder\>** text with the correct value!
+> :pencil2: Replace the **\<placeholder\>** text with the correct value!
 {.is-info}
 ```json
 "esmodules": [
@@ -191,5 +190,4 @@ Hooks.once("init", () => {
 
 5. Enable your module in a world. Core Foundry VTT localization will load without enabling the module, but the TinyMCE localization requires enabling it.
 6. After completing all steps successfully, when you open a TinyMCE editor for the first time (e.g., when writing a journal entry) you should see no error messages relating to TinyMCE and a message similar to this in the console (open with <kbd>F12</kbd>):
-> ### Console
 > fi-FI | Loaded TinyMCE Finnish localization.
