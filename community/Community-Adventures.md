@@ -2,23 +2,13 @@
 title: Adventures
 description: 
 published: true
-date: 2020-12-19T18:01:57.661Z
-tags: adventures
+date: 2021-01-13T21:50:33.961Z
+tags: adventures, dnd5e
 editor: markdown
 dateCreated: 2020-09-23T00:24:10.616Z
 ---
 
-<!--tl=2-->
-<!--ts-->
-   * [Foundry VTT Adventures for DnD 5E](#foundry-vtt-adventures-for-dnd-5e)
-      * [A World Far Far Away](#a-world-far-far-away)
-      * [The Lost City of Barakus](#the-lost-city-of-barakus)
-   * [Appendix](#appendix)
-      * [Appendix A: Adding an Adventure](#appendix-a-adding-an-adventure)
-      * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)
-<!--te-->
-
-# Foundry VTT Adventures for DnD 5E
+# Foundry VTT Adventures for D&D 5e
 
 Foundry VTT adventures that work within Dungeons and Dragons 5th Edition are noted here.
 
@@ -31,7 +21,7 @@ Foundry VTT adventures that work within Dungeons and Dragons 5th Edition are not
 * **Translation Support**: EN (Full)
 
 ### Link(s) to Adventure
-* Zip(free): [https://www.patreon.com/posts/shrek-is-love-36065571](https://www.patreon.com/posts/shrek-is-love-36065571)
+* <i class="fab fa-patreon"></i> Zip(free): [https://www.patreon.com/posts/shrek-is-love-36065571](https://www.patreon.com/posts/shrek-is-love-36065571)
 * PDF: [https://www.gmbinder.com/share/-M4yGi9hw8uKyPIp8PGZ](https://www.gmbinder.com/share/-M4yGi9hw8uKyPIp8PGZ)
 
 ### Description
@@ -56,7 +46,7 @@ Lord Farq- Lord Mirdeo is the self-proclaimed king of the land, and needs a prin
 * **Translation Support**: EN (full)
 
 ### Link(s) to Adventure
-* https://github.com/u2mad/The-Lost-City-of-Barakus
+* <i class="fab fa-github"></i> https://github.com/u2mad/The-Lost-City-of-Barakus
 * https://froggodgames.com/product/the-lost-lands-the-lost-city-of-barakus/
 
 ### Description
