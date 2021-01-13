@@ -2,37 +2,24 @@
 title: External Tools
 description: 
 published: true
-date: 2020-12-19T17:51:04.298Z
+date: 2021-01-13T21:47:10.245Z
 tags: tools
 editor: markdown
 dateCreated: 2020-09-23T00:24:58.400Z
 ---
 
-<!--tl=2-->
-<!--ts-->
-   * [Foundry VTT Tools (Universal)](#foundry-vtt-tools-universal)
-      * [DunGen](#dungen)
-      * [FG Converter](#fg-converter)
-      * [Foundry Project Creator (FPC)](#foundry-project-creator-fpc)
-      * [Table Importer](#table-importer)
-   * [Appendix](#appendix)
-      * [Appendix A: Adding a Tool](#appendix-a-adding-a-tool)
-      * [Appendix B: Best Editing Practices](#appendix-b-best-editing-practices)
-<!--te-->
-
-# Foundry VTT Tools (Universal)
-
 Foundry tools that work across all or most systems are noted here. These differ from modules as they are not integrated or loaded into Foundry VTT, but instead work externally and provide you with files or code you can import, such as a scene file.
 
 ## DunGen
 
-* **Author**: Nick#2947 on Discord. His Patreon can be found here: [patreon.com/DungeonChannel](https://www.patreon.com/DungeonChannel)
+* **Author**: Nick#2947 on Discord.
 * **Version**: 0.9
 * **Foundry VTT Compatibility**: 0.6.0
 * **Translation Support**: EN (full)
 
 ### Link(s) to Tool
-* [https://DunGen.app](https://dungen.app/dungen/)
+* <i class="fab fa-external-link-square-alt"></i> [https://DunGen.app](https://dungen.app/dungen/)
+* <i class="fab fa-patreon"></i>  [Link to the Patreon](https://www.patreon.com/DungeonChannel)
 
 ### Description
 DunGen is a Dungeon Generator that creates high resolution maps ready to import into Foundry VTT. Alongside the maps, you can also generate a full scene file including pre-built walls to take full advantage of Foundry's lighting feature in only a minute. You can see it in action in [this short video](https://youtu.be/2RlPpLOFkhc).
@@ -46,8 +33,8 @@ DunGen is a Dungeon Generator that creates high resolution maps ready to import 
 * **Foundry VTT Compatibility**: 0.6.0+
 
 ### Link(s) to Tool
-* [Link to the repository](https://gitlab.com/jesusafier/fg_converter)
-* [Link to the Patreon](https://www.patreon.com/foundry_grape_juice)
+* <i class="fab fa-gitlab"></i> [Link to the repository](https://gitlab.com/jesusafier/fg_converter)
+* <i class="fab fa-patreon"></i>  [Link to the Patreon](https://www.patreon.com/foundry_grape_juice)
 
 ### Description
 Converts Fantasy Grounds campaigns into FoundryVTT worlds.
@@ -71,8 +58,8 @@ Current Generic Support Status:
 * **Foundry VTT Compatibility**: 0.4.5+
 
 ### Link(s) to Tool
-* [Link to the repository](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project)
-* [Link to the wiki](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project/-/wikis/home)
+* <i class="fab fa-gitlab"></i> [Link to the repository](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project)
+* <i class="fab fa-gitlab"></i> [Link to the wiki](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project/-/wikis/home)
 
 ### Description
 The **Project Creator** is a tool to quickly get started with developing modules and systems for the Foundry VTT. It provides basic boilerplate code, for both vanilla JavaScript as well as TypeScript, and automated tasks using Gulp to speed up building, testing, and releasing your module.
@@ -88,7 +75,7 @@ Please refer to the README and the FPC wiki for more information.
 * **Foundry VTT Compatibility**: 0.6
 
 ### Link(s) to Tool
-[Link to the repo](https://github.com/jennis0/foundryvtt-utils/)
+* <i class="fab fa-github"></i> [Link to the repository](https://github.com/jennis0/foundryvtt-utils/)
 
 ### Description
 A python3 script to process tables copied from online sources into a FoundryVTT compatible JSON format. It has several particularly useful features:
@@ -100,8 +87,6 @@ A python3 script to process tables copied from online sources into a FoundryVTT 
 * better-rolltables integration with automatic table embedding and smart handling of currency
 
 ---
-
-App
 
 # Appendix
 
