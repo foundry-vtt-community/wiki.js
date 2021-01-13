@@ -2,13 +2,12 @@
 title: Localizing Map Note Icon Names
 description: A guide on how to localize map note icons with a custom JSON file.
 published: true
-date: 2021-01-13T21:32:49.433Z
+date: 2021-01-13T21:34:19.185Z
 tags: localization, translation, guide, map note
 editor: markdown
 dateCreated: 2021-01-13T21:23:53.391Z
 ---
 
-# Localizing Map Note Icon Names
 Strings for the drop-down list of note icons in map notes are not present in the usual Foundry Virtual Tabletop translation file. However, they **can be** localized by overriding the list of icons in the software configuration with JavaScript.
 
 This guide was written for **Foundry VTT 0.7.9**. This is an opinionated guide and instructs you to use certain formatting, file hierarchies, and the included JavaScript code contains logging statements. Finnish is used as an example language.
