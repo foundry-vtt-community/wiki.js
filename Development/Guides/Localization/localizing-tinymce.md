@@ -2,7 +2,7 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: false
-date: 2021-01-13T16:32:33.743Z
+date: 2021-01-13T17:04:41.776Z
 tags: localization, translation, guide, tinymce
 editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
@@ -11,7 +11,7 @@ dateCreated: 2021-01-13T00:54:19.266Z
 # Localizing the TinyMCE Editor
 Strings for the [TinyMCE](https://www.tiny.cloud/) text editor are not present in the usual Foundry Virtual Tabletop translation file as it is a third party library. TinyMCE, however, **does support** localization and the official documentation provides a guide on how to do it: https://www.tiny.cloud/docs/configure/localization/
 
-This guide adapts the official TinyMCE with additional details on how to implement it in Foundry VTT. It was written for **Foundry VTT 0.7.9** and **TinyMCE 5.6.2**. This is an opinionated guide and instructs you to use certain formatting and file hierarchies. Finnish is used as an example language.
+This guide adapts the official TinyMCE with additional details on how to implement it in Foundry VTT. It was written for **Foundry VTT 0.7.9** and **TinyMCE 5.6.2**. This is an opinionated guide and instructs you to use certain formatting, file hierarchies, and the included JavaScript code contains logging statements. Finnish is used as an example language.
 
 An example of a localized TinyMCE editor:
 
@@ -56,6 +56,27 @@ A more flexible way of localizing TinyMCE, involves modifying the downloaded `.j
 
 Additionally this method will allow you to more cleanly translate custom menus added by Foundry VTT by separating them from the core TinyMCE strings.
 
+You will be building (and the JavaScript code assumes) the following file structure in your module directory (replace `fi-FI` with your language code):
+<pre style="line-height:100%;margin:1rem;">
+Your Module Directory
+├── module.json         : Module information
+│
+├─┬─lang
+│ ├── fi-FI.json        : Core Foundry VTT translation
+│ │ 
+│ └─┬─tinymce
+│   ├── fi-FI.json      : Core TinyMCE translation
+│   └── fvtt_fi-FI.json : Custom TinyMCE menu translation
+│
+└─┬─scripts
+  ├── fi-FI.js          : Script to configure TinyMCE
+  └── tinymce.js        : Script to load TinyMCE localization
+</pre>
+
+> [Venea.net](https://www.venea.net/web/culture_code) has an excellent resource for [RFC 4646 language codes](https://en.wikipedia.org/wiki/IETF_language_tag).
+{.is-info}
+
+##### Steps
 1. Copy the **JSON data** from the TinyMCE `.js` localization file you downloaded into a new file at `<path to your module>/lang/tinymce/<language code>.json`. The `.js` file is formatted as follows:
 ```js
 tinymce.addI18n('<TinyMCE lang code>',<multiline
@@ -142,11 +163,30 @@ Hooks.once("init", () => {
 
 6. Enable your module in a world. Core Foundry VTT localization will load without enabling the module, but the TinyMCE localization requires enabling it.
 7. After completing all steps successfully, when you open a TinyMCE editor for the first time (e.g., when writing a journal entry) you should see no error messages relating to TinyMCE and a message similar to this in the console (open with <kbd>F12</kbd>):
-> ##### Console
+> ###### Console
 > fi-FI | Loaded TinyMCE Finnish localization.
 
-
 #### Quick & Easy Method
+
+You will be building (and the JavaScript code assumes) the following file structure in your module directory (replace `fi-FI` with your language code):
+<pre style="line-height:100%;margin:1rem;">
+Your Module
+├── module.json  : Module information
+│
+├─┬─lang
+│ ├── fi-FI.json : Core Foundry VTT translation
+│ │ 
+│ └─┬─tinymce
+│   └── fi.js    : Core TinyMCE translation + custom menus
+│
+└─┬─scripts
+  └── fi-FI.js   : Script to configure TinyMCE
+</pre>
+
+> [Venea.net](https://www.venea.net/web/culture_code) has an excellent resource for [RFC 4646 language codes](https://en.wikipedia.org/wiki/IETF_language_tag).
+{.is-info}
+
+##### Steps
 1. Copy the TinyMCE `.js` localization file you downloaded into `<path to your module>/lang/tinymce/<TinyMCE language code>.js`.
 2. To translate **custom Foundry VTT menus**, simply add the strings shown in the GUI (**exactly** as written) into the `.js` file. The file is formatted as follows:
 ```js
@@ -191,5 +231,5 @@ Hooks.once("init", () => {
 
 5. Enable your module in a world. Core Foundry VTT localization will load without enabling the module, but the TinyMCE localization requires enabling it.
 6. After completing all steps successfully, when you open a TinyMCE editor for the first time (e.g., when writing a journal entry) you should see no error messages relating to TinyMCE and a message similar to this in the console (open with <kbd>F12</kbd>):
-> ##### Console
+> ###### Console
 > fi-FI | Loaded TinyMCE Finnish localization.
