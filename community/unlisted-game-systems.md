@@ -2,7 +2,7 @@
 title: Unlisted Game Systems
 description: 
 published: true
-date: 2020-12-19T17:47:11.264Z
+date: 2021-01-13T21:37:53.368Z
 tags: game systems
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -10,7 +10,9 @@ dateCreated: 2020-09-23T00:24:22.792Z
 
 
 > ## Released Game Systems
-> Check the [Foundry Official package list](https://foundryvtt.com/packages/systems) to see a complete list of released game systems.
+> Check the official [Foundry VTT game systems list](https://foundryvtt.com/packages/systems) to see a complete list of released game systems.
+{.is-info}
+
 
 The list below is an unofficial and incomplete list of game systems that are either unlisted or still a work in progress. These are in various stages of development and may or may not be useable in their current state depending on your tolerance for bugs and rough edges.
 
