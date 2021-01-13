@@ -2,13 +2,12 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: true
-date: 2021-01-13T21:33:14.814Z
+date: 2021-01-13T21:34:41.725Z
 tags: localization, translation, guide, tinymce
 editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
 ---
 
-# Localizing the TinyMCE Editor
 Strings for the [TinyMCE](https://www.tiny.cloud/) text editor are not present in the usual Foundry Virtual Tabletop translation file as it is a third party library. TinyMCE, however, **does support** localization and the official documentation provides a guide on how to do it: https://www.tiny.cloud/docs/configure/localization/
 
 This guide adapts the official TinyMCE with additional details on how to implement it in Foundry VTT. It was written for **Foundry VTT 0.7.9** and **TinyMCE 5.6.2**. This is an opinionated guide and instructs you to use certain formatting, file hierarchies, and the included JavaScript code contains logging statements. Finnish is used as an example language.
