@@ -2,7 +2,7 @@
 title: API Snippets
 description: 
 published: true
-date: 2021-01-13T21:56:27.915Z
+date: 2021-01-13T21:57:32.611Z
 tags: dnd5e, javascript, api, code
 editor: markdown
 dateCreated: 2020-09-23T00:25:21.757Z
@@ -13,6 +13,7 @@ Code snippets seen on the Discord channel.
 > Make sure to backup before trying these! Use at your own risk.
 {.is-warning}
 
+# Foundry VTT Code Snippets
 ## Bulk Update Tokens
 This example updates all tokens in game.
 
