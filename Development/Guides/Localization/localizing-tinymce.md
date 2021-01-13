@@ -2,7 +2,7 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: false
-date: 2021-01-13T17:04:41.776Z
+date: 2021-01-13T17:07:56.709Z
 tags: localization, translation, guide, tinymce
 editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
@@ -32,7 +32,8 @@ Foundry VTT adds new menus into TinyMCE for which the official `.js` localizatio
 To avoid doubling the length of this guide, and to save you from replacing code you just copied, the guide is written with the assumption that you will want to localize these custom menus in addition to the TinyMCE core.
 
 ## Download a Language Package
-1. Figure out the current version of TinyMCE used by Foundry VTT by looking at the **version** key in the file: `<path to Foundry VTT>/resources/app/node_modules/tinymce/package.json`
+1. Figure out the current version of TinyMCE used by Foundry VTT by looking at the **version** key in the file:
+`<path to Foundry VTT>/resources/app/node_modules/tinymce/package.json`
 
 2. Download a language package for your language and for the appropriate TinyMCE version from the official website: https://www.tiny.cloud/get-tiny/language-packages/
 > Not all languages are 100% translated.
