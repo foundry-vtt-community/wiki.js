@@ -2,13 +2,11 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2020-12-22T08:15:46.972Z
+date: 2021-01-13T21:36:20.984Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
 ---
-
-# Translations
 
 ## Catalan
 
