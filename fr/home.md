@@ -2,9 +2,9 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-01-14T16:06:36.276Z
+date: 2021-01-14T18:23:03.376Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
 ---
 
@@ -16,7 +16,7 @@ Ce qu'il faut savoir avant tout :
 **NOTE :** Ce wiki est destiné à recevoir les informations importantes et "statiques" pour FoundryVTT, en complément du <i class="fab fa-discord"></i> [Francophone](https://discord.gg/pPSDNJk) et est géré à 100% par la communauté. Nous ne représentons en aucune façon Foundry Gaming LLC.
 
 Les partenaires ayant généreusement donnés des lots pour notre petit évènement des 1000 membres : 
-![logo_foundry.png](/images/home/logo_foundry.png) ![logo_bbe.png](/images/home/logo_bbe.png) ![logo_edge.png](/images/home/logo_edge.png)![logo_cubicle7.png](/images/home/logo_cubicle7.png) ![logo_dungeondraft.png](/images/home/logo_dungeondraft.png) ![logo_theforge.png](/images/home/logo_theforge.png) ![logo_architecture.png](/images/home/logo_architecture.png)
+![logo_architecture.png](/images/home/logo_architecture.png) ![logo_bbe.png](/images/home/logo_bbe.png) ![logo_cubicle7.png](/images/home/logo_cubicle7.png) ![logo_dungeondraft.png](/images/home/logo_dungeondraft.png) ![logo_edge.png](/images/home/logo_edge.png) ![logo_foundry.png](/images/home/logo_foundry.png) ![logo_theforge.png](/images/home/logo_theforge.png) 
 
 Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous invitons à :
 - Nous rejoindre sur le <i class="fab fa-discord"></i> [Francophone](https://discord.gg/pPSDNJk).
