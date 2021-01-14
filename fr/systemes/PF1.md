@@ -2,9 +2,9 @@
 title: Pathfinder 1re édition
 description: Support pour Pathfinder 1re édition
 published: true
-date: 2020-12-13T22:12:26.827Z
+date: 2020-12-13T22:12:29.501Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-19T09:38:37.925Z
 ---
 

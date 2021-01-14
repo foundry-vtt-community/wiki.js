@@ -2,9 +2,9 @@
 title: 4.0. Créer une partie
 description: 
 published: true
-date: 2020-12-11T00:20:22.136Z
+date: 2020-12-11T00:20:25.244Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-20T12:58:21.768Z
 ---
 

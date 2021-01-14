@@ -2,9 +2,9 @@
 title: Brigandyne
 description: 
 published: true
-date: 2020-12-05T05:19:15.840Z
+date: 2020-12-05T05:19:18.824Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-05T05:19:15.840Z
 ---
 

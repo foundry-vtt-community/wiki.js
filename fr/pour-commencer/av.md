@@ -2,9 +2,9 @@
 title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2020-12-11T00:20:39.676Z
+date: 2020-12-11T00:20:43.374Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-23T17:47:31.756Z
 ---
 

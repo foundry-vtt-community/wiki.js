@@ -2,9 +2,9 @@
 title: Pathfinder 1
 description: Support pour Pathfinder 1re édition
 published: true
-date: 2020-12-19T17:45:23.849Z
-tags: pf1, pathfinder, foundry vtt
-editor: markdown
+date: 2020-12-19T17:45:27.183Z
+tags: 
+editor: undefined
 dateCreated: 2020-12-13T21:59:16.658Z
 ---
 

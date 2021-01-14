@@ -2,9 +2,9 @@
 title: Création PNJ
 description: Toute histoire mérite un PNJ.Bon ou méchant? A vous de choisir maintenant
 published: true
-date: 2020-12-27T14:49:48.323Z
+date: 2020-12-27T14:49:51.707Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-26T20:57:40.086Z
 ---
 

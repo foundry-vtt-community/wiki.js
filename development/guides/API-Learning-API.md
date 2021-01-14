@@ -2,9 +2,9 @@
 title: Learning API
 description: 
 published: true
-date: 2020-10-12T17:07:42.213Z
+date: 2020-10-12T17:07:46.949Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:34:07.619Z
 ---
 

@@ -2,9 +2,9 @@
 title: Free League
 description: 
 published: true
-date: 2020-12-05T05:15:27.153Z
+date: 2020-12-05T05:15:29.983Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-05T05:15:27.153Z
 ---
 

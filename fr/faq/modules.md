@@ -2,9 +2,9 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-12-08T17:20:14.373Z
+date: 2020-12-08T17:20:18.406Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-31T00:54:43.133Z
 ---
 

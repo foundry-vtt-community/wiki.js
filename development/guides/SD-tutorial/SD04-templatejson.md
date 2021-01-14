@@ -2,9 +2,9 @@
 title: SD04 template.json
 description: 
 published: true
-date: 2020-12-20T21:49:56.600Z
+date: 2020-12-20T21:50:00.894Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:35:41.059Z
 ---
 

@@ -2,9 +2,9 @@
 title: Pathfinder 1 - Improvements for French
 description: Module pour foundry VTT dédié à la communauté francophone
 published: true
-date: 2020-12-13T22:09:24.064Z
-tags: pathfinder, french
-editor: markdown
+date: 2020-12-13T22:09:26.931Z
+tags: 
+editor: undefined
 dateCreated: 2020-12-13T22:09:24.064Z
 ---
 

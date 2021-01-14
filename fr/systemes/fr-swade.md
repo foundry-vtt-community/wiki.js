@@ -2,9 +2,9 @@
 title: SWADE - Savage Worlds
 description: 
 published: true
-date: 2020-10-18T09:16:54.325Z
+date: 2020-10-18T09:16:56.905Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-18T08:16:56.209Z
 ---
 

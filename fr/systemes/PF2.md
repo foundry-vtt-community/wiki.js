@@ -2,9 +2,9 @@
 title: Pathfinder Seconde édition
 description: Support pour Pathfinder Seconde édition
 published: true
-date: 2020-12-06T09:38:06.287Z
+date: 2020-12-06T09:38:09.148Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-19T09:41:07.004Z
 ---
 

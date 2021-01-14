@@ -2,9 +2,9 @@
 title: Token Configuration
 description: 
 published: true
-date: 2020-12-04T00:04:20.721Z
+date: 2020-12-04T00:04:24.710Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:23:45.372Z
 ---
 

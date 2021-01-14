@@ -2,9 +2,9 @@
 title: SD 13.0-Localization
 description: 
 published: true
-date: 2020-12-20T22:13:29.335Z
+date: 2020-12-20T22:13:32.556Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:35:12.564Z
 ---
 

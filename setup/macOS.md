@@ -2,9 +2,9 @@
 title: macOS
 description: 
 published: true
-date: 2020-12-27T22:47:23.509Z
+date: 2020-12-27T22:47:26.381Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:33:56.065Z
 ---
 

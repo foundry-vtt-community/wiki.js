@@ -2,9 +2,9 @@
 title: Core-system
 description: Support pour le Core-system
 published: true
-date: 2020-12-23T14:15:58.814Z
+date: 2020-12-23T14:16:02.708Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-19T09:56:23.255Z
 ---
 

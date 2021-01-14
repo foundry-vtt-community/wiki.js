@@ -2,9 +2,9 @@
 title: Règles Additionnelles 
 description: Des options de jeu différentes
 published: true
-date: 2020-12-26T17:36:03.319Z
+date: 2020-12-26T17:36:06.777Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-23T18:22:50.709Z
 ---
 

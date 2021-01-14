@@ -2,9 +2,9 @@
 title: CréationPJCoC
 description: 
 published: true
-date: 2020-12-26T21:47:33.758Z
+date: 2020-12-26T21:47:36.986Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-26T19:59:08.041Z
 ---
 

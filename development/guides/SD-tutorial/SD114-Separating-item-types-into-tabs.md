@@ -2,9 +2,9 @@
 title: SD11.4 Separating-item-types-into-tabs
 description: 
 published: true
-date: 2020-12-20T22:11:31.479Z
+date: 2020-12-20T22:11:35.115Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:36:36.715Z
 ---
 

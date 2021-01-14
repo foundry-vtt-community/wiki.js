@@ -2,9 +2,9 @@
 title: SD02 Stuff-to-be-aware-of
 description: 
 published: true
-date: 2020-12-20T22:08:58.836Z
+date: 2020-12-20T22:09:02.094Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:35:29.131Z
 ---
 

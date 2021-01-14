@@ -2,9 +2,9 @@
 title: Windows
 description: 
 published: true
-date: 2020-12-29T09:42:40.658Z
+date: 2020-12-29T09:42:44.403Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:33:50.041Z
 ---
 

@@ -2,9 +2,9 @@
 title: Compendia
 description: 
 published: true
-date: 2020-10-06T02:57:48.847Z
+date: 2020-10-06T02:57:52.950Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:22:26.311Z
 ---
 

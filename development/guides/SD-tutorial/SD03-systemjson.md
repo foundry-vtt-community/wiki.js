@@ -2,9 +2,9 @@
 title: SD03 system.json
 description: 
 published: true
-date: 2020-12-20T21:49:18.053Z
+date: 2020-12-20T21:49:21.937Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:35:35.124Z
 ---
 

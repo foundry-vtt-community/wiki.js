@@ -2,9 +2,9 @@
 title: Delta Green
 description: 
 published: true
-date: 2020-12-14T12:40:42.309Z
+date: 2020-12-14T12:40:45.082Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-14T09:13:27.349Z
 ---
 

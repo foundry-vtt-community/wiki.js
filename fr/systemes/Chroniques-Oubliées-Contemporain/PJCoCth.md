@@ -2,9 +2,9 @@
 title: Création PJ CoCth
 description: 
 published: true
-date: 2020-12-27T18:41:24.186Z
+date: 2020-12-27T18:41:27.708Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-26T21:54:02.816Z
 ---
 

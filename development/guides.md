@@ -2,9 +2,9 @@
 title: Guides
 description: 
 published: true
-date: 2021-01-14T08:23:45.619Z
+date: 2021-01-14T08:24:53.185Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-01-14T08:23:45.619Z
 ---
 

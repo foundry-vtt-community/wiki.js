@@ -2,9 +2,9 @@
 title: Deadlands Reloaded
 description: 
 published: true
-date: 2020-10-18T08:39:21.670Z
+date: 2020-10-18T08:39:24.114Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-18T08:22:10.446Z
 ---
 

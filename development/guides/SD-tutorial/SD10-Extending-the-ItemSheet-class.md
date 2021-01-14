@@ -2,9 +2,9 @@
 title: SD10 Extending-the-ItemSheet-class
 description: 
 published: true
-date: 2020-12-20T21:54:02.498Z
+date: 2020-12-20T21:54:06.258Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:36:18.600Z
 ---
 

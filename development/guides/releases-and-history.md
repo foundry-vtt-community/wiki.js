@@ -2,9 +2,9 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-01-08T17:14:59.210Z
+date: 2021-01-08T17:15:03.757Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-19T15:45:56.156Z
 ---
 

@@ -2,9 +2,9 @@
 title: PIXI
 description: 
 published: true
-date: 2020-10-22T14:39:38.435Z
+date: 2020-10-22T14:39:42.457Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T07:01:33.581Z
 ---
 

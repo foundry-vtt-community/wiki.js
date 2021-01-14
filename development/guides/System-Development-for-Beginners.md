@@ -2,9 +2,9 @@
 title: System Development-for-Beginners
 description: 
 published: true
-date: 2020-11-13T18:25:05.812Z
+date: 2020-11-13T18:30:05.654Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:37:42.801Z
 ---
 

@@ -2,9 +2,9 @@
 title: SD07 Extending-the-ActorSheet-class
 description: 
 published: true
-date: 2020-12-20T21:52:13.102Z
+date: 2020-12-20T21:52:16.672Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:35:58.947Z
 ---
 

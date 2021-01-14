@@ -2,9 +2,9 @@
 title: API Snippets
 description: 
 published: true
-date: 2021-01-14T03:56:02.617Z
-tags: dnd5e, javascript, api, code
-editor: markdown
+date: 2021-01-14T03:56:06.367Z
+tags: 
+editor: undefined
 dateCreated: 2020-09-23T00:25:21.757Z
 ---
 

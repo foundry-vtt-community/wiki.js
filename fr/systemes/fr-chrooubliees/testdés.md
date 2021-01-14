@@ -2,9 +2,9 @@
 title: COF : Je me lance
 description: L'aventure commence, il est tant de lancer les dés
 published: true
-date: 2020-12-26T17:32:24.542Z
+date: 2020-12-26T17:32:28.265Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-26T17:32:24.542Z
 ---
 

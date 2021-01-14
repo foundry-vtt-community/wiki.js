@@ -2,9 +2,9 @@
 title: SD13 Localization
 description: 
 published: true
-date: 2020-12-20T22:10:54.293Z
+date: 2020-12-20T22:10:57.682Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-20T22:06:29.592Z
 ---
 
