@@ -1,20 +1,19 @@
 ---
-title: PIXI
+title: Introduction to PIXI in Foundry VTT
 description: 
 published: true
-date: 2020-10-22T14:39:42.457Z
-tags: 
-editor: undefined
+date: 2021-01-15T19:35:47.213Z
+tags: guide, pixi, layer, canvas, filter
+editor: markdown
 dateCreated: 2020-09-23T07:01:33.581Z
 ---
 
-# Introduction to PIXI in FoundryVTT
-This guide is intended to be a crash course in how to draw things on the canvas in FoundryVTT using PIXI.
+This guide is intended to be a crash course in how to draw things on the canvas in Foundry VTT using PIXI.
 
 ## Basic Concepts
 Foundry uses the powerful PIXI graphics library, and most of the time you will manipulate elements on the canvas through this interface, although if needed you should be aware that PIXI will allow you to dive deep and modify native WebGL elements directly if required.
 
-FoundryVTT draws WebGL graphics to an HTML5 Canvas element, which is drawn such that it covers the screen. The canvas element itself is part of the HTML DOM tree but almost everything within it (except UI elements such as HUD) are not and you cannot access them as HTML elements. You can access the HTML Canvas element at `$('#board')` if needed but it is rarely necessary.
+Foundry VTT draws WebGL graphics to an HTML5 Canvas element, which is drawn such that it covers the screen. The canvas element itself is part of the HTML DOM tree but almost everything within it (except UI elements such as HUD) are not and you cannot access them as HTML elements. You can access the HTML Canvas element at `$('#board')` if needed but it is rarely necessary.
 
 ## The Major PIXI Elements
 
@@ -39,15 +38,15 @@ canvas.app.ticker
 ```
 Each of these will be covered in more detail later. For now, you simply need to know that the Stage holds your stuff, the renderer lets you control how the stuff is combined and drawn, and the ticker lets you control when that happens.
 
-## The FoundryVTT Layers
+## The Foundry VTT Layers
 
-In FoundryVTT, almost all elements drawn to the canvas will be contained within a CanvasLayer, which in turn are contained within the Stage. CanvasLayers typically cover the entire area of the stage, which unlike the canvas, is not necessarily the entire browser window.
+In Foundry VTT, almost all elements drawn to the canvas will be contained within a CanvasLayer, which in turn are contained within the Stage. CanvasLayers typically cover the entire area of the stage, which unlike the canvas, is not necessarily the entire browser window.
 
 The Layers are children of canvas.app.stage, and can be located at `canvas.app.stage.children` however for convenience you can access them at `canvas.layers` as well.
 
 Layers tend to be instances of (or extended from) [`CanvasLayer`](https://foundryvtt.com/api/CanvasLayer.html) or [`PlaceablesLayer`](https://foundryvtt.com/api/PlaceablesLayer.html). For now, just know that all layers are in fact just [`PIXI.Container`](https://pixijs.download/dev/docs/PIXI.Container.html) with extra properties added but otherwise behave exactly like the [`PIXI.Container`](https://pixijs.download/dev/docs/PIXI.Container.html) we will be using below.
 
-As of FoundryVTT 0.6.x there are 13 default layers, although modules can add more. These are, in order from lowest to highest:
+As of Foundry VTT 0.6.x there are 13 default layers, although modules can add more. These are, in order from lowest to highest:
 
 ```
 ControlsLayer
@@ -90,7 +89,7 @@ Next, we told PIXI what kind of shape to draw and how large. In this case, we sp
 
 Lastly, we told PIXI we were done drawing our shape. We could have drawn more shapes to this Graphic, but for now we'll keep it simple and leave it at a single square.
 
-Now we want our square to actually show up on the canvas. To do that, we'll have to tell PIXI what Container should hold our graphic. In this case, let's just draw it directly to the stage for simplicity, although in FoundryVTT you should usually draw things to a Layer instead.
+Now we want our square to actually show up on the canvas. To do that, we'll have to tell PIXI what Container should hold our graphic. In this case, let's just draw it directly to the stage for simplicity, although in Foundry VTT you should usually draw things to a Layer instead.
 
 ```js
 canvas.app.stage.addChild(g);
@@ -160,7 +159,6 @@ Here is a list of [all default available Filters](http://pixijs.download/release
 Some things to note about filters:
 - Filters can only be applied to `PIXI.Sprite` and `PIXI.Graphic` elements.
 - Filters are applied last in the render order, thus they cannot be applied to Masks.
-
 
 ### Filters and References
 
