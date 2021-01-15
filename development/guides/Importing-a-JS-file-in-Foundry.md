@@ -1,17 +1,17 @@
 ---
-title: Importing a-.JS-file-in-Foundry
+title: Importing a .JS File in Foundry VTT
 description: 
 published: true
-date: 2020-09-28T20:29:14.580Z
-tags: 
-editor: undefined
+date: 2021-01-15T19:32:42.383Z
+tags: guide, javascript, es6, module
+editor: markdown
 dateCreated: 2020-09-23T00:34:13.915Z
 ---
 
-Given the vast amount of information out there about ES6 modules it's easy for someone new to JS to get lost trying to figure out how to carry out the simple task of importing a `.js` library into Foundry. Because the process is simple it is something often overlooked in installation explanations.
+Given the vast amount of information out there about ES6 modules it's easy for someone new to JS to get lost trying to figure out how to carry out the simple task of importing a `.js` library into Foundry VTT. Because the process is simple it is something often overlooked in installation explanations.
 
 ### How do I add a third party `.js` plugin or library so that I can call it inside my character sheet?
-Foundry supports ES6 Modules, so the simplest way to import your `.js` file is to establish an export for it.
+Foundry VTT supports ES6 Modules, so the simplest way to import your `.js` file is to establish an export for it.
 
 Using Example (`example.min.js`) constructor class,
 
