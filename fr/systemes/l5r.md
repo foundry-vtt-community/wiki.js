@@ -2,9 +2,9 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-12T21:51:05.664Z
+date: 2021-01-15T21:21:30.567Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
 ---
 
@@ -26,7 +26,7 @@ Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
 ---
 
 ## Installer le système et sa traduction
-- Installer le système L5R5E (à venir) depuis l'application FoundryVTT dans la catégorie SYSTEME (il comprend le système et le compendium associé)
+- Installer le système [L5R5E](https://foundryvtt.com/packages/l5r5e/) depuis l'application FoundryVTT dans la catégorie SYSTEME (il comprend le système et le compendium associé)
 - Installer le module [Babele](https://foundryvtt.com/packages/babele/) depuis la catégorie MODULE de l'application FoundryVTT. Celui-ci prend en charge la traduction de l'Anglais au Français
 - Installer le module [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) depuis la catégorie MODULE de l'application FoundryVTT, si vous aimez jouer avec des dés 3D
 
