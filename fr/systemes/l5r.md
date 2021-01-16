@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-15T21:22:05.580Z
+date: 2021-01-16T19:32:49.834Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -74,6 +74,19 @@ Notez que le **système monétaire** a été implementé par défaut et que, par
 *ex: Si j'ajoute 12 Zeni, il me notera automatiquement 1 Bu et 2 Zeni. Dans le même sens, si j'ajoute 65 Zeni, il me le transformera en 1 Koku, 1 Bu et 5 Zeni.*
 
 Enfin, la fiche de personnage inclut également une **gestion de l'expérience** gagnée et dépensée, se basant sur le système de gestion de l'expérience des règles de Legends of the Five Rings.
+
+
+## Utilisation des caractères spéciaux
+
+Les symboles spéciaux utilisés dans les ouvrages de la gamme sont implémentés dans le système et peuvent être utilisés en utilisant les chaines de caratères suivantes dans le texte :
+
+Symboles de dés : (op) (su) (ex) (st) (ring) (skill)
+Anneaux : (earth) (water) (fire) (air) (void)
+Techniques: (kiho) (maho) (ninjitsu) (ritual) (shuji) (invocation) (kata) (prereq)
+Clans: (imperial) (crab) (crane) (dragon) (lion) (mantis) (phoenix) (scorpion) (tortoise) (unicorn)
+Autres : (courtier) (bushi) (shugenja)
+
+![symboles.jpg](/"images/symboles.jpg)
 
 ## Informations
 
