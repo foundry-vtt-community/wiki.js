@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-16T21:21:44.916Z
+date: 2021-01-16T22:07:46.912Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -66,6 +66,15 @@ On peut également effectuer des jets en ligne depuis le chat :
 ![chat.jpg](/images/chat.jpg)
 
 ![chat_result.jpg](/images/chat_result.jpg)
+
+Ou effectuer des lancés depuis des boutons créés dans une note :
+[[/r 2dr + 1ds]]
+
+[[/r 2dr[fire] + 1ds[aesthetics]]]
+
+![dice_button.jpg](/images/dice_button.jpg)
+
+![dice_button_result.jpg](/images/dice_button_result.jpg)
 
 Pour l'instant, il ne comprend pas la gestion intégré des dés explosifs, mais ceux-ci peuvent se gérer grâce au lanceur extérieur:
 
