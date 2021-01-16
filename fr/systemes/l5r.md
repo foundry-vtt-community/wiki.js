@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-16T19:34:25.304Z
+date: 2021-01-16T19:56:45.732Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -87,6 +87,14 @@ Clans: (imperial) (crab) (crane) (dragon) (lion) (mantis) (phoenix) (scorpion) (
 Autres : (courtier) (bushi) (shugenja)
 
 ![symboles.png](/images/symboles.png)
+
+## Aventure officielle *Mariage à château Kyotei* 
+
+L'aventure officielle [Mariage à château Kyotei](/fr/https://foundryvtt.com/packages/l5r_mariage/) adaptée à Foundry est disponible en libre téléchargement.  
+Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure ainsi que des personnages prétirés. 
+
+![pretires.jpg](/images/pretires.jpg) 
+
 ## Informations
 
 Vous trouverez grâce à l'icone L5R situé en haut à gauche de votre écran, des liens qui vous permettront d'accéder à des sites en rapport avec L5R, que ce soit le site d'Edge Studio, celui de la boutique Drivethrurpg d'Edge et le lien vers le discord francophone de Foundry.
