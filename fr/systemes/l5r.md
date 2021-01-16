@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-16T20:53:33.102Z
+date: 2021-01-16T21:21:44.916Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -42,7 +42,7 @@ Avant de lancer les 20 questions, vous devrez au préalable créer la feuille de
 
 ![20q-01.png](/images/20q-01.png) ![20q-02.png](/images/20q-02.png)
 
-Une fois activé, vous aurez accès aux 20 questions et pourrez dérouler le processus soit en cliquant sur suivant soit en cliquant sur les différentes à gauche.
+Une fois activé, vous aurez accès aux 20 questions et pourrez dérouler le processus soit en cliquant sur suivant soit en cliquant sur les différents icones à gauche.
 
 ![20q-03.png](/images/20q-03.png) ![20q-04.png](/images/20q-04.png)
 
@@ -59,6 +59,13 @@ Le système comprend la gestion des dés spécifiques au système. Que ce soit a
 Le lanceur intégré aux compétences permet de renseigner le lanceur avec toutes les données nécessaires pour le jet de dés:
 
 ![skill_1.png](/images/skill_1.png) ![skill_2.png](/images/skill_2.png)
+
+On peut également effectuer des jets en ligne depuis le chat :
+/r 3ds+2dr
+
+![chat.jpg](/images/chat.jpg)
+
+![chat_result.jpg](/images/chat_result.jpg)
 
 Pour l'instant, il ne comprend pas la gestion intégré des dés explosifs, mais ceux-ci peuvent se gérer grâce au lanceur extérieur:
 
