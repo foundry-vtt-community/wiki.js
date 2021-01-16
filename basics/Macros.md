@@ -33,7 +33,7 @@ A community-contributed repository of Macros can be found here: [github](https:/
 # Macro Types
 ## Chat Macros
 
-Chat macros are chat commands that have been saved for later reuse. See section on [Chat commands](https://foundry-vtt-community.github.io/development/Chat/)
+Chat macros are chat commands that have been saved for later reuse. See section on [Chat commands](https://foundryvtt.wiki/en/basics/Chat/)
 
 ## Script Macros
 
