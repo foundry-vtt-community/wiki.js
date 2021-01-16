@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-16T19:32:49.834Z
+date: 2021-01-16T19:34:25.304Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -86,8 +86,7 @@ Techniques: (kiho) (maho) (ninjitsu) (ritual) (shuji) (invocation) (kata) (prere
 Clans: (imperial) (crab) (crane) (dragon) (lion) (mantis) (phoenix) (scorpion) (tortoise) (unicorn)
 Autres : (courtier) (bushi) (shugenja)
 
-![symboles.jpg](/"images/symboles.jpg)
-
+![symboles.png](/images/symboles.png)
 ## Informations
 
 Vous trouverez grâce à l'icone L5R situé en haut à gauche de votre écran, des liens qui vous permettront d'accéder à des sites en rapport avec L5R, que ce soit le site d'Edge Studio, celui de la boutique Drivethrurpg d'Edge et le lien vers le discord francophone de Foundry.
