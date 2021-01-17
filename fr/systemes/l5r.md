@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-16T22:07:46.912Z
+date: 2021-01-17T13:11:46.795Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -42,7 +42,7 @@ Avant de lancer les 20 questions, vous devrez au préalable créer la feuille de
 
 ![20q-01.png](/images/20q-01.png) ![20q-02.png](/images/20q-02.png)
 
-Une fois activé, vous aurez accès aux 20 questions et pourrez dérouler le processus soit en cliquant sur suivant soit en cliquant sur les différents icones à gauche.
+Une fois activé, vous aurez accès aux 20 questions et pourrez dérouler le processus soit en cliquant sur suivant soit en cliquant sur les différents icônes à gauche.
 
 ![20q-03.png](/images/20q-03.png) ![20q-04.png](/images/20q-04.png)
 
@@ -94,7 +94,7 @@ Enfin, la fiche de personnage inclut également une **gestion de l'expérience**
 
 ## Utilisation des caractères spéciaux
 
-Les symboles spéciaux utilisés dans les ouvrages de la gamme sont implémentés dans le système et peuvent être utilisés en utilisant les chaines de caratères suivantes dans le texte :
+Les symboles spéciaux utilisés dans les ouvrages de la gamme sont implémentés dans le système et peuvent être obtenus en utilisant les chaînes de caratères suivantes dans le texte :
 
 Symboles de dés : (op) (su) (ex) (st) (ring) (skill)
 Anneaux : (earth) (water) (fire) (air) (void)
@@ -104,12 +104,14 @@ Autres : (courtier) (bushi) (shugenja)
 
 ![symboles.png](/images/symboles.png)
 
+
 ## Aventure officielle *Mariage à château Kyotei* 
 
 L'aventure officielle [Mariage à château Kyotei](/fr/https://foundryvtt.com/packages/l5r_mariage/) adaptée à Foundry est disponible en libre téléchargement.  
-Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure ainsi que des personnages prétirés. 
+Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure, ainsi que les personnages prétirés fournis gratuitement par l'éditeur. 
 
 ![pretires.jpg](/images/pretires.jpg) 
+
 
 ## Informations
 
