@@ -33,13 +33,13 @@ A community-contributed repository of Macros can be found here: [github](https:/
 # Macro Types
 ## Chat Macros
 
-Chat macros are chat commands that have been saved for later reuse. See section on [Chat commands](https://foundry-vtt-community.github.io/wiki/Chat/)
+Chat macros are chat commands that have been saved for later reuse. See section on [Chat commands](https://foundryvtt.wiki/en/basics/Chat/)
 
 ## Script Macros
 
 Script Macros in Foundry use the underlying [JavaScript API](https://foundryvtt.com/api) to execute various commands. The API respects the permissions of the user executing the macro, so players cannot delete your big bad evil guy for example.
 
-See also: [Learning API](https://foundry-vtt-community.github.io/wiki/API-Learning-API/), and [API Snippets](https://foundry-vtt-community.github.io/wiki/API-Snippets/) (many of them can be used in a Macros)
+See also: [Learning API](https://foundry-vtt-community.github.io/development/API-Learning-API/), and [API Snippets](https://foundry-vtt-community.github.io/development/API-Snippets/) (many of them can be used in a Macros)
 Some examples of using script macros follows.
 
 ### Script Macros Examples
