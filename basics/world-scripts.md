@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2021-01-19T07:37:55.965Z
+date: 2021-01-19T07:39:42.200Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -19,6 +19,8 @@ World scripts and modules are very similar. Both allow for 3rd party javascript 
 The primary difference between world scripts and modules is that modules are designed to be easy to package and distribute to other users. This makes it easy to share complex functionality and collections of related other assets such as html templates, css styles, images, compendia, and so on. However, this ability also requires some additional steps by the module author to create a module manifest, set up a build pipeline (if applicable), and handle hosting of the package.
 
 World scripts, on the other hand, are not as portable and simple to distribute, but require less setup by the author. Thus, they are more suited (as the name implies) to world-specific functionality and configuration, or for tasks that are not worth the initial setup time of a module.
+
+One major downside as a result of this difference is that if a user distributes a world script for others to use, and that world script has a bug, or conflicts with a core or system update, there is little recourse available to distribute the fix, and thus users will need to manually update or fix the issue.
 
 #### Activation
 Another difference between world scripts and modules is that modules can be enabled and disabled through the Foundry module management UI, while world scripts are always active.
