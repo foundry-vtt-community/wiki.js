@@ -2,9 +2,9 @@
 title: World Scripts
 description: 
 published: true
-date: 2021-01-13T19:46:33.907Z
+date: 2021-01-19T07:37:55.965Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
 ---
 
@@ -86,24 +86,20 @@ Hooks.on("setup", () => {
 
 ### Setting the default token config
 ```js
-// This script will change the default token configuration for newly created actors
+// This script will change the default token configuration for newly created or imported actors
 //   (does not affect actors already in the world).
 // It changes the following:
 // - Show the token's name when an owner of the token hovers over it
 // - Always show all resource bars for owners of the token
 // - Sets the first bar to display the token's hit points (dnd5e)
-Hooks.on("init", () => {
-    const old_ActorCreate = Actor.create;
-    Actor.create = function (data) {
-        data.token = data.token ?? {};
-        mergeObject(data.token, {
-            displayName: CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
-            displayBars: CONST.TOKEN_DISPLAY_MODES.OWNER,
-            bar1: { attribute: "attributes.hp" },
-        }, { overwrite: false });
-      
-        return old_ActorCreate.apply(this, arguments);
-    };
+Hooks.on("preCreateActor", (actorData, options, userId) => {
+  actorData.token = actorData.token ?? {};
+  mergeObject(actorData.token, {
+    displayName: CONST.TOKEN_DISPLAY_MODES.OWNER_HOVER,
+    displayBars: CONST.TOKEN_DISPLAY_MODES.OWNER,
+    bar1: { attribute: "attributes.hp" },
+    bar2: { attribute: null },
+  });
 });
 ```
 
