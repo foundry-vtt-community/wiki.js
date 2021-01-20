@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2021-01-15T19:41:35.777Z
+date: 2021-01-20T20:11:48.466Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -56,7 +56,7 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 
 # Files and Dependencies
 - Paths to your files use the exact same case-sensitive directories as in the download zip. Windows, Linux, and OSX treat capitalization of directories differently.
-- Do not use spaces in file names or directory names. All directories should be URL-compatible. We recommend using `kebabCase` where your spaces are replaced with `-`.
+- Do not use spaces in file names or directory names. All directories should be URL-compatible. We recommend using `kebab-case` where your spaces are replaced with `-`.
 - Never do a relative import (esmodule) from one module to another (or to a system). If you need access to something, contact the developer and ask them to expose it instead.
 - A dependency on another module should be resolved by `CONFIG` variables defined by that dependency or namespaced classes or Hooks.
 
