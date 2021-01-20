@@ -2,9 +2,9 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2020-12-19T17:49:22.280Z
-tags: 
-editor: undefined
+date: 2021-01-20T21:16:41.804Z
+tags: modules
+editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
 ---
 
@@ -312,6 +312,29 @@ This module adds the 'Slashing' weapon quality as well as the expanded weapons f
 
 ### Link to Module
 * [https://github.com/DasSauerkraut/wfrp-gwmwg](https://github.com/DasSauerkraut/wfrp-gwmwg)
+
+---
+
+# Foundry VTT Modules for Star Wars FFG
+Foundry modules that work within Star Wars Fantasy Flight Game are noted here. 
+
+## Star Wars FFG - UI
+
+* **Author**: prolice#9101 on Discord
+* **Foundry VTT Compatibility**: 0.7.4+
+* **System Compatibility**: Star Wars Fantasy Flight Game
+
+### Link to Module
+* [https://github.com/prolice/swffg-ui](https://github.com/prolice/swffg-ui)
+
+### Description
+A new User Interface oriented star wars for a complete immersion into the game, new buttons, new windows, new color scheme, new background images, new funny stuffs ...
+
+- Open the Foundry application and click "Install Module" in the "Add-On Modules" tab.
+- Paste the following link: https://raw.githubusercontent.com/prolice/swffg-ui/swffg-ui-pre-release/module.json
+- Click "Install"
+- Activate the module in your World using Manage Modules under the Game Settings tab --> find swffg-ui.
+
 
 ---
 
