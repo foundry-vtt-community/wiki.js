@@ -2,9 +2,9 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2020-12-11T00:21:40.765Z
+date: 2021-01-20T20:56:20.121Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
 ---
 
@@ -274,4 +274,4 @@ Ceci est un tutorial vivant, n'hésitez pas à remonter les problèmes que vous 
 Sur la communauté [discord francophone](https://discord.gg/pPSDNJk)
 
 ---
-[Prolice - 06-12-2020][en version written by Lupert]
+[Prolice#9101 - 06-12-2020][en version written by Lupert]
