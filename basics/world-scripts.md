@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2021-01-19T07:39:42.200Z
+date: 2021-01-21T16:38:18.071Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -45,9 +45,9 @@ To summarize the difference between world scripts, modules, and macros:
 2. World scripts are somewhere between modules and macros in terms of ease of development.
 
 ## Usage
-In order to use a world script you must: (a) have a javscript file you want to add to your world, and (b) edit the world's manifest to point to your javscript code.
+In order to use a world script you must: (a) have a javascript file you want to add to your world, and (b) edit the world's manifest to point to your javscript code.
 
-Your javscript file will usually live within the world directory for the world in which it is used, but in reality, it could live anywhere in your Foundry user data folder (see [Where Is My Data Stored?](https://foundryvtt.com/article/configuration/#where-user-data) on the Foundry knowledgebase for more information). This guide assumes that your javscript is in the root of the world directory (i.e. `Data/worlds/my-world/`).
+Your javscript file will usually live within the world directory for the world in which it is used, but in reality, it could live anywhere in your Foundry user data folder (see [Where Is My Data Stored?](https://foundryvtt.com/article/configuration/#where-user-data) on the Foundry knowledgebase for more information). This guide assumes that your javscript is in the root of the world directory (i.e. `Data/worlds/my-world/my-script.js`).
 
 
 ### Adding a world script to your world manifest
