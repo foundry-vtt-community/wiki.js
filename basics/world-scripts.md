@@ -2,11 +2,15 @@
 title: World Scripts
 description: 
 published: true
-date: 2021-01-21T16:38:18.071Z
+date: 2021-01-22T17:13:52.216Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
 ---
+
+> This is known to be up to date as of Foundry Core 0.7.9
+{.is-info}
+
 
 World scripts, like modules and macros, are a way for users to define additional functionality for FoundryVTT.
 
