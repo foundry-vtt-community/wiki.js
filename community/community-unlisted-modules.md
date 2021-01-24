@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2021-01-20T21:16:41.804Z
+date: 2021-01-24T14:32:57.643Z
 tags: modules
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -331,7 +331,7 @@ Foundry modules that work within Star Wars Fantasy Flight Game are noted here.
 A new User Interface oriented star wars for a complete immersion into the game, new buttons, new windows, new color scheme, new background images, new funny stuffs ...
 
 - Open the Foundry application and click "Install Module" in the "Add-On Modules" tab.
-- Paste the following link: https://raw.githubusercontent.com/prolice/swffg-ui/swffg-ui-pre-release/module.json
+- Paste the following link: https://raw.githubusercontent.com/prolice/swffgUI/swffgUI/module.json
 - Click "Install"
 - Activate the module in your World using Manage Modules under the Game Settings tab --> find swffg-ui.
 
