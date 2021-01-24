@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2021-01-24T22:22:00.400Z
+date: 2021-01-24T22:23:08.520Z
 tags: modules
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -312,8 +312,6 @@ This module adds the 'Slashing' weapon quality as well as the expanded weapons f
 
 ### Link to Module
 * [https://github.com/DasSauerkraut/wfrp-gwmwg](https://github.com/DasSauerkraut/wfrp-gwmwg)
-
----
 
 ---
 
