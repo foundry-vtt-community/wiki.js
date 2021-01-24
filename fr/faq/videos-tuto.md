@@ -2,14 +2,15 @@
 title: Tutoriels vidéos Foundry en Français
 description: 
 published: true
-date: 2020-12-07T13:59:35.661Z
+date: 2021-01-24T10:17:13.320Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-05T09:17:05.009Z
 ---
 
 # Tutoriaux vidéos
 
+Présentation pour .[découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) (Fletch) appréhender l'interface,comprendre les possibilités du soft coté MJ.
 Utiliser les [Tokens sous Foundry](https://www.youtube.com/watch?v=D3tm4lEACSc) (Ceizyl) : Explications sur les paramètres des Tokenssous FoundryVTT.
 Utiliser le [module de transition de scène](https://www.youtube.com/watch?v=0bYxYCjegZY) (Ceizyl) : Comment utiliser le module de transition de scènes.
 Préparer sa [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw) (Ceizyl) : Aperçu général de la mise en place de campagne sous FoundryVTT.  
