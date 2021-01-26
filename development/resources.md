@@ -2,9 +2,9 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-01-14T03:56:49.159Z
-tags: 
-editor: undefined
+date: 2021-01-26T14:43:33.217Z
+tags: development, resource, tutorial, template, macro
+editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
 ---
 
@@ -44,6 +44,9 @@ There are a variety of community-created module and system starter kits out ther
 - **Description:** A starter project template demonstrating Rollup to bundle your module code regardless if you plan to include Node modules or not.
 
 ## Development Tools
+
+### [foundry-vtt-types](https://github.com/kmoschcau/foundry-vtt-types)
+- A community effort to revamp and refactor NickEast's typescript types for `0.7.x`. This set of type definitions leverages more advanced typescript tooling.
 
 ### [NickEast's Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types)
 - As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point.
