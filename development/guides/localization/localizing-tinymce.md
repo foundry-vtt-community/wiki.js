@@ -2,9 +2,9 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: true
-date: 2021-01-14T03:58:04.662Z
-tags: 
-editor: undefined
+date: 2021-01-27T21:25:46.261Z
+tags: localization, translation, guide, tinymce
+editor: markdown
 dateCreated: 2021-01-13T00:54:19.266Z
 ---
 
@@ -113,7 +113,7 @@ fetch(`${tinymce_translations_directory}${lang_code}_fvtt.json`)
             return response.json();
         }
 
-        console.error(`${lang_code} | Failed to load TinyMCE ${lang_name} localization (Foundry VTT additions): ` + response.status);
+        console.error(`${lang_code} | Failed to load TinyMCE ${lang_name} localization (Foundry VTT additions): [${response.status}] ${response.statusText}`);
         return null;
     })
     .then(json => {
@@ -126,7 +126,7 @@ fetch(`${tinymce_translations_directory}${lang_code}_fvtt.json`)
                     return response.json();
                 }
 
-                console.error(`${lang_code} | Failed to load TinyMCE ${lang_name} localization (core): ` + response.status);
+                console.error(`${lang_code} | Failed to load TinyMCE ${lang_name} localization (core): [${response.status}] ${response.statusText}`);
                 return null;
             })
             .then(json => {
@@ -138,7 +138,7 @@ fetch(`${tinymce_translations_directory}${lang_code}_fvtt.json`)
 
                 if (localization) {
                     tinyMCE.addI18n(tinymce_lang_code, localization);
-                    console.log(`${lang_code} | Loaded TinyMCE ${lang_name} localization.`);
+                    console.log(`${lang_code} | Loaded ${lang_name} localization: TinyMCE`);
                 }
             });
     });
