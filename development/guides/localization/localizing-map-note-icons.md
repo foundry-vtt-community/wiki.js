@@ -2,9 +2,9 @@
 title: Localizing Map Note Icon Names
 description: A guide on how to localize map note icons with a custom JSON file.
 published: true
-date: 2021-01-14T03:57:46.511Z
-tags: 
-editor: undefined
+date: 2021-01-27T21:22:19.579Z
+tags: localization, translation, guide, map note
+editor: markdown
 dateCreated: 2021-01-13T21:23:53.391Z
 ---
 
@@ -75,7 +75,7 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
                 return response.json();
             }
 
-            console.error(`${lang_code} | Failed to load Note Icons ${lang_name} localization: ` + response.status);
+            console.error(`${lang_code} | Failed to load Note Icons ${lang_name} localization: [${response.status}] ${response.statusText}`);
             return null;
         })
         .then(localized_names => {
@@ -83,7 +83,7 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
 
             for (let source_icon_name in CONFIG.JournalEntry.noteIcons) {
                 if (CONFIG.JournalEntry.noteIcons.hasOwnProperty(source_icon_name)) {
-                    // Default to unlocalized icon name to ensure that unlocalized icons are not skipped.
+                    // Default to unlocalized icon name to ensure newly added unlocalized icons are not skipped.
                     let icon_name = source_icon_name;
 
                     if (localized_names.hasOwnProperty(source_icon_name)) {
@@ -104,7 +104,7 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
                     return acc;
                 }, {});
 
-            console.log(`${lang_code} | Loaded map note icons ${lang_name} localization.`);
+            console.log(`${lang_code} | Loaded ${lang_name} localization: Note Icons`);
         });
 };
 
