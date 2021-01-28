@@ -2,7 +2,7 @@
 title: Rêve de Dragon pour FoundryVTT
 description: 
 published: true
-date: 2021-01-28T23:42:25.726Z
+date: 2021-01-28T23:58:23.472Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-26T16:29:39.001Z
@@ -24,12 +24,29 @@ Dans l'onglet des  acteurs, créer un Acteur, lui donner un nom, et choisir le t
 Petit guide rapide:
 1. Portrait du personnage. Cliquez dessus pour sélectionner l'image à utiliser.
 1. Nom du personnage
+1. Compteurs de vie, endurance, fatigue, case sonné, et compteur de rêve actuel. Passer la souris au dessus de la fatigue permetr de voir combien de cases de fatigue sont cochées.
 1. Boutons d'actions pour le personnage. passez la souris au dessus pour afficher leur fonction.
 	- Encaiser des dommages: utile pour encaisser des dommages de chute, brûlure, etc. Pour les dommages de combat, comme vous verrez plus tard, c'est intégré à la gestion des combats.
 	- Remise à neuf: rétablit la santé du personnage à son maximum. Ce bouton n'est accessible qu'au Gardien des rêves.
 	- Dormir une heure: permet de récupérer la fatigue, et d'effectuer le jet de récupération de rêve si besoin.
-  - Chateau Dormant: permet de gérer l'heure de Chateau Dormant. Ce qui est fait: jets de constitution pour les blessures et la vie, transformation de stress, jet de moral neutre, récupération de chance actuelle, le rêve redescend vers le seuil si besoin.
+	- Chateau Dormant: permet de gérer l'heure de Chateau Dormant. Ce qui est fait: jets de constitution pour les blessures et la vie, transformation de stress, jet de moral neutre, récupération de chance actuelle, le rêve redescend vers le seuil si besoin.
+	- Montée normale dans les TMR: ouvre la fenêtre des Terres Médianes du Rêve, et permet au joueur de se déplacer à vitesse normale. Un point de rêve est dépensé.
+	- Montée accélérée dans les TMR: ouvre la fenêtre des Terres Médianes du Rêve, et permet au joueur de se déplacer à vitesse normale. Deux points de rêve sont dépensé.
+	- Regarder les TMR: permet de voir où se trouve le demi-rêve, les sorts en réserves, et autres marqueurs des terres médianes.
+1. Indicateurs informatifs rappelant l'état général, le malus de fatigue, un résumé des blessures, l'état d'encombrement et effets actifs.
+1. Onglet des caractéristiques
+1. Onglet des compétences et de l'archétype
+1. Onglet du combat et des blessures
+1. Onglet des savoirs et des tâches, qui regroupe par exemple les recettes de cuisines, alchimiques, chants, etc.
+1. Onglet du Haut-rêve, où l'on trouve le seuil de rêve, les sorts, et ce qui est lié au haut-rêve, ainsi que les queues, têtes, et souffles de dragon.
+1. Onglet de l'équipement qui permet d'organiser son sac, gérer l'argent, les armes et armures équipées.
+1. Description du personnage
 
+### Quelques détails sur la santé et les effets actifs
+
+* Les effets actifs correspondent à ce qui affecte le personnage (positionné sur le token), et qui peuvent causer une demi-surprise ou une surprise totale.
+* Etre sonné ou renversé place un effet actif (et demi surprise), être dans les TMR cause aussi un effet actif de demi-surprise.
+* Etre inconscient donne directement une surprise totale. Deux demi-surprises causent une surprise totale. Le passage de l'endurance à 0 ajoute l'effet "inconscient", remonter au dessus de 0 l'enlève.
 
 ### Quelques détails sur les récupérations
 * Les récupérations de blessures, de vie, d'endurance, et de fatigue sont liées. Une blessure grave limite l'endurance maximale, un point de vie manquant aussi, l'endurance manquante limite la récupération de fatigue.
