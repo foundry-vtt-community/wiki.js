@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-28T18:22:06.144Z
+date: 2021-01-28T18:22:39.369Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -18,13 +18,90 @@ dateCreated: 2020-12-15T10:30:41.035Z
 Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#competences), [Inventaire](#inventaire)
 ### Caractéristiques
 
-
-
-
-
-
-
-
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
+sfsd
+sdf
+sdff
+sdf
+sdf
+sdf
 ### Compétences
 
 
