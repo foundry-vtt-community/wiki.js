@@ -2,13 +2,13 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-28T18:23:31.446Z
+date: 2021-01-28T19:13:25.870Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
 ---
 
-# Aria - Game of Roles
+# Aria - Game of Roles (en cours de mise a jour)
 
 ![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/main.webp)
 
