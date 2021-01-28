@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-28T18:22:39.369Z
+date: 2021-01-28T18:23:03.590Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -15,7 +15,7 @@ dateCreated: 2020-12-15T10:30:41.035Z
 - Installer le système [Aria](https://foundryvtt.com/packages/aria/) depuis la catégorie SYSTEME dans l'application FoundryVTT (il comprend le système et les compendiums associés)
 
 ## Création de personnage
-Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#competences), [Inventaire](#inventaire)
+Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#compétences), [Inventaire](#inventaire)
 ### Caractéristiques
 
 sfsd
