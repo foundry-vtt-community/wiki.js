@@ -2,7 +2,7 @@
 title: Rêve de Dragon pour FoundryVTT
 description: 
 published: true
-date: 2021-01-28T23:58:23.472Z
+date: 2021-01-29T00:00:04.505Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-26T16:29:39.001Z
@@ -40,7 +40,7 @@ Petit guide rapide:
 1. Onglet des savoirs et des tâches, qui regroupe par exemple les recettes de cuisines, alchimiques, chants, etc.
 1. Onglet du Haut-rêve, où l'on trouve le seuil de rêve, les sorts, et ce qui est lié au haut-rêve, ainsi que les queues, têtes, et souffles de dragon.
 1. Onglet de l'équipement qui permet d'organiser son sac, gérer l'argent, les armes et armures équipées.
-1. Description du personnage
+1. Onglet description du personnage pour les traits physiques, notes du joueur et du Gardien.
 
 ### Quelques détails sur la santé et les effets actifs
 
