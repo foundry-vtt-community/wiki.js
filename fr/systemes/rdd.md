@@ -2,7 +2,7 @@
 title: Rêve de Dragon pour FoundryVTT
 description: 
 published: true
-date: 2021-01-29T00:09:19.133Z
+date: 2021-01-29T00:20:22.942Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-26T16:29:39.001Z
@@ -53,14 +53,23 @@ Petit guide rapide:
 * les jets de constitutions sont faits si le nombre de jours requis sont écoulés. Les ajustements notés sur la blessure sont pris en compte: si une herbe de soin est appliquée qu qu'un bonus de soins complets est obtenu, notez le bonus à cet endroit.
 * L'âge des blessures est augmenté lors du clic sur chateau dormant, pas en fonction du calendrier. Il faudra donc passer deux heures de Chateau Dormant pour commencer à tenter le jet de consitution pour récupérer.
 * Un jet de constitution réussi rétrograde la blessure correspondante d'un stade.
-* La transformation de stress diminue le compteur de stress et incrémente l'expérience disponible en conséquence, dans le commpteur juste en dessous. Le joueur pourra manuellement diminuer cette expérience pour augmenter la compétence de son choix.
-
+* La transformation de stress diminue le compteur de stress et incrémente l'expérience disponible en conséquence, dans le commpteur juste en dessous. Le joueur pourra manuellement diminuer cette expérience pour augmenter la compétence de son choix. La dissolution et l'exaltation sont pris en compte.
+* 
 
 ## Au fil du jeu
 
 
 ### Jets de caractéristique
-Dans Il suffit de cliquer sur le nom de la car
+Dans la feuille de personnage, onglet caractéristiques, il suffit de cliquer sur le nom de la caractéristique.
+
+### jets divers
+* jet de vie: cliquer sur "vie" dans les compteurs
+* jet d'endurance: cliquer sur "endurance" dans les compteurs (automatique pour les jets d'encaissement)
+* jet de chance actuelle: au lieu de la caractéristique chance, utiliser la chance actuelle
+* appel à la chance: utiliser le lein "Utiliser" à côté de la chance actuelle
+* jet de moral: utiliser le smiley approprié à côté du compteur de moral
+* Jet d'ethylisme: à côté du niveau d'éthylisme, prend en compte les doses sans effet, la force du breuvage, et fait même le jet de volonté pour ne pas se laisser entraîner.
+* Transformer le stress: en pratique, géré dans le bouton "Chateau Dormant", dispônibvle ici au cas où.
 
 ### Jets de compétences
 
