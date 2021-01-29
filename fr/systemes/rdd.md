@@ -2,7 +2,7 @@
 title: Rêve de Dragon pour FoundryVTT
 description: 
 published: true
-date: 2021-01-29T00:20:22.942Z
+date: 2021-01-29T00:25:12.481Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-26T16:29:39.001Z
@@ -41,6 +41,12 @@ Petit guide rapide:
 1. Onglet du Haut-rêve, où l'on trouve le seuil de rêve, les sorts, et ce qui est lié au haut-rêve, ainsi que les queues, têtes, et souffles de dragon.
 1. Onglet de l'équipement qui permet d'organiser son sac, gérer l'argent, les armes et armures équipées.
 1. Onglet description du personnage pour les traits physiques, notes du joueur et du Gardien.
+1. Déverrouiller/verrouiller: permet de basculer entre le mode de jeu et le mode édition, pour éviter de déplacer ou modifier le personnage par mégarde.
+1. Liste des caractéristiques principales et dérivées, ainsi que de l'expérience.
+1. Indicateurs dérivés des caractéristiques.
+1. Protection naturelle: permet de renseigner l'armure naturelle du personnage, par exemple d'un Tortemoque. Elle peut servir à saisir une protection magique, le cas échéant.
+1. Appel à la chance
+1. Jet de moral
 
 ### Quelques détails sur la santé et les effets actifs
 
