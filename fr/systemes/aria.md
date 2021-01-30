@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-28T19:13:25.870Z
+date: 2021-01-30T13:03:47.820Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -17,6 +17,9 @@ dateCreated: 2020-12-15T10:30:41.035Z
 ## Création de personnage
 Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#compétences), [Inventaire](#inventaire)
 ### Caractéristiques
+![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/CaracVierge.webp)
+
+#### Nom
 
 ### Compétences
 
