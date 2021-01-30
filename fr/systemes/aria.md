@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-30T13:15:48.206Z
+date: 2021-01-30T13:16:13.651Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -10,7 +10,7 @@ dateCreated: 2020-12-15T10:30:41.035Z
 
 # <p align=center>Aria - Game of Roles (en cours de mise a jour)</p>
 
-![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/main.webp)
+<p align=center>![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/main.webp)</p>
 
 > Il existe un dieu nommé l’Ennemi, souhaitant la fin de toute civilisation.
 Le roi des dieux le combattit au bord du monde. Il eut l’opportunité de le tuer au prix de sa propre vie, mais renonça dans un sursaut de lâcheté. Pour avoir manqué de débarrasser le monde de l’Ennemi, le roi des dieux se retira.
