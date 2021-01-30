@@ -2,9 +2,9 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2020-12-11T00:32:32.937Z
+date: 2021-01-30T01:41:27.522Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
 ---
 
@@ -53,6 +53,35 @@ Vous pouvez récupérer facilement sur le [site officiel de Foundry VTT](https:/
 - Cliquez sur Login, entrain vos identifiants, puis cliquez sur **Log In**
 - Lorsque vous êtes sur votre Profil Utilisateur, cliquez sur Purchased Licenses
 - Dans la fenêtre de droite, copier la licence se trouvant en dessous du texte **Purchased Software Licenses**
+>*Si vous faites un copier/coller de votre licence, merci de bien faire attention à une pas sélectionner d'espaces à gauche ou/et à droite du numéro de licence*
+
+## Bugs connus
+### Validation de l'Accord de Licence à l'utilisateur final.
+Lors du premier démarrage de Foundry VTT, le logiciel vous demandera
+- La clé de licence
+- L'acceptation de l'Accord de Licence à l'utilisateur final.
+
+![11_bug_validation_licensing.webp](/setup/winstall/11_bug_validation_licensing.webp)
+
+>Dans certains cas rares, mais existants, il est possible que vous soyez bloqué sur cette fenêtre vous empêchant d'accéder à Foundry VTT.
+{.is-warning}
+
+**Actuellement pour ce genre de problèmes nous avons ces solutions :**
+- Si vous avez mal renseigné votre numéro le licence Foundry VTT, vous devrez donc supprimer le fichier ***license.json*** et relancer l'application.
+- Si vous utilisez un **VPN**, merci de couper ce dernier et de relancer le logiel afin de relancer la procédure d'acceptation de l'Accord de Licence à l'utilisateur final.
+>Ce cas est très particulier est mérite une attention particulière.
+En effet il est possible que les deux solutions ci-dessus ne fonctionne pas et que vous soyez toujours dans l'incapacité d'accepter l'Accord de Licence à l'utilisateur final.
+Afin de résoudre ce problème vous devez vérifier si le nom de votre Ordinateur ne comporte pas un ACCENT.
+{.is-warning}
+
+Si c'est le cas, vous devez absolument changer le nom de machine de PC :
+- Clique droit sur l'icône windows dans la barre des tâches et sélectionner ***Système***
+- Dans la fenêtre ***Sytème***, cliquez sur ***Renommer ce PC***
+![12_computer_name.webp](/setup/winstall/12_computer_name.webp)
+- Dans la ***Renommer votre PC***, changez le nom de la machine en prenant en compte qu'en informatique : `le NOMMAGE NE PREND JAMAIS D'ACCENT`
+![13_change_computer_name.webp](/setup/winstall/13_change_computer_name.webp)
+
+- Redémarrer la machine, relancer Foundry VTT et valider l'Accord de Licence à l'utilisateur final.
 
 ## Pare-feu et redirection de Port sur votre Box Internet.
 ### Pare-feu
