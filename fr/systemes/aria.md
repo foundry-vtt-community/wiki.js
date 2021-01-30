@@ -2,25 +2,20 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-30T13:09:00.172Z
+date: 2021-01-30T13:15:48.206Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
 ---
 
-# Aria - Game of Roles (en cours de mise a jour)
+# <p align=center>Aria - Game of Roles (en cours de mise a jour)</p>
 
 ![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/main.webp)
 
 > Il existe un dieu nommé l’Ennemi, souhaitant la fin de toute civilisation.
-Le roi des dieux le combattit au bord du monde. Il eut l’opportunité de le
-tuer au prix de sa propre vie, mais renonça dans un sursaut de lâcheté. Pour
-avoir manqué de débarrasser le monde de l’Ennemi, le roi des dieux se retira.
-Avant son départ, il remit à l’Homme une couronne, un sceptre et un orbe
-permettant d’assurer en son nom une juste gouvernance. Puis devint le Dieu
-Exilé et cessa de répondre aux prières des mortels. Depuis lors, l’Ennemi arpente
-le monde comme un homme. Lentement et sûrement, son influence conduit
-l’humanité à sa perte.
+Le roi des dieux le combattit au bord du monde. Il eut l’opportunité de le tuer au prix de sa propre vie, mais renonça dans un sursaut de lâcheté. Pour avoir manqué de débarrasser le monde de l’Ennemi, le roi des dieux se retira.
+Avant son départ, il remit à l’Homme une couronne, un sceptre et un orbe permettant d’assurer en son nom une juste gouvernance. Puis devint le Dieu Exilé et cessa de répondre aux prières des mortels.
+Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement, son influence conduit l’humanité à sa perte.
 
 
 
