@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-30T13:16:56.208Z
+date: 2021-01-30T20:21:50.686Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -27,7 +27,53 @@ Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#carac
 ![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/CaracVierge.webp)
 
 1. #### Nom
-Il
+
+Champs de texte éditable contenant le nom de votre personnage.
+
+2. #### Phrase de synthèse
+
+C'est la phrase qui résume votre personnage : «Il est génial parce que…  mais la société a des problèmes avec lui parce que… »
+Vous pouvez éditer les parties correspondantes au "..." sur la fiche de personnage.
+
+3. #### Caractéristiques
+
+Un personnage dispose de cinq caractéristiques :
+La **Force** est une mesure de la puissance musculaire du personnage. Cette caractéristique donne une idée de ce qu’il peut soulever, porter, pousser ou tirer.
+La **Dextérité** mesure la vivacité, l’agilité et la rapidité physique du personnage.
+L’**Endurance** rend compte de la vitalité et de la santé du personnage.
+L’**Intelligence** décrit les capacités d’apprentissage, de mémorisation et d’analyse de votre personnage. Elle ne remplace pas l’intelligence du joueur, mais gère, à sa place, un certain nombre de tâches fastidieuses.
+Le **Charisme** donne un ordre d’idée de l’apparence générale de votre personnage et de l’impression qu’il fait sur les gens au premier contact.
+
+Vous disposez de trois méthodes pour déterminer les différents scores :
+• Pour chaque caractéristique, lancez 3 dés à 6 faces (abrégés en 3d6) et additionnez le résultat.
+• Répartissez 60 points dans ces 5 caractéristiques avec un minimum de 4 et un maximum de 18.
+• Si vous souhaitez vous reposer sur le hasard sans trop frustrer vos joueurs, vous pouvez également utiliser la méthode a) mais leur faire effectuer trois tirages de caractéristiques. Ils choisiront alors le meilleur des trois lots de chiffres (et non le meilleur chiffre à chaque fois).
+
+Une fois les caractéristiques définies, remplissez les points de vie. Ils sont égaux à l’Endurance avec un maximum de 14.
+
+4. #### Avatar
+
+L'image représentant votre personnage. 
+Cliquer dessus pour la modifier.
+
+5. #### Origine
+
+Il s'agit de l'origine géographique de votre personnage. 
+Pour la definir il faut "*glisser-déposer*" un *item* de type **origine**.
+Vous pouvez :
+- soit utiliser les origines définies dans le compendium du système
+![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/AddOrigine.webp)
+- soit en créer une dans les objets de votre monde.
+![createOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/createOrigine.webp)
+
+
+6. #### Description
+7. #### Profession
+8. #### Points de vie / Blessures
+9. #### Protection
+10. #### Armes équipées
+
+
 
 ### Compétences
 
