@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2021-01-30T01:41:27.522Z
+date: 2021-01-30T01:49:39.938Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -78,7 +78,11 @@ Si c'est le cas, vous devez absolument changer le nom de machine de PC :
 - Clique droit sur l'icône windows dans la barre des tâches et sélectionner ***Système***
 - Dans la fenêtre ***Sytème***, cliquez sur ***Renommer ce PC***
 ![12_computer_name.webp](/setup/winstall/12_computer_name.webp)
-- Dans la ***Renommer votre PC***, changez le nom de la machine en prenant en compte qu'en informatique : `le NOMMAGE NE PREND JAMAIS D'ACCENT`
+- Dans la ***Renommer votre PC***, changez le nom de la machine en prenant en compte qu'en informatique : 
+>Les noms de fichiers ne doivent contenir de signes diacritiques : pas d’accent ni de tréma (é à ï ), pas de cédille (ç).
+>Ne pas utiliser de caractères spéciaux (sauf underscore « _ » ) : % $ ! & / \ : ; « » % & # @ etc ou d'espace.
+  {.is-warning}
+  
 ![13_change_computer_name.webp](/setup/winstall/13_change_computer_name.webp)
 
 - Redémarrer la machine, relancer Foundry VTT et valider l'Accord de Licence à l'utilisateur final.
