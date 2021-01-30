@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-30T20:21:50.686Z
+date: 2021-01-30T20:30:01.047Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -10,7 +10,7 @@ dateCreated: 2020-12-15T10:30:41.035Z
 
 # Aria - Game of Roles (en cours de mise a jour)
 
-![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/main.webp)
+![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/main.webp)
 
 > Il existe un dieu nommé l’Ennemi, souhaitant la fin de toute civilisation.
 Le roi des dieux le combattit au bord du monde. Il eut l’opportunité de le tuer au prix de sa propre vie, mais renonça dans un sursaut de lâcheté. Pour avoir manqué de débarrasser le monde de l’Ennemi, le roi des dieux se retira.
@@ -24,8 +24,8 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 ## Création de personnage
 Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#compétences), [Inventaire](#inventaire)
 ### Caractéristiques
-![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/CaracVierge.webp)
-
+![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/CaracVierge.webp)
+ 
 1. #### Nom
 
 Champs de texte éditable contenant le nom de votre personnage.
@@ -62,9 +62,9 @@ Il s'agit de l'origine géographique de votre personnage.
 Pour la definir il faut "*glisser-déposer*" un *item* de type **origine**.
 Vous pouvez :
 - soit utiliser les origines définies dans le compendium du système
-![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/AddOrigine.webp)
+![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/AddOrigine.webp)
 - soit en créer une dans les objets de votre monde.
-![createOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/master/wiki/createOrigine.webp)
+![createOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createOrigine.webp)
 
 
 6. #### Description
