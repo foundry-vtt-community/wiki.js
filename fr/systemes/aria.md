@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T14:58:45.849Z
+date: 2021-01-31T15:28:04.212Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -60,11 +60,11 @@ Cliquer dessus pour la modifier.
 5. #### Origine
 
 Il s'agit de l'origine géographique de votre personnage. 
-Pour la definir il faut "*glisser-déposer*" un *item* de type **origine**.
+Pour la definir il faut "*glisser-déposer*" un *item* de type **origine** sur la fiche de votre personnage.
 Vous pouvez :
-- soit utiliser les origines définies dans le compendium du système
+- utiliser les origines définies dans le compendium du système
 ![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/AddOrigine.webp)
-- soit en créer une dans les objets de votre monde.
+- créer une origine dans les objets de votre monde.
 ![createOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createOrigine.webp)
 <br>
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
@@ -75,6 +75,19 @@ Zone de texte libre pour décrire votre personnage.
 ![Description.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/Description.gif)
 
 7. #### Profession
+Il s'agit de la profession de votre personnage. 
+Pour la definir il faut "*glisser-déposer*" un *item* de type **profession** sur la fiche de votre personnage.
+Vous pouvez :
+- double cliquer sur <span style="color:#8b0000">"Ajoutez une profession"</span> pour ouvrir le compendium des professions de base des prétirés
+![profession.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/profession.webp)
+- utiliser les professions définies dans le compendium du système
+![addProfession.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addProfession.webp)
+- créer une profession dans les objets de votre monde.
+![createProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createProfession.webp)
+<br>
+Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
+![deleteProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteProfession.webp)
+
 8. #### Points de vie / Blessures
 9. #### Protection
 10. #### Armes équipées
@@ -96,7 +109,7 @@ Il existe 4 type d'item : [Création d'une Origine](#création-d'une-origine), [
 
 
 ## Compendiums
-Il existe 4 catégories de compendiums : [Compendium d'Origines](#compendium-d'Origines), [Compendium de Professions](#compendium-de-professions), [Compendium de Compétences](#compendium-de-compétences) et [Compendium d'Objets
+Il existe 4 catégories de compendium : [Compendium d'Origines](#compendium-d'Origines), [Compendium de Professions](#compendium-de-professions), [Compendium de Compétences](#compendium-de-compétences) et [Compendium d'Objets
 ](#compendium-d'Objets)
 ### Compendium d'Origines
 ### Compendium de Professions
