@@ -2,7 +2,7 @@
 title: Localizing Map Note Icon Names
 description: A guide on how to localize map note icons with a custom JSON file.
 published: true
-date: 2021-01-31T22:28:33.581Z
+date: 2021-01-31T22:34:52.989Z
 tags: localization, translation, guide, map note
 editor: markdown
 dateCreated: 2021-01-13T21:23:53.391Z
@@ -12,7 +12,7 @@ Strings for the drop-down list of note icons in map notes are not present in the
 
 This guide was written for **Foundry VTT 0.7.9**. This is an opinionated guide and instructs you to use certain formatting, file hierarchies, and the included JavaScript code contains logging statements. Finnish is used as an example language.
 
-You will be building (and the JavaScript code assumes) the following file structure in your module directory (replace `fi-FI` with your language code):
+You will be building (and the JavaScript code assumes) the following file structure in your module directory (replace `fi-FI` with your language tag):
 <pre style="line-height:100%;margin:1rem;">
 your-module-directory
 ├── module.json        : Module information
@@ -26,7 +26,7 @@ your-module-directory
 The following placeholder values are used in the code below. You need to replace them with the correct values for your module:
 | Placeholder | Correct Value|
 |-|-|
-| `<language code>` | The language code for the translation. IETF language tag recommended. |
+| `<language tag>` | The language tag for the translation. IETF language tag recommended. |
 | `<language name>` | The name of the language in English for debug log messages. |
 | `<your module name>` | The name of your module's directory. |
 
@@ -56,7 +56,7 @@ JSON.stringify(
         .reduce((o, key) => ({ ...o, [key]: key }), {}),
     null, 2);
 ```
-Copy the printed JSON string into a new `.json` file at `<path to your module>/lang/<language code>_icons.json` and translate the strings. The file should be formatted as such (only two keys shown as a sample):
+Copy the printed JSON string into a new `.json` file at `<path to your module>/lang/<language tag>_icons.json` and translate the strings. The file should be formatted as such (only two keys shown as a sample):
 ```json
 {
   "Anchor": "Ankkuri",
@@ -65,11 +65,11 @@ Copy the printed JSON string into a new `.json` file at `<path to your module>/l
 ```
 
 ## Loading the Translation File
-1. Copy the following JavaScript function into the JavaScript file that you are loading at startup. (E.g., `<path to your module>/scripts/<language code>.js`.) If you do have such a file, create one now.
+1. Copy the following JavaScript function into the JavaScript file that you are loading at startup. (E.g., `<path to your module>/scripts/<language tag>.js`.) If you do have such a file, create one now.
 > :pencil2: Replace the 3 **\<placeholder\>** texts at the start with the correct values!
 {.is-info}
 ```js
-const lang_code = "<language code>";
+const lang_tag = "<language tag>";
 const lang_name = "<language name>";
 const module_path = "/modules/<your module name>/";
 
@@ -81,7 +81,7 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
                 return response.json();
             }
 
-            console.error(`${lang_code} | Failed to load Note Icons ${lang_name} localization: [${response.status}] ${response.statusText}`);
+            console.error(`${lang_tag} | Failed to load Note Icons ${lang_name} localization: [${response.status}] ${response.statusText}`);
             return null;
         })
         .then(localized_names => {
@@ -95,7 +95,7 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
                     if (localized_names.hasOwnProperty(source_icon_name)) {
                         icon_name = localized_names[source_icon_name];
                     } else {
-                        console.warn(`${lang_code} | Missing localization for icon name "${source_icon_name}".`);
+                        console.warn(`${lang_tag} | Missing localization for icon name "${source_icon_name}".`);
                     }
 
                     localized_note_icons[icon_name] = CONFIG.JournalEntry.noteIcons[source_icon_name];
@@ -110,7 +110,7 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
                     return acc;
                 }, {});
 
-            console.log(`${lang_code} | Loaded ${lang_name} localization: Note Icons`);
+            console.log(`${lang_tag} | Loaded ${lang_name} localization: Note Icons`);
         });
 };
 
@@ -118,8 +118,8 @@ Hooks.once("ready", () => {
     "use strict";
 
     // Only localize if the user has selected this language.
-    if (lang_code === game.settings.get("core", "language")) {
-        LocalizeNoteIcons(`${module_path}/lang/${lang_code}_icons.json`);
+    if (lang_tag === game.settings.get("core", "language")) {
+        LocalizeNoteIcons(`${module_path}/lang/${lang_tag}_icons.json`);
     }
 });
 ```
@@ -134,7 +134,7 @@ LocalizeNoteIcons("<path to note icons translation JSON>");
 {.is-info}
 ```json
 "esmodules": [
-        "scripts/<language code>.js"
+        "scripts/<language tag>.js"
     ],
 ```
 
