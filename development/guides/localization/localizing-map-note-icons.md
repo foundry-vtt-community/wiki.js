@@ -2,7 +2,7 @@
 title: Localizing Map Note Icon Names
 description: A guide on how to localize map note icons with a custom JSON file.
 published: true
-date: 2021-01-31T22:03:30.091Z
+date: 2021-01-31T22:28:33.581Z
 tags: localization, translation, guide, map note
 editor: markdown
 dateCreated: 2021-01-13T21:23:53.391Z
@@ -23,8 +23,14 @@ your-module-directory
 └─┬─scripts
   └── fi-FI.js         : Script to load at startup
 </pre>
+The following placeholder values are used in the code below. You need to replace them with the correct values for your module:
+| Placeholder | Correct Value|
+|-|-|
+| `<language code>` | The language code for the translation. IETF language tag recommended. |
+| `<language name>` | The name of the language in English for debug log messages. |
+| `<your module name>` | The name of your module's directory. |
 
-> [Venea.net](https://www.venea.net/web/culture_code) has an excellent resource for [RFC 4646 language codes](https://en.wikipedia.org/wiki/IETF_language_tag).
+> [Venea.net](https://www.venea.net/web/culture_code) has an excellent resource for [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag).
 {.is-info}
 
 <table style="margin:0;">
