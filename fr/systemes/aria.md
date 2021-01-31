@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T15:45:13.158Z
+date: 2021-01-31T15:47:30.052Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -35,7 +35,7 @@ Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques]
 5. [Origine](#origine)
 6. [Description](#description)
 7. [Profession](#profession)
-8. [Points de vie / Blessures](#points-de-vie-/-blessures)
+8. [Points de vie / Blessures](#points-de-vie--blessures)
 9. [Protection](#protection)
 10. [Armes équipées](#armes-équipées)
  
