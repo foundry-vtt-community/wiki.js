@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T15:28:04.212Z
+date: 2021-01-31T15:40:15.073Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -26,17 +26,24 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques](#onglet-caractéristiques), [Onglet Compétences](#onglet-compétences), [Onglet Inventaire](#onglet-inventaire)
 ### Onglet Caractéristiques
 ![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/CaracVierge.webp)
+
+##### Raccourci
+1. [Nom](#Nom)
+2. [Phrase de synthèse](#phrase-de-synthèse)
+3. [Caractéristiques](#caractéristiques)
+4. [Avatar](#avatar)
  
-1. #### Nom
+ 
+#### 1. Nom
 
 Champs de texte éditable contenant le nom de votre personnage.
 
-2. #### Phrase de synthèse
+#### 2. Phrase de synthèse
 
 C'est la phrase qui résume votre personnage : «Il est génial parce que…  mais la société a des problèmes avec lui parce que… »
 Vous pouvez éditer les parties correspondantes au "..." sur la fiche de personnage.
 
-3. #### Caractéristiques
+#### 3. Caractéristiques
 
 Un personnage dispose de cinq caractéristiques :
 La **Force** est une mesure de la puissance musculaire du personnage. Cette caractéristique donne une idée de ce qu’il peut soulever, porter, pousser ou tirer.
@@ -52,12 +59,12 @@ Vous disposez de trois méthodes pour déterminer les différents scores :
 
 Une fois les caractéristiques définies, remplissez les points de vie. Ils sont égaux à l’Endurance avec un maximum de 14.
 
-4. #### Avatar
+#### 4. Avatar
 
 L'image représentant votre personnage. 
 Cliquer dessus pour la modifier.
 
-5. #### Origine
+#### 5. Origine
 
 Il s'agit de l'origine géographique de votre personnage. 
 Pour la definir il faut "*glisser-déposer*" un *item* de type **origine** sur la fiche de votre personnage.
@@ -70,11 +77,13 @@ Vous pouvez :
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
 
-6. #### Description
+#### 6. Description
 Zone de texte libre pour décrire votre personnage.
 ![Description.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/Description.gif)
 
-7. #### Profession
+
+#### 7. Profession
+
 Il s'agit de la profession de votre personnage. 
 Pour la definir il faut "*glisser-déposer*" un *item* de type **profession** sur la fiche de votre personnage.
 Vous pouvez :
@@ -88,9 +97,9 @@ Vous pouvez :
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteProfession.webp)
 
-8. #### Points de vie / Blessures
-9. #### Protection
-10. #### Armes équipées
+#### 8. Points de vie / Blessures
+#### 9. Protection
+#### 10. Armes équipées
 
 
 
