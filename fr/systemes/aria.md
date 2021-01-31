@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T15:40:56.415Z
+date: 2021-01-31T15:42:27.783Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -31,7 +31,7 @@ Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques]
 1. [Nom](#Nom)
 2. [Phrase de synthèse](#phrase-de-synthèse)
 3. [Caractéristiques](#caractéristiques)
-4. [Avatar](#4.-avatar)
+4. [Avatar](#avatar)
  
  
 #### 1. Nom
@@ -59,7 +59,7 @@ Vous disposez de trois méthodes pour déterminer les différents scores :
 
 Une fois les caractéristiques définies, remplissez les points de vie. Ils sont égaux à l’Endurance avec un maximum de 14.
 
-#### 4. Avatar
+#### Avatar
 
 L'image représentant votre personnage. 
 Cliquer dessus pour la modifier.
