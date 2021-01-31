@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T15:40:35.429Z
+date: 2021-01-31T15:40:56.415Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -31,7 +31,7 @@ Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques]
 1. [Nom](#Nom)
 2. [Phrase de synthèse](#phrase-de-synthèse)
 3. [Caractéristiques](#caractéristiques)
-4. [Avatar](#1.-avatar)
+4. [Avatar](#4.-avatar)
  
  
 #### 1. Nom
