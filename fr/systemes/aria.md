@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T15:48:05.098Z
+date: 2021-01-31T15:50:15.503Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -73,13 +73,14 @@ Cliquer dessus pour la modifier.
 #### Origine
 
 Il s'agit de l'origine géographique de votre personnage. 
+##### 1. Ajout
 Pour la definir il faut "*glisser-déposer*" un *item* de type **origine** sur la fiche de votre personnage.
 Vous pouvez :
 - utiliser les origines définies dans le compendium du système
 ![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/AddOrigine.webp)
 - créer une origine dans les objets de votre monde.
 ![createOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createOrigine.webp)
-<br>
+##### 2. Suppression
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
 
@@ -90,7 +91,8 @@ Zone de texte libre pour décrire votre personnage.
 
 #### Profession
 
-Il s'agit de la profession de votre personnage. 
+Il s'agit de la profession de votre personnage.
+##### 1. Ajout
 Pour la definir il faut "*glisser-déposer*" un *item* de type **profession** sur la fiche de votre personnage.
 Vous pouvez :
 - double cliquer sur <span style="color:#8b0000">"Ajoutez une profession"</span> pour ouvrir le compendium des professions de base des prétirés
@@ -99,9 +101,10 @@ Vous pouvez :
 ![addProfession.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addProfession.webp)
 - créer une profession dans les objets de votre monde.
 ![createProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createProfession.webp)
-<br>
+##### 2. Suppression
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteProfession.webp)
+
 
 #### Points de vie / Blessures
 #### Protection
