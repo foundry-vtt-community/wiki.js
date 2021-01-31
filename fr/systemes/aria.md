@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T15:50:15.503Z
+date: 2021-01-31T16:01:33.307Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -10,35 +10,38 @@ dateCreated: 2020-12-15T10:30:41.035Z
 
 # Aria - Game of Roles (en cours de mise a jour)
 
-![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/main.webp)
+<br/>
 
+![aria.jpg](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/main.webp)
+<br/>
 > Il existe un dieu nommé l’Ennemi, souhaitant la fin de toute civilisation.
 Le roi des dieux le combattit au bord du monde. Il eut l’opportunité de le tuer au prix de sa propre vie, mais renonça dans un sursaut de lâcheté. Pour avoir manqué de débarrasser le monde de l’Ennemi, le roi des dieux se retira.
 Avant son départ, il remit à l’Homme une couronne, un sceptre et un orbe permettant d’assurer en son nom une juste gouvernance. Puis devint le Dieu Exilé et cessa de répondre aux prières des mortels.
 Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement, son influence conduit l’humanité à sa perte.
 
-
+<br/>
 
 - Installer le système [Aria](https://foundryvtt.com/packages/aria/) depuis la catégorie SYSTEME dans l'application FoundryVTT (il comprend le système et les compendiums associés)
 - Module conseillé : je vous recommande d'utilisé le module [compendium-folders](https://foundryvtt.com/packages/compendium-folders/) qui permet de mieux organiser ses compendiums en sous dossiers
 
+<br/><br/>
+
 ## Création de personnage
 Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques](#onglet-caractéristiques), [Onglet Compétences](#onglet-compétences), [Onglet Inventaire](#onglet-inventaire)
+
+<br/>
+
 ### Onglet Caractéristiques
 ![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/CaracVierge.webp)
 
 ##### Raccourci
-1. [Nom](#nom)
-2. [Phrase de synthèse](#phrase-de-synthèse)
-3. [Caractéristiques](#caractéristiques)
-4. [Avatar](#avatar)
-5. [Origine](#origine)
-6. [Description](#description)
-7. [Profession](#profession)
-8. [Points de vie / Blessures](#points-de-vie-blessures)
-9. [Protection](#protection)
-10. [Armes équipées](#armes-équipées)
+
+| --- | --- | --- |
+| [Nom](#nom) | [Phrase de synthèse](#phrase-de-synthèse) |[Caractéristiques](#caractéristiques) |
+| [Avatar](#avatar) |  [Origine](#origine) | [Description](#description) | [Profession](#profession) |
+| [Points de vie / Blessures](#points-de-vie-blessures) | [Protection](#protection) |  [Armes équipées](#armes-équipées) |
  
+ <br/>
  
 #### Nom
 
@@ -83,7 +86,7 @@ Vous pouvez :
 ##### 2. Suppression
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
-
+<br/>
 #### Description
 Zone de texte libre pour décrire votre personnage.
 ![Description.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/Description.gif)
@@ -104,14 +107,14 @@ Vous pouvez :
 ##### 2. Suppression
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteProfession.webp)
-
+<br/>
 
 #### Points de vie / Blessures
 #### Protection
 #### Armes équipées
 
 
-
+<br/><br/><br/>
 ### Onglet Compétences
 
 
