@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-30T20:30:01.047Z
+date: 2021-01-31T14:12:35.831Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -20,6 +20,7 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 
 
 - Installer le système [Aria](https://foundryvtt.com/packages/aria/) depuis la catégorie SYSTEME dans l'application FoundryVTT (il comprend le système et les compendiums associés)
+- Module conseillé : je vous recommande d'utilisé le module [compendium-folders](https://foundryvtt.com/packages/compendium-folders/) qui permet de mieux organiser ses compendiums en sous dossiers
 
 ## Création de personnage
 Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#compétences), [Inventaire](#inventaire)
@@ -65,6 +66,8 @@ Vous pouvez :
 ![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/AddOrigine.webp)
 - soit en créer une dans les objets de votre monde.
 ![createOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createOrigine.webp)
+
+![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
 
 
 6. #### Description
