@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T14:14:24.058Z
+date: 2021-01-31T14:58:45.849Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -23,8 +23,8 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 - Module conseillé : je vous recommande d'utilisé le module [compendium-folders](https://foundryvtt.com/packages/compendium-folders/) qui permet de mieux organiser ses compendiums en sous dossiers
 
 ## Création de personnage
-Votre feuille de personnage se compose de 3 onglets : [Caractéristiques](#caractéristiques), [Compétences](#compétences), [Inventaire](#inventaire)
-### Caractéristiques
+Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques](#onglet-caractéristiques), [Onglet Compétences](#onglet-compétences), [Onglet Inventaire](#onglet-inventaire)
+### Onglet Caractéristiques
 ![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/CaracVierge.webp)
  
 1. #### Nom
@@ -70,8 +70,10 @@ Vous pouvez :
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
 
-
 6. #### Description
+Zone de texte libre pour décrire votre personnage.
+![Description.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/Description.gif)
+
 7. #### Profession
 8. #### Points de vie / Blessures
 9. #### Protection
@@ -79,17 +81,27 @@ Pour supprimer l'origine de votre personnage, vous devez passer votre souris des
 
 
 
-### Compétences
+### Onglet Compétences
 
 
-### Inventaire
+### Onglet Inventaire
 
 
-
-
+## Création d'item
+Il existe 4 type d'item : [Création d'une Origine](#création-d'une-origine), [Création d'une Profession](#création-d'une-profession), [Création d'une Compétence](#création-d'une-compétence) et [Création d'un Objets](#création-d'un-objets)
+### Création d'une Origine
+### Création d'une Profession
+### Création d'une Compétence
+### Création d'un Objet
 
 
 ## Compendiums
+Il existe 4 catégories de compendiums : [Compendium d'Origines](#compendium-d'Origines), [Compendium de Professions](#compendium-de-professions), [Compendium de Compétences](#compendium-de-compétences) et [Compendium d'Objets
+](#compendium-d'Objets)
+### Compendium d'Origines
+### Compendium de Professions
+### Compendium de Compétences
+### Compendium d'Objets
 
 ## Contacts
 Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur Discord
