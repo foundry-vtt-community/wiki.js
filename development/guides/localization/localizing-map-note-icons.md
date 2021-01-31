@@ -2,7 +2,7 @@
 title: Localizing Map Note Icon Names
 description: A guide on how to localize map note icons with a custom JSON file.
 published: true
-date: 2021-01-27T21:22:19.579Z
+date: 2021-01-31T22:03:30.091Z
 tags: localization, translation, guide, map note
 editor: markdown
 dateCreated: 2021-01-13T21:23:53.391Z
@@ -108,13 +108,17 @@ const LocalizeNoteIcons = function(note_icons_translation_path) {
         });
 };
 
-Hooks.once("init", () => {
+Hooks.once("ready", () => {
     "use strict";
-    LocalizeNoteIcons(`${module_path}/lang/${lang_code}_icons.json`);
+
+    // Only localize if the user has selected this language.
+    if (lang_code === game.settings.get("core", "language")) {
+        LocalizeNoteIcons(`${module_path}/lang/${lang_code}_icons.json`);
+    }
 });
 ```
 
-2. If you already have an `init` hook in your script, only copy the `LocalizeNoteIcons` function and add a call to it in your `init` hook:
+2. If you already have an `ready` hook in your script, only copy the `LocalizeNoteIcons` function and add a call to it in your `ready` hook:
 ```js
 LocalizeNoteIcons("<path to note icons translation JSON>");
 ```
