@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T14:12:35.831Z
+date: 2021-01-31T14:14:24.058Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -66,7 +66,8 @@ Vous pouvez :
 ![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/AddOrigine.webp)
 - soit en créer une dans les objets de votre monde.
 ![createOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createOrigine.webp)
-
+<br>
+Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
 
 
