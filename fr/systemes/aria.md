@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T13:12:57.468Z
+date: 2021-02-01T13:30:05.984Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -132,7 +132,7 @@ Le compteur de point de vie doit être rempli à la création du personnage et n
 Si le compteur de blessures est égal au compteur de points de vie le personnage est mort.
 
 La modification de ces compteurs est synchronisé avec la barre et le compteur du token, la modification des points de vie du token modifient uniquement le compteur de blessures.
-
+<br/>
 ![hp.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.gif)
 
 <br/><br/><br/><br/><br/><br/><br/><br/>
