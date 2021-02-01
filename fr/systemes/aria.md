@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T14:50:40.613Z
+date: 2021-02-01T14:55:10.004Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -57,8 +57,8 @@ Champs de texte éditable contenant le nom de votre personnage.
  
 #### Phrase de synthèse
 
-C'est la phrase qui résume votre personnage : «Il est génial parce que…  mais la société a des problèmes avec lui parce que… »
-Vous pouvez éditer les parties correspondantes au "..." sur la fiche de personnage.
+C'est la phrase qui résume le personnage : «Il est génial parce que…  mais la société a des problèmes avec lui parce que… »
+Il est possible d'éditer les parties correspondantes au "..." sur la fiche de personnage.
  <br/>
  
 #### Caractéristiques
@@ -129,7 +129,7 @@ Pour supprimer l'origine de votre personnage, vous devez passer votre souris des
 <img style="float: left;margin-right:10px;" src="https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.webp">
 Ces deux compteur permettent de saisir les points de vie maximum ainsi que le nombre de dégats subient.
 
-Le compteur de point de vie doit être rempli à la création du personnage et ne devrait changer que sur des événements du scénario.
+Les points de view max sont égaux à l’Endurance avec un maximum de 14. Ils ne devraient changer que sur des événements du scénario. 
 
 Si le compteur de blessures est égal au compteur de points de vie le personnage est mort.
 
