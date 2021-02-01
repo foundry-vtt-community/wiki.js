@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T15:09:07.937Z
+date: 2021-02-01T16:30:07.845Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -185,7 +185,9 @@ Pour chaque compétence, faites la moyenne de deux caractéristiques liées (cf.
 Cette méthode est plus rapide à mettre en œuvre au niveau des chiffres puisqu’elle n’intègre pas de calcul de moyenne et d’arrondi. Elle permet en outre de personnaliser son personnage en développant davantage certaines compétences. En revanche, les compétences non personnalisées seront plus faibles qu’avec la première méthode.
 Cette méthode fonctionne en deux temps :
 - Pour chaque compétence, ajoutez les deux caractéristiques liées et multipliez le tout par 2. Il s’agit du score initial de la compétence.
-- Une fois tous les scores initiaux renseignés, vous disposez de 50 points à répartir comme bon vous semble, sur la base de 1 pour 1. À la création, aucun personnage ne peut disposer d’une compétence supérieure à 90 %
+- Une fois tous les scores initiaux renseignés, vous disposez de 50 points à répartir comme bon vous semble, sur la base de 1 pour 1. À la création, aucun personnage ne peut disposer d’une compétence supérieure à 90%.
+
+####  Ajouter une compétence
 
  <br/> <br/> <br/>
  
