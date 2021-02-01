@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T12:22:20.240Z
+date: 2021-02-01T13:12:57.468Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -123,12 +123,19 @@ Pour supprimer l'origine de votre personnage, vous devez passer votre souris des
 <br/>
 
 #### Points de vie / Blessures
-
+<br/>
+<img style="float: left;margin-right:10px;" src="https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.webp">
 Ces deux compteur permettent de saisir les points de vie maximum ainsi que le nombre de dégats subient.
+
+Le compteur de point de vie doit être rempli à la création du personnage et ne devrait changer que sur des événements du scénario.
+
 Si le compteur de blessures est égal au compteur de points de vie le personnage est mort.
 
-![hp.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.webp)
- <br/>
+La modification de ces compteurs est synchronisé avec la barre et le compteur du token, la modification des points de vie du token modifient uniquement le compteur de blessures.
+
+![hp.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.gif)
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
  
 #### Protection
 
