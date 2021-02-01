@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T16:30:07.845Z
+date: 2021-02-01T16:45:33.926Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -181,7 +181,7 @@ Il y a 2 méthodes permettant de calculer les scores initiaux des compétences d
 Cette méthode dispose d’un double avantage: des scores initiaux plus élevés et un personnage directement prêt à l’emploi. Elle a été utilisée pour les prétirés.
 Pour chaque compétence, faites la moyenne de deux caractéristiques liées (cf. encart), en arrondissant à l’entier inférieur. Multipliez alors ce résultat par 5 pour obtenir le score à affecter à la compétence.
 
-1. **Personnalisation de personnage**
+2. **Personnalisation de personnage**
 Cette méthode est plus rapide à mettre en œuvre au niveau des chiffres puisqu’elle n’intègre pas de calcul de moyenne et d’arrondi. Elle permet en outre de personnaliser son personnage en développant davantage certaines compétences. En revanche, les compétences non personnalisées seront plus faibles qu’avec la première méthode.
 Cette méthode fonctionne en deux temps :
 - Pour chaque compétence, ajoutez les deux caractéristiques liées et multipliez le tout par 2. Il s’agit du score initial de la compétence.
@@ -189,6 +189,9 @@ Cette méthode fonctionne en deux temps :
 
 ####  Ajouter une compétence
 
+![addCompetence.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addCompetence.webp)
+
+1.  **Création**
  <br/> <br/> <br/>
  
 ### Onglet Inventaire
