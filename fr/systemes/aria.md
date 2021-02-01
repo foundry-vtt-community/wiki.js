@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T16:47:58.277Z
+date: 2021-02-01T18:16:39.724Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
