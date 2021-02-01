@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T16:45:33.926Z
+date: 2021-02-01T16:47:58.277Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -188,7 +188,6 @@ Cette méthode fonctionne en deux temps :
 - Une fois tous les scores initiaux renseignés, vous disposez de 50 points à répartir comme bon vous semble, sur la base de 1 pour 1. À la création, aucun personnage ne peut disposer d’une compétence supérieure à 90%.
 
 ####  Ajouter une compétence
-
 ![addCompetence.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addCompetence.webp)
 
 1.  **Création**
