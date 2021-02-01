@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-01-31T16:01:33.307Z
+date: 2021-02-01T08:13:10.052Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -27,12 +27,16 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 <br/><br/>
 
 ## Création de personnage
-Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques](#onglet-caractéristiques), [Onglet Compétences](#onglet-compétences), [Onglet Inventaire](#onglet-inventaire)
+Votre feuille de personnage se compose de 3 onglets : 
+- [Onglet Caractéristiques](#onglet-caractéristiques)
+- [Onglet Compétences](#onglet-compétences)
+- [Onglet Inventaire](#onglet-inventaire)
 
 <br/>
 
 ### Onglet Caractéristiques
-![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/CaracVierge.webp)
+
+<br/>
 
 ##### Raccourci
 
@@ -41,17 +45,22 @@ Votre feuille de personnage se compose de 3 onglets : [Onglet Caractéristiques]
 | [Avatar](#avatar) |  [Origine](#origine) | [Description](#description) | [Profession](#profession) |
 | [Points de vie / Blessures](#points-de-vie-blessures) | [Protection](#protection) |  [Armes équipées](#armes-équipées) |
  
+
+![caracVierge.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/CaracVierge.webp)
+
  <br/>
  
 #### Nom
 
 Champs de texte éditable contenant le nom de votre personnage.
-
+ <br/>
+ 
 #### Phrase de synthèse
 
 C'est la phrase qui résume votre personnage : «Il est génial parce que…  mais la société a des problèmes avec lui parce que… »
 Vous pouvez éditer les parties correspondantes au "..." sur la fiche de personnage.
-
+ <br/>
+ 
 #### Caractéristiques
 
 Un personnage dispose de cinq caractéristiques :
@@ -67,12 +76,14 @@ Vous disposez de trois méthodes pour déterminer les différents scores :
 • Si vous souhaitez vous reposer sur le hasard sans trop frustrer vos joueurs, vous pouvez également utiliser la méthode a) mais leur faire effectuer trois tirages de caractéristiques. Ils choisiront alors le meilleur des trois lots de chiffres (et non le meilleur chiffre à chaque fois).
 
 Une fois les caractéristiques définies, remplissez les points de vie. Ils sont égaux à l’Endurance avec un maximum de 14.
-
+ <br/>
+ 
 #### Avatar
 
 L'image représentant votre personnage. 
 Cliquer dessus pour la modifier.
-
+ <br/>
+ 
 #### Origine
 
 Il s'agit de l'origine géographique de votre personnage. 
@@ -87,11 +98,13 @@ Vous pouvez :
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
 <br/>
+
 #### Description
 Zone de texte libre pour décrire votre personnage.
 ![Description.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/Description.gif)
 
-
+ <br/>
+ 
 #### Profession
 
 Il s'agit de la profession de votre personnage.
@@ -110,38 +123,86 @@ Pour supprimer l'origine de votre personnage, vous devez passer votre souris des
 <br/>
 
 #### Points de vie / Blessures
+
+
+ <br/>
+ 
 #### Protection
+
+ <br/>
+ 
 #### Armes équipées
 
 
-<br/><br/><br/>
+<br/><br/>
+
+
 ### Onglet Compétences
 
-
+ <br/> <br/> <br/>
+ 
 ### Onglet Inventaire
 
-
+ <br/> <br/>
+ 
 ## Création d'item
-Il existe 4 type d'item : [Création d'une Origine](#création-d'une-origine), [Création d'une Profession](#création-d'une-profession), [Création d'une Compétence](#création-d'une-compétence) et [Création d'un Objets](#création-d'un-objets)
+Il existe 4 type d'item : 
+- [Création d'une Origine](#création-d'une-origine)
+- [Création d'une Profession](#création-d'une-profession)
+- [Création d'une Compétence](#création-d'une-compétence)
+- [Création d'un Objets](#création-d'un-objets)
+
+ <br/>
+ 
 ### Création d'une Origine
+
+ <br/>
+ 
 ### Création d'une Profession
+
+ <br/>
+ 
 ### Création d'une Compétence
+
+ <br/>
+ 
 ### Création d'un Objet
 
+ <br/>
 
 ## Compendiums
-Il existe 4 catégories de compendium : [Compendium d'Origines](#compendium-d'Origines), [Compendium de Professions](#compendium-de-professions), [Compendium de Compétences](#compendium-de-compétences) et [Compendium d'Objets
-](#compendium-d'Objets)
+Il existe 4 catégories de compendium : 
+- [Compendium d'Origines](#compendium-d'Origines)
+- [Compendium de Professions](#compendium-de-professions)
+- [Compendium de Compétences](#compendium-de-compétences)
+- [Compendium d'Objets](#compendium-d'Objets)
+
+ <br/>
+ 
 ### Compendium d'Origines
+
+ <br/>
+ 
 ### Compendium de Professions
+
+ <br/>
+ 
 ### Compendium de Compétences
+
+ <br/>
+ 
 ### Compendium d'Objets
+
+ <br/>
+ 
 
 ## Contacts
 Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur Discord
 **Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).
 Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
 
+ <br/>
+ 
 ## Informations
 Jeu de la série Game of Rôles imaginée par [FibreTigre](https://www.fibretigre.com/).
 Popularisé sur Twitch / Youtube, lien :  [Saison 1](https://www.youtube.com/playlist?list=PLTJVtKcBdMNWKJxAnpSf1fj4CUp49148Z), [Saison 2](https://www.youtube.com/playlist?list=PLTJVtKcBdMNV9tpuHa_YRKlsMspnXFEbx), [Saison 3](https://www.youtube.com/playlist?list=PL4ILyHtnURFrTkuFoje8KhBIoV63ATuwe) et [son final](https://www.youtube.com/playlist?list=PLTJVtKcBdMNW2XAbHVhU1FWR9e_4N8vsm).
