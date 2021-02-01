@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T08:13:10.052Z
+date: 2021-02-01T08:14:15.039Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -40,7 +40,7 @@ Votre feuille de personnage se compose de 3 onglets :
 
 ##### Raccourci
 
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | [Nom](#nom) | [Phrase de synthèse](#phrase-de-synthèse) |[Caractéristiques](#caractéristiques) |
 | [Avatar](#avatar) |  [Origine](#origine) | [Description](#description) | [Profession](#profession) |
 | [Points de vie / Blessures](#points-de-vie-blessures) | [Protection](#protection) |  [Armes équipées](#armes-équipées) |
