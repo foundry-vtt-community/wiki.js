@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T13:35:24.747Z
+date: 2021-02-01T14:50:40.613Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -142,12 +142,25 @@ La modification de ces compteurs est synchronisé avec la barre et le compteur d
  
 #### Protection
 
+<br/>
+<div style="min-height:114px;">
+<img style="float: left;margin-right:10px;" src="https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/protection.webp">
+Ce compteur représente le nombre de dégats encaissé par votre armure à soustraire des Blessures subit.
+</div>
+
+Pour l'instant ce compteur est modifiable manuellement.
+Dans une prochaine mise a jour, ce compteur sera rempli en fonction de l'armure équipée dans l'inventaire.
+![protection.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/protection.gif)
+
  <br/>
  
 #### Armes équipées
-
-
-<br/><br/>
+Les armes apparaissent sur l'onglet Caractéristiques lorsqu'elles sont équipées.
+![armes.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/armes.gif)
+<br/>
+Une fois équipées, le jet de dé peut s'effectuer directement depuis l'onglet Caractèristiques.
+![attack.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/attack.gif)
+<br/>
 
 
 ### Onglet Compétences
