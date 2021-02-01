@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T14:55:10.004Z
+date: 2021-02-01T15:09:07.937Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -164,6 +164,28 @@ Une fois équipées, le jet de dé peut s'effectuer directement depuis l'onglet 
 
 
 ### Onglet Compétences
+
+L’essentiel des actions pouvant échouer des personnages passe par le recours à des compétences. Chacune d’elles s’exprime en pourcentage et suppose de lancer un dé à cent faces (abrégé en 1d100).
+ Si le résultat du dé est inférieur ou égal à la compétence, l’action est réussie.
+
+A la création d'un nouveau personnage, toutes les compétences de base sont ajoutées à la fiche de personnage avec un score de 0.
+Il est ensuite possible de modifier les scores de compétence et/ou d'en supprimer.
+
+![competenceBase.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/competenceBase.webp)
+ 
+####  Scrore initiaux
+
+Il y a 2 méthodes permettant de calculer les scores initiaux des compétences de personnage.
+ 
+1.  **Calculs prêts à jouer**
+Cette méthode dispose d’un double avantage: des scores initiaux plus élevés et un personnage directement prêt à l’emploi. Elle a été utilisée pour les prétirés.
+Pour chaque compétence, faites la moyenne de deux caractéristiques liées (cf. encart), en arrondissant à l’entier inférieur. Multipliez alors ce résultat par 5 pour obtenir le score à affecter à la compétence.
+
+1. **Personnalisation de personnage**
+Cette méthode est plus rapide à mettre en œuvre au niveau des chiffres puisqu’elle n’intègre pas de calcul de moyenne et d’arrondi. Elle permet en outre de personnaliser son personnage en développant davantage certaines compétences. En revanche, les compétences non personnalisées seront plus faibles qu’avec la première méthode.
+Cette méthode fonctionne en deux temps :
+- Pour chaque compétence, ajoutez les deux caractéristiques liées et multipliez le tout par 2. Il s’agit du score initial de la compétence.
+- Une fois tous les scores initiaux renseignés, vous disposez de 50 points à répartir comme bon vous semble, sur la base de 1 pour 1. À la création, aucun personnage ne peut disposer d’une compétence supérieure à 90 %
 
  <br/> <br/> <br/>
  
