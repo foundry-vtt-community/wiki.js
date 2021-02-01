@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T13:30:24.985Z
+date: 2021-02-01T13:30:37.932Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -135,7 +135,7 @@ La modification de ces compteurs est synchronisé avec la barre et le compteur d
 <br/><br/><br/>
 ![hp.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.gif)
 
-<br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/>
  
 #### Protection
 
