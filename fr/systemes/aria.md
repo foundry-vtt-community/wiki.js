@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T13:32:29.535Z
+date: 2021-02-01T13:35:24.747Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -125,7 +125,7 @@ Pour supprimer l'origine de votre personnage, vous devez passer votre souris des
 #### Points de vie / Blessures
 <br/>
 
-<div>
+<div style="min-height:218px;">
 <img style="float: left;margin-right:10px;" src="https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/hp.webp">
 Ces deux compteur permettent de saisir les points de vie maximum ainsi que le nombre de dégats subient.
 
