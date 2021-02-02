@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-01T19:07:40.458Z
+date: 2021-02-02T19:29:21.757Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -192,10 +192,14 @@ Il est possible d'ajouter des compétences de 3 façon différentes
 ![addCompetence.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addCompetence.webp)
 
 1. **Création sur la fiche de personnage**
-Directement sur la fiche
+Il est possible de créer une compétence directement sur la fiche de personnage en cliquant sur le "+". 
+Attention la compétence n'est pas ajouté aux objets du monde mais uniquement aux objets du personnage.
 
 2. **Compendium pour les compétences de base**
+L'icone en forme de dossier ouvre le compendium des compétences de base, il suffit ensuite de glisser-déposer la compétence sur la fiche de personnage.
+
 3. **Glisser déposer depuis les compendiums**
+Enfin, il est possible d'ouvrir les différents compendiums des compétences dans la section dédiée, puis de glisser-déposer la compétence sur la fiche de personnage.
  <br/> <br/> <br/>
  
 ### Onglet Inventaire
