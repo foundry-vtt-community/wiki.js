@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-02-02T20:33:14.629Z
+date: 2021-02-02T20:33:50.218Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -35,6 +35,9 @@ Rather than including these js libs in your own module's files, you can make use
 
 
 ### Foundry Specific Functionality
+
+More than simply wrapping an existing js lib, these are made specifically with foundry's use cases in mind.
+
 - libWrapper https://github.com/ruipin/fvtt-lib-wrapper - Useful for overwriting methods you don't control in a way which allows for conflict resolution.
 - Chat Commands https://foundryvtt.com/packages/_chatcommands/ - Allows modules to define their own chat commands.
 - Color Settings https://github.com/ardittristan/VTTColorSettings - Adds color picker as settings option and form option.
