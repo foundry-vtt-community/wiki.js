@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-02-02T20:28:17.023Z
+date: 2021-02-02T20:32:12.266Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -33,5 +33,12 @@ Leverage the Manifest+ field [`library`](https://foundryvtt.wiki/en/development/
 
 
 ### Foundry Specific Functionality
-- Chat Commands https://foundryvtt.com/packages/_chatcommands/
+- libWrapper https://github.com/ruipin/fvtt-lib-wrapper - Useful for overwriting methods you don't control in a way which allows for conflict resolution.
+- Chat Commands https://foundryvtt.com/packages/_chatcommands/ - Allows modules to define their own chat commands.
+- Color Settings https://github.com/ardittristan/VTTColorSettings - Adds color picker as settings option and form option.
+- Find the Path https://github.com/dwonderley/lib-find-the-path/ - Provides a library that performs system-agnostic path planning calculations for two-dimensional, square grids.
+
+
+
+
 
