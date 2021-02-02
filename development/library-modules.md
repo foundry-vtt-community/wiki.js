@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-02-02T20:32:12.266Z
+date: 2021-02-02T20:33:14.629Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -26,6 +26,8 @@ Leverage the Manifest+ field [`library`](https://foundryvtt.wiki/en/development/
 ## Known Library Modules
 
 ### Javascript Library packages
+Rather than including these js libs in your own module's files, you can make use of these commonly re-used packages.
+
 - Mathjs https://github.com/League-of-Foundry-Developers/mathjs-lib
 - Codemirror https://github.com/League-of-Foundry-Developers/codemirror-lib
 - Introjs https://github.com/League-of-Foundry-Developers/intro.js-lib
