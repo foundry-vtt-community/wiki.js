@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-02T19:29:21.757Z
+date: 2021-02-03T18:06:21.873Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -94,16 +94,21 @@ Vous pouvez :
 ![AddOrigine.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/AddOrigine.webp)
 - créer une origine dans les objets de votre monde.
 ![createOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createOrigine.webp)
+
+<br/>
+Lorsque l'origine est ajoutée, toutes les compétences spéciales associées le sont également, elles sont accessibles dans [Onglet Compétences](onglet-compétences).
+<br/><br/>
+
 ##### 2. Suppression
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteOrigine.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteOrigine.webp)
-<br/>
+<br/><br/><br/>
 
 #### Description
 Zone de texte libre pour décrire votre personnage.
 ![Description.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/Description.gif)
 
- <br/>
+ <br/><br/><br/>
  
 #### Profession
 
@@ -117,6 +122,12 @@ Vous pouvez :
 ![addProfession.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addProfession.webp)
 - créer une profession dans les objets de votre monde.
 ![createProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/createProfession.webp)
+
+<br/>
+
+Lorsqu'une profession est ajoutée, toutes les compétences spéciales associées le sont également, elles sont accessibles dans [Onglet Compétences](onglet-compétences).
+<br/><br/>
+
 ##### 2. Suppression
 Pour supprimer l'origine de votre personnage, vous devez passer votre souris dessus afin de faire apparaitre l'icone de supppression puis cliquer dessus
 ![deleteProfession.web](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteProfession.webp)
@@ -200,6 +211,14 @@ L'icone en forme de dossier ouvre le compendium des compétences de base, il suf
 
 3. **Glisser déposer depuis les compendiums**
 Enfin, il est possible d'ouvrir les différents compendiums des compétences dans la section dédiée, puis de glisser-déposer la compétence sur la fiche de personnage.
+<br/>
+
+#### Modifier une compétence
+
+<br/>
+
+#### Jet basé sur une compétence
+
  <br/> <br/> <br/>
  
 ### Onglet Inventaire
