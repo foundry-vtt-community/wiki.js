@@ -2,7 +2,7 @@
 title: Rêve de Dragon pour FoundryVTT
 description: 
 published: true
-date: 2021-02-03T08:08:26.234Z
+date: 2021-02-03T08:10:14.394Z
 tags: 
 editor: markdown
 dateCreated: 2020-11-26T16:29:39.001Z
@@ -87,4 +87,5 @@ Dans la feuille de personnage, onglet caractéristiques, il suffit de cliquer su
 
 ### Résumé rapide
 
+![resume-combat.jpg](/images/reve-de-dragon/resume-combat.jpg)
 
