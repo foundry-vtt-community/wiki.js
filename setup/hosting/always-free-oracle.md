@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T22:36:20.402Z
+date: 2021-02-04T22:39:06.693Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -239,7 +239,7 @@ sudo apt-get install unzip -y
 ```
 mkdir ~/foundry
 cd ~/foundry
-wget -O foundryvtt.zip “<download url>”
+wget -O foundryvtt.zip "<download url>"
 ```
 > Make sure to include the quote symbols before and after the `<download url>` or the file may not download properly. {.is-info}
 
@@ -270,7 +270,7 @@ node /home/ubuntu/foundry/resources/app/main.js
 &nbsp;
 25.	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
 ```
-pm2 start “node /home/ubuntu/foundry/resources/app/main.js” --name foundry
+pm2 start "node /home/ubuntu/foundry/resources/app/main.js" --name foundry
 ```
 26.	Double check pm2 has launched Foundry correctly:
 ```
