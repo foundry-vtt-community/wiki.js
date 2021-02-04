@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T20:35:59.453Z
+date: 2021-02-04T20:37:54.950Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -90,7 +90,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ![Ingress Rules](/images/oracle/image25.webp)
 &nbsp;
 
->Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D.38](#Reverse-Proxy-and-HTTPS-Configuration-with-Caddy) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
+>Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D.38](#reverse-proxy-and-https-configuration-with-caddy) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
 14.	Click **Add Ingress Rules**.
 
