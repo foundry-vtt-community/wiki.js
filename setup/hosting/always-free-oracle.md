@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T20:01:06.462Z
+date: 2021-02-04T20:03:58.053Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -10,7 +10,7 @@ dateCreated: 2021-02-04T18:31:17.191Z
 
 # Always Free Oracle Cloud Hosting Guide for Foundry
 
-## A.	 Overview
+## A. Overview
 ### Objective
 At the end of this guide, you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy. 
 &nbsp;
@@ -34,7 +34,7 @@ While this guide is written to target the Always Free Tier and should not result
 
 All information in this guide is accurate as of the date it was written. 
 &nbsp;
-## B.	 Account Setup
+## B. Account Setup
 ### Objective
 At the end of this section, you will have a registered account with Oracle Cloud that has access to the Always Free Tier services. 
 &nbsp;
@@ -54,7 +54,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
  
 &nbsp;
-## C.	 Compute and Networking Setup
+## C. Compute and Networking Setup
 ### Objective
 At the end of this section, you will have set up a Compute VM (Virtual Machine) with Ubuntu 20.04 as well as a VCN (Virtual Cloud Network) required to host Foundry. 
 &nbsp;
@@ -90,7 +90,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ![Ingress Rules](/images/oracle/image25.webp)
 &nbsp;
 
->Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step D.35 in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
+>Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D.38](#D.-Server-Setup-and-Installation) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
 14.	Click **Add Ingress Rules**.
 
@@ -153,7 +153,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
 
 &nbsp;
-## D.	 Server Setup and Installation
+## D. Server Setup and Installation
 ### Objective
 At the end of this section you will have a functional installation of Foundry using HTTPS and Caddy as a reverse proxy. Foundry will be set to restart any time the Compute VM is restarted, managed by pm2.
 &nbsp;
@@ -345,7 +345,7 @@ nano /home/ubuntu/.local/share/Foundry-VTT/Config/options.json
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
 &nbsp;
-## E.	 Optional: Backup Policy Setup
+## E. Optional: Backup Policy Setup
 ### Objective
 At the end of this section you will have a policy that automatically retains 5 rotating backups, allowing you to seamlessly restore from backup should something ever go wrong.  
 &nbsp;
@@ -392,7 +392,7 @@ f.	Timezone: `Regional Data Center Time`
 > Restoring from backup is beyond the scope of this guide. More information can be found in the Oracle Docs should you need to restore from backup. {.is-info} 
 
 &nbsp;
-## F.	 Optional: S3 Storage Setup
+## F. Optional: S3 Storage Setup
 ### Objective
 At the end of this section, you will have a functional S3 storage bucket that Foundry can access to store assets under the “Amazon S3” tab in the file picker. This allows you to have extra storage beyond that provided by the instance volume. 
 &nbsp;
