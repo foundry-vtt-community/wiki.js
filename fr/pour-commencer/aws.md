@@ -2,7 +2,7 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2021-02-04T12:12:02.235Z
+date: 2021-02-04T12:13:14.016Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -39,7 +39,7 @@ La simulation ci-dessous prends en compte:
 * Une session allant de 4 à 8 heures (+ préparation MJ).
 * Pas d'option supplémentaire (pas de S3, pas de snapshot, etc...).
 * Un trafic de 20Go.
-![prolice-screen-aws-deploy-021.png](/images/prolice-screen-aws-deploy-021.png)
+![prolice-screen-aws-deploy-021.png](/images/prolice-screen-aws-deploy-022.png)
 
 Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
 
