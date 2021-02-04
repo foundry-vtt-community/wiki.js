@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T18:31:17.191Z
+date: 2021-02-04T18:54:33.754Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -44,9 +44,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
 
 1.	Review the availability of Always Free services in your preferred region. At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
-
 2.	Sign up for an account at Oracle Cloud, entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
-
 3.	Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
 
 >  Some users in certain regions may require manual account verification which could take a few days of extra time.{.is-info}
@@ -63,66 +61,58 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ### Create a VCN (Virtual Cloud Network) and Security Policy
  
 
-1.	From the Get Started page, click on Set up a network with a wizard. 
-
- 
-2.	Choose VCN with Internet Connectivity and click Start VCN Wizard. 
-
- 
-3.	Enter a VCN Name (“foundry” used in this guide). 
-4.	Ensure that USE DNS HOSTNAMES IN THIS VCN is unchecked.
-5.	Click Next to proceed to the Review page.
-6.	Click Create to create the VCN. 
-7.	Once all steps here are marked Done with a green checkmark, click View Virtual Cloud Network.
-
- 
-8.	 In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the Public Subnet-foundry link. 
-9.	Click Default Security List for foundry.
-10.	Click Add Ingress Rules.
-
- 
-11.	Ensure that Stateless is checked.
-12.	Enter 0.0.0.0/0 into the SOURCE CIDR field.
-13.	Enter 80,443,30000
+1.	From the **Get Started** page, click on **Set up a network with a wizard**. 
+2.	Choose **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
+3.	Enter a **VCN Name**, such as `foundry`. 
+4.	Ensure that **USE DNS HOSTNAMES IN THIS VCN** is `unchecked`.
+5.	Click **Next** to proceed to the Review page.
+6.	Click **Create** to create the VCN. 
+7.	Once all steps here are marked "done" with a green checkmark, click **View Virtual Cloud Network**.
+8.	 In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the **Public Subnet-foundry** link. 
+9.	Click **Default Security List** for foundry.
+10.	Click **Add Ingress Rules**.
+11.	Ensure that **Stateless** is `checked`.
+12.	Enter `0.0.0.0/0` into the **SOURCE CIDR** field.
+13.	Enter `80,443,30000` into the **DESTINATION PORT RANGE** field. 
 
 >Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step D.35 in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
-14.	Click Add Ingress Rules.
+14.	Click **Add Ingress Rules**.
 
 >This completes the creation of a VCN with the correct security rules to allow connections to the Foundry host. {.is-info}
 
-15.	Click ORACLE Cloud at the top left to return to the Get Started page to continue.
+15.	Click **ORACLE Cloud** at the top left to return to the **Get Started** page to continue.
 
 &nbsp;
 
 ### Create a Compute VM (Virtual Machine) 
 
-16.	From the Get Started page, click Create a VM Instance.
-17.	On the next screen, enter a name for the VM instance. The name foundry is used for this guide. 
-18.	Optionally, choose a desired Availability Domain. The default is fine. 
-19.	To change to an Ubuntu 20.04 image, click the Change Image button.
-20.	From the pop-out list, check Canonical Ubuntu 20.04.
-21.	Click Select Image.
-22.	To change the type of VM to an Always Free Tier VM, click Change Shape.
-23.	In the pop-out window, click Specialty and Legacy. 
-24.	Then, check the VM.Standard.E2.1.Micro shape.
+16.	From the **Get Started** page, click **Create a VM Instance**.
+17.	On the next screen, enter a name for the VM instance. The name `foundry` is used for this guide. 
+18.	Leave the default **Availability Domain**. 
+19.	Click the **Change Image** button to select a new OS image.
+20.	From the pop-out list, choose **Canonical Ubuntu 20.04**.
+21.	Click **Select Image**.
+22.	To change the type of VM to an Always Free Tier VM, click **Change Shape**.
+23.	In the pop-out window, click **Specialty and Legacy**. 
+24.	Then, check the **VM.Standard.E2.1.Micro shape**.
 
 >If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.E2.1.Micro shape, then you will have to contact Oracle Support to resolve the issue. Choosing any other shape will incur charges. {.is-info}
 
-25.	Click Select Shape.
-26.	Scroll down to Configure networking
-27.	Ensure that foundry is selected for Virtual cloud network in `<compartment name>`. This should appear by default.
-28.	Ensure that Public Subnet-foundry (Regional) is selected for Subnet in `<compartment name>`. This should appear by default. 
-29.	Scroll down to Add SSH keys.
-30.	Click on Save Private Key. Save this key file in an easily accessible and memorable folder. Rename this key foundry.key. 
->Due to security restrictions, in Windows it is recommended to save the foundry.key file in the Documents folder or similar. {.is-info}
+25.	Click **Select Shape**.
+26.	Scroll down to **Configure networking**.
+27.	Ensure that **foundry** is selected for Virtual cloud network in `<compartment name>`. This should appear by default.
+28.	Ensure that **Public Subnet-foundry (Regional)** is selected for Subnet in `<compartment name>`. This should appear by default. 
+29.	Scroll down to **Add SSH keys**.
+30.	Click on **Save Private Key**. Save this key file in an easily accessible and memorable folder. Rename this key to `foundry.key`. 
+>Due to security restrictions, in Windows it is recommended to save the foundry.key file in the Documents folder or similar user-specific folder. {.is-info}
 
 > You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
 {.is-danger}
 
-31.	All other options should be left at default. Click Create. 
-32.	Once the large yellow square changes from Provisioning to a green Running, the instance is ready to be used. 
-33.	Copy the Public IP Address and save it somewhere for future reference. This IP address is needed to connect to your VM. 
+31.	All other options should be left at default. Click **Create**. 
+32.	Once the large yellow square changes from yellow **Provisioning** to a green **Running**, the instance is ready to be used. 
+33.	Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
 
@@ -134,7 +124,7 @@ At the end of this section you will have a functional installation of Foundry us
 ### Connect to Compute VM Instance and Update
 >In this section, terminal is used to refer to whichever command line interface you may be using, either Windows Powershell or Linux/MacOS terminal. On Windows cmd will not work, it must be Powershell. {.is-info}
 
-1.	In your terminal, navigate to the folder where you saved foundry.key
+1.	In your terminal, navigate to the folder where you saved `foundry.key`.
 
 > In Windows, you can navigate to the folder in File Explorer. Then, hold the shift key and right click within the folder and choose Open Powershell window here.{.is-info}
 
@@ -144,8 +134,8 @@ At the end of this section you will have a functional installation of Foundry us
 ssh -i foundry.key ubuntu@<public ip address>
 ```
 
-3.	You will likely be prompted to accept the ECDSA key. Type yes and hit enter to accept and continue.
-4.	You should see a prompt showing `ubuntu@foundry:~$`. 
+3.	You will likely be prompted to accept the ECDSA key. Type `yes` and hit <kbd>enter</kbd> to accept and continue.
+4.	You should see a prompt showing **ubuntu@foundry:~$**. 
 5.	First, update the system by running the following commands (this may take a few minutes to complete):
 ```
 sudo apt-get update
@@ -154,6 +144,7 @@ sudo apt-get upgrade -y
 6.	Once complete, the instance is ready to continue. 
 
 > All further commands in this section should continue to be entered into this terminal in the order written. Do not close the terminal until the end of the guide. {.is-info}
+
 &nbsp;
 ### Open Ports in iptables
 
@@ -200,8 +191,8 @@ sudo apt-get install unzip -y
 15.	The software needed to launch and manage Foundry is now successfully installed.
 &nbsp;
 ### Install and launch Foundry
-16.	Login to FoundryVTT and navigate to the Purchased Licenses page. 
-17.	Click on the gear icon (:link:) next to the Node.js latest version to copy a download url. 
+16.	Login to FoundrVTT and navigate to the **Purchased Licenses** page. 
+17.	Click on the gear icon (:link:) next to the **Node.js** latest version to copy a download url. 
 
 > Be sure to click the gear icon (:link:) and not the link itself to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -231,7 +222,7 @@ node /home/ubuntu/foundry/resources/app/main.js
 
 >You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the steps taken in Create a VCN, or Open Ports in iptables were incorrect, or an incorrect IP address was used. Review the steps to ensure that no errors were made and try again. {.is-info}
 
-24.	In the terminal window, press ctrl-c to stop the Foundry test. You should see the last few lines as above, and a blinking cursor at ubuntu@foundry:~/foundry$
+24.	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as above, and a blinking cursor at **ubuntu@foundry:~/foundry$**.
 25.	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
 ```
 pm2 start “node /home/ubuntu/foundry/resources/app/main.js” --name foundry
@@ -269,7 +260,7 @@ sudo apt-get install caddy
 ```
 sudo nano /etc/caddy/Caddyfile
 ```
-32.	Delete all the text, and replace it with (making sure to replace the your.hostname.com portion with your actual domain name):
+32.	Delete all the text, and replace it with (making sure to replace the `your.hostname.com` portion with your actual domain name):
 ```
 # This replaces the existing content in /etc/caddy/Caddyfile
 
@@ -287,7 +278,7 @@ your.hostname.com {
 ```
 sudo service caddy restart
 ```
-35.	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready to go and no further configuration is needed. 
+35.	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
@@ -298,11 +289,11 @@ At the end of this section you will have a policy that automatically retains 5 r
 &nbsp;
 ### Set Backup Policy and Attach to Volume
 
-1.	Sign into your Oracle Cloud account, and from the Get Started page click on the three bars on the top left to open the menu. Click on Block Storage -> Backup Policies.
-2.	Click Create Backup Policy.
-3.	Enter a name such as foundry-backup. Leave all other options default.
-4.	Click Create Backup Policy.
-5.	Click Add Schedule.
+1.	Sign into your Oracle Cloud account, and from the **Get Started** page click on the three bars on the top left to open the menu. Click on **Block Storage** -> **Backup Policies**.
+2.	Click **Create Backup Policy**.
+3.	Enter a name such as `foundry-backup`. Leave all other options default.
+4.	Click **Create Backup Policy**.
+5.	Click **Add Schedule**.
 6.	Enter the following options (or change as you see fit):
 a.	Schedule Type: `Weekly`
 b.	Day of the Week: `Monday`
@@ -313,13 +304,13 @@ f.	Timezone: `Regional Data Center Time`
 
 > This schedule will set a rotating backup of 5 weeks, with the oldest week being deleted as a new one is created after 5 weeks. You are able to set your own schedule as desired, however the Always Free Tier only includes 5 backups. If you exceed 5 backups, the oldest will be deleted regardless of the retention period. {.is-info}
 
-7.	Click Add Schedule.
-8.	Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing Block Storage -> Volume Groups.
-9.	Click Create Volume Group.
-10.	Enter a name for the volume group, such as foundry-volume-group. 
-11.	Select the foundry-backup backup policy.
-12.	Select the foundry (Boot Volume) volume.
-13.	Click Create.
+7.	Click **Add Schedule**.
+8.	Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing **Block Storage** -> **Volume Groups**.
+9.	Click **Create Volume Group**.
+10.	Enter a name for the volume group, such as `foundry-volume-group`. 
+11.	Select the `foundry-backup` backup policy.
+12.	Select the `foundry (Boot Volume)` volume.
+13.	Click **Create**.
 14.	You have now given your instance a backup policy that will run automatically. 
 
 > Restoring from backup is beyond the scope of this guide. More information can be found in the Oracle Docs should you need to restore from backup. {.is-info} 
@@ -331,28 +322,27 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 &nbsp;
 ### Create S3 Storage Bucket and Connect to Foundry
 
-> The Always Free Tier includes 10GiB of Object Storage (S3 Storage). If that limit is exceeded, the data will simply be lost. Keep an eye on the amount of storage used in the bucket created below. {.is-info}
+> The Always Free Tier includes 10GiB of Object Storage (S3 Storage). If that limit is exceeded, the data will simply be lost. Keep an eye on the amount of storage used in the bucket created below. {.is-warning}
 
-1.	Click on the menu button, then Object Storage -> Object Storage. 
-2.	Click Create Bucket.
-3.	Give it a name, such as foundry-bucket. 
-4.	Click Create.
-5.	Click on foundry-bucket.
-6.	Click on Edit Visibility.
-7.	Set the visibility to public. Leave the default of Allow users to list objects from this bucket as checked.
-8.	Copy the Namespace (blanked in this guide for security, will look like a random series of letters) and paste it somewhere to hold on to for now. 
+1.	Click on the menu button, then **Object Storage** -> **Object Storage**. 
+2.	Click **Create Bucket**.
+3.	Give it a name, such as `foundry-bucket`. 
+4.	Click **Create**.
+5.	Click on `foundry-bucket`.
+6.	Click on **Edit Visibility**.
+7.	Set the visibility to `public`. Leave the default of **Allow users to list objects from this bucket** as `checked`.
+8.	Copy the **Namespace** (blanked in this guide for security, will look like a random series of letters) and paste it somewhere to hold on to for now. 
 9.	We now need to generate an accessKeyID and a secretAccessKey. Click on your profile button, then click on your email address.
-10.	Scroll down and click on Customer Secret Keys, then Generate Secret Key.
-11.	Enter a name such as foundry-bucket.
-12.	Click Generate Secret Key.
-13.	In the pop-up window, click Copy to copy the secretAccessKey. Paste it somewhere temporarily to hold on to. 
+10.	Scroll down and click on **Customer Secret Keys**, then **Generate Secret Key**.
+11.	Enter a name such as `foundry-bucket`.
+12.	Click **Generate Secret Key**.
+13.	In the pop-up window, click **Copy** to copy the secretAccessKey. Paste it somewhere temporarily to hold on to. 
 
-> This window only appears once, and when you close it you will not be able to see or copy the generated key again. Ensure that you have safely copied the key before closing the window {.is-info}
-
+> This window only appears once, and when you close it you will not be able to see or copy the generated key again. Ensure that you have safely copied the key before closing the window {.is-warning} 
  
-14.	Beside the foundry-bucket key, hover your mouse over the last few characters under Access Key. Click copy to copy your accessKey. Hold on to this as well.
-15.	Click on your home region button, and then click Manage Regions. (Actual region name will reflect what was chosen when signing up). 
-16.	Copy the Region Identifier of your home region (Actual region name will reflect what was chosen when signing up). Hold on to this value as well. 
+14.	Beside the `foundry-bucket` key, hover your mouse over the last few characters under **Access Key**. Click **copy** to copy your accessKey. Hold on to this as well.
+15.	Click on your home region button, and then click **Manage Regions**. (Actual region name will reflect what was chosen when signing up). 
+16.	Copy the **Region Identifier** of your home region (Actual region name will reflect what was chosen when signing up). Hold on to this value as well. 
 17.	Connect to your instance using your terminal and ssh as instructed in steps D.1-4.
 18.	Run the following command to create an s3.json file that will contain the relevant information needed for Foundry to connect to the S3 storage bucket that was just created:
 ```
@@ -373,8 +363,8 @@ nano /home/ubuntu/.local/share/FoundryVTT/Config/s3.json
 > Be extra careful to fully replace all the placeholders marked with <> tags, including those in the endpoint url. The url should have both the namespace and the region identifier in it. Pay special attention to the format of the json file and avoid removing any quotation marks, brackets, or commas. Do not introduce any extra spaces into the values. {.is-warning}
 
 20.	Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd>, and <kbd>enter</kbd> to save the file. 
-21.	Open Foundry in your browser, then navigate to the Configuration page.
-22.	Enter `/home/ubuntu/.local/share/FoundryVTT/Config/s3.json` into the AWS Configuration Path. 
+21.	Open Foundry in your browser, then navigate to the **Configuration** page.
+22.	Enter `/home/ubuntu/.local/share/FoundryVTT/Config/s3.json` into the **AWS Configuration Path**. 
 23.	Click Save Changes to commit the changes and allow Foundry to restart. Press <kbd>F5</kbd> if the screen does not reappear after a few seconds. 
 24.	You now have an additional tab in the File Picker within Foundry to access “Amazon S3.” Files can be uploaded and used there. 
 
