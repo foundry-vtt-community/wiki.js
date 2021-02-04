@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T18:54:33.754Z
+date: 2021-02-04T18:56:09.182Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -338,7 +338,7 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 12.	Click **Generate Secret Key**.
 13.	In the pop-up window, click **Copy** to copy the secretAccessKey. Paste it somewhere temporarily to hold on to. 
 
-> This window only appears once, and when you close it you will not be able to see or copy the generated key again. Ensure that you have safely copied the key before closing the window {.is-warning} 
+> This window only appears once, and when you close it you will not be able to see or copy the generated key again. Ensure that you have safely copied the key before closing the window {.is-danger} 
  
 14.	Beside the `foundry-bucket` key, hover your mouse over the last few characters under **Access Key**. Click **copy** to copy your accessKey. Hold on to this as well.
 15.	Click on your home region button, and then click **Manage Regions**. (Actual region name will reflect what was chosen when signing up). 
