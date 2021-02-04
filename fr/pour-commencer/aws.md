@@ -2,7 +2,7 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2021-02-04T08:20:36.191Z
+date: 2021-02-04T12:04:52.700Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -13,12 +13,26 @@ dateCreated: 2020-12-05T13:54:41.441Z
 > Ce guide est dédié aux utilisateurs novices qui veulent déployer un serveur de Foundry VTT sur AWS en utilisant “CloudFormation”. Le processus prend moins de 30 minutes après lesquelles vous aurez un serveur Foundry VTT complétement fonctionnel. 
 {.is-info}
 
+## Simulation (sur 1 mois)
 
 En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelques options supplémentaires pour rendre les choses plus faciles sont incluses pour un coût minimal. 
 
 > *Petit retour de facture sur le mois de janvier 2021 avec les options par défaut:*
-![prolice-screen-aws-deploy-016.png](/images/prolice-screen-aws-deploy-016.png)
 {.is-info}
+
+![prolice-screen-aws-deploy-016.png](/images/prolice-screen-aws-deploy-016.png)
+
+> *La simultion du coût pour une configuration identique sur le mois de février (hors période de gratuité):*
+{.is-warning}
+
+*La simulation ci-dessous tient compte d'une mise sous tension de votre serveur 7/24:*
+![prolice-screen-aws-deploy-021.png](/images/prolice-screen-aws-deploy-021.png)
+
+> *Et enfin une simulation en mettant sous tension le EC2 qu'au moment des parties (hors période de gratuité):*
+{.is-success}
+
+La simulation ci-dessous prends en compte la mise sous tension du serveur 1 fois par semaine pour une session allant de 4 à 8 heures (+ préparation MJ)
+![prolice-screen-aws-deploy-021.png](/images/prolice-screen-aws-deploy-021.png)
 
 Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
 
