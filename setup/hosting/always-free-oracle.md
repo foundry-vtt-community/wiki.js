@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T20:19:02.433Z
+date: 2021-02-04T20:24:05.998Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -30,7 +30,7 @@ A valid credit card is required to sign up for the Always Free Tier services on 
 
 &nbsp;
 ### Disclaimer
-While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, the responsibility to confirm that no charges will be incurred is on you. It is recommended to conduct a Cost Analysis and/or set a budget after this guide is complete to ensure that all services are Always Free. 
+While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, the responsibility to confirm that no charges will be incurred is on you. It is recommended to conduct a [Cost Analysis](https://cloud.oracle.com/account-management/cost-analysis) and/or set a budget after this guide is complete to ensure that all services are Always Free. 
 
 All information in this guide is accurate as of the date it was written. 
 &nbsp;
@@ -61,7 +61,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ### Create a VCN (Virtual Cloud Network) and Security Policy
  
 
-1.	From the **Get Started** page, click on **Set up a network with a wizard**. 
+1.	From the [**Get Started**](https://cloud.oracle.com/) page, click on **Set up a network with a wizard**. 
 &nbsp;
 ![Get Start Page](/images/oracle/image12.webp)
 &nbsp;
