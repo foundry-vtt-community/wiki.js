@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T20:08:50.375Z
+date: 2021-02-04T20:13:50.901Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -338,7 +338,7 @@ nano /home/ubuntu/.local/share/Foundry-VTT/Config/options.json
 "proxySSL": true,
 ...
 ```
->Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:`. {.is-warning}
+>Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
 37. Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 38.	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
@@ -389,7 +389,7 @@ f.	Timezone: `Regional Data Center Time`
 &nbsp;
 14.	You have now given your instance a backup policy that will run automatically. 
 
-> Restoring from backup is beyond the scope of this guide. More information can be found in the Oracle Docs should you need to restore from backup. {.is-info} 
+> Restoring from backup is beyond the scope of this guide. More information can be found in the [Oracle Docs](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm) should you need to restore from backup. {.is-info} 
 
 &nbsp;
 ## F. Optional: S3 Storage Setup
@@ -448,7 +448,7 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 &nbsp;
 ![Copy Region Identifier](/images/oracle/image30.webp)
 &nbsp;
-17.	Connect to your instance using your terminal and ssh as instructed in steps D.1-4.
+17.	Connect to your instance using your terminal and ssh as instructed in steps [D.1-4](#connect-to-compute-vm-instance-and-update).
 18.	Run the following command to create an s3.json file that will contain the relevant information needed for Foundry to connect to the S3 storage bucket that was just created:
 ```
 nano /home/ubuntu/.local/share/FoundryVTT/Config/s3.json
