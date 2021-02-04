@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T22:30:10.306Z
+date: 2021-02-04T22:35:39.663Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -256,7 +256,7 @@ mkdir -p ~/.local/share/FoundryVTT
 ```
 node /home/ubuntu/foundry/resources/app/main.js
 ```
-22.	You should see the above lines at the end of the output, indicating that Foundry is successfully running. 
+22.	You should see these success lines at the end of the output, indicating that Foundry is successfully running. 
 &nbsp;
 ![Foundry Launched](/images/oracle/image29.webp)
 &nbsp;
