@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T19:51:35.631Z
+date: 2021-02-04T19:57:37.090Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -326,7 +326,21 @@ sudo service caddy restart
 ```
 >Caddy handles all forwarding to HTTPS as well as the encryption certificates. No further configuration is needed to get those working. {.is-info}
 
-35.	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+35. Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
+```
+nano /home/ubuntu/.local/share/Foundry-VTT/Config/options.json
+```
+36. Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are.
+```
+...
+"proxyPort": 443,
+...
+"proxySSL": true,
+...
+```
+>Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:`. {.is-warning}
+37. Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
+38.	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
