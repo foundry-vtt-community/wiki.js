@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T18:56:09.182Z
+date: 2021-02-04T19:14:49.948Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -12,10 +12,10 @@ dateCreated: 2021-02-04T18:31:17.191Z
 
 ## A.	 Overview
 ### Objective
-At the end of this guide, you will have a functional cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit. This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy. 
+At the end of this guide, you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy. 
 &nbsp;
 ### Important Information and Requirements
-This guide assumes that you are not an existing customer with Oracle Cloud and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
+This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
 
 The following is required to complete this guide:
 1.	Basic understanding of using a terminal that includes the ssh utility, such as:
@@ -24,7 +24,7 @@ b.	Terminal in Linux and MacOS.
 2.	Notepad or other text editor.
 3.	Valid domain name (for secure connection with HTTPS only), such as:
 a.	A purchased domain name.
-b.	A free subdomain from a service like Duck DNS. 
+b.	A free subdomain from a service like [Duck DNS](http://duckdns.org). 
 
 A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. 
 
@@ -43,8 +43,8 @@ At the end of this section, you will have a registered account with Oracle Cloud
 {.is-warning}
 
 
-1.	Review the availability of Always Free services in your preferred region. At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
-2.	Sign up for an account at Oracle Cloud, entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
+1.	Review the availability of [Always Free services in your preferred region](https://www.oracle.com/cloud/data-regions.html). At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
+2.	Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
 3.	Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
 
 >  Some users in certain regions may require manual account verification which could take a few days of extra time.{.is-info}
@@ -64,14 +64,14 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 1.	From the **Get Started** page, click on **Set up a network with a wizard**. 
 2.	Choose **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
 3.	Enter a **VCN Name**, such as `foundry`. 
-4.	Ensure that **USE DNS HOSTNAMES IN THIS VCN** is `unchecked`.
+4.	Ensure that **USE DNS HOSTNAMES IN THIS VCN** is :white_medium_square:`unchecked`.
 5.	Click **Next** to proceed to the Review page.
 6.	Click **Create** to create the VCN. 
-7.	Once all steps here are marked "done" with a green checkmark, click **View Virtual Cloud Network**.
+7.	Once all steps here are marked "done" with a green checkmark :white_check_mark:, click **View Virtual Cloud Network**.
 8.	 In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the **Public Subnet-foundry** link. 
 9.	Click **Default Security List** for foundry.
 10.	Click **Add Ingress Rules**.
-11.	Ensure that **Stateless** is `checked`.
+11.	Ensure that **Stateless** is :ballot_box_with_check:`checked`.
 12.	Enter `0.0.0.0/0` into the **SOURCE CIDR** field.
 13.	Enter `80,443,30000` into the **DESTINATION PORT RANGE** field. 
 
@@ -95,7 +95,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 21.	Click **Select Image**.
 22.	To change the type of VM to an Always Free Tier VM, click **Change Shape**.
 23.	In the pop-out window, click **Specialty and Legacy**. 
-24.	Then, check the **VM.Standard.E2.1.Micro shape**.
+24.	Then, :ballot_box_with_check:`check` the **VM.Standard.E2.1.Micro shape**.
 
 >If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.E2.1.Micro shape, then you will have to contact Oracle Support to resolve the issue. Choosing any other shape will incur charges. {.is-info}
 
@@ -191,7 +191,7 @@ sudo apt-get install unzip -y
 15.	The software needed to launch and manage Foundry is now successfully installed.
 &nbsp;
 ### Install and launch Foundry
-16.	Login to FoundrVTT and navigate to the **Purchased Licenses** page. 
+16.	Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 17.	Click on the gear icon (:link:) next to the **Node.js** latest version to copy a download url. 
 
 > Be sure to click the gear icon (:link:) and not the link itself to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
@@ -246,9 +246,8 @@ pm2 save
 &nbsp;
 ### Reverse Proxy and HTTPS Configuration with Caddy
 
-> This section assumes that you have a valid domain name with an A record pointing to `<public IP address>`. If you do not have a domain name. you can use a service like Duck DNS to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
+> This section assumes that you have a valid domain name with an A record pointing to `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
 
-> Caddy is chosen because it handles all encryption certificates in the background automatically, making the encrypted setup very simple.{.is-info}
 
 30.	Install Caddy to use as a reverse proxy by running the following commands:
 ```
@@ -278,6 +277,8 @@ your.hostname.com {
 ```
 sudo service caddy restart
 ```
+>Caddy handles all forwarding to HTTPS as well as the encryption certificates. No further configuration is needed to get those working. {.is-info}
+
 35.	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
@@ -330,7 +331,7 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 4.	Click **Create**.
 5.	Click on `foundry-bucket`.
 6.	Click on **Edit Visibility**.
-7.	Set the visibility to `public`. Leave the default of **Allow users to list objects from this bucket** as `checked`.
+7.	Set the visibility to `public`. Leave the default of **Allow users to list objects from this bucket** as :ballot_box_with_check:`checked`.
 8.	Copy the **Namespace** (blanked in this guide for security, will look like a random series of letters) and paste it somewhere to hold on to for now. 
 9.	We now need to generate an accessKeyID and a secretAccessKey. Click on your profile button, then click on your email address.
 10.	Scroll down and click on **Customer Secret Keys**, then **Generate Secret Key**.
