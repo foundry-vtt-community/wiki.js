@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T20:37:54.950Z
+date: 2021-02-04T21:10:04.992Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -29,7 +29,7 @@ b.	A free subdomain from a service like [Duck DNS](http://duckdns.org).
 A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. 
 
 &nbsp;
-### Disclaimer
+### Disclaimer 
 While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, the responsibility to confirm that no charges will be incurred is on you. It is recommended to conduct a [Cost Analysis](https://cloud.oracle.com/account-management/cost-analysis) and/or set a budget after this guide is complete to ensure that all services are Always Free. 
 
 All information in this guide is accurate as of the date it was written. 
