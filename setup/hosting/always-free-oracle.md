@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T20:34:53.455Z
+date: 2021-02-04T20:35:59.453Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -164,7 +164,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 > In Windows, you can navigate to the folder in File Explorer. Then, hold the shift key and right click within the folder and choose Open Powershell window here.{.is-info}
 
-2.	Run the ssh command where `<public ip address>` is the Public IP Address of your Compute VM as noted in step [C.33](#Create-a-Compute-VM-Virtual-Machine) above. 
+2.	Run the ssh command where `<public ip address>` is the Public IP Address of your Compute VM as noted in step [C.33](#create-a-compute-vm-virtual-machine) above. 
 
 ```
 ssh -i foundry.key ubuntu@<public ip address>
