@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T19:18:32.930Z
+date: 2021-02-04T19:26:45.311Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -60,8 +60,10 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 &nbsp;
 ### Create a VCN (Virtual Cloud Network) and Security Policy
  
-
+![Get Start Page](/images/oracle/image12.webp)
 1.	From the **Get Started** page, click on **Set up a network with a wizard**. 
+&nbsp;
+![Start VCN Wizard](/images/oracle/image5.webp)
 2.	Choose **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
 3.	Enter a **VCN Name**, such as `foundry`. 
 4.	Ensure that **USE DNS HOSTNAMES IN THIS VCN** is :white_medium_square:`unchecked`.
