@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T22:35:39.663Z
+date: 2021-02-04T22:36:20.402Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -264,7 +264,7 @@ node /home/ubuntu/foundry/resources/app/main.js
 
 >You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the steps taken in [Create a VCN and Security Policy](#create-a-vcn-virtual-cloud-network-and-security-policy), or [Open Ports in iptables](#open-ports-in-iptables) were incorrect, or an incorrect IP address was used. Review the steps to ensure that no errors were made and try again. {.is-info}
 
-24.	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as above, and a blinking cursor at **ubuntu@foundry:~/foundry$**.
+24.	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as below, and a blinking cursor at **ubuntu@foundry:~/foundry$**.
 &nbsp;
 ![Stop Foundry](/images/oracle/image24.webp)
 &nbsp;
