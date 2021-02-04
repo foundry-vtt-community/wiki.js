@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T20:03:58.053Z
+date: 2021-02-04T20:08:50.375Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -90,7 +90,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ![Ingress Rules](/images/oracle/image25.webp)
 &nbsp;
 
->Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D.38](#D.-Server-Setup-and-Installation) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
+>Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D.38](#Reverse-Proxy-and-HTTPS-Configuration-with-Caddy) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
 14.	Click **Add Ingress Rules**.
 
@@ -262,7 +262,7 @@ node /home/ubuntu/foundry/resources/app/main.js
 &nbsp;
 23.	Test the connection to Foundry by opening `http://<public IP address>:30000` in a new browser tab, where `<public IP address>` is the Public IP Address noted earlier in the guide.
 
->You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the steps taken in Create a VCN, or Open Ports in iptables were incorrect, or an incorrect IP address was used. Review the steps to ensure that no errors were made and try again. {.is-info}
+>You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the steps taken in [Create a VCN and Security Policy](#create-a-vcn-virtual-cloud-network-and-security-policy), or [Open Ports in iptables](#open-ports-in-iptables) were incorrect, or an incorrect IP address was used. Review the steps to ensure that no errors were made and try again. {.is-info}
 
 24.	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as above, and a blinking cursor at **ubuntu@foundry:~/foundry$**.
 &nbsp;
