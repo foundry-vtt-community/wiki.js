@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T22:44:38.796Z
+date: 2021-02-04T22:46:17.175Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -286,7 +286,7 @@ pm2 list
 ```
 pm2 save
 ```
-29.	Foundry is now launched and is fully Functional. You can test the interface and functions within Foundry at the `http://<public IP address>:30000` link as you like.
+29.	Foundry is now launched and is fully Functional. You can test the interface and functions within Foundry at the `http://<public IP address>:30000` address as you like.
 
 > If you do not wish to set up a domain or reverse proxy, you can stop here and continue to use Foundry in this way. {.is-info}
 
