@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T22:26:21.955Z
+date: 2021-02-04T22:30:10.306Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -235,7 +235,7 @@ sudo apt-get install unzip -y
 
 > Be sure to click the gear icon (:link:) and not the link itself to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
-18.	Run the following commands, pasting the download url where you see `<download url>`
+18.	Run the following commands, pasting the download url where you see `<download url>`. In most terminals, you can right click to paste the copied url.
 ```
 mkdir ~/foundry
 cd ~/foundry
