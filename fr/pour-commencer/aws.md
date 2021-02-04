@@ -2,7 +2,7 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2021-02-04T12:04:52.700Z
+date: 2021-02-04T12:12:02.235Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -25,13 +25,20 @@ En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelq
 > *La simultion du coût pour une configuration identique sur le mois de février (hors période de gratuité):*
 {.is-warning}
 
-*La simulation ci-dessous tient compte d'une mise sous tension de votre serveur 7/24:*
+*La simulation ci-dessous prend en compte:*
+* Une mise sous tension de votre serveur 7/24.
+* Pas d'option supplémentaire (pas de S3, pas de snapshot, etc...).
+* Un trafic de 20Go sur le mois.
 ![prolice-screen-aws-deploy-021.png](/images/prolice-screen-aws-deploy-021.png)
 
 > *Et enfin une simulation en mettant sous tension le EC2 qu'au moment des parties (hors période de gratuité):*
 {.is-success}
 
-La simulation ci-dessous prends en compte la mise sous tension du serveur 1 fois par semaine pour une session allant de 4 à 8 heures (+ préparation MJ)
+La simulation ci-dessous prends en compte: 
+* la mise sous tension du serveur 1 fois par semaine.
+* Une session allant de 4 à 8 heures (+ préparation MJ).
+* Pas d'option supplémentaire (pas de S3, pas de snapshot, etc...).
+* Un trafic de 20Go.
 ![prolice-screen-aws-deploy-021.png](/images/prolice-screen-aws-deploy-021.png)
 
 Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
