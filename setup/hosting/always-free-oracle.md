@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T20:24:05.998Z
+date: 2021-02-04T20:28:21.567Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -11,7 +11,7 @@ dateCreated: 2021-02-04T18:31:17.191Z
 # Always Free Oracle Cloud Hosting Guide for Foundry
 
 ## A. Overview
-### Objective
+### Objective 
 At the end of this guide, you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy. 
 &nbsp;
 ### Important Information and Requirements
