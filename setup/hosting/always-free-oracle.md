@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: false
-date: 2021-02-04T19:26:45.311Z
+date: 2021-02-04T19:51:35.631Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -60,22 +60,35 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 &nbsp;
 ### Create a VCN (Virtual Cloud Network) and Security Policy
  
-![Get Start Page](/images/oracle/image12.webp)
+
 1.	From the **Get Started** page, click on **Set up a network with a wizard**. 
 &nbsp;
-![Start VCN Wizard](/images/oracle/image5.webp)
+![Get Start Page](/images/oracle/image12.webp)
+&nbsp;
 2.	Choose **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
+&nbsp;
+![Start VCN Wizard](/images/oracle/image5.webp)
+&nbsp;
 3.	Enter a **VCN Name**, such as `foundry`. 
 4.	Ensure that **USE DNS HOSTNAMES IN THIS VCN** is :white_medium_square:`unchecked`.
+&nbsp;
+![Create VCN](/images/oracle/image19.webp)
+&nbsp;
 5.	Click **Next** to proceed to the Review page.
 6.	Click **Create** to create the VCN. 
 7.	Once all steps here are marked "done" with a green checkmark :white_check_mark:, click **View Virtual Cloud Network**.
 8.	 In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the **Public Subnet-foundry** link. 
+&nbsp;
+![VCN Created](/images/oracle/image20.webp)
+&nbsp;
 9.	Click **Default Security List** for foundry.
 10.	Click **Add Ingress Rules**.
 11.	Ensure that **Stateless** is :ballot_box_with_check:`checked`.
 12.	Enter `0.0.0.0/0` into the **SOURCE CIDR** field.
 13.	Enter `80,443,30000` into the **DESTINATION PORT RANGE** field. 
+&nbsp;
+![Ingress Rules](/images/oracle/image25.webp)
+&nbsp;
 
 >Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step D.35 in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
@@ -90,14 +103,29 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ### Create a Compute VM (Virtual Machine) 
 
 16.	From the **Get Started** page, click **Create a VM Instance**.
+&nbsp;
+![Create a VM Instance](/images/oracle/image23.webp)
+&nbsp;
 17.	On the next screen, enter a name for the VM instance. The name `foundry` is used for this guide. 
+&nbsp;
+![Compute Instance Name](/images/oracle/image14.webp)
+&nbsp;
 18.	Leave the default **Availability Domain**. 
+&nbsp;
+![Change Image](/images/oracle/image4.webp)
+&nbsp;
 19.	Click the **Change Image** button to select a new OS image.
 20.	From the pop-out list, choose **Canonical Ubuntu 20.04**.
 21.	Click **Select Image**.
 22.	To change the type of VM to an Always Free Tier VM, click **Change Shape**.
+&nbsp;
+![Change Shape](/images/oracle/image15.webp)
+&nbsp;
 23.	In the pop-out window, click **Specialty and Legacy**. 
 24.	Then, :ballot_box_with_check:`check` the **VM.Standard.E2.1.Micro shape**.
+&nbsp;
+![Select Shape](/images/oracle/image11.webp)
+&nbsp;
 
 >If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.E2.1.Micro shape, then you will have to contact Oracle Support to resolve the issue. Choosing any other shape will incur charges. {.is-info}
 
@@ -105,8 +133,14 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 26.	Scroll down to **Configure networking**.
 27.	Ensure that **foundry** is selected for Virtual cloud network in `<compartment name>`. This should appear by default.
 28.	Ensure that **Public Subnet-foundry (Regional)** is selected for Subnet in `<compartment name>`. This should appear by default. 
+&nbsp;
+![Configure Networking](/images/oracle/image28.webp)
+&nbsp;
 29.	Scroll down to **Add SSH keys**.
 30.	Click on **Save Private Key**. Save this key file in an easily accessible and memorable folder. Rename this key to `foundry.key`. 
+&nbsp;
+![Save Private Key](/images/oracle/image17.webp)
+
 >Due to security restrictions, in Windows it is recommended to save the foundry.key file in the Documents folder or similar user-specific folder. {.is-info}
 
 > You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
@@ -138,6 +172,9 @@ ssh -i foundry.key ubuntu@<public ip address>
 
 3.	You will likely be prompted to accept the ECDSA key. Type `yes` and hit <kbd>enter</kbd> to accept and continue.
 4.	You should see a prompt showing **ubuntu@foundry:~$**. 
+&nbsp;
+![Ubuntu Prompt](/images/oracle/image9.webp)
+&nbsp;
 5.	First, update the system by running the following commands (this may take a few minutes to complete):
 ```
 sudo apt-get update
@@ -220,11 +257,17 @@ mkdir -p ~/.local/share/FoundryVTT
 node /home/ubuntu/foundry/resources/app/main.js
 ```
 22.	You should see the above lines at the end of the output, indicating that Foundry is successfully running. 
+&nbsp;
+![Foundry Launched](/images/oracle/image29.webp)
+&nbsp;
 23.	Test the connection to Foundry by opening `http://<public IP address>:30000` in a new browser tab, where `<public IP address>` is the Public IP Address noted earlier in the guide.
 
 >You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the steps taken in Create a VCN, or Open Ports in iptables were incorrect, or an incorrect IP address was used. Review the steps to ensure that no errors were made and try again. {.is-info}
 
 24.	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as above, and a blinking cursor at **ubuntu@foundry:~/foundry$**.
+&nbsp;
+![Stop Foundry](/images/oracle/image24.webp)
+&nbsp;
 25.	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
 ```
 pm2 start “node /home/ubuntu/foundry/resources/app/main.js” --name foundry
@@ -233,6 +276,8 @@ pm2 start “node /home/ubuntu/foundry/resources/app/main.js” --name foundry
 ```
 pm2 list
 ```
+![pm2 List](/images/oracle/image1.webp)
+&nbsp;
 27.	Check to see if Foundry is running correctly by again connecting a browser tab to `http://<public IP address>:30000`. 
 
 > If you don’t see a Foundry screen in the browser at this point, carefully check the pm2 command in step 25. You can use commands like pm2 stop, pm2 list, and pm2 delete to remove any extra entries in the list. {.is-info}
@@ -293,9 +338,15 @@ At the end of this section you will have a policy that automatically retains 5 r
 ### Set Backup Policy and Attach to Volume
 
 1.	Sign into your Oracle Cloud account, and from the **Get Started** page click on the three bars on the top left to open the menu. Click on **Block Storage** -> **Backup Policies**.
+&nbsp;
+![Backup Policies Menu](/images/oracle/image18.webp)
+&nbsp;
 2.	Click **Create Backup Policy**.
 3.	Enter a name such as `foundry-backup`. Leave all other options default.
 4.	Click **Create Backup Policy**.
+&nbsp;
+![Create Backup Policy](/images/oracle/image13.webp)
+&nbsp;
 5.	Click **Add Schedule**.
 6.	Enter the following options (or change as you see fit):
 a.	Schedule Type: `Weekly`
@@ -304,16 +355,24 @@ c.	Hour of the day: `03:00`
 d.	Retention Time in Weeks: `5`
 e.	Backup Type: `Incremental`
 f.	Timezone: `Regional Data Center Time`
+&nbsp;
+![Add Schedule](/images/oracle/image27.webp)
 
 > This schedule will set a rotating backup of 5 weeks, with the oldest week being deleted as a new one is created after 5 weeks. You are able to set your own schedule as desired, however the Always Free Tier only includes 5 backups. If you exceed 5 backups, the oldest will be deleted regardless of the retention period. {.is-info}
 
 7.	Click **Add Schedule**.
 8.	Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing **Block Storage** -> **Volume Groups**.
+&nbsp;
+![Volume Groups Menu](/images/oracle/image21.webp)
+&nbsp;
 9.	Click **Create Volume Group**.
 10.	Enter a name for the volume group, such as `foundry-volume-group`. 
 11.	Select the `foundry-backup` backup policy.
 12.	Select the `foundry (Boot Volume)` volume.
 13.	Click **Create**.
+&nbsp;
+![Create Volume Group](/images/oracle/image26.webp)
+&nbsp;
 14.	You have now given your instance a backup policy that will run automatically. 
 
 > Restoring from backup is beyond the scope of this guide. More information can be found in the Oracle Docs should you need to restore from backup. {.is-info} 
@@ -328,24 +387,53 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 > The Always Free Tier includes 10GiB of Object Storage (S3 Storage). If that limit is exceeded, the data will simply be lost. Keep an eye on the amount of storage used in the bucket created below. {.is-warning}
 
 1.	Click on the menu button, then **Object Storage** -> **Object Storage**. 
+&nbsp;
+![Object Storage Menu](/images/oracle/image10.webp)
+&nbsp;
 2.	Click **Create Bucket**.
 3.	Give it a name, such as `foundry-bucket`. 
 4.	Click **Create**.
+&nbsp;
+![Create Bucket](/images/oracle/image16.webp)
+&nbsp;
 5.	Click on `foundry-bucket`.
 6.	Click on **Edit Visibility**.
+&nbsp;
+![Edit Visibility](/images/oracle/image7.webp)
+&nbsp;
 7.	Set the visibility to `public`. Leave the default of **Allow users to list objects from this bucket** as :ballot_box_with_check:`checked`.
 8.	Copy the **Namespace** (blanked in this guide for security, will look like a random series of letters) and paste it somewhere to hold on to for now. 
+&nbsp;
+![Bucket Information](/images/oracle/image31.webp)
+&nbsp;
 9.	We now need to generate an accessKeyID and a secretAccessKey. Click on your profile button, then click on your email address.
+&nbsp;
+![Profile](/images/oracle/image3.webp)
+&nbsp;
 10.	Scroll down and click on **Customer Secret Keys**, then **Generate Secret Key**.
+&nbsp;
+![Customer Secret Keys](/images/oracle/image32.webp)
+&nbsp;
 11.	Enter a name such as `foundry-bucket`.
 12.	Click **Generate Secret Key**.
 13.	In the pop-up window, click **Copy** to copy the secretAccessKey. Paste it somewhere temporarily to hold on to. 
+&nbsp;
+![Copy Generated Key](/images/oracle/image22.webp)
 
 > This window only appears once, and when you close it you will not be able to see or copy the generated key again. Ensure that you have safely copied the key before closing the window {.is-danger} 
  
 14.	Beside the `foundry-bucket` key, hover your mouse over the last few characters under **Access Key**. Click **copy** to copy your accessKey. Hold on to this as well.
+&nbsp;
+![Copy Access Key](/images/oracle/image33.webp)
+&nbsp;
 15.	Click on your home region button, and then click **Manage Regions**. (Actual region name will reflect what was chosen when signing up). 
+&nbsp;
+![Manage Regions](/images/oracle/image8.webp)
+&nbsp;
 16.	Copy the **Region Identifier** of your home region (Actual region name will reflect what was chosen when signing up). Hold on to this value as well. 
+&nbsp;
+![Copy Region Identifier](/images/oracle/image30.webp)
+&nbsp;
 17.	Connect to your instance using your terminal and ssh as instructed in steps D.1-4.
 18.	Run the following command to create an s3.json file that will contain the relevant information needed for Foundry to connect to the S3 storage bucket that was just created:
 ```
