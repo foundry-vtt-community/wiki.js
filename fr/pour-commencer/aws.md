@@ -2,7 +2,7 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2021-01-20T20:59:28.381Z
+date: 2021-02-04T08:17:57.791Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -15,7 +15,11 @@ dateCreated: 2020-12-05T13:54:41.441Z
 
 
 En laissant toutes les options par défaut cela ne vous coûtera pas 1€. Quelques options supplémentaires pour rendre les choses plus faciles sont incluses pour un coût minimal. 
-Au moment d’écrire ces lignes, je n’ai aucun retour du prix de ces options supplémentaires mais ce sera de l’ordre de quelques cents à 1€ par mois. Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
+Le retour de facture sur le mois de janvier 2021 avec les options par défaut:
+
+![prolice-screen-aws-deploy-016.png](/images/prolice-screen-aws-deploy-016.png)
+
+Le coût sera impacté par ce que vous allez stocker sur le S3. Je vous conseille de bien lire comment le stockage S3 est calculé en termes de charge financière => https://aws.amazon.com/fr/s3/pricing/. 
 
 > Note: Utilisez cette option (S3) en connaissance de cause en ayant bien lu les tarifs AWS.
 > Une fois la période gratuite expirée le **Coût peut vraiment monter**. 
