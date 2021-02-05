@@ -2,7 +2,7 @@
 title: FVTTでD＆D第5版を遊ぶ方法
 description: FVTTでD＆D第5版を遊ぶ方法
 published: true
-date: 2021-02-05T14:45:58.146Z
+date: 2021-02-05T14:54:28.143Z
 tags: 5版
 editor: markdown
 dateCreated: 2021-02-05T14:43:42.640Z
@@ -13,6 +13,7 @@ dateCreated: 2021-02-05T14:43:42.640Z
 1. **FVTTを起動する**
 　まずはFVTTを起動してください。
 2. **”Game Systems”からDnD5eをダウンロード**
+![dnd5eをダウンロード.jpg](/images/japanese-community/dnd5eをダウンロード.jpg)
 　FVTTを起動したら”Game Systems”のページに移動してください。次に”Install System”をクリックし、システム検索ウインドウが出てきたら”DnD5e”を検索し、Installをクリックしてください（下記画像のように）
  
 3. **日本語化MOD＆”Tidy5e Sheet”を入れる**
@@ -28,7 +29,7 @@ dateCreated: 2021-02-05T14:43:42.640Z
 　前項の通りにゲームシステム（DnD5e）と必要MOD（日本語化（オンセ工房本体）と日本語化（D＆D5版）とTidy5e Sheetの３種）をダウンロードしてください。
 2. **”Game Worlds”で部屋（ワールド）を作成する**
 　”Game Worlds”に移動し、画面下部の”Create World”を押し、ワールド作成ウインドウを表示してください。
-
+![ワールドを作成.jpg](/images/japanese-community/ワールドを作成.jpg)
 3. **”World Title”入力**
 　表示されたウインドウの”World Title”に自由にワールド名を入力してください。
 4. **”Data Path”の”world-name”を入力**
@@ -47,13 +48,17 @@ dateCreated: 2021-02-05T14:43:42.640Z
 　そこの”Select Player”で”Gamemaster”を選択し、”Join Game Session”を押してください（Access Keyは設定しない限り、未入力で問題ありません）
 9. **各種MODを有効化する**
 　作成したワールドに入ったら画面右上の歯車のマーク（Game Settings）をクリックし、”Manage Modules”をクリックし、MOD設定画面を開いてください。
+ ![modを有効化.jpg](/images/japanese-community/modを有効化.jpg)
 　今回は”Tidy5e Sheet”と”日本語化（オンセ工房本体）”と”日本語化（D＆D5版）”の3つにチェックし、ウインドウ下部にある”Save Module Settings”を押してください。
 　これでMODが有効化されます。
 10. **設定変更**
 　最後に歯車のマーク（Game Settings）の”Configure Settings”で”Language Preference”を”日本語”に変更し、設定ウインドウ下部の”Save Changes”を押してください。
+ ![設定変更.jpg](/images/japanese-community/設定変更.jpg)
 　これで日本語化は終了です。
 　最後の”Language Preference”で”日本語”を選択する設定変更に関しては、GMだけではなく参加プレイヤーにもしてもらう必要があります。
-　部屋に入ったら、プレイヤーにもまず最初に言語選択をしてもらってください。
+> 　部屋に入ったら、プレイヤーにもまず最初に言語選択をしてもらってください。
+{.is-info}
+
 
 
 
