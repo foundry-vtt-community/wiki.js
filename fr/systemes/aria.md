@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T16:25:23.060Z
+date: 2021-02-05T16:27:00.359Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -187,7 +187,7 @@ Les armes apparaissent sur l'onglet Caractéristiques lorsqu'elles sont équipé
 <br/>
 Une fois équipées, le jet de dé peut s'effectuer directement depuis l'onglet Caractèristiques.
 ![attack.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/attack.gif)
-<br/><br/><br/>
+<br/><br/><br/><br/>
 
 
 ### Onglet Compétences
