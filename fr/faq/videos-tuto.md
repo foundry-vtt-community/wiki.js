@@ -2,9 +2,9 @@
 title: Tutoriels vidéos Foundry en Français
 description: 
 published: true
-date: 2021-01-24T10:17:13.320Z
+date: 2021-01-24T10:17:16.306Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-12-05T09:17:05.009Z
 ---
 

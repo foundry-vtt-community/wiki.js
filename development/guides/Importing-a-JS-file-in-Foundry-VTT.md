@@ -2,9 +2,9 @@
 title: Importing a .JS File in Foundry VTT
 description: 
 published: true
-date: 2021-01-15T19:32:42.383Z
-tags: guide, javascript, es6, module
-editor: markdown
+date: 2021-01-15T19:32:45.424Z
+tags: 
+editor: undefined
 dateCreated: 2020-09-23T00:34:13.915Z
 ---
 

@@ -2,9 +2,9 @@
 title: Introduction to PIXI in Foundry VTT
 description: 
 published: true
-date: 2021-01-15T19:35:47.213Z
-tags: guide, pixi, layer, canvas, filter
-editor: markdown
+date: 2021-01-15T19:35:50.561Z
+tags: 
+editor: undefined
 dateCreated: 2020-09-23T07:01:33.581Z
 ---
 

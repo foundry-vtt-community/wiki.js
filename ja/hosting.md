@@ -2,9 +2,9 @@
 title: サーバの立て方（サーバー・セルフホスト）
 description: サーバの立て方（サーバー・セルフホスト）
 published: true
-date: 2021-02-05T15:52:48.023Z
-tags: ポート開放
-editor: markdown
+date: 2021-02-05T15:52:51.942Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-05T15:52:48.023Z
 ---
 

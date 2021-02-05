@@ -2,9 +2,9 @@
 title: 資料機能
 description: 資料機能
 published: true
-date: 2021-02-05T15:33:51.760Z
-tags: 基本操作
-editor: markdown
+date: 2021-02-05T15:33:55.422Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-05T15:33:51.760Z
 ---
 

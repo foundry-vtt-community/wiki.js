@@ -2,9 +2,9 @@
 title: 各種設定変更
 description: 各種設定変更
 published: true
-date: 2021-02-05T15:28:00.078Z
-tags: 基本操作
-editor: markdown
+date: 2021-02-05T15:28:05.185Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-05T15:28:00.078Z
 ---
 

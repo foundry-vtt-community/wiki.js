@@ -2,7 +2,7 @@
 title: Macros
 description: 
 published: true
-date: 2020-09-23T01:31:44.804Z
+date: 2021-01-18T16:03:11.591Z
 tags: 
 editor: undefined
 dateCreated: 2020-09-23T00:22:44.591Z

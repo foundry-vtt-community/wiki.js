@@ -2,9 +2,9 @@
 title: Localizing the TinyMCE Editor
 description: A guide on how to localize the TinyMCE text editor, which is normally out of scope of the Foundry VTT translation file.
 published: true
-date: 2021-01-31T22:33:31.495Z
-tags: localization, translation, guide, tinymce
-editor: markdown
+date: 2021-01-31T22:33:35.103Z
+tags: 
+editor: undefined
 dateCreated: 2021-01-13T00:54:19.266Z
 ---
 
