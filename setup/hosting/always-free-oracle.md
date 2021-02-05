@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-05T19:36:11.007Z
+date: 2021-02-05T19:40:35.290Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -30,7 +30,7 @@ A valid credit card is required to sign up for the Always Free Tier services on 
 
 &nbsp;
 ### Disclaimer 
-While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, the responsibility to confirm that no charges will be incurred is on you. It is recommended to conduct a [Cost Analysis](https://cloud.oracle.com/account-management/cost-analysis) and/or set a budget after this guide is complete to ensure that all services are Always Free. 
+While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, you are fully responsible for ensuring that no costs will be incurred. It is recommended to conduct a [Cost Analysis](https://cloud.oracle.com/account-management/cost-analysis) and/or set a budget after this guide is complete to ensure that all services are Always Free. 
 
 All information in this guide is accurate as of the date it was written. 
 &nbsp;
