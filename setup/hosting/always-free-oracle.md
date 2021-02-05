@@ -2,9 +2,9 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-05T16:13:51.849Z
+date: 2021-02-05T19:36:11.007Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
 ---
 
@@ -147,7 +147,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 {.is-danger}
 
 31.	All other options should be left at default. Click **Create**. 
-32.	Once the large yellow square changes from yellow **Provisioning** to a green **Running**, the instance is ready to be used. 
+32.	Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
 33.	Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
