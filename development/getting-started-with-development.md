@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-05T16:16:58.077Z
+date: 2021-02-05T16:22:02.522Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -10,6 +10,7 @@ dateCreated: 2021-02-05T16:13:36.470Z
 
 > ### What is this?
 > This is going to be our FAQ and "common hurdles to overcome" guide to help new package developers. It's going to be perpetually updating and changing.
+> If you know of some questions or common sticking points for new package developers, please edit this to include those things.
 {.is-warning}
 
 ## FAQs
