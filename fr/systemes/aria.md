@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-03T18:06:21.873Z
+date: 2021-02-05T15:00:01.503Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -63,6 +63,8 @@ Il est possible d'éditer les parties correspondantes au "..." sur la fiche de p
  
 #### Caractéristiques
 
+1. Calcul des valeurs
+
 Un personnage dispose de cinq caractéristiques :
 La **Force** est une mesure de la puissance musculaire du personnage. Cette caractéristique donne une idée de ce qu’il peut soulever, porter, pousser ou tirer.
 La **Dextérité** mesure la vivacité, l’agilité et la rapidité physique du personnage.
@@ -76,6 +78,10 @@ Vous disposez de trois méthodes pour déterminer les différents scores :
 • Si vous souhaitez vous reposer sur le hasard sans trop frustrer vos joueurs, vous pouvez également utiliser la méthode a) mais leur faire effectuer trois tirages de caractéristiques. Ils choisiront alors le meilleur des trois lots de chiffres (et non le meilleur chiffre à chaque fois).
 
 Une fois les caractéristiques définies, remplissez les points de vie. Ils sont égaux à l’Endurance avec un maximum de 14.
+
+1. Jet de caractéristiques
+
+![jetCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/jetCarac.webp)
  <br/>
  
 #### Avatar
