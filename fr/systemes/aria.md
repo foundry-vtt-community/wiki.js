@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T16:22:35.049Z
+date: 2021-02-05T16:25:23.060Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -187,7 +187,7 @@ Les armes apparaissent sur l'onglet Caractéristiques lorsqu'elles sont équipé
 <br/>
 Une fois équipées, le jet de dé peut s'effectuer directement depuis l'onglet Caractèristiques.
 ![attack.gif](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/attack.gif)
-<br/>
+<br/><br/><br/>
 
 
 ### Onglet Compétences
@@ -199,7 +199,7 @@ A la création d'un nouveau personnage, toutes les compétences de base sont ajo
 Il est ensuite possible de modifier les scores de compétence et/ou d'en supprimer.
 
 ![competenceBase.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/competenceBase.webp)
- 
+ <br/><br/>
 ####  Scrore initiaux
 
 Il y a 2 méthodes permettant de calculer les scores initiaux des compétences de personnage.
@@ -213,6 +213,7 @@ Cette méthode est plus rapide à mettre en œuvre au niveau des chiffres puisqu
 Cette méthode fonctionne en deux temps :
 - Pour chaque compétence, ajoutez les deux caractéristiques liées et multipliez le tout par 2. Il s’agit du score initial de la compétence.
 - Une fois tous les scores initiaux renseignés, vous disposez de 50 points à répartir comme bon vous semble, sur la base de 1 pour 1. À la création, aucun personnage ne peut disposer d’une compétence supérieure à 90%.
+<br/><br/>
 
 ####  Ajouter une compétence
 Il est possible d'ajouter des compétences de 3 façon différentes
@@ -227,7 +228,7 @@ L'icone en forme de dossier ouvre le compendium des compétences de base, il suf
 
 3. **Glisser déposer depuis les compendiums**
 Enfin, il est possible d'ouvrir les différents compendiums des compétences dans la section dédiée, puis de glisser-déposer la compétence sur la fiche de personnage.
-<br/>
+<br/><br/>
 
 #### Modifier une compétence
 
@@ -235,12 +236,11 @@ Il est possible de modifier la valeur de score directement en changeant la valeu
 Sinon il faut cliquer sur l'icone avec un crayon afin d'ouvrir l'[editeur de compétence](#création-dune-compétence).
 
 ![editComp.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/editComp.webp)
-<br/><br/>
 
 Pour supprimer une compétence il suffit de cliquer sur l'icone en forme de poubelle.
 
 ![deleteCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteCarac.webp)
-<br/>
+<br/><br/>
 
 #### Jet basé sur une compétence
 
