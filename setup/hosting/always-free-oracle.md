@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-05T16:04:30.330Z
+date: 2021-02-05T16:12:37.573Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -279,7 +279,6 @@ pm2 start "node /home/ubuntu/foundry/resources/app/main.js" --name foundry
 pm2 list
 ```
 ![pm2 List](/images/oracle/image1.webp)
-&nbsp;
 >If the **status** column does not show <span style="color:green">online</span> then review step D25 above before continuing. {.is-warning}
 
 27.	Check to see if Foundry is running correctly by again connecting a browser tab to `http://<public IP address>:30000`. 
