@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-01-26T14:43:33.217Z
+date: 2021-02-05T16:08:31.605Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -54,6 +54,10 @@ There are a variety of community-created module and system starter kits out ther
 ### [TyhponJS's @eslint/foundry](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-foundry.js)
 - A plug and play eslint configuration package containing all exported globals from `foundry.js` that when combined w/ the `no-shadow` rule prevents overwriting core Foundry VTT functionality. Useful for module / system development
 - [Demo of it in action](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc)
+
+### [Quench - End to End testing within Foundry](https://github.com/schultzcole/FVTT-Quench)
+- Allows devs to register end to end tests powered by Mocha (and also includes Chai), which are then run in-game in a native Foundry Application.
+
 
 ## Macros and Code examples
 
