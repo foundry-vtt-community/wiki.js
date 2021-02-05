@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T16:27:00.359Z
+date: 2021-02-05T16:31:03.667Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -197,6 +197,12 @@ L’essentiel des actions pouvant échouer des personnages passe par le recours 
 
 A la création d'un nouveau personnage, toutes les compétences de base sont ajoutées à la fiche de personnage avec un score de 0.
 Il est ensuite possible de modifier les scores de compétence et/ou d'en supprimer.
+
+Section : 
+- [Score Initiaux](#scrore-initiaux)
+- [Ajouter une compétence](#ajouter-une-compétence)
+- [Modifier une compétence](#modifier-une-compétence)
+- [Jet basé sur une compétence](#jet-basé-sur-une-compétence)
 
 ![competenceBase.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/competenceBase.webp)
  <br/><br/>
