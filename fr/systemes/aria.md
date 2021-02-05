@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T15:12:14.038Z
+date: 2021-02-05T16:22:35.049Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -232,9 +232,12 @@ Enfin, il est possible d'ouvrir les différents compendiums des compétences dan
 #### Modifier une compétence
 
 Il est possible de modifier la valeur de score directement en changeant la valeur du champs.
-Sinon il faut cliquer sur l'icone avec un crayon afin d'ouvrir l'editeur de compétence.
+Sinon il faut cliquer sur l'icone avec un crayon afin d'ouvrir l'[editeur de compétence](#création-dune-compétence).
 
 ![editComp.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/editComp.webp)
+<br/><br/>
+
+Pour supprimer une compétence il suffit de cliquer sur l'icone en forme de poubelle.
 
 ![deleteCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteCarac.webp)
 <br/>
