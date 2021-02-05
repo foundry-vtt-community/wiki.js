@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-04T22:49:46.539Z
+date: 2021-02-05T15:50:35.421Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -175,6 +175,8 @@ ssh -i foundry.key ubuntu@<public ip address>
 &nbsp;
 ![Ubuntu Prompt](/images/oracle/image9.webp)
 &nbsp;
+>All commands going forward are to be entered when you see the **ubuntu@foundry:~$** prompt only. If you do not see the prompt then make sure the previous step is not still running. Some commands may take a minute or two to process. {.is-warning}
+
 5.	First, update the system by running the following commands (this may take a few minutes to complete):
 ```
 sudo apt-get update
