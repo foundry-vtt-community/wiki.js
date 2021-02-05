@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T15:00:01.503Z
+date: 2021-02-05T15:12:14.038Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -79,10 +79,20 @@ Vous disposez de trois méthodes pour déterminer les différents scores :
 
 Une fois les caractéristiques définies, remplissez les points de vie. Ils sont égaux à l’Endurance avec un maximum de 14.
 
+Les valeurs numériques peuvent être saisies directement dans le champs de la fiche de personnage.
+
+![valCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/valCarac.webp)
+
+ <br/> <br/>
+
 1. Jet de caractéristiques
 
+Un jet de caractéristique s'effectue en cliquant sur le nom de la caractéristique.
+Ensuite une fenêtre apparait pour connaitre le multiplicateur à appliquer afin de déterminer la difficulté.
+Puis le jet apparait dans le chat.
+
 ![jetCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/jetCarac.webp)
- <br/>
+ <br/> <br/> <br/>
  
 #### Avatar
 
@@ -221,6 +231,12 @@ Enfin, il est possible d'ouvrir les différents compendiums des compétences dan
 
 #### Modifier une compétence
 
+Il est possible de modifier la valeur de score directement en changeant la valeur du champs.
+Sinon il faut cliquer sur l'icone avec un crayon afin d'ouvrir l'editeur de compétence.
+
+![editComp.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/editComp.webp)
+
+![deleteCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteCarac.webp)
 <br/>
 
 #### Jet basé sur une compétence
