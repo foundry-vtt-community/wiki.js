@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T16:31:03.667Z
+date: 2021-02-05T16:32:39.427Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -21,10 +21,29 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 
 <br/>
 
+
+## Contacts
+
+Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur Discord
+**Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).
+Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
+
+ <br/>
+ 
+## Informations
+
+Jeu de la série Game of Rôles imaginée par [FibreTigre](https://www.fibretigre.com/).
+Popularisé sur Twitch / Youtube, lien :  [Saison 1](https://www.youtube.com/playlist?list=PLTJVtKcBdMNWKJxAnpSf1fj4CUp49148Z), [Saison 2](https://www.youtube.com/playlist?list=PLTJVtKcBdMNV9tpuHa_YRKlsMspnXFEbx), [Saison 3](https://www.youtube.com/playlist?list=PL4ILyHtnURFrTkuFoje8KhBIoV63ATuwe) et [son final](https://www.youtube.com/playlist?list=PLTJVtKcBdMNW2XAbHVhU1FWR9e_4N8vsm).
+Jeu publié chez [Elder Craft](https://www.elder-craft.com/).<br><br>
+
+ <br/>
+ 
+## Installation
+
 - Installer le système [Aria](https://foundryvtt.com/packages/aria/) depuis la catégorie SYSTEME dans l'application FoundryVTT (il comprend le système et les compendiums associés)
 - Module conseillé : je vous recommande d'utilisé le module [compendium-folders](https://foundryvtt.com/packages/compendium-folders/) qui permet de mieux organiser ses compendiums en sous dossiers
 
-<br/><br/>
+<br/>
 
 ## Création de personnage
 Votre feuille de personnage se compose de 3 onglets : 
@@ -306,17 +325,5 @@ Il existe 4 catégories de compendium :
 
  <br/>
  
-
-## Contacts
-Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur Discord
-**Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).
-Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
-
- <br/>
- 
-## Informations
-Jeu de la série Game of Rôles imaginée par [FibreTigre](https://www.fibretigre.com/).
-Popularisé sur Twitch / Youtube, lien :  [Saison 1](https://www.youtube.com/playlist?list=PLTJVtKcBdMNWKJxAnpSf1fj4CUp49148Z), [Saison 2](https://www.youtube.com/playlist?list=PLTJVtKcBdMNV9tpuHa_YRKlsMspnXFEbx), [Saison 3](https://www.youtube.com/playlist?list=PL4ILyHtnURFrTkuFoje8KhBIoV63ATuwe) et [son final](https://www.youtube.com/playlist?list=PLTJVtKcBdMNW2XAbHVhU1FWR9e_4N8vsm).
-Jeu publié chez [Elder Craft](https://www.elder-craft.com/).<br><br>
   
 
