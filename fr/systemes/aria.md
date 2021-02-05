@@ -2,9 +2,9 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-05T16:38:59.946Z
+date: 2021-02-05T17:30:50.486Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
 ---
 
@@ -245,7 +245,8 @@ Cette méthode fonctionne en deux temps :
 ####  Ajouter une compétence
 Il est possible d'ajouter des compétences de 3 façon différentes
 ![addCompetence.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/addCompetence.webp)
-
+Il est possible d'ajouter des compétences de 3 façon différentes
+![detailComp.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/detailComp.webp)
 1. **Création sur la fiche de personnage**
 Il est possible de créer une compétence directement sur la fiche de personnage en cliquant sur le "+". 
 Attention la compétence n'est pas ajouté aux objets du monde mais uniquement aux objets du personnage.
@@ -263,7 +264,7 @@ Il est possible de modifier la valeur de score directement en changeant la valeu
 Sinon il faut cliquer sur l'icone avec un crayon afin d'ouvrir l'[editeur de compétence](#création-dune-compétence).
 ![editComp.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/editComp.webp)
 
-Pour supprimer une compétence il suffit de cliquer sur l'icone en forme de poubelle.
+Pour supprimer une compétence il faut cliquer sur l'icone en forme de poubelle.
 ![deleteCarac.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/deleteCarac.webp)
 <br/><br/>
 
