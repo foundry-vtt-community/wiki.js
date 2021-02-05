@@ -2,11 +2,15 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-05T16:13:36.470Z
+date: 2021-02-05T16:16:58.077Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
 ---
+
+> ### What is this?
+> This is going to be our FAQ and "common hurdles to overcome" guide to help new package developers. It's going to be perpetually updating and changing.
+{.is-warning}
 
 ## FAQs
 
@@ -19,3 +23,5 @@ CONFIG.debug.hooks = true;
 ```
 
 With this enabled, you'll see every hook that fires as you interact with Foundry's UI and what arguments it is passed.
+
+## Common Hurdles and How to Overcome Them
