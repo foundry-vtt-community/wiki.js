@@ -1,10 +1,10 @@
 ---
-title: 各種設定変更
+title: 2. 各種設定変更
 description: 各種設定変更
 published: true
-date: 2021-02-05T15:28:05.185Z
-tags: 
-editor: undefined
+date: 2021-02-06T10:33:47.814Z
+tags: 基本操作
+editor: markdown
 dateCreated: 2021-02-05T15:28:00.078Z
 ---
 
