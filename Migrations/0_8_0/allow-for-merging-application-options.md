@@ -2,7 +2,7 @@
 title: Allow for merging Application options when calling Application#render(force, options) to conveniently assign or toggle application options when the interface is re-rendered.
 description: 
 published: true
-date: 2021-02-06T20:14:08.986Z
+date: 2021-02-06T20:29:53.075Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-06T20:10:52.660Z
