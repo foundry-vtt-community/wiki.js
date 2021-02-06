@@ -2,7 +2,7 @@
 title: Repository Bling
 description: A quick guide to tricking out your repository readme.
 published: true
-date: 2021-02-06T03:27:12.463Z
+date: 2021-02-06T03:32:26.229Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z
@@ -55,3 +55,17 @@ Example:
 ![unknown.png](/unknown.png)
 
 Colors pre-set to more or less match foundry's branding.
+
+
+### Basic Label + Url
+
+Useful for a host of applications: Ko-Fi, Patreon, etc.
+
+```
+[![alt-text](https://img.shields.io/badge/-[LABEL]-%23[HEXCODE])](http://your-url)
+```
+
+(Live) Example:
+[![foundry-vtt-wiki](https://img.shields.io/badge/-foundryvtt.wiki-%23FFA500)](https://foundryvtt.wiki/)
+
+
