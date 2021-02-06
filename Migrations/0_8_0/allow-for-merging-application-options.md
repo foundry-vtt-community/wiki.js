@@ -2,7 +2,7 @@
 title: Allow for merging Application options when calling Application#render(force, options) to conveniently assign or toggle application options when the interface is re-rendered.
 description: 
 published: true
-date: 2021-02-06T20:12:19.496Z
+date: 2021-02-06T20:14:08.986Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-06T20:10:52.660Z
@@ -23,8 +23,8 @@ Internally, the Application class no longer passes around options object provide
 
 ## What you need to change
 
-[Unverified] Handle any sideeffects of the options now being passed by reference
-
+* [Unverified] Handle any side effects of the passed-in options now updating the Application options
 
 ### Research Notes
 
+* This shouldn't be an impact for the average caller - the signature isn't changing, just the behavior
