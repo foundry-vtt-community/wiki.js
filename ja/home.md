@@ -1,10 +1,10 @@
 ---
-title: オンセ工房（Foundry VTT）Wikiへようこそ！
+title: はじめに
 description: 
 published: true
-date: 2020-12-01T14:37:29.320Z
+date: 2021-02-06T10:39:20.222Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
 ---
 
