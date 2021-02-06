@@ -1,10 +1,10 @@
 ---
-title: ウォール操作＆ライト操作＆環境音編
+title: 6. ウォール操作＆ライト操作＆環境音編
 description: GM向け基本操作：ウォール操作＆ライト操作＆環境音編
 published: true
-date: 2021-02-05T15:08:52.389Z
-tags: 
-editor: undefined
+date: 2021-02-06T10:35:44.212Z
+tags: 基本操作
+editor: markdown
 dateCreated: 2021-02-05T15:08:17.986Z
 ---
 
