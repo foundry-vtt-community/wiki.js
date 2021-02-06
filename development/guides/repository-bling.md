@@ -2,7 +2,7 @@
 title: Repository Bling
 description: A quick guide to tricking out your repository readme.
 published: true
-date: 2021-02-06T03:24:53.162Z
+date: 2021-02-06T03:27:12.463Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z
@@ -45,8 +45,13 @@ The colors have been pre-set to more or less match the Forge's branding colors.
 
 ### Foundry Version
 
-Dynamically show off which version of foundry is compatible with your package by parsing your package's manifest.
+Dynamically show off which version of foundry is compatible with your package by parsing your package's manifest. Assumes github repo, master branch, and that the `module.json` is in the `/src` directory.
 
 ```
-![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2F[YOUR_USERNAME]%2Ffoundryvtt-5eOGLCharacterSheet%2Fmaster%2Fsrc%2Fmodule.json&label=Foundry%20Version&query=$.compatibleCoreVersion&colorB=orange)
+![Foundry Core Compatible Version](https://img.shields.io/badge/dynamic/json.svg?url=https%3A%2F%2Fraw.githubusercontent.com%2F[YOUR_USERNAME]%2F[YOUR_REPO]%2Fmaster%2Fsrc%2Fmodule.json&label=Foundry%20Version&query=$.compatibleCoreVersion&colorB=orange)
 ```
+
+Example:
+![unknown.png](/unknown.png)
+
+Colors pre-set to more or less match foundry's branding.
