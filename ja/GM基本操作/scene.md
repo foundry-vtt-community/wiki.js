@@ -1,10 +1,10 @@
 ---
-title: シーン
+title: 3. シーン
 description: GM向け基本操作：シーン編
 published: true
-date: 2021-02-05T15:10:19.827Z
-tags: 
-editor: undefined
+date: 2021-02-06T10:34:25.138Z
+tags: 基本操作
+editor: markdown
 dateCreated: 2021-02-05T15:02:59.297Z
 ---
 
