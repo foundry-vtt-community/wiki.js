@@ -2,7 +2,7 @@
 title: Unlisted Game Systems
 description: 
 published: true
-date: 2021-02-08T16:28:15.481Z
+date: 2021-02-08T16:30:11.078Z
 tags: game systems
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -38,12 +38,11 @@ Game System for playing 70's 80's old-school versions of Dungeons and Dragons. F
 ## Black Void
 * **Author**: Corndog
 * **Foundry VTT Compatibility**: 0.7.7+
-### Description	
-A dark and esoteric fantasy setting where human subsistence is in peril, as an eldritch cataclysm has exiled mankind from its homeworld, Earth. The Black Void RPG introduces action, adventure, intrigue and horror, as you and your fellow players seek to claim your rightful place in a vast and unfamiliar Cosmos or seek enlightenment in the mysterious Void filled with wonder, delight and dread.
-
 ### Link(s) to Game System
 * [https://github.com/corndog-foundry/blackvoid](https://github.com/corndog-foundry/blackvoid)
 * [https://raw.githubusercontent.com/corndog-foundry/blackvoid/master/system.json](https://raw.githubusercontent.com/corndog-foundry/blackvoid/master/system.json)
+### Description	
+A dark and esoteric fantasy setting where human subsistence is in peril, as an eldritch cataclysm has exiled mankind from its homeworld, Earth. The Black Void RPG introduces action, adventure, intrigue and horror, as you and your fellow players seek to claim your rightful place in a vast and unfamiliar Cosmos or seek enlightenment in the mysterious Void filled with wonder, delight and dread.
 
 ---
 ## Chronicles of Darkness
