@@ -2,19 +2,17 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-09T16:33:43.824Z
+date: 2021-02-09T16:35:15.815Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
 ---
 
-# Always Free Oracle Cloud Hosting Guide for Foundry
-
-## A. Overview
-### Objective 
+# A. Overview
+## Objective 
 At the end of this guide, you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy. 
 &nbsp;
-### Important Information and Requirements
+## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
 
 The following is required to complete this guide:
@@ -29,16 +27,16 @@ b.	A free subdomain from a service like [Duck DNS](http://duckdns.org).
 A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. 
 
 &nbsp;
-### Disclaimer 
+## Disclaimer 
 While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, you are fully responsible for ensuring that no costs will be incurred. It is recommended to conduct a [Cost Analysis](https://cloud.oracle.com/account-management/cost-analysis) and/or set a budget after this guide is complete to ensure that all services are Always Free. 
 
 All information in this guide is accurate as of the date it was written. 
 &nbsp;
-## B. Account Setup
-### Objective
+# B. Account Setup
+## Objective
 At the end of this section, you will have a registered account with Oracle Cloud that has access to the Always Free Tier services. 
 &nbsp;
-### Steps
+## Steps
 > A valid credit card is required to sign up for an account with Oracle Cloud in order to access the Always Free Tier services. 
 {.is-warning}
 
@@ -54,11 +52,11 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
  
 &nbsp;
-## C. Compute and Networking Setup
-### Objective
+# C. Compute and Networking Setup
+## Objective
 At the end of this section, you will have set up a Compute VM (Virtual Machine) with Ubuntu 20.04 as well as a VCN (Virtual Cloud Network) required to host Foundry. 
 &nbsp;
-### Create a VCN (Virtual Cloud Network) and Security Policy
+## Create a VCN (Virtual Cloud Network) and Security Policy
  
 
 1.	From the [**Get Started**](https://cloud.oracle.com/) page, click on **Set up a network with a wizard**. 
@@ -100,7 +98,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 &nbsp;
 
-### Create a Compute VM (Virtual Machine) 
+## Create a Compute VM (Virtual Machine) 
 
 16.	From the **Get Started** page, click **Create a VM Instance**.
 &nbsp;
@@ -153,11 +151,11 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
 
 &nbsp;
-## D. Server Setup and Installation
-### Objective
+# D. Server Setup and Installation
+## Objective
 At the end of this section you will have a functional installation of Foundry using HTTPS and Caddy as a reverse proxy. Foundry will be set to restart any time the Compute VM is restarted, managed by pm2.
 &nbsp;
-### Connect to Compute VM Instance and Update
+## Connect to Compute VM Instance and Update
 >In this section, terminal is used to refer to whichever command line interface you may be using, either Windows Powershell or Linux/MacOS terminal. On Windows cmd will not work, it must be Powershell. {.is-info}
 
 1.	In your terminal, navigate to the folder where you saved `foundry.key`.
@@ -187,7 +185,7 @@ sudo apt-get upgrade -y
 > All further commands in this section should continue to be entered into this terminal in the order written. Do not close the terminal until the end of the guide. {.is-info}
 
 &nbsp;
-### Open Ports in iptables
+## Open Ports in iptables
 
 > The Ubuntu image from Oracle has blocked network traffic and requires adding a rule to iptables to allow HTTP, HTTPS, and Foundry traffic. {.is-warning}
 
@@ -199,7 +197,7 @@ sudo netfilter-persistent save
 8.	The instance is now ready to accept connections.
 
 &nbsp;
-### Install nodejs, pm2, and unzip
+## Install nodejs, pm2, and unzip
 > Nodejs is required to launch and run Foundry, and pm2 will be used to manage starting and stopping Foundry. {.is-info}
 
 9.	Run the following commands to install nodejs:
@@ -231,7 +229,7 @@ sudo apt-get install unzip -y
 ```
 15.	The software needed to launch and manage Foundry is now successfully installed.
 &nbsp;
-### Install and launch Foundry
+## Install and launch Foundry
 16.	Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 17.	Click on the gear icon (:link:) next to the **Node.js** latest version to copy a download url. 
 
@@ -293,7 +291,7 @@ pm2 save
 > If you do not wish to set up a domain or reverse proxy, you can stop here and continue to use Foundry in this way. {.is-info}
 
 &nbsp;
-### Reverse Proxy and HTTPS Configuration with Caddy
+## Reverse Proxy and HTTPS Configuration with Caddy
 
 > This section assumes that you have a valid domain name with an A record pointing to `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns)) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
 
@@ -349,11 +347,11 @@ nano /home/ubuntu/.local/share/Foundry-VTT/Config/options.json
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
 &nbsp;
-## E. Optional: Backup Policy Setup
-### Objective
+# E. Optional: Backup Policy Setup
+## Objective
 At the end of this section you will have a policy that automatically retains 5 rotating backups, allowing you to seamlessly restore from backup should something ever go wrong.  
 &nbsp;
-### Set Backup Policy and Attach to Volume
+## Set Backup Policy and Attach to Volume
 
 1.	Sign into your Oracle Cloud account, and from the **Get Started** page click on the three bars on the top left to open the menu. Click on **Block Storage** -> **Backup Policies**.
 &nbsp;
@@ -396,11 +394,11 @@ f.	Timezone: `Regional Data Center Time`
 > Restoring from backup is beyond the scope of this guide. More information can be found in the [Oracle Docs](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm) should you need to restore from backup. {.is-info} 
 
 &nbsp;
-## F. Optional: S3 Storage Setup
-### Objective
+# F. Optional: S3 Storage Setup
+## Objective
 At the end of this section, you will have a functional S3 storage bucket that Foundry can access to store assets under the “Amazon S3” tab in the file picker. This allows you to have extra storage beyond that provided by the instance volume. 
 &nbsp;
-### Create S3 Storage Bucket and Connect to Foundry
+## Create S3 Storage Bucket and Connect to Foundry
 
 > The Always Free Tier includes 10GiB of Object Storage (S3 Storage). If that limit is exceeded, the data will simply be lost. Keep an eye on the amount of storage used in the bucket created below. {.is-warning}
 
