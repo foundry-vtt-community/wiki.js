@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-10T15:36:31.844Z
+date: 2021-02-10T15:40:31.396Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -146,6 +146,8 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 {.is-danger}
 
 31.	All other options should be left at default. Click **Create**. 
+>If you receive an `Out of capacity for shape VM.Standard.E2.1.Micro in availability domain` error, then there are no more Always Free Tier instances available at the moment. According to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
+
 32.	Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
 33.	Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
 
