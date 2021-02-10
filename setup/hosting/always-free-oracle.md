@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-09T16:36:25.690Z
+date: 2021-02-10T15:36:31.844Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -329,7 +329,7 @@ sudo service caddy restart
 
 35. Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
 ```
-nano /home/ubuntu/.local/share/Foundry-VTT/Config/options.json
+nano /home/ubuntu/.local/share/FoundryVTT/Config/options.json
 ```
 36. Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are.
 ```
