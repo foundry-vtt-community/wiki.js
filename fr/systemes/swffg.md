@@ -2,9 +2,9 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2020-12-23T16:18:29.231Z
+date: 2021-02-10T20:23:11.760Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
 ---
 
@@ -79,7 +79,10 @@ Comme ces données sur les adversaires ne sont pas configurées pour utiliser le
 ## Modules conseillés par la communauté
 
 Voici une liste des modules conseillés par la communauté Discord FR pour profiter au maximum du système Star Wars FFG:
-
+- [Chat Images](https://foundryvtt.com/packages/chat-images/) Permet d'importer rapidement via un cliquer glisser dans le Chat.
+- [Easy Target](https://foundryvtt.com/packages/easy-target/) Simplifie le target des tokens
+- [FXMaster](https://foundryvtt.com/packages/fxmaster/) Permet un excellent éventail d'effets divers.
+- [JB2A - Jules&Ben's Animated Assets](https://foundryvtt.com/packages/JB2A_DnD5e/) Un module au départ pour DnD mais qui permet des effets d'arme et de sort utilisable dans Star Wars.
 - [Maestro](https://foundryvtt.com/packages/maestro/) - Pour la musique et certains automatismes
 - [Multilevel token](https://foundryvtt.com/packages/multilevel-tokens/) - Permet de déplacer les tokens entre map et bien d'autres choses encore
 - [Parallaxia](https://foundryvtt.com/packages/parallaxia/) - Permet de faire de la parallaxe
@@ -87,3 +90,5 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 - [Pings](https://foundryvtt.com/packages/pings/) - Permet déplacer les gens sur un ping ou encore montrer des choses sur la map
 - [PopOut](https://foundryvtt.com/packages/popout/) - Permet de sortir des fiches de ta fenêtre navigateur
 - [The Furnace](https://foundryvtt.com/packages/furnace/) - Gros module visant à améliorer la vie des Joueurs et MJ
+- [Token Action HUD](https://foundryvtt.com/packages/token-action-hud/) Ce module remplit un HUD flottant, montrant les actions communes pour un jeton contrôlable.
+- [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import/) Permet d'importer des fichiers d'export Dungeondraft et DungeonFog dans FoundryVTT, avec murs et lumières.
