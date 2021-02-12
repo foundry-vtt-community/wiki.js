@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-12T20:25:53.848Z
+date: 2021-02-12T20:26:47.920Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -39,3 +39,8 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 
 
 ### Storing Module Data
+
+- Flags
+- Settings
+- Pros and Cons of the two
+
