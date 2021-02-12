@@ -2,9 +2,9 @@
 title: Core-system
 description: Support pour le Core-system
 published: true
-date: 2020-12-23T14:16:02.708Z
+date: 2021-02-12T20:56:19.529Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T09:56:23.255Z
 ---
 
@@ -34,8 +34,6 @@ Il reste cependant possible pour chacun individuellement de modifier la langue u
 
 ## Ce que le core apporte et ce qu'il ne fourni pas  
 
-![en cours](https://www.chorum.fr/wp-content/uploads/2015/09/work-in-progress.png)
-
 FoundyVTT a été concu de manière à être très versatile (on le voit dans ses possibilités d'installation) mais également dans ses possibilités de personnalisation (qui fédère du coup ! ).
 
 le jeu s'articule donc autour de 4 grandes fonctionnalités (qu'on retrouve quasi dans toutes les VTT) : 
@@ -44,17 +42,3 @@ le jeu s'articule donc autour de 4 grandes fonctionnalités (qu'on retrouve quas
 3. - les sytèmes 
 4. - les mondes
 
-### 1 - Le core ###
-
-
-
-### 2 - Les modules ###
-
-
-
-### 3 - Les systèmes ###
-
-
-
-
-### 4 - Les mondes ###
