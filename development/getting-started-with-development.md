@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-12T20:26:47.920Z
+date: 2021-02-12T20:27:32.623Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -29,18 +29,18 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 
 ### What is a flag and how do I use them?
 
-[stub](https://github.com/VanceCole/macros/blob/master/flags.js)
+> [stub](https://github.com/VanceCole/macros/blob/master/flags.js)
 
 ### How do I work with settings?
 
-[stub](https://github.com/VanceCole/macros/blob/master/settings.js)
+> [stub](https://github.com/VanceCole/macros/blob/master/settings.js)
 
 ## Common Hurdles and How to Overcome Them
 
 
 ### Storing Module Data
 
-- Flags
-- Settings
-- Pros and Cons of the two
+> - Flags
+> - Settings
+> - Pros and Cons of the two
 
