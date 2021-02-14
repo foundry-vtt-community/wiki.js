@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-14T00:48:37.468Z
+date: 2021-02-14T00:49:36.362Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -51,6 +51,7 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 > 1.a Symlink from a /dist directory
 > 2. Common gotchyas with manifest.json and file structure
 > 3. Include a script file
+> 6. Include localization
 > 4. Include a template
 > 5. Include CSS
 > 6. ???
