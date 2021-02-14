@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-14T00:50:17.280Z
+date: 2021-02-14T00:50:53.018Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -44,9 +44,10 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 > - Settings
 > - Pros and Cons of the two
 
-## Hello World Module Walkthrough
+## Hello World Module Walkthrough 
 
-> ### [Stub](https://www.reddit.com/r/restofthefuckingowl/)
+
+> ### [Stub](https://www.reddit.com/r/restofthefuckingowl/), should be its own guide article.
 > https://foundryvtt.com/article/module-development/
 > 1. Create your directory
 > 1.a Symlink from a /dist directory
