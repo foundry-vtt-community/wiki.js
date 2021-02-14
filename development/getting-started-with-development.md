@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-12T20:27:32.623Z
+date: 2021-02-14T00:34:57.920Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -11,7 +11,7 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > ### What is this?
 > This is going to be our FAQ and "common hurdles to overcome" guide to help new package developers. It's going to be perpetually updating and changing.
 > If you know of some questions or common sticking points for new package developers, please edit this to include those things.
-> ### Not answer a question you have?
+> ### Have a question not answered here?
 > The [League of Foundry VTT Developers](https://discord.gg/cudQBu8HKT) is a helpful development-focused discord community which aims to help veterans and new developers alike. Please drop by and ask us your questions, the more questions we get the more likely this document is going to be updated with their answers.
 {.is-warning}
 
@@ -44,3 +44,14 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 > - Settings
 > - Pros and Cons of the two
 
+## Hello World Module Walkthrough
+
+> ### [Stub](https://www.reddit.com/r/restofthefuckingowl/)
+> 1. Create your directory
+> 1.a Symlink from a /dist directory
+> 2. Common gotchyas with manifest.json and file structure
+> 3. Include a script file
+> 4. Include a template
+> 5. Include CSS
+> 6. ???
+> 7. Profit
