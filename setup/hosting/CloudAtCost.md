@@ -2,7 +2,7 @@
 title: CloudAtCost
 description: A Canadian virtual server provider, where you buy the resources permanently, and can build as much or as beefy as you like.
 published: true
-date: 2021-02-12T06:10:46.995Z
+date: 2021-02-16T03:57:13.659Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-12T06:10:46.995Z
@@ -179,6 +179,6 @@ pm2 start "foundry"
 ## Extract Data from Server
 ```
 pm2 stop "foundry"
-zip ~/foundrydata.zip ~/.local/share/FoundryVTT
+tar -czvf ~/foundrydata.tar.gz ~/.local/share/FoundryVTT
 ```
-Download with WinSCP
+Download, unpack where appropriate for your OS with the appropriate tool.
