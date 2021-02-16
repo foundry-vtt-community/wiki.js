@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-16T14:41:08.904Z
+date: 2021-02-16T14:41:37.178Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -82,7 +82,6 @@ Hooks.on('updateScene', (scene, data) => {
   }
 });
 ```
-
 
 ## How do I work with settings?
 
