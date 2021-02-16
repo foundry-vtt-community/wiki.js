@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-16T14:41:37.178Z
+date: 2021-02-16T14:42:59.240Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -59,11 +59,7 @@ const flagValue = someEntity.getFlag('myModuleName', 'myFlagName');
 #### On the data model itself
 This can be somewhat tricky as it might be different depending on what entity you're dealing with. Somewhere in the entity's data object there is a `flags` key. The object attached is keyed by module `name`, which is itself an object keyed by flag name, as registered in `setFlag`.
 
-> [stub](https://github.com/VanceCole/macros/blob/master/flags.js)
-
-
 ### Unset a flag
-
 A safe way to delete your flag's value is with [`Entity#unsetFlag`](https://foundryvtt.com/api/Entity.html#unsetFlag). This will fully delete that key from your module's flags on the provided entity.
 
 ```js
