@@ -2,7 +2,7 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2021-02-16T22:24:44.283Z
+date: 2021-02-16T22:29:46.593Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
@@ -180,9 +180,12 @@ Copiez ce lien dans le bon paramètre de la pile.
 Maintenant, il ne vous reste plus qu’à récupérer l’IP de votre machine AWS et à vous connecter: 
 1. Rendez-vous sur le tableau de bord EC2, pour ce faire cliquez sur Service en haut à gauche de la page principale et recherchez EC2.
 2. Sur la page principale, cliquez sur “Instances en cours d’exécution”.
+
 ![prolice-screen-aws-deploy-009.png](/images/prolice-screen-aws-deploy-009.png){.align-center}
+
 3. Vous devriez voir apparaître dans la liste des instances une instance nommée “FoundryServer”. A la droite du nom vous trouverez les colonnes “DNS IPv4 publique” & “Adresse IPv4 publique”. Copiez une des deux valeurs. 
-4. Collez cette valeur dans votre navigateur internet et ajoutez “:30000” à la fin (sans les guillemets).
+4. Collez cette valeur dans votre navigateur internet et ajoutez “:30000” à la fin (sans les guillemets). Faites bien attention à vous connecter en **http** et pas en https !
+
 ![prolice-screen-aws-deploy-010.png](/images/prolice-screen-aws-deploy-010.png){.align-center}
 5. FoundryVTT vous demandera d’introduire votre numéro de licence. 
 6. Profitez de FoundryVTT et de toutes ses possibilités. 
