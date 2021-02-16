@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-16T14:39:02.712Z
+date: 2021-02-16T14:41:08.904Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -68,6 +68,19 @@ A safe way to delete your flag's value is with [`Entity#unsetFlag`](https://foun
 
 ```js
 someEntity.unsetFlag('myModuleName', 'myFlagName');
+```
+
+### How do I use this?
+It's arbitrary data that you can safely control on any `Entity`. Because of this, all of the hooks related to that entity are going to have your flag available when they fire.
+
+For example, if I have a flag on a Scene, I can check if that flag exists when the `updateScene` hook fires.
+
+```js
+Hooks.on('updateScene', (scene, data) => {
+  if (hasProperty(data, 'flags.myModule')) {
+    console.log(data);
+  }
+});
 ```
 
 
