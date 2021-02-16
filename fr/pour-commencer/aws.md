@@ -2,9 +2,9 @@
 title: 2.1. Installation sous AWS
 description: 
 published: true
-date: 2021-02-04T12:18:11.290Z
+date: 2021-02-16T22:24:44.283Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-05T13:54:41.441Z
 ---
 
@@ -142,32 +142,36 @@ e. au moins un chiffre
 
 Veillez à produire votre mot de passe avec les règles ci-dessus annoncées pour éviter un "rollback" de la pile avant la fin d'installation. Ce qui vous obligera à tout recommencer ;-)
 
+- **S3BucketName**:
+Le nom unique ne doit comporter que des lettres en minuscule
+
 - **FoundryDownloadLink**: 
-Ce paramètre nécessite un lien de téléchargement, que ce soit sur Patreon ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choississez de placer votre fichier FoundryVTT.zip sur Google  ...
+Ce paramètre nécessite un lien de téléchargement, que ce soit sur le Patreon si vous y participez ou en en accès public via Google Drive afin de télécharger FoundryVTT sur votre installation Linux. Attention si vous choisissez de placer votre fichier FoundryVTT.zip sur Google  ...
 > N’oubliez pas de LE RETIRER après l’installation. 
 {.is-warning}
 
 
 ### Guide pour le lien Patreon:
+Attention, il est bien question ici du Patreon, et pas de la page de téléchargement de votre profil si vous avez simplement acheté la licence.
 Rendez-vous sur votre page patreon et récupérez le lien pour la version Linux de FoundryVTT, cela
 devrait ressembler à ceci:
 https://foundryvtt.s3-us-west-2.amazonaws.com/releases/[AccessKey]/FoundryVirtualTabletop-linux-x64.zip
 Copiez ce lien dans le bon paramètre de la pile. 
 
 ### Passer de FoundryVTT à Google Drive:
-- a. Télécharger l’installation Linux .zip de FoundryVTT sur https://foundryvtt.com/
-- b. Importer le fichier zip sur Google Drive. 
-- c. Assurez-vous que le lien est n'est pas en mode limité.
+- a. Téléchargez l’installation Linux .zip de FoundryVTT depuis https://foundryvtt.com/ après vous être connecté
+- b. Importez le fichier zip sur Google Drive. 
+- c. Assurez-vous que le lien n'est pas en mode limité.
 ![prolice-screen-aws-deploy-015.png](/images/prolice-screen-aws-deploy-015.png){.align-center}
 - d. Bouton droit sur le fichier, et “Obtenir le lien”. 
-- e. Cliquer sur “Copier le lien” et le coller dans le paramètre de la pile.
+- e. Cliquez sur “Copier le lien” et collez le dans le paramètre de la pile. Le lien va ressembler à quelque chose comme https://drive.google.com/file/d/xxxxxxxxxx/view?usp=sharing
 
 8. Appuyez sur “Suivant” 
-9. Appuyez encore sur “Suivant”. 
+9. Appuyez encore sur “Suivant”
 10. Descendez au bas de la page pour accepter le texte légal et puis “Créer la pile".
 11. Faites le fou et cliquez sur le picto rafraîchir et priez pour qu’il n’y ait pas d’erreur. 
 ![prolice-screen-aws-deploy-013.png](/images/prolice-screen-aws-deploy-013.png){.align-center}
-12. Le script se lance, puis effectue un redémarrage. Ensuite, laissez lui un peu de temps pour exécuter le script de déploiement avant de continuer (environs 5 minutes). 
+12. Le script se lance, puis effectue un redémarrage. Ensuite, **laissez lui un peu de temps** pour exécuter le script de déploiement avant de continuer (**environ 5 minutes**). 
 
 ## 3ème Etape :
 > Félicitations ! Si vous avez atteint cette étape c’est que vous avez votre propre serveur FoundryVTT avec un lien au stockage S3. 
