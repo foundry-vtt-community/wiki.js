@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-17T17:41:46.935Z
+date: 2021-02-17T17:49:40.978Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -59,7 +59,7 @@ Vous pourrez également glisser déposer un monstre directement sur la map.
 - Editer la ***Classe générique*** (onglet Sommaire -> Classes) afin de prendre note du nombre de ***Points de vie*** du monstre (onglet Détails)
 - Supprimer la Classe générique qui n'est configuré que pour les Points de vie.
 
-#### Classe/DVs Raciaux, Dons, Traits et Inventaire :
+#### 2. Classe/DVs Raciaux, Dons, Traits et Inventaire :
 > AVANT toute modification manuelle, il faudra d'abord ajouter les "objets" suivants, ce qui permettra de ne pas faire doublons avec vos modifications. 
 {.is-warning}
 
@@ -71,13 +71,21 @@ S'il n'y a pas de DVs Racial, il faudra sûrement ajouter une race et une classe
 3. Ajouter l'inventaire **ET les équiper.**
 3. Ajouter les traits, capacités et autres (le cas échéant)
 
+#### 3. Réglages :
+Tout est normalement bien renseigné sauf : 
+- Choisir **Dextérité** pour l'**Initiative**
+- Cocher Spell-likes, Primary et autres **si** votre monstre a des Pouvoirs magiques ou Peut lancer des Sorts.
 
-
-#### Compléter le sommaire :
+#### 4. Compléter le sommaire :
 - Mettre le bon Alignement (roue dentée)
 - Indiquer en ***feet (pieds)*** la vitesse de déplacement (base, nage, escalade, creusement et/ou vol). Foundry fera automatiquement la conversion en mètres. 
 Il faudra arrondir au multiple de 5 supérieur. Exemple pour 18m, mettre 60pieds ~~(et non pas 59).~~
 Indiquer la manoeuvre de vol.
+
+#### 5. Attributs :
+- Vérifier que les Caractéristiques sont Correctement renseignées.
+- Choisir la bonne **Taille**
+
 
 
 
