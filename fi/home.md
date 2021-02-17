@@ -2,9 +2,9 @@
 title: Koti
 description: 
 published: true
-date: 2020-12-29T19:26:25.400Z
-tags: 
-editor: undefined
+date: 2021-02-17T20:08:16.168Z
+tags: kokeiluversiot, kielet, viralliset sivustot, yhteisöt
+editor: markdown
 dateCreated: 2020-12-21T19:04:14.538Z
 ---
 
@@ -13,10 +13,10 @@ dateCreated: 2020-12-21T19:04:14.538Z
 Tämä wiki toimii yhteisön tuottaman **Foundry Virtual Tabletop** -pelin tiedon säilytyspaikkana ja se on täysin yhteisön hallinnoima ja pyörittämä. Me emme edusta Foundry Gaming, LLC -yritystä millään tapaa.
 
 ## Wiki muilla kielillä
-- [日本語 （japani）](https://foundryvtt.wiki/ja/home)
-- [English （englanti）](https://foundryvtt.wiki/en/home)
+- [日本語 (japani)](https://foundryvtt.wiki/ja/home)
+- [English (englanti)](https://foundryvtt.wiki/en/home)
 - [Français (ranska)](https://foundryvtt.wiki/fr/home)
-- [Suomi （suomi）](https://foundryvtt.wiki/fi/home)
+- [Suomi (suomi)](https://foundryvtt.wiki/fi/home)
 
 ## Viralliset sivustot
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop -verkkosivut](http://foundryvtt.com)
@@ -26,8 +26,7 @@ Tämä wiki toimii yhteisön tuottaman **Foundry Virtual Tabletop** -pelin tiedo
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
-<i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/foundrynet)
-<i class="fab fa-gitlab"></i> [GitLab ongelmanseurain](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
+<i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/foundrynet) & <i class="fab fa-gitlab"></i> [GitLab ongelmanseurain](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
 
 ## Yhteisöt
 <i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/2rHs78h) – Epävirallinen moduulien, pelijärjestelmien ja sisällöntuottajien yhteisö (englanniksi).
