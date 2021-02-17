@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-17T17:29:27.751Z
+date: 2021-02-17T17:41:46.935Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -65,11 +65,20 @@ Vous pourrez également glisser déposer un monstre directement sur la map.
 
 *Je m'explique, si un don donne +2 Perception et que vous aviez déjà ajusté les compétences pour vous aligner sur la fiche du monstre, il faudra revenir retourner enlever 2 en Perception.*
 
-1. Ajouter le DVs Racial. 
+1. Ajouter le DVs Racial. Editer le DVs Racial pour ajouter le nombre de ***Points de vie***. La plupart du temps, il correspont à celui de la Classe générique que vous avez supprimé.
 S'il n'y a pas de DVs Racial, il faudra sûrement ajouter une race et une classe.
 2. Ajouter les Dons
 3. Ajouter l'inventaire **ET les équiper.**
 3. Ajouter les traits, capacités et autres (le cas échéant)
+
+
+
+#### Compléter le sommaire :
+- Mettre le bon Alignement (roue dentée)
+- Indiquer en ***feet (pieds)*** la vitesse de déplacement (base, nage, escalade, creusement et/ou vol). Foundry fera automatiquement la conversion en mètres. 
+Il faudra arrondir au multiple de 5 supérieur. Exemple pour 18m, mettre 60pieds ~~(et non pas 59).~~
+Indiquer la manoeuvre de vol.
+
 
 
 
