@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-17T14:15:42.088Z
+date: 2021-02-17T14:58:53.080Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -29,4 +29,5 @@ Pour cela nous avons besoin de votre aide, car il y a actuellement 1488 monstres
 
 La suite de ce tutoriel permettra de vous indiquer la marche à suivre. L'idée est de le remplir du mieux possible pour ne pas à revenir sur les monstres travaillés, ainsi que de respecter la même méthodologie.
 
-### Etape 1 : 
+### Etape 1 : Répartition des ~~tâches~~ monstres
+Indiquer sur le document Google Sheet en cliquand ici quel(s) sont les monstres que vous souhaitez compléter, afin d'éviter qu'on soit plusieurs à faire le même travail plusieurs fois.
