@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-17T15:09:54.378Z
+date: 2021-02-17T16:07:05.476Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -40,4 +40,8 @@ C'est également sur ce(s) tableau(x) que vous pourrait indiquer si vous avez re
 
 Dans tous les cas, si vous n'avez pas pu compléter le monstre à 100%, merci de l'indiquer dans le tableau Google Sheet, une autre personne prendra le relais.
 
-###  :
+Commencez déjà par des monstres simples (sans capacités spéciales, nombreux sorts).
+
+### Etape 2 : Après avoir choisi son ~~bébé~~ monstre
+#### Supprimer Ajustements et Classe générique
+
