@@ -2,9 +2,9 @@
 title: Home
 description: 
 published: true
-date: 2020-12-29T19:25:34.550Z
+date: 2021-02-17T20:06:17.821Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
 ---
 
@@ -14,9 +14,9 @@ dateCreated: 2020-09-18T19:13:46.176Z
 
 ## Wiki Localizations
 - [日本語 （Japanese）](https://foundryvtt.wiki/ja/home)
-- [English （English）](https://foundryvtt.wiki/en/home)
+- [English (English)](https://foundryvtt.wiki/en/home)
 - [Français (French)](https://foundryvtt.wiki/fr/home)
-- [Suomi （Finnish）](https://foundryvtt.wiki/fi/home)
+- [Suomi (Finnish)](https://foundryvtt.wiki/fi/home)
 
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop website](http://foundryvtt.com)
