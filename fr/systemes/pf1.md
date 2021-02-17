@@ -2,9 +2,9 @@
 title: Pathfinder 1
 description: Support pour Pathfinder 1re édition
 published: true
-date: 2020-12-19T17:45:27.183Z
-tags: 
-editor: undefined
+date: 2021-02-17T10:02:33.222Z
+tags: pf1, pathfinder, foundry vtt
+editor: markdown
 dateCreated: 2020-12-13T21:59:16.658Z
 ---
 
@@ -27,3 +27,7 @@ dateCreated: 2020-12-13T21:59:16.658Z
 ## Autres modules intéressants
 
 * [Data Toolbox for Foundry VTT](https://foundryvtt.com/packages/data-toolbox/) : module permettant de soumettre des corrections et améliorations pour les compendiums du module `pf1-fr`. Contribuez à la communauté !
+
+## Création de monstre
+
+* [Creation de monstres pour PF1](/fr/systemes/pf1/monstres) : A décrire ...
