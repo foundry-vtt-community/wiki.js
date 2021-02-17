@@ -2,7 +2,7 @@
 title: Pathfinder 1
 description: Support pour Pathfinder 1re édition
 published: true
-date: 2021-02-17T10:02:33.222Z
+date: 2021-02-17T11:04:04.255Z
 tags: pf1, pathfinder, foundry vtt
 editor: markdown
 dateCreated: 2020-12-13T21:59:16.658Z
@@ -30,4 +30,4 @@ dateCreated: 2020-12-13T21:59:16.658Z
 
 ## Création de monstre
 
-* [Creation de monstres pour PF1](/fr/systemes/pf1/monstres) : A décrire ...
+* [Creation de monstres pour PF1](/fr/systemes/pf1/monstres) : Tuto expliquant comment obtenir le compendium Bestiaire de Pathfinder 1. A suivre également par ceux qui souhaitent nous aider à compléter les fiches du bestiaire de façon optimale. Pour l'instant, le compendium est généré automatiquement et il manque donc certaines informations...
