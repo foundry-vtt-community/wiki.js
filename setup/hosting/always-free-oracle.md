@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-17T19:01:52.782Z
+date: 2021-02-17T21:50:39.643Z
 tags: hosting, vm, oracle, free, s3
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -170,6 +170,8 @@ At the end of this section you will have a functional installation of Foundry us
 ```
 ssh -i foundry.key ubuntu@<public ip address>
 ```
+
+>If you receive a `connection refused` error, the instance is probably still starting up and needs another minute or two before it can accept connections. Wait two minutes and try again. {.is-info}
 
 3.	You will likely be prompted to accept the ECDSA key. Type `yes` and hit <kbd>enter</kbd> to accept and continue.
 4.	You should see a prompt showing **ubuntu@foundry:~$**. 
