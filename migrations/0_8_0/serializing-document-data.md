@@ -2,7 +2,7 @@
 title: Serializing a DocumentData instance will now only return the _source component of that data which needs to be persisted in the database rather than the full data object including derived data elements or downstream transformations
 description: 
 published: true
-date: 2021-02-07T17:43:44.626Z
+date: 2021-02-18T13:57:08.563Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:43:44.626Z
@@ -43,4 +43,10 @@ This will now have some unintended effects because the duplicated data will only
 
 ### Research Notes
 
-- 
+
+### Q&A
+
+> Q: Does this mean that derived data (for instance a spell save DC or skill modifier in dnd5e) will not show up in the source document dbs going forward (only those fields that show up in the system template.json in the case of actors/items)? Will some kind of migration be required or perhaps be performed automatically to cull data that does not conform to the source template? 
+>
+> A: Yes, it means that only the base data will be stored to the database (as intended). Derived data should be computed in-memory using that base data only. It won't do any harm if some of the derived data is in the db as well (aside from inflating the filesize somewhat), but it would be ideal to clean it out at some point. I plan to provide some convenience functions for Actor/Item migration which can cull any data elements out of the object which are not explicitly defined in the base data.
+> [Discord Link](https://discord.com/channels/170995199584108546/811676497965613117/811954014207737886)
