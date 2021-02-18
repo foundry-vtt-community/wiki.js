@@ -2,7 +2,7 @@
 title: Serializing a DocumentData instance will now only return the _source component of that data which needs to be persisted in the database rather than the full data object including derived data elements or downstream transformations
 description: 
 published: true
-date: 2021-02-18T13:57:08.563Z
+date: 2021-02-18T13:58:54.244Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:43:44.626Z
@@ -41,10 +41,10 @@ This will now have some unintended effects because the duplicated data will only
 > 
 > Bonus Points: deepClone is faster than duplicate
 
-### Research Notes
+## Research Notes
 
 
-### Q&A
+## Q&A
 
 > Q: Does this mean that derived data (for instance a spell save DC or skill modifier in dnd5e) will not show up in the source document dbs going forward (only those fields that show up in the system template.json in the case of actors/items)? Will some kind of migration be required or perhaps be performed automatically to cull data that does not conform to the source template? 
 >
