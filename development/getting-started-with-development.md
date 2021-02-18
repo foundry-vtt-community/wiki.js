@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-18T14:32:40.299Z
+date: 2021-02-18T14:59:10.754Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -115,12 +115,14 @@ await game.settings.register('myModuleName', 'mySettingName', {
 Settings can be set with [`game.settings.set`](https://foundryvtt.com/api/ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a Gamemaster, and that `scope: client` settings will only persist on the user's local machine.
 
 ```js
-game.settings.set('myModuleName','myModuleSetting','gmroll');
+const whateverValue = 'foo';
+
+game.settings.set('myModuleName','myModuleSetting', whateverValue);
 ```
 
 ### Getting a Setting's value
 
-Settings can be set with [`game.settings.set`](https://foundryvtt.com/api/ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a Gamemaster, and that `scope: client` settings will only persist on the user's local machine.
+Settings can be set with [`game.settings.get`](https://foundryvtt.com/api/ClientSettings.html#get). 
 
 > [stub](https://github.com/VanceCole/macros/blob/master/settings.js)
 
