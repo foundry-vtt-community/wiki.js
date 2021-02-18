@@ -2,7 +2,7 @@
 title: Old versions of files are being served by Foundry's Server
 description: 
 published: true
-date: 2021-02-18T20:46:05.182Z
+date: 2021-02-18T20:46:27.771Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-18T20:13:36.827Z
@@ -24,4 +24,3 @@ During development enable the "Disable cache" setting in dev tools
 
 ![](https://media.discordapp.net/attachments/808018896980410378/812060860758360064/unknown.png)
 
-## Research Notes
