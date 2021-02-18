@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-16T14:42:59.240Z
+date: 2021-02-18T14:25:42.169Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -80,6 +80,41 @@ Hooks.on('updateScene', (scene, data) => {
 ```
 
 ## How do I work with settings?
+
+Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific entity however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
+
+For the vast majority of use-cases, settings are intended to be modified by a UI, either a Menu or within the Module Settings panel itself. These settings are intended to be used to modify the functionality of a module or system, rather than store arbitrary data for that module or system.
+
+### Registering a Setting
+
+All settings must be registered before they can be set or accessed. This needs to be done with [`game.settings.register`](https://foundryvtt.com/api/ClientSettings.html#register), with `game.settings` being an instance of `ClientSettings`.
+
+```js
+/*
+ * Create a custom config setting
+ */
+await game.settings.register('myModule', 'mySetting', {
+  name: 'My Setting',
+  hint: 'A description of the registered setting and its behavior.',
+  scope: 'world',     // "world" = sync to db, "client" = local storage 
+  config: true,       // false if you dont want it to show in module config
+  type: Number,       // Number, Boolean, String,  
+  default: 0,
+  range: {.           // range turns the UI input into a slider input
+    min: 0,           // but does not validate the value
+    max: 100,
+    step: 10
+  },
+  onChange: value => { // value is the new value of the setting
+    console.log(value)
+  }
+});
+```
+
+### Setting a Setting's value
+Settings can be set with [`game.settings.set`](https://foundryvtt.com/api/ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a Gamemaster, and that `scope: client` settings will only persist on the user's local machine.
+
+### Getting a Setting's value
 
 > [stub](https://github.com/VanceCole/macros/blob/master/settings.js)
 
