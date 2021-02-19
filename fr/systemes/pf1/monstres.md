@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T10:17:33.502Z
+date: 2021-02-19T10:22:55.964Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -106,12 +106,7 @@ Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+
 
 #### 5. Attributs :
 - Vérifier que les Caractéristiques sont Correctement renseignées.
+Si une créature a une caractéristique nulle (par exemple, "Int -"), videz la cellule correspondante. Le modificateur devrait passer à "+0".
 - Choisir la bonne **Taille**
-
-
-
-
-
-
-
-
+- Renseignez les **Sens**, **Réduction aux dégâts**, **Régénération**, **Guérison accélérée**, **Résistance à l'énergie**, **Résistances**, **Immunités aux dégâts**, **Vulnérabilités aux dégâts**, **Immunités** et **Langues**.
+Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnérabilité aux dégâts, l'immunité et la langue, vous pouvez les rajouter dans le champ "spéciale" en les séparant avec un point-virgule `;`.
