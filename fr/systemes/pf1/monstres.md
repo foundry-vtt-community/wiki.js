@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T11:05:13.812Z
+date: 2021-02-19T11:09:41.325Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -104,6 +104,9 @@ Onglet changements :
 Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+3]] en lutte | Div. | BMO`
 (note : les modificateurs de DMD seront indiqués plus tard)
 
+> A ce stade, toutes les valeurs dans Infos rapides et Points de vie ne seront pas forcément bonnes. C'est normal : elles se corrigeront au fil du remplissage de la fiche. 
+{.is-info}
+
 #### 5. Attributs :
 - Vérifier que les Caractéristiques sont Correctement renseignées.
 Si une créature a une caractéristique nulle (par exemple, "Int -"), videz la cellule correspondante. Le modificateur devrait passer à "+0".
@@ -122,7 +125,8 @@ Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnér
 **6.2 : Baguettes, Potions et Parchemins**
 - Ouvrez le compendium de sorts et cherchez-y le sort dont vous voulez créer une baguette, une potion ou un parchemin.
 - Glissez-déposez le sort dans l'onglet Inventaire.
-- Sur la pop-up qui apparait, sélectionnez ce 
+- Sur la pop-up qui apparait, sélectionnez le type d'objet que vous voulez créer.
+- Si la créature possède plusieurs fois cet objet, vous pouvez corriger le nombre soit en éditant l'objet et en renseignant le nombre dans "Quantité", soit en cliquant sur le "+" ou le "-" à droite de l'objet dans la liste.
 
 **6.3 : Cas où l'arme n'est pas dans un compendium**
 - Dans la catégorie "Armes", cliquez sur "+".
