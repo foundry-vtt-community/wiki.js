@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:44:55.539Z
+date: 2021-02-19T17:47:28.089Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -95,10 +95,14 @@ Les PVs de la créature sont à mettre dans "Points de vie". Notez les PVs sans 
 #### 4.1 Race non-PJ
 
 - Après avoir créé la race, l'éditer
+
 Onglet détails :
+
 - Choisir le bon type de créature
 - Si la créature a des sous-types, cliquer sur "Sous-types", puis cliquer sur "+" pour ajouter un sous-type et le renseigner en toutes lettres. Répéter pour chaque sous-type.
+
 Onglet changements :
+
 - Dans "changements", renseigner les modificateurs raciaux aux compétences (sauf celles pour une utilisation spécifique de la compétence)
 - Dans "notes de contexte", renseigner les modificateurs raciaux aux compétences spécifiques à une utilisation de la compétence
 ![race.png](/pf1/race.png)
@@ -157,6 +161,7 @@ Si vous créez cette armure pour la partager avec d'autres, privilégiez les ico
 ![exemple_description_armure.png](/pf1/exemple_description_armure.png)
 
 Onglet "Détails" :
+
 - Renseignez la catégorie, le type et la taille de l'armure.
 - Assurez-vous que la case "Equipé" est cochée.
 - Renseignez le bonus à la Classe d'Armure, le modificateur maximum de Dextérité, la Pénalité d'armure et le Risque d'échec des sorts profanes de l'armure.
@@ -180,12 +185,14 @@ Si vous créez cette armure pour la partager avec d'autres, privilégiez les ico
 - Ajoutez le bonus d'altération et les propriétés spéciales de l'objet dans le nom de l'objet.
 
 Onglet "Détails" : 
+
 - Renseignez le Niveau de lanceur de sort pour l'objet.
 Pour une arme, une armure ou un bouclier, le NLS est égal au plus grand entre les NLS de ses propriétés spéciales et trois fois son bonus d'altération.
 - Renseignez le bonus d'altération s'il s'agit d'une arme ou d'une armure.
 - Si une propriété donne des bonus fixes aux dégâts ou au toucher en dehors de son bonus d'altération, renseignez-les dans "Formule de bonus d'attaque" 
 
 Onglet "Changements" :
+
 - Dans "Changements", renseignez tous les bonus fixes apportés par l'objet. Si il s'agit d'une arme, ne renseignez pas les bonus aux dégâts, les bonus au toucher, ou les dés bonus aux dégâts
 > Les dés bonus seront renseignés plus tard. Les bonus d'attaque et de dégâts sont à renseigner dans l'onglet Détails.
 {.is-info}
@@ -209,9 +216,11 @@ Pensez à ajouter les bonus des dons du type "Talent" comme indiqué dans la par
 - Renseignez le nom de la capacité.
 
 Onglet Description :
+
 - Renseigez la description de la capacité.
 
 Onglet Détails :
+
 - Indiquez le type de la capacité.
 - S'il ne s'agit pas d'un Don, indiquez si il s'agit d'une capacité Ext, Sur ou Mag si cette catégorie s'applique.
 Certaines capacités, comme la Recherche des Pièges du Roublard, n'ont pas de type Ext, Sur ou Mag. Laissez cette case blanche dans ce cas.
@@ -242,6 +251,7 @@ La formule donnée en exemple se traduit donc : "10 + la moitié des DVs de la c
 ![exemple_capacite_poison.png](/pf1/exemple_capacite_poison.png)
 
 Onglet Changements :
+
 - Dans "Changements", indiquez les bonus fixes qui ne sont pas des dés bonus aux dégâts apportés par la capacité.
 - Dans "Notes de contexte", renseignez les bonus conditionnels apportés par la capacité.
 
@@ -250,6 +260,7 @@ Onglet Changements :
 **8.1 : Arme manufacturée**
 
 Onglet Détails :
+
 - Retournez sur l'onglet "Inventaire".
 - Editez l'arme pour laquelle vous voulez créer une attaque.
 - Dans "Détails", cliquez sur "créer une attaque" tout en bas.
