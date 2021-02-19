@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:30:14.492Z
+date: 2021-02-19T17:31:47.934Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -92,7 +92,7 @@ Il faudra arrondir au multiple de 5 supérieur. Exemple pour 18m, mettre 60pieds
 Les DVs raciaux ont un niveau de classe égal au nombre de DVs de la créature
 Les PVs de la créature sont à mettre dans "Points de vie". Notez les PVs sans les améliorations telles que la Constitution, le don Robustesse ou les archétypes.
 
-**4.1 Race non-PJ :**
+### **4.1 Race non-PJ :**
 - Après avoir créé la race, l'éditer
 Onglet détails :
 - Choisir le bon type de créature
