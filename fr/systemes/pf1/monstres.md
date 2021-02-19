@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:33:27.343Z
+date: 2021-02-19T17:38:04.011Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -77,7 +77,7 @@ S'il n'y a pas de DVs Racial, il faudra sûrement ajouter une race et une classe
 "Spell-likes" sert pour les pouvoirs magiques.
 "Primary", "Secondary" et "Tertiary" permettent chacun de faire apparaître un onglet pour la magie. Il n'y a aucune différence entre eux. Le fait qu'il y en ait trois sert principalement dans le cas d'une créature qui a des niveaux dans deux classes de lanceur de sort (comme un théurge mystique prêtre/magicien).
 
-## 4. Compléter le sommaire
+## 4. Sommaire
 - Indiquer la Taille
 - Mettre le bon Alignement (roue dentée)
 - Si il s'agit d'une créature qui n'a pas une race de PJ, cliquez sur le "+" à droite de "Race" pour ajouter une nouvelle race (cf [4.1](/fr/systemes/pf1/monstres#h-41-race-non-pj) pour voir la configuration)
@@ -92,7 +92,8 @@ Il faudra arrondir au multiple de 5 supérieur. Exemple pour 18m, mettre 60pieds
 Les DVs raciaux ont un niveau de classe égal au nombre de DVs de la créature
 Les PVs de la créature sont à mettre dans "Points de vie". Notez les PVs sans les améliorations telles que la Constitution, le don Robustesse ou les archétypes.
 
-### **4.1 Race non-PJ :**
+#### 4.1 Race non-PJ
+
 - Après avoir créé la race, l'éditer
 Onglet détails :
 - Choisir le bon type de créature
@@ -120,16 +121,16 @@ Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnér
 > Ne pas renseigner ici ni les armes naturelles ni l'armure naturelle.
 {.is-warning}
 
-**6.1 : Cas où l'équipement est dans un compendium**
+#### 6.1 : Cas où l'équipement est dans un compendium
 - Si la créature a un inventaire et que ce n'est pas déjà fait, renseigner son inventaire ici. Pensez bien à équiper les armes et les armures pour qu'elles soient prises en compte. Pour ça, vérifiez si la coche de la colonne "équipé" (la colonne avec un casque, une épée et un bouclier) est bien sur ✔️. Si ce n'est pas le cas, cliquez sur la coche pour la changer d'état.
 
-**6.2 : Baguettes, Potions et Parchemins**
+#### 6.2 : Baguettes, Potions et Parchemins
 - Ouvrez le compendium de sorts et cherchez-y le sort dont vous voulez créer une baguette, une potion ou un parchemin.
 - Glissez-déposez le sort dans l'onglet Inventaire.
 - Sur la pop-up qui apparait, sélectionnez le type d'objet que vous voulez créer.
 - Si la créature possède plusieurs fois cet objet, vous pouvez corriger le nombre soit en éditant l'objet et en renseignant le nombre dans "Quantité", soit en cliquant sur le "+" ou le "-" à droite de l'objet dans la liste.
 
-**6.3 : Cas où l'arme n'est pas dans un compendium**
+#### 6.3 : Cas où l'arme n'est pas dans un compendium
 - Dans la catégorie "Armes", cliquez sur "+".
 - Editez la nouvelle arme créée.
 - Sélectionnez une icone pour l'arme en cliquant sur l'icone.
@@ -146,7 +147,7 @@ Onglet "Détails" :
 Pour rappel, une arme de jet a au maximum 5 incréments de portée, et une arme à munition a au maximum 10 incréments de portée.
 Pour une arme pouvant aussi bien être utilisée au corps à corps qu'à distance, renseignez les valeurs pour le Type de base et pour le Type "Sous-type à distance". Les informations sont gardées en mémoire même si les champs ne sont pas visibles.
 
-**6.4 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium**
+#### 6.4 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium
 - Dans la catégorie "Armure/Equipement", cliquez sur "+".
 - Editez la nouvelle armure créée.
 - Sélectionnez une icone pour l'armure en cliquant sur l'icone.
@@ -160,7 +161,7 @@ Onglet "Détails" :
 - Assurez-vous que la case "Equipé" est cochée.
 - Renseignez le bonus à la Classe d'Armure, le modificateur maximum de Dextérité, la Pénalité d'armure et le Risque d'échec des sorts profanes de l'armure.
 
-**6.5 : Cas où un autre objet n'est pas dans un compendium**
+#### 6.5 : Cas où un autre objet n'est pas dans un compendium
 - Dans la catégorie de votre choix, cliquez sur "+".
 - Editez le nouvel objet créé.
 - Sélectionnez une icone pour l'objet en cliquant sur l'icone.
@@ -168,13 +169,13 @@ Si vous créez cette armure pour la partager avec d'autres, privilégiez les ico
 - Renseignez le nom de l'objet.
 - Dans la "Description", renseignez la description de l'objet, ainsi que son prix (en po), son poids (en kg), ses PVs et sa solidité. Si la créature possède plusieurs exemplaires du même objet, indiquez-en le nombre dans "Quantité".
 
-**6.6 : Version de maître d'un équipement**
+#### 6.6 : Version de maître d'un équipement
 
 - Ajoutez "de maître" dans le nom de l'objet.
 - Dans l'onglet "Détails", cochez la case "De maître".
 - Renseignez "1" dans le champ "Formule de bonus d'attaque".
 
-**6.7 : Version magique d'un équipement**
+#### 6.7 : Version magique d'un équipement
 
 - Ajoutez le bonus d'altération et les propriétés spéciales de l'objet dans le nom de l'objet.
 
@@ -199,12 +200,12 @@ Pensez à ajouter les bonus des dons du type "Talent" comme indiqué dans la par
 - Renseignez les capacités de monstre dans la catégorie "Divers".
 - Renseignez les archétypes de monstre dans la catégorie "Catégorie".
 
-**7.1 : Don ou aptitude de classe non-existant dans le compendium**
+#### 7.1 : Don ou aptitude de classe non-existant dans le compendium
 - Dans la catégorie "Dons" ou "Aptitudes de classe", cliquez sur "+".
 - Editez le Don ou l'Apitude créée.
 - Suivre les étapes de la partie 7.2.
 
-**7.2 : Renseigner une capacité**
+#### 7.2 : Renseigner une capacité
 - Renseignez le nom de la capacité.
 
 Onglet Description :
@@ -261,9 +262,9 @@ Onglet Détails :
 - Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne. Renseignez aussi le nom de l'effet entre parenthèses dans le nom de l'attaque.
 - Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le DD. Renseignez également le type de jet de sauvegarde à effectuer.
 
-**8.2 : Armes naturelles**
+#### 8.2 : Armes naturelles
 
-**8.2.1 : Avec le compendium**
+#### 8.2.1 : Avec le compendium
 
 > Le compendium des armes naturelles n'est pas encore partagé sur le module. Il sera mis à disposition sous peu.
 {.is-warning}
@@ -293,7 +294,7 @@ Il n'y a malheureusement pas de méthode élégante pour automatiser ce comporte
 - Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le DD. Renseignez également le type de jet de sauvegarde à effectuer.
 ![morsure_reaction_allergique.png](/pf1/morsure_reaction_allergique.png)
 
-**8.2.2 : Sans le compendium**
+#### 8.2.2 : Sans le compendium
 
 - Dans la catégorie "Armes naturelles", cliquez sur "+Ajouter".
 - Editez l'attaque naturelle.
@@ -329,7 +330,7 @@ Il n'y a malheureusement pas de méthode élégante pour automatiser ce comporte
 - Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne. Renseignez aussi le nom de l'effet entre parenthèses dans le nom de l'attaque.
 - Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le DD. Renseignez également le type de jet de sauvegarde à effectuer.
 
-**8.3 : Attaques spéciales**
+#### 8.3 : Attaques spéciales
 - Dans la catégorie qui correspond le mieux à l'attaque spéciale, autre que (Attaques avec armes" et "Attaques naturelles" (par exemple "Capacités raciales" pour une attaque de Toile d'araignée), cliquez sur "+Ajouter".
 - Editez l'attaque.
 - Dans "Description", renseignez la description de l'attaque.
@@ -337,7 +338,7 @@ Il n'y a malheureusement pas de méthode élégante pour automatiser ce comporte
 - Suivez les mêmes étapes que pour renseigner une attaque naturelle sans compendium (cf 8.2.2).
 
 
-**8.4 : Ajouter les modificateurs conditionnels aux attaques**
+#### 8.4 : Ajouter les modificateurs conditionnels aux attaques
 
 Onglet Modificateurs conditionnels :
 - Si l'arme a des dégâts bonus ou des bonus non-permanents grace à des capacités ou des propriétés spéciales (comme une arme de feu, une Attaque sournoise ou le Réservoir Arcanique de Magus), cliquez sur "ajouter une condition".
@@ -372,12 +373,12 @@ Les Pouvoirs Magiques utilisent le Charisme.
 - Renseignez le risque d'échec des sorts profanes et le nombre d'emplacement de domaine/d'école de magie supplémentaire par niveau le cas échéant.
 - Cochez les cases à droite selon le cas de la créature.
 
-**10.1 : Avec le compendium**
+#### 10.1 : Avec le compendium
 - Pour chaque sort, cherchez-le dans le compendium des sorts et glissez-déposez-le dans le grimoire correspondant.
 - Si le sort a une condition, éditez le sort et indiquez la condition dans le nom du sort entre parenthèses.
 - Si le sort est au mauvais niveau, éditez le sort et changez la valeur du "Niveau du sort" en conséquences.
 
-**10.2 : Sans le compendium**
+#### 10.2 : Sans le compendium
 - Au niveau du sort que vous souhaitez ajouter, cliquez sur "+".
 - Editez le sort.
 - Renseignez le nom du sort. Si le sort a une condition, renseignez-la également ici entre parenthèses.
