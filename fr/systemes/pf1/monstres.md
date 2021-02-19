@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:47:28.089Z
+date: 2021-02-19T18:02:35.751Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -360,6 +360,20 @@ Onglet Modificateurs conditionnels :
 - Répétez pour chaque bonus.
 - Cochez la case devant les bonus qui sont actifs par défaut, comme les bonus gratuits sans conditions tels que "de feu". Cela évitera de devoir les sélectionner à chaque fois qu'on fera une attaque, mais permettra de les désactiver si nécessaire.
 ![modificateurs_conditionnels.png](/pf1/modificateurs_conditionnels.png)
+
+#### 8.5 : Défenses
+
+Les défenses sont rassemblées en bas de l'onglet "Combat".
+
+- Renseignez l'armure naturelle et la résistance à la magie de la créature.
+La résistance à la magie se présente souvent sous la forme "X + DV de la créature". Un exemple de formule dans ce cas serait `X + @attributes.hd.total`.
+- Si la résistance à la magie est soumise à conditions (comme celle d'un Habitant de Leng), indiquez-les dans Notes sur Résist. à la Magie.
+- Si la créature a des bonus ou des malus aux jets de sauvegarde dans des cas particuliers qui n'ont pas déjà été renseignés ailleurs, vous pouvez les noter dans "Notes sur les Jets de protection".
+- Si la créature a un bonus au DMD dans des cas particuliers, vous pouvez le noter dans "Notes sur le DMD".
+> Nous vous conseillons d'utiliser une formule pour modifier la valeur automatiquement lorsque le DMD de base de la créature change. Par exemple, pour une créature avec +10 de DMD (+15 contre le croc-en-jambe), vous pouvez écrire `[[@attributes.cmd.total+5]] contre le croc-en-jambe`. 
+Dans ce cas, `@attributes.cmd.total` permet de récupérer la valeur de DMD de la créature.
+Cliquer sur le dé à gauche de "Défenses" affichera ainsi la valeur calculée dans le chat, ici "15 contre le croc-en-jambe".
+{.is-info}
 
 ## 9. Compétences
 
