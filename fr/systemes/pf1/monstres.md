@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:26:06.511Z
+date: 2021-02-19T17:27:53.665Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -54,12 +54,12 @@ Vous pourrez également glisser déposer un monstre directement sur la map.
 
 
 ## Etape 3 : Compléter la fiche
-### 1. Supprimer Ajustements et Classe générique
+## 1. Supprimer Ajustements et Classe générique
 - Supprimer les ***ajustements*** dans l'onglet "Effets"
 - Editer la ***Classe générique*** (onglet Sommaire -> Classes) afin de prendre note du nombre de ***Points de vie*** du monstre (onglet Détails)
 - Supprimer la Classe générique qui n'est configuré que pour les Points de vie.
 
-#### 2. Classe/DVs Raciaux, Dons, Traits et Inventaire :
+## 2. Classe/DVs Raciaux, Dons, Traits et Inventaire :
 > AVANT toute modification manuelle, il faudra d'abord ajouter les "objets" suivants, ce qui permettra de ne pas faire doublons avec vos modifications. 
 {.is-warning}
 
@@ -71,13 +71,13 @@ S'il n'y a pas de DVs Racial, il faudra sûrement ajouter une race et une classe
 3. Ajouter l'inventaire **ET les équiper.**
 3. Ajouter les traits, capacités et autres (le cas échéant)
 
-#### 3. Réglages :
+## 3. Réglages :
 - Vérifiez que les scores de caractéristiques de la partie "Ability Score Links" sont bien renseignés, et renseignez-les le cas échéant. Vous pouvez aussi les modifier si la créature utilise des attributs différents de la normale (par exemple, un mort-vivant utilisant le Charisme pour le calcul des PVs).
 - Si votre créature a des pouvoirs magiques ou peut lancer des sorts, cochez les cases nécessaire à l'utilisation de la magie de la créature dans la partie "Spellbooks".
 "Spell-likes" sert pour les pouvoirs magiques.
 "Primary", "Secondary" et "Tertiary" permettent chacun de faire apparaître un onglet pour la magie. Il n'y a aucune différence entre eux. Le fait qu'il y en ait trois sert principalement dans le cas d'une créature qui a des niveaux dans deux classes de lanceur de sort (comme un théurge mystique prêtre/magicien).
 
-#### 4. Compléter le sommaire :
+## 4. Compléter le sommaire :
 - Indiquer la Taille
 - Mettre le bon Alignement (roue dentée)
 - Si il s'agit d'une créature qui n'a pas une race de PJ, cliquez sur le "+" à droite de "Race" pour ajouter une nouvelle race (cf 4.1 pour voir la configuration)
@@ -108,14 +108,14 @@ Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+
 > A ce stade, toutes les valeurs dans Infos rapides et Points de vie ne seront pas forcément bonnes. C'est normal : elles se corrigeront au fil du remplissage de la fiche. 
 {.is-info}
 
-#### 5. Attributs :
+## 5. Attributs :
 - Vérifier que les Caractéristiques sont Correctement renseignées.
 Si une créature a une caractéristique nulle (par exemple, "Int -"), videz la cellule correspondante. Le modificateur devrait passer à "+0".
 - Choisir la bonne **Taille**
 - Renseignez les **Sens**, **Réduction aux dégâts**, **Régénération**, **Guérison accélérée**, **Résistance à l'énergie**, **Résistances**, **Immunités aux dégâts**, **Vulnérabilités aux dégâts**, **Immunités** et **Langues**.
 Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnérabilité aux dégâts, l'immunité et la langue, vous pouvez les rajouter dans le champ "spéciale" en les séparant avec un point-virgule <kbd>;</kbd>.
 
-#### 6. Inventaire :
+## 6. Inventaire :
 
 > Ne pas renseigner ici ni les armes naturelles ni l'armure naturelle.
 {.is-warning}
@@ -190,7 +190,7 @@ Onglet "Changements" :
 {.is-info}
 - Dans "Notes de contexte", renseignez les bonus et effets conditionnels.
 
-#### 7. Capacités :
+## 7. Capacités :
 - Vérifiez qu vous avez bien renseigné les dons, et renseignez ceux qu'il manque le cas échéant en les faisant glisser-déposer depuis le compendium.
 Pensez à ajouter les bonus des dons du type "Talent" comme indiqué dans la partie 7.2.
 - Si la créature a des niveaux de classes, ouvrez le compendium des aptitudes de classes et glissez-déposez les aptitudes.
@@ -243,7 +243,7 @@ Onglet Changements :
 - Dans "Changements", indiquez les bonus fixes qui ne sont pas des dés bonus aux dégâts apportés par la capacité.
 - Dans "Notes de contexte", renseignez les bonus conditionnels apportés par la capacité.
 
-#### 8. Combat :
+## 8. Combat :
 
 **8.1 : Arme manufacturée**
 
@@ -349,14 +349,14 @@ Onglet Modificateurs conditionnels :
 - Cochez la case devant les bonus qui sont actifs par défaut, comme les bonus gratuits sans conditions tels que "de feu". Cela évitera de devoir les sélectionner à chaque fois qu'on fera une attaque, mais permettra de les désactiver si nécessaire.
 ![modificateurs_conditionnels.png](/pf1/modificateurs_conditionnels.png)
 
-#### 9. Compétences :
+## 9. Compétences :
 
 - Si la créature a un modificateur racial lui permettant d'utiliser un autre attribut que celui normalement utilisé pour la compétence, indiquez-le dans la liste déroulante correspondante.
 - Renseignez les rangs dans chaque compétence.
 - Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature (un élémentaire du feu gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
 Il est également possible que la créature possède un don du type Talent (cf 7) ou un bonus racial (cf 4.1) que vous n'avez pas correctement complété.
 
-#### 10. Sorts
+## 10. Sorts
 
 > Cet onglet n'apparaîtra que si vous avez paramétré au moins un grimoire pour la créature.
 {.is-warning}
@@ -425,17 +425,17 @@ Maintenant, si vous allez dans l'onglet Description, vous verrez que la descript
 
 - Si la créature possède des capacités pouvant modifier le NLS ou le DD d'un sort suivant certaines conditions, vous pouvez les renseigner dans l'onglet Modificateurs conditionnels. Cet onglet fonctionne de la même façon que pour les attaques (cf 8.4).
 
-#### 11. Effets :
+## 11. Effets :
 
 Si la créature a des effets spéciaux que vous souhaitez renseigner, comme la transformation d'un élémentaire de l'eau grace à la capacité "Vortex" ou l'effet d'un sort d'Armure de mage, vous pouvez les indiquer ici. Les effets fonctionnent comme des capacités, mis à part qu'ils peuvent être activés ou désactivés.
 Si vous voulez faire apparaître l'effet sur le jeton de la créature, donnez un icone à cet effet afin de pouvoir le reconnaître.
 Si vous ne voulez pas voir apparaître l'icone de l'effet, cochez "Caché du jeton" dans l'onglet Détails.
 
-#### 12. Notes :
+## 12. Notes :
 
 Renseignez ici le bloc de statistiques de la créature.
 
-#### 13 Vérifications :
+## 13 Vérifications :
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
 
 > Vous venez de créer votre propre entrée du bestiaire ! Félicitations 🥳
