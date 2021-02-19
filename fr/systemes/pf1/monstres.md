@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T18:02:35.751Z
+date: 2021-02-19T18:04:57.679Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -374,6 +374,8 @@ La résistance à la magie se présente souvent sous la forme "X + DV de la cré
 Dans ce cas, `@attributes.cmd.total` permet de récupérer la valeur de DMD de la créature.
 Cliquer sur le dé à gauche de "Défenses" affichera ainsi la valeur calculée dans le chat, ici "15 contre le croc-en-jambe".
 {.is-info}
+
+![defenses.png](/pf1/defenses.png)
 
 ## 9. Compétences
 
