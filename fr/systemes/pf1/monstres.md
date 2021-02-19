@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T11:45:59.280Z
+date: 2021-02-19T12:38:30.348Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -189,6 +189,53 @@ Onglet "Changements" :
 - Dans "Notes de contexte", renseignez les bonus et effets conditionnels.
 
 #### 7. Capacités :
+- Vérifiez qu vous avez bien renseigné les dons, et renseignez ceux qu'il manque le cas échéant en les faisant glisser-déposer depuis le compendium.
+Pensez à ajouter les bonus des dons du type "Talent" comme indiqué dans la partie 7.2.
+- Si la créature a des niveaux de classes, ouvrez le compendium des aptitudes de classes et glissez-déposez les aptitudes.
+- Si la créature possède une race de PJ, renseignez les traits raciaux dans la catégorie "Traits raciaux".
+- Renseignez les capacités de monstre dans la catégorie "Divers".
+- Renseignez les archétypes de monstre dans la catégorie "Catégorie".
+
+**7.1 : Don ou aptitude de classe non-existant dans le compendium**
+- Dans la catégorie "Dons" ou "Aptitudes de classe", cliquez sur "+".
+- Editez le Don ou l'Apitude créée.
+- Suivre les étapes de la partie 7.2.
+
+**7.2 : Renseigner une capacité**
+- Renseignez le nom de la capacité.
+
+Onglet Description :
+- Renseigez la description de la capacité.
+
+Onglet Détails :
+- Indiquez le type de la capacité.
+- S'il ne s'agit pas d'un Don, indiquez si il s'agit d'une capacité Ext, Sur ou Mag si cette catégorie s'applique.
+Certaines capacités, comme la Recherche des Pièges du Roublard, n'ont pas de type Ext, Sur ou Mag. Laissez cette case blanche dans ce cas.
+- Indique quelles armes et armures la capacité octrois le cas échéant.
+- S'il s'agit d'une aptitude de classe, cliquez sur "Classes", puis ajoutez des classes en cliquant sur "+" pour chaque classe et en indiquant le nom des classes.
+- S'il s'agit d'une capacité nécessitant d'être utilisée rapidement durant la partie (comme l'Empathie sauvage) et/ou possédant un DD (comme le Tourbillon, la Maladie ou le Poison), cochez la case "Afficher dans raccourcis"
+- Dans "Utilisation d'une capacité", si la capacité a une portée, une durée ou une limite d'utilisation, renseignez le coût d'activation de la capacité.
+Une capacité n'ayant pas de coût d'activation est soit une capacité passive, soit une action gratuite.
+- Renseignez la cible de la capacité si celle-ci n'est pas évidente et a une ou plusieurs conditions à respecter (par exemple, si la cible ne peut être qu'un humanoïde).
+- Renseignez la portée, la durée et la limite d'utilisation le cas échéant.
+- Si la capacité à une limite d'utilisation, vérifiez que la case "déduire automatiquement la charge" est bien cochée.
+- Dans "Attaque", s'il s'agit d'une capacité de soin, renseignez "Soin". S'il ne s'agit pas d'une capacité de soin, mais d'une capacité ayant un DD, renseignez "Autre".
+- Si la capacité fait des dégâts (comme un poison faisant 1d2 dégâts temporaires de Force), renseignez les dégâts dans "Formule de dégâts". Indiquez quels types de dégâts sont faits.
+Pour les dégâts de caractéristiques temporaires, indiquez par exemple "For (temp)".
+- Si la capacité a une durée d'effet aléatoire, renseignez dans "formule de dégâts" le jet pour la durée aléatoire, et mettez en type le type de durée (rounds, minutes, heures...)
+- Si la capacité a une durée d'incubation aléatoire, renseignez dans "formule de dégâts" le jet pour la durée aléatoire, et mettez en type le type de durée (rounds, minutes, heures...) suivi de "d'incubation" (par exemple, "jours d'incubation").
+- Si la capacité a un DD, renseignez-le avec une formule dans "DD", puis indiquez quel jet de sauvegarde utiliser.
+Pour la formule, inspirez vous de la formule suivante : `10+floor(@attributes.hd.total/2)+@abilities.con.mod`
+> Utiliser une formule permet de mettre à jour la valeur du DD en cas de modification des caractéristiques de la créature. Par exemple en lui donnant un archétype Evolué.
+{.is-info}
+
+> `floor` indique que l'on veut arrondir à l'entier inférieur la valeur entre parenthèse.
+`@attributes.hd.total` donne le nombre total de DVs de la créature.
+`@abilities.con.mod` donne le modificateur de Constitution. Remplacez `con` par la bonne caractéristique si votre capacité utilise autre chose que la Constitution pour son DD (`str` pour la Force, `dex` pour la Dextérité, `con` pour la Constitution, `int` pour l'Intelligence, `wis` ou `cha` pour le Charisme).
+La formule donnée en exemple se traduit donc : "10 + la moitié des DVs de la créature arrondie à l'inférieur + le modificateur de Constitution de la créature".
+{.is-info}
+- Indiquez dans "Notes sur les effets" des notes contextuelles qui apparaitront sous la capacité dans le chat lorsque vous utiliserez la capacité.
+![exemple_capacite_poison.png](/pf1/exemple_capacite_poison.png)
 
 #### 8. Combat :
 
