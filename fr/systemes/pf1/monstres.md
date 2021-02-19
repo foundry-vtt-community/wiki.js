@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:38:04.011Z
+date: 2021-02-19T17:42:57.539Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -335,8 +335,7 @@ Il n'y a malheureusement pas de méthode élégante pour automatiser ce comporte
 - Editez l'attaque.
 - Dans "Description", renseignez la description de l'attaque.
 ![exemple_toile.png](/pf1/exemple_toile.png)
-- Suivez les mêmes étapes que pour renseigner une attaque naturelle sans compendium (cf 8.2.2).
-
+- Suivez les mêmes étapes que pour renseigner une attaque naturelle sans compendium (cf [8.2.2](/fr/systemes/pf1/monstres#h-822-sans-le-compendium)).
 
 #### 8.4 : Ajouter les modificateurs conditionnels aux attaques
 
@@ -356,7 +355,7 @@ Onglet Modificateurs conditionnels :
 - Si la créature a un modificateur racial lui permettant d'utiliser un autre attribut que celui normalement utilisé pour la compétence, indiquez-le dans la liste déroulante correspondante.
 - Renseignez les rangs dans chaque compétence.
 - Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature (un élémentaire du feu gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
-Il est également possible que la créature possède un don du type Talent (cf 7) ou un bonus racial (cf 4.1) que vous n'avez pas correctement complété.
+Il est également possible que la créature possède un don du type Talent (cf [7](/fr/systemes/pf1/monstres#h-7-capacit%C3%A9s)) ou un bonus racial (cf [4.1](/fr/systemes/pf1/monstres#h-41-race-non-pj)) que vous n'avez pas correctement complété.
 
 ## 10. Sorts
 
@@ -425,7 +424,7 @@ Maintenant, si vous allez dans l'onglet Description, vous verrez que la descript
 
 ![suggestion2.png](/pf1/suggestion2.png)
 
-- Si la créature possède des capacités pouvant modifier le NLS ou le DD d'un sort suivant certaines conditions, vous pouvez les renseigner dans l'onglet Modificateurs conditionnels. Cet onglet fonctionne de la même façon que pour les attaques (cf 8.4).
+- Si la créature possède des capacités pouvant modifier le NLS ou le DD d'un sort suivant certaines conditions, vous pouvez les renseigner dans l'onglet Modificateurs conditionnels. Cet onglet fonctionne de la même façon que pour les attaques cf [8.4](/fr/systemes/pf1/monstres#h-84-ajouter-les-modificateurs-conditionnels-aux-attaques).
 
 ## 11. Effets
 
