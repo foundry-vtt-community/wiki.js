@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T11:09:41.325Z
+date: 2021-02-19T11:45:59.280Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -141,7 +141,8 @@ Onglet "Détails" :
 - Renseignez la catégorie, le type et la taille de l'arme.
 - Assurez-vous que la case "Equipé" est cochée.
 - Renseignez les propriétés spéciales de l'arme.
-- Renseignez les dégâts de base de l'arme (pour une taille moyenne), les types de dégâts, et la zone et le multiplicateur de critique.
+- Renseignez les dégâts de base de l'arme (pour une taille moyenne), les types de dégâts, la zone et le multiplicateur de critique, la portée (en pieds) et le nombre maximum d'incréments de portée.
+Pour rappel, une arme de jet a au maximum 5 incréments de portée, et une arme à munition a au maximum 10 incréments de portée.
 
 **6.4 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium**
 - Dans la catégorie "Armure/Equipement", cliquez sur "+".
@@ -167,17 +168,36 @@ Si vous créez cette armure pour la partager avec d'autres, privilégiez les ico
 
 **6.6 : Version de maître d'un équipement**
 
+- Ajoutez "de maître" dans le nom de l'objet.
 - Dans l'onglet "Détails", cochez la case "De maître".
+- Renseignez "1" dans le champ "Formule de bonus d'attaque".
 
 **6.7 : Version magique d'un équipement**
+
+- Ajoutez le bonus d'altération et les propriétés spéciales de l'objet dans le nom de l'objet.
+
+Onglet "Détails" : 
+- Renseignez le Niveau de lanceur de sort pour l'objet.
+Pour une arme, une armure ou un bouclier, le NLS est égal au plus grand entre les NLS de ses propriétés spéciales et trois fois son bonus d'altération.
+- Renseignez le bonus d'altération s'il s'agit d'une arme ou d'une armure.
+- Si une propriété donne des bonus fixes aux dégâts ou au toucher en dehors de son bonus d'altération, renseignez-les dans "Formule de bonus d'attaque" 
+
+Onglet "Changements" :
+- Dans "Changements", renseignez tous les bonus fixes apportés par l'objet. Si il s'agit d'une arme, ne renseignez pas les bonus aux dégâts, les bonus au toucher, ou les dés bonus aux dégâts
+> Les dés bonus seront renseignés plus tard. Les bonus d'attaque et de dégâts sont à renseigner dans l'onglet Détails.
+{.is-info}
+- Dans "Notes de contexte", renseignez les bonus et effets conditionnels.
 
 #### 7. Capacités :
 
 #### 8. Combat :
 
 **8.1 : Arme manufacturée**
+(TODO : penser aux armes avec des dés de dégâts bonus (de feu) et aux attaques sournoises)
 
 **8.2 : Armes naturelle**
+
+(TODO : explication sur pourquoi les armes naturelles principales ont pas les mêmes stats que sur le bestiaire pour un monstre qui a une arme manufacturée)
 
 **8.2.1 : Avec le compendium**
 
