@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T15:01:02.718Z
+date: 2021-02-19T15:04:13.921Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -379,6 +379,7 @@ Les Pouvoirs Magiques utilisent le Charisme.
 - Si le sort est au mauvais niveau, éditez le sort et changez la valeur du "Niveau du sort" en conséquences.
 
 **10.2 : Sans le compendium**
+- Au niveau du sort que vous souhaitez ajouter, 
 
 #### 11. Effets :
 
@@ -390,7 +391,7 @@ Si vous ne voulez pas voir apparaître l'icone de l'effet, cochez "Caché du jet
 
 Renseignez ici le bloc de statistiques de la créature.
 
-#### ??? Vérifications :
+#### 13 Vérifications :
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
 
 > Vous venez de créer votre propre entrée du bestiaire ! Félicitations 🥳
