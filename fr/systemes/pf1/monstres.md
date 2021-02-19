@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T11:00:35.822Z
+date: 2021-02-19T11:05:13.812Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -120,6 +120,9 @@ Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnér
 - Si la créature a un inventaire et que ce n'est pas déjà fait, renseigner son inventaire ici. Pensez bien à équiper les armes et les armures pour qu'elles soient prises en compte. Pour ça, vérifiez si la coche de la colonne "équipé" (la colonne avec un casque, une épée et un bouclier) est bien sur ✔️. Si ce n'est pas le cas, cliquez sur la coche pour la changer d'état.
 
 **6.2 : Baguettes, Potions et Parchemins**
+- Ouvrez le compendium de sorts et cherchez-y le sort dont vous voulez créer une baguette, une potion ou un parchemin.
+- Glissez-déposez le sort dans l'onglet Inventaire.
+- Sur la pop-up qui apparait, sélectionnez ce 
 
 **6.3 : Cas où l'arme n'est pas dans un compendium**
 - Dans la catégorie "Armes", cliquez sur "+".
@@ -178,3 +181,6 @@ Si vous créez cette armure pour la partager avec d'autres, privilégiez les ico
 {.is-warning}
 
 **8.2.2 : Sans le compendium**
+
+#### ??? Vérifications :
+Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
