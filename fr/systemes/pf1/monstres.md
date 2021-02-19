@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T13:18:21.727Z
+date: 2021-02-19T14:14:04.149Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -255,12 +255,11 @@ Onglet Détails :
 > Vous remarquerez que la formule de dégâts est maintenant de la forme `sizeRoll(1,4,@size)`. Il s'agit d'une formule permettant de calculer le dé de dégât en fonction de la taille. Le premier nombre indique le nombre de dés à lancer pour une arme de taille M, et le deuxième nombre le type de dé à lancer pour une arme de taille M. Vous pouvez voir les dés qui seront finalement lancés dans la colonne "dégâts" du tableau de l'onglet Combat.
 {.is-info}
 - Si le dé de dégât est incorrect, c'est probablement que la créature considère son arme comme d'une taille différente par rapport aux autres créatures. Si le dé est trop gros, diminuez le deuxième nombre de la formule `sizeRoll()` pour atteindre la bonne taille. Si le dé est trop petit, augmentez-le à la place.
-- Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne.
-- Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le D. Renseignez également le type de jet de sauvegarde à effectuer.
+- Si la créature a un BBA assez élevé pour réaliser plusieurs attaques, cliquez sur "Add Extra Attack" pour chaque attaque supplémentaire. Renseignez le malus d'attaque itératif pour chaque attaque supplémentaire ainsi créée.
+- Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne. Renseignez aussi le nom de l'effet entre parenthèses dans le nom de l'attaque.
+- Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le DD. Renseignez également le type de jet de sauvegarde à effectuer.
 
-**8.2 : Armes naturelle**
-
-
+**8.2 : Armes naturelles**
 
 (TODO : explication sur pourquoi les armes naturelles principales ont pas les mêmes stats que sur le bestiaire pour un monstre qui a une arme manufacturée)
 
@@ -268,10 +267,77 @@ Onglet Détails :
 
 > Le compendium des armes naturelles n'est pas encore partagé sur le module. Il sera mis à disposition sous peu.
 {.is-warning}
+- Ouvrez le compendium "Attaques naturelles"
+- Glissez-déposez l'attaque naturelle souhaitée.
+- Editez l'attaque naturelle.
+- Si une capacité du monstre indique qu'il considère une de ses attaques naturelles comme une attaque principale ou secondaire, refletez cette capacité en cochant ou décochant "Attaque principale".
+Si c'est une attaque secondaire devenue principale, changez le multiplicateur de la caractéristique pour les dégâts à x1.
+Si c'est une attaque principale devenue secondaire, changez le multiplicateur de la caractéristique pour les dégâts à x0.5.
+- Si la créature a le don Attaques multiples et que l'attaque naturelle est une attaque naturelle secondaire, indiquez "3" dans le champ "Bonus au jet d'attaque".
+Pour rappel, une attaque secondaire subit normalement -5 au jet d'attaque et son multiplicateur de Force aux dégâts est de 0.5. Le don Attaques multiples permet de passer ce malus de -5 à -2. Rajouter +3 à l'attaque permet donc de faire passer le malus de -5 à -2.
+- S'il s'agit de l'unique attaque de la créature, cochez la case "Attaque principale".
+- S'il s'agit de l'unique attaque de la créature et qu'elle ne peut l'effectuer qu'une fois, changez le multiplicateur de la caractéristique pour les dégâts à x1.5.
+- Si la créature a le don Attaques en finesse, passez la caractéristique pour l'attaque à Dextérité.
+- Si la créature a le don Attaques en finesse (mythique), passez la caractéristique pour ls dégâts à Dextérité.
+- Si l'attaque possède des dégâts bonus aux dégâts critiques, renseignez-les dans "Formule bonus dégâts critiques".
+- Si l'attaque possède des dégâts bonus aux dégâts uniquement non-critiques, renseignez-les dans "Formule bonus dégâts critiques".
+- Vérifiez que les valeurs de l'attaque sont correctes.
+> A ce stade, vous remarquerez peut-être que certaines attaques naturelles principales n'ont pas les bonnes valeurs sur une créature possédant des armes manufacturées. C'est parce que les attaques naturelles deviennent toutes secondaires au court d'une attaque à outrance incluant des armes manufacturées. Elles subissent donc un malus de -5 au jet d'attaque et leur modificateur aux dégâts passe à x0.5. Ces malus sont déjà comptés dans les blocs de statistiques des monstres, mais pas dans Foundry.
+Il n'y a malheureusement pas de méthode élégante pour automatiser ce comportement actuellement. Lors du jet d'attaque pour le monstre, il faudra donc, sur la pop-up du jet pour l'attaque, décocher la case "Attaque principale" et indiquez un malus de -5 au jet d'attaque.
+{.is-info}
+- Si le dé de dégât est incorrect, c'est probablement que la créature considère son arme comme d'une taille différente par rapport aux autres créatures. Si le dé est trop gros, diminuez le deuxième nombre de la formule `sizeRoll()` pour atteindre la bonne taille. Si le dé est trop petit, augmentez-le à la place.
+- Si l'attaque naturelle peut être effectuée plusieurs fois (par exemple, 2 sabots), cliquez sur "Add Extra Attack" pour chaque attaque supplémentaire.
+- Si l'attaque naturelle possède des attaques supplémentaires en trop, cliquez sur la poubelle à côté de l'attaque supplémentaire jusqu'à avoir supprimé toutes les attaques en trop.
+- Si l'attaque naturelle a des dés de dégâts bonus permanents (comme un Ver du froid qui a 4d6 dégâts de froid supplémentaires), cliquez sur "Add Damage Formula" et renseignez les dégâts bonus et leur type.
+- Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne. Renseignez aussi le nom de l'effet entre parenthèses dans le nom de l'attaque.
+- Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le DD. Renseignez également le type de jet de sauvegarde à effectuer.
+![morsure_reaction_allergique.png](/pf1/morsure_reaction_allergique.png)
 
 **8.2.2 : Sans le compendium**
 
-**8.3 : Modificateurs conditionnels**
+- Dans la catégorie "Armes naturelles", cliquez sur "+Ajouter".
+- Editez l'attaque naturelle.
+- Sélectionnez une icone pour l'attaque en cliquant sur l'icone.
+- Cochez la case "Attaque principale" si l'arme naturelle est une attaque principale.
+- Si une capacité du monstre indique qu'il considère une de ses attaques naturelles comme une attaque principale ou secondaire, refletez cette capacité en cochant ou décochant "Attaque principale".
+Si c'est une attaque secondaire devenue principale, changez le multiplicateur de la caractéristique pour les dégâts à x1.
+Si c'est une attaque principale devenue secondaire, changez le multiplicateur de la caractéristique pour les dégâts à x0.5.
+- Si la créature a le don Attaques multiples et que l'attaque naturelle est une attaque naturelle secondaire, indiquez "3" dans le champ "Bonus au jet d'attaque".
+Pour rappel, une attaque secondaire subit normalement -5 au jet d'attaque et son multiplicateur de Force aux dégâts est de 0.5. Le don Attaques multiples permet de passer ce malus de -5 à -2. Rajouter +3 à l'attaque permet donc de faire passer le malus de -5 à -2.
+- S'il s'agit de l'unique attaque de la créature, cochez la case "Attaque principale".
+- S'il s'agit de l'unique attaque de la créature et qu'elle ne peut l'effectuer qu'une fois, changez le multiplicateur de la caractéristique pour les dégâts à x1.5.
+- Indiquez le coup d'activation. Il s'agit en général d'une action simple.
+- Renseignez la portée (en pieds) et le nombre maximum d'incréments de portée.
+Pour rappel, une arme de jet a au maximum 5 incréments de portée, et une arme à munition a au maximum 10 incréments de portée.
+Pour une arme pouvant aussi bien être utilisée au corps à corps qu'à distance, renseignez les valeurs pour le Type de base et pour le Type "Sous-type à distance". Les informations sont gardées en mémoire même si les champs ne sont pas visibles.
+- Si l'attaque peut être utilisée qu'un certain nombre de fois, renseignez la partie "Utilisations limitées". Vérifiez que "Déduire automatiquement la charge" est coché.
+- Dans "Action", renseignez le type d'action, le facteur de critique et le multiplicateur de critique, la caractéristique utilisée pour l'attaque, la caractéristique utilisée pour les dégâts et le multiplicateur du bonus au dégâts.
+- Dans "Formule de dégâts", indiquez la formule de dégâts avec la fonction `sizeRoll()` décrite en 8.1 pour les attaques faisant des dégâts contondants, perçants ou tranchants. Renseignez également le type de dégâts (C, P, T...).
+Pour rappel, la formule est `sizeRoll(X, Y, @size)`, où X est le nombre de dés à lancer pour une arme de taille M et Y le type de dés à lancer pour une arme de taille M.
+- Dans "Formule de dégâts", indiquez les dès de dégâts comme indiqués sur le profil de la créature pour les autre types de dégâts.
+- Si la créature possède plusieurs types de dégâts (comme un Ver du Froid qui a des dégâts normaux et 4d6 dégâts de froid supplémentaires), cliquez sur "Add Damage Formula" afin de créer un jet séparé pour chaque type de dégâts.
+> Notez que le bonus d'attribut aux dégâts ne s'applique qu'à la première attaque de la liste.
+{.is-info}
+- Vérifiez que les valeurs de l'attaque sont correctes.
+> A ce stade, vous remarquerez peut-être que certaines attaques naturelles principales n'ont pas les bonnes valeurs sur une créature possédant des armes manufacturées. C'est parce que les attaques naturelles deviennent toutes secondaires au court d'une attaque à outrance incluant des armes manufacturées. Elles subissent donc un malus de -5 au jet d'attaque et leur modificateur aux dégâts passe à x0.5. Ces malus sont déjà comptés dans les blocs de statistiques des monstres, mais pas dans Foundry.
+Il n'y a malheureusement pas de méthode élégante pour automatiser ce comportement actuellement. Lors du jet d'attaque pour le monstre, il faudra donc, sur la pop-up du jet pour l'attaque, décocher la case "Attaque principale" et indiquez un malus de -5 au jet d'attaque.
+{.is-info}
+- Si le dé de dégât est incorrect, c'est probablement que la créature considère son arme comme d'une taille différente par rapport aux autres créatures. Si le dé est trop gros, diminuez le deuxième nombre de la formule `sizeRoll()` pour atteindre la bonne taille. Si le dé est trop petit, augmentez-le à la place.
+- Si l'attaque naturelle peut être effectuée plusieurs fois (par exemple, 2 sabots), cliquez sur "Add Extra Attack" pour chaque attaque supplémentaire.
+- Si l'attaque possède des dégâts bonus aux dégâts critiques, renseignez-les dans "Formule bonus dégâts critiques".
+- Si l'attaque possède des dégâts bonus aux dégâts uniquement non-critiques, renseignez-les dans "Formule bonus dégâts critiques".
+- Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne. Renseignez aussi le nom de l'effet entre parenthèses dans le nom de l'attaque.
+- Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le DD. Renseignez également le type de jet de sauvegarde à effectuer.
+
+**8.3 : Attaques spéciales**
+- Dans la catégorie qui correspond le mieux à l'attaque spéciale, autre que (Attaques avec armes" et "Attaques naturelles" (par exemple "Capacités raciales" pour une attaque de Toile d'araignée), cliquez sur "+Ajouter".
+- Editez l'attaque.
+- Dans "Description", renseignez la description de l'attaque.
+![exemple_toile.png](/pf1/exemple_toile.png)
+- Suivez les mêmes étapes que pour renseigner une attaque naturelle sans compendium (cf 8.2.2).
+
+
+**8.4 : Ajouter les modificateurs conditionnels aux attaques**
 
 Onglet Modificateurs conditionnels :
 - Si l'arme a des dégâts bonus ou des bonus non-permanents grace à des capacités ou des propriétés spéciales (comme une arme de feu, une Attaque sournoise ou le Réservoir Arcanique de Magus), cliquez sur "ajouter une condition".
