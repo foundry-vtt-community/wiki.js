@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T18:04:57.679Z
+date: 2021-02-19T18:12:33.978Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -78,6 +78,7 @@ S'il n'y a pas de DVs Racial, il faudra sûrement ajouter une race et une classe
 "Primary", "Secondary" et "Tertiary" permettent chacun de faire apparaître un onglet pour la magie. Il n'y a aucune différence entre eux. Le fait qu'il y en ait trois sert principalement dans le cas d'une créature qui a des niveaux dans deux classes de lanceur de sort (comme un théurge mystique prêtre/magicien).
 
 ## 4. Sommaire
+- Renseignez le FP de base de la créature
 - Indiquer la Taille
 - Mettre le bon Alignement (roue dentée)
 - Si il s'agit d'une créature qui n'a pas une race de PJ, cliquez sur le "+" à droite de "Race" pour ajouter une nouvelle race (cf [4.1](/fr/systemes/pf1/monstres#h-41-race-non-pj) pour voir la configuration)
