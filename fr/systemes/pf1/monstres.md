@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T15:36:14.612Z
+date: 2021-02-19T17:25:05.933Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -262,8 +262,6 @@ Onglet Détails :
 
 **8.2 : Armes naturelles**
 
-(TODO : explication sur pourquoi les armes naturelles principales ont pas les mêmes stats que sur le bestiaire pour un monstre qui a une arme manufacturée)
-
 **8.2.1 : Avec le compendium**
 
 > Le compendium des armes naturelles n'est pas encore partagé sur le module. Il sera mis à disposition sous peu.
@@ -392,6 +390,7 @@ Si vous souhaitez garder les mêmes icones que celles utilisées dans le compend
 > - Invocation : `systems/pf1/icons/spells/wild-orange-2.jpg`
 > - Nécromancie : `systems/pf1/icons/spells/horror-eerie-2.jpg`
 > - Transmutation : `systems/pf1/icons/spells/vines-eerie-1.jpg`
+- Allez dans l'onglet Détails.
 - Renseignez l'école du sort, la branche (indiquée entre parenthèses) et le type (indiqué entre crochets).
 - Indiquez si le sort est soumis à la Résistance à la Magie, peut être lancé à volonté, fait des dégâts non-létaux
 - Renseignez les composantes du sort
@@ -399,13 +398,32 @@ Si vous souhaitez garder les mêmes icones que celles utilisées dans le compend
 - Si nécessaire, renseignez les autres informations de la partie "Détails du sort".
 - Indiquez dans "Lancement de sort" l'action à réaliser pour lancer le sort.
 - Renseignez la cible, la portée, la zone d'effet et la durée du sort.
-Pour la durée, vous pouvez la renseigner en utilisant une formule. Par exemple : `[[10*@cl]] minutes` pour un sort durant 10 minutes par niveau indiquera "100 minutes" pour une créature de NLS 10.
+Pour la durée, vous pouvez la renseigner en utilisant une formule. Par exemple : `10 minutes/niveau ([[10*@cl]] minutes)` pour un sort durant 10 minutes par niveau indiquera "10 minutes/niveau (100 minutes)" pour une créature de NLS 10.
 Les portées courte, moyenne et longue sont calculées automatiquement.
 - Renseignez dans "Effets de sort" le type d'action utilisé.
-- 
+Pour un sort d'attaque demandant un jet d'attaque, sélectionnez "Attaque de sort au corps à corps" ou "Attaque de sort à distance".
+Pour un sort demandant un jet de sauvegarde, sélectionnez "Jet de protection (Sort)".
+Pour un sort de soin, sélectionnez "Soins".
+Pour un sort permettant une manoeuvre offensive, sélectionnez "Melee Combat Maneuver" ou "Ranged Combat Maneuver".
+- Renseignez l'effet du sort, la caractéristique pour l'attaque et la caractéristique pour les dégâts le cas échéant.
+- Si le sort produit plusieurs projectiles en même temps (comme Projectile Magique ou Rayon Ardent), cliquez sur "Add Extra Attack" pour chaque projectile.
+- Si le sort fait des dégâts, cliquez sur "Add Damage Formula" et renseignez la formule de dégâts du sort. Renseignez les dégâts bonus critiques et non-critiques le cas échéant.
+> Si vous savez vous servir des formules, nous vous conseillons d'utiliser des formules qui s'adaptent au nombre de DVs ou au NLS de la créature, afin de pouvoir modifier automatiquement les dégâts des sorts si la créature gagne des niveaux.
+{.is-info}
+- Si le sort fait des soins, cliquez sur "Add Healing Formula" et renseignez la formule de soins du sort.
+- Si la créature a un bonus au DD pour ce sort, indiquez ce bonus dans "DD compensé".
+Notez que le DD de base du sort est calculé automatiquement, et que ce DD compensé vient s'ajouter au DD du sort.
+- Si le sort demande un jet de sauvegarde à la cible, sélectionnez le type de jet à faire. Dans "Effet du jet de sauvegarde", renseignez la partie "Jet de Sauvegarde" du bloc descriptif du sort.
+- Vous pouvez indiquer dans "Notes sur les attaques" et "Notes sur les effets" des notes contextuelles que vous voulez voir apparaître dans le chat lorsque le sort est utilisé.
+- Dans la partie description, rentrez le reste du texte de description du sort.
 
-> A terminer
-{.is-danger}
+Maintenant, si vous allez dans l'onglet Description, vous verrez que la description du sort s'est remplie automatiquement avec les informations que vous avez renseigné.
+
+![suggestion.png](/pf1/suggestion.png)
+
+![suggestion2.png](/pf1/suggestion2.png)
+
+- Si la créature possède des capacités pouvant modifier le NLS ou le DD d'un sort suivant certaines conditions, vous pouvez les renseigner dans l'onglet Modificateurs conditionnels. Cet onglet fonctionne de la même façon que pour les attaques (cf 8.4).
 
 #### 11. Effets :
 
