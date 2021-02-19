@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T10:22:55.964Z
+date: 2021-02-19T10:51:16.103Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -91,7 +91,7 @@ Il faudra arrondir au multiple de 5 supérieur. Exemple pour 18m, mettre 60pieds
 Les DVs raciaux ont un niveau de classe égal au nombre de DVs de la créature
 Les PVs de la créature sont à mettre dans "Points de vie". Notez les PVs sans les améliorations telles que la Constitution, le don Robustesse ou les archétypes.
 
-##### 4.1 Race non-PJ :
+**4.1 Race non-PJ :**
 - Après avoir créé la race, l'éditer
 Onglet détails :
 - Choisir le bon type de créature
@@ -109,4 +109,50 @@ Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+
 Si une créature a une caractéristique nulle (par exemple, "Int -"), videz la cellule correspondante. Le modificateur devrait passer à "+0".
 - Choisir la bonne **Taille**
 - Renseignez les **Sens**, **Réduction aux dégâts**, **Régénération**, **Guérison accélérée**, **Résistance à l'énergie**, **Résistances**, **Immunités aux dégâts**, **Vulnérabilités aux dégâts**, **Immunités** et **Langues**.
-Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnérabilité aux dégâts, l'immunité et la langue, vous pouvez les rajouter dans le champ "spéciale" en les séparant avec un point-virgule `;`.
+Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnérabilité aux dégâts, l'immunité et la langue, vous pouvez les rajouter dans le champ "spéciale" en les séparant avec un point-virgule <kbd>;</kbd>.
+
+#### 6. Inventaire :
+
+> Ne pas renseigner ici ni les armes naturelles ni l'armure naturelle.
+{.is-warning}
+
+**6.1 : Cas où l'équipement est dans un compendium**
+- Si la créature a un inventaire et que ce n'est pas déjà fait, renseigner son inventaire ici. Pensez bien à équiper les armes et les armures pour qu'elles soient prises en compte. Pour ça, vérifiez si la coche de la colonne "équipé" (la colonne avec un casque, une épée et un bouclier) est bien sur ✔️. Si ce n'est pas le cas, cliquez sur la coche pour la changer d'état.
+
+**6.2 : Cas où l'arme n'est pas dans un compendium**
+- Dans la catégorie "Armes", cliquez sur "+".
+- Editez la nouvelle arme créée.
+- Sélectionnez une icone pour l'arme en cliquant sur l'icone.
+Si vous créez cette arme pour la partager avec d'autres, privilégiez les icones qui sont soit dans le *System PF1*, soit dans *le Module Pathfinder 1 - Improvement for French*, afin d'éviter que les autres utilisateurs aient une icone "cassée".
+- Renseignez le nom de l'arme.
+- Dans la "Description", renseignez la description de l'arme, ainsi que son prix (en po), son poids (en kg), ses PVs et sa solidité. Si la créature possède plusieurs exemplaires de la même arme, indiquez-en le nombre dans "Quantité".
+![exemple_description_arme.png](/pf1/exemple_description_arme.png)
+
+Onglet "Détails" :
+- Renseignez la catégorie, le type et la taille de l'arme.
+- Assurez-vous que la case "Equipé" est cochée.
+- Renseignez les propriétés spéciales de l'arme.
+- Renseignez les dégâts de base de l'arme (pour une taille moyenne), les types de dégâts, et la zone et le multiplicateur de critique.
+
+**6.3 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium**
+
+**6.4 : Cas où un autre objet n'est pas dans un compendium**
+
+**6.5 : Version de maître d'un équipement**
+
+**6.6 : Version magique d'un équipement**
+
+#### 7. Capacités :
+
+#### 8. Combat :
+
+**8.1 : Arme manufacturée**
+
+**8.2 : Armes naturelle**
+
+**8.2.1 : Avec le compendium**
+
+> Le compendium des armes naturelles n'est pas encore partagé sur le module. Pour l'obtenir, demandez-le sur le serveur Discord français PF1.
+{.is-warning}
+
+**8.2.2 : Sans le compendium**
