@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-17T17:49:40.978Z
+date: 2021-02-19T10:17:33.502Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -77,10 +77,32 @@ Tout est normalement bien renseigné sauf :
 - Cocher Spell-likes, Primary et autres **si** votre monstre a des Pouvoirs magiques ou Peut lancer des Sorts.
 
 #### 4. Compléter le sommaire :
+- Indiquer la Taille
 - Mettre le bon Alignement (roue dentée)
+- Si il s'agit d'une créature qui n'a pas une race de PJ, cliquez sur le "+" à droite de "Race" pour ajouter une nouvelle race (cf 4.1 pour voir la configuration)
+- Si il s'agit d'une créature qui a une race de PJ, ouvrez le compendium "Races" et glissez-déposez la race correspondante.
 - Indiquer en ***feet (pieds)*** la vitesse de déplacement (base, nage, escalade, creusement et/ou vol). Foundry fera automatiquement la conversion en mètres. 
 Il faudra arrondir au multiple de 5 supérieur. Exemple pour 18m, mettre 60pieds ~~(et non pas 59).~~
-Indiquer la manoeuvre de vol.
+- Indiquer la manoeuvre de vol.
+- Dans l'onglet Classes, supprimez la Classe générique si ce n'est pas déjà fait
+- Pour les créatures ayant des DVs raciaux, ouvrez le compendium "DVs raciaux" et glissez-déposez le bon type de DV racial
+- Pour les créatures ayant des niveaux de classe, ouvrez le compendium "Classes" et glissez-déposez la bonne classe
+- Editez les DVs raciaux et les Classes pour mettre le bon niveau et le bon nombre de points de vie
+Les DVs raciaux ont un niveau de classe égal au nombre de DVs de la créature
+Les PVs de la créature sont à mettre dans "Points de vie". Notez les PVs sans les améliorations telles que la Constitution, le don Robustesse ou les archétypes.
+
+##### 4.1 Race non-PJ :
+- Après avoir créé la race, l'éditer
+Onglet détails :
+- Choisir le bon type de créature
+- Si la créature a des sous-types, cliquer sur "Sous-types", puis cliquer sur "+" pour ajouter un sous-type et le renseigner en toutes lettres. Répéter pour chaque sous-type.
+Onglet changements :
+- Dans "changements", renseigner les modificateurs raciaux aux compétences (sauf celles pour une utilisation spécifique de la compétence)
+- Dans "notes de contexte", renseigner les modificateurs raciaux aux compétences spécifiques à une utilisation de la compétence
+![race.png](/pf1/race.png)
+- Dans "notes de contexte", renseigner les bonus spécifiques au BMO.
+Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+3]] en lutte | Div. | BMO`
+(note : les modificateurs de DMD seront indiqués plus tard)
 
 #### 5. Attributs :
 - Vérifier que les Caractéristiques sont Correctement renseignées.
