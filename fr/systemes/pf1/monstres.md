@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:42:57.539Z
+date: 2021-02-19T17:44:55.539Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -436,7 +436,7 @@ Si vous ne voulez pas voir apparaître l'icone de l'effet, cochez "Caché du jet
 
 Renseignez ici le bloc de statistiques de la créature.
 
-## 13 Vérifications
+## 13. Vérifications
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
 
 > Vous venez de créer votre propre entrée du bestiaire ! Félicitations 🥳
