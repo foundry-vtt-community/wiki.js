@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:29:49.777Z
+date: 2021-02-19T17:30:14.492Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -108,7 +108,7 @@ Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+
 > A ce stade, toutes les valeurs dans Infos rapides et Points de vie ne seront pas forcément bonnes. C'est normal : elles se corrigeront au fil du remplissage de la fiche. 
 {.is-info}
 
-## 5. Attributs :
+## 5. Attributs
 - Vérifier que les Caractéristiques sont Correctement renseignées.
 Si une créature a une caractéristique nulle (par exemple, "Int -"), videz la cellule correspondante. Le modificateur devrait passer à "+0".
 - Choisir la bonne **Taille**
