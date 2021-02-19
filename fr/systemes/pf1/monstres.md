@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T12:39:53.429Z
+date: 2021-02-19T13:18:21.727Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -143,6 +143,7 @@ Onglet "Détails" :
 - Renseignez les propriétés spéciales de l'arme.
 - Renseignez les dégâts de base de l'arme (pour une taille moyenne), les types de dégâts, la zone et le multiplicateur de critique, la portée (en pieds) et le nombre maximum d'incréments de portée.
 Pour rappel, une arme de jet a au maximum 5 incréments de portée, et une arme à munition a au maximum 10 incréments de portée.
+Pour une arme pouvant aussi bien être utilisée au corps à corps qu'à distance, renseignez les valeurs pour le Type de base et pour le Type "Sous-type à distance". Les informations sont gardées en mémoire même si les champs ne sont pas visibles.
 
 **6.4 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium**
 - Dans la catégorie "Armure/Equipement", cliquez sur "+".
@@ -244,18 +245,44 @@ Onglet Changements :
 #### 8. Combat :
 
 **8.1 : Arme manufacturée**
-(TODO : penser aux armes avec des dés de dégâts bonus (de feu) et aux attaques sournoises)
+
+Onglet Détails :
+- Retournez sur l'onglet "Inventaire".
+- Editez l'arme pour laquelle vous voulez créer une attaque.
+- Dans "Détails", cliquez sur "créer une attaque" tout en bas.
+- Retournez sur l'onglet "Combat".
+- Vérifiez que les valeurs de l'attaque sont correctes.
+> Vous remarquerez que la formule de dégâts est maintenant de la forme `sizeRoll(1,4,@size)`. Il s'agit d'une formule permettant de calculer le dé de dégât en fonction de la taille. Le premier nombre indique le nombre de dés à lancer pour une arme de taille M, et le deuxième nombre le type de dé à lancer pour une arme de taille M. Vous pouvez voir les dés qui seront finalement lancés dans la colonne "dégâts" du tableau de l'onglet Combat.
+{.is-info}
+- Si le dé de dégât est incorrect, c'est probablement que la créature considère son arme comme d'une taille différente par rapport aux autres créatures. Si le dé est trop gros, diminuez le deuxième nombre de la formule `sizeRoll()` pour atteindre la bonne taille. Si le dé est trop petit, augmentez-le à la place.
+- Si l'attaque provoque un effet (comme étreinte, croc-en-jambe ou un poison), renseignez-le dans le champ "Notes sur les attaques". Vous pouvez séparer les effets en allant à la ligne.
+- Si l'attaque demande un jet de sauvegarde à cause d'un effet (comme un poison), récupérez la formule du DD de l'effet (comme indiqué en 7.2) et indiquez-la dans le D. Renseignez également le type de jet de sauvegarde à effectuer.
 
 **8.2 : Armes naturelle**
+
+
 
 (TODO : explication sur pourquoi les armes naturelles principales ont pas les mêmes stats que sur le bestiaire pour un monstre qui a une arme manufacturée)
 
 **8.2.1 : Avec le compendium**
 
-> Le compendium des armes naturelles n'est pas encore partagé sur le module. Pour l'obtenir, demandez-le sur le serveur Discord français PF1.
+> Le compendium des armes naturelles n'est pas encore partagé sur le module. Il sera mis à disposition sous peu.
 {.is-warning}
 
 **8.2.2 : Sans le compendium**
+
+**8.3 : Modificateurs conditionnels**
+
+Onglet Modificateurs conditionnels :
+- Si l'arme a des dégâts bonus ou des bonus non-permanents grace à des capacités ou des propriétés spéciales (comme une arme de feu, une Attaque sournoise ou le Réservoir Arcanique de Magus), cliquez sur "ajouter une condition".
+- Renseignez le nom de la condition.
+- Cliquez sur "Ajouter un effet".
+- Renseignez la formule des dés bonus ou des bonus non-permanents.
+- S'il s'agit d'un bonus au jet d'attaque, sélectionnez "Jet d'attaque", puis renseignez sur quel jet l'effectuer, le type du bonus, et si le bonus s'applique à tous les jets ("normal") ou juste au jet de confirmation de critique.
+- S'il s'agit de dégâts bonus, sélectionnez "Dégâts", puis renseignez sur quel jet l'effectuer, le type de dégâts, et si le bonus s'applique à tous les jets ("normal") ou juste aux jets critiques ou juste aux jets non-critiques.
+- Répétez pour chaque bonus.
+- Cochez la case devant les bonus qui sont actifs par défaut, comme les bonus gratuits sans conditions tels que "de feu". Cela évitera de devoir les sélectionner à chaque fois qu'on fera une attaque, mais permettra de les désactiver si nécessaire.
+![modificateurs_conditionnels.png](/pf1/modificateurs_conditionnels.png)
 
 #### ??? Vérifications :
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
