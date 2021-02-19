@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T10:51:16.103Z
+date: 2021-02-19T11:00:35.822Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -119,7 +119,9 @@ Si vous ne trouvez pas la bonne valeur pour l'immunité aux dégâts, la vulnér
 **6.1 : Cas où l'équipement est dans un compendium**
 - Si la créature a un inventaire et que ce n'est pas déjà fait, renseigner son inventaire ici. Pensez bien à équiper les armes et les armures pour qu'elles soient prises en compte. Pour ça, vérifiez si la coche de la colonne "équipé" (la colonne avec un casque, une épée et un bouclier) est bien sur ✔️. Si ce n'est pas le cas, cliquez sur la coche pour la changer d'état.
 
-**6.2 : Cas où l'arme n'est pas dans un compendium**
+**6.2 : Baguettes, Potions et Parchemins**
+
+**6.3 : Cas où l'arme n'est pas dans un compendium**
 - Dans la catégorie "Armes", cliquez sur "+".
 - Editez la nouvelle arme créée.
 - Sélectionnez une icone pour l'arme en cliquant sur l'icone.
@@ -134,13 +136,33 @@ Onglet "Détails" :
 - Renseignez les propriétés spéciales de l'arme.
 - Renseignez les dégâts de base de l'arme (pour une taille moyenne), les types de dégâts, et la zone et le multiplicateur de critique.
 
-**6.3 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium**
+**6.4 : Cas où l'armure/bouclier/objet donnant de la CA n'est pas dans un compendium**
+- Dans la catégorie "Armure/Equipement", cliquez sur "+".
+- Editez la nouvelle armure créée.
+- Sélectionnez une icone pour l'armure en cliquant sur l'icone.
+Si vous créez cette armure pour la partager avec d'autres, privilégiez les icones qui sont soit dans le *System PF1*, soit dans *le Module Pathfinder 1 - Improvement for French*, afin d'éviter que les autres utilisateurs aient une icone "cassée".
+- Renseignez le nom de l'armure.
+- Dans la "Description", renseignez la description de l'armure, ainsi que son prix (en po), son poids (en kg), ses PVs et sa solidité.
+![exemple_description_armure.png](/pf1/exemple_description_armure.png)
 
-**6.4 : Cas où un autre objet n'est pas dans un compendium**
+Onglet "Détails" :
+- Renseignez la catégorie, le type et la taille de l'armure.
+- Assurez-vous que la case "Equipé" est cochée.
+- Renseignez le bonus à la Classe d'Armure, le modificateur maximum de Dextérité, la Pénalité d'armure et le Risque d'échec des sorts profanes de l'armure.
 
-**6.5 : Version de maître d'un équipement**
+**6.5 : Cas où un autre objet n'est pas dans un compendium**
+- Dans la catégorie de votre choix, cliquez sur "+".
+- Editez le nouvel objet créé.
+- Sélectionnez une icone pour l'objet en cliquant sur l'icone.
+Si vous créez cette armure pour la partager avec d'autres, privilégiez les icones qui sont soit dans le *System PF1*, soit dans *le Module Pathfinder 1 - Improvement for French*, afin d'éviter que les autres utilisateurs aient une icone "cassée".
+- Renseignez le nom de l'objet.
+- Dans la "Description", renseignez la description de l'objet, ainsi que son prix (en po), son poids (en kg), ses PVs et sa solidité. Si la créature possède plusieurs exemplaires du même objet, indiquez-en le nombre dans "Quantité".
 
-**6.6 : Version magique d'un équipement**
+**6.6 : Version de maître d'un équipement**
+
+- Dans l'onglet "Détails", cochez la case "De maître".
+
+**6.7 : Version magique d'un équipement**
 
 #### 7. Capacités :
 
