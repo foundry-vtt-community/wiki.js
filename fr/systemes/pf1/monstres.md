@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T15:04:13.921Z
+date: 2021-02-19T15:34:31.509Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -379,7 +379,33 @@ Les Pouvoirs Magiques utilisent le Charisme.
 - Si le sort est au mauvais niveau, éditez le sort et changez la valeur du "Niveau du sort" en conséquences.
 
 **10.2 : Sans le compendium**
-- Au niveau du sort que vous souhaitez ajouter, 
+- Au niveau du sort que vous souhaitez ajouter, cliquez sur "+".
+- Editez le sort.
+- Renseignez le nom du sort. Si le sort a une condition, renseignez-la également ici entre parenthèses.
+- Choisissez une icone pour le sort.
+Si vous souhaitez garder les mêmes icones que celles utilisées dans le compendium, en voici la liste par école :
+> - Abjuration : `systems/pf1/icons/spells/protect-sky-2.jpg`
+> - Divination : `systems/pf1/icons/spells/evil-eye-eerie-1.jpg`
+> - Enchantement : `systems/pf1/icons/spells/wind-grasp-air-2.jpg`
+> - Evocation : `systems/pf1/icons/spells/fire-arrows-2.jpg`
+> - Illusion : `systems/pf1/icons/spells/fog-blue-3.jpg`
+> - Invocation : `systems/pf1/icons/spells/wild-orange-2.jpg`
+> - Nécromancie : `systems/pf1/icons/spells/horror-eerie-2.jpg`
+> - Transmutation : `systems/pf1/icons/spells/vines-eerie-1.jpg`
+- Renseignez l'école du sort, la branche (indiquée entre parenthèses) et le type (indiqué entre crochets).
+- Indiquez si le sort est soumis à la Résistance à la Magie, peut être lancé à volonté, fait des dégâts non-létaux
+- Renseignez les composantes du sort
+- S'il s'agit d'un pouvoir magique, indiquez le nombre d'utilisations restantes.
+- Si nécessaire, renseignez les autres informations de la partie "Détails du sort".
+- Indiquez dans "Lancement de sort" l'action à réaliser pour lancer le sort.
+- Renseignez la cible, la portée, la zone d'effet et la durée du sort.
+Pour la durée, vous pouvez la renseigner en utilisant une formule. Par exemple : `[[10*@cl]] minutes` pour un sort durant 10 minutes par niveau.
+Les portées courte, moyenne et longue sont calculées automatiquement.
+- Renseignez dans "Effets de sort" le type d'action utilisé.
+- 
+
+> A terminer
+{.is-danger}
 
 #### 11. Effets :
 
