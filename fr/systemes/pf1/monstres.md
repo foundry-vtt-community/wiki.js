@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T14:37:52.549Z
+date: 2021-02-19T14:45:47.110Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -356,6 +356,23 @@ Onglet Modificateurs conditionnels :
 - Renseignez les rangs dans chaque compétence.
 - Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature (un élémentaire du feu gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
 Il est également possible que la créature possède un don du type Talent (cf 7) ou un bonus racial (cf 4.1) que vous n'avez pas correctement complété.
+
+#### 10. Effets :
+
+Si la créature a des effets spéciaux que vous souhaitez renseigner, comme la transformation d'un élémentaire de l'eau grace à la capacité "Vortex", vous pouvez les indiquer ici. Les effets fonctionnent comme des capacités, mis à part qu'ils peuvent être activés ou désactivés.
+Si vous voulez faire apparaître l'effet sur le jeton de la créature, donnez un icone à cet effet afin de pouvoir le reconnaître.
+Si vous ne voulez pas voir apparaître l'icone de l'effet, cochez "Caché du jeton" dans l'onglet Détails.
+
+#### 11. Notes :
+
+Renseignez ici le bloc de statistiques de la créature.
+
+#### 12. Réglages :
+
+- Si ce n'est pas déjà fait, vérifiez que les scores de caractéristiques de la partie "Ability Score Links" sont bien renseignés.
+- Si ce n'est pas déjà fait, cochez les cases nécessaire à l'utilisation de la magie de la créature dans la partie "Spellbooks".
+"Spell-likes" sert pour les pouvoirs magiques.
+"Primary", "Secondary" et "Tertiary" permettent chacun de faire apparaître un onglet pour la magie. Il n'y a aucune différence entre eux. Le fait qu'il y en ait trois sert principalement dans le cas d'une créature qui a des niveaux dans deux classes de lanceur de sort (comme un théurge mystique prêtre/magicien).
 
 #### ??? Vérifications :
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
