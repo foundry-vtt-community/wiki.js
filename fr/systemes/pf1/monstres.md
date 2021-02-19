@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T15:34:31.509Z
+date: 2021-02-19T15:36:14.612Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -399,7 +399,7 @@ Si vous souhaitez garder les mêmes icones que celles utilisées dans le compend
 - Si nécessaire, renseignez les autres informations de la partie "Détails du sort".
 - Indiquez dans "Lancement de sort" l'action à réaliser pour lancer le sort.
 - Renseignez la cible, la portée, la zone d'effet et la durée du sort.
-Pour la durée, vous pouvez la renseigner en utilisant une formule. Par exemple : `[[10*@cl]] minutes` pour un sort durant 10 minutes par niveau.
+Pour la durée, vous pouvez la renseigner en utilisant une formule. Par exemple : `[[10*@cl]] minutes` pour un sort durant 10 minutes par niveau indiquera "100 minutes" pour une créature de NLS 10.
 Les portées courte, moyenne et longue sont calculées automatiquement.
 - Renseignez dans "Effets de sort" le type d'action utilisé.
 - 
