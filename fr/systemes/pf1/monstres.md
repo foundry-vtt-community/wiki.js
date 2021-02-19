@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T12:38:30.348Z
+date: 2021-02-19T12:39:53.429Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -236,6 +236,10 @@ La formule donnée en exemple se traduit donc : "10 + la moitié des DVs de la c
 {.is-info}
 - Indiquez dans "Notes sur les effets" des notes contextuelles qui apparaitront sous la capacité dans le chat lorsque vous utiliserez la capacité.
 ![exemple_capacite_poison.png](/pf1/exemple_capacite_poison.png)
+
+Onglet Changements :
+- Dans "Changements", indiquez les bonus fixes qui ne sont pas des dés bonus aux dégâts apportés par la capacité.
+- Dans "Notes de contexte", renseignez les bonus conditionnels apportés par la capacité.
 
 #### 8. Combat :
 
