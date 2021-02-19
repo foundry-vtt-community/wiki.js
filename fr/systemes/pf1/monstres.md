@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T17:25:05.933Z
+date: 2021-02-19T17:26:06.511Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -12,7 +12,7 @@ dateCreated: 2021-02-17T10:02:58.859Z
 Tout d'abord, sachez qu'un compendium de monstres importés depuis le site existe déjà. Pour cela vous n'avez qu'à utiliser la macro de @Dorgendubal : **Compendium - Bestiaire** que vous trouverez dans le compendium **Macros PF1**.
 
 
-## Ajouter Le compendium - Bestiaire de Pathfinder 1 :
+# Ajouter Le compendium - Bestiaire de Pathfinder 1 :
 ![ajout_compendium_bestiaire.jpg](/pf1/ajout_compendium_bestiaire.jpg)
 1. Installer Le module : ***Pathfinder 1 - Improvements for French***
 2. Dans l'onglet Compendium, ouvrez le compendium "Macros PF1".
@@ -22,7 +22,7 @@ Tout d'abord, sachez qu'un compendium de monstres importés depuis le site exist
 
 Voilà vous devriez trouvez votre Bestiaire dans l'onglet compendium.
 
-## Compléter le bestiare :
+# Compléter le bestiare :
 Le Bestiaire généré depuis https://www.pathfinder-fr.org/Wiki/ est déjà super pour importer et jouer rapidement des monstres. Merci encore à tous les contributeurs qui y ont participé.
 
 Mais avons le souhait de compléter manuellement le Bestiaire pour qu'il soit complet (c.à.d, prise en charge des compétences, classes, sorts, inventaire, capacités spéciales, taille, langues...).
@@ -32,7 +32,7 @@ La suite de ce tutoriel permettra de vous indiquer la marche à suivre. L'idée 
 
 **L'idée sera de partir des monstres importés avec la macro ci-dessus afin de profiter de ce qui est déjà saisi.**
 
-### Etape 1 : Répartition des ~~tâches~~ monstres
+## Etape 1 : Répartition des ~~tâches~~ monstres
 Indiquer sur le document [Google Sheet en cliquant ici](https://cutt.ly/Bestiaire_Foundry) quel(s) sont les monstres que vous souhaitez compléter, afin d'éviter qu'on soit plusieurs à faire le même travail plusieurs fois.
 
 Pour les monstres provenant des Bestiaire, vous avez déjà le tableau quasi-complet. Si vous souhaitez participer avec un PNJ/Monstre venant d'une autre campagne (Prévôt Cigue de l'Eveil des Seigneurs des Runes par exemple), merci d'utiliser l'onglet Campagne.
@@ -43,7 +43,7 @@ Dans tous les cas, si vous n'avez pas pu compléter le monstre à 100%, merci de
 
 Commencez déjà par des monstres simples (sans capacités spéciales, nombreux sorts).
 
-### Etape 2 : Les outils nécessaires
+## Etape 2 : Les outils nécessaires
 - Vous aurez besoin du site https://www.pathfinder-fr.org ou des Bestiaire.
 - Vous aurez besoin des Compendiums français (races, DVs raciaux, classe, sorts, effets et autres...). Ils sont tous inclus avec le module ***Pathfinder 1 - Improvements for French***.
 - Je conseille vivement le module ***Quick Insert - Search Widget***, qui vous permettra de ne plus avoir à ouvrir tous les compendiums afin d'ajouter les différents "objets" (par objets, comprendre toutes les fiches non personnages : races, sorts, capacités etc.). C'est bien plus rapide et pratique !!!
@@ -53,8 +53,8 @@ Vous pourrez également glisser déposer un monstre directement sur la map.
 {.is-success}
 
 
-### Etape 3 : Compléter la fiche
-#### 1. Supprimer Ajustements et Classe générique
+## Etape 3 : Compléter la fiche
+### 1. Supprimer Ajustements et Classe générique
 - Supprimer les ***ajustements*** dans l'onglet "Effets"
 - Editer la ***Classe générique*** (onglet Sommaire -> Classes) afin de prendre note du nombre de ***Points de vie*** du monstre (onglet Détails)
 - Supprimer la Classe générique qui n'est configuré que pour les Points de vie.
