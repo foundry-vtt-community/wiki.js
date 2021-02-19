@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T14:14:04.149Z
+date: 2021-02-19T14:37:52.549Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -349,6 +349,13 @@ Onglet Modificateurs conditionnels :
 - Répétez pour chaque bonus.
 - Cochez la case devant les bonus qui sont actifs par défaut, comme les bonus gratuits sans conditions tels que "de feu". Cela évitera de devoir les sélectionner à chaque fois qu'on fera une attaque, mais permettra de les désactiver si nécessaire.
 ![modificateurs_conditionnels.png](/pf1/modificateurs_conditionnels.png)
+
+#### 9. Compétences :
+
+- Si la créature a un modificateur racial lui permettant d'utiliser un autre attribut que celui normalement utilisé pour la compétence, indiquez-le dans la liste déroulante correspondante.
+- Renseignez les rangs dans chaque compétence.
+- Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature (un élémentaire du feu gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
+Il est également possible que la créature possède un don du type Talent (cf 7) ou un bonus racial (cf 4.1) que vous n'avez pas correctement complété.
 
 #### ??? Vérifications :
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
