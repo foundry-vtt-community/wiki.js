@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T18:12:33.978Z
+date: 2021-02-19T18:13:38.447Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -255,6 +255,9 @@ Onglet Changements :
 
 - Dans "Changements", indiquez les bonus fixes qui ne sont pas des dés bonus aux dégâts apportés par la capacité.
 - Dans "Notes de contexte", renseignez les bonus conditionnels apportés par la capacité.
+
+> A faire : archétypes
+{.is-danger}
 
 ## 8. Combat
 
