@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T14:48:27.383Z
+date: 2021-02-19T15:01:02.718Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -358,15 +358,40 @@ Onglet Modificateurs conditionnels :
 - Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature (un élémentaire du feu gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
 Il est également possible que la créature possède un don du type Talent (cf 7) ou un bonus racial (cf 4.1) que vous n'avez pas correctement complété.
 
-#### 10. Effets :
+#### 10. Sorts
 
-Si la créature a des effets spéciaux que vous souhaitez renseigner, comme la transformation d'un élémentaire de l'eau grace à la capacité "Vortex", vous pouvez les indiquer ici. Les effets fonctionnent comme des capacités, mis à part qu'ils peuvent être activés ou désactivés.
+> Cet onglet n'apparaîtra que si vous avez paramétré au moins un grimoire pour la créature.
+{.is-warning}
+
+- Si la créature a un bonus à la concentration venant d'un don, d'une capacité ou d'un objet, renseignez-le dans "Concentration".
+- Si la créature a un bonus au NLS venant d'un don, d'une capacité ou d'un objet, renseignez-le dans "Niveau de lanceur de sort".
+- Cliquez sur les roues dentées en haut à droite.
+- Dans "Classe utilisant la magie", sélectionnez la classe correspondant à ce grimoire.
+Les Pouvoirs Magiques utilisent la classe "Dé de vie".
+- Renseignez la caractéristique utilisée pour les sorts.
+Les Pouvoirs Magiques utilisent le Charisme.
+- Renseignez le risque d'échec des sorts profanes et le nombre d'emplacement de domaine/d'école de magie supplémentaire par niveau le cas échéant.
+- Cochez les cases à droite selon le cas de la créature.
+
+**10.1 : Avec le compendium**
+- Pour chaque sort, cherchez-le dans le compendium des sorts et glissez-déposez-le dans le grimoire correspondant.
+- Si le sort a une condition, éditez le sort et indiquez la condition dans le nom du sort entre parenthèses.
+- Si le sort est au mauvais niveau, éditez le sort et changez la valeur du "Niveau du sort" en conséquences.
+
+**10.2 : Sans le compendium**
+
+#### 11. Effets :
+
+Si la créature a des effets spéciaux que vous souhaitez renseigner, comme la transformation d'un élémentaire de l'eau grace à la capacité "Vortex" ou l'effet d'un sort d'Armure de mage, vous pouvez les indiquer ici. Les effets fonctionnent comme des capacités, mis à part qu'ils peuvent être activés ou désactivés.
 Si vous voulez faire apparaître l'effet sur le jeton de la créature, donnez un icone à cet effet afin de pouvoir le reconnaître.
 Si vous ne voulez pas voir apparaître l'icone de l'effet, cochez "Caché du jeton" dans l'onglet Détails.
 
-#### 11. Notes :
+#### 12. Notes :
 
 Renseignez ici le bloc de statistiques de la créature.
 
 #### ??? Vérifications :
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
+
+> Vous venez de créer votre propre entrée du bestiaire ! Félicitations 🥳
+{.is-success}
