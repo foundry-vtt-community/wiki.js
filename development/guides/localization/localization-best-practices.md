@@ -2,9 +2,9 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-01-15T19:50:13.737Z
-tags: 
-editor: undefined
+date: 2021-02-20T15:40:20.296Z
+tags: localization, translation, guide
+editor: markdown
 dateCreated: 2020-11-19T16:43:45.270Z
 ---
 
@@ -87,6 +87,7 @@ This is a hard one. English wits and jokes are a massive headache to localize. T
 Add newly localizable strings on update notes if possible. If you would like to give more priority to localization and make localization feel welcome, it would help if you included new localizable strings in update notes. Or, express that new strings were added.
 
 ## Try to avoid flags
-This is advice for both developers and translators. Try to avoid including flags when showcasing the currently supported languages or when releasing a translation module. Certain countries do not necessarily associate themselves with the flag that a language is primarily known for, and may cause unwanted political friction (trust me, you don’t want to deal with this). Try using IETF language codes (RFC 4646) instead.
-> [Venea.net](https://www.venea.net/web/culture_code) has an excellent resource for [RFC 4646 language codes](https://en.wikipedia.org/wiki/IETF_language_tag).
+> [Venea.net](https://www.venea.net/web/culture_code) has an excellent resource for [IETF language tags](https://en.wikipedia.org/wiki/IETF_language_tag).
 {.is-info}
+
+This is advice for both developers and translators. Try to avoid including flags when showcasing the currently supported languages or when releasing a translation module. Certain countries do not necessarily associate themselves with the flag that a language is primarily known for, and may cause unwanted political friction (trust me, you don’t want to deal with this). Try using IETF language codes (RFC 4646) instead.
