@@ -2,9 +2,9 @@
 title: Maps, Art & Media
 description: 
 published: true
-date: 2020-12-19T18:16:20.589Z
-tags: 
-editor: undefined
+date: 2021-02-20T12:29:28.106Z
+tags: maps, art, media, icons, music, sounds
+editor: markdown
 dateCreated: 2020-09-23T00:24:38.840Z
 ---
 
@@ -128,13 +128,13 @@ A short overview of free to use media for Foundry VTT. Note that a lot of other 
 ---
 
 ## Jesper Nilsson Cyren
-> "Jesper Nilsson Cyren is creating RPG maps"
+> "Jesper Nilsson Cyren is creating alternative battle maps for official adventures"
 > — *Jesper Nilsson Cyren, Patreon*
 
 ### Link(s) to Media
 * [Patreon](https://www.patreon.com/CyrensMaps/posts)
 
-![https://i.imgur.com/6SwLZWQ.jpg](https://i.imgur.com/6SwLZWQ.jpg)
+![https://i.imgur.com/aoiJlhd.jpeg](https://i.imgur.com/aoiJlhd.jpeg)
 
 ---
 
