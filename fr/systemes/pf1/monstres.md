@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-19T18:13:38.447Z
+date: 2021-02-20T11:46:40.359Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -179,7 +179,6 @@ Si vous créez cette armure pour la partager avec d'autres, privilégiez les ico
 
 - Ajoutez "de maître" dans le nom de l'objet.
 - Dans l'onglet "Détails", cochez la case "De maître".
-- Renseignez "1" dans le champ "Formule de bonus d'attaque".
 
 #### 6.7 : Version magique d'un équipement
 
