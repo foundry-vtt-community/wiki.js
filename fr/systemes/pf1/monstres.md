@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-21T19:47:20.617Z
+date: 2021-02-21T20:41:47.348Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -108,7 +108,7 @@ Onglet changements :
 - Dans "notes de contexte", renseigner les modificateurs raciaux aux compétences spécifiques à une utilisation de la compétence
 ![race.png](/pf1/race.png)
 - Dans "notes de contexte", renseigner les bonus spécifiques au BMO.
-Si une créature a "BMO +7 (+10 en lutte)", renseigner `[[@attributes.cmb.total+3]] en lutte | Div. | BMO`
+Si une créature a "BMO +7 (+10 en lutte)", renseigner `+3 en lutte | Div. | BMO`
 (note : les modificateurs de DMD seront indiqués plus tard)
 
 > A ce stade, toutes les valeurs dans Infos rapides et Points de vie ne seront pas forcément bonnes. C'est normal : elles se corrigeront au fil du remplissage de la fiche. 
