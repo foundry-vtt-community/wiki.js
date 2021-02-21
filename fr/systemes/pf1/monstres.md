@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-21T19:38:33.811Z
+date: 2021-02-21T19:45:56.921Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -384,7 +384,7 @@ Cliquer sur le dé à gauche de "Défenses" affichera ainsi la valeur calculée 
 
 - Si la créature a un modificateur racial lui permettant d'utiliser un autre attribut que celui normalement utilisé pour la compétence, indiquez-le dans la liste déroulante correspondante.
 - Renseignez les rangs dans chaque compétence.
-- Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature (un élémentaire du feu gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
+- Il est possible que vous n'ayez pas assez de points de compétences pour atteindre le bon score. Certains DVs raciaux, comme les Elémentaires, proposent de choisir des compétences au choix sur la créature. De même, certaines classes, comme l'Ensorceleur, ont des sous-classes ajoutant des compétences de classe supplémentaires au personnage. Si c'est le cas de la créature, ouvrez son DV racial ou sa classe depuis la partie "Classes" dans l'onglet "Sommaire". Dans "Détails", cochez les compétences de classe qui semblent manquer à la créature ([un élémentaire du feu](https://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.%C3%89l%C3%A9mentaire%20du%20Feu.ashx) gagne par exemple "Acrobaties" en compétence de classe supplémentaire).
 Il est également possible que la créature possède un don du type Talent (cf [7](/fr/systemes/pf1/monstres#h-7-capacit%C3%A9s)) ou un bonus racial (cf [4.1](/fr/systemes/pf1/monstres#h-41-race-non-pj)) que vous n'avez pas correctement complété.
 
 ## 10. Sorts
