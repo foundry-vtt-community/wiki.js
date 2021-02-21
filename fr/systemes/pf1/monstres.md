@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-20T11:46:40.359Z
+date: 2021-02-21T19:29:37.875Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -200,7 +200,7 @@ Onglet "Changements" :
 
 ## 7. Capacités
 
-- Vérifiez qu vous avez bien renseigné les dons, et renseignez ceux qu'il manque le cas échéant en les faisant glisser-déposer depuis le compendium.
+- Vérifiez que vous avez bien renseigné les dons, et renseignez ceux qu'il manque le cas échéant en les faisant glisser-déposer depuis le compendium.
 Pensez à ajouter les bonus des dons du type "Talent" comme indiqué dans la partie 7.2.
 - Si la créature a des niveaux de classes, ouvrez le compendium des aptitudes de classes et glissez-déposez les aptitudes.
 - Si la créature possède une race de PJ, renseignez les traits raciaux dans la catégorie "Traits raciaux".
@@ -230,7 +230,7 @@ Certaines capacités, comme la Recherche des Pièges du Roublard, n'ont pas de t
 - Dans "Utilisation d'une capacité", si la capacité a une portée, une durée ou une limite d'utilisation, renseignez le coût d'activation de la capacité.
 Une capacité n'ayant pas de coût d'activation est soit une capacité passive, soit une action gratuite.
 - Renseignez la cible de la capacité si celle-ci n'est pas évidente et a une ou plusieurs conditions à respecter (par exemple, si la cible ne peut être qu'un humanoïde).
-- Renseignez la portée, la durée et la limite d'utilisation le cas échéant.
+- Renseignez la portée (**en pied**), la durée et la limite d'utilisation le cas échéant.
 - Si la capacité à une limite d'utilisation, vérifiez que la case "déduire automatiquement la charge" est bien cochée.
 - Dans "Attaque", s'il s'agit d'une capacité de soin, renseignez "Soin". S'il ne s'agit pas d'une capacité de soin, mais d'une capacité ayant un DD, renseignez "Autre".
 - Si la capacité fait des dégâts (comme un poison faisant 1d2 dégâts temporaires de Force), renseignez les dégâts dans "Formule de dégâts". Indiquez quels types de dégâts sont faits.
@@ -244,7 +244,7 @@ Pour la formule, inspirez vous de la formule suivante : `10+floor(@attributes.hd
 
 > `floor` indique que l'on veut arrondir à l'entier inférieur la valeur entre parenthèse.
 `@attributes.hd.total` donne le nombre total de DVs de la créature.
-`@abilities.con.mod` donne le modificateur de Constitution. Remplacez `con` par la bonne caractéristique si votre capacité utilise autre chose que la Constitution pour son DD (`str` pour la Force, `dex` pour la Dextérité, `con` pour la Constitution, `int` pour l'Intelligence, `wis` ou `cha` pour le Charisme).
+`@abilities.con.mod` donne le modificateur de Constitution. Remplacez `con` par la bonne caractéristique si votre capacité utilise autre chose que la Constitution pour son DD (`str` pour la Force, `dex` pour la Dextérité, `con` pour la Constitution, `int` pour l'Intelligence, `wis` pour la Sagesse ou `cha` pour le Charisme).
 La formule donnée en exemple se traduit donc : "10 + la moitié des DVs de la créature arrondie à l'inférieur + le modificateur de Constitution de la créature".
 {.is-info}
 - Indiquez dans "Notes sur les effets" des notes contextuelles qui apparaitront sous la capacité dans le chat lorsque vous utiliserez la capacité.
@@ -293,7 +293,7 @@ Pour rappel, une attaque secondaire subit normalement -5 au jet d'attaque et son
 - S'il s'agit de l'unique attaque de la créature, cochez la case "Attaque principale".
 - S'il s'agit de l'unique attaque de la créature et qu'elle ne peut l'effectuer qu'une fois, changez le multiplicateur de la caractéristique pour les dégâts à x1.5.
 - Si la créature a le don Attaques en finesse, passez la caractéristique pour l'attaque à Dextérité.
-- Si la créature a le don Attaques en finesse (mythique), passez la caractéristique pour ls dégâts à Dextérité.
+- Si la créature a le don Attaques en finesse (mythique), passez la caractéristique pour les dégâts à Dextérité.
 - Si l'attaque possède des dégâts bonus aux dégâts critiques, renseignez-les dans "Formule bonus dégâts critiques".
 - Si l'attaque possède des dégâts bonus aux dégâts uniquement non-critiques, renseignez-les dans "Formule bonus dégâts critiques".
 - Vérifiez que les valeurs de l'attaque sont correctes.
