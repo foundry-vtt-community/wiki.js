@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-21T19:45:56.921Z
+date: 2021-02-21T19:46:38.339Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -458,7 +458,7 @@ Maintenant, si vous allez dans l'onglet Description, vous verrez que la descript
 
 ## 11. Effets
 
-Si la créature a des effets spéciaux que vous souhaitez renseigner, comme la transformation d'un élémentaire de l'eau grace à la capacité "Vortex" ou l'effet d'un sort d'Armure de mage, vous pouvez les indiquer ici. Les effets fonctionnent comme des capacités, mis à part qu'ils peuvent être activés ou désactivés.
+Si la créature a des effets spéciaux que vous souhaitez renseigner, comme la transformation d'un [élémentaire de l'eau](https://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.%C3%89l%C3%A9mentaire%20de%20lEau.ashx) grâce à la capacité "Vortex" ou l'effet d'un sort d'Armure de mage, vous pouvez les indiquer ici. Les effets fonctionnent comme des capacités, mis à part qu'ils peuvent être activés ou désactivés.
 Si vous voulez faire apparaître l'effet sur le jeton de la créature, donnez un icone à cet effet afin de pouvoir le reconnaître.
 Si vous ne voulez pas voir apparaître l'icone de l'effet, cochez "Caché du jeton" dans l'onglet Détails.
 
