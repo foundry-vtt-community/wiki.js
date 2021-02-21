@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-21T19:29:37.875Z
+date: 2021-02-21T19:38:33.811Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -295,12 +295,12 @@ Pour rappel, une attaque secondaire subit normalement -5 au jet d'attaque et son
 - Si la créature a le don Attaques en finesse, passez la caractéristique pour l'attaque à Dextérité.
 - Si la créature a le don Attaques en finesse (mythique), passez la caractéristique pour les dégâts à Dextérité.
 - Si l'attaque possède des dégâts bonus aux dégâts critiques, renseignez-les dans "Formule bonus dégâts critiques".
-- Si l'attaque possède des dégâts bonus aux dégâts uniquement non-critiques, renseignez-les dans "Formule bonus dégâts critiques".
+- Si l'attaque possède des dégâts bonus aux dégâts uniquement non-critiques, renseignez-les dans "Formule bonus dégâts non critiques".
 - Vérifiez que les valeurs de l'attaque sont correctes.
 > A ce stade, vous remarquerez peut-être que certaines attaques naturelles principales n'ont pas les bonnes valeurs sur une créature possédant des armes manufacturées. C'est parce que les attaques naturelles deviennent toutes secondaires au court d'une attaque à outrance incluant des armes manufacturées. Elles subissent donc un malus de -5 au jet d'attaque et leur modificateur aux dégâts passe à x0.5. Ces malus sont déjà comptés dans les blocs de statistiques des monstres, mais pas dans Foundry.
 Il n'y a malheureusement pas de méthode élégante pour automatiser ce comportement actuellement. Lors du jet d'attaque pour le monstre, il faudra donc, sur la pop-up du jet pour l'attaque, décocher la case "Attaque principale" et indiquez un malus de -5 au jet d'attaque.
 {.is-info}
-- Si le dé de dégât est incorrect, c'est probablement que la créature considère son arme comme d'une taille différente par rapport aux autres créatures. Si le dé est trop gros, diminuez le deuxième nombre de la formule `sizeRoll()` pour atteindre la bonne taille. Si le dé est trop petit, augmentez-le à la place.
+- Si le dé de dégât est incorrect, c'est probablement que la créature considère son arme comme d'une taille différente par rapport aux autres créatures. Si le dé est trop gros, diminuez le deuxième nombre de la formule `sizeRoll()` pour atteindre la bonne taille. Si le dé est trop petit, augmentez-le à la place. Vérifiez également que la bonne taille a été sélectionnée dans l'onglet "Attribut".
 - Si l'attaque naturelle peut être effectuée plusieurs fois (par exemple, 2 sabots), cliquez sur "Add Extra Attack" pour chaque attaque supplémentaire.
 - Si l'attaque naturelle possède des attaques supplémentaires en trop, cliquez sur la poubelle à côté de l'attaque supplémentaire jusqu'à avoir supprimé toutes les attaques en trop.
 - Si l'attaque naturelle a des dés de dégâts bonus permanents (comme un Ver du froid qui a 4d6 dégâts de froid supplémentaires), cliquez sur "Add Damage Formula" et renseignez les dégâts bonus et leur type.
@@ -328,7 +328,7 @@ Pour une arme pouvant aussi bien être utilisée au corps à corps qu'à distanc
 - Si l'attaque peut être utilisée qu'un certain nombre de fois, renseignez la partie "Utilisations limitées". Vérifiez que "Déduire automatiquement la charge" est coché.
 - Dans "Action", renseignez le type d'action, le facteur de critique et le multiplicateur de critique, la caractéristique utilisée pour l'attaque, la caractéristique utilisée pour les dégâts et le multiplicateur du bonus au dégâts.
 - Dans "Formule de dégâts", indiquez la formule de dégâts avec la fonction `sizeRoll()` décrite en 8.1 pour les attaques faisant des dégâts contondants, perçants ou tranchants. Renseignez également le type de dégâts (C, P, T...).
-Pour rappel, la formule est `sizeRoll(X, Y, @size)`, où X est le nombre de dés à lancer pour une arme de taille M et Y le type de dés à lancer pour une arme de taille M.
+Pour rappel, la formule est `sizeRoll(X, Y, @size)`, où X est le nombre de dés à lancer pour une arme de taille M et Y le type de dés à lancer pour une arme **de taille M**.
 - Dans "Formule de dégâts", indiquez les dès de dégâts comme indiqués sur le profil de la créature pour les autre types de dégâts.
 - Si la créature possède plusieurs types de dégâts (comme un Ver du Froid qui a des dégâts normaux et 4d6 dégâts de froid supplémentaires), cliquez sur "Add Damage Formula" afin de créer un jet séparé pour chaque type de dégâts.
 > Notez que le bonus d'attribut aux dégâts ne s'applique qu'à la première attaque de la liste.
@@ -370,7 +370,7 @@ Les défenses sont rassemblées en bas de l'onglet "Combat".
 
 - Renseignez l'armure naturelle et la résistance à la magie de la créature.
 La résistance à la magie se présente souvent sous la forme "X + DV de la créature". Un exemple de formule dans ce cas serait `X + @attributes.hd.total`.
-- Si la résistance à la magie est soumise à conditions (comme celle d'un Habitant de Leng), indiquez-les dans Notes sur Résist. à la Magie.
+- Si la résistance à la magie est soumise à conditions (comme celle d'un [Habitant de Leng](https://www.pathfinder-fr.org/Wiki/Pathfinder-RPG.Habitant%20de%20Leng.ashx#:~:text=Les%20habitants%20de%20Leng%20peuvent,ordinaire%20ou%20des%20tr%C3%A9sors%20magiques)), indiquez-les dans Notes sur Résist. à la Magie.
 - Si la créature a des bonus ou des malus aux jets de sauvegarde dans des cas particuliers qui n'ont pas déjà été renseignés ailleurs, vous pouvez les noter dans "Notes sur les Jets de protection".
 - Si la créature a un bonus au DMD dans des cas particuliers, vous pouvez le noter dans "Notes sur le DMD".
 > Nous vous conseillons d'utiliser une formule pour modifier la valeur automatiquement lorsque le DMD de base de la créature change. Par exemple, pour une créature avec +10 de DMD (+15 contre le croc-en-jambe), vous pouvez écrire `[[@attributes.cmd.total+5]] contre le croc-en-jambe`. 
