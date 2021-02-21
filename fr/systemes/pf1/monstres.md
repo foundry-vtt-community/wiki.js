@@ -2,7 +2,7 @@
 title: Création de Monstres pour PF1
 description: 
 published: true
-date: 2021-02-21T19:46:38.339Z
+date: 2021-02-21T19:47:20.617Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-17T10:02:58.859Z
@@ -469,5 +469,5 @@ Renseignez ici le bloc de statistiques de la créature.
 ## 13. Vérifications
 Repassez sur les différents onglets, et vérifiez que toutes les valeurs correspondent bien à la fiche d'origine de la créature. Ajustez en fonction.
 
-> Vous venez de créer votre propre entrée du bestiaire ! Félicitations 🥳
+> Vous venez de créer votre propre entrée du bestiaire ! Félicitations ! 🥳
 {.is-success}
