@@ -2,7 +2,7 @@
 title: Understanding FormApplication
 description: 
 published: true
-date: 2021-02-22T16:25:18.407Z
+date: 2021-02-22T16:37:36.002Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-22T16:19:21.040Z
@@ -19,3 +19,6 @@ When to use which?
 # How does it do it?
 
 # How do I use that?
+
+
+# 0.7.x vs 0.8.x
