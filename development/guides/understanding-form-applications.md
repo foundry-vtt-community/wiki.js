@@ -2,7 +2,7 @@
 title: Understanding FormApplication
 description: 
 published: true
-date: 2021-02-22T17:28:24.167Z
+date: 2021-02-22T17:29:54.794Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-22T16:19:21.040Z
@@ -43,3 +43,4 @@ Since `FormApplication` is an abstract class, you must define a subclass for it 
 When you create an instance of your `FormApplication` subclass, you must provide a reference to the object that the form is modifying, like so: `new MyFormApplication(myObject).render(true)`. So long as you have implemented your subclass according to the requirements listed above, `FormApplication` should handle the rest.
 
 # 0.7.x vs 0.8.x
+TODO
