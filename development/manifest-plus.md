@@ -2,9 +2,9 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2021-01-14T03:57:02.110Z
-tags: 
-editor: undefined
+date: 2021-02-22T20:29:15.488Z
+tags: manifest, manifest+
+editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
 ---
 
@@ -99,7 +99,7 @@ Avoid putting large text on the cover image, it should showcase the package rath
 - Width: 1280px
 - Aspect Ratio: 2:1
 
-Currently used on the [Forge's Bazaar](https://forge-vtt.com/bazaar).
+Currently used on the [Forge's Bazaar](https://forge-vtt.com/bazaar) and the community driven [Foundry Hub](https://www.foundryvtt-hub.com/).
 
 ##### Icon
 - Width: 512px
