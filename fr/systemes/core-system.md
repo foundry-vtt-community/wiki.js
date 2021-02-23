@@ -1,17 +1,17 @@
 ---
-title: Core-system
+title: .CORE-SYSTEM
 description: Support pour le Core-system
 published: true
-date: 2021-02-12T20:56:19.529Z
+date: 2021-02-23T18:37:11.533Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:56:23.255Z
 ---
 
-# Le core	
+# Le CORE	
 
 ## Quelques généralités : 
-Par "core" on parle du socle de base (neutre) de Foundry_VTT. 
+Par "core" nous parlons du socle de base (neutre) de Foundry_VTT. 
 Cela comprend une partie serveur (nodejs) et une partie cliente (celle que vous voyez dans votre navigateur)  
 
 Ce socle permet 
