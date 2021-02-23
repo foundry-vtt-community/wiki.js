@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-02-23T15:08:36.366Z
+date: 2021-02-23T15:09:38.771Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -271,7 +271,9 @@ Pour supprimer une compétence il faut cliquer sur l'icone en forme de poubelle.
 #### Jet basé sur une compétence
 
  <br/>
+ 
  ![jetComp.webp](https://raw.githubusercontent.com/Dilomos/aria_foundryvtt/main/wiki/jetComp.webp)
+ 
  <br/> <br/>
  
 ### Onglet Inventaire
