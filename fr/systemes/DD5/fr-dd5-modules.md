@@ -2,13 +2,13 @@
 title: 02 - Modules
 description: Description de la configuration des modules (Midi-QOL) 
 published: true
-date: 2021-02-24T10:15:17.668Z
+date: 2021-02-24T10:21:38.572Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
 ---
 
-# Midi-QOL Config
+# Midi-QOL
 
 Midi-QOL est à la base un module d&#39;améliorations de la « Qualité de Vie » (Quality Of Life) ayant évolué vers un module permettant une automatisation poussée des combats en mettant en place des workflows pour les tâches d&#39;«administration » du MJ.
 
