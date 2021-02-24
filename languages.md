@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-24T21:39:45.711Z
+date: 2021-02-24T21:51:25.544Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -39,6 +39,9 @@ For additional translations (including ones for game systems) see the [list of t
 1. At the bottom of the window click on the text field in the center (`https://path/to/module.json`) and use <kbd>Ctrl + V</kbd> (<kbd>Cmd + V</kbd> on a Mac) to paste the copied URL into the field.
 ![manifest_url.png](/fvtt-ui/manifest_url.png)
 1. Press the "Install" button.
+
+## Changing the Language
+After installing a translation module:
 1. Go to the "Configuration" tab.
 ![configuration_tab.png](/fvtt-ui/configuration_tab.png)
 1. Select your language from the "Default Settings" drop-down menu. The correct language will usually have "core" in the name.
