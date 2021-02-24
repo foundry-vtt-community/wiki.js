@@ -1,9 +1,9 @@
 ---
 title: 02 - Modules
-description: 
+description: Description de la configuration des modules (Midi-QOL) 
 published: true
-date: 2021-02-24T08:20:28.318Z
-tags: 
+date: 2021-02-24T08:22:04.739Z
+tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
 ---
