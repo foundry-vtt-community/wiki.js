@@ -2,7 +2,7 @@
 title: 02 - Modules
 description: Description de la configuration des modules (Midi-QOL) 
 published: true
-date: 2021-02-24T08:22:04.739Z
+date: 2021-02-24T10:15:17.668Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
@@ -65,8 +65,9 @@ Les guérisons sont gérées comme des attaques rendant des PV plutôt que faisa
 ### Options Standards
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-gen1.png
-    #### INSERER IMAGE modules-qol-settings_gen2.png
+![modules-qol-settings-gen1.png](/dnd-modules/modules-qol-settings-gen1.png)
+
+![modules-qol-settings-gen2.png](/dnd-modules/modules-qol-settings-gen2.png)
 
 Ce sont toutes les options de Midi-QOL. Pour l&#39;automatisation des attaques, seules les deux premières sont intéressantes.
 
@@ -78,7 +79,7 @@ Workflow settings ouvre une nouvelle page de configuration détaillées des opti
 
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-gm1.png
+![modules-qol-settings-gm1.png](/dnd-modules/modules-qol-settings-gm1.png)
 
 Ces options définissent le fonctionnement des workflows pour les attaques effectuées par le MJ.
 
@@ -95,23 +96,24 @@ Ces options définissent le fonctionnement des workflows pour les attaques effec
 #### Pour les Joueurs
 </br>
     
-    #### INSERER IMAGE modules-qol-settings-play1.png
+![modules-qol-settings-play1.png](/dnd-modules/modules-qol-settings-play1.png)
 
 Ces options sont identiques à celles disponibles pour le MJ mais concernent les jets effectués par les joueurs. La seule différence notable est qu&#39;il y a une liste déroulante pour la configuration du Fast Forward, plutôt que 2 cases à cocher (mais on retrouve bien les 4 choix).
 
 </br>
 </br>
 
-##### Autres Options de worklow
+##### Autres Options des worklows
 
+Ces options sont disponibles dans l'onglet "Workflow"
 </br>
 
 ###### Targeting
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-targ1.png
+![modules-qol-settings-targ1.png](/dnd-modules/modules-qol-settings-targ1.png)
 
-Ces options permettent de définir le comportement vis-à-vis des cibles avant une attaque mais est surtout utile pour cibler avec les gabarits (de sorts généralement).
+La Section "Targeting" permettent de définir le comportement vis-à-vis des cibles avant une attaque mais est surtout utile pour cibler avec les gabarits (de sorts généralement).
 
 | Paramètre | Valeurs possibles | Commentaires |
 | :--- | :---: | :--- |
@@ -122,9 +124,9 @@ Ces options permettent de définir le comportement vis-à-vis des cibles avant u
 ###### Speciales
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-spe1.png
+![modules-qol-settings-spe1.png](/dnd-modules/modules-qol-settings-spe1.png)
     
-Cette section définit des options diverses.
+La section "Sepcials" définit des options diverses.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | :---: | --- |
@@ -136,9 +138,9 @@ Cette section définit des options diverses.
 ###### Toucher
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-hit1.png
+![modules-qol-settings-hit1.png](/dnd-modules/modules-qol-settings-hit1.png)
     
-Cette option définit le contrôle des touches lors d&#39;une attaque.
+La section "Hits" définit comment les résultats des attaques sont traités.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | :---: | :--- |
@@ -147,9 +149,9 @@ Cette option définit le contrôle des touches lors d&#39;une attaque.
 ###### Sauvegardes
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-save1.png
+![modules-qol-settings-save1.png](/dnd-modules/modules-qol-settings-save1.png)
     
-Ces options déterminent le fonctionnement des attaques à Jet de Sauvegarde et sont donc plutôt applicables aux sorts.
+La section "Saves" détermine le fonctionnement des attaques avec Jet de Sauvegarde et s'apllique donc plus aux sorts.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | :--- | :---: | :--- |
@@ -163,9 +165,8 @@ Ces options déterminent le fonctionnement des attaques à Jet de Sauvegarde et 
 ###### Dégâts
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-dmg1.png
-
-Ces options gèrent la façon dont sont appliqués les dégâts
+![modules-qol-settings-dmg1.png](/dnd-modules/modules-qol-settings-dmg1.png)
+La section "Damage" gère la manière dont sont appliqués les dégâts
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | :---: | --- |
@@ -176,9 +177,9 @@ Ces options gèrent la façon dont sont appliqués les dégâts
 ###### Options Diverses
 </br>
 
-    #### INSERER IMAGE modules-qol-settings-misc1.png
+![modules-qol-settings-misc1.png](/dnd-modules/modules-qol-settings-misc1.png)
 
-Ces options permettent principalement de fixer le comportement des « chat cards » affichées lors de l&#39;utilisation des objets.
+L'onglete "Misc" permet principalement de fixer le comportement des « chat cards » affichées lors de l&#39;utilisation des objets.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | --- | --- |
@@ -191,29 +192,32 @@ Ces options permettent principalement de fixer le comportement des « chat cards
 
 ## Comment utiliser concrètement Midi-QOL
 
-Cette section détaille des configurations possibles de midi-QOL pour aboutir à différents niveaux d&#39;automatisation (avec leurs avantages et leurs inconvénients).
+Voici quelques configurations possibles de midi-QOL pour aboutir à différents niveaux d&#39;automatisation (avec leurs avantages et leurs inconvénients).
 
 ### Niveau d&#39;automatisation Moyen+, MJ « Secret »
 
 Dans cette configuration, la plupart des jets sont automatisés et très peu d&#39;informations sont communiquées aux joueurs.
 
-**Avantages**  : permet de limiter les manipulations et les contrôles à effectuer par le MJ durant les combats. La validation finale du retrait/ajout de PV est quand même faite par le MJ (ça évite de faire des annulations quand un joueur se trompe de cible et le MJ garde la main sur les PV de ses monstres).
+**Avantages**  : permet de limiter les manipulations et les contrôles à effectuer par le MJ durant les combats. La validation finale du retrait/ajout de PV est quand même faite par le MJ (cela évite de faire des annulations quand un joueur se trompe de cible ; le MJ garde la main sur les PV de ses monstres).
 
-**Inconvénients**  : certaines options rendent difficile l&#39;utilisation des dégâts « versatiles » ou « Other Damage ». Le MJ est également obligé de valider les guérisons.
+**Inconvénients**  : certaines options rendent difficile l&#39;utilisation des options de dégâts « versatiles » ou « Other Damage ». Le MJ est également obligé de valider les guérisons.
 </br>
 
-    #### INSERER IMAGE modules-qol-conf1-1.png
+---
+
+
+![modules-qol-conf1-1.png](/dnd-modules/modules-qol-conf1-1.png)
 
 Automatisation complète côté MJ (auto roll et fast forward des jets d&#39;attaque et de dégâts). Les résultats des jets sont masqués aux joueurs.
 
-    #### INSERER IMAGE modules-qol-conf1-2.png
+![modules-qol-conf1-2.png](/dnd-modules/modules-qol-conf1-2.png)
 
-Automatisation poussée. Les jets de dégâts sont toujours effectués pour rendre le combat un peu plus rapide (le MJ n&#39;a plus besoin d&#39;annoncer « Tu peux lancer les dégâts ») tout en gardant un peu de contrôle par le MJ (c&#39;est lui qui annonce si l&#39;attaque a touché plutôt que le système).
+Automatisation poussée côté joueurs. Les jets de dégâts sont toujours effectués pour rendre le combat un peu plus rapide (le MJ n&#39;a plus besoin d&#39;annoncer « Tu peux lancer les dégâts ») tout en gardant un peu de contrôle par le MJ (c&#39;est lui qui annonce si l&#39;attaque a touché plutôt que le système).
 </br>
 
-    #### INSERER IMAGE modules-qol-conf1-3.png
+![modules-qol-conf1-3.png](/dnd-modules/modules-qol-conf1-3.png)
 
-    #### INSERER IMAGE modules-qol-conf1-4.png
+![modules-qol-conf1-4.png](/dnd-modules/modules-qol-conf1-4.png)
 
 Les choses importantes :
 
@@ -224,7 +228,7 @@ Hits / Saves Check – Only GM Sees : accélère la gestion des combats en faisa
 Auto Apply damage to target : No + damage card : le MJ garde la main sur l&#39;application des dégâts, mais 80% du temps il suffira juste d&#39;appuyer sur « Tout mettre à jour ».
 </br>
 
-    #### INSERER IMAGE modules-qol-conf1-5.png
+![modules-qol-conf1-5.png](/dnd-modules/modules-qol-conf1-5.png)
 
 Le MJ connaît les capacités de ses monstres par cœur donc les détails ne sont pas affichés. Il ne connaît pas forcément les capacités de tous les joueurs donc un rappel est bienvenu.
  Les chat cards sont condensées au maximum.
