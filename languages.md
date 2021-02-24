@@ -1,9 +1,9 @@
 ---
 title: Languages
-description: Available translations for Foundry VTT.
-published: false
-date: 2021-02-24T21:22:56.597Z
-tags: translations, languages
+description: Translations available for Foundry VTT.
+published: true
+date: 2021-02-24T21:30:47.366Z
+tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
 ---
@@ -45,7 +45,7 @@ For additional translations (including ones for game systems) see the [list of t
 1. Restart the game to change the language.
 
 ## Contributing
-If you would like to help with translating Foundry VTT, it's modules, or game systems, the best way is to join your local Discord community listed in the table above and ask for more information there. If your language is not listed there, your best bet is to ask for advice on the `#translations` channel on the <i class="fab fa-discord"></i> [the official Foundry VTT Discord server](https://discordapp.com/invite/DDBZUDf).
+If you would like to help with translating Foundry VTT, it's modules, or game systems, the best way is to join your local Discord community listed in the table above and ask for more information there. If your language is not listed in the table, your best bet is to ask for advice on the `#translations` channel on <i class="fab fa-discord"></i> [the official Foundry VTT Discord server](https://discordapp.com/invite/DDBZUDf) and look into the [localization guides](https://foundryvtt.wiki/en/development/guides/localization).
 
 For more information about the community translation teams, their tools, and code repositories see the [Translations](https://foundryvtt.wiki/en/community/Community-Translations) page.
 
