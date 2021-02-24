@@ -2,7 +2,7 @@
 title: 02 - Combats avec Midi-QOL 
 description: Description de la configuration de l'automatisation des combats dnd avec le module Midi-QOL
 published: true
-date: 2021-02-24T10:28:35.881Z
+date: 2021-02-24T10:38:47.330Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
@@ -126,7 +126,7 @@ La Section "Targeting" permettent de définir le comportement vis-à-vis des cib
 
 ![modules-qol-settings-spe1.png](/dnd-modules/modules-qol-settings-spe1.png)
     
-La section "Sepcials" définit des options diverses.
+La section "Specials" définit des options diverses.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | :---: | --- |
