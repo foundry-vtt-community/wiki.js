@@ -1,8 +1,8 @@
 ---
-title: 02 - Modules
+title: 02 - Automatisation des combats avec Midi-QOL 
 description: Description de la configuration des modules (Midi-QOL) 
 published: true
-date: 2021-02-24T10:21:38.572Z
+date: 2021-02-24T10:27:10.225Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
