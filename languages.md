@@ -2,13 +2,13 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-24T21:51:25.544Z
+date: 2021-02-24T21:59:16.144Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
 ---
 
-Foundry Virtual Tabletop has a broad international community and the core software (as of version 0.7.9) has been translated to 12 languages. All translations are community created by real people and few contain machine translations.
+Foundry Virtual Tabletop has a broad international community and the core software (as of version 0.7.9) is available in 13 languages. All translations are community created by real people and few contain machine translations. The game is in American English by default.
 
 For additional translations (including ones for game systems) see the [list of translation modules](https://foundryvtt.com/packages/tag/translation) on the Foundry VTT website (always up to date) or the [Translations](https://foundryvtt.wiki/en/community/Community-Translations) page here in the wiki (may not be up to date).
 
@@ -18,6 +18,7 @@ For additional translations (including ones for game systems) see the [list of t
 | ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | ? |
 | cs-CZ | Czech / čeština | [Latest version](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json) | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) |
+| en-US | English (American) *[Default]* | — | <i class="fab fa-discord"></i> [The Foundry](https://discordapp.com/invite/DDBZUDf) (official) |
 | fi-FI | Finnish / suomi | *work in progress* | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |
 | fr-FR | French / français | [Latest version](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr/-/raw/master/fr-FR/module.json) | <i class="fab fa-discord"></i> [La Fonderie](https://discord.gg/pPSDNJk) |
 | de-DE | German / Deutsch | [Latest version](https://gitlab.com/henry4k/foundryvtt-lang-de/-/raw/master/module.json) | <i class="fab fa-discord"></i> [Die Gießerei (FoundryVTT)](https://discord.gg/XrKAZ5J) |
