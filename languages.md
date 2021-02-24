@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-24T21:34:35.254Z
+date: 2021-02-24T21:39:45.711Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -15,7 +15,7 @@ For additional translations (including ones for game systems) see the [list of t
 ## Table of Supported Languages
 | Code | Language | Manifest URL | Local Discord Community |
 |:-|:-|:-|:-|
-| ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Spanish) |
+| ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | ? |
 | cs-CZ | Czech / čeština | [Latest version](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json) | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) |
 | fi-FI | Finnish / suomi | *work in progress* | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |
@@ -27,7 +27,7 @@ For additional translations (including ones for game systems) see the [list of t
 | po-PO | Polish / polski | *work in progress* | ? |
 | pt-BR | Portuguese (Brazil) / Português (Brasil) | [Latest version](https://gitlab.com/foundryvtt-pt-br/core/-/raw/master/pt-BR/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Brasil](https://discord.gg/XNC86FBnQ2) |
 | ru-RU | Russian / русский | [Latest version](https://raw.githubusercontent.com/Phenomen/foundry-vtt-ru/master/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) |
-| es-ES | Spanish / español | [Latest version](https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (shared with Catalan) |
+| es-ES | Spanish / español | [Latest version](https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) |
 | sv-SE | Swedish / Svenska | [Latest version](https://raw.githubusercontent.com/xdy/foundryvtt-lang-sv/master/module.json) | *none* |
 
 ## Installing a Translation Module
