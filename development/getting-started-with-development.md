@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-18T14:59:10.754Z
+date: 2021-02-25T05:37:16.077Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -112,7 +112,7 @@ await game.settings.register('myModuleName', 'mySettingName', {
 ```
 
 ### Setting a Setting's value
-Settings can be set with [`game.settings.set`](https://foundryvtt.com/api/ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a Gamemaster, and that `scope: client` settings will only persist on the user's local machine.
+Settings can be set with [`game.settings.set`](https://foundryvtt.com/api/ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a Gamemaster user, and that `scope: client` settings will only persist on the user's local machine.
 
 ```js
 const whateverValue = 'foo';
@@ -122,7 +122,36 @@ game.settings.set('myModuleName','myModuleSetting', whateverValue);
 
 ### Getting a Setting's value
 
-Settings can be set with [`game.settings.get`](https://foundryvtt.com/api/ClientSettings.html#get). 
+Settings can be read with [`game.settings.get`](https://foundryvtt.com/api/ClientSettings.html#get). 
+
+```js
+const someVariable = game.settings.get('myModuleName','myModuleSetting');
+console.log(someVariable); // expected to be 'foo'
+```
+
+### Setting Menus
+
+Sometimes your use case is more complex than a few settings will allow you to manage. In these cases the best play is to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/ClientSettings.html#registerMenu), and manage your settings logic with a [FormApplication](https://foundryvtt.wiki/en/development/guides/understanding-form-applications).
+
+```js
+game.settings.registerMenu("myModule", "mySettingsMenu", {
+  name: "My Settings Submenu",
+  label: "Settings Menu Label",      // The text label used in the button
+  hint: "A description of what will occur in the submenu dialog.",
+  icon: "fas fa-bars",               // A Font Awesome icon used in the submenu button
+  type: MySubmenuApplicationClass,   // A FormApplication subclass
+  restricted: true                   // Restrict this submenu to gamemaster only?
+});
+```
+
+#### Why would I want this?
+
+FormApplications allow you to run any logic you want, which includes setting settings, thus this kind of power could be leveraged to accomplish many things:
+
+1. **Space.** You could easily use this to tidy up a lot of module settings which would otherwise take up a lot of vertical space on the settings list.
+2. **Validation.** Since you control the FormApplication's submit logic, you could run validation on user inputs before saving them to the database.
+3. **Edit Setting Objects.** If you have a use case for a complex object of data being stored as a setting, a FormApplication menu would let your users manipulate that object directly.
+
 
 > [stub](https://github.com/VanceCole/macros/blob/master/settings.js)
 
