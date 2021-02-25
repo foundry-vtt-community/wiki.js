@@ -1,8 +1,8 @@
 ---
-title: 0.0 Spécifications requises
+title: 0.0. Spécifications requises
 description: 
 published: true
-date: 2021-02-25T05:50:38.831Z
+date: 2021-02-25T05:51:31.271Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-25T05:50:38.831Z
