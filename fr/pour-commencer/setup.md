@@ -1,10 +1,10 @@
 ---
-title: 0.0. Pour commencer
+title: 0.1. Pour commencer
 description: 
 published: true
-date: 2020-12-11T00:33:51.746Z
+date: 2021-02-25T05:51:07.770Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z
 ---
 
