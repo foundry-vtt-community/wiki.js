@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-25T05:38:04.580Z
+date: 2021-02-25T05:45:38.457Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -140,7 +140,9 @@ console.log(someVariable); // expected to be 'foo'
 
 ### Setting Menus
 
-Sometimes your use case is more complex than a few settings will allow you to manage. In these cases the best play is to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/ClientSettings.html#registerMenu), and manage your settings logic with a [FormApplication](https://foundryvtt.wiki/en/development/guides/understanding-form-applications).
+Sometimes your use case is more complex than a few settings will allow you to manage. In these cases the best play is to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/ClientSettings.html#registerMenu), and manage your settings logic with a [FormApplication](https://foundryvtt.wiki/en/development/guides/understanding-form-applications). Note that we aren't actually registering a setting to be stored, simply a menu button.
+
+This works best when used in conjunction with a registered setting of type `Object`.
 
 ```js
 game.settings.registerMenu("myModule", "mySettingsMenu", {
@@ -150,6 +152,14 @@ game.settings.registerMenu("myModule", "mySettingsMenu", {
   icon: "fas fa-bars",               // A Font Awesome icon used in the submenu button
   type: MySubmenuApplicationClass,   // A FormApplication subclass
   restricted: true                   // Restrict this submenu to gamemaster only?
+});
+
+// Optional
+await game.settings.register('myModuleName', 'myComplexSettingName', {
+  scope: 'world',     // "world" = sync to db, "client" = local storage 
+  config: false,      // we will use the menu above to edit this setting
+  type: Object,
+  default: {},        // can be used to set up the default structure
 });
 ```
 
