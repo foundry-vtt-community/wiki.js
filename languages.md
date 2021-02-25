@@ -2,13 +2,13 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-24T22:12:13.646Z
+date: 2021-02-25T07:44:59.154Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
 ---
 
-Foundry Virtual Tabletop has a broad international community and the core software (as of version 0.7.9) is available in 13 languages. All translations are community created by real people and few contain machine translations. The game is in American English by default.
+Foundry Virtual Tabletop has a broad international community and the core software (as of version 0.7.9) is available in 14 languages. All translations are community created by real people and few contain machine translations. The game is in American English by default.
 
 For additional translations (including ones for game systems) see the [list of translation modules](https://foundryvtt.com/packages/tag/translation) on the Foundry VTT website (always up to date) or the [Translations](https://foundryvtt.wiki/en/community/Community-Translations) page here in the wiki (may not be up to date).
 
@@ -17,6 +17,7 @@ For additional translations (including ones for game systems) see the [list of t
 |:-|:-|:-|:-|
 | ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | ? |
+| zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | ? |
 | cs-CZ | Czech / čeština | [Latest version](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json) | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) |
 | en-US | English (American) *[Default]* | — | <i class="fab fa-discord"></i> [The Foundry](https://discordapp.com/invite/DDBZUDf) (official) |
 | fi-FI | Finnish / suomi | *work in progress* | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |
@@ -25,7 +26,7 @@ For additional translations (including ones for game systems) see the [list of t
 | it-IT | Italian / italiano | [Latest version](https://gitlab.com/riccisi/foundryvtt-lang-it-it/-/raw/master/it-IT/module.json) | <i class="fab fa-discord"></i> [Foundry_ITA](https://discord.gg/hsRcTby) |
 | ja-JP | Japanese / 日本語 | [Latest version](https://raw.githubusercontent.com/BrotherSharper/foundryVTTja/master/module.json) | <i class="fab fa-discord"></i> [オンセ工房日本支部(Foundry VTT)](https://discord.gg/vM4YM27) |
 | ko-KR | Korean / 한국어 | [Latest version](https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-lang-ko-KR/master/module.json) | <i class="fab fa-discord"></i> [FVTT Korea(비공식)](https://discord.gg/DRbbn5w) |
-| po-PO | Polish / polski | *work in progress* | ? |
+| pl-PL | Polish / polski | *work in progress* | ? |
 | pt-BR | Portuguese (Brazil) / Português (Brasil) | [Latest version](https://gitlab.com/foundryvtt-pt-br/core/-/raw/master/pt-BR/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Brasil](https://discord.gg/XNC86FBnQ2) |
 | ru-RU | Russian / русский | [Latest version](https://raw.githubusercontent.com/Phenomen/foundry-vtt-ru/master/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) |
 | es-ES | Spanish / español | [Latest version](https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) |
