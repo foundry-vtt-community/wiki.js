@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-25T05:37:29.273Z
+date: 2021-02-25T05:38:04.580Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -29,6 +29,15 @@ CONFIG.debug.hooks = true;
 ```
 
 With this enabled, you'll see every hook that fires as you interact with Foundry's UI and what arguments it is passed.
+
+
+## How do I delete a value?
+
+This is foundry specific and will delete the `someKey` in the database entry for `someEntity`
+```js
+someEntity.someKey -= null;
+```
+
 
 ## What is a flag and how do I use them?
 
@@ -152,13 +161,6 @@ FormApplications allow you to run any logic you want, which includes setting set
 2. **Validation.** Since you control the FormApplication's submit logic, you could run validation on user inputs before saving them to the database.
 3. **Edit Setting Objects.** If you have a use case for a complex object of data being stored as a setting, a FormApplication menu would let your users manipulate that object directly.
 
-
-## How do I delete a value?
-
-This is foundry specific and will delete the `someKey` in the database entry for `someEntity`
-```js
-someEntity.someKey -= null;
-```
 
 # Common Hurdles and How to Overcome Them
 
