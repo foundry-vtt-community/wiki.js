@@ -2,7 +2,7 @@
 title: 0.0. Spécifications requises
 description: 
 published: true
-date: 2021-02-25T06:26:12.426Z
+date: 2021-02-25T06:27:02.831Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-25T05:50:38.831Z
@@ -52,3 +52,5 @@ La configuration du pare-feu de votre système d'exploitation permettant les con
 >1 GB de RAM
 >Pare-feu et paramètres de sécurité (selon l'hôte) configurés pour permettre les connexions sur le port requis.
 {.is-warning}
+
+*_Sources :_ https://foundryvtt.com/article/requirements/*
