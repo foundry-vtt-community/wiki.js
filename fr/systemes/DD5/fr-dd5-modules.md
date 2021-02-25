@@ -2,7 +2,7 @@
 title: 02 - Combats avec Midi-QOL 
 description: Description de la configuration de l'automatisation des combats dnd avec le module Midi-QOL
 published: true
-date: 2021-02-24T10:38:47.330Z
+date: 2021-02-25T18:58:34.860Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
@@ -132,7 +132,7 @@ La section "Specials" définit des options diverses.
 | --- | :---: | --- |
 | Add Macro to call on Use | Oui / Non | Permet d&#39;ajouter sur chaque fiche d&#39;objet un champ qui peut contenir un nom de macro. Cette macro sera lancée après la résolution de l&#39;item (attaque ou effet).Le champ est ajouté à la toute fin de la fiche de l&#39;objet. |
 | Enable Concentration Automation | Oui / Non | Permet (avec les modules CUB et DAE) l&#39;automatisation de la Concentration pour les jeteurs de sorts.</br>_A détailler plus tard_ |
-| Single Concentration Check | Oui / Non | Fonctionne avec l&#39;option ci-dessus : </br> **Oui** : si une même source de dégâts a plusieurs jets de dégâts, Midi-QOL effectuera un seul jet de concentration avec un DC correspondant au total des dégâts reçus. </br> **Non** : effectue un jet de concentration différent par jet de dégâts d&#39;une même source de dégâts </br></br> _Par exemple, avec une épée qui fait 1d8 + 1d8[Feu] et ayant lancé 5+7 </br>Oui : effectue un jet de concentration DC 12</br>Non : effectue 2 jets de concentration DC 10 chacun_
+| Single Concentration Check | Oui / Non | Fonctionne avec l&#39;option ci-dessus : </br> **Oui** : si une même source de dégâts a plusieurs jets de dégâts, Midi-QOL effectuera un seul jet de concentration avec un DC correspondant au total des dégâts reçus. </br> **Non** : effectue un jet de concentration différent par jet de dégâts d&#39;une même source de dégâts </br></br> *Par exemple, avec une épée qui fait 1d8 + 2d8[Feu] et ayant lancé 8+8+8 </br>Oui : effectue un jet de concentration DC 12 (total des dégâts /2)</br>Non : effectue 2 jets de concentration DC 10 chacun*
 | Auto Apply item effects to targets | Oui / Non | Cette fonction est essentielle pour l&#39;automatisation des effets de sorts (autres que dégâts ou guérisons). Elle permet de transférer à la cible, les effets présents sur l&#39;item en cas d&#39;attaque réussie (ou d&#39;un jet de sauvegarde raté).</br>_A détailler plus tard_. |
 
 ###### Toucher
