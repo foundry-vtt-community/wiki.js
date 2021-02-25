@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-25T05:52:44.901Z
+date: 2021-02-25T05:53:22.867Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -156,7 +156,7 @@ game.settings.registerMenu("myModule", "mySettingsMenu", {
   restricted: true                   // Restrict this submenu to gamemaster only?
 });
 
-// Optional
+
 await game.settings.register('myModuleName', 'myComplexSettingName', {
   scope: 'world',     // "world" = sync to db, "client" = local storage 
   config: false,      // we will use the menu above to edit this setting
@@ -164,7 +164,7 @@ await game.settings.register('myModuleName', 'myComplexSettingName', {
   default: {},        // can be used to set up the default structure
 });
 
-// Required
+
 /**
  * For more information about FormApplications, see:
  * https://foundryvtt.wiki/en/development/guides/understanding-form-applications
