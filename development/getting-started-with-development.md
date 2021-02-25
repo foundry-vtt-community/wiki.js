@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-25T05:53:22.867Z
+date: 2021-02-25T05:53:41.593Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -170,6 +170,8 @@ await game.settings.register('myModuleName', 'myComplexSettingName', {
  * https://foundryvtt.wiki/en/development/guides/understanding-form-applications
  */
 class MySubmenuApplicationClass extends FormApplication {
+  // lots of other things...
+  
   getData() {
   	return game.settings.get('myModuleName', 'myComplexSettingName');
   }
