@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2021-02-25T05:06:35.804Z
+date: 2021-02-25T05:06:56.861Z
 tags: manifest, manifest+
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -55,7 +55,7 @@ Document Version: 1.1.0
 It is recommended to include a `manifestPlusVersion` property in your manifest which denotes which version of Manifest+ you have implemented. We do not intend for breaking changes to this spec, but if they do happen we will increment the major version in accordance with [Semver](https://semver.org/).
 
 ```json
-"manifestPlusVersion": "1.0.0"
+"manifestPlusVersion": "1.1.0"
 ```
 
 ### Media
