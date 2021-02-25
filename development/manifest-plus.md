@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2021-02-22T20:29:15.488Z
+date: 2021-02-25T05:06:35.804Z
 tags: manifest, manifest+
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -38,7 +38,8 @@ For Manifest+, we wanted to recognize that a personal website and Email address 
     "discord": "discordID#0001",
     "twitter": "@TwitterHandle",
     "patreon": "patreonName",
-    "reddit": "u/RedditUsername"
+    "reddit": "u/RedditUsername",
+    "ko-fi": "kofiName"
   }
 ]
 ```
@@ -49,7 +50,7 @@ Each of these additional fields follow the naming convention of the platform, fo
 All Manifest+ properties are *optional* but they are all usful. We recommend including as many of these properties as reasonable in order to provide enriched metadata.
 
 ### Version
-Document Version: 1.0.0
+Document Version: 1.1.0
 
 It is recommended to include a `manifestPlusVersion` property in your manifest which denotes which version of Manifest+ you have implemented. We do not intend for breaking changes to this spec, but if they do happen we will increment the major version in accordance with [Semver](https://semver.org/).
 
