@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-25T05:45:38.457Z
+date: 2021-02-25T05:52:44.901Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -13,6 +13,8 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > If you know of some questions or common sticking points for new package developers, please edit this to include those things.
 > ### Have a question not answered here?
 > The [League of Foundry VTT Developers](https://discord.gg/cudQBu8HKT) is a helpful development-focused discord community which aims to help veterans and new developers alike. Please drop by and ask us your questions, the more questions we get the more likely this document is going to be updated with their answers.
+> ### Pseudocode
+> None of the code within this document is garunteed to work and should be tested before used in a world that you care about.
 {.is-warning}
 
 > This document is up to date as of 0.7.9
@@ -161,6 +163,22 @@ await game.settings.register('myModuleName', 'myComplexSettingName', {
   type: Object,
   default: {},        // can be used to set up the default structure
 });
+
+// Required
+/**
+ * For more information about FormApplications, see:
+ * https://foundryvtt.wiki/en/development/guides/understanding-form-applications
+ */
+class MySubmenuApplicationClass extends FormApplication {
+  getData() {
+  	return game.settings.get('myModuleName', 'myComplexSettingName');
+  }
+  
+  _updateObject(event, formData) {
+    const data = expandObject(formData);
+    game.settings.set('myModuleName', 'myComplexSettingName', data);
+  }
+}
 ```
 
 #### Why would I want this?
