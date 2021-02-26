@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-23T03:09:18.516Z
+date: 2021-02-26T15:51:39.162Z
 tags: hosting, vm, oracle, free, s3
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -403,6 +403,10 @@ f.	Timezone: `Regional Data Center Time`
 ## Objective
 At the end of this section, you will have a functional S3 storage bucket that Foundry can access to store assets under the “Amazon S3” tab in the file picker. This allows you to have extra storage beyond that provided by the instance volume. 
 &nbsp;
+
+>This section has been removed since reports of it not playing well within Foundry. Once a fix has been found, it will be modified and updated. {.is-danger}
+
+<!-- Review section for functionality
 ## Create S3 Storage Bucket and Connect to Foundry
 
 > The Always Free Tier includes 10GiB of Object Storage (S3 Storage). If that limit is exceeded, the data will simply be lost. Keep an eye on the amount of storage used in the bucket created below. {.is-warning}
@@ -480,5 +484,5 @@ nano /home/ubuntu/.local/share/FoundryVTT/Config/s3.json
 23.	Click Save Changes to commit the changes and allow Foundry to restart. Press <kbd>F5</kbd> if the screen does not reappear after a few seconds. 
 24.	You now have an additional tab in the File Picker within Foundry to access “Amazon S3.” Files can be uploaded and used there. 
 
-
+--!> 
 
