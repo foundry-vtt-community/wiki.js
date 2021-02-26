@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-25T06:14:04.063Z
+date: 2021-02-26T02:39:22.918Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -14,7 +14,7 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > ### Have a question not answered here?
 > The [League of Foundry VTT Developers](https://discord.gg/cudQBu8HKT) is a helpful development-focused discord community which aims to help veterans and new developers alike. Please drop by and ask us your questions, the more questions we get the more likely this document is going to be updated with their answers.
 > ### Pseudocode
-> None of the code within this document is garunteed to work and should be tested before used in a world that you care about.
+> None of the code within this document is guaranteed to work and should be tested before used in a world that you care about.
 {.is-warning}
 
 > This document is up to date as of 0.7.9
@@ -35,7 +35,7 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 
 ## How do I delete a value?
 
-This is foundry specific and will delete the `someKey` in the database entry for `someEntity`
+This is Foundry specific and will delete the `someKey` in the database entry for `someEntity`
 ```js
 someEntity.someKey -= null;
 ```
@@ -43,7 +43,7 @@ someEntity.someKey -= null;
 
 ## What is a flag and how do I use them?
 
-Flags are the safest way that Modules can store arbitrary data on existing entities. If you are making a module which allows the user to set a data point which isn't supported normally in Foundrdy Core or a System's data structure, you should use a flag.
+Flags are the safest way that modules can store arbitrary data on existing entities. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
 
 A flag does not have to be a specific type, anything which can be `JSON.stringify`ed is valid.
 
