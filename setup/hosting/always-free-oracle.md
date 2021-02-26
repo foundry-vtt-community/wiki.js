@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-26T16:48:18.647Z
+date: 2021-02-26T16:51:15.529Z
 tags: hosting, vm, oracle, free, s3
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -17,7 +17,7 @@ This guide provides easy to follow steps for a relatively simple installation of
 
 	1. A VM that runs Foundry 24/7, including after restarts.
   2. A domain name and an automatically managed encrypted connection to your Foundry instance.
-  3. Roughly 40GB (optionally increased to roughly 90GB) storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
+  3. Roughly 40GB (optionally increased to roughly 90GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
   4. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
   5. A backup policy that automatically keeps 5 backups in case of emergencies.
   
