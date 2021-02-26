@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-26T16:22:23.734Z
+date: 2021-02-26T16:32:35.809Z
 tags: hosting, vm, oracle, free, s3
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -153,12 +153,17 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 > You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
 {.is-danger}
+31. Scroll down to **Boot Volume**.
+32. Optionally, :ballot_box_with_check:`check` the **Specify a custom boot volume size** option and enter `100` in the **Boot volume size (GB)** box that appears.
+>Leaving the default boot volume size will provide you with roughly 40GB of storage for Foundry, which is usually more than enough for even the most asset-heavy campaigns. {.is-info}
 
-31.	All other options should be left at default. Click **Create**. 
+>By specifying a larger Boot Volume you will be able to have roughly 90GB of storage for Foundry assets. However, doing so will prevent the use of the second Compute VM instance that is provided with the Always Free Tier (not used in this guide). Think carefully about your desired future usage for the Always Free Tier before making this change. {.is-warning}
+
+33.	All other options should be left at default. Click **Create**. 
 >If you receive an `Out of capacity for shape VM.Standard.E2.1.Micro in availability domain` error, then there are no more Always Free Tier instances available at the moment. According to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
 
-32.	Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
-33.	Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
+34.	Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
+35.	Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
 
