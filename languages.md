@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-25T07:50:34.658Z
+date: 2021-02-26T09:21:20.902Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -37,20 +37,48 @@ For additional translations (including ones for game systems) see the [list of t
 1. In Foundry VTT open the "Add-On Modules" tab.
 ![add-on_modules_tab.png](/fvtt-ui/add-on_modules_tab.png)
 1. Click the "Install Module" button.
-![install_module_button.png](/fvtt-ui/install_module_button.png)
+![modules_install_module_button.png](/fvtt-ui/modules_install_module_button.png)
 1. At the bottom of the window click on the text field in the center (`https://path/to/module.json`) and use <kbd>Ctrl + V</kbd> (<kbd>Cmd + V</kbd> on a Mac) to paste the copied URL into the field.
-![manifest_url.png](/fvtt-ui/manifest_url.png)
+![modules_manifest_url.png](/fvtt-ui/modules_manifest_url.png)
 1. Press the "Install" button.
 
-## Changing the Language
+## Changing the Language in the Menu
 After installing a translation module:
 1. Go to the "Configuration" tab.
 ![configuration_tab.png](/fvtt-ui/configuration_tab.png)
 1. Select your language from the "Default Settings" drop-down menu. The correct language will usually have "core" in the name.
-![default_language_setting.png](/fvtt-ui/default_language_setting.png)
-1. Press the "Save Changes" button.
-![save_changes_button.png](/fvtt-ui/save_changes_button.png)
-1. Restart the game to change the language.
+![configuration_default_language_setting.png](/fvtt-ui/configuration_default_language_setting.png)
+1. Click the "Save Changes" button.
+![configuration_save_changes_button.png](/fvtt-ui/configuration_save_changes_button.png)
+1. Click the "Yes" button in the dialog that pops up to close the game and change the language.
+![configuration_yes_button.png](/fvtt-ui/configuration_yes_button.png)
+1. Open the game and proceed with **Changing the Language** below. Doing the steps in **Enabling a Translation Module** is also recommended.
+
+### Enabling a Translation Module
+Some translation modules provide translations for things like the TinyMCE text editor or the names of the icons shown in the map note configuration window. To allow the module to do this, it needs to be enabled in the world. Note that enabling the module **does not change** the language in the world. Even though the translation module is listed in the modules, enabling it may not change anything or provide additional translations.
+
+You must be the Gamemaster or have the "Modify Configuration Settings" permission to do the following.
+1. Open a world.
+1. Go to the World Game Settings tab.
+![world_game_settings_tab.png](/fvtt-ui/world_game_settings_tab.png)
+1. Click the "Manage Modules" button.
+![world_manage_modules_button.png](/fvtt-ui/world_manage_modules_button.png)
+1. Find the translation module by name and click the checkbox in front of it.
+![module_management_translation.png](/fvtt-ui/module_management_translation.png)
+1. Click the "Save Module Settings" button.
+![module_management_save_module_settings.png](/fvtt-ui/module_management_save_module_settings.png)
+
+### Changing the Language
+1. Open a world.
+1. Go to the World Game Settings tab.
+![world_game_settings_tab.png](/fvtt-ui/world_game_settings_tab.png)
+1. Click the "Configure Settings" button.
+![world_configure_settings_button.png](/fvtt-ui/world_configure_settings_button.png)
+1. Select your language from the "Language Preference" drop-down.
+![world_configure_language_preference_setting.png](/fvtt-ui/world_configure_language_preference_setting.png)
+1. Click the "Save Changes" button.
+![world_configure_save_changes_button.png](/fvtt-ui/world_configure_save_changes_button.png)
+1. This world and the setup menu are now in your chosen language.
 
 ## Contributing
 If you would like to help with translating Foundry VTT, it's modules, or game systems, the best way is to join your local Discord community listed in the table above and ask for more information there. If your language is not listed in the table, your best bet is to ask for advice on the `#translations` channel on <i class="fab fa-discord"></i> [the official Foundry VTT Discord server](https://discordapp.com/invite/DDBZUDf) and look into the [localization guides](https://foundryvtt.wiki/en/development/guides/localization).
