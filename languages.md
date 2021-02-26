@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-26T09:21:20.902Z
+date: 2021-02-26T19:19:09.037Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -26,7 +26,7 @@ For additional translations (including ones for game systems) see the [list of t
 | it-IT | Italian / italiano | [Latest version](https://gitlab.com/riccisi/foundryvtt-lang-it-it/-/raw/master/it-IT/module.json) | <i class="fab fa-discord"></i> [Foundry_ITA](https://discord.gg/hsRcTby) |
 | ja-JP | Japanese / 日本語 | [Latest version](https://raw.githubusercontent.com/BrotherSharper/foundryVTTja/master/module.json) | <i class="fab fa-discord"></i> [オンセ工房日本支部(Foundry VTT)](https://discord.gg/vM4YM27) |
 | ko-KR | Korean / 한국어 | [Latest version](https://raw.githubusercontent.com/ShoyuVanilla/FoundryVTT-lang-ko-KR/master/module.json) | <i class="fab fa-discord"></i> [FVTT Korea(비공식)](https://discord.gg/DRbbn5w) |
-| pl-PL | Polish / polski | *work in progress* | ? |
+| pl-PL | Polish / polski | [Latest version](https://gitlab.com/fvtt-poland/core/-/raw/main/pl-PL/module.json) | ? |
 | pt-BR | Portuguese (Brazil) / Português (Brasil) | [Latest version](https://gitlab.com/foundryvtt-pt-br/core/-/raw/master/pt-BR/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Brasil](https://discord.gg/XNC86FBnQ2) |
 | ru-RU | Russian / русский | [Latest version](https://raw.githubusercontent.com/Phenomen/foundry-vtt-ru/master/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) |
 | es-ES | Spanish / español | [Latest version](https://gitlab.com/carlosjrlu/foundryvtt-es/-/raw/master/es/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) |
