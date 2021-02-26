@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-02-26T16:00:49.691Z
+date: 2021-02-26T16:22:23.734Z
 tags: hosting, vm, oracle, free, s3
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -11,7 +11,16 @@ dateCreated: 2021-02-04T18:31:17.191Z
 # Always Free Oracle Cloud Hosting Guide for Foundry
 # A. Overview
 ## Objective 
-At the end of this guide, you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy. 
+This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. 
+
+* You will end up with:
+
+	1. A VM that runs Foundry 24/7, including after restarts.
+  2. Serves Foundry behind a reverse proxy with encryption and a domain name.
+  3. Has roughly 40GB (optionally increased to roughly 90GB) storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
+  4. Provides 10TB outbound data transfer, more than enough for hosting Foundry even with daily sessions.
+  5. Automatically keeps 5 back ups for recovery in case of emergencies.
+  
 &nbsp;
 ## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
