@@ -2,7 +2,7 @@
 title: 0.0. Pathfinder Seconde Édition
 description: 
 published: true
-date: 2021-02-27T10:55:46.524Z
+date: 2021-02-27T10:59:51.945Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-27T10:55:46.524Z
@@ -18,3 +18,11 @@ Si vous souhaitez avoir le contenu de Pathfinder 2 en version française sous Fo
 > A noter : Il faut, pour intégrer ces compendiums FR issus de ce module, utiliser le module Babele (https://gitlab.com/riccisi/foundryvtt-babele) 
 Voir tuto pour le paramétrage https://foundryvtt.wiki/fr/systemes/PF2/babele
 {.is-info}
+
+<h1>Paramétrer Babele pour Pathfinder Seconde Edition</h1>
+
+<p>1- Installer puis activer le module babele sur foundry VTT</p>
+<p>2- Dans Paramètres->Configuer les options->Onglet "Modules"->Section Babele</p>
+<p>2- Faire pointer le dossier Babele comme suit :<br />
+  <img src="http://landreau.phpnet.org/wiki_fvtt/babele.PNG" border="0">
+</p>
