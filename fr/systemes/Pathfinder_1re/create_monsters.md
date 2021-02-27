@@ -1,8 +1,8 @@
 ---
-title: Création de Monstres pour PF1
+title: 2.0. Création de Monstres
 description: 
 published: true
-date: 2021-02-27T10:42:21.279Z
+date: 2021-02-27T10:42:58.124Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-27T10:42:21.279Z
