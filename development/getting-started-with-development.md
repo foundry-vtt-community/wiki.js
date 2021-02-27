@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-27T19:21:21.061Z
+date: 2021-02-27T20:36:18.996Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -38,6 +38,19 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 This is Foundry specific and will delete the `someKey` in the database entry for `someEntity`
 ```js
 someEntity.someKey -= null;
+```
+
+## What does Foundry VTT use for templating?
+
+[Handlebars](https://handlebarsjs.com/)
+
+### How do I debug Handlebars?
+
+Handlebars comes built in with a `log` helper, which can be used exactly like `console.log` can be to log out what data a template sees. It might help to think of a space as a comma within Handlebars `{{}}` brackets.
+
+This snippet will log an object with all of the data that the "current scope" has access to:
+```hbs
+{{log 'some arbitrary string' this}}
 ```
 
 ## How do I change or extend a core function's behavior?
