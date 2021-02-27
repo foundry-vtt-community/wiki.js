@@ -2,7 +2,7 @@
 title: 02 - Combats avec Midi-QOL 
 description: Description de la configuration de l'automatisation des combats dnd avec le module Midi-QOL
 published: true
-date: 2021-02-27T08:12:17.183Z
+date: 2021-02-27T10:31:57.892Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
@@ -10,15 +10,15 @@ dateCreated: 2021-02-23T18:26:12.302Z
 
 # Midi-QOL
 
-Midi-QOL est à la base un module d&#39;améliorations de la « Qualité de Vie » (Quality Of Life) ayant évolué vers un module permettant une automatisation poussée des combats en mettant en place des workflows pour les tâches d&#39;«administration » du MJ.
+Midi-QOL est à la base un module d&#39;amélioration de la « Qualité de Vie » (Quality Of Life) ayant évolué vers un module permettant une automatisation poussée des combats en mettant en place des workflows pour les tâches d&#39;«administration » du MJ.
 
 Cette page explique les différents paramètres de Midi-QOL pour l&#39;automatisation des combats.
 
-La partie API de Midi-QOL n&#39;est pas abordée ici. Des compléments seront ajoutés (plus tard) pour décrire les autres fonctionnalités (Concentration, Trasnfert d'effets aux cibles).
+La partie API de Midi-QOL n&#39;est pas abordée ici. Des compléments seront ajoutés (plus tard) pour décrire les autres fonctionnalités (Concentration, Transfert d'effets aux cibles).
 
 ## L&#39;installation de Midi-QOL
 
-Midi-QOL s&#39;installe vie le gestionnaire des Add-ons dans Foundry. Il a comme dépendances les modules « Dynamic Active Effects using Active Effects » (recommandé) et libwrapper (quasi obligatoire).
+Midi-QOL s&#39;installe via le gestionnaire des Add-ons dans Foundry. Il a comme dépendances les modules « Dynamic Active Effects using Active Effects » (recommandé) et libwrapper (quasi obligatoire).
 
 > **Note Importante : l&#39;utilisation de midi-QOL en concurrence avec d&#39;autres modules influant sur les jets de dés (Better Rolls, MARS 5e) n&#39;est absolument pas recommandée**
 > {.is-info}
@@ -91,7 +91,7 @@ Ces options définissent le fonctionnement des workflows pour les attaques effec
 | Auto Roll Damage | Never</br>Always</br>Attack Hits | Cette option permet de déterminer si le jet de dégâts est lancé automatiquement. </br>**Never**  : Le jet de dégâts n&#39;est pas lancé automatiquement </br> **Always** : le jet de dégâts est toujours lancé en même temps que le jet d&#39;attaque (quel que soit le résultat de l&#39;attaque)</br> **Attack Hits**  : le jet de dégâts est lancé uniquement si l&#39;attaque touche sa cible (voir les options « Hits » dans le troisième onglet de configuration).</br></br> *`Note : si aucune cible n'est sélectionnée, Always Hits et Attack Hit sont équivalents (les jets de dégâts sont effectués)`* |
 | Auto Fast Forward damage | Oui / Non | *Cf la description du Fast Forward* </br>**Oui**  : utilise les dégâts normaux (par défaut) ou selon les raccourcis claviers (Alt / Ctrl / MAJ) </br>**Non**  : le dialogue du choix du type de dégâts s&#39;affiche. |
 | Remove Chat card buttons after roll | Off</br>Attack Only</br>Damage Only</br>Attack and Damage | Cette option indique quels boutons sont laissés dans la chat card après la complétion du workflow d&#39;attaque. Cela permet de relancer des attaques ou de relancer des dégâts quand cela est nécessaire. Toutefois en fonction de certaines autres options (notamment le jet de dégât automatique), il est possible que le workflow se termine automatiquement et que ces boutons ne soient plus utilisables.</br>**Off**  : tous les boutons restent dans la chat card</br>**Attack Only**  : les boutons d&#39;attaque sont enlevés (on ne peut pas relancer l&#39;attaque depuis la chat card)</br>**Damage Only**  : les boutons de dégâts sont enlevés (on ne peut pas relancer les dégâts depuis la chat card) **Attack &amp; Damage**  : la chat card n&#39;affiche aucun des boutons à la fin du workflow. |
-| Hide Roll Details | None</br>Roll Formula</br>Show Attack d20</br>Entire Roll | Permet de masquer aux joueurs (le MJ voit toujours tout) le détail des jets pour éviter que les joueurs ne déduisent les caractéristiques des monstres/PNJ en fonction des jets et des annonces de touche du MJ. </br> **None**  : tout est affiché (jet d&#39;attaque, de dégâts et formule de l&#39;attaque) </br> **Roll Formula**  : les formules d&#39;attaque et de dégâts sont masquées (remplacées par ????) dans les chat card des joueurs **Show Attack d20**  : seul le dé est visible. Les formules d&#39;attaque et de dégâts sont masquées ainsi que les lancers de dés de dégâts </br> **Entire Roll**  : tout est masqué aux joueurs (formules , lancer d&#39;attaque, lancer de dégâts).. </br></br>  *`Remarque : cette option a un effet étrange -mais probablement explicable- sur les jets de dés 3D effectués avec Dice So Nice ! notamment certains jets de dégâts ne sont pas rendus côté MJ (même si l'option ne devrait masquer les résultats qu'aux joueurs)`*
+| Hide Roll Details | None</br>Roll Formula</br>Show Attack d20</br>Entire Roll | Permet de masquer aux joueurs (le MJ voit toujours tout) le détail des jets pour éviter que les joueurs ne déduisent les caractéristiques des monstres/PNJ en fonction des jets et des annonces de touche du MJ. </br> **None**  : tout est affiché (jet d&#39;attaque, de dégâts et formule de l&#39;attaque) </br> **Roll Formula**  : les formules d&#39;attaque et de dégâts sont masquées (remplacées par ????) dans les chat card des joueurs </br>**Show Attack d20**  : seul le dé est visible. Les formules d&#39;attaque et de dégâts sont masquées ainsi que les lancers de dés de dégâts </br> **Entire Roll**  : tout est masqué aux joueurs (formules , lancer d&#39;attaque, lancer de dégâts).. </br></br>  *`Remarque : cette option a un effet étrange -mais probablement explicable- sur les jets de dés 3D effectués avec Dice So Nice ! notamment certains jets de dégâts ne sont pas rendus côté MJ (même si l'option ne devrait masquer les résultats qu'aux joueurs)`*
 
 #### Pour les Joueurs
 </br>
@@ -113,7 +113,7 @@ Ces options sont disponibles dans l'onglet "Workflow"
 
 ![modules-qol-settings-targ1.png](/dnd-modules/modules-qol-settings-targ1.png)
 
-La Section "Targeting" permettent de définir le comportement vis-à-vis des cibles avant une attaque mais est surtout utile pour cibler avec les gabarits (de sorts généralement).
+La section "Targeting" permettent de définir le comportement vis-à-vis des cibles avant une attaque mais est surtout utile pour cibler avec les gabarits (de sorts généralement).
 
 | Paramètre | Valeurs possibles | Commentaires |
 | :--- | :---: | :--- |
@@ -151,7 +151,7 @@ La section "Hits" définit comment les résultats des attaques sont traités.
 
 ![modules-qol-settings-save1.png](/dnd-modules/modules-qol-settings-save1.png)
     
-La section "Saves" détermine le fonctionnement des attaques avec Jet de Sauvegarde et s'apllique donc plus aux sorts.
+La section "Saves" détermine le fonctionnement des attaques avec Jet de Sauvegarde et s'applique donc plus aux sorts.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | :--- | :---: | :--- |
@@ -180,11 +180,11 @@ La section "Damage" gère la manière dont sont appliqués les dégâts
 ![modules-qol-dmg-card.png](/dnd-modules/modules-qol-dmg-card.png)
 
 La Damage Card de Midi-QOL permet de mettre à jour les PV des tokens ciblés. Elle contient une ligne par cible + une lignes TOUS / ALL pour mettre à jour tous les tokens.
-Chaque ligne indique également les PV de la cible avant la mise à jour, le nombre de PV de mise à jour  (et entre crochets le nombre brut avant prise en compte des rédutions / ajouts dûs aux résistances / immunités /etc...) et les PV résultants après la mise à jour sous la forme :
+Chaque ligne indique également les PV de la cible avant la mise à jour, le nombre de PV à ajouter/retirer  (et entre crochets le nombre brut avant prise en compte des rédutions / ajouts dûs aux résistances / immunités /etc...) et les PV résultants après la mise à jour :
 
 > **PV~T0~ +/- PV~MAJ~ [PV~MAJ2~] -> PV~T1~**
 
-Note : une attaque provoquant des dégâts aura le signe (-). Une attaque provoquant des soins aura le ligne (+)
+Note : une attaque provoquant des dégâts aura le signe (-). Une "attaque" provoquant des soins aura le signe (+)
 
 Les boutons permettent d'appliquer / d'annuler les dégâts (décrits de gauche à droite) :
 
@@ -199,6 +199,7 @@ Icônes situés après le nom du token/acteur:
 <li> (icône -) : permet d'ajouter les PV à la cible </li>
 </br>
 Les infobulles indiquent le nombre de PV enlevés ajoutés sur chaque icône.
+
 A noter le fonctionnement différent des icônes (+) et (-) avant et après le nom du token.
 
 </br>
@@ -208,13 +209,13 @@ A noter le fonctionnement différent des icônes (+) et (-) avant et après le n
 
 ![modules-qol-settings-misc1.png](/dnd-modules/modules-qol-settings-misc1.png)
 
-L'onglete "Misc" permet principalement de fixer le comportement des « chat cards » affichées lors de l&#39;utilisation des objets.
+La section "Misc" permet principalement de fixer le comportement des « chat cards » affichées lors de l&#39;utilisation des objets.
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | --- | --- |
 | Show Item details in Chat card |None</br>Card Only</br>Card + Details : PC Only</br>Card / Details : NPC + PC | **None / Card Only**  : semblent faire la même chose. Seuls le nom de l&#39;item et son icône sont affichés. </br>**Card + Details**  : affiche la carte de l&#39;item et sa description pour les capacités des PC et/ou des NPC.</br></br> _Le détail peut être utile au MJ pour avoir un rappel rapide des capacités déclenchées par les joueurs._ |
 | Merge Rolls to one card | Oui / Non | **Oui**  : crée une chat card condensée avec les informations attaque, touchers, dégâts, sauvegardes au même endroit</br> **Non**  : utilise les chat cards standards |
-| Condense Attack/Damage Rolls | Oui / Non | **Oui**  : permet de mettre les informations des formules/jets d&#39;attaque et formules/jets de dégâts sur la même ligne (pour condenser la chat card)</br> **Non**  : utilise le format standard (attaque et dégâts sur des lignes différentes= |
+| Condense Attack/Damage Rolls | Oui / Non | **Oui**  : permet de mettre les informations des formules/jets d&#39;attaque et formules/jets de dégâts sur la même ligne (pour réduire la taille de la chat card)</br> **Non**  : utilise le format standard (attaque et dégâts sur des lignes différentes= |
 | Chat Cards use token name | Oui / Non | **Oui**  : le nom du token est utilisé dans la chat card (propriétaires et cibles) </br>**Non**  : le nom de l&#39;acteur est utilisé dans la chat card (propriétaires et cibles) |
 | Enable Speed Item Rolls | Oui + détails / Non | **Non**  : Utilise les raccourcis standard pour les fast rolls (Alt, Ctrl, MAJ) </br>**Oui**  : affiche une option supplémentaires (Enable Speed Ability Roll) et des sélecteurs pour définir les raccourcis pour les fast forward rolls  |
 | Enable Speed Ability (save/check/skills) Rolls | Oui / Non | **Oui**  : Utilise les raccourcis pour les fast rolls des jets de sauvegarde et compétences </br>**Non**  : les raccourcis ne sont pas utilisés pour les jets de sauvegarde / compétences |
