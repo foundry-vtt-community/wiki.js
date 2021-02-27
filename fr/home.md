@@ -2,9 +2,9 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-01-14T18:23:07.040Z
+date: 2021-02-27T10:19:32.269Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
 ---
 
@@ -46,8 +46,8 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - [Installation sous Linux](/fr/pour-commencer/linux)
 
 ## Les différentes Versions de Foundry VTT
-- **Version Stable, Release :** 0.7.5
-- **Version Instable, Alpha/Beta :** 0.7.x
+- **Version Stable, Release :** 0.7.x
+- **Version Instable, Alpha/Beta :** 0.8.x
 
 #### Divers Modules à éviter avec les versions 0.7.x
 - **Deselection**, Built-in depuis la version 0.7.x
