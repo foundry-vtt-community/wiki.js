@@ -2,9 +2,9 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2020-12-08T17:20:18.406Z
+date: 2021-02-27T10:16:15.974Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
 ---
 
@@ -123,7 +123,7 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 ### Non (encore) référencé dans une catégorie *(All Packages)*
 - **calendar/weather** : permet de gérer le climat en jeu et couplé à FXmaster te permet d'adapter les effets météo et cycle jour.nuit suivant l'heure et la saison d'about time
 - **jitsirtc** : pour la gestion du serveur jitsi
-- **vtta party** : Permet d'avoir une icone dans le chat pour ouvrir un tableau et avoir rapidement les valeurs passives des persos (discrétion, perception, ..etc.
+- **vtta party** : Permet d'avoir une icone dans le chat pour ouvrir un tableau et avoir rapidement les valeurs passives des persos (discrétion, perception, ..etc). Spécifique à dnd5e, pf2e et wfrp4e
 
 ## Spécifiques Systèmes
 
