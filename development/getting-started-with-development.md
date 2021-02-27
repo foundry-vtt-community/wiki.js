@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-27T19:18:53.450Z
+date: 2021-02-27T19:21:21.061Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -49,10 +49,11 @@ someEntity.someKey -= null;
 
 The short and mildly helpful answer is "Use [LibWrapper](https://github.com/ruipin/fvtt-lib-wrapper)."
 
-LibWrapper is a library module which lets you 'safely' [monkeypatch](https://davidwalsh.name/monkey-patching) other functions, including class methods. I say safely because it has some built in QOL things around conflicting patches and puts the power in the user's hands to prioritize one module over another when said conflicts arise (and they will arise).
+LibWrapper is a library module which lets you 'safely' [monkeypatch](#monkeypatch) other functions, including class methods. We say "safely" because it has some built in QOL things around conflicting patches and puts the power in the user's hands to prioritize one module over another when said conflicts arise (and they will arise).
 
-In your example you'd first have to find where that method is in a place where libWrapper can see it. For dnd5e's entity class that ends up being `game.dnd5e.entities.Actor5e` (assigned [here](https://gitlab.com/foundrynet/dnd5e/-/blob/master/dnd5e.js#L49)). Once you know what prototype you need to modify, you'll end up with something that looks like this:
+To pull this off first you have to find where the method or function is in the global scope which libWrapper can see and affect. For dnd5e's entity class that ends up being `game.dnd5e.entities.Actor5e` (assigned [here](https://gitlab.com/foundrynet/dnd5e/-/blob/master/dnd5e.js#L49)). Once you know what prototype you need to modify, you'll end up with something that looks like this:
 
+```js
     libWrapper.register('my-fvtt-module-name', 'game.dnd5e.entities.Actor5e.prototype._prepareSkills', function (wrapped, ...args) {
         console.log('game.dnd5e.entities.Actor5e.prototype._prepareSkills was called with', ...args);
         const actor = this.actor;  // you should have access to `this` in here as well
@@ -61,7 +62,7 @@ In your example you'd first have to find where that method is in a place where l
         // ... do things ...
         return result; // this return needs to have the same shape (signature) as the original, or things start breaking
     });
-
+```
 
 ## What is a flag and how do I use them?
 
