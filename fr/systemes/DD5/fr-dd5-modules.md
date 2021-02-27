@@ -2,7 +2,7 @@
 title: 02 - Combats avec Midi-QOL 
 description: Description de la configuration de l'automatisation des combats dnd avec le module Midi-QOL
 published: true
-date: 2021-02-25T18:58:34.860Z
+date: 2021-02-27T08:12:17.183Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
@@ -156,7 +156,7 @@ La section "Saves" détermine le fonctionnement des attaques avec Jet de Sauvega
 | Paramètre | Valeurs possibles | Commentaires |
 | :--- | :---: | :--- |
 | Auto check Saves | Off</br>Save – All See result</br>Save – Only GM Sees</br>Save – All See Result + Roll| Cette option détermine si Midi-QOL effectue automatiquement le jet de sauvegarde (contre ce qui est défini dans l&#39;action) dans le cadre d&#39;un workflow</br>**Off**  : aucun jet de sauvegarde n&#39;est effectué. Dans ce cas, Midi-QOL considère que toutes les cibles ont raté leur jet de sauvegarde. </br>**Save**  : le jet de sauvegarde est effectuée et Midi-QOL poursuit le workflow. </br>**All See Result**  : tous les joueurs voient les résultats des jets de sauvegarde </br>**Only GM sees**  : seul le MJ voit les résultats des jets de sauvegarde </br>**All See Result + Roll**  : tous les joueurs voient les résultats et les lancers |
-| Display Saving Throw DC | Oui / Non | **Oui**  : masque aux joueurs le niveau de difficulté (DC) du jet de sauvegarde </br>**Non**  : le niveau de difficulté est affiché |
+| Display Saving Throw DC | Oui / Non | **Oui**  :  le niveau de difficulté est affiché</br>**Non**  : masque aux joueurs le niveau de difficulté (DC) du jet de sauvegarde |
 | Search Spell Description | Oui / Non | **Oui**  : recherche la description du sort pour trouver des occurrences de « half as much » pour savoir si un sort fait ½ dégâts (la description contient « half as much ») ou aucun dégât (la description ne contient pas « half as much ») en cas de réussite du jet de sauvegarde. </br>**Non**  : ne fait pas la recherche et considère qu&#39;un jet de sauvegarde réussi entraîne ½ dégâts |
 | Prompt Players to roll Saves | None</br>Let Me Roll That for You</br>LMRTFY + Query</br>Chat Message| Définit comment les jets de sauvegardes à faire sont communiqués au joueur. </br>**None**  : le MJ devra demander manuellement aux joueurs de les faire </br>**LMRTFY**  : utilise le module Let Me Roll That For You (LMRTFY) pour envoyer une requête aux joueurs </br>**Query / Chat Message**  : envoie un Chat Message aux joueurs pour leur demander d&#39;effectuer les jets de sauvegarde |
 | Prompt GM to Roll Saves | Auto</br>Let Me Roll That for You | **Auto**  : Midi-QOL fait les jets de sauvegarde automatiquement pour les NPC gérés par le MJ </br>**Let Me Roll That for You**  : utilise le module LMRTFY pour envoyer une requête de jet de sauvegarde au MJ. |
@@ -173,6 +173,35 @@ La section "Damage" gère la manière dont sont appliqués les dégâts
 | Auto Apply Damage to Target | Auto Apply : Oui / Non</br>Damage Card : Oui / Non | Cette option détermine si Midi-QOL applique automatiquement les dégâts aux cibles et s&#39;il affiche les icônes d&#39;application des dégâts.</br>**Oui**  : Midi-QOL applique automatiquement les dégâts aux cibles </br>**Non**  : Midi-QOL n&#39;applique pas automatiquement les dégâts</br></br>**Damage Card**  : définit si les icônes d&#39;application des dégâts d&#39;affichent. </br>**Oui**  : une « damage card » par cible s&#39;affiche avec des icônes permettant d&#39;appliquer ou d&#39;annuler les dégâts (Cf la damage card di dessous) </br>**Non**  : aucune damage card ne s&#39;affiche
 | Apply Damage Immunities | Never</br>Apply Immunities</br>Apply Immunities + Physical | Cette option permet d&#39;appliquer les vulnérabilités, résistances, immunités des cibles lors de la détermination des dégâts.</br>**Never**  : aucun contrôle n&#39;est fait (le MJ gère à la main) </br>**Apply Immunities**  : applique les résistances / immunités / vulnérabilités aux dégâts en fonction des traits de la cible et des modificateurs de l&#39;attaque. </br>_A vérifier : __**Apply Immunities + Physical**__ : même chose que ci-dessus + vérifie les immunités Physiques. ??_  |
 | Roll Other formula on failed save for rwak/mwak | Oui / Non | **Oui**  : utilise la formule définie dans le champ « Autre formule » en cas de jet de sauvegarde raté de la cible pour les attaques d&#39;armes à distance (rwak) ou les attaques d&#39;armes de mêlée (mwak). Si les options « ½ Damage on Save », noDamSave et fullDamSave sont activées, ces options sont prises en compte en priorité. |
+</br>
+
+###### Damage Card
+
+![modules-qol-dmg-card.png](/dnd-modules/modules-qol-dmg-card.png)
+
+La Damage Card de Midi-QOL permet de mettre à jour les PV des tokens ciblés. Elle contient une ligne par cible + une lignes TOUS / ALL pour mettre à jour tous les tokens.
+Chaque ligne indique également les PV de la cible avant la mise à jour, le nombre de PV de mise à jour  (et entre crochets le nombre brut avant prise en compte des rédutions / ajouts dûs aux résistances / immunités /etc...) et les PV résultants après la mise à jour sous la forme :
+
+> **PV~T0~ +/- PV~MAJ~ [PV~MAJ2~] -> PV~T1~**
+
+Note : une attaque provoquant des dégâts aura le signe (-). Une attaque provoquant des soins aura le ligne (+)
+
+Les boutons permettent d'appliquer / d'annuler les dégâts (décrits de gauche à droite) :
+
+Icônes situés avant le nom du token/acteur:
+<li> (icône +) : permet d'annuler la mise à jour des PV (en cas d'erreur) sur la cible ou sur TOUTES les cibles (ligne ALL).</li>
+<li> (icône -) : permet d'appliquer la mise à jour des PV à la cible ou à TOUTES les cibles (ligne ALL) </li>
+
+Icônes situés après le nom du token/acteur:
+<li> (icône +) : permet de retirer les PV à la cible </li>
+<li> (icône bouclier) : permet de retirer 1/2 dégâts à la cible </li>
+<li> (icône double) : permet de retirer double dégâts à la cible </li>
+<li> (icône -) : permet d'ajouter les PV à la cible </li>
+</br>
+Les infobulles indiquent le nombre de PV enlevés ajoutés sur chaque icône.
+A noter le fonctionnement différent des icônes (+) et (-) avant et après le nom du token.
+
+</br>
 
 ###### Options Diverses
 </br>
@@ -183,11 +212,12 @@ L'onglete "Misc" permet principalement de fixer le comportement des « chat card
 
 | Paramètre | Valeurs possibles | Commentaires |
 | --- | --- | --- |
-| Show Item details in Chat car |None</br>Card Only</br>Card + Details : PC Only</br>Card / Details : NPC + PC | **None / Card Only**  : semblent faire la même chose. Seuls le nom de l&#39;item et son icône sont affichés. </br>**Card + Details**  : affiche la carte de l&#39;item et sa description pour les capacités des PC et/ou des NPC.</br></br> _Le détail peut être utile au MJ pour avoir un rappel rapide des capacités déclenchées par les joueurs._ |
+| Show Item details in Chat card |None</br>Card Only</br>Card + Details : PC Only</br>Card / Details : NPC + PC | **None / Card Only**  : semblent faire la même chose. Seuls le nom de l&#39;item et son icône sont affichés. </br>**Card + Details**  : affiche la carte de l&#39;item et sa description pour les capacités des PC et/ou des NPC.</br></br> _Le détail peut être utile au MJ pour avoir un rappel rapide des capacités déclenchées par les joueurs._ |
 | Merge Rolls to one card | Oui / Non | **Oui**  : crée une chat card condensée avec les informations attaque, touchers, dégâts, sauvegardes au même endroit</br> **Non**  : utilise les chat cards standards |
 | Condense Attack/Damage Rolls | Oui / Non | **Oui**  : permet de mettre les informations des formules/jets d&#39;attaque et formules/jets de dégâts sur la même ligne (pour condenser la chat card)</br> **Non**  : utilise le format standard (attaque et dégâts sur des lignes différentes= |
 | Chat Cards use token name | Oui / Non | **Oui**  : le nom du token est utilisé dans la chat card (propriétaires et cibles) </br>**Non**  : le nom de l&#39;acteur est utilisé dans la chat card (propriétaires et cibles) |
-| Enable Speed Item Rolls | Oui / Non+ détails | **Oui**  : utilise les raccourcis standard pour les fast rolls (Alt, Ctrl, MAJ) </br>**Non**  : permet de redéfinit les raccourcis pour les fast forward rolls et de les appliquer également aux jet de sauvegarde / compétences / attributs |
+| Enable Speed Item Rolls | Oui + détails / Non | **Non**  : Utilise les raccourcis standard pour les fast rolls (Alt, Ctrl, MAJ) </br>**Oui**  : affiche une option supplémentaires (Enable Speed Ability Roll) et des sélecteurs pour définir les raccourcis pour les fast forward rolls  |
+| Enable Speed Ability (save/check/skills) Rolls | Oui / Non | **Oui**  : Utilise les raccourcis pour les fast rolls des jets de sauvegarde et compétences </br>**Non**  : les raccourcis ne sont pas utilisés pour les jets de sauvegarde / compétences |
 | Enable midi-qol custom sounds | Oui / Non + détails | **Non**  : pas de son spécifique joué lors des événements </br>**Oui**  : permet de définir des sons à jouer sur certains événements</br></br>**Sounds Playlist** : définit la playlist où aller chercher les sons.</br>Les autres options permettent de choisir un son spécifique dans la playlist. |
 
 ## Comment utiliser concrètement Midi-QOL
