@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-26T02:39:22.918Z
+date: 2021-02-27T19:17:09.776Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -39,6 +39,12 @@ This is Foundry specific and will delete the `someKey` in the database entry for
 ```js
 someEntity.someKey -= null;
 ```
+
+## How do I change or extend a core function's behavior?
+
+> stub
+> "monkeypatching" definition (maybe in appendix?)
+> Use [libWrapper.](https://github.com/ruipin/fvtt-lib-wrapper)
 
 
 ## What is a flag and how do I use them?
@@ -229,7 +235,7 @@ Use case flowchart:
 		    2. All clients can access but only the GM can modify -> Setting, scope `world`, no workarounds needed.
 
 
-
+> stub
 > - Flags
 > - Settings
 > - Pros and Cons of the two
