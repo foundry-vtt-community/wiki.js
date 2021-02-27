@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-27T20:36:18.996Z
+date: 2021-02-27T20:38:55.052Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -42,7 +42,13 @@ someEntity.someKey -= null;
 
 ## What does Foundry VTT use for templating?
 
-[Handlebars](https://handlebarsjs.com/)
+The `.html` files in Foundry are actually [Handlebars](https://handlebarsjs.com/) files. In your own packages you can use either `.html` or `.hbs`.
+
+### How do I use Handlebars Templates?
+
+> Stub
+> [`loadTemplates`](https://foundryvtt.com/api/global.html#loadTemplates)
+> [`renderTemplate`](https://foundryvtt.com/api/global.html#renderTemplate)
 
 ### How do I debug Handlebars?
 
