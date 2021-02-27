@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-02-27T10:43:52.283Z
+date: 2021-02-27T10:53:09.004Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -68,7 +68,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
     - [Héros & Dragons](/fr/systemes/fr-hnd) (Dépendance: nécessite DD5)
 - [Free League](https://foundryvtt.wiki/fr/systemes/free-league)
 - [Legende les Cinq Anneaux 5e](https://foundryvtt.wiki/fr/systemes/l5r)
-- [Pathfinder 1re édition](/fr/systemes/Pathfinder_1re/macros)
+- [Pathfinder 1re édition](/fr/systemes/Pathfinder_1re/PF1)
 - [Pathfinder Seconde édition](/fr/systemes/PF2)
 - [Rêve de Dragon](/fr/systemes/rdd)
 - [SWADE - Savage Worlds](/fr/systemes/fr-swade)
