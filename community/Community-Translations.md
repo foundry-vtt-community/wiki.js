@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2021-02-26T19:21:58.645Z
+date: 2021-02-28T17:13:22.043Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -43,6 +43,22 @@ If that doesn't work, you could try downloading the file ca.zip and unzip it in 
 #### Description 描述
 将中文添加到FoundryVTT的核心系统中。之后在游戏世界中的设置选择语言为【中文（简体）】即可。
 目前仅汉化了核心系统提供的部分，后续会继续根据翻译。
+
+---
+
+## Chinese (Traditional) 中文（正體中文）
+
+### Core Game Foundry VTT 中文核心系统
+* **Authors**: FVTT-CN, Sad
+* **Version**: 0.1
+* **Foundry VTT Compatibility**: 0.4+
+
+#### Link(s) to Translation 链接
+* GitLab: [https://github.com/hktrpg/foundry_zh-tw](https://github.com/hktrpg/foundry_zh-tw)
+* Manifest: [https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json)
+
+#### Description 描述
+將本MOD添加到FoundryVTT的核心系統中。之後在設置中選擇語言為【中文（正體）】即可。
 
 ---
 
@@ -376,7 +392,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 |:-|:-|:-|:-|:-|:-|
 | ca-ES | Catalan / català | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/montver/foundry-vtt-catala) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) | [Visual Studio Code](https://code.visualstudio.com/) (locally), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn/) | *none* | ? | ? |
-| zh-Hant | Chinese (traditional) / 正體中文 |  <i class="fab fa-github"></i> [GitHub](https://github.com/hktrpg/foundry_zh-tw/) | *none* | ? | ? |
+| zh-Hant | Chinese (traditional) / 正體中文 |  <i class="fab fa-github"></i> [GitHub](https://github.com/hktrpg/foundry_zh-tw/) | *none* | <i class="fab fa-discord"></i> [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7)  | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
 | cs-CZ | Czech / čeština | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz) | *none* | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) | [Transifex](https://www.transifex.com/foundryvtt-czech/public/) |
 | fi-FI | Finnish / suomi | *work in progress* | ? | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) | [Transifex: Foundry VTT Community Translations](https://www.transifex.com/fvtt-community-l10n/public/) |
 | fr-FR | French / français | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr) | *none* | <i class="fab fa-discord"></i> [La Fonderie](https://discord.gg/pPSDNJk) | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
