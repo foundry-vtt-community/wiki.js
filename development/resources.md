@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-02-18T21:14:52.768Z
+date: 2021-03-01T01:31:21.826Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -42,6 +42,14 @@ There are a variety of community-created module and system starter kits out ther
 - Uses Rollup to bundle your module with examples of cleanly including node module libraries into final package
 - **Supports:** Javascript, Sass / SCSS / PostCSS, minification / mangling w/ sourcemaps, and auto creates versions using Github Actions.
 - **Description:** A starter project template demonstrating Rollup to bundle your module code regardless if you plan to include Node modules or not.
+
+### [ghost's Foundry Factory](https://github.com/ghost91-/foundry-factory)
+- Very opinionated (though less opinionated presets could easily be added)
+- Bootstraps both modules and systems
+- Theoretically supports different presets that can be chosen from. However, only one is provided at the moment, which is based on Gulp and Rollup.
+- **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps
+- **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects (currently only one preset based on Gulp and Rollup is available).
+
 
 ## Development Tools
 
