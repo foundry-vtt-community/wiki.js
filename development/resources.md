@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-03-01T01:31:21.826Z
+date: 2021-03-02T14:42:56.764Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -66,6 +66,9 @@ There are a variety of community-created module and system starter kits out ther
 ### [Quench - End to End testing within Foundry](https://github.com/schultzcole/FVTT-Quench)
 - Allows devs to register end to end tests powered by Mocha (and also includes Chai), which are then run in-game in a native Foundry Application.
 
+### [Development Mode](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode)
+- Provides an API for packages to register and read debug flags.
+- Wraps CONFIG.debug in a client setting which preserves your choices.
 
 ## Macros and Code examples
 
