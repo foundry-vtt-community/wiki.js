@@ -2,7 +2,7 @@
 title: Active Effects Primer
 description: 
 published: true
-date: 2021-03-02T02:04:00.794Z
+date: 2021-03-02T02:20:14.047Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-02T01:26:07.563Z
@@ -42,6 +42,8 @@ Yes, when an actor or item is exported it will include any active effects on tha
 > - How do Active Effects modify attributes? Do you just add them to an Item/Actor or is there more to do?
 
 Active effects will modify the attributes of the actor they are owned by, *unless* the effect is indicated as `disabled`. Active effects owned by items don't actually modify anything, however they can be set up to transfer to the actor that owns the item. In this case, the active effect is copied to the owning actor where it can have its effect.
+
+Technically, Active Effects *could* modify Item data, if you implement this in a system or module (in the same way that core implements applying Active Effects to Actors). This functionality is not provided by core, however, and currently there doesn't seem to be a module or system that implements it. 
 
 ---
 
