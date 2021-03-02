@@ -2,11 +2,15 @@
 title: Using Feature Flags
 description: 
 published: true
-date: 2021-02-25T05:22:16.042Z
+date: 2021-03-02T14:45:02.524Z
 tags: guide
 editor: markdown
 dateCreated: 2021-02-07T23:30:36.770Z
 ---
+
+> # Feature Flags removed in Foundry Core 0.8.0
+> This page should be considered archived.
+{.is-warning}
 
 # Using Feature Flags
 [Feature Flags](https://gitlab.com/foundrynet/foundryvtt/-/issues/3959) allow a package to granularly check if certain chunks of code should be executed based on if the functionality is present.
