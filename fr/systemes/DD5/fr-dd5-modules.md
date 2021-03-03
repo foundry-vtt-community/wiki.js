@@ -2,7 +2,7 @@
 title: 02 - Combats avec Midi-QOL 
 description: Description de la configuration de l'automatisation des combats dnd avec le module Midi-QOL
 published: true
-date: 2021-02-27T10:31:57.892Z
+date: 2021-03-03T19:35:12.244Z
 tags: modules, dnd5e, module
 editor: markdown
 dateCreated: 2021-02-23T18:26:12.302Z
@@ -177,31 +177,26 @@ La section "Damage" gère la manière dont sont appliqués les dégâts
 
 ###### Damage Card
 
-![modules-qol-dmg-card.png](/dnd-modules/modules-qol-dmg-card.png)
+![modules-qol-dmg-card2.png](/dnd-modules/modules-qol-dmg-card2.png)
 
-La Damage Card de Midi-QOL permet de mettre à jour les PV des tokens ciblés. Elle contient une ligne par cible + une lignes TOUS / ALL pour mettre à jour tous les tokens.
-Chaque ligne indique également les PV de la cible avant la mise à jour, le nombre de PV à ajouter/retirer  (et entre crochets le nombre brut avant prise en compte des rédutions / ajouts dûs aux résistances / immunités /etc...) et les PV résultants après la mise à jour :
+La Damage Card de Midi-QOL permet de mettre à jour les PV des tokens **ciblés**. Elle contient une ligne par cible + une ligne TOUS / ALL pour mettre à jour toutes les cibles en même temps.
+Chaque ligne indique également les PV de la cible avant la mise à jour, le nombre de PV à ajouter/retirer  (et entre parenthèses le nombre brut avant prise en compte des réductions / ajouts dûs aux résistances / immunités /etc...) ainsi que les PV résultants après la mise à jour :
 
-> **PV~T0~ +/- PV~MAJ~ [PV~MAJ2~] -> PV~T1~**
+> **PV~T0~ +/- PV~MAJ~ (PV~MAJ2~) -> PV~T1~**
 
 Note : une attaque provoquant des dégâts aura le signe (-). Une "attaque" provoquant des soins aura le signe (+)
 
-Les boutons permettent d'appliquer / d'annuler les dégâts (décrits de gauche à droite) :
+Deux  boutons permettent d'appliquer / d'annuler les dégâts (décrits de gauche à droite) :
 
 Icônes situés avant le nom du token/acteur:
-<li> (icône +) : permet d'annuler la mise à jour des PV (en cas d'erreur) sur la cible ou sur TOUTES les cibles (ligne ALL).</li>
-<li> (icône -) : permet d'appliquer la mise à jour des PV à la cible ou à TOUTES les cibles (ligne ALL) </li>
+<li> Apply (icône Coche) : permet d'appliquer la mise à jour des PV sur la cible ou sur TOUTES les cibles (ligne ALL).</li>
+<li> Undo (icône Retour Arrière) : permet d'annuler la mise à jour des PV à la cible ou à TOUTES les cibles (ligne ALL) : la cible revient à son nombre de PV avant la mise à jour</li>
 
-Icônes situés après le nom du token/acteur:
-<li> (icône +) : permet de retirer les PV à la cible </li>
-<li> (icône bouclier) : permet de retirer 1/2 dégâts à la cible </li>
-<li> (icône double) : permet de retirer double dégâts à la cible </li>
-<li> (icône -) : permet d'ajouter les PV à la cible </li>
-</br>
-Les infobulles indiquent le nombre de PV enlevés ajoutés sur chaque icône.
-
-A noter le fonctionnement différent des icônes (+) et (-) avant et après le nom du token.
-
+La liste déroulante (MULTiplicateur) permet de choisir la façon d'appliquer la mise à jour des PV pour chaque cible quand on clique sur "Apply":
+ 
+<li> (Calc) : mode par défaut : ajoutera/enlèvera les PV en fonction du calcul fait par le système </li>
+<li> (x1) (x1/2) (x2) (x1/4) : infligera à la cible les PV selon l'option choisie </li>
+<li> (Heal) :  soignera la cible (ajoute les PV)</li>
 </br>
 
 ###### Options Diverses
