@@ -2,7 +2,7 @@
 title: BCDiceの使い方
 description: BCDiceの使い方
 published: true
-date: 2021-03-04T09:00:19.937Z
+date: 2021-03-04T09:14:45.441Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-04T05:53:50.607Z
@@ -54,7 +54,7 @@ https://github.com/jsinme/fvtt-bcdice/releases/download/0.2.2-beta/module.json
 左のツール一覧の下にダイスのアイコンが出現するので、それをクリックするとBCDiceの画面が開きます。システムを選択して、下のコマンドボックスにコマンドを入力するとそれがFVTTのチャットに表示されます。
 
 便利なショートカット：
-- CTRL+Shift+B: BCdiceの画面を表示して、キーボードの入力をコマンドボックス合わせます。
+- CTRL+Shift+B: BCDiceの画面を表示して、キーボードの入力をコマンドボックス合わせます。
 - Enter: 現在のコマンドをチャットに送信します。BCDice画面はそのまま。
 - Shift+Enter: 現在のコマンドをチャットに送信し、BCDiceの画面を閉じ、FVTTのチャットにキーボードの入力をあわせます。（すなわち、CTRL+Shift+Bとこのコマンドでキーボードから手を話さずにBCDiceを呼び出せます）
 
