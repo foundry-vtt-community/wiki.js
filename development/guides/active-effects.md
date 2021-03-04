@@ -2,7 +2,7 @@
 title: Active Effects Primer
 description: 
 published: true
-date: 2021-03-04T15:48:49.630Z
+date: 2021-03-04T16:03:40.341Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-02T01:26:07.563Z
