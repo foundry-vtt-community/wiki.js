@@ -2,7 +2,7 @@
 title: はじめに
 description: 
 published: true
-date: 2021-03-04T08:45:44.902Z
+date: 2021-03-04T10:35:48.640Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -16,7 +16,7 @@ dateCreated: 2020-12-01T14:32:37.818Z
 <ul>
   <li>有料のオンラインセッションツールです。月額課金の無い『買い切り』のアプリとして販売されています（50＄）。買い切り版は<a href="https://foundryvtt.com/purchase/">こちら</a>から事前購入できます。</li>
   <li>最新のWebデザイン技術を用いて開発されているため、ブラウザを通したオンラインツールでは最高のパフォーマンスを有します。大きなマップやマップアニメーション、複雑なマスク、照明管理設定を用いても軽量で、快適に遊ぶことができます。</li>
-  <li>キャラクターシート、ハンドアウトなどの必要なデータすべてをツール内で一括管理することが可能です。現在日本語で対応しているTRPGとしては<strong>D&amp;D5版</strong>、<strong>Pathfinder 2e</strong>、<strong>Starfinder</strong>、<strong>Warhammer Fantasy Roleplay 4e、新クトゥルフ神話TRPG、神我狩等</strong>が主ですが、コミュニティにより対応するシステムが増えていきます。</li>
+  <li>キャラクターシート、ハンドアウトなどの必要なデータすべてをツール内で一括管理することが可能です。現在日本語で対応しているTRPGとしては<strong>D&amp;D5版</strong>、<strong>Pathfinder 1e</strong>, <strong>Pathfinder 2e</strong>、<strong>Starfinder</strong>、<strong>Warhammer Fantasy Roleplay 4e、新クトゥルフ神話TRPG、神我狩等</strong>が主ですが、コミュニティにより対応するシステムが増えていきます。</li>
   <li>MODによりFVTTの機能を拡張できます。FVTTのコミュニティでは開発者が基本ツールに含めた機能以外に、ユーザーが作った拡張機能（MOD）を導入することができ、より便利に活用することが可能です。</li>
   
   ## 日本語便利リンク
