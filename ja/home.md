@@ -2,7 +2,7 @@
 title: はじめに
 description: 
 published: true
-date: 2021-02-06T10:39:20.222Z
+date: 2021-03-04T08:45:44.902Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -20,7 +20,7 @@ dateCreated: 2020-12-01T14:32:37.818Z
   <li>MODによりFVTTの機能を拡張できます。FVTTのコミュニティでは開発者が基本ツールに含めた機能以外に、ユーザーが作った拡張機能（MOD）を導入することができ、より便利に活用することが可能です。</li>
   
   ## 日本語便利リンク
-  <i class="fab fa-discord"></i> [オンセ工房日本語支援サーバ](discord.gg/vM4YM27)
+  <i class="fab fa-discord"></i> [オンセ工房日本語支援サーバ](https://discord.com/invite/vM4YM27)
   <i class="fas fa-pen-square"></i> [旧オンセ工房Wiki](https://dndjp.mixh.jp/fvtt/doku.php)
   <i class="fab fa-twitter-square"></i> [佐藤真裸さんのFVTT紹介](https://twitter.com/sa10trpg/status/1308413633198784513)
   <i class="fab fa-patreon"></i> [オンセ工房支援Patreon](https://www.patreon.com/onsekobo)
