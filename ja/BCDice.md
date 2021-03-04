@@ -2,7 +2,7 @@
 title: BCDiceの使い方
 description: BCDiceの使い方
 published: true
-date: 2021-03-04T08:50:02.574Z
+date: 2021-03-04T09:00:19.937Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-04T05:53:50.607Z
@@ -63,7 +63,7 @@ https://github.com/jsinme/fvtt-bcdice/releases/download/0.2.2-beta/module.json
 # Q&A
 
 Q: なんで個別ウィンドウなの？
-A: 理由は２つです。一つは後にチャットパレットModと融合させるときに拡張しやすいように、もう一つはFVTTの既存のチャットが今後のアップデートで変わったとしてもBCdiceのみは単独で行動するように（管理を楽に）しています。
+A: 理由は２つです。一つは後にチャットパレットModと融合させるときに拡張しやすいように、もう一つはFVTTの既存のチャットが今後のアップデートで変わったとしてもBCDiceのみは単独で行動するように（管理を楽に）しています。
 
 Q: 不具合がある！　どこに相談すれば良い？
 A: 不具合により報告する場所が違います。 FVTTに関わる問題は https://foundryvtt.wiki/ja/home のオンセ工房日本語支援サーバへ（ツイッターは見ませんので直接報告していただけると幸いです）。BCDiceのコマンドそのものに関する不具合は https://bcdice.org/ の公式チャットより報告するようにお願いします。
