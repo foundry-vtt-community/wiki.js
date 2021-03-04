@@ -2,13 +2,16 @@
 title: Active Effects Primer
 description: 
 published: true
-date: 2021-03-02T02:20:14.047Z
+date: 2021-03-04T15:48:49.630Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-02T01:26:07.563Z
 ---
 
 This page is a stub. If you know the answer to any of these questions, please help us out by filling it out!
+
+> Information known to be up to date as of Foundry Core 0.7.9
+{.is-info}
 
 ---
 
