@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-02-27T20:38:55.052Z
+date: 2021-03-04T15:30:39.188Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -37,7 +37,9 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 
 This is Foundry specific and will delete the `someKey` in the database entry for `someEntity`
 ```js
-someEntity.someKey -= null;
+someEntity.update({
+  -=someKey: null
+})
 ```
 
 ## What does Foundry VTT use for templating?
