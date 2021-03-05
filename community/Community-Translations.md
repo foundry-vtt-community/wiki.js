@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2021-02-28T17:13:22.043Z
+date: 2021-03-05T12:23:08.446Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -388,10 +388,10 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 # Localization Teams & Tools
 
-| Code | Language | Repository | License | Discord Community | Translation Tool |
+| Code | Language | Repository | License | Local Community | Translation Tool |
 |:-|:-|:-|:-|:-|:-|
 | ca-ES | Catalan / català | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/montver/foundry-vtt-catala) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) | [Visual Studio Code](https://code.visualstudio.com/) (locally), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Spanish) |
-| zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn/) | *none* | ? | ? |
+| zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn/) | *none* | <i class="fas fa-comments"></i> Tencent QQ Group #: **716573917** | [HBuilder X](https://www.dcloud.io/hbuilderx.html) (locally) |
 | zh-Hant | Chinese (traditional) / 正體中文 |  <i class="fab fa-github"></i> [GitHub](https://github.com/hktrpg/foundry_zh-tw/) | *none* | <i class="fab fa-discord"></i> [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7)  | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
 | cs-CZ | Czech / čeština | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz) | *none* | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) | [Transifex](https://www.transifex.com/foundryvtt-czech/public/) |
 | fi-FI | Finnish / suomi | *work in progress* | ? | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) | [Transifex: Foundry VTT Community Translations](https://www.transifex.com/fvtt-community-l10n/public/) |
@@ -403,7 +403,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 | pl-PL | Polish / polski | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/fvtt-poland/core) | [GPL v3](https://gitlab.com/fvtt-poland/core/-/blob/main/LICENSE) | ? | [Transifex: Foundry VTT Community Translations](https://www.transifex.com/fvtt-community-l10n/public/) |
 | pt-BR | Portuguese (Brazil) / Português (Brasil) | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese) | [MIT](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/-/blob/master/LICENSE) | <i class="fab fa-discord"></i> [Foundry VTT Brasil](https://discord.gg/XNC86FBnQ2) | [Transifex: Foundry VTT Community Translations](https://www.transifex.com/fvtt-community-l10n/public/) |
 | ru-RU | Russian / русский | <i class="fab fa-github"></i> [GitHub](https://github.com/Phenomen/foundry-vtt-ru) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) | [i18n editor](https://github.com/jcbvm/i18n-editor) (locally) |
-| es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) | POEditor, [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Catalan), custom R code (locally) |
+| es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) | [POEditor](https://poeditor.com/), [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Catalan), custom R code (locally) |
 | sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | [MIT](https://github.com/xdy/foundryvtt-lang-sv/blob/master/LICENSE) | *none* | [IntelliJ IDEA](https://www.jetbrains.com/idea/) (locally) |
 
 # Appendix
