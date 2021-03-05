@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-02-26T19:19:09.037Z
+date: 2021-03-05T12:23:43.366Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -13,11 +13,11 @@ Foundry Virtual Tabletop has a broad international community and the core softwa
 For additional translations (including ones for game systems) see the [list of translation modules](https://foundryvtt.com/packages/tag/translation) on the Foundry VTT website (always up to date) or the [Translations](https://foundryvtt.wiki/en/community/Community-Translations) page here in the wiki (may not be up to date).
 
 ## Table of Supported Languages
-| Code | Language | Manifest URL | Local Discord Community |
+| Code | Language | Manifest URL | Local Community |
 |:-|:-|:-|:-|
 | ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) |
-| zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json) | ? |
-| zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | ? |
+| zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json) | <i class="fas fa-comments"></i> Tencent QQ Group #: **716573917** |
+| zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7) |
 | cs-CZ | Czech / čeština | [Latest version](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json) | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) |
 | en-US | English (American) *[Default]* | — | <i class="fab fa-discord"></i> [The Foundry](https://discordapp.com/invite/DDBZUDf) (official) |
 | fi-FI | Finnish / suomi | *work in progress* | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |
@@ -83,7 +83,7 @@ You must be the Gamemaster or have the "Modify Configuration Settings" permissio
 ## Contributing
 If you would like to help with translating Foundry VTT, it's modules, or game systems, the best way is to join your local Discord community listed in the table above and ask for more information there. If your language is not listed in the table, your best bet is to ask for advice on the `#translations` channel on <i class="fab fa-discord"></i> [the official Foundry VTT Discord server](https://discordapp.com/invite/DDBZUDf) and look into the [localization guides](https://foundryvtt.wiki/en/development/guides/localization).
 
-For more information about the community translation teams, their tools, and code repositories see the [Translations](https://foundryvtt.wiki/en/community/Community-Translations) page.
+For more information about the community translation teams, their tools, and code repositories see the [Translations](https://foundryvtt.wiki/en/community/Community-Translations#localization-teams-tools) page.
 
 ## Wiki Localizations
 This community wiki is available in the following languages:
