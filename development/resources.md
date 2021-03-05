@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-03-02T14:42:56.764Z
+date: 2021-03-05T06:18:47.313Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -50,6 +50,13 @@ There are a variety of community-created module and system starter kits out ther
 - **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps
 - **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects (currently only one preset based on Gulp and Rollup is available).
 
+### [Dragon Flagon TS Automated Module Template](https://github.com/flamewave000/fvtt-module-template)
+- Lightly Opinionated
+- This module template has an opinionated folder structure, but otherwise nothing else.
+- Fully Automated building, development watching, and bundling of the module.
+- **Uses**: Gulp and TypeScript
+- **Supports**: JavaScript, TypeScript, SourceMaps, Automated Bundling (.zip and manifest generation)
+- **Description**: A TypeScript+Gulp template for a more automated FoundryVTT module development. In this system, you perform minimal changes to the module.json as it is populated automatically based on the package.json and the files present. Will allow you to run a series of Gulp watchers that will automatically build/update files to your dev environment whenever you save a file you've changed.
 
 ## Development Tools
 
