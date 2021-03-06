@@ -2,9 +2,9 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2021-01-24T22:23:14.981Z
-tags: 
-editor: undefined
+date: 2021-03-06T03:37:46.811Z
+tags: modules
+editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
 ---
 
@@ -361,14 +361,14 @@ These modules have either been directly subsumed by other modules, or discontinu
 | [DDB Popper](https://github.com/death-save/ddb-popper) | [Inline Webviewer](https://github.com/ardittristan/VTTInlineWebviewer) |
 | [DnD Beyond Character Importer](https://github.com/sillvva/foundry-vtt-modules/tree/master/ddb-importer); [VTTA-DnDBeyond](https://foundryvtt.com/packages/vtta-dndbeyond/) | [ddb-importer](https://github.com/MrPrimate/ddb-importer) |
 | [Dynamic Items](https://gitlab.com/tposney/dynamicitems); [Dynamic Effects](https://foundryvtt.com/packages/dynamiceffects/) | [DAE (Dynamic Active Effects)](https://foundryvtt.com/packages/dae/) |
-| [D&D 5e Conditions](https://github.com/trdischat/conditions5e) | [Combat Utility Belt](https://foundryvtt.com/packages/combat-utility-belt/) |
 | [Encumbrance Variant](https://gitlab.com/hooking/foundry-vtt---encumbrance-variant-5e) | [Variant Encumbrance](https://foundryvtt.com/packages/VariantEncumbrance/) |
-| [FVTT-Party](https://github.com/shwill/fvtt-party) | [VTTA-Party](https://foundryvtt.com/packages/vtta-party/) |
+| [FVTT-Party](https://github.com/shwill/fvtt-party); [VTTA-Party](https://foundryvtt.com/packages/vtta-party/) (Party Overview) | [Party Overview](https://github.com/League-of-Foundry-Developers/party-overview)
+| [VTTA-Party](https://foundryvtt.com/packages/vtta-party/) (Token Tooltip) | [Illandril's Token Tooltips](https://github.com/illandril/FoundryVTT-token-tooltips) or [Token Tooltip Alt](https://github.com/bmarian/token-tooltip-alt)
 | [Item Sheet Buttons](https://gitlab.com/hooking/foundry-vtt---item-sheet-buttons) | [BetterRolls for 5e](https://foundryvtt.com/packages/betterrolls5e/) or [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
 | [Minor-QOL](https://foundryvtt.com/packages/minor-qol/) | [Midi-QOL](https://gitlab.com/tposney/midi-qol) |
 | [NPC Browser](https://github.com/syl3r86/npc-browser) | [Compendium Browser](https://foundryvtt.com/packages/compendium-browser/) |
 | [Request Roll](https://github.com/JacobMcAuley/request_roll) | [Let me roll that for you](https://foundryvtt.com/packages/lmrtfy/) |
-| [Roll20 NPC Importer, for 5e](https://github.com/syl3r86/roll20npcimporter) | [R20 Converter](#roll20-converter) |
+| [Roll20 NPC Importer, for 5e](https://github.com/syl3r86/roll20npcimporter) | [R20 Converter](https://github.com/kakaroto/R20Converter) |
 | [Spell Browser](https://github.com/syl3r86/Spell-Browser) | [Compendium Browser](https://foundryvtt.com/packages/compendium-browser/) |
 | [CursorZoom](https://github.com/itamarcu/CursorZoom) | [Zoom/Pan Options](https://foundryvtt.com/packages/zoom-pan-options/) |
 
@@ -417,14 +417,6 @@ We consider a module abandoned if its author has disappeared for several months 
 * **Author**: RaySSharma#4736 on Discord
 * **Project**: [https://github.com/RaySSharma/fvtt-rolltable-buttons/tree/84c2634e31c084cf0f87614fa43257c1c2f9fe32](https://github.com/RaySSharma/fvtt-rolltable-buttons/tree/84c2634e31c084cf0f87614fa43257c1c2f9fe32)
 * **Description**: This module adds a button to the chat controls for easier access to rolltables. Came about as a way to add critical-hit decks for players.
-
----
-
-### Theatre Inserts
-
-* **Noah Zorbaugh, U~man**: U~man#2374, contributions are welcome
-* **Project**: [https://gitlab.com/NoahZorbaugh/theatre](https://gitlab.com/NoahZorbaugh/theatre)
-* **Description**: Theatre is a mod that allows for a visual novel style RP experience for text, and text-voice hybrid games.
 
 ---
 
