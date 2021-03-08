@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-03-08T12:38:29.674Z
+date: 2021-03-08T13:32:31.339Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -49,7 +49,7 @@ There are a variety of community-created module and system starter kits out ther
   - League Basic JS Module Template (lightly opinionated, see above)
 - Bootstraps both modules and systems
 - **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps
-- **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects (currently only one preset based on Gulp and Rollup is available).
+- **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects.
 
 ### [Dragon Flagon TS Automated Module Template](https://github.com/flamewave000/fvtt-module-template)
 - Lightly Opinionated
