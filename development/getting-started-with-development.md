@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-03-04T15:46:27.877Z
+date: 2021-03-09T15:20:04.607Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -86,6 +86,39 @@ To pull this off first you have to find where the method or function is in the g
         return result; // this return needs to have the same shape (signature) as the original, or things start breaking
     });
 ```
+
+## How do I get started with sockets?
+
+> [Stub](https://github.com/VanceCole/macros/blob/master/sockets.js)
+
+## How do I make functions available to other modules?
+
+> Stub
+> 
+> [Example: DevMode](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode/blob/f1f98916d25c633ac22020e30cc335a786ed5aa4/src/foundryvtt-devMode.ts#L57)
+> Basically you will want to put something namespaced on window or global this, then fire a custom hook.
+>
+> I would not recommend putting the whole class on window, rather I think it's a better idea to put a few functions as a dedicated api.
+>
+> This makes it easier to not break api consumers code when your own code changes. Since you are providing these specific api methods, you can ensure that their shape doesn't change
+>
+> There's two ways to accomplish this and I'm not really sure why one is better, or even if one is better:
+> ```js
+> window[MODULE_ID] = {
+>   someFunction: YourClass.method
+> }
+> ```
+> 
+> Putting it on the window allows an optional dependency like so window['your-module']?.someFunction.
+> 
+> ```js
+> globalThis[MODULE_ID] = {
+>   someFunction: YourClass.method
+> }
+> ```
+> 
+> Putting it on the globalThis doesn't seem to allow the same thing.
+
 
 ## What is a flag and how do I use them?
 
