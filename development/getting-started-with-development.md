@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-03-09T15:20:04.607Z
+date: 2021-03-09T15:50:59.139Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -272,6 +272,54 @@ FormApplications allow you to run any logic you want, which includes setting set
 
 
 # Common Hurdles and How to Overcome Them
+
+## My new package doesn't show up in Foundry
+
+By far the most common issue when you're brand new to this. Don't panic and go through this checklist
+
+### 1. Your manifest json has all the required fields. 
+
+* [Modules](https://foundryvtt.com/article/module-development/)
+* [Systems](https://foundryvtt.com/article/system-development/)
+
+### 2. Your manifest's `name` matches your directory exactly.
+
+Foundry verifies that the package `name` and the package directory name match exactly, otherwise it deems them invalid.
+
+```json
+{
+  "name": "my-module-name"
+}
+```
+
+With this module.json in the following structure, your module will not appear as installed in Foundry.
+
+```
+/Data
+└ /modules
+  ├ /not-my-module
+  └ /my-module-wrong-name
+    ├ myScript.js
+    └ module.json
+```
+
+Instead you need to either change your directory or your `name` so they match.
+
+### 3. Your manifest is in the root of your package directory.
+
+Similar to 2, but affects people who have a build step.
+
+```
+/Data
+└ /modules
+  ├ /not-my-module
+  └ /my-module-name
+  	└ /dist
+    	├ myScript.js
+    	└ module.json
+```
+
+In this example, the manifest at `modules/my-module-name/dist/module.json` will not be found by Foundry and thus the module will not appear as installed.
 
 
 ## Storing Module Data
