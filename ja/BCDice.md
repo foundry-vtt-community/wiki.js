@@ -2,7 +2,7 @@
 title: BCDiceの使い方
 description: BCDiceの使い方
 published: true
-date: 2021-03-09T04:34:35.688Z
+date: 2021-03-10T05:01:15.074Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-04T05:53:50.607Z
@@ -39,7 +39,7 @@ BCDiceは拡張機能モジュール（モッド・Mod）としてFVTTに組み�
 （機能提供、プルリク歓迎）
 
 以下のリンクをモジュールとして導入します。
-https://github.com/jsinme/fvtt-bcdice/releases/download/0.3.0-beta/module.json
+https://github.com/jsinme/fvtt-bcdice/releases/download/0.3.1-beta/module.json
 
 ![bcdice_install.jpg](/images/japanese-community/bcdice_install.jpg =700x500)
 
