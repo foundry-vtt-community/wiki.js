@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-03-08T13:32:31.339Z
+date: 2021-03-10T07:22:51.315Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -45,7 +45,7 @@ There are a variety of community-created module and system starter kits out ther
 
 ### [ghost's Foundry Factory](https://github.com/ghost91-/foundry-factory)
 - Supports different presets that can be chosen from.
-  - Gulp + Rollup (very opinionated)
+  - ghost's Gulp + Rollup Preset (very opinionated)
   - League Basic JS Module Template (lightly opinionated, see above)
 - Bootstraps both modules and systems
 - **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps
