@@ -2,9 +2,9 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-01-08T17:15:03.757Z
+date: 2021-03-11T22:01:04.600Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
 ---
 
@@ -30,7 +30,7 @@ Installation is fairly straightforward and can be done in one of two ways.
 
 0. User opens the UI, finds a package to install, clicks "Install."
 	UI is populated from packages submitted and accepted to https://foundryvtt.com/packages with at least one release.
-3. Foundry fetches the manifest from the latest release submitted to the module's `foundryvtt.com/admin` page and looks for a `download` url within it.
+3. Foundry fetches the manifest from the latest release with a matching core version as the client that was submitted to the module's `foundryvtt.com/admin` page and looks for a `download` url within it.
 4. Foundry downloads the manifest's `download` url and checks if it is a zip file. If so, it unzips.
 
 ### From a user-input manifest url
