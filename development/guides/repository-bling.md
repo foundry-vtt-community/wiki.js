@@ -2,7 +2,7 @@
 title: Repository Bling
 description: A quick guide to tricking out your repository readme.
 published: true
-date: 2021-02-06T03:32:26.229Z
+date: 2021-03-12T14:21:25.716Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z
@@ -36,12 +36,33 @@ You can customize the colors and such at the source if desired.
 The Forge has an API which lets you know what percentage of users have added a specific module to their games. Simply replace `[YOUR_PACKAGE_NAME]` in the string below with the `name` field from your manifest and you're off to the races.
 
 ```
-![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2F[YOUR_PACKAGE_NAME]&colorB=4aa94a)
+[![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2F[YOUR_PACKAGE_NAME]&colorB=4aa94a)](https://forge-vtt.com/bazaar#package=[YOUR_PACKAGE_NAME])
 ```
 Example:
 ![forge-installs.png](/development/guides/repo-bling/forge-installs.png)
 
 The colors have been pre-set to more or less match the Forge's branding colors.
+
+### Foundry Hub
+These badges will interface with the Foundry Hub's API exposing package endorsements and comments. They're wrapped in a link to the package as well. Same deal as above, replace `[YOUR_PACKAGE_NAME]` in the strings below with the `name` field from your manifest.
+
+#### Endorsements
+
+```
+[![Foundry Hub Endorsements](https://img.shields.io/endpoint?logoColor=white&url=https%3A%2F%2Fwww.foundryvtt-hub.com%2Fwp-json%2Fhubapi%2Fv1%2Fpackage%2F[YOUR_PACKAGE_NAME]%2Fshield%2Fendorsements)](https://www.foundryvtt-hub.com/package/[YOUR_PACKAGE_NAME]/)
+```
+
+Example:
+![hub-endorsements.png](/development/guides/repo-bling/hub-endorsements.png)
+
+#### Comments
+```
+[![Foundry Hub Comments](https://img.shields.io/endpoint?logoColor=white&url=https%3A%2F%2Fwww.foundryvtt-hub.com%2Fwp-json%2Fhubapi%2Fv1%2Fpackage%2F[YOUR_PACKAGE_NAME]%2Fshield%2Fcomments)](https://www.foundryvtt-hub.com/package/[YOUR_PACKAGE_NAME]/)
+```
+
+Example:
+![hub-endorsements.png](/development/guides/repo-bling/hub-comments.png)
+
 
 ### Foundry Version
 
