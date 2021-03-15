@@ -2,9 +2,9 @@
 title: PL基本操作
 description: 基本操作
 published: true
-date: 2021-02-06T10:38:49.671Z
-tags: 基本操作
-editor: markdown
+date: 2021-02-06T10:38:53.588Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-06T10:38:11.852Z
 ---
 

@@ -2,9 +2,9 @@
 title: Macros
 description: 
 published: true
-date: 2021-02-10T06:31:14.507Z
+date: 2021-02-10T06:31:18.429Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-09-23T00:22:44.591Z
 ---
 

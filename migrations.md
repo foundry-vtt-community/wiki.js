@@ -2,9 +2,9 @@
 title: Migrations
 description: 
 published: true
-date: 2021-02-06T20:31:24.776Z
+date: 2021-02-06T20:31:28.283Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-02-06T20:31:24.776Z
 ---
 

@@ -2,9 +2,9 @@
 title: Refactor the Setting class to follow the standard interfaces used by other Document types
 description: 
 published: true
-date: 2021-02-07T17:15:33.610Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:15:37.173Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:15:33.610Z
 ---
 

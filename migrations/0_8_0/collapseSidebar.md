@@ -2,9 +2,9 @@
 title: Rename sidebarCollapse to collapseSidebar
 description: 
 published: true
-date: 2021-02-07T17:01:46.957Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:01:50.375Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:01:23.882Z
 ---
 

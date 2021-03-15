@@ -2,9 +2,9 @@
 title: Rename the socketListeners static method of several classes to _activateSocketListeners to more semantically describe the action that is taken as well as to denote that the method should not be called by external code.
 description: 
 published: true
-date: 2021-02-07T17:17:07.722Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:17:11.317Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:17:07.722Z
 ---
 

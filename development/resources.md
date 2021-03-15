@@ -2,9 +2,9 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-03-10T07:22:51.315Z
-tags: development, resource, tutorial, template, macro
-editor: markdown
+date: 2021-03-10T07:22:54.464Z
+tags: 
+editor: undefined
 dateCreated: 2020-09-18T21:54:56.070Z
 ---
 

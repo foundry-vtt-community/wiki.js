@@ -2,9 +2,9 @@
 title: 0.1. Pour commencer
 description: 
 published: true
-date: 2021-02-25T05:51:07.770Z
+date: 2021-02-25T05:51:10.854Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2020-10-19T10:37:32.287Z
 ---
 

@@ -2,9 +2,9 @@
 title: The base Entity class has been deprecated in favor of a DocumentMixin combined with AbstractBaseDocument class definitions.
 description: 
 published: true
-date: 2021-02-07T17:09:56.382Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:10:00.083Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:09:56.382Z
 ---
 

@@ -2,9 +2,9 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-02-20T15:40:20.296Z
-tags: localization, translation, guide
-editor: markdown
+date: 2021-02-20T15:40:24.136Z
+tags: 
+editor: undefined
 dateCreated: 2020-11-19T16:43:45.270Z
 ---
 

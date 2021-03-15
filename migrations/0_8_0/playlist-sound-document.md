@@ -2,9 +2,9 @@
 title: Create a formalized PlaylistSound embedded document type, instances of which belong to the playlist#sounds Collection.
 description: 
 published: true
-date: 2021-02-07T17:36:06.015Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:36:09.107Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:36:06.015Z
 ---
 

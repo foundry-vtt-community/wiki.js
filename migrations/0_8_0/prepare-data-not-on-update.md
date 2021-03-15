@@ -2,9 +2,9 @@
 title: Move calls to Document#prepareData outside of Document#_onUpdate to avoid cases where a system developer overrides this event handler and forgets to re-prepare Document data.
 description: 
 published: true
-date: 2021-02-07T17:37:38.736Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:37:41.930Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:37:38.736Z
 ---
 

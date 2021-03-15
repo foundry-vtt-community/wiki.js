@@ -2,9 +2,9 @@
 title: Understanding FormApplication
 description: 
 published: true
-date: 2021-02-22T17:29:54.794Z
+date: 2021-02-22T17:29:58.133Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-02-22T16:19:21.040Z
 ---
 

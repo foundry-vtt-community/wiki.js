@@ -2,9 +2,9 @@
 title: Convert all server-side primary and embedded document models to use the new shared AbstractBaseData and AbstractBaseDocument interfaces.
 description: 
 published: true
-date: 2021-02-07T16:51:22.391Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T16:51:25.830Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T16:51:22.391Z
 ---
 

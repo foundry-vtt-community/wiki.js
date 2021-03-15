@@ -2,9 +2,9 @@
 title: Safari – Issue with static class fields
 description: 
 published: true
-date: 2021-02-07T17:00:10.334Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:00:13.786Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:00:10.334Z
 ---
 

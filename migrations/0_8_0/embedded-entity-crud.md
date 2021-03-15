@@ -2,9 +2,9 @@
 title: EmbeddedEntity create, update, and delete hooks are now passed the EmbeddedEntity document instance instead of only the raw object data involved in the operation.
 description: 
 published: true
-date: 2021-02-07T17:26:27.916Z
-tags: 0.8.0
-editor: markdown
+date: 2021-02-07T17:26:31.747Z
+tags: 
+editor: undefined
 dateCreated: 2021-02-07T17:26:27.916Z
 ---
 

@@ -2,9 +2,9 @@
 title: 0.0. Spécifications requises
 description: 
 published: true
-date: 2021-02-25T06:28:45.779Z
+date: 2021-02-25T06:28:48.734Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-02-25T05:50:38.831Z
 ---
 

@@ -2,9 +2,9 @@
 title: 1.0. Les Macros
 description: 
 published: true
-date: 2021-02-27T10:38:48.179Z
+date: 2021-02-27T10:38:51.339Z
 tags: 
-editor: markdown
+editor: undefined
 dateCreated: 2021-02-27T10:38:48.179Z
 ---
 
