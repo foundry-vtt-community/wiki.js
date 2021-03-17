@@ -2,9 +2,9 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-03-14T15:15:04.138Z
-tags: 
-editor: undefined
+date: 2021-03-17T12:26:57.877Z
+tags: settings
+editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
 ---
 
@@ -269,6 +269,12 @@ FormApplications allow you to run any logic you want, which includes setting set
 1. **Space.** You could easily use this to tidy up a lot of module settings which would otherwise take up a lot of vertical space on the settings list.
 2. **Validation.** Since you control the FormApplication's submit logic, you could run validation on user inputs before saving them to the database.
 3. **Edit Setting Objects.** If you have a use case for a complex object of data being stored as a setting, a FormApplication menu would let your users manipulate that object directly.
+
+## How do I get data based on a user-defined data path?
+
+For system independence, it's often a good idea to allow data paths to be defined by a setting (e.g. if you want to reference an attribute modifier in a dialog, then you could hard-code `modifier = actor.attributes.str.mod`, but that path is 5e specific - so allowing a user to define the path to the attribute modifier makes it easy to tweak your module for a specific system).
+
+This can be done with the `getProperty(object, key)` function, e.g. `modifier = getProperty(actor, attributeKey)`.
 
 
 # Common Hurdles and How to Overcome Them
