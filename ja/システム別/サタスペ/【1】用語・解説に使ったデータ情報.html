@@ -1,11 +1,77 @@
 <!--
-title: 【1】用語・解説に使ったデータ情報
+title: 【1】用語・データ集
 description: 
 published: true
-date: 2021-03-22T14:27:59.851Z
+date: 2021-03-22T15:46:37.565Z
 tags: サタスペ
 editor: ckeditor
 dateCreated: 2021-03-22T14:27:59.851Z
 -->
 
-<p>用語</p>
+<h2><span class="text-big">用語解説</span></h2>
+<ul>
+  <li><strong>FVTT</strong>：正式名をFoundry Virtual TableTop、日本語翻訳名をオンセ工房と呼ぶ。どどんとふやココフォリアやユドナリウムやコリドーンのような<mark class="marker-yellow">TRPGツール（プラットフォーム）のこと</mark>。<mark class="marker-yellow">買い切り制</mark>の有償ソフト（どどんとふやユドナリウムやコリドーンのソフトは基本的に無料でインストールできるが、それが有料という意味。<mark class="marker-yellow">参加者全員が購入する必要はない</mark>）。　遊ぶためのシステムを選択して個別にインストール（一部例外を除いて無料）して遊ぶ（どどんとふやココフォリアやユドナリウムやコリドーンでの部屋の作成時に、システムを選択するイメージ）。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>MOD</strong>：正式名をモジュール。FVTTユーザー等によって作成された、FVTTの基本機能に尖った付加機能を追加できる改造データ。ゲーム制作会社オリジナル挿絵・シナリオデータ用MOD等の一部の例外を除いて無料。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>ワールド</strong>：いわゆるセッションの部屋（ルーム）のこと。保存できるワールド数の制限の上限は、SSD・HDDの容量が足りてる限りはほぼない。ただし、同時に有効化して遊ぶことができるワールド数は1アカウントにつき1つ。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>アクター</strong>：いわゆる（NPC,PC,モンスター等々の総称）キャラクターのこと。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>アイテム</strong>：アクター以外のシステム内独自データのこと。システムによっては、アイテムが武器・呪文書・スキル等々に細分化されている。”サタスペ”の場合は、カルマ・チャットパレット・アイテム（武器・乗物・小道具・おたからの一括）の3つ。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>シーン</strong>：いわゆるマップのこと。ココフォリアのように複数のシーンを裏で用意できる。常時公開シーンとGMが有効化するまで非公開のシーンなど設定できる。高低差やコマの配置と壁等のオブジェクトの配置による視覚制限を設定できる。ヘックスマップも作成できる。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>サーバー</strong>：FVTTのソフトはデスクトップ版を起動するだけで、起動している間だけユドナリウムのように自宅にサーバーを建てることができる（ポート開放等する必要がある場合もある。また、ユドナリウムと違ってP2Pでの通信ではないので、GMが回線弱者でない限りは、回線弱者が他の参加者に影響を与えない）。また、レンタルサーバー等を借りて、どどんとふやココフォリアやコリドーンのように常時サーバーをオンラインで起動しておくこともできる（NodeJSなので、独力での設置は技能と/か根性が必要）。ForgeというFVTT専用レンタルサーバーを借りれば、サーバーの専門知識を伴う運営について委託できる(約5,000円/年か約500円/月で契約できる)。</li>
+</ul>
+<p>&nbsp;</p>
+<ul>
+  <li><strong>インポート/エクスポート</strong>：データのダウンロード・アップロードとだいたい意味。</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3><span class="text-big">解説に使用しているデータ</span></h3>
+<ul>
+  <li>FVTT本体バージョン：0.7.9</li>
+  <li>”サタスペ”バージョン：0.2.7</li>
+</ul>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3><span class="text-big">FVTT使用時のPCの構成要件</span></h3>
+<h4>最低</h4>
+<ul>
+  <li>OSが64bitであるWindows10, maxOS Catalina(以降), linux</li>
+  <li>統合グラフィックプロセッサ（<a href="https://ja.wikipedia.org/wiki/Integrated_Graphics_Processor#:~:text=Integrated%20Graphics%20Processor">Wikipedia</a>）</li>
+  <li>8GBのメモリー（RAM）</li>
+  <li>1366×768以上の解像度のモニタ（解像度が大きければページ内のUIの圧迫感が減る）</li>
+  <li>ハードウェアアクセラレーション対応のブラウザ（Chrome, Firefox, Opera, Edge）。IEとSafariは対象外</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>推奨</strong></h4>
+<ul>
+  <li>OSが64bitであるWindows10, maxOS Big Sur(以降), linux</li>
+  <li>WebGl2.0をサポートした専用GPU</li>
+  <li>16GBのメモリー（RAM）</li>
+  <li>1920×1080以上の解像度のモニタ</li>
+  <li>Chrome, Edge(Chromium版)</li>
+</ul>
+<p>&nbsp;</p>
+<h4><strong>接続中のPCの性能を確かめるMOD</strong></h4>
+<p>https://github.com/Haxxer/FoundryVTT-PotatoOrNot</p>
+<p>このMODが有効になっているワールド（部屋）に入れば、最初に接続したPCの性能レベルをポテトランクで示してくれ、ランクに適したバランスの設定に自動変更してくれる</p>
+<figure class="image image-style-align-left"><img src="/satasupe/スクリーンショット_2021-03-23_004455.png">
+  <figcaption>もしもShitty Potatoだったら、先にGMに自己申告しておくとサポートをより受けられるだろう！</figcaption>
+</figure>
+<p>&nbsp;</p>
