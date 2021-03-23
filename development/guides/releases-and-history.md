@@ -4,7 +4,7 @@ description: Foundry's Package manager supports a history of package releases, t
 published: true
 date: 2021-03-11T22:01:08.232Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
 ---
 

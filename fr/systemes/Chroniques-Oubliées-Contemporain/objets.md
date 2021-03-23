@@ -4,7 +4,7 @@ description: Bienvenue au Supermarché où l'on fait tout soit même
 published: true
 date: 2020-12-27T16:29:19.092Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-26T20:38:04.151Z
 ---
 

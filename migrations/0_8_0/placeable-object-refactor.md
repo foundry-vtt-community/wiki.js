@@ -3,8 +3,8 @@ title: Split the responsibility of the current PlaceableObject class into core d
 description: 
 published: true
 date: 2021-02-07T17:40:58.106Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:40:54.674Z
 ---
 

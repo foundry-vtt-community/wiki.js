@@ -3,8 +3,8 @@ title: Allow for merging Application options when calling Application#render(for
 description: 
 published: true
 date: 2021-02-06T20:29:56.928Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-06T20:10:52.660Z
 ---
 

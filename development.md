@@ -4,7 +4,7 @@ description: The development section
 published: true
 date: 2021-01-14T04:08:19.352Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T14:47:03.038Z
 ---
 

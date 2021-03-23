@@ -3,8 +3,8 @@ title: Standardize the representation of the canvas global to have the same expe
 description: 
 published: true
 date: 2021-02-07T17:05:38.378Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:05:34.935Z
 ---
 

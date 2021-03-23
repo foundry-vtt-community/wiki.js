@@ -3,8 +3,8 @@ title: 4. 資料機能
 description: 資料機能
 published: true
 date: 2021-02-06T10:34:59.582Z
-tags: 
-editor: undefined
+tags: 基本操作
+editor: markdown
 dateCreated: 2021-02-05T15:33:51.760Z
 ---
 

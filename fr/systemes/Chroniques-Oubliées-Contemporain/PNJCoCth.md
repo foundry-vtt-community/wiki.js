@@ -4,7 +4,7 @@ description:
 published: true
 date: 2020-12-26T21:55:02.900Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-26T21:54:59.461Z
 ---
 

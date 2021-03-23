@@ -3,8 +3,8 @@ title: 1. 基本操作（GM向け）
 description: 基本操作（GM向け）
 published: true
 date: 2021-02-06T10:33:20.260Z
-tags: 
-editor: undefined
+tags: 基本操作
+editor: markdown
 dateCreated: 2021-02-06T10:33:16.953Z
 ---
 

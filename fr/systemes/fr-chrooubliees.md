@@ -4,7 +4,7 @@ description: Support pour Chroniques Oubliées
 published: true
 date: 2020-12-28T10:33:32.229Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
 ---
 

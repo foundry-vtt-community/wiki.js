@@ -3,8 +3,8 @@ title: Document pre-create hook events are now provided with the candidate Docum
 description: 
 published: true
 date: 2021-02-07T17:28:46.463Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:28:42.634Z
 ---
 

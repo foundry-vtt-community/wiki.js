@@ -3,8 +3,8 @@ title: Rename the socketListeners static method of several classes to _activateS
 description: 
 published: true
 date: 2021-02-07T17:17:11.317Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:17:07.722Z
 ---
 

@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-03-17T12:26:57.877Z
+date: 2021-03-17T12:27:03.363Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z

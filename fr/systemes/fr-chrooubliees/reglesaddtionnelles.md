@@ -4,7 +4,7 @@ description: Des options de jeu différentes
 published: true
 date: 2020-12-26T17:36:06.777Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-23T18:22:50.709Z
 ---
 

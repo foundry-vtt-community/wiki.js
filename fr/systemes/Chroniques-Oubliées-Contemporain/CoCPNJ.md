@@ -4,7 +4,7 @@ description: Toute histoire mérite un PNJ.Bon ou méchant? A vous de choisir ma
 published: true
 date: 2020-12-27T14:49:51.707Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-26T20:57:40.086Z
 ---
 

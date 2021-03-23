@@ -3,8 +3,8 @@ title: Using Dynamic DNS
 description: 
 published: true
 date: 2021-01-22T03:18:53.720Z
-tags: 
-editor: undefined
+tags: hosting, dns, ddns, networking
+editor: markdown
 dateCreated: 2021-01-22T03:18:50.280Z
 ---
 

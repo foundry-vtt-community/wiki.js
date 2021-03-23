@@ -4,7 +4,7 @@ description: Support Héros et Dragons
 published: true
 date: 2021-01-05T14:12:58.481Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T19:06:47.166Z
 ---
 

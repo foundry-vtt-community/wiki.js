@@ -4,7 +4,7 @@ description: Choisir la skin de sa fiche PJ
 published: true
 date: 2020-12-26T19:24:15.482Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-26T18:20:06.666Z
 ---
 

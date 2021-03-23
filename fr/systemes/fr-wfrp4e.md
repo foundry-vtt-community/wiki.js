@@ -4,7 +4,7 @@ description: Support pour Warhammer 4 fr
 published: true
 date: 2021-01-02T17:01:54.558Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T18:54:36.683Z
 ---
 

@@ -4,7 +4,7 @@ description: Support pour Starwars FFG
 published: true
 date: 2021-02-10T20:23:15.709Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
 ---
 

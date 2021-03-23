@@ -4,7 +4,7 @@ description: Support pour Pathfinder Seconde édition
 published: true
 date: 2021-02-27T11:00:29.703Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-19T09:41:07.004Z
 ---
 

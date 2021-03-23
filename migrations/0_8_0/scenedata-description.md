@@ -3,8 +3,8 @@ title: Formally deprecate the SceneData.description attribute which has been unu
 description: 
 published: true
 date: 2021-02-07T16:56:26.815Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T16:56:23.264Z
 ---
 

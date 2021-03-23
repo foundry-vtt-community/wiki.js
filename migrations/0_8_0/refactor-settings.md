@@ -3,8 +3,8 @@ title: Refactor the Setting class to follow the standard interfaces used by othe
 description: 
 published: true
 date: 2021-02-07T17:15:37.173Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:15:33.610Z
 ---
 

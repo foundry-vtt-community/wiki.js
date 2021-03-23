@@ -3,8 +3,8 @@ title: Old versions of files are being served by Foundry's Server
 description: 
 published: true
 date: 2021-02-18T20:46:31.114Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-18T20:13:36.827Z
 ---
 

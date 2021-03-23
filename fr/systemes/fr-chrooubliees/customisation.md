@@ -3,8 +3,8 @@ title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
 date: 2020-12-26T17:36:41.897Z
-tags: 
-editor: undefined
+tags: #custom, #voies, profils, objets
+editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
 ---
 

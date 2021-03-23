@@ -3,8 +3,8 @@ title: Improve TokenConfig.getTrackedAttributes to differentiate between "base" 
 description: 
 published: true
 date: 2021-02-07T16:54:39.829Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T16:54:35.763Z
 ---
 

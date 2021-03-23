@@ -4,7 +4,7 @@ description: Support pour l'Appel de Cthulhu
 published: true
 date: 2020-12-17T16:30:03.749Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
 ---
 

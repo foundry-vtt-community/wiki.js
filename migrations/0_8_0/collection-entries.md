@@ -3,8 +3,8 @@ title: Rename Collection#entries to Collection#contents to avoid colliding/overr
 description: 
 published: true
 date: 2021-02-18T19:32:40.305Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:11:45.390Z
 ---
 

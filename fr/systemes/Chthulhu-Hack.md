@@ -4,7 +4,7 @@ description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Sing
 published: true
 date: 2021-02-16T12:59:19.396Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
 ---
 

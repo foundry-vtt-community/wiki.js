@@ -3,8 +3,8 @@ title: Create a Combatant embedded entity type which internalizes helper methods
 description: 
 published: true
 date: 2021-02-07T16:45:23.893Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T16:45:20.716Z
 ---
 

@@ -4,7 +4,7 @@ description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
 date: 2021-02-27T11:02:57.991Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
 ---
 

@@ -4,7 +4,7 @@ description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutiqu
 published: true
 date: 2020-12-27T15:28:36.476Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
 ---
 

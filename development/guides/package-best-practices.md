@@ -3,8 +3,8 @@ title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
 date: 2021-01-20T20:11:51.855Z
-tags: 
-editor: undefined
+tags: localization, development, guide, manifest, code, files, paths
+editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
 ---
 

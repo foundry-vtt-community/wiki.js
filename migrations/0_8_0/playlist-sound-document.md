@@ -3,8 +3,8 @@ title: Create a formalized PlaylistSound embedded document type, instances of wh
 description: 
 published: true
 date: 2021-02-07T17:36:09.107Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:36:06.015Z
 ---
 

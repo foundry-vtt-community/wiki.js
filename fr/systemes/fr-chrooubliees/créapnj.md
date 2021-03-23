@@ -4,7 +4,7 @@ description: Toute aventure mérite un bon PNJ, bon ou méchant. A vous de chois
 published: true
 date: 2020-12-26T20:53:59.770Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-23T18:48:09.541Z
 ---
 

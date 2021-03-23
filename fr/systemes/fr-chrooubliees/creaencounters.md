@@ -4,7 +4,7 @@ description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
 date: 2020-12-26T14:27:13.977Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
 ---
 

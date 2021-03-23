@@ -3,8 +3,8 @@ title: Move calls to Document#prepareData outside of Document#_onUpdate to avoid
 description: 
 published: true
 date: 2021-02-07T17:37:41.930Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:37:38.736Z
 ---
 

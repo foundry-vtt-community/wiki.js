@@ -3,8 +3,8 @@ title: Move Actor owned item management methods (getOwnedItem, createOwnedItem, 
 description: 
 published: true
 date: 2021-02-07T17:39:17.906Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:39:14.620Z
 ---
 

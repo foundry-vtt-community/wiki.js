@@ -4,7 +4,7 @@ description: L'aventure commence, il est tant de lancer les dés
 published: true
 date: 2020-12-26T17:32:28.265Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2020-12-26T17:32:24.542Z
 ---
 

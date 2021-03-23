@@ -3,8 +3,8 @@ title: Game Systems
 description: 
 published: true
 date: 2020-12-19T17:52:16.767Z
-tags: 
-editor: undefined
+tags: game systems
+editor: markdown
 dateCreated: 2020-09-23T00:24:31.095Z
 ---
 

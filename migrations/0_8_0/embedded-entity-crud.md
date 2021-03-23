@@ -3,8 +3,8 @@ title: EmbeddedEntity create, update, and delete hooks are now passed the Embedd
 description: 
 published: true
 date: 2021-02-07T17:26:31.747Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:26:27.916Z
 ---
 

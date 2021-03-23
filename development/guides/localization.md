@@ -3,8 +3,8 @@ title: Localization
 description: Localization guides.
 published: true
 date: 2021-01-15T19:29:56.074Z
-tags: 
-editor: undefined
+tags: untranslatable
+editor: markdown
 dateCreated: 2021-01-14T08:29:55.485Z
 ---
 

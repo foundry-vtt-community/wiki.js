@@ -3,8 +3,8 @@ title: External Tools
 description: 
 published: true
 date: 2021-01-13T21:47:13.436Z
-tags: 
-editor: undefined
+tags: tools
+editor: markdown
 dateCreated: 2020-09-23T00:24:58.400Z
 ---
 

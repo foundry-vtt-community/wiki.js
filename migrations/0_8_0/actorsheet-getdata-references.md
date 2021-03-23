@@ -3,8 +3,8 @@ title: Redesign the structure of ActorSheet#getData to provide more sensible ref
 description: 
 published: true
 date: 2021-02-07T17:03:45.044Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:03:41.722Z
 ---
 

@@ -4,7 +4,7 @@ description: A quick guide to tricking out your repository readme.
 published: true
 date: 2021-03-12T16:10:57.829Z
 tags: 
-editor: undefined
+editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z
 ---
 

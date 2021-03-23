@@ -3,8 +3,8 @@ title: Packages With Language Support
 description: A list of packages with support for multiple languages and localization.
 published: true
 date: 2020-12-19T18:18:25.035Z
-tags: 
-editor: undefined
+tags: localization, translations, modules, packages
+editor: markdown
 dateCreated: 2020-09-21T19:17:29.991Z
 ---
 

@@ -3,8 +3,8 @@ title: Rename PlayerConfig to UserConfig for increased consistency with how othe
 description: 
 published: true
 date: 2021-02-07T17:19:04.520Z
-tags: 
-editor: undefined
+tags: 0.8.0
+editor: markdown
 dateCreated: 2021-02-07T17:19:00.061Z
 ---
 
