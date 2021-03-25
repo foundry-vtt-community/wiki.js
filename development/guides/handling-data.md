@@ -2,13 +2,56 @@
 title: Handling Data: Flags, Settings, and JSON
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-03-25T15:03:13.490Z
+date: 2021-03-25T15:11:26.790Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
 ---
 
 This article is primarily geared towards Module development, but Systems can make use of its contents as well. It largely ignores the options for data storage that Systems have that come with being able to control Entity types via the system template.json.
+
+## Data Storage Flowchart
+
+```plantuml
+@startuml
+
+(*)-> "I have data I want to store"
+if "It's a lot of data" then
+	->[Yes] "JSON/FileUpload"
+else
+  if "Data is asociated with an Entity" then
+    ->[Yes] "Flag"
+  else
+    -->[No] "Setting"
+    if "Data needs to be shared between clients"
+      ->[No] "Setting, scope 'client'"
+    else
+      if "Only GM can modify data"
+        ->[Yes] "Setting, scope 'world'"
+      else
+        -->[No] "Setting, scope 'world' + GM proxy"
+      endif
+    endif
+  endif
+endif
+
+@enduml
+```
+
+Use case flowchart:
+1. I want to store data associated with a particular entity -> Flag. Some entities are not editable by all clients and flags respect that.
+2. I want to store data not associated with a particular entity:
+	  1. The data does not have to be shared between clients -> Setting, scope `client`.
+ 	  2. The data does have to shared between clients:
+		    1. All clients can access and modify -> Setting with a GM Proxy is the only way to do this, it is not pretty.
+		    2. All clients can access but only the GM can modify -> Setting, scope `world`, no workarounds needed.
+
+
+> stub
+> - Flags
+> - Settings
+> - Pros and Cons of the two
+
 
 
 ## Flags
