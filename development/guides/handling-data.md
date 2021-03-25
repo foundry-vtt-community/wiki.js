@@ -1,8 +1,8 @@
 ---
-title: Handling Data: Flags, Settings, and JSON
+title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-03-25T15:15:48.829Z
+date: 2021-03-25T15:21:19.017Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
