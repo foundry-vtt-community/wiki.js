@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-03-25T15:16:43.343Z
+date: 2021-03-25T15:20:50.099Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -122,14 +122,14 @@ To pull this off first you have to find where the method or function is in the g
 
 ## What is a flag and how do I use them?
 
-_Main article: [Handling Data: Flags, Settings, and JSON](/en/development/guides/handling-data)_
+*Main article: [Handling Data: Flags, Settings, and Files](/en/development/guides/handling-data)*
 
 Flags are the safest way that modules can store arbitrary data on existing entities. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
 
 
 ## How do I work with settings?
 
-_Main article: [Handling Data: Flags, Settings, and JSON](/en/development/guides/handling-data)_
+*Main article: [Handling Data: Flags, Settings, and Files](/en/development/guides/handling-data)*
 
 Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific entity however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
 
@@ -193,6 +193,9 @@ In this example, the manifest at `modules/my-module-name/dist/module.json` will 
 
 
 ## Storing Module Data
+*Main article: [Handling Data: Flags, Settings, and Files](/en/development/guides/handling-data)*
+
+There's basically three options for modules for how to store data: Flags, Settings, and Files.
 
 # Hello World Module Walkthrough 
 
