@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and JSON
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-03-25T15:13:29.104Z
+date: 2021-03-25T15:15:48.829Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -48,18 +48,13 @@ Use case flowchart:
 		    2. All clients can access but only the GM can modify -> **Setting, scope `world`**, no workarounds needed.
 
 
-> stub
-> - Flags
-> - Settings
-> - Pros and Cons of the two
-
-
-
 ## Flags
 
 Flags are the safest way that modules can store arbitrary data on existing entities. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
 
 A flag does not have to be a specific type, anything which can be `JSON.stringify`ed is valid.
+
+> Lots of things in Foundry Core are entities and can thus accept flags, not just Actors, Items, and things Systems normally interact with. There is a list of Entity Subclasses on the [api page for Entity](https://foundryvtt.com/api/Entity.html).
 
 ### Setting a flag's value
 Flags are automatically namespaced within the first parameter given to [`Entity#setFlag`](https://foundryvtt.com/api/Entity.html#setFlag).
