@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and JSON
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-03-25T15:11:26.790Z
+date: 2021-03-25T15:13:29.104Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -39,12 +39,13 @@ endif
 ```
 
 Use case flowchart:
-1. I want to store data associated with a particular entity -> Flag. Some entities are not editable by all clients and flags respect that.
-2. I want to store data not associated with a particular entity:
-	  1. The data does not have to be shared between clients -> Setting, scope `client`.
+1. I want to store a _lot_ of data and don't want it to affect performance -> **FileUpload with JSON**. Note that permissions might be set up on the world such that only the GM can upload files.
+2. I want to store data associated with a particular entity -> **Flag**. Some entities are not editable by all clients and flags respect that.
+3. I want to store data not associated with a particular entity:
+	  1. The data does not have to be shared between clients -> **Setting, scope `client`**.
  	  2. The data does have to shared between clients:
-		    1. All clients can access and modify -> Setting with a GM Proxy is the only way to do this, it is not pretty.
-		    2. All clients can access but only the GM can modify -> Setting, scope `world`, no workarounds needed.
+		    1. All clients can access and modify -> **Setting with a GM Proxy** is the only way to do this, it is not pretty.
+		    2. All clients can access but only the GM can modify -> **Setting, scope `world`**, no workarounds needed.
 
 
 > stub
