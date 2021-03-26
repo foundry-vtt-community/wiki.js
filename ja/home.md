@@ -2,7 +2,7 @@
 title: はじめに
 description: 
 published: true
-date: 2021-03-04T10:35:52.376Z
+date: 2021-03-26T00:27:45.009Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -36,6 +36,6 @@ dateCreated: 2020-12-01T14:32:37.818Z
 <i class="fab fa-gitlab"></i> [Gitlab 要望・問題点トラッカー（英語のみ）](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
   
   ## サポート
-  これから導入をする方は日本語便利リンクより、ディスコードサーバへ入り、旧Wikiやツイッターの紹介を御覧ください。
-  このWikiでも情報を少しつづあげていく予定ですが、なにか便利な情報を載せたい方はディスコードにてBrother Sharpまで送ってください。
+  これから導入をする方は日本語便利リンクより、ディスコードサーバへ入り、このWikiやツイッターの紹介を御覧ください。
+  このWikiでも情報を少しつづあげていく予定ですが、なにか便利な情報を載せたい方はディスコードにてBrother SharpまたはMissileまでお知らせください。
   
