@@ -2,8 +2,8 @@
 title: 【5-4】サイドバーの使い方（アクター）
 description: 
 published: true
-date: 2021-03-28T08:55:18.346Z
-tags: 
+date: 2021-03-28T09:17:11.806Z
+tags: サタスペ
 editor: ckeditor
 dateCreated: 2021-03-28T08:55:18.346Z
 -->
@@ -18,7 +18,29 @@ dateCreated: 2021-03-28T08:55:18.346Z
 <figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-03-21_175520st1.png"></figure>
 <p>&nbsp;</p>
 <p>キャラクターシートの詳細な使い方については、6章にて説明します。</p>
+<p>GM権限がアクター名をシーンにドラッグアンドドロップすることで、トークン（コマ）をシーン上に配置させることができます。</p>
+<p>なお、基本的にはシーン上に配置された<mark class="marker-yellow">トークンはアクターデータのコピー</mark>となっており、</p>
+<p>シーン上のトークンをダブルクリックして表示されるキャラクターシートは、<mark class="marker-yellow">アクターデータに反映されません</mark>。</p>
+<p><mark class="marker-yellow">トークン設定から「アクターデータの共有」に✓</mark>を入れることで、アクターデータにも変更が反映されます。</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<figure class="image"><img src="/images/japanese-community/satasupe/タイトルなし3st.png"></figure>
+<figure class="image"><img src="/images/japanese-community/satasupe/タイトルなし3st2.png"></figure>
 <p>また、上記画像内でMODを使用している部分について説明をしておきます。</p>
+<p>&nbsp;</p>
+<p>まず、画像内の青枠内にて説明されているように、MOD:Token Moldを追加するとToken Moldの表示枠がサイドバーのアクターのタブに追加されます。</p>
+<p>✓Name　✓Config　✓Overlayについては、クリックすることで有効化・無効化を切り替えることができます。</p>
+<p>それぞれで設定できることについて軽く説明します。</p>
+<ul>
+  <li>Name：ドラッグアンドドロップ時にトークンの名前の先頭に独特な形容詞をランダムに追加できる。</li>
+  <li>Config：ドラッグアンドドロップ時にトークンの名前の表示・非表示設定、視覚制限設定、BP・MP等のバー表示設定等を事前にToken Moldで設定した内容に自動設定する。</li>
+  <li>Overlay：シーン上のいずれかのトークンにマウスカーソルを乗せた時、Token Moldで設定した指定の内部ステータスの数値・True・Falseが表示されるようになる。</li>
+  <li>⚙：これをクリックすることで、Token Moldの設定画面に移ることができる。Name・Config・Overlayの設定についてそれぞれ指定できる。</li>
+</ul>
+<p>&nbsp;</p>
+<p>また、MOD:Permission Viewerを追加すると、現在の権限の表示を視覚的にしてくれるようになります。</p>
+<p>（そのままだとPL権限に何が見えていないのか分かり辛いので、便利です）</p>
+<ul>
+  <li>◆：限定(limited)の権限</li>
+  <li>■：観察(observer)の権限</li>
+  <li>●：所有(owner)の権限</li>
+  <li>色：参加者名に応じた色</li>
+</ul>
