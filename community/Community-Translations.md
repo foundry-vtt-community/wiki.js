@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2021-03-05T12:23:13.749Z
+date: 2021-03-29T21:18:31.974Z
 tags: localization, translations, foundry vtt, game systems
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -390,6 +390,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 | Code | Language | Repository | License | Local Community | Translation Tool |
 |:-|:-|:-|:-|:-|:-|
+| ar-AR | Arabic / عربى | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/mr_aljabry/foundryvtt-lang-ar-ar/) | *none* | ? | ? |
 | ca-ES | Catalan / català | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/montver/foundry-vtt-catala) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) | [Visual Studio Code](https://code.visualstudio.com/) (locally), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn/) | *none* | <i class="fas fa-comments"></i> Tencent QQ Group #: **716573917** | [HBuilder X](https://www.dcloud.io/hbuilderx.html) (locally) |
 | zh-Hant | Chinese (traditional) / 正體中文 |  <i class="fab fa-github"></i> [GitHub](https://github.com/hktrpg/foundry_zh-tw/) | *none* | <i class="fab fa-discord"></i> [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7)  | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
