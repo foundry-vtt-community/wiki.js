@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-03-05T12:23:47.448Z
+date: 2021-03-29T21:16:50.268Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -15,6 +15,7 @@ For additional translations (including ones for game systems) see the [list of t
 ## Table of Supported Languages
 | Code | Language | Manifest URL | Local Community |
 |:-|:-|:-|:-|
+| ar-AR | Arabic / عربى | [Latest version](https://gitlab.com/mr_aljabry/foundryvtt-lang-ar-ar/-/raw/master/Core/module.json) | ? |
 | ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json) | <i class="fas fa-comments"></i> Tencent QQ Group #: **716573917** |
 | zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7) |
