@@ -2,7 +2,7 @@
 title: １．はじめに
 description: 
 published: true
-date: 2021-03-30T07:50:22.096Z
+date: 2021-03-30T08:02:25.581Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -14,9 +14,9 @@ dateCreated: 2020-12-01T14:32:37.818Z
   ## どんなツールなの？
   <p>FVTTは、サーバや個人のPCに設置された環境にブラウザを通じて接続し、オンラインでTRPGを遊ぶことができます。既存のツールと比べて以下のような特徴があります。&nbsp;</p>
 <ul>
-  <li>有料のオンラインセッションツールです。月額課金の無い『買い切り』のアプリとして販売されています（50＄）。買い切り版は<a href="https://foundryvtt.com/purchase/">こちら</a>から事前購入できます。</li>
+  <li>有料のオンラインセッションツールです。月額課金の無い『買い切り』のアプリとして販売されています（50＄）。買い切り版は<a href="https://foundryvtt.com/purchase/">こちら</a>から購入できます。購入後は制限や追加課金なくすべての機能を使用できます。</li>
   <li>最新のWebデザイン技術を用いて開発されているため、ブラウザを通したオンラインツールでは最高のパフォーマンスを有します。大きなマップやマップアニメーション、複雑なマスク、照明管理設定を用いても軽量で、快適に遊ぶことができます。</li>
-  <li>キャラクターシート、ハンドアウトなどの必要なデータすべてをツール内で一括管理することが可能です。現在日本語で対応しているTRPGとしては<strong>D&amp;D5版</strong>、<strong>Pathfinder 1e</strong>, <strong>Pathfinder 2e</strong>、<strong>Starfinder</strong>、<strong>Warhammer Fantasy Roleplay 4e、新クトゥルフ神話TRPG、神我狩等</strong>が主ですが、コミュニティにより対応するシステムが増えていきます。</li>
+  <li>キャラクターシート、ハンドアウトなどの必要なデータすべてをツール内で一括管理することが可能です。現在日本語で対応しているTRPGとしては<strong>D&amp;D5版</strong>、<strong>Pathfinder 1e</strong>, <strong>Pathfinder 2e</strong>、<strong>Starfinder</strong>、<strong>Warhammer Fantasy Roleplay 4e、新クトゥルフ神話TRPG、サタスペ、神我狩等</strong>が主ですが、コミュニティにより対応するシステムが増えていきます。</li>
   <li>MODによりFVTTの機能を拡張できます。FVTTのコミュニティでは開発者が基本ツールに含めた機能以外に、ユーザーが作った拡張機能（MOD）を導入することができ、より便利に活用することが可能です。</li>
   
   ## 日本語便利リンク
@@ -35,7 +35,16 @@ dateCreated: 2020-12-01T14:32:37.818Z
 <i class="fab fa-gitlab"></i> [Gitlab](https://gitlab.com/foundrynet)
 <i class="fab fa-gitlab"></i> [Gitlab 要望・問題点トラッカー（英語のみ）](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
   
+  ## その他のWiki言語
+- [日本語 (Japanese)](https://foundryvtt.wiki/ja/home)
+- [English (English)](https://foundryvtt.wiki/en/home)
+- [Français (French)](https://foundryvtt.wiki/fr/home)
+- [Suomi (Finnish)](https://foundryvtt.wiki/fi/home)
+  
   ## サポート
   これから導入をする方は日本語便利リンクより、ディスコードサーバへ入り、このWikiやツイッターの紹介を御覧ください。
   このWikiでも情報を少しつづあげていく予定ですが、なにか便利な情報を載せたい方はディスコードにてBrother SharpまたはMissileまでお知らせください。
   
+  ## 支援
+  <i class="fab fa-patreon"></i> [オンセ工房支援Patreon](https://www.patreon.com/onsekobo)より月額で日本語コミュニティを支援できます。ここで支援いただくお金は特定の個人ではなく、全員が便利に使えるModやお試しサーバの維持費として使用されます。現在立ち絵Mod（Theatre Inserts）とBCDice Modはこの支援より実現されています。
+  支援者が増えると同意に開発できるものが増えていきますので、皆さんの支援をお待ちしております。
