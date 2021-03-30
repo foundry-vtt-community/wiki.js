@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-03-25T15:21:42.605Z
+date: 2021-03-30T14:52:56.829Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -119,6 +119,10 @@ To pull this off first you have to find where the method or function is in the g
 > 
 > Putting it on the globalThis doesn't seem to allow the same thing.
 
+
+## How do I handle keyboard events?
+
+> Stub. There's a [KeyboardManager](https://foundryvtt.com/api/KeyboardManager.html) class that might be useful here.
 
 ## What is a flag and how do I use them?
 
