@@ -2,7 +2,7 @@
 title: FVTTの購入方法
 description: 
 published: true
-date: 2021-03-30T16:40:32.826Z
+date: 2021-03-31T10:24:40.618Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-30T16:40:32.826Z
@@ -12,7 +12,7 @@ dateCreated: 2021-03-30T16:40:32.826Z
 ここではFoundryVirtualTabletop（以下FVTT）の購入方法について説明します。
  
 1. **公式サイトにアクセスする**
-まずはFVTT公式サイト（https://foundryvtt.com/）にアクセスしてください。
+まずはFVTT公式サイト（https://foundryvtt.com/ ）にアクセスしてください。
 2. **プライバシーポリシーの同意**
 画面下側に表示されるプライバシーポリシーの同意を承諾（✔I Accept）してください。
 3. **FVTTのアカウント作成**
