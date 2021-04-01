@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-03-10T07:22:54.464Z
+date: 2021-04-01T16:01:12.931Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -25,7 +25,7 @@ There are a variety of community-created module and system starter kits out ther
 - **Description:** A template for typescript projects that uses manifest+ and auto creates versions using Github Actions.
 
 
-### [NickEast's Foundry Project Creator](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project)
+### [NickEast's Foundry Project Creator](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project) (now archived)
 - Very Opinionated
 - Bootstraps both Systems and Modules
 - **Supports:** Typescript, SCSS, LESS, Javascript
@@ -64,8 +64,6 @@ There are a variety of community-created module and system starter kits out ther
 ### [foundry-vtt-types](https://github.com/kmoschcau/foundry-vtt-types)
 - A community effort to revamp and refactor NickEast's typescript types for `0.7.x`. This set of type definitions leverages more advanced typescript tooling.
 
-### [NickEast's Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types)
-- As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point.
 
 ### [TyhponJS's @eslint/foundry](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-config-foundry.js)
 - A plug and play shareable eslint configuration package containing all exported globals from `foundry.js` that when combined w/ the `no-shadow` rule prevents overwriting core Foundry VTT functionality. Useful for module / system development
@@ -77,6 +75,10 @@ There are a variety of community-created module and system starter kits out ther
 ### [Development Mode](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode)
 - Provides an API for packages to register and read debug flags.
 - Wraps CONFIG.debug in a client setting which preserves your choices.
+
+### [NickEast's Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) (now deprecated)
+- As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point. With 0.8.x coming out, NickEast has stated:
+> At this point I've moved to working with 0.8.x, which means my own type definitions are now pretty much "dead". I will start on my own "internal" definitions for 0.8.x, but I've yet to decide whether to start on a separate branch, or just make a clean slate... I'll keep everything open, but will focus on what I need instead of progressively increasing coverage.
 
 ## Macros and Code examples
 
