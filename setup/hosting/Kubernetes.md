@@ -2,7 +2,7 @@
 title: Kubernetes
 description: 
 published: true
-date: 2020-09-23T01:36:45.483Z
+date: 2021-04-05T10:56:21.750Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:40.922Z
@@ -39,5 +39,9 @@ Edit the file `values.yaml` with your desired configuration.
 
 ```shell
 helm install --name foundry ./incubator/foundry-vtt
+```
+or
+```shell
+helm3 install foundry ./incubator/foundry-vtt
 ```
 
