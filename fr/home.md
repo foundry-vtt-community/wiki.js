@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-04-06T11:43:52.881Z
+date: 2021-04-06T11:44:12.413Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -45,7 +45,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - [Installation sous Windows](/fr/pour-commencer/win)
 - [L'Audio/Video sous Foundry VTT](/fr/pour-commencer/av)
 - [Installation sous Linux](/fr/pour-commencer/linux)
-- [Déconnexions régulières](/fr/pour-commencer/dcnx-upnp)
+- [Si vous avez des déconnexions régulières](/fr/pour-commencer/dcnx-upnp)
 
 ## Les différentes Versions de Foundry VTT
 - **Version Stable, Release :** 0.7.x
