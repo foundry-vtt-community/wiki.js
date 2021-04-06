@@ -2,7 +2,7 @@
 title: ７．MOD紹介
 description: おススメのMOD一覧
 published: true
-date: 2021-04-06T12:01:16.409Z
+date: 2021-04-06T18:22:17.016Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T11:57:56.615Z
@@ -529,73 +529,6 @@ https://github.com/foundry-vtt-community/macros
 https://github.com/datdamnzotz/icons/blob/master/README-FoundryVTT.md
 
 膨大なアイコンを提供するアセット集。とても便利。
-
-### 共有辞典
-https://www.reddit.com/r/FoundryVTT/comments/fvw3c7/how_to_create_a_tiny_module_for_shared_content/
-
-自作コンテンツをワールド間で共有する方法としてここに書いておく。
-自作コンテンツを入れるためのModを自分で作り、使用するワールドごとに有効化する。 
-
-##### ■作り方
-
-1. /Data/modules下に任意の名前（ここではSharedData）でフォルダを作成する。
-2. 下の内容でmodule.jsonを作ってその中に配置する（labelはお好きに）。
-3. module.jsonと同じ位置にサブフォルダ/packsを作成する。
-4. ワールドを再起動し、モジュールの管理から“共有データ”を有効にする。
-5. 共有したいデータをそれぞれの辞典に放り込む。
-
-> { 
->       "name": "SharedData", 
->       "title": "共有データ", 
->       "description": "Worldをまたぐ共有データ", 
->       "author": "（自分の名前）",
->       "version": "1.0.0",
->       "minimumCoreVersion": "0.5.0",
->       "compatibleCoreVersion":"0.7.9",
->       "packs": [
->          {
->              "name": "items",
->             "label": "共有アイテム",
->             "path": "packs/items.db",
->             "entity": "Item",
->             "system": "dnd5e",
->             "module": "SharedData"
->          },
->          {
->             "name": "actors",
->             "label": "共有アクター",
->             "path": "packs/npc.db",
->             "entity": "Actor",
->             "system": "dnd5e",
->             "module": "SharedData"
->          },
->          {
->             "name": "scenes",
->             "label": "共有シーン",
->             "path": "packs/scenes.db",
->             "entity": "Scene",
->             "system": "dnd5e",
->             "module": "SharedData"
->          },
->          {
->             "name": "journals",
->             "label": "共有資料",
->             "path": "packs/journals.db",
->             "entity": "JournalEntry",
->             "system": "dnd5e",
->             "module": "SharedData"
->          }
->      ]
->  }
-
-### ワールドスクリプト
-https://foundryvtt.wiki/en/basics/world-scripts
-
-Modではないが、ワールド固有の設定を変更する方法としてここに書いておく。
-ワールドのディレクトリ配下にworldscript.jsを配置することで、設定画面にない要素を変更できる。例えば呪文テンプレートの円錐の角度を64°（個人的にちょうどいい角度）にしたいなら、以下のように記述する。
-
-> Hooks.on("setup", () => CONFIG.MeasuredTemplate.defaults.angle = 64);
-
 
 
 ## 有用だけど今は使ってないもの
