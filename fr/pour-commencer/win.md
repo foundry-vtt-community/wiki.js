@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2021-01-30T01:49:43.386Z
+date: 2021-04-06T19:25:53.201Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -119,7 +119,7 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 	- Dans les **Adresses Statiques**, reservez une adresse locale de type **192.168.x.x** à l'**Adresse MAC** de votre ordinateur. [Obtenir l'adresse Mac sous Windows](https://www.commentcamarche.net/faq/10935-trouver-son-adresse-mac#obtenir-l-adresse-mac-sous-windows)
 
 ### Box Internet, Ouverture du Port 30000.
->**ATTENTION:** Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher dans la partie **NAT**, **L'Activation de l'UPnP**. 
+>**ATTENTION:** Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher **UPnP** dans l'onglet 'Administration' de Foundry.
 >*Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
 La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT*.
 {.is-warning}
