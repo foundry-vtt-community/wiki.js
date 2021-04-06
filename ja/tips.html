@@ -2,7 +2,7 @@
 title: ８．小ネタなど
 description: FVTTを扱う上での軽い情報や、MODほどではない改造の仕方など
 published: false
-date: 2021-04-06T15:03:39.012Z
+date: 2021-04-06T15:06:14.232Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-04-06T15:00:36.087Z
@@ -28,49 +28,49 @@ dateCreated: 2021-04-06T15:00:36.087Z
 <p>4. ワールドを再起動し、モジュールの管理から“共有データ”を有効にする。</p>
 <p>5. 共有したいデータをそれぞれの辞典に放り込む。</p>
 <p>&nbsp;</p>
-<p><code>&nbsp;{</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"name": "SharedData",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"title": "共有データ",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"description": "Worldをまたぐ共有データ",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"author": "（自分の名前）",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"version": "1.0.0",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"minimumCoreVersion": "0.5.0",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"compatibleCoreVersion":"0.7.9",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp;"packs": [</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"name": "items",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"label": "共有アイテム",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"path": "packs/items.db",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"entity": "Item",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"system": "dnd5e",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"module": "SharedData"</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"name": "actors",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"label": "共有アクター",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"path": "packs/npc.db",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"entity": "Actor",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"system": "dnd5e",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"module": "SharedData"</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;},</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"name": "scenes",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"label": "共有シーン",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"path": "packs/scenes.db",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"entity": "Scene",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"system": "dnd5e",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"module": "SharedData"</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; },</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"name": "journals",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"label": "共有資料",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"path": "packs/journals.db",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"entity": "JournalEntry",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"system": "dnd5e",</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;"module": "SharedData"</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</code></p>
-<p><code>&nbsp; &nbsp; &nbsp; ]</code></p>
-<p><code>&nbsp; }</code></p>
+<pre><code class="language-plaintext"> {
+       "name": "SharedData",
+       "title": "共有データ",
+       "description": "Worldをまたぐ共有データ",
+       "author": "（自分の名前）",
+       "version": "1.0.0",
+       "minimumCoreVersion": "0.5.0",
+       "compatibleCoreVersion":"0.7.9",
+       "packs": [
+          {
+             "name": "items",
+             "label": "共有アイテム",
+             "path": "packs/items.db",
+             "entity": "Item",
+             "system": "dnd5e",
+             "module": "SharedData"
+          },
+          {
+             "name": "actors",
+             "label": "共有アクター",
+             "path": "packs/npc.db",
+             "entity": "Actor",
+             "system": "dnd5e",
+             "module": "SharedData"
+         },
+          {
+             "name": "scenes",
+             "label": "共有シーン",
+             "path": "packs/scenes.db",
+             "entity": "Scene",
+             "system": "dnd5e",
+             "module": "SharedData"
+          },
+          {
+             "name": "journals",
+             "label": "共有資料",
+             "path": "packs/journals.db",
+             "entity": "JournalEntry",
+             "system": "dnd5e",
+             "module": "SharedData"
+          }
+      ]
+  }</code></pre>
 <p>&nbsp;</p>
 <p>### ワールドスクリプト</p>
 <p>https://foundryvtt.wiki/en/basics/world-scripts</p>
@@ -78,5 +78,5 @@ dateCreated: 2021-04-06T15:00:36.087Z
 <p>Modではないが、ワールド固有の設定を変更する方法としてここに書いておく。</p>
 <p>ワールドのディレクトリ配下にworldscript.jsを配置することで、設定画面にない要素を変更できる。例えば呪文テンプレートの円錐の角度を64°（個人的にちょうどいい角度）にしたいなら、以下のように記述する。</p>
 <p>&nbsp;</p>
-<p><code>&gt; Hooks.on("setup", () =&gt; CONFIG.MeasuredTemplate.defaults.angle = 64);</code></p>
+<pre><code class="language-plaintext"> Hooks.on("setup", () =&gt; CONFIG.MeasuredTemplate.defaults.angle = 64);</code></pre>
 <p>&nbsp;</p>
