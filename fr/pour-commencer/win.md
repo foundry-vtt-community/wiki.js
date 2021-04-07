@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2021-04-06T19:25:53.201Z
+date: 2021-04-06T19:25:57.268Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
