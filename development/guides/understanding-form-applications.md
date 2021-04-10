@@ -2,7 +2,7 @@
 title: Understanding FormApplication
 description: 
 published: true
-date: 2021-02-22T17:29:58.133Z
+date: 2021-04-10T17:07:09.765Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-22T16:19:21.040Z
@@ -11,7 +11,18 @@ dateCreated: 2021-02-22T16:19:21.040Z
 [`FormApplication`](https://foundryvtt.com/api/FormApplication.html) is an abstract subclass of `Application` designed specifically for the case where you have some underlying data object and you want to present a UI to configure that data object.
 
 # FormApplication vs Dialog
-TODO: When to use which?
+Use a **dialog** if...
+- You are writing a macro. Defining and instanciating a FormApplication class within the limitations of a macro is not practical
+- You need only relatively simple input, or only a confirmation or similar
+- You are simply displaying simple output and not taking complex user input
+
+Use **Application** if...
+- You need only a blank window in which to render your own components and have no need of FormApplication's advanced features
+
+Use **FormApplication** if...
+- You need data binding to a complex object that resembles foundry entity data
+- You need a TinyMCE editor or other input type that requires support from the FormApplication class
+
 
 # What does a FormApplication do?
 When you create an instance of a `FormApplication` subclass, you must provide the underlying object which the `FormApplication` will modify. When the `FormApplication` is submitted (and in other configurable scenarios), the `FormApplication` will apply the changes to the form to the provided data object.
@@ -41,6 +52,72 @@ Since `FormApplication` is an abstract class, you must define a subclass for it 
 ## Using your subclass
 
 When you create an instance of your `FormApplication` subclass, you must provide a reference to the object that the form is modifying, like so: `new MyFormApplication(myObject).render(true)`. So long as you have implemented your subclass according to the requirements listed above, `FormApplication` should handle the rest.
+
+## Example
+```js
+/**
+ * Define your class that extends FormApplication
+ */
+class MyFormApplication extends FormApplication {
+  constructor(exampleOption) {
+    super();
+    this.exampleOption = exampleOption;
+  }
+
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      classes: ['form'],
+      popOut: true,
+      template: `myFormApplication.html`,
+      id: 'my-form-application',
+      title: 'My FormApplication',
+    });
+  }
+
+  getData() {
+    // Send data to the template
+    return {
+      msg: this.exampleOption,
+      color: 'red',
+    };
+  }
+
+  activateListeners(html) {
+    super.activateListeners(html);
+  }
+
+  async _updateObject(event, formData) {
+    console.log(formData.exampleInput);
+  }
+}
+
+window.MyFormApplication = MyFormApplication;
+```
+
+```js
+/**
+ * To open your application
+ */
+
+new MyFormApplication('example').render(true);
+```
+
+```html
+/**
+ * myFormApplication.html
+ */
+<form class="flexcol">
+  <div class="form-group">
+    <label for="exampleInput">Example Input</label>
+    <input type="text" name="exampleInput" style="color: {{color}}" value="{{msg}}">
+  </div>
+  <footer class="sheet-footer flexrow">
+    <button type="submit" name="submit">
+        <i class="fa fa-check"></i> OK
+    </button>
+  </footer>
+</form>
+```
 
 # 0.7.x vs 0.8.x
 TODO
