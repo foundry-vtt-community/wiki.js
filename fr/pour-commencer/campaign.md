@@ -2,7 +2,7 @@
 title: 4.0. Créer une partie
 description: 
 published: true
-date: 2020-12-11T00:20:25.244Z
+date: 2021-04-11T18:27:12.279Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T12:58:21.768Z
@@ -12,7 +12,7 @@ La première chose que nous voulons faire, c'est de créer notre partie afin de 
 
 **Cette page est largement incomplète  est sera mise à jour prochainement**
 
-## Créer une partie
+## Créer plusieurs parties à partir d'une seule et même préparation.
 
 La création d'une partie est assez simple et demande une préparation au préalable afin de pouvoir faire les choses simples et le plus rapidement possible. La première des choses commence donc par une bonne préparation.
 
