@@ -1,8 +1,8 @@
 ---
-title: 4.0. Créer une partie
+title: 4.0. Créer plusieurs parties à partir d'une seule et même préparation.
 description: 
 published: true
-date: 2021-04-11T18:27:12.279Z
+date: 2021-04-11T18:27:26.966Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T12:58:21.768Z
