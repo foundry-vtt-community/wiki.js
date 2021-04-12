@@ -2,7 +2,7 @@
 title: 4.2 Utilisateurs & Autorisations
 description: 
 published: true
-date: 2021-04-12T11:29:32.370Z
+date: 2021-04-12T11:41:04.517Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-12T11:29:32.370Z
@@ -11,11 +11,11 @@ dateCreated: 2021-04-12T11:29:32.370Z
 # Aperçu
 Chaque joueur qui se connecte à une session Foundry Virtual Tabletop est un utilisateur. Chaque utilisateur se voit attribuer un rôle qui détermine ce que l'utilisateur est autorisé à faire dans les limites du monde du jeu. Les autorisations peuvent être configurées afin de contrôler plus finement les fonctionnalités disponibles pour les utilisateurs dans n'importe quel monde hébergé. Foundry VTT dispose de deux niveaux de paramètres d'autorisation qui peuvent être configurés pour autoriser autant ou aussi peu de restrictions que nécessaire pour votre jeu et vos utilisateurs.
 
-## 
-Choisi lors de la configuration des comptes de joueur à attribuer, utilisez un ensemble configuré d'autorisations par défaut pour ce type de compte dans le monde du jeu.
+## Permissions : Rôle
+Rôle à attribuer lors de la configuration du compte joueur, il utilise un ensemble d'autorisations pré-configurées par défaut pour ce type de compte dans le monde du jeu.
 
-##
-Affecté à chaque acteur, élément, entrée de journal ou autre entité pour permettre aux utilisateurs d'accéder aux documents. Les autorisations d'entité contrôlent la manière dont un utilisateur spécifique peut interagir avec cette entité.
+## Permissions : Entité
+Affecté à chaque acteur, objet, article ou autre, pour permettre aux utilisateurs d'accéder aux documents. Les autorisations contrôlent la manière dont un utilisateur spécifique peut interagir avec cette entité.
 
 # Création et configuration des utilisateurs
 Les utilisateurs sont créés dans un monde de jeu actif et l'ensemble des utilisateurs est spécifique à ce monde. Il n'y a pas de compte utilisateur global, inter-monde dans Foundry VTT, chaque monde maintient sa propre liste de joueurs et des contrôles d'autorisation au niveau de l'utilisateur
@@ -25,6 +25,9 @@ Pour créer un nouvel utilisateur, cliquez sur l'icône Paramètres du jeu (icô
 Vous pouvez ensuite renommer l'utilisateur, lui donner un mot de passe et définir son niveau d'autorisation. Pour les besoins de ce guide, les joueurs n'ont pas besoin de se voir attribuer un rôle au-delà de "Joueur". Gardez également à l'esprit que les mots de passe des utilisateurs ne sont pas sécurisés par cryptographie et ne doivent pas être réutilisés à partir d'autres comptes ou services importants que vous ou vos joueurs utilisez.
 
 Une fois que vous avez configuré tous vos comptes de joueur, cliquez sur "Enregistrer et retourner" et vous serez renvoyé à votre jeu. Les joueurs peuvent désormais rejoindre et se connecter avec les informations d'identification que vous leur avez fournies. Bien qu'il y ait un peu plus de configuration à faire avant de pouvoir jouer.
+
+<span style="display:block;text-align:center">![config_joueur.webp](/community/french/users_permissions/config_gestion_joueurs.webp)
+*L'écran Gestion des Joueurs vous permet de créer, modifier et supprimer des comptes d'utilisateurs de votre univers (World).*</span>
 
 ## Paramètres : Configuration utilisateur
 Une fois qu'un compte utilisateur a été créé, il existe des options de configuration supplémentaires pour chaque utilisateur qui peuvent être personnalisées par un utilisateur GameMaster ou par le joueur lui-même en cliquant avec le bouton droit sur son nom dans la **liste des joueurs** dans le coin inférieur gauche de l'interface utilisateur. .
