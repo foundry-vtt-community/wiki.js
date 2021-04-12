@@ -2,14 +2,14 @@
 title: 4.2 Utilisateurs & Permissions
 description: 
 published: true
-date: 2021-04-12T12:10:04.044Z
+date: 2021-04-12T12:10:27.955Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-12T11:29:32.370Z
 ---
 
 # Aperçu
-Chaque joueur qui se connecte à une session Foundry Virtual Tabletop est un utilisateur. Chaque utilisateur se voit attribuer un rôle qui détermine ce que l'utilisateur est autorisé à faire dans les limites du monde du jeu. Les droits peuvent être configurées afin de contrôler plus finement les fonctionnalités disponibles pour les utilisateurs dans n'importe quel monde hébergé. Foundry VTT dispose de deux niveaux de paramètres d'autorisation qui peuvent être configurés pour autoriser autant ou aussi peu de restrictions que nécessaire pour votre jeu et vos utilisateurs.
+Chaque joueur qui se connecte à une session Foundry Virtual Tabletop est un utilisateur. Chaque utilisateur se voit attribuer un rôle qui détermine ce que l'utilisateur est autorisé à faire dans les limites du monde du jeu. Les droits peuvent être configurées afin de contrôler plus finement les fonctionnalités disponibles pour les utilisateurs dans n'importe quel monde hébergé. Foundry VTT dispose de deux niveaux de paramètres de droits qui peuvent être configurés pour autoriser autant ou aussi peu de restrictions que nécessaire pour votre jeu et vos utilisateurs.
 
 ## Permissions : Rôle
 Rôle est un droit attribué lors de la configuration du compte joueur. il affecte un ensemble de droits pré-configurées par défaut pour ce type de compte dans votre monde de jeu.
