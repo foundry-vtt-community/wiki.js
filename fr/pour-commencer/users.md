@@ -2,7 +2,7 @@
 title: 4.2 Utilisateurs & Permissions
 description: 
 published: true
-date: 2021-04-12T12:10:55.868Z
+date: 2021-04-12T12:12:23.283Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-12T11:29:32.370Z
@@ -68,7 +68,7 @@ L'utilisateur peut interagir avec cette entité de manière très basique, elle 
 - **Observateur**
 L'utilisateur a la possibilité de visualiser cette entité comme s'il était propriétaire, mais il s'agit d'un accès en lecture seule. Ils ne peuvent apporter aucun changement.
 
-- Propriétaire
+- **Propriétaire**
 L'utilisateur peut afficher et apporter des modifications à l'entité comme s'il était le MJ, la seule exception étant qu'il ne peut pas supprimer l'entité.
 
 <span style="display:block;text-align:center">![config_joueur.webp](/community/french/users_permissions/config_actor.webp)
