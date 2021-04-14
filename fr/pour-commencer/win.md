@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2021-04-06T19:25:57.268Z
+date: 2021-04-14T11:09:14.139Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -162,7 +162,7 @@ En premier lieu, nous allons devoir **COPIER** le répertoire se trouvant dans l
 - Exécuter Foundry VTT, puis sélectionnez l'onglet Configuration
 - Dans le champ ***User Data Path***, remplacer le Path actuel par celui que vous venez de choisir en mettant des **"/"** comme sur l'exemple ci-dessous.
 
->**ATTENTION:** Avant de valider tous changements, merci de bien vérifier, comme sur la capture d'écran ci-dessous **Que "Enable UPnP ? (ou Activer UPnP ? en français)" soit bien décoché.**
+>**ATTENTION:** Avant de valider tous changements, merci de bien vérifier, comme sur la capture d'écran ci-dessous **Que "Enable UPnP ? (ou Activer UPnP ? en français)" soit bien DÉCOCHÉ.**
 >**Pour rappel,** cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
 La désactivation de cette dernière est **OBLIGATOIRE** pour le bon fonctionnement de la VTT.
 {.is-warning}
