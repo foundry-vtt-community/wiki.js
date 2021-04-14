@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-02-02T20:33:53.999Z
+date: 2021-04-14T12:06:03.132Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -42,7 +42,7 @@ More than simply wrapping an existing js lib, these are made specifically with f
 - Chat Commands https://foundryvtt.com/packages/_chatcommands/ - Allows modules to define their own chat commands.
 - Color Settings https://github.com/ardittristan/VTTColorSettings - Adds color picker as settings option and form option.
 - Find the Path https://github.com/dwonderley/lib-find-the-path/ - Provides a library that performs system-agnostic path planning calculations for two-dimensional, square grids.
-
+- DF's Hotkeys https://foundryvtt.com/packages/lib-df-hotkeys/ - It allows modules to register their own Keyboard Shortcuts and gives way for users to then customize those hotkey bindings.
 
 
 
