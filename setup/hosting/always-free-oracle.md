@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: A guide to set up cloud-hosted Foundry installation using Oracle Cloud with optional backups and S3 integration at no cost with no time limit.
 published: true
-date: 2021-04-17T19:49:44.229Z
+date: 2021-04-17T19:50:37.276Z
 tags: hosting, vm, oracle, free, s3
 editor: markdown
 dateCreated: 2021-02-04T18:31:17.191Z
@@ -50,8 +50,9 @@ At the end of this section, you will have a registered account with Oracle Cloud
 > A valid credit card is required to sign up for an account with Oracle Cloud in order to access the Always Free Tier services. 
 {.is-warning}
 
-
-1.	Review the <a id="b1"></a>availability of [Always Free services in your preferred region](https://www.oracle.com/cloud/data-regions.html). At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
+<a id="b1"></a>
+1.	Review the availability of [Always Free services in your preferred region](https://www.oracle.com/cloud/data-regions.html). At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
+<a id="b2"></a>
 2.	Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
 3.	Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
 
