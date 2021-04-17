@@ -2,7 +2,7 @@
 title: Repository Bling
 description: A quick guide to tricking out your repository readme.
 published: true
-date: 2021-03-12T16:10:57.829Z
+date: 2021-04-17T01:10:16.241Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z
@@ -77,6 +77,21 @@ Example:
 
 Colors pre-set to more or less match foundry's branding.
 
+
+Another option for displaying the supported foundry versions is to use the [FoundryVTT Shield IO Badges](https://github.com/vigoren/foundryvtt-shields-io-badge) to dynamically show which version, or versions of Foundry are compatible with your package.
+
+You just need the URL to your packages module.json file.
+
+```
+// URL to the Foundry Shields service
+https://foundryshields.com/version?url=https://github.com/vigoren/foundryvtt-simple-calendar/releases/download/v1.2.20/module.json
+
+//Example Badge
+![Supported Foundry Versions](https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://github.com/vigoren/foundryvtt-simple-calendar/releases/download/v1.2.20/module.json)
+```
+
+(Live) Example
+![Supported Foundry Versions](https://img.shields.io/endpoint?url=https://foundryshields.com/version?url=https://github.com/vigoren/foundryvtt-simple-calendar/releases/download/v1.2.20/module.json)
 
 ### Basic Label + Url
 
