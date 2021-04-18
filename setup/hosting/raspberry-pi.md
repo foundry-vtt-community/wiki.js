@@ -2,18 +2,15 @@
 title: Raspberry Pi
 description: how to install Foundry VTT on a Raspberry PI 
 published: true
-date: 2021-04-18T20:16:24.448Z
+date: 2021-04-18T20:39:07.408Z
 tags: hosting, self-hosting, raspberry pi
 editor: markdown
 dateCreated: 2021-04-18T20:02:58.536Z
 ---
 
+Raspberry Pi OS (previous called Raspbian) it's a Debian-based image for Raspberry Pi.
 
-
-
-Raspberry Pi OS (previous called Raspbian) it's a Debian based image for Raspberry Pi.
-
-To install your Raspberry Pi OS follow the official documentation [here]().
+To install your Raspberry Pi OS follow the official documentation [here](https://www.raspberrypi.org/documentation/installation/installing-images/).
 
 ## Requirements
 
@@ -36,8 +33,8 @@ You may notice a small `chain` link icon next to the download links on the downl
 
 ```bash
 cd ~
-mkdir foundry
-cd foundry
+mkdir -p foundryvtt foundrydata
+cd foundryvtt
 curl -o foundryvtt.zip "https://your-download-link-from-foundry-vtt.com-here/"
 ```
 
@@ -71,12 +68,49 @@ chrome-sandbox          icudtl.dat      libGLESv2.so  LICENSE.electron.txt  reso
 Almost there we just need to test it:
 
 ```bash
-node resources/app/main.js
+node ~/foundryvtt/resources/app/main.js
 ```
 
-Now go to your favorit browser and type `ip:30000`
+Now go to your favorite browser and type `http://ip:30000`!
 
-From now you are ready but we can do some extra touches 
+We are rolling, now let's do the final touches.
+
+## Configuring the Installation
+
+First we need to ensure that we have a folder that we can access to easily mantain our assets. By default on linux-based systems the folder is `/home/USER/.local/share/FoundryVTT` and we can change that on 2 ways.
+
+* Editing the config.json file 
+* Passing as a entry during the node command.
+
+The second approach is more feasible as we can use it to take advanced of the system configuration. So let's define it as `--dataPath=/home/<USER>/foundrydata`.
+ 
+With the latest version of Rapberry OS the system manager is *systemd* and we can configure it with the following file. 
+
+Create it on `sudo nano /etc/systemd/system/foundryvtt.service`
+ 
+```
+[Unit]
+Description=Foundry VTT
+
+[Service]
+Type=simple
+ExecStart=node /home/<USER>/foundryvtt/resources/app/main.js --dataPath=/home/<USER>/foundrydata
+Restart=on-failure
+User=<USER>
+
+[Install]
+WantedBy=multi-user.target
+```
+
+> Remember to change the `<USER>` for the user that Raspberry PI user.
+
+Now we can manage our Foundry
+
+```
+sudo systemctl daemon-reload
+sudo systemctl start foundryvtt
+sudo systemctl enable foundryvtt
+```
 
 
 
