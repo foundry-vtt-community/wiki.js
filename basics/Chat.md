@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2020-09-23T01:31:13.974Z
+date: 2021-04-18T00:19:17.383Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:21:56.970Z
@@ -36,7 +36,7 @@ Causes the message to be an emote performed by the selected character. Emotes ar
 
 Syntax: `/whisper {target} {message}` or `/w {target} {message}` or `@{target} {message}`
 
-Whispers a message to the target. If the user sending the message does not have the "Private Messages" permission, Gamemasters will be able to see the content of the message even if they were not a recipient. If the whisper's target is a character, the whisper will be sent to whoever controls the token.
+Whispers a message to the target. Non-GM players require the "Whisper Private Messages" permission to be able to send whispers; if they do, these messages will not be seen by GM/Assistant players.
 
 Note that you can message multiple users at once by enclosing their names as a comma separated list within brackets. For example `/w [Andrew,Tim, Julia] what do you think?` or `@[James, Alicia]` should we attack, or sneak past?. Lastly, the names gm and players will send a whispered message to all Game Master users or all non-GM users respectively.
 
