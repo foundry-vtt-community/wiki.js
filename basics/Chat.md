@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2021-04-18T00:19:17.383Z
+date: 2021-04-18T00:24:21.355Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:21:56.970Z
@@ -38,7 +38,9 @@ Syntax: `/whisper {target} {message}` or `/w {target} {message}` or `@{target} {
 
 Whispers a message to the target. Non-GM players require the "Whisper Private Messages" permission to be able to send whispers; if they do, these messages will not be seen by GM/Assistant players.
 
-Note that you can message multiple users at once by enclosing their names as a comma separated list within brackets. For example `/w [Andrew,Tim, Julia] what do you think?` or `@[James, Alicia]` should we attack, or sneak past?. Lastly, the names gm and players will send a whispered message to all Game Master users or all non-GM users respectively.
+To send a message to a player with a space in their name, wrap the name in square brackets: `/w [Arthur Dent] Where is your towel?`
+
+Note that you can message multiple users at once by enclosing their names as a comma separated list within brackets. For example `/w [Andrew, Tim, Julia] What do you think?` or `@[James, Alicia] Should we attack, or sneak past?` Lastly, using `gm` or `players` will send a whispered message to all GM users or all non-GM users respectively.
 
 # What is a macro?
 
