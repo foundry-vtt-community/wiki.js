@@ -2,7 +2,7 @@
 title: Raspberry Pi
 description: how to install Foundry VTT on a Raspberry PI 
 published: true
-date: 2021-04-18T20:41:17.576Z
+date: 2021-04-18T20:48:34.304Z
 tags: hosting, self-hosting, raspberry pi
 editor: markdown
 dateCreated: 2021-04-18T20:02:58.536Z
@@ -111,6 +111,12 @@ sudo systemctl daemon-reload
 sudo systemctl start foundryvtt
 sudo systemctl enable foundryvtt
 ```
+
+## Something went wrong, need help?
+
+Check the `#installation-support` on FoundryVTT Discord server.
+
+You can also ping me `hugoprudente#0518` at FoundryVTT or FoundryVTTBrasil Discord Servers or `@hugoprudente` on Twitter.
 
 
 
