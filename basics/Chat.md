@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2021-04-18T00:24:21.355Z
+date: 2021-04-18T00:25:32.278Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:21:56.970Z
@@ -30,7 +30,7 @@ Causes the message to be spoken out of character (OOC). OOC messages will be out
 
 Syntax: `/emote {message}` or `/em {message}` or with version 0.6.5 and later, `/me {message}`
 
-Causes the message to be an emote performed by the selected character. Emotes are in-character actions conveyed through text by the player, and therefore require the player to select a token (or link a character through the Player Configuration window). Entering "/emote waves his hand." while controlling a character named Simon will send the message, "Simon waves his hand."
+Causes the message to be an emote performed by the selected character. Emotes are in-character actions conveyed through text by the player, and therefore require the player to select a token (or link a character through the Player Configuration window). Entering `/emote waves his hand.` while controlling a character named Simon will send the message, "Simon waves his hand."
 
 ## Whispered Messages
 
