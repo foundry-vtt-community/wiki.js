@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-04-06T11:48:43.872Z
+date: 2021-04-19T11:00:02.251Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -53,9 +53,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 
 #### Divers Modules à éviter avec les versions 0.7.x
 - **Deselection**, Built-in depuis la version 0.7.x
-- **Module RNHD (Rough Night Hard Days)**
 - **Module Eye-for-Eye**
-- **VTTA Tokenizer**
 
 ## Les systèmes en français
 - [Aria - Game of Roles](https://foundryvtt.wiki/fr/systemes/aria)
