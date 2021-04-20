@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2021-02-17T20:08:37.632Z
+date: 2021-04-20T08:19:25.391Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-18T19:13:46.176Z
@@ -43,6 +43,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 <i class="fab fa-discord"></i> [Discord: Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) – Unofficial Finnish community.
 <i class="fab fa-discord"></i> [Discord: The Foundry CZ komunita](https://discord.gg/7dHDqEW) – Unofficial Czech & Slovak community.
 <i class="fab fa-discord"></i> [Discord: Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) – Unofficial Russian community.
+<i class="fab fa-discord"></i> [Discord: HKTRPG Foundry VTT(中文)](https://discord.gg/vx4kcm7) – Unofficial Traditional Chinese community.
 
 
 ## Public Foundry Demos
@@ -59,12 +60,6 @@ Link: https://demo.forge-vtt.com/
 Password: `forge`
 
 The Forge demo (FVTT **0.6.6**) is hosted by The Forge. It includes a tutorial for first time users and additional tweaks to the Foundry VTT experience for The Forge hosting platform.
-
-### Incarnate Gaming LLC
-Link: https://www.demo.incarnategamingllc.com:30000/
-Password: `incarnate`
-
-The Incarnate demo (FVTT **0.6.5**) is hosted by Incarnate Gaming LLC and includes an additional paid module that is not part of the official release
 
 ## Collaborative Modules
 Below are the Foundry VTT Community Wiki contributed modules. Anyone can share their content with the rest of the community via Pull request to be merged into a module update.
