@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-04-20T09:41:00.440Z
+date: 2021-04-20T09:47:30.814Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -32,6 +32,8 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
  - 5 Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
 
 La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
+Aures vidéos : 
+ - 1 Interview autour de [FoundryVTT par JDRFactory](https://www.youtube.com/watch?v=mOWEWFj4ZEo)
 
 ## Ressources officielles ...
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop Website](http://foundryvtt.com)
