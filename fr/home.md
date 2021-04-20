@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-04-20T09:36:12.526Z
+date: 2021-04-20T09:41:00.440Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -26,7 +26,7 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 
 ## Vidéos tutorielles et Introduction
  - 1 Achat et installation par Kyllian : [Achat & Installation](https://www.youtube.com/watch?v=uoTwImiVXBU)
- - 2 Appréhender l'interface, comprendre les possibilités côté MJ par Fletch: [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
+ - 2 Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
  - 3 Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
  - 4 Utiliser le les transitions de scènes par Ceizyl : [module de transition de scène](https://www.youtube.com/watch?v=0bYxYCjegZY)
  - 5 Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
