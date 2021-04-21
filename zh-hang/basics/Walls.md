@@ -2,65 +2,65 @@
 title: Walls
 description: 
 published: true
-date: 2020-09-23T01:32:40.207Z
+date: 2021-04-21T15:59:25.391Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:24:03.617Z
 ---
 
-Walls are a means for defining virtual boundaries in FoundryVTT. There are several types of walls that a GM can create as defined below.  Walls are typically not actually visible to players (with the exception of doors) or their tokens however can block visibility, movement and sounds depending on the type of walls predefined by the GM. The GM draws walls segments, one at a time between two points. 
+牆是在FoundryVTT中定義虛擬邊界的一種方法。GM可以創建以下幾種類型的牆。玩家通常是看不見牆的（除了門），但它們可能會阻塞TOKEN的能見度，移動和發出聲音，具體取決於GM對牆的類型定義。 GM繪製牆段，在兩點之間繪製。
 
-Players controlling tokens in a scene cannot move their token past a wall that blocks it movement, however the GM (or players granted special permission) can move tokens past movement blocking walls or doors. The exception to this are single direction walls which block movement only in one direction. TIP: Fun for insidious traps. 
+在場景中控制Token的玩家無法將其Token穿過阻止其移動的牆，但是GM（或獲得特殊許可的玩家）可以將Token穿過阻止移動的牆或門。唯一的例外是單向壁，它僅阻止一個方向的移動。提示：設定陷阱的樂趣。
 
-A specific tokens ability to see and hear sounds beyond a wall depends on the wall type. Some walls block token visibility, light, and/or sounds some do not. Vision blocking walls effects how light exposes a particular area of the scene that token might be able to see and also effects how Fog of War is exposed in a scene.  Sounds too can be blocked by certain walls.  The exception to these rules are "global" lights and sounds which are seen and heard through all wall types.
+特定Token能不能看到和聽到牆外聲音取決於牆的類型。一些牆壁會阻止Token能見性，光線和/或聲音，而有些則不會。視障牆會影響光線如何投射，Token可能能夠看到場景的特定區域，也影響戰爭迷霧如何在場景中顯示。聲音也可能被某些牆壁擋住。超然於這些規則的，是在所有牆壁類型中都能看到和聽到的“全局”燈光和聲音。
 
 # Wall Types
 
 ## Regular Walls
-These walls block movement, vision and sounds. They are rendered on the Walls Layer using an off-white color.
+這種牆壁阻擋了移動，視覺和聲音。它們使用灰白色在“牆壁圖層”上渲染。
 
 ## Terrain Walls
-Terrain walls are used for blocking movement of a token and vision beyond the terrain wall boundary.  These are typically used to hide what is behind an object, but allows the token can see the object itself such as a building.  Draw a series of terrain wall segments to define the outside of the object and the token can still see the object however the terrain wall now blocks vision and sound behind it. Terrain walls are drawn as a light green color.
+地形牆用於阻止Token和視線超出地形牆邊界的移動。這些通常用於隱藏背後的內容，但允許Token可以看到對象本身，例如建築物。繪製一系列的地形牆段以定義對象的外部，Token仍然可以看到該對象，但是該地形牆現在阻止了它後面的視覺和聲音。 地形牆被繪製為淺綠色。
 
 ## Invisible Walls
-These walls block movement, but not vision or sound. They are rendered on the Walls Layer using a light blue color.
+這些牆會阻止運動，但不會阻止視覺或聲音。它們使用淺藍色在“牆壁圖層”上渲染。
 
 ## Ethereal Walls
-Ethereal walls block token vision and sound but do not hinder the movement of tokens and are drawn as a purple color.
+空靈的牆壁會阻止Token的視覺和聲音，但不會阻礙Token的移動，它們使用淺洋紅色在“牆壁圖層”上渲染。
 
 ## Doors
-These walls are able to be toggled between multiple states. Doors may be closed, open, or locked. Closed (or locked) doors block movement, vision and sound, while open doors do not block vision, movement or sound. Doors will be rendered as a small icon for player views which, if clicked, will open or close the door provided it is not locked. Only Game-Master players have the ability to unlock doors. Open doors are rendered in green while with closed doors in blue and locked doors in red.
+這些牆能夠在多個狀態之間切換。 門可以關閉，打開或鎖定。 關閉（或鎖定）的門會阻礙運動，視覺和聲音，而打開的門不會阻礙視覺，運動或聲音。 門將以小圖標呈現，以供玩家查看，如果單擊該門，則只要門未鎖定即可打開或關閉。 只有Game Master才能解鎖門。 打開的門以綠色呈現，而關閉的門以藍色呈現，而鎖定的門以紅色呈現。
 
 ## Secret Doors
-These walls work as doors, able to be toggled between closed, open, or locked states, however unlike regular doors the icon for secret doors is not shown to players and these can only be toggled by the Game Master. Secret doors are rendered in purple.
+這些牆用作門，可以在關閉，打開或鎖定狀態之間切換，但是與常規門不同，秘密門的圖標不會顯示給玩家，這些只能由GM切換。 秘密門以紫色渲染。
 
 # IMPORTANT TIPS
-See Walls and Journals video available:
+請參閱牆和日誌示範影片：
 
 [![Walls and Journals YouTube Video](http://img.youtube.com/vi/zLTArUhSssU/0.jpg)](http://www.youtube.com/watch?v=zLTArUhSssU)
 
-Global lights are not affected by walls or doors. Global lights will be visible to all tokens that have visibility, regardless of wall between the token and the light source. This will also effect Fog of War.
+全局照明不受牆壁或門的影響。 全局光將使所有具有能見性的TOKEN可見，而與TOKEN和光源之間的牆壁無關。 這也會影響戰爭迷霧。
 
-Global sounds are heard by all tokens through all wall types.
+所有Token都可以通過所有牆壁類型聽到全局聲音。
 
-**Chaining Wall Segments**: This can be done by holding down `CTRL` (on a PC) while creating a wall segment. The GM can continue clicking to chain together more wall segments.  Releasing `CTRL` completes a wall segment.
+**Chaining Wall Segments**: 這可以通過在創建牆段時按住 `CTRL`（在PC上）來完成。 GM可以繼續單擊以將更多的牆段鏈接在一起。 釋放CTRL可以完成牆段。
 
-**Wall Snapping**: The two points used to define a wall segment are snapped to a micro grid to ensure they are relatively drawn evenly and can easily be joined to other wall segments. Walls can be moved after creation by clicking on a wall segment point and holding the mouse button while dragging to a new location. Once released, the wall point will be moved and the wall adjusted accordingly.
+**Wall Snapping**: 用於定義牆段的兩個點被對齊到網格，以確保它們相對公整地繪製，並且可以輕鬆地連接到其他牆段。在創建牆壁後，可以通過單擊壁段點並在拖動到新位置的同時按住鼠標按鈕來移動壁。放開後，牆點將被移動並相應地調整牆。
 
-**Deleting a Wall Segment**: Simply click on one of its points and press the `DEL` key (PC).
+**Deleting a Wall Segment**: 只需單擊點之一，然後按`DEL`鍵（在PC上）。
 
-**Edit a Wall Segment**: By double-clicking a wall segment point shows the wall segment properties.  You can change the properties of an existing wall in that popup screen.  The color of the wall segment will adjust to the appropriate color.
+**Edit a Wall Segment**: 通過雙擊牆段點，將顯示牆的屬性。 您可以在該彈出屏幕中更改現有的屬性。 牆的顏色將調整為適當的顏色。
 
-**Select multiple Wall Segments**: Use one or multiple of these methods:
-* Hold down the `SHIFT` key while clicking on multiple wall segment points.
-* Hold down the `ALT` key and click on a wall segment point to select a wall-chain (All wall segments connected to each other).
-* Use the rectangular selection tool to select multiple wall segments.
+**Select multiple Wall Segments**: 使用以下一種或多種方法：
+* 在單擊多個牆段點時，按住`SHIFT`鍵。
+* 按住`ALT`鍵並單擊牆段點以選擇牆鏈（所有牆段相互連接）。
+* 使用矩形選擇工具選擇多個牆段。
 
-**Edit multiple Wall Segments**: First select multiple wall segments then double-click
-any wall segment point to bring up the properties which you can change for all of the selected wall segments.
+**Edit multiple Wall Segments**: 首先選擇多個牆段，然後雙擊
+任何牆段點都會顯示您可以為所有選定牆段更改的屬性。
 
-**Directional Wall Segments**: Wall segments can be directional (left/right/both) to block is various ways.  Edit the wall segment to modify this option.
+**Directional Wall Segments**: 牆段可以是有方向性的（左/右/兩者），以各種方式進行阻擋。 編輯牆段以修改此選項。
 
-**The Grid Layer**: Is positioned 2nd from bottom in the layers of the Canvas. The Grid Layer is responsible for orienting and segmenting the game space into grid spaces. Currently only a square grid is supported but hex grid support is flagged as a feature for work during Beta development.
+**The Grid Layer**: 位於 “Canvas ”圖層中從底部開始的第二個位置。 網格層負責將游戲空間定向和劃分為網格空間。
 
-The Grid provides convenience tools for measuring distance, restricting token movement, and providing guide lines for anchoring wall segments or other canvas features.
+網格提供了方便的工具，用於測量距離，限制TOKEN移動以及提供用於錨定牆段或其他畫布功能。

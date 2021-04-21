@@ -2,7 +2,7 @@
 title: Chat
 description: 
 published: true
-date: 2021-04-18T00:25:32.278Z
+date: 2021-04-21T15:59:25.391Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:21:56.970Z
@@ -83,77 +83,78 @@ Macro是一種讓玩家快捷地去進行某些動作的方式。它可以是MOD
 
 ## Using Attributes
 
-If you are using the Simple Worldbuilding System, your character sheet stores a number of basic attributes about your character in the Attributes tab. These allow you to use your attributes as variables in all your formulas, so when you change one of your attribute all your formulas, macros, etc update along with it automatically. Most systems have special attributes for different parts of the character sheet -- you will have to reference the system for those.
+如果您使用的是`Simple Worldbuilding System`，則角色卡會在“屬性”中儲存有關角色的不同基本屬性。 你可以將屬性用作公式中的變量，因此，當您更改一個屬性時，所有公式，Macros等都會同步更新。
 
-You can reference these attributes in your roll commands by typing @attribute, replacing the word "attribute" with the attribute key. 
+您可以擲骰指令中加入 `@屬性` 中來引用這些屬性。
 
-For an attribute with the key "init", it looks like this:
+對於具有“init”的屬性，它看起來像這樣：
 
     /r 2d10 + @prof
 
-When you pop that out into chat, it will look like this, assuming the init attribute contains the number "2":
+當您使用它時，它將看起來像下面那樣，假設init屬性包含數字“ 2”：
 
 ![](https://i.imgur.com/Vw8jedz.png)
 
 
-It will automatically draw from your assigned character's attributes unless you have a different token selected.
+除非您選擇了其他Token，否則它將自動從你所分配到角色的屬性中提取數據。
 
 ### Seeing a list of attributes
 
-If you wish to see the list of @attributes you can utilize, open console (F12) and type `_token.actor.data.data` (token should be selected). You will see a list of options you can reference in a dot notation. For example, if you wish to reference the stealth modifier, it would be: `@skills.ste.mod`.
 
-The top level attributes you can access with the @ symbol are: `@abilities, @attributes, @bonuses, @currency, @details, @resources, @skills, @spells, @traits`.
+如果您想查看可以使用的 @屬性 列表，請打開控制台（F12）並鍵入`_token.actor.data.data`（已選擇token）。 您將看到可以用 點. 表示 的選項列表。 例如，如果您希望引用stealth ，則為： `@skills.ste.mod`
+
+您可以使用@符號訪問的頂級屬性是：`@abilities，@attributes，@bonuses，@currency，@details，@resources，@skills，@spells，@traits`
 
 
 # Formatting
 
 ## Inline Rolls
 
-You can roll dice inside *any* text by placing brackets around it, like so:
+您可以通過在方括號在文字中進行 *任何* 擲骰中，如下所示：
 
 ```
-The quick brown fox jumps [[2d10+5]] over the lazy dog.
+Sad 一步跳起 [[2d10+5]]米 跳過那隻頑皮的章魚龍.
 ```
 
-When you send that to chat, the dice will be rolled and the result will be displayed inside the text, like so:
+當您發送到聊天信息時，擲骰結果將顯示在文本內，如下所示：
 
 ![](https://i.imgur.com/jlOgjv6.png)
 
 
-You can also put "delayed" rolls or “clickable” rolls inline. This will show the dice formula inline instead of automatically rolling the dice, and when clicked the dice will roll. You can accomplish this by including the roll command inside the brackets. Like so:
+您還可以將“延遲”或“可點擊”的擲骰插入文本內。 這將顯示骰子公式，而不是自動擲骰，當你單擊時，才會擲骰。 您可以通過在方括號內包含擲骰命令來完成此操作。 像這樣：
 
 ```
-The quick brown fox jumps [[/r 2d10+5]] over the lazy dog.
+Sad 一步跳起 [[/r 2d10+5]]米 跳過那隻頑皮的章魚龍.
 ```
 
-When you send it to chat, it will look like this:
+當您發送到聊天時，它將如下所示：
 
 ![](https://i.imgur.com/dIY1rFf.png)
 
 
-And when you click on the roll formula, it will roll the dice, like so:
+當您單擊擲骰公式時，它將進行擲骰，如下所示：
 
 ![](https://i.imgur.com/7rDxMMD.png)
 
 
-You can embed inline rolls in any text box on Foundry (including on your character sheet, journal entries, macros, and the chat box), and you can make it look nice using HTML formatting as long as you condense the code before pasting it in.  See HTML Formatting for more information.
+您可以將內嵌式擲骰嵌入到Foundry上的任何文本框中（包括在角色卡，日記條目，Macros和聊天框裡），並且可以使用HTML格式，只要在粘貼之前壓縮代碼即可 。有關更多信息，請參見HTML格式。
 
 ## Comments
 
-You can add comments to die rolls by putting text after a # at the end, like so:
+您可以通過在文字末尾的後面加上＃來添加註釋，如下所示：
 
     /r 2d10+5 #This is my attack roll
 
-Which will result in this:
+結果如下所示：
 
 ![](https://i.imgur.com/KOfyoN9.png)
 
 
-You can also including condensed html formatting in the text, like so:
+您還可以在文本中包含壓縮的html格式，如下所示：
 
     /r 2d10+5 #<h2> This is my attack roll </h2>
 
-Which looks like this:
+結果如下所示：
 
 ![](https://i.imgur.com/wHaW2Hs.png)
 
@@ -162,27 +163,27 @@ See HTML Formatting for more information on HTML.
 
 ## References
 
-You can reference almost any entity in Foundry in *any* textbox in Foundry, like so:
+您可以在Foundry的 *任何* 文本框中引用Foundry中的幾乎所有項目，如下所示：
 
 | Entity          | Code                                |
 | --------------- | ----------------------------------- |
-| Character/Actor | `@Actor[Character Name]` (Note there must be an actor that exists with that name. Not just a Compendium entry.)           |
-| Scene           | `@Scene[Scene Name]`                |
-| Item            | `@Item[Item Name]` (As with actor references, this refers to an item (see item sidebar). A Compendium entry isn’t enough.)                                    |
-| Journal Entry   | `@JournalEntry[Journal Entry Name]` |
-| Compendium      | `@Compendium[Entry Name]`           |
-| Roll Table      | `@RollTable[Roll Table Name]`       |
+| 角色 | `@Actor[Character Name]` (請注意，必須存在一個使用該名稱的角色。 不只是合集條目.)           |
+| 場景           | `@Scene[Scene Name]`                |
+| 道具            | `@Item[Item Name]` （與角色一樣，它指的是一個項目（請參見項目邊欄）。僅提供一個合集條目是不夠的。）                                    |
+| 日誌   | `@JournalEntry[Journal Entry Name]` |
+| 合集      | `@Compendium[Entry Name]`           |
+| 擲骰表      | `@RollTable[Roll Table Name]`       |
 | Macro           | `@Macro[Macro Name]`                |
 
-Note that linking to a macro or rollable table does not automatically roll it — it will create a button you must click to roll. 
+請注意，鏈接到Macro或擲骰表不會自動擲骰-它會建立一個必須單擊進行擲骰的按鈕。
 
-Entry/object links are case-sensitive! Both the type (“JournalEntry”, not “journalEntry”) and the object’s name (“Abacus”, not “abacus”). You can also drag-and-drop objects to some places to create links.
+條目/對象鏈接區分大小寫！ 類型（“JournalEntry”而不是“ journalEntry”）和對象名稱（“Abacus”而不是“abacus”）。 您也可以將對象拖放到某些位置以新增鏈接。
 
-In the case of Actor, Item, and other references of the @<type>[<name>] style, a reference is created to a specific object’s ID. If that object is later deleted, even if a new one with the same name is made, the existing link won’t refer to the new object. Also note that if multiple choices for a given name exist, the “first” one will be picked. If that “first” one happens to be one that a player can’t see due to permissions, then even if there’s a “second” one the player can see, clicking the reference link will give them a permissions error.
+對於Actor，Item和其他 @<type>[<name>] 方式的引用，將引用特定對象的ID。 如果以後刪除該對象，即使使用相同名稱創建了一個新對象，現有鏈接也不會引用該新對象。還要注意，如果特定名稱存在多個相同選擇，則將選擇“第一個”。 如果該“第一個”碰巧是玩家由於權限而看不到的那個，那麼即使該玩家可以看見“第二個”，點擊引用鏈接也會給他們一個「權限錯誤」。
 
-Example:
+例子:
 
-    This is some random text, and here is my skill check macro button @Macro[Initiative] also here is a journal entry I want to link to @JournalEntry[Kryx SRD]
+    這是一些隨機文本，這是我的技能檢查，Macro按鈕 @Macro[Initiative]也是我要鏈接到 @JournalEntry[Kryx SRD] 的日記條目
 
 Displays this:
 
@@ -190,27 +191,27 @@ Displays this:
 
 ## HTML
 
-You can format your journal entries, macros, etc — basically anything with a text box — using HTML. 
+您可以使用HTML格式化Macro,日誌等（基本上所有帶有文本框的內容）。
 
 **Learning HTML?**
-HTML is *extremely* simple. If you can put `<h1> tags </h1>` around some text, you can use HTML! If you want to learn some basic HTML, you can do the first few lessons before “create a text field” [here](https://www.freecodecamp.org/learn/), which all together shouldn’t take you more than 20 minutes.
+
+HTML非常簡單。 如果您在文本周圍加上<h1>標記</h1>，就已經是在使用HTML了！ 如果您想學習一些基本的HTML，則到[此處](https://www.freecodecamp.org/learn/)完成前幾節課，這不超過20分鐘。
 
 **Using the built-in HTML Editor**
-You don’t have to learn any HTML at all in order to make your formatting nice and pretty. On any description box (on your character, Journal entries, items, etc) there should be a text editor you can use. Just combine inline dice and references with using the buttons for formatting there to make things nice and pretty.
+您不必完全學習任何HTML就能使您的格式美觀。 在任何描述框中（在您的角色，日誌，道具上），都應該有一個可以使用的文本編輯器。 只需將骰子和引用及按鈕結合使用，即可在那裡進行格式化，從而使事情變得更加漂亮。
 
 **Using an external HTML Editor**
-For macros, you will need to use an external HTML editor. You can use [this one](http://htmleditor.in/index.html).  Make sure to pass it through [this compressor](https://www.textfixer.com/html/compress-html-compression.php) before you paste it in, however. If you want to use an external HTML editor to create the code for text boxes that *do* have a built-in editor (in cases where the built-in editor doesn't have enough features,) you'll need to click the <> icon in the built-in text editor to directly edit (and paste in) the code.
+對於Macro，您將需要使用外部HTML編輯器。 您可以使用[htmleditor](http://htmleditor.in/index.html)。 但是，在粘貼之前，請確保將其通過[壓縮器](https://www.textfixer.com/html/compress-html-compression.php)。
 
 # Embedding Webpages
-You can embed most webpages in Foundry anywhere there is a text editor.  When you have the text editor open, click the source button (<>) and paste in the following code, replacing YOUR_LINK with the link to your desired website (including https:// in your link):
+您可以將大多數網頁嵌入到Foundry中，只要有文本編輯器即可。打開文本編輯器後，單擊源按鈕（<>）並粘貼以下代碼，將YOUR_LINK替換為所需網站的鏈接（包括鏈接中的https://）：
 
 ```html
 <div style="overflow: hidden; position: relative; min-height: 100%;"><iframe style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%;" src="YOUR_LINK" width="100%" height="100%" allowfullscreen="true;">
 </iframe></div>
 ```
-This can be a useful way to embed rule references, SRDs, videos, and even character sheets. Some websites will not embed because of the website's private settings, and some websites (such as YouTube) require that you use a special embed link.
+這是嵌入規則引用，SRD，影片甚至角色卡的有用方法。 由於網站的私有設置，某些網站將不會接受使用嵌入，而某些網站（例如YouTube）則要求您使用特殊的嵌入鏈接。
 
 # Approximating a Character Sheet
-If you’re using the Simple Worldbuilding System and are industrious, you can put together a perfectly serviceable (if ugly) character sheet with clickable roll buttons in the Description box of your character, using nothing but dice syntax, references, and formatting. Greta has the beginnings of one here:
-
+如果您使用的是Simple Worldbuilding System，則可以在角色的“描述”框中將易於使用（如果難看）的角色表與可單擊的擲骰按鈕放在一起，除了骰子語法，引用和格式外，什麼也不用。 在這裡有一個示範：
 ![](https://paper-attachments.dropbox.com/s_18A9487B0EE61A81F393FA91A13C89DE192362383B6581DB8EF3234F6BDD2D71_1587945338468_image.png)

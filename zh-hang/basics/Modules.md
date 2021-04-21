@@ -2,37 +2,28 @@
 title: Modules
 description: 
 published: true
-date: 2020-11-09T19:39:55.086Z
+date: 2021-04-21T15:59:25.391Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:50.901Z
 ---
 
-Modules enhance or replace functionality within Foundry VTT. Most modules consist of a `module.json` file that describes the module and contains some metadata about it, and a `<module name>.js` file that contains the module code. Some modules also include `css` and `html` files.
+模塊MOD增強或替換了Foundry VTT中的功能。 大多數模塊MOD由一個module.json文件 去描述模塊MOD內容 及 <module name>.js文件構成。 一些模塊MOD還包括`css`和`html`文件。
 
 # Finding Modules
-Browsing the official module list is the easiest way to find Moudules. Some unlisted modules can be found via the [Unlisted Modules](/en/community/community-unlisted-modules) wiki page.
+瀏覽官方模塊MOD列表是找到模塊MOD的最簡單方法。 某些未列出的模塊可以通過[未列出的模塊](/en/community/community-unlisted-modules) Wiki頁面找到。
 
 # Installing Modules
 
 ## Via Manifest URL
-1. Open the Foundry setup page in a web browser
-2. Click on the Add-on Modules tab
-3. Click the Install Module button
-4. Either browse the official listing or Paste the manifest URL to the module being installed in the field at the bottom of the dialog
-5. Click Install 
-
-## Manually
-1. Placing the module files under `Data\modules\<module name>` inside your Foundry VTT user data folder. 
-2. Restart the Foundry VTT server
-3. Log back into Foundry VTT as the GameMaster
-4. Open the Game Settings tab
-5. Click the Manage Modules button
-6. Find the newly installed module and place a checkmark next to the name, then click Update Modules at the bottom of the list to activate it
-
+1. 在網絡瀏覽器中打開Foundry設置頁面
+2. 單擊`Add-on Modules`選項卡
+3. 單擊`Install Module`按鈕
+4. 瀏覽官方列表，或將URL粘貼到底部對話框中進行安裝。
+5. 單擊`Install`
+ 
 
 # Developing Modules
-There is an [Introduction to Module Development](https://foundryvtt.com/article/module-development/) page in the official Foundry Knowledge Base which is a good place to start.
+在官方的Foundry知識庫中有一個[模塊MOD開發簡介](https://foundryvtt.com/article/module-development/)頁面，這是一個很好的開始。
 
-Modules are developed using the Foundry VTT API which is documented on the official [Foundry VTT site](https://foundryvtt.com/api/).
-
+使用Foundry VTT API開發模塊MOD，API將在[Foundry VTT官方網站](https://foundryvtt.com/api/)上有記錄。
