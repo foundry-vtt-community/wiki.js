@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-04-21T18:02:44.015Z
+date: 2021-04-21T18:03:58.954Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -16,7 +16,7 @@ This guide provides easy to follow steps for a relatively simple installation of
 
 * You will end up with:
 
-  <a name="a1">1</a>. A VM that runs Foundry 24/7, including after restarts.
+  1. A VM that runs Foundry 24/7, including after restarts.
   2. A domain name and an automatically managed encrypted connection to your Foundry instance.
   3. Roughly 40GB (optionally increased to roughly 90GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
   4. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
