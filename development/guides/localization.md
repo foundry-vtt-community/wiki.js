@@ -2,7 +2,7 @@
 title: Localization
 description: Localization guides.
 published: true
-date: 2021-04-21T15:03:40.601Z
+date: 2021-04-21T16:22:10.654Z
 tags: untranslatable
 editor: markdown
 dateCreated: 2021-01-14T08:29:55.485Z

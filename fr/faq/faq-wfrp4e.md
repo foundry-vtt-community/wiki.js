@@ -2,7 +2,7 @@
 title: FAQ Warhammer 4 sous FoundryVTT
 description: 
 published: true
-date: 2021-04-21T15:00:41.876Z
+date: 2021-04-21T16:22:43.369Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T16:18:43.314Z

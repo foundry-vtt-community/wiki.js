@@ -2,7 +2,7 @@
 title: Templates
 description: 
 published: true
-date: 2021-04-21T14:54:19.911Z
+date: 2021-04-21T16:18:54.507Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:23:28.077Z

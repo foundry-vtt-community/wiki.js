@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-04-21T15:11:20.419Z
+date: 2021-04-21T16:21:41.270Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-04-21T14:44:20.433Z
