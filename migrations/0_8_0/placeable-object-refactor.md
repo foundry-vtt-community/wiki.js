@@ -2,7 +2,7 @@
 title: Split the responsibility of the current PlaceableObject class into core data management, permission control, and configuration which extends EmbeddedEntity vs the Canvas object representation and UX which extends PlaceableObject
 description: 
 published: true
-date: 2021-02-07T17:40:58.106Z
+date: 2021-04-21T15:06:08.901Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:40:54.674Z

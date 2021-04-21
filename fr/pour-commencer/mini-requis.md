@@ -2,7 +2,7 @@
 title: 0.0. Spécifications requises
 description: 
 published: true
-date: 2021-02-25T06:28:48.734Z
+date: 2021-04-21T15:07:06.164Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-25T05:50:38.831Z

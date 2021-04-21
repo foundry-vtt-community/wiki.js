@@ -2,7 +2,7 @@
 title: Localizing Map Note Icon Names
 description: A guide on how to localize map note icons with a custom JSON file.
 published: true
-date: 2021-01-31T22:34:57.021Z
+date: 2021-04-21T15:03:33.869Z
 tags: localization, translation, guide, map note
 editor: markdown
 dateCreated: 2021-01-13T21:23:53.391Z

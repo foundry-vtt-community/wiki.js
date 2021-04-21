@@ -2,7 +2,7 @@
 title: Change the default behavior for what is automatically populated as ChatMessageData#content when a Roll is included in a Chat Message.
 description: 
 published: true
-date: 2021-04-14T12:21:41.109Z
+date: 2021-04-21T15:09:37.520Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:21:41.109Z

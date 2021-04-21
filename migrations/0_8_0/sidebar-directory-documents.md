@@ -2,7 +2,7 @@
 title: Tidy up SidebarDirectory class definitions to reference "documents" rather than "entities"
 description: 
 published: true
-date: 2021-02-07T17:46:30.609Z
+date: 2021-04-21T15:06:16.034Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:46:27.195Z

@@ -2,7 +2,7 @@
 title: Journal
 description: 
 published: true
-date: 2020-09-23T01:31:40.469Z
+date: 2021-04-21T14:54:00.556Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:38.240Z

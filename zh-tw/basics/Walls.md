@@ -2,10 +2,10 @@
 title: Walls
 description: 
 published: true
-date: 2021-04-21T15:59:25.391Z
+date: 2021-04-21T15:11:40.230Z
 tags: 
 editor: markdown
-dateCreated: 2020-09-23T00:24:03.617Z
+dateCreated: 2021-04-21T14:51:32.732Z
 ---
 
 牆是在FoundryVTT中定義虛擬邊界的一種方法。GM可以創建以下幾種類型的牆。玩家通常是看不見牆的（除了門），但它們可能會阻塞TOKEN的能見度，移動和發出聲音，具體取決於GM對牆的類型定義。 GM繪製牆段，在兩點之間繪製。

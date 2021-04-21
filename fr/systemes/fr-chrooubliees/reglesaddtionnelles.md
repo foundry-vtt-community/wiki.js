@@ -1,8 +1,8 @@
 ---
-title: Règles Additionnelles 
+title: Règles Additionnelles
 description: Des options de jeu différentes
 published: true
-date: 2020-12-26T17:36:06.777Z
+date: 2021-04-21T15:02:31.224Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:22:50.709Z

@@ -2,10 +2,10 @@
 title: Getting Started
 description: 
 published: true
-date: 2021-04-21T15:59:25.391Z
+date: 2021-04-21T15:11:23.961Z
 tags: 
 editor: markdown
-dateCreated: 2020-09-23T00:26:04.779Z
+dateCreated: 2021-04-21T14:44:25.744Z
 ---
 
 請查看FoundryVTT提供的[官方教學](https://foundryvtt.com/article/tutorial/)

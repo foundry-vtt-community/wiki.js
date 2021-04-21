@@ -2,7 +2,7 @@
 title: Créer soi même son monde
 description: 
 published: true
-date: 2020-12-26T21:56:36.613Z
+date: 2021-04-21T15:03:04.173Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T20:00:47.976Z

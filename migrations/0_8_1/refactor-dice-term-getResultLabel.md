@@ -2,7 +2,7 @@
 title: Refactor DiceTerm.getResultLabel to be an instance method DiceTerm#getResultLabel allowing for more nuanced formatting of the labeled output.
 description: 
 published: true
-date: 2021-04-14T12:47:13.132Z
+date: 2021-04-21T15:10:05.238Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:47:13.132Z

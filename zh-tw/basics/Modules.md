@@ -2,10 +2,10 @@
 title: Modules
 description: 
 published: true
-date: 2021-04-21T15:59:25.391Z
+date: 2021-04-21T15:11:36.340Z
 tags: 
 editor: markdown
-dateCreated: 2020-09-23T00:22:50.901Z
+dateCreated: 2021-04-21T14:51:27.389Z
 ---
 
 模塊MOD增強或替換了Foundry VTT中的功能。 大多數模塊MOD由一個module.json文件 去描述模塊MOD內容 及 <module name>.js文件構成。 一些模塊MOD還包括`css`和`html`文件。

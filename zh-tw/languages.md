@@ -2,10 +2,10 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-04-21T15:59:25.391Z
+date: 2021-04-21T15:11:20.419Z
 tags: translations, languages, localizations
 editor: markdown
-dateCreated: 2021-02-24T21:22:56.597Z
+dateCreated: 2021-04-21T14:44:20.433Z
 ---
 
 Foundry Virtual Tabletop具有廣泛的國際社區，其核心(自0.7.9版開始)有14種語言以上。 所有翻譯都是由社區中的人提供，很少包含機器翻譯。 默認情況下，系統為美式英語。

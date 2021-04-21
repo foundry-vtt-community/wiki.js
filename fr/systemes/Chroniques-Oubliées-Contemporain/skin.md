@@ -2,7 +2,7 @@
 title: CoC ou CoCth
 description: Choisir la skin de sa fiche PJ
 published: true
-date: 2020-12-26T19:24:15.482Z
+date: 2021-04-21T15:02:56.397Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T18:20:06.666Z

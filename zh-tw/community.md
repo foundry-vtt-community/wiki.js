@@ -2,10 +2,10 @@
 title: Community
 description: Information about the FoundryVTT Community
 published: true
-date: 2021-04-21T15:59:25.391Z
+date: 2021-04-21T15:11:08.914Z
 tags: 
 editor: markdown
-dateCreated: 2020-09-23T02:18:46.724Z
+dateCreated: 2021-04-21T14:44:03.501Z
 ---
 
 # 社區

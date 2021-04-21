@@ -2,12 +2,11 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2020-12-26T18:15:02.485Z
+date: 2021-04-21T15:02:27.885Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
 ---
-
 
 Sur cette page nous traiterons de la façon de créer son personnage et comment bien utiliser sa fiche de PJ
 

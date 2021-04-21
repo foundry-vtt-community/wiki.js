@@ -2,7 +2,7 @@
 title: Repository Bling
 description: A quick guide to tricking out your repository readme.
 published: true
-date: 2021-04-17T01:10:16.241Z
+date: 2021-04-21T15:04:27.575Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z

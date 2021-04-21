@@ -2,7 +2,7 @@
 title: Establish universal standard for hook signatures which work symmetrically for all types of Document definitions.
 description: 
 published: true
-date: 2021-04-14T12:44:22.241Z
+date: 2021-04-21T15:10:01.338Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:44:22.241Z

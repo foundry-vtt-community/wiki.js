@@ -2,7 +2,7 @@
 title: Some moved utility functions which cause breaking changes were not documented in the 0.8.0 change-notes.
 description: 
 published: true
-date: 2021-04-14T12:42:17.955Z
+date: 2021-04-21T15:09:57.988Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:42:17.955Z

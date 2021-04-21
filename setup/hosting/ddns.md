@@ -2,7 +2,7 @@
 title: Using Dynamic DNS
 description: 
 published: true
-date: 2021-01-22T03:18:53.720Z
+date: 2021-04-21T15:03:44.410Z
 tags: hosting, dns, ddns, networking
 editor: markdown
 dateCreated: 2021-01-22T03:18:50.280Z
