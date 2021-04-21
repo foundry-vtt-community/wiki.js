@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-04-21T22:39:37.020Z
+date: 2021-04-21T22:49:12.402Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -172,6 +172,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 > You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
 {.is-danger}
+
 <a name="C31" href="#C31">C31.</a> Scroll down to **Boot Volume**.
 
 <a name="C32" href="#C32">C32.</a> Optionally, :ballot_box_with_check:`check` the **Specify a custom boot volume size** option and enter `100` in the **Boot volume size (GB)** box that appears.
@@ -384,6 +385,7 @@ nano /home/ubuntu/.local/share/FoundryVTT/Config/options.json
 ...
 ```
 >Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
+
 <a name="D37" href="#D37">D37.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
 <a name="D38" href="#D38">D38.</a>	Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
