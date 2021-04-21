@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-04-21T22:49:12.402Z
+date: 2021-04-21T23:58:15.838Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -135,13 +135,13 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <a name="C19" href="#C19">C19.</a>	Click the **Change Image** button to select a new OS image.
 
-<a name="C20" href="#C20">C20.</a>	From the pop-out list, choose **Canonical Ubuntu 20.04**.
+<a name="C20" href="#C20">C20.</a>	From the pop-out list, :ballot_box_with_check:`check` **Canonical Ubuntu**. Ensure that the OS Version is **20.04 Minimal**.
 
 <a name="C21" href="#C21">C21.</a>	Click **Select Image**.
 
 <a name="C22" href="#C22">C22.</a>	To change the type of VM to an Always Free Tier VM, click **Change Shape**.
 
-![Change Shape](/images/oracle/image15.webp)
+![Change Shape](/images/oracle/image15b.webp)
 
 <a name="C23" href="#C23">C23.</a>	In the pop-out window, click **Specialty and Legacy**. 
 
@@ -239,7 +239,7 @@ sudo netfilter-persistent save
 <a name="D8" href="#D8">D8.</a>	The instance is now ready to accept connections.
 
 
-## Install nodejs, pm2, and unzip
+## Install nodejs, pm2, nano, and unzip
 > Nodejs is required to launch and run Foundry, and pm2 will be used to manage starting and stopping Foundry. {.is-info}
 
 <a name="D9" href="#D9">D9.</a>	Run the following commands to install nodejs:
@@ -267,7 +267,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 ```
 <a name="D14" href="#D14">D14.</a>	Run the following command to install unzip:
 ```
-sudo apt-get install unzip -y
+sudo apt-get install nano unzip -y
 ```
 <a name="D15" href="#D15">D15.</a>	The software needed to launch and manage Foundry is now successfully installed.
 
