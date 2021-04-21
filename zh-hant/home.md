@@ -12,7 +12,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 
 **注意：** 此Wiki作為有關 **Foundry Virtual Tabletop** 的社區管理信息的資庫庫，並且100％由社區管理和運行的。 我們不以任何方式代表Foundry Gaming,LLC。
 ## Wiki 本地化
-- [正體中文 (Traditional Chinese)](https://foundryvtt.wiki/zh-hang/home)
+- [正體中文 (Traditional Chinese)](https://foundryvtt.wiki/zh-hant/home)
 - [日本語 (Japanese)](https://foundryvtt.wiki/ja/home)
 - [English (English)](https://foundryvtt.wiki/en/home)
 - [Français (French)](https://foundryvtt.wiki/fr/home)
