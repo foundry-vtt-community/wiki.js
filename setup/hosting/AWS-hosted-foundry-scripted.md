@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: false
-date: 2021-04-23T15:53:38.692Z
+date: 2021-04-23T15:56:01.892Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -398,3 +398,7 @@ nano /var/log/user-data.log
 
 If you encounter an error that cannot be fixed by running it again please leave a comment with your error.
 
+To renew the certificate.
+```
+certbot renew
+```
