@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: false
-date: 2021-04-23T15:46:47.196Z
+date: 2021-04-23T15:49:19.357Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -358,7 +358,7 @@ Take the ami for ubuntu, go to ec2 and click on launch instances retrieve the am
 If you don't have a domain in route 53 yet, you should get one now (or move it here, cost for dns record is 50 cent per month. So if you have a Domain named example.com you should input foundry.example.com in the parameters. It will add that record in the hosted zone as an alias (A) record. 
 
 !!IMPORTANT!!
-If you stop and start and ec2 you will get a new public ip address, you can update the A record in the hosted zone with the new IP address.
+If you stop and start and ec2 you will get a new public ip address, you can update the A record in the hosted zone with the new IP address
 
 ## Email Address
 The email address is used to request a certificate on your machine during initial provisioning. The certificate is  self signed with certbot and is valid for 3 months (it is free) and you need to renew it after that period (will show how)
@@ -393,3 +393,4 @@ nano /var/log/user-data.log
 ```
 
 If you encounter an error that cannot be fixed by running it again please leave a comment with your error.
+
