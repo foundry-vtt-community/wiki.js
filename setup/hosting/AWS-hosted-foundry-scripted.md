@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: false
-date: 2021-04-23T15:08:27.919Z
+date: 2021-04-23T15:26:48.487Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -87,15 +87,19 @@ Resources:
               conn.request("GET", url.split('.com')[1])
               res = conn.getresponse()
               data = res.read()
-              s3client.put_object(
+              print(f"if this is shorter than 10000 the download was not completed {len(data)}")
+              if len(data) < 10000:
+                cfnresponse.send(event, context, cfnresponse.FAILED, {}, "CustomResourcePhysicalID")
+              else:
+                s3client.put_object(
                   Bucket=s3bucket,
                   Body=data,
                   Key=file_name
                   )
-              print("it acutally succeeded...")
-              responseData = {}
-              responseData['Location'] = f"Content is in s3 bucket {s3bucket} with name 'foundryvtt.zip' "
-              cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
+                print("it acutally succeeded...")
+                responseData = {}
+                responseData['Location'] = f"Content is in s3 bucket {s3bucket} with name 'foundryvtt.zip' "
+                cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
             elif event['RequestType'] == "Delete":
               s3client.delete_object(
                 Bucket=s3bucket,
@@ -219,20 +223,21 @@ Resources:
           mkdir /tmp/ssm
           cd /tmp/ssm
           export HOME=/home/ssm-user
-          curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
-          sudo dpkg -i session-manager-plugin.deb
-          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-          apt-get install -y nodejs 
-          apt-get install nginx unzip -y
-          rm /etc/nginx/sites-enabled/default
-          service nginx restart      
-          mkdir -p /home/ssm-user/foundry
-          cd /home/ssm-user/foundry
-          sudo apt-get install awscli -y
-          aws s3 cp s3://${TemporaryS3}/foundryvtt.zip ./foundryvtt.zip
-          unzip foundryvtt.zip
-          rm foundryvtt.zip
-          npm install pm2 -g
+          exec > >(tee /var/log/initial-log.log|logger -t user-data -s 2>/dev/console) 2>&1
+            curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+            sudo dpkg -i session-manager-plugin.deb
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            apt-get install -y nodejs 
+            apt-get install nginx unzip -y
+            rm /etc/nginx/sites-enabled/default
+            service nginx restart      
+            mkdir -p /home/ssm-user/foundry
+            cd /home/ssm-user/foundry
+            sudo apt-get install awscli -y
+            aws s3 cp s3://${TemporaryS3}/foundryvtt.zip ./foundryvtt.zip
+            unzip foundryvtt.zip
+            rm foundryvtt.zip
+            npm install pm2 -g
           exec > >(tee /var/log/start.log|logger -t user-data -s 2>/dev/console) 2>&1
             mkdir -p /home/ssm-user/.local/share/FoundryVTT
             pm2 start "node /home/ssm-user/foundry/resources/app/main.js --port=8080" --name "foundry"
@@ -337,7 +342,7 @@ Resources:
           ToPort: 80
       VpcId: !Ref VpcId
 ```
-[template.yml](/development/template.yml)
+Link to the template: [template.yml](/development/scripted-aws-foundry-setup/template.yml)
 
 ## AMI and Instancetype
 
@@ -373,3 +378,9 @@ Following page enter all the parameters you've gathered and decide on a name for
 
 ![parameters.png](/development/parameters.png)
 
+## Troubleshooting.
+
+Even after the stack is completed it will take a few minutes before everything in the script has finished. So be patient for a few minutes. The most likely issue to encounter is that the link for nodejs foundry is not downloaded properly. The stack should then fail. Simply make it again using a fresh DownloadURL.
+
+
+If everything has succeeded and it is not working check the logs on the ec2. You connect to the ec2 as follows. you click on 
