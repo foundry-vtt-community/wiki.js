@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: false
-date: 2021-04-23T09:43:25.124Z
+date: 2021-04-23T15:08:27.919Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -345,7 +345,7 @@ Resources:
 If you are new to AWS you'll be eligible for free tier. Free tier allows you 750 hour of ec2 usage for a specific type per month for the first year using AWS. for most regions that is t2.micro (so that is the default), exception being Stockholm and Bahrain where you should use t3.micro. If you are not eligable for free tier you may want to use another type, for me t3a.micro is cheaper and better. 
 
 ##### AMI
-Take the ami for ubuntu, you will find the right one for your region here: https://cloud-images.ubuntu.com/locator/ec2/
+Take the ami for ubuntu, go to ec2 and click on launch instances retrieve the ami ubuntu 20.04 ![get-ami.png](/development/scripted-aws-foundry-setup/get-ami.png) for 
 
 
 ## Hosted Zone and DomainName
