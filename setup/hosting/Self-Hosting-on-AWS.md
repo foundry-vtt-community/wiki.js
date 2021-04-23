@@ -2,7 +2,7 @@
 title: Self Hosting-on-AWS
 description: 
 published: true
-date: 2021-04-21T14:57:47.929Z
+date: 2021-04-23T01:15:04.492Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:51.723Z
@@ -188,7 +188,7 @@ Click the Attach existing policies directly button.  This will bring up a long l
 
 ## 7. Server Setup
 
-You're now ready to set up your new AWS-hosted Ubuntu server with Foundry.  Again, you can find the generic guide [here](https://foundryvtt.wiki/en/setup/Ubuntu-VM).
+You're now ready to set up your new AWS-hosted Ubuntu server with Foundry.  Again, you can find the generic guide [here](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM).
 
 You'll need the private key you created in order to log in via ssh.  Before you log in, though, you'll need to change the permissions on the keyfile so other users on your computer can't read it.  On Linux/MacOS, you can do so with the following command:
 
