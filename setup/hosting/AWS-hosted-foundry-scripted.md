@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: false
-date: 2021-04-23T16:10:27.081Z
+date: 2021-04-23T16:11:22.242Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -10,7 +10,7 @@ dateCreated: 2021-04-23T09:43:25.124Z
 
 # Create a foundry server on AWS
 
-Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/en/setup/hosting/Ubuntu-VM) I scripted it using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
+Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/en/setup/hosting/Ubuntu-VM) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
 
   - EC2 AMI
   - EC2 instancetype
