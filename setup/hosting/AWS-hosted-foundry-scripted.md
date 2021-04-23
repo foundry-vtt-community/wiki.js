@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: false
-date: 2021-04-23T15:26:48.487Z
+date: 2021-04-23T15:46:47.196Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -383,4 +383,13 @@ Following page enter all the parameters you've gathered and decide on a name for
 Even after the stack is completed it will take a few minutes before everything in the script has finished. So be patient for a few minutes. The most likely issue to encounter is that the link for nodejs foundry is not downloaded properly. The stack should then fail. Simply make it again using a fresh DownloadURL.
 
 
-If everything has succeeded and it is not working check the logs on the ec2. You connect to the ec2 as follows. you click on 
+If everything has succeeded and it is not working check the logs on the ec2. You connect to the ec2 as follows. you click on the connect button.
+
+Once connected you can look at the logs generated during the setup, they are split up for readability's sake.
+```
+nano /var/log/initial-log.log
+nano /var/log/start.log
+nano /var/log/user-data.log
+```
+
+If you encounter an error that cannot be fixed by running it again please leave a comment with your error.
