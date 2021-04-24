@@ -2,7 +2,7 @@
 title: ４．よくある質問
 description: よくある質問
 published: true
-date: 2021-04-21T16:20:34.578Z
+date: 2021-04-24T14:18:30.706Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T10:43:54.439Z
@@ -39,3 +39,10 @@ dateCreated: 2021-02-06T10:43:54.439Z
 　判定の出目を見たい時は、チャット欄に表示された達成値をクリックすると出目が確認できます（D＆D第5版の有利・不利の出目などは出目が2つとも書かれています）
 ![判定の出目を見たい.jpg](/images/japanese-community/判定の出目を見たい.jpg)
 　”Dice So Nice!”のような3Dダイスが表示されるMODを導入すると、ダイスが転がる様子を見て出目を確認できるようになります。
+ 
+ ### Q.マップを拡大すると画面が真っ暗になる
+　ブラウザの解像度で発生している問題が原因である事が多いです。先ずは、ブラウザのズームを100％以下にしてみましょう。
+![chromeズーム.png](/images/japanese-community/chromeズーム.png)
+chromeの場合は、ブラウザ右上のこの画面にあります。
+![firefoxズーム.png](/images/japanese-community/firefoxズーム.png)
+Firefoxの場合は、この画面からズーム量を弄る事が出来ます。
