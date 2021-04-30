@@ -2,7 +2,7 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-04-30T15:58:57.709Z
+date: 2021-04-30T16:02:04.698Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -66,10 +66,22 @@ Installation is fairly straightforward and can be done in one of two ways.
 3. If Foundry determines that the fetched manifest json has a newer version, it then downloads that manifest's `download` and checks if it is a zip file. If so, it unzips.
 4. If Foundry determines that no new version exists, but that new Remote metadata values exist for the version, Foundry will execute an automatic Sidegrade. The Fields are sidegraded according to the following table:
 
-|Manifest Field | Action Take |
+|Manifest Field | Action Taken |
 --- | --- 
 |title|Overwritten with Remote Manifest Value|
-|data11|data12|data13|
+|description|Overwritten with Remote Manifest Value|
+|author|Overwritten with Remote Manifest Value|
+|authors|Overwritten with Remote Manifest Value|
+|url|Overwritten with Remote Manifest Value|
+|license|Overwritten with Remote Manifest Value|
+|readme|Overwritten with Remote Manifest Value|
+|bugs|Overwritten with Remote Manifest Value|
+|changelog|Overwritten with Remote Manifest Value|
+|system|Overwritten with Remote Manifest Value|
+|download|Overwritten with Remote Manifest Value|
+|manifest|If Package Repository value changed, prompt user to pick a version. If Remote changed, overwrite|
+|minimumCoreVersion|Overwritten with minimum value of Remote and Package Repository|
+|compatibleCoreVersion|Overwritten with maximum value of Remote and Package Repository|
 
 
 # Package Administration
