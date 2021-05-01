@@ -2,7 +2,7 @@
 title: .CORE-SYSTEM
 description: Support pour le Core-system
 published: true
-date: 2021-05-01T10:42:26.721Z
+date: 2021-05-01T10:43:04.055Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:56:23.255Z
@@ -43,5 +43,5 @@ le jeu s'articule donc autour de 4 grandes fonctionnalités (qu'on retrouve quas
 4. - les mondes
 
 ## Les différentes Versions du core Foundry VTT
-Version Stable, Release : 0.7.x : version en release, compatible avec une majorité de systèmes : à privilégier pour jouer
-Version Instable, Alpha/Beta : 0.8.x : actuellement en version alpha/beta :  pour développeur/curieux (plus d'info : https://foundryvtt.wiki/fr/faq/version-08x ) 
+Version **0.7**.x : version en release, compatible avec une majorité de systèmes : à privilégier pour jouer
+Version **0.8**.x : actuellement en version alpha/beta :  pour développeur/curieux (plus d'info : https://foundryvtt.wiki/fr/faq/version-08x ) 
