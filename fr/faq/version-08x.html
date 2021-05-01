@@ -2,7 +2,7 @@
 title: FoundryVTT 0.8.x
 description: Quelques infos sur les changements liés à la branche 0.8
 published: true
-date: 2021-05-01T13:58:50.113Z
+date: 2021-05-01T14:14:27.935Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-02-14T21:54:00.270Z
@@ -84,9 +84,23 @@ dateCreated: 2021-02-14T21:54:00.270Z
         <td>
           <p><strong><u>Quelques éléments apportées par cette version &nbsp;:&nbsp;</u></strong></p>
           <ul>
-            <li>#todo</li>
+            <li>Cette mise à jour redéfinit complètement la façon dont Foundry gère les listes de lecture audio et les sources audio ambiantes sur le canevas, notamment : la définition de la durée des fondus, une interface de contrôle améliorée pour l'audio, l'importation massive d'audio, la possibilité de désactiver temporairement les sources audio ambiantes, une nouvelle façon de définir l'audio ambiant (et aussi l'éclairage ambiant) pour qu'il ne soit actif qu'entre certains niveaux d'obscurité, et une nouvelle API audio beaucoup plus robuste.</li>
+            <li>Le panel audio supporte maintenant les dossiers</li>
+            <li>Les listes de lecture prennent désormais en charge l'importation en masse de fichiers sonores par dossier à partir d'un chemin de répertoire choisi.</li>
+            <li>Les listes de lecture et les documents PlaylistSound permettent désormais aux utilisateurs de définir une description. Cela permet d'annoter les pistes dans vos listes de lecture pour une référence rapide de leur but, par exemple : "Bande sonore de rage barbare, lunatique et violente".</li>
+            <li>Les scènes peuvent désormais désigner une piste spécifique au lieu d'une liste de lecture complète par défaut lorsque cette scène est activée.</li>
+            <li>Les listes de lecture peuvent désormais être filtrées par nom à l'aide du champ de recherche situé en haut de l'onglet de la liste de lecture.</li>
+            <li>Ajout de la prise en charge de M4A (.m4a) et OPUS (.opus) comme types de fichiers audio.</li>
+            <li>Les listes de lecture audio permettent désormais &nbsp;de définir une durée de fondu pour les transitions audio. La durée du fondu peut être configurée au niveau de la liste de lecture, affectant tous les sons de la liste de lecture (par défaut) ou au niveau de chaque piste.</li>
+            <li>Les sources audio d'ambiance peuvent désormais être désactivées en cliquant avec le bouton droit de la souris sur leur icône de contrôle.</li>
+            <li>Les contrôles de la scène de la couche de son ont maintenant un bouton à bascule pour la prévisualisation audio qui permet à un utilisateur GM ou assistant de prévisualiser l'audio ambiant en passant la souris dessus.</li>
+            <li>Les types de murs font désormais la différence entre la restriction de la vue et la restriction du son. Cela permet de créer des murs que le son peut traverser, mais pas la vue - ou vice versa.</li>
+            <li>Un nouveau paramètre de permission a été introduit pour permettre aux joueurs de créer des notes de carte à partir des entrées de journal qu'ils possèdent.</li>
+            <li>Améliorations majeures aux structures de données qui sous-tendent le système de lancer de dés (ajout du lancer de dés asynchrone en vue d'un remplacement total pour la 0.9.x)</li>
+            <li>La nouvelle implémentation de l'analyseur de dés permet d'attacher un texte spécifique aux objets NumericTerm dans une expression de type Roll, par exemple : /r 10 [dégâts de feu] + 2d8 [dégâts de foudre].</li>
+            <li>Le système de dés supporte maintenant les relances récursives qui continuent à relancer jusqu'à ce qu'une condition de résultat soit remplie.</li>
+            <li>Le traqueur de combat offre désormais une nouvelle option contextuelle "Effacer l'initiative" pour les combattants, qui remet leur initiative à l'état non lancé.</li>
           </ul>
-          <p>&nbsp;</p>
         </td>
       </tr>
     </tbody>
