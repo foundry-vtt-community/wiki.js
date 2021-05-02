@@ -2,7 +2,7 @@
 title: Learning API
 description: 
 published: true
-date: 2021-04-21T16:21:48.816Z
+date: 2021-05-02T03:35:12.042Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:07.619Z
@@ -272,4 +272,4 @@ let roll = new Roll("1d20 + @abilities.str.mod + @strangeMacroishBonus", rollDat
   * `game.combat.combatants`: all "Combatant" objects of current combat.
 * distance between 2 tokens: [`canvas.grid.measureDistance(fromToken, toToken, {gridSpaces: True})`](https://foundryvtt.com/api/GridLayer.html#measureDistance)
 
-There are a lot of [other useful snippets](https://foundry-vtt-community.github.io/wiki/API-Snippets/).
+There are a lot of [other useful snippets](https://github.com/VanceCole/macros/tree/master).
