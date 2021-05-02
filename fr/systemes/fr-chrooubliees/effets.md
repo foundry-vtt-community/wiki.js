@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2021-05-02T08:50:41.844Z
+date: 2021-05-02T10:05:11.511Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -49,7 +49,8 @@ Les champs sont :
 
 #### Onglet Durée
 Beaucoup de champs sur cet onglet. Les durées ne sont utiles que si vous avez des modules tiers qui gèrent l'écoulement du temps.
-Si ce n'est pas le cas, le seul champ qu'il faut remplir pour que l'effet puisse être activable est le champ **Début de l'effet** avec une valeur de 0.
+Cela va vous permettre d'avoir des effets avec une durée temporaire.
+Pour les effets permanents, vous pouvez laisser vide.
 
 
 #### Onglet Effets
