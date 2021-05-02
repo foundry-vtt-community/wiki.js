@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2021-04-21T14:59:48.630Z
+date: 2021-05-02T08:52:25.201Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -55,3 +55,6 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 ## 3. Je suis prêt ! Mais euh... je lance comment les dés sur mon ordi ? 
 - [Les tests via la fiche PJ/Rencontres](/fr/systemes/fr-chrooubliees/testdés)
 - [Les tests via les macros systèmes](/fr/systemes/fr-chrooubliees/testmacro)
+
+## 4. Sujets divers
+- [Configurer les effets sur les personnages ou les objets](fr/systemes/fr-chrooubliees/effets)
