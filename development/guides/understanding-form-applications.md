@@ -2,7 +2,7 @@
 title: Understanding FormApplication
 description: 
 published: true
-date: 2021-04-21T16:22:29.733Z
+date: 2021-05-03T17:06:06.703Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-22T16:19:21.040Z
@@ -118,6 +118,83 @@ new MyFormApplication('example').render(true);
   </footer>
 </form>
 ```
+
+# The `options` object.
+All `Application`s including all `FormApplication`s have an `options` object which sets certain parameters for the function of the app.
+
+The following options are available:
+```js
+(From foundry.js)
+
+Application:
+
+ * @param {string} options.baseApplication      A named "base application" which generates an additional hook
+ * @param {number} options.width                The default pixel width for the rendered HTML
+ * @param {number} options.height               The default pixel height for the rendered HTML
+ * @param {number} options.top                  The default offset-top position for the rendered HTML
+ * @param {number} options.left                 The default offset-left position for the rendered HTML
+ * @param {boolean} options.popOut              Whether to display the application as a pop-out container
+ * @param {boolean} options.minimizable         Whether the rendered application can be minimized (popOut only)
+ * @param {boolean} options.resizable           Whether the rendered application can be drag-resized (popOut only)
+ * @param {string} options.id                   The default CSS id to assign to the rendered HTML
+ * @param {Array.<string>} options.classes      An array of CSS string classes to apply to the rendered HTML
+ * @param {string} options.title                A default window title string (popOut only)
+ * @param {string} options.template             The default HTML template path to render for this Application
+ * @param {Array.<string>} options.scrollY      A list of unique CSS selectors which target containers that should
+ *                                              have their vertical scroll positions preserved during a re-render.|
+
+FormApplication: (inherits all the above and adds)
+
+* @returns {Object} options                    The default options for this FormApplication class, see Application
+* @returns {boolean} options.closeOnSubmit     Whether to automatically close the application when it's contained
+*                                              form is submitted. Default is true.
+* @returns {boolean} options.submitOnChange    Whether to automatically submit the contained HTML form when an input
+*                                              or select element is changed. Default is false.
+* @returns {boolean} options.submitOnClose     Whether to automatically submit the contained HTML form when the
+*                                              application window is manually closed. Default is false.
+* @returns {boolean} options.editable          Whether the application form is editable - if true, it's fields will
+*                                              be unlocked and the form can be submitted. If false, all form fields
+*                                              will be disabled and the form cannot be submitted. Default is true.
+```
+
+The `options` object (`this.options` in your code) is created when the `Application` class is instantiated. The `options` are initialized to values found in another object `defaultOptions`.
+
+When you create your application, you may want to provide both *default* settings for all instances of your app to share, and specific settings that a given instance of the app sets.
+
+For `defaultOptions` you will provide an override of the `static get defaultOptions()` getter. Here is an example from `class ActorSheet`:
+
+```js
+  /** @override */
+  static get defaultOptions() {
+    return mergeObject(super.defaultOptions, {
+      height: 720,
+      width: 800,
+      template: "templates/sheets/actor-sheet.html",
+      closeOnSubmit: false,
+      submitOnClose: true,
+      submitOnChange: true,
+      resizable: true,
+      baseApplication: "ActorSheet",
+      dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
+    });
+  }
+```
+
+Notice that this getter is `static` meaning that it belongs to the *class* `ActorSheet` and not to any one instance of an actor sheet. That means that within this getter, you *do not have acess* to any of the data about a given actor! So if for instance you wanted to set the `title` option to the `name` of the actor, you could not do so here.
+
+Rather, you will need to modify `this.options` at some other point. You might do this in your constructor, or elsewhere in your code. But `defaultOptions` is for *defaults* these are the options that all instances of your appliation should share. Common options here would be the Handlebars template, the width/height of the app, and the behaviour of options like `submitOnClose`.
+
+In addition to modifying `this.options`, it is possible to pass options directly to the `FormApplication` constructor from yours. For example:
+
+```js
+constructor(myObject) { // myObject is the object your app modifies, such as an Actor or Item
+  super(myObject, { title: myObject.name });
+	// The rest of your constructor
+}
+```
+Since your application `extends FormApplication` the method `super` calls the constructor for form app, which takes two arguments: `object` (the object your form modifies/displays) and `options`, you can pass any of the options you like to this. The `Application` class will handle creating `this.options`, setting all the options to `defaultOptions` and then setting any values you passed to the `options` argument to the values you gave.
+
+Note also, that if you are creating an application, you can add your own options! All you must do to define a new option, is add it to `defaultOptions` so that it has some initial value.
 
 # 0.7.x vs 0.8.x
 TODO
