@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2021-05-02T10:05:11.511Z
+date: 2021-05-03T13:38:20.176Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -60,10 +60,10 @@ C'est là que vous allez créer toutes les modifications qu'apporte votre effet.
 -	Changer le mode
 		-	Personnalisation
 		-	Multiplier : L'attribut sera multiplié par valeur
-		- Ajouter	: Valeur sera additionné à l'attribut
-		- Baisser : Valeur sera soustrait à l'attribut
-		- Augmenter
-		- Surcharger
+		- Ajouter	: Valeur sera additionné à l'attribut. Si c'est un chiffre c'est une sommme, si c'est un texte ça sera une concaténation. Pour un bonus, utiliser un nombre positif, pour un malus un nombre négatif
+		- Baisser : Remplace par la valeur si elle est inféieure à l'actuelle
+		- Augmenter : Remplace par la valeur si elle est supérieure à l'actuelle
+		- Surcharger : Remplace par la valeur quelle que soit l'actuelle
 - Valeur de l'effet : la valeur utilisée avec le mode
 
 Ce qui a été validé : Utiliser Ajouter +x pour avoir un bonus, Ajouter -x pour avoir un malus.
