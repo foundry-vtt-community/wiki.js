@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-04T20:05:59.643Z
+date: 2021-05-04T20:09:10.650Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -12,9 +12,9 @@ dateCreated: 2020-10-19T09:50:40.490Z
 Pour les détails concernant le système de base de Starfinder (sfrpg) en anglais voir sur le Github de Wildj79 : https://github.com/wildj79/foundryvtt-starfinder  
   
 # Système et modules nécessaires
-* Le module fr-FR-Core Game (traduction de Foundry en français)
-* Le système Starfinder (déjà localisé en français)
-* Le module de compendia français 'Starfinder-fr'
+* Le module **'fr-FR-Core Game'** (traduction de Foundry en français)
+* Le système **'Starfinder'** (déjà localisé en français)
+* Le module de compendia français **'Starfinder-fr'**
   
 Le module Starfinder-fr permet d'importer dans les compendia de votre monde un ensemble d'objets en français disponibles dans les livres de Starfinder.  
 Les items disponibles sont : armes, armures, classes, conditions, équipement,races, sorts, thèmes et modules de visseaux.  
