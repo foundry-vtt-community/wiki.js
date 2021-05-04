@@ -2,7 +2,7 @@
 title: Delta Green
 description: 
 published: true
-date: 2021-05-04T10:50:28.169Z
+date: 2021-05-04T10:53:29.474Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-14T09:13:27.349Z
@@ -35,4 +35,6 @@ Afin de profiter un maximum du système et du thème Delta Green, voici quelques
 
 ## Sources d'informations
 
-- [Delta Green official website](https://shop.arcdream.com/collections/role-playing-games/delta-green?page=1)
+- [Delta Green official website](https://www.delta-green.com/)
+- [Boutique Delta Green](https://shop.arcdream.com/collections/role-playing-games/delta-green?page=1)
+- [Arc Drea Publishing website](https://arcdream.com/home/)
