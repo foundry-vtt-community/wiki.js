@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-04T22:02:06.544Z
+date: 2021-05-04T22:05:39.911Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
