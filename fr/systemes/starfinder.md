@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-04T23:03:32.342Z
+date: 2021-05-04T23:07:02.445Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -20,7 +20,7 @@ Le module **starfinder-fr** permet d'importer dans les compendia de votre monde 
 Les items disponibles sont : armes, armures, classes, conditions, équipement,races, sorts, thèmes et modules de visseaux.  
 Tous les objets de Stafinder n'ont pas été tous créé, le travail de la communauté est en cours.
 
-> **Pour le moment, aucun besoin du module de traduction 'Babele'.**
+> **Pour le moment, aucun besoin du module de traduction Babele.**
 {.is-warning}
 
 ## Installation du module starfinder-fr
