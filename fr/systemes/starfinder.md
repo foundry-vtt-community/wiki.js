@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-04T23:07:57.795Z
+date: 2021-05-04T23:19:49.482Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -17,16 +17,16 @@ Pour les détails concernant le système de base de Starfinder (sfrpg) en anglai
 * Le module de compendia français **starfinder-fr**
   
 Le module **starfinder-fr** permet d'importer dans les compendia de votre monde un ensemble d'objets en français disponibles dans les livres de Starfinder.  
-Les items disponibles sont : armes, armures, classes, conditions, équipement,races, sorts, thèmes et modules de visseaux.  
-Tous les objets de Stafinder n'ont pas été tous créé, le travail de la communauté est en cours.
+Les items disponibles sont : armes, armures, classes, conditions, équipement, races, sorts, thèmes et modules de vaisseaux.  
+Beaucoup d'objets de Stafinder ont été créés et le travail de la communauté continue.
 
-> **Pour le moment, aucun besoin du module de traduction Babele.**
+> **Pour le moment, aucun besoin du module de traduction *Babele*.**
 {.is-warning}
 
 ## Installation du module starfinder-fr
   
 > Installez le module de compendia français pour Starfinder en copiant ce lien dans Foundry VTT :  
-https://github.com/aldarion-jdr/starfinder-fr/raw/main/module.json  
+**https://github.com/aldarion-jdr/starfinder-fr/raw/main/module.json**  
 {.is-success}
 
   
@@ -58,7 +58,7 @@ https://github.com/aldarion-jdr/starfinder-fr/raw/main/module.json
 * DungeonDraft Importer
 
 ## Droits
-Starfinder est publié sous licence OGL, et la politique de Paizo ainsi que celle des traducteurs et éditeurs de leur gamme permettent aux communauté de joueurs d'utiliser leur production en respectant les règles suivantes.
+Starfinder est publié sous licence OGL, et la politique de Paizo ainsi que celle des traducteurs et éditeurs de leur gamme permettent aux communautés de joueurs d'utiliser leur production en respectant les règles suivantes.
 
 ### Déclaration de Paizo
 *This game system definition uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This game system definition is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.*  
