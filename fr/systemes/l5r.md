@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-05-02T16:25:49.040Z
+date: 2021-05-04T10:48:17.130Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -20,6 +20,7 @@ dateCreated: 2020-12-05T05:17:17.707Z
 - Developpement : [Mandar](https://foundryvtt.com/community/mandar) & [Vlyan](https://foundryvtt.com/community/vlyan)
 - Contribution: [Sasmira](https://foundryvtt.com/community/sasmira)
 - Compendiums : Carter & [Hrunh](https://foundryvtt.com/community/hrunh)
+- Wiki : [Hrunh](https://foundryvtt.com/community/hrunh)
 
 Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
 
