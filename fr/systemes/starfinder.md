@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-04T20:09:10.650Z
+date: 2021-05-04T22:02:06.544Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -12,20 +12,21 @@ dateCreated: 2020-10-19T09:50:40.490Z
 Pour les détails concernant le système de base de Starfinder (sfrpg) en anglais voir sur le Github de Wildj79 : https://github.com/wildj79/foundryvtt-starfinder  
   
 # Système et modules nécessaires
-* Le module **'fr-FR-Core Game'** (traduction de Foundry en français)
-* Le système **'Starfinder'** (déjà localisé en français)
-* Le module de compendia français **'Starfinder-fr'**
+* Le module **fr-FR-Core Game** (traduction de Foundry en français)
+* Le système **Starfinder** (déjà localisé en français)
+* Le module de compendia français **starfinder-fr'*
   
-Le module Starfinder-fr permet d'importer dans les compendia de votre monde un ensemble d'objets en français disponibles dans les livres de Starfinder.  
+Le module **starfinder-fr** permet d'importer dans les compendia de votre monde un ensemble d'objets en français disponibles dans les livres de Starfinder.  
 Les items disponibles sont : armes, armures, classes, conditions, équipement,races, sorts, thèmes et modules de visseaux.  
 Tous les objets de Stafinder n'ont pas été tous créé, le travail de la communauté est en cours.
 
 > **Pour le moment, aucun besoin du module de traduction 'Babele'.**
 {.is-warning}
 
-## Installation du module Starfinder-fr
+## Installation du module starfinder-fr
   
-> Installez le module de compendia français pour Starfinder en copiant ce lien : https://github.com/aldarion-jdr/Starfinder-fr/raw/main/module.json  
+> Installez le module de compendia français pour Starfinder en copiant ce lien dans Foundry VTT :  
+https://github.com/aldarion-jdr/Starfinder-fr/raw/main/module.json  
 {.is-success}
 
   
@@ -57,10 +58,11 @@ Tous les objets de Stafinder n'ont pas été tous créé, le travail de la commu
 * DungeonDraft Importer
 
 ## Droits
-Starfinder est publié sous licence OGL.
+Starfinder est publié sous licence OGL, et la politique de Paizo ainsi que celle des traducteurs et éditeurs de leur gamme permettent aux communauté de joueurs d'utiliser leur production en respectant les règles suivantes.
 
 ### Déclaration de Paizo
-*This game system definition uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This game system definition is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.*
+*This game system definition uses trademarks and/or copyrights owned by Paizo Inc., which are used under Paizo's Community Use Policy. We are expressly prohibited from charging you to use or access this content. This game system definition is not published, endorsed, or specifically approved by Paizo Inc. For more information about Paizo's Community Use Policy, please visit paizo.com/communityuse. For more information about Paizo Inc. and Paizo products, please visit paizo.com.*  
+
 ### Conditions d'utilisation de Black Book Éditions
 #### Extrait
 *Chez Black Book Editions, nous apprécions et accordons toute notre estime aux contributions que peuvent apporter les membres de cette communauté.*
@@ -69,6 +71,7 @@ Starfinder est publié sous licence OGL.
 
 *Les lois sur les droits d’auteur et les marques déposées protègent nos propriétés, mais elles vous empêchent également d’utiliser nos propriétés intellectuelles dans la plupart des cas. Ce qui veut dire que vous n’avez pas le droit d’utiliser nos logos, nos images ou d’autres contenus soumis au droit d’auteur, à un dépôt de marque ou à une cession de licence sans notre accord. Ces conditions d’utilisation sont donc faites pour permettre d’utiliser une partie de notre propriété intellectuelle sous certaines conditions.*
 
-*Ces conditions vous autorisent à faire un usage non commercial du matériel lié à Black Book Editions (et aux licences Black Book Editions), matériel spécifiquement identifié dans la section Permissions de cette politique sous le terme « matériel Black Book Editions. »*
+*Ces conditions vous autorisent à faire un usage non commercial du matériel lié à Black Book Editions (et aux licences Black Book Editions), matériel spécifiquement identifié dans la section Permissions de cette politique sous le terme « matériel Black Book Editions. »*  
+
 #### Lien vers la déclaration complète
 https://www.black-book-editions.fr/texte.php?id=6
