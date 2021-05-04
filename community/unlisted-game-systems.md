@@ -2,7 +2,7 @@
 title: Unlisted Game Systems
 description: 
 published: true
-date: 2021-04-21T16:19:46.952Z
+date: 2021-05-04T19:29:31.955Z
 tags: game systems
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -110,7 +110,21 @@ A Pen and Paper Roleplaying Game Set in the World of Pokemon. For a full list of
 To install, just import the system.json file to your FoundryVTT installation.
 
 ---	
+## Shadowrun 6
+* **Author**: Stefan Prelle (Discord: taranion#5388) & Anja Prelle ([Patreon](https://www.patreon.com/rpgframework))
+* **Version**: 0.1.1
+* **Foundry VTT Compatibility**: 0.8.0+
+* **Translation Support**: German, English
+### Link(s) to Game System
+* https://bitbucket.org/rpgframework-cloud/shadowrun6-eden/
+* https://bitbucket.org/rpgframework-cloud/shadowrun6-eden/downloads/system-staging.json
+### Description
+In early development. Allows managing attributes, skills, qualities and track damage and edge - and of course doing rolls. No gear management or anything else nifty yet.
+Allows importing the special Foundry export format of Genesis.
 
+Discuss in Discord: https://discord.gg/BSsFKjabqB
+
+---
 ## Star Wars FFG
 
 * **Author**: Blaze#0294 and Jaxxa#1375 on Discord
