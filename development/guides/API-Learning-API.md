@@ -2,11 +2,18 @@
 title: Learning API
 description: 
 published: true
-date: 2021-05-02T03:35:12.042Z
+date: 2021-05-05T13:25:38.805Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:07.619Z
 ---
+
+> ### This Page has been Unpublished
+> In an effort to clean up some older articles this page was unpublished for the following reasons:
+> - This page is a hodge podge of advice and practical snippets that have not been updated since the wiki migrated to wikijs.
+>
+> To be considered for re-publishing, please address the issue above and reach out to the Wiki admins on either the Foundry VTT or League of Foundry Devs discord.
+{.is-danger}
 
 Foundry VTT API can be used to write [script macros](../Macros) (that can be used from hotbar or from chat) or to write your own [extension modules](../Community-Modules) or even your own [system implementations](../System-Development-for-Beginners).
 
