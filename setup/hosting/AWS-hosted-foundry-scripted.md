@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-05T18:00:59.403Z
+date: 2021-05-05T18:03:20.358Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -12,7 +12,7 @@ dateCreated: 2021-04-23T09:43:25.124Z
 
 
 Following this page you will create a server on AWS with an API Gateway to manage starting and stopping. If you don't know what an API is: In this case it is simply a URL you use to start and stop your machine and to add the IP adresses for you and your friends to your storage (s3) and to your server (so only you and your friends can use it)
-As a result if you have a domain registered in AWS Route53 named myexample.com. You can create a server called https://foundry.myexample.com and your API will be manage-https://foundry.myexample.com/start, https://manage-foundry.myexample.com/stop, https://manage-foundry.myexample.com/register (for /register you'll get instructions as you call the URL) 
+As a result if you have a domain registered in AWS Route53 named myexample.com. You can create a server called https://foundry.myexample.com and your API will be manage-https://foundry.myexample.com/start, https://manage-foundry.myexample.com/stop, https://manage-foundry.myexample.com/register (for /register you'll get instructions as you call the URL). Sometimes the start will take a bit longer, if you get a page saying 502 then just wait for 5 seconds and try eiter /start or foundry again.
 
 
 
