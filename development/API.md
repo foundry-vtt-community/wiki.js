@@ -1,12 +1,19 @@
 ---
 title: API
 description: 
-published: true
-date: 2021-04-21T17:17:07.006Z
+published: false
+date: 2021-05-05T13:27:42.953Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
 ---
+
+> ### This Page has been Unpublished
+> In an effort to clean up some older articles this page was unpublished for the following reasons:
+> - This page is useless and should be replaced with a redirect to the offical API, but wikijs does not seem to make that easy.
+>
+> To be considered for re-publishing, please address the issue above and reach out to the Wiki admins on either the Foundry VTT or League of Foundry Devs discord.
+{.is-danger}
 
 # Official API
 Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/).
