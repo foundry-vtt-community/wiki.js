@@ -2,13 +2,14 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-04T23:19:49.482Z
+date: 2021-05-05T09:02:49.858Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
 ---
 
-# Starfinder
+![starfinder-logo.png](/starfinder/starfinder-logo.png)  
+  
 Pour les détails concernant le système de base de Starfinder (sfrpg) en anglais voir sur le Github de Wildj79 : https://github.com/wildj79/foundryvtt-starfinder  
   
 # Système et modules nécessaires
