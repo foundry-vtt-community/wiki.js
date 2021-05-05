@@ -2,7 +2,7 @@
 title: Importing a .JS File in Foundry VTT
 description: 
 published: false
-date: 2021-05-05T13:24:19.409Z
+date: 2021-05-05T13:24:33.762Z
 tags: guide, javascript, es6, module
 editor: markdown
 dateCreated: 2020-09-23T00:34:13.915Z
@@ -13,6 +13,7 @@ dateCreated: 2020-09-23T00:34:13.915Z
 > - The technique laid out in this guide does not detail the intricacies of including third-party script libraries in your Package.
 >
 > To be considered for re-publishing, please address the issue above and reach out to the Wiki admins on either the Foundry VTT or League of Foundry Devs discord.
+{.is-danger}
 
 Given the vast amount of information out there about ES6 modules it's easy for someone new to JS to get lost trying to figure out how to carry out the simple task of importing a `.js` library into Foundry VTT. Because the process is simple it is something often overlooked in installation explanations.
 
