@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-05T09:02:49.858Z
+date: 2021-05-05T09:21:21.484Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -35,28 +35,28 @@ Beaucoup d'objets de Stafinder ont été créés et le travail de la communauté
   
 ### Les plus utiles
 * fr-FR-Core Game
-* Pings
-* Token Action HUD
-* Starfinder Statblock Parser
-* Starfinder Populator
-* Dark UI for SFRPG
-* Drag Upload
-* Permission Viewer
+* [Pings](https://foundryvtt.com/packages/pings)
+* [Token Action HUD](https://foundryvtt.com/packages/token-action-hud)
+* [Starfinder Statblock Parser](https://foundryvtt.com/packages/sfrpg-statblock-parser)
+* [Starfinder Populator](https://foundryvtt.com/packages/foundryvtt-sfrpg-populator)
+* [Dark UI for SFRPG](https://foundryvtt.com/packages/sfrpg-modern-ui)
+* [Drag Upload](https://foundryvtt.com/packages/dragupload)
+* [Permission Viewer](https://foundryvtt.com/packages/permission_viewer)
 
 ### Les optionnels
-* Grid Scale Menu
-* GM Screen
-* LibWrapper
-* NotYourTurn!
-* Simple Dice Roller
-* One Journal
-* PDFoundry
-* Dice So Nice!
-* Popout!
-* Search Anywhere
-* SoundBoard by Blitz
-* FX Master
-* DungeonDraft Importer
+* [Grid Scaler](https://foundryvtt.com/packages/grid_scaler)
+* [GM Screen](https://foundryvtt.com/packages/gm-screen)
+* [LibWrapper](https://foundryvtt.com/packages/lib-wrapper)
+* [NotYourTurn!](https://foundryvtt.com/packages/NotYourTurn)
+* [Simple Dice Roller](https://foundryvtt.com/packages/simple-dice-roller)
+* [OneJournal](https://foundryvtt.com/packages/one-journal)
+* [PDFoundry](https://foundryvtt.com/packages/pdfoundry)
+* [Dice So Nice!](https://foundryvtt.com/packages/dice-so-nice)
+* [Popout!](https://foundryvtt.com/packages/popout)
+* [Search Anywhere](https://foundryvtt.com/packages/searchanywhere)
+* [SoundBoard by Blitz](https://foundryvtt.com/packages/SoundBoard)
+* [FXMaster](https://foundryvtt.com/packages/fxmaster)
+* [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import)
 
 ## Droits
 Starfinder est publié sous licence OGL, et la politique de Paizo ainsi que celle des traducteurs et éditeurs de leur gamme permettent aux communautés de joueurs d'utiliser leur production en respectant les règles suivantes.
