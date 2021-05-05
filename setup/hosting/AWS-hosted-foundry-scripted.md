@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-05T17:42:34.207Z
+date: 2021-05-05T17:50:12.018Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -11,6 +11,7 @@ dateCreated: 2021-04-23T09:43:25.124Z
 # Create a foundry server on AWS
 
 
+Following this page you will create a server on AWS with an API Gateway to manage starting and stopping. If you don't know what an API is: In this case it is simply a URL you use to start and stop your machine and to add the IP adresses for you and your friends to your storage (s3) and to your server (so only you and your friends can use it)
 Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/en/setup/hosting/Ubuntu-VM) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
 
   - EC2 AMI
@@ -79,9 +80,11 @@ nano /var/log/user-data.log
 If you encounter an error that cannot be fixed by running it again please leave a comment with your error on my github: https://github.com/dirkvandooren/AWS_FoundryVTT/issues 
 
 To renew the certificate.
+make the security group for your ec2 temporarily reachable for HTTP and HTTPS by adding an entry for HTTP and one for HTTPS to your security group allowing 0.0.0.0/0 
 ```
 certbot renew
 ```
+After it is renewed you should remove those entries
 
 small bug to be fixed:
 if you restart the server your user "ssm-user" does not have the proper permissions to start foundry. if you login using the connect button and run these three lines your setup will be fixed and it will not happen again:
