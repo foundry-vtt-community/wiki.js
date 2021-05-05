@@ -2,7 +2,7 @@
 title: Learning API
 description: 
 published: true
-date: 2021-05-05T13:25:38.805Z
+date: 2021-05-05T13:26:24.766Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:07.619Z
@@ -11,6 +11,7 @@ dateCreated: 2020-09-23T00:34:07.619Z
 > ### This Page has been Unpublished
 > In an effort to clean up some older articles this page was unpublished for the following reasons:
 > - This page is a hodge podge of advice and practical snippets that have not been updated since the wiki migrated to wikijs.
+> - The page does not match its title, which leads me to believe it is some techniques for learning how to read and interact with the Foundry Core API.
 >
 > To be considered for re-publishing, please address the issue above and reach out to the Wiki admins on either the Foundry VTT or League of Foundry Devs discord.
 {.is-danger}
