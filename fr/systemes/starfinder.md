@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-05T09:21:21.484Z
+date: 2021-05-05T09:32:57.954Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -29,7 +29,13 @@ Beaucoup d'objets de Stafinder ont été créés et le travail de la communauté
 > Installez le module de compendia français pour Starfinder en copiant ce lien dans Foundry VTT :  
 **https://github.com/aldarion-jdr/starfinder-fr/raw/main/module.json**  
 {.is-success}
-
+  
+## Github et développement du module
+Adresse du Github du module:  
+https://github.com/aldarion-jdr/starfinder-fr
+  
+Signaler une erreur :  
+https://github.com/aldarion-jdr/starfinder-fr/issues
   
 ## Modules conseillés par la communauté  
   
