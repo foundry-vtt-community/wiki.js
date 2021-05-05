@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-05T17:50:12.018Z
+date: 2021-05-05T18:00:19.821Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -12,6 +12,10 @@ dateCreated: 2021-04-23T09:43:25.124Z
 
 
 Following this page you will create a server on AWS with an API Gateway to manage starting and stopping. If you don't know what an API is: In this case it is simply a URL you use to start and stop your machine and to add the IP adresses for you and your friends to your storage (s3) and to your server (so only you and your friends can use it)
+As a result if you have a domain registered in AWS Route53 named myexample.com. You can create a server called https://foundry.myexample.com and your API will be manage-https://foundry.myexample.com/start, https://manage-foundry.myexample.com/stop, https://manage-foundry.myexample.com/register (for /register you'll get instructions as you call the URL) 
+
+
+
 Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/en/setup/hosting/Ubuntu-VM) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
 
   - EC2 AMI
@@ -21,6 +25,7 @@ Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/set
   - Email (for the certificate) 
   - The foundry installation link
   - VPC Id
+  - AdminIPs (this will be used to only allow your API getting called from these adresses)
   
  If you know how and where to get these skip to the deployment step.
  Here is the script: [template.yml](/development/scripted-aws-foundry-setup/template.yml)
@@ -51,6 +56,10 @@ The link is only valid for 5 minutes, get this parameter last. You'll find it in
 ## VPC ID
 Every AWS account has a VPC in it to start, look it up under the VPC Service.
 ![vpcid.png](/development/vpcid.png)
+
+## AdminIPs
+this is your IPv4 address. it will be in a format of 123.127.89.0 If you want to add more you can use a comma and put them together (no spaces):
+123.127.89.0,53.127.89.0 you can find it on sites such as https://www.whatismyip.com/
 
 ## Deploying the script
 Go to the cloudformation service. In the top right corner click on Create Stack and select the option "with new resources". Then click the button "Choose file" and upload the template. ![upload-file.png](/development/upload-file.png)
