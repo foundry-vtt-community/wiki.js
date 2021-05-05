@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-05T18:00:19.821Z
+date: 2021-05-05T18:00:59.403Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -58,7 +58,7 @@ Every AWS account has a VPC in it to start, look it up under the VPC Service.
 ![vpcid.png](/development/vpcid.png)
 
 ## AdminIPs
-this is your IPv4 address. it will be in a format of 123.127.89.0 If you want to add more you can use a comma and put them together (no spaces):
+this is your IPv4 address, your api will only allow calls made from this these IPs. It will be in a format of 123.127.89.0 If you want to add more you can use a comma and put them together (no spaces):
 123.127.89.0,53.127.89.0 you can find it on sites such as https://www.whatismyip.com/
 
 ## Deploying the script
