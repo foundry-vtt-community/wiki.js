@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T02:32:34.560Z
+date: 2021-05-06T02:34:14.352Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -305,7 +305,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 <details><summary>Home network server</summary>
   
-  <a name="C12b" href="#C12b">C12b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name:
+  <a name="C12b" href="#C12b">C12b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name and server internal IP address:
   
   ```
   # This replaces the existing content in /etc/caddy/Caddyfile
