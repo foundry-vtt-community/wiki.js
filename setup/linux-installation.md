@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T03:09:13.501Z
+date: 2021-05-06T03:09:51.903Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -250,7 +250,7 @@ rm ~/foundry/foundryvtt.zip
 ```
 mkdir -p ~/foundryuserdata
 ```
-<a name="C6">C6.</a>	Test that Foundry runs successfully by running the following command. Replace the `<user>` portion with the name of the user currently being used.
+<a id="C6">C6.</a>	Test that Foundry runs successfully by running the following command. Replace the `<user>` portion with the name of the user currently being used.
 ```
 cd ~
 node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
