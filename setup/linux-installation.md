@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T02:56:37.538Z
+date: 2021-05-06T03:06:45.784Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -270,24 +270,41 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 <a name="C9" href="#C9">C9.</a>	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as below, and a blinking cursor at `<user>@<server>:~$`.
 
+<a name="C10" href="#C10">C10.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command. Be sure to replace `<user>` with the name of the actual user. There are two replacements:
+```
+pm2 start "node /home/<user>/foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
+```
+<a name="C11" href="#C11">C11.</a>	Double check pm2 has launched Foundry correctly:
+```
+pm2 list
+```
+![pm2 List](/images/oracle/image1.webp)
+>If the **status** column does not show <span style="color:green">online</span> then review step [C10](#C10) above before continuing. {.is-warning}
+
+<a name="C12" href="#C12">C12.</a> Save the current pm2 configuration so that it can manage and restart Foundry as necessary:
+
+```
+pm2 save
+```
+
 
 ## Set up the Caddy Reverse Proxy
 
 > This section assumes that you have a valid domain name with an A record pointing to your `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns) if you are hosting on a home network) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
 
 
-<a name="C10" href="#C10">C10.</a> Run the following command to begin editing the Caddyfile:
+<a name="C13" href="#C13">C13.</a> Run the following command to begin editing the Caddyfile:
   
   ```
   sudo nano /etc/caddy/Caddyfile
   ```
   
-<a name="C11" href="#C11">C11.</a> Follow the steps below according to your relevant setup:
+<a name="C14" href="#C14">C14.</a> Follow the steps below according to your relevant setup:
 
 <details><summary>Cloud-hosted server ▼ </summary>
 
 
-  <a name="C12a" href="#C12a">C12a.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` portion with your actual domain name:
+  <a name="C15a" href="#C15a">C15a.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` portion with your actual domain name:
   
   ```
   # This replaces the existing content in /etc/caddy/Caddyfile
@@ -307,7 +324,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 <details><summary>Home network server ▼ </summary>
   
-  <a name="C12b" href="#C12b">C12b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name and server internal IP address:
+  <a name="C15b" href="#C15b">C15b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name and server internal IP address:
   
   ```
   # This replaces the existing content in /etc/caddy/Caddyfile
@@ -333,19 +350,19 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
   ```
 </details>
 
-<a name="C13" href="#C13">C13.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
+<a name="C16" href="#C16">C16.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-<a name="C14" href="#C14">C14.</a>	Restart Caddy to pick up the new settings by:
+<a name="C17" href="#C17">C17.</a>	Restart Caddy to pick up the new settings by:
 ```
 sudo service caddy restart
 ```
 >Caddy handles all forwarding to HTTPS as well as the encryption certificates. No further configuration is needed to get those working. {.is-info}
 
-<a name="C15" href="#C15">C15.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
+<a name="C18" href="#C18">C18.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
 ```
 nano ~/foundryuserdata/Config/options.json
 ```
-<a name="C16" href="#C16">C16.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are. The `hostname` parameter will tell Foundry to use a hostname in the Internet Invite Link. Replace `<your.domain.name>` with your actual domain name.
+<a name="C19" href="#C19">C19.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are. The `hostname` parameter will tell Foundry to use a hostname in the Internet Invite Link. Replace `<your.domain.name>` with your actual domain name.
 ```
 ...
 "proxyPort": 443,
@@ -357,9 +374,9 @@ nano ~/foundryuserdata/Config/options.json
 ```
 >Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
 
-<a name="C17" href="#C17">C17.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
+<a name="C20" href="#C20">C20.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-<a name="C18" href="#C18">C18.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+<a name="C21" href="#C21">C21.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 >Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
 
@@ -369,7 +386,7 @@ nano ~/foundryuserdata/Config/options.json
 
 # (Optional) D. Accessing Userdata Files with Cyberduck
 ## Objective
-At the end of this optional section, you will be able to directly access the files in your userdata directory with Cybderuck. This is useful for moving, deleting, or bulk uploading assets for Foundry. 
+At the end of this optional section, you will be able to directly access the files in your userdata directory with Cyberduck. This is useful for moving, deleting, or bulk uploading assets for Foundry. 
 
 ## Install and Setup Cyberduck
 
