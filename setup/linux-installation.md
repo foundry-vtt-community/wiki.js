@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T02:05:00.280Z
+date: 2021-05-06T02:07:15.421Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -18,7 +18,7 @@ This guide provides easy to follow steps for installing and using Foundry as a h
 At the end of this guide you will have:
 
 * Foundry server running 24/7 behind a reverse proxy providing HTTPS, including automatic restarts
-* (Optional) A domain name pointing to the server
+* A domain name pointing to the server
 * (Optional) Cyberduck, a file transfer program, configured to manage user data of the Foundry server
 
 ## Important Information and Requirements
@@ -355,7 +355,7 @@ nano ~/foundryuserdata/Config/options.json
 
 <a name="C17" href="#C17">C17.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-<a name="C18" href="#C18">C18.</a>	Test your site by opening a new browser tab to your domain name or server's internal IP address. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+<a name="C18" href="#C18">C18.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 >Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
 
