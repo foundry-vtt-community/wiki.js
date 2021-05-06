@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T00:50:16.973Z
+date: 2021-05-06T01:09:51.436Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -17,8 +17,8 @@ This guide provides easy to follow steps for installing and using Foundry as a h
 
 At the end of this guide you will have:
 
-* Foundry server running 24/7 including automatic restarts
-* (Optional) A domain name pointing to the server with HTTPS
+* Foundry server running 24/7 behind a reverse proxy providing HTTPS, including automatic restarts
+* (Optional) A domain name pointing to the server
 * (Optional) Cyberduck, a file transfer program, configured to manage user data of the Foundry server
 
 ## Important Information and Requirements
@@ -216,11 +216,56 @@ sudo npm install pm2 -g
 ```
 pm2 startup
 ```
->***Continued*** 
+>***REQUIRED STEP*** 
 >You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly. {.is-info}
 
 # C. Foundry and Reverse Proxy Setup
+## Objective
+At the end of this section you will have a functional installation of Foundry using HTTPS and Caddy as a reverse proxy. Foundry will be set to restart any time the server is restarted, managed by pm2.
 
+## Download, Install, and Test Foundry
+
+<a name="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
+
+<a name="C2" href="#C2">C2.</a>	Click on the gear icon (:link:) next to the **Node.js** latest version to copy a download url. 
+
+> Be sure to click the gear icon (:link:) and not the link itself to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
+
+<a name="C3" href="#C3">C3.</a>	Run the following commands, pasting the download url where you see `<download url>`. In most terminals, you can right click to paste the copied url.
+```
+mkdir ~/foundry
+wget -O ~/foundry/foundryvtt.zip "<download url>"
+```
+> Make sure to include the quote symbols before and after the `<download url>` or the file may not download properly. {.is-info}
+
+<a name="C4" href="#C4">C4.</a>	Once downloaded, extract Foundry and cleanup the zip file:
+```
+unzip ~/foundry/foundryvtt.zip -d ~/foundry/
+rm ~/foundry/foundryvtt.zip
+```
+<a name="C5" href="#C5">C5.</a>	Create the User Data folder for Foundry to store data:
+```
+mkdir -p ~/foundryuserdata
+```
+<a name="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command:
+```
+cd ~
+node foundry/resources/app/main.js --userData=~/foundryuserdata
+```
+<a name="C7" href="#C7">C7.</a>	You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
+
+![Foundry Launched](/images/oracle/image29.webp)
+
+<a name="C8" href="#C8">C8.</a>	Test the connection to Foundry by opening `http://IP address>:30000` in a new browser tab, where `<IP address>` is the IP address of the server. 
+
+>If you are setting up a server on your local network, use the local/internal IP address of the server. If you are setting up a server in the cloud, use the public IP address of the server. {.is-info}
+
+>You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the your linux distribution or cloud provider has a firewall enabled that is blocking port 30000, or an incorrect IP address was used. Check the IP address carefully and otherwise review the documentation for your linux distribution or cloud provider for how to open port 30000 in the firewall. {.is-warning}
+
+<a name="C9" href="#C9">C9.</a>	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as below, and a blinking cursor at `<user>@<server>:~$`.
+
+
+## Set up the Caddy Reverse Proxy
 
 
 
