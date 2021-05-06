@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-04-30T17:22:11.730Z
+date: 2021-05-06T03:00:05.189Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -292,7 +292,7 @@ rm ~/foundry/foundryvtt.zip
 ```
 <a name="D20" href="#D20">D20.</a>	Create the User Data folder for Foundry to store data:
 ```
-mkdir -p ~/.local/share/FoundryVTT
+mkdir -p ~/foundryuserdata
 ```
 <a name="D21" href="#D21">D21.</a>	Test that Foundry runs successfully by running the following command:
 ```
@@ -312,7 +312,7 @@ node /home/ubuntu/foundry/resources/app/main.js
 
 <a name="D25" href="#D25">D25.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
 ```
-pm2 start "node /home/ubuntu/foundry/resources/app/main.js" --name foundry
+pm2 start "node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryuserdata" --name foundry
 ```
 <a name="D26" href="#D26">D26.</a>	Double check pm2 has launched Foundry correctly:
 ```
