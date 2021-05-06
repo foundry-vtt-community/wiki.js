@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T02:28:42.125Z
+date: 2021-05-06T02:32:06.571Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -260,7 +260,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 >If you do not see the above output ending with `Server started and listening on port 30000`, review step [C6](#C6) to ensure you replaced `<user>` with the current user. {.is-info}
 
-<a name="C8" href="#C8">C8.</a>	Test the connection to Foundry by opening `http://IP address>:30000` in a new browser tab, where `<IP address>` is the IP address of the server. 
+<a name="C8" href="#C8">C8.</a>	Test the connection to Foundry by opening `http://<IP address>:30000` in a new browser tab, where `<IP address>` is the either the external IP address of your cloud server or server internal IP address in your home network. 
 
 >If you are setting up a server on your local network, use the local/internal IP address of the server. If you are setting up a server in the cloud, use the public IP address of the server. {.is-info}
 
