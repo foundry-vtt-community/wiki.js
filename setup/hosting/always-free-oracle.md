@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-05-06T03:13:31.022Z
+date: 2021-05-06T03:15:22.450Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -109,7 +109,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ![Ingress Rules](/images/oracle/image25.webp)
 
 
->Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D.38](#reverse-proxy-and-https-configuration-with-caddy) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
+>Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D38](#D38) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
 <a id="C14" href="#C14">C14.</a>  Click **Add Ingress Rules**.
 
@@ -319,7 +319,7 @@ pm2 start "node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubun
 pm2 list
 ```
 ![pm2 List](/images/oracle/image1.webp)
->If the **status** column does not show <span style="color:green">online</span> then review step D25 above before continuing. {.is-warning}
+>If the **status** column does not show <span style="color:green">online</span> then review step [D25](#D25) above before continuing. {.is-warning}
 
 <a id="D27" href="#D27">D27.</a>  Check to see if Foundry is running correctly by again connecting a browser tab to `http://<public IP address>:30000`. 
 
