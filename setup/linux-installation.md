@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T01:09:51.436Z
+date: 2021-05-06T02:05:00.280Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -50,7 +50,7 @@ a. CentOS
 b. Red Hat Linux
 c. Fedora
 
-Any distrition that uses the `apt` or `yum` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
+Any distrition that uses the `apt` or `dnf` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
 
 >This guide requires Debian 11 or CentOS 8 based distributions or higher. Using lower versions may not function properly. {.is-info}
 
@@ -96,6 +96,7 @@ usermod -aG sudo foundry
   
 ```
 adduser foundry
+passwd foundry
 usermod -aG wheel foundry
 
 ```
@@ -123,7 +124,7 @@ We will now install the necessary software to run and manage Foundry behind a re
 
 >To continue, you must be using a non-root user with `sudo` access. If that is not the case, please review the steps in [User Setup](#user-setup). {.is-info} 
 
-<a name="B5" href="#B5">B5.</a> First, let's update the system to make sure we have everything as up-to-date as possible:
+<a name="B5" href="#B5">B5.</a> First, let's update the system to make sure we have everything as up-to-date as possible. This may take a few minutes.
 
 <details><summary>Ubuntu/Debian/Raspberry Pi OS</summary>
   
@@ -176,8 +177,8 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 <details><summary>CentOS/Red Hat/Fedora</summary>
   
 ```
-dnf install 'dnf-command(copr)'
-dnf copr enable @caddy/caddy
+sudo dnf install 'dnf-command(copr)'
+sudo dnf copr enable @caddy/caddy -y
 ```
 </details>
 
@@ -194,7 +195,7 @@ sudo apt install nodejs caddy unzip nano -y
 <details><summary>CentOS/Red Hat/Fedora</summary>
   
 ```
-dnf install nodejs caddy unzip nano -y
+sudo dnf install nodejs caddy unzip nano -y
 ```
 </details>
 
@@ -247,14 +248,17 @@ rm ~/foundry/foundryvtt.zip
 ```
 mkdir -p ~/foundryuserdata
 ```
-<a name="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command:
+<a name="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command. Replace the `<user>` portion with the name of the user currently being used.
 ```
 cd ~
-node foundry/resources/app/main.js --userData=~/foundryuserdata
+node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 ```
+
 <a name="C7" href="#C7">C7.</a>	You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
 
 ![Foundry Launched](/images/oracle/image29.webp)
+
+>If you do not see the above output ending with `Server started and listening on port 30000`, review step [C6](#C6) to ensure you replaced `<user>` with the current user. {.is-info}
 
 <a name="C8" href="#C8">C8.</a>	Test the connection to Foundry by opening `http://IP address>:30000` in a new browser tab, where `<IP address>` is the IP address of the server. 
 
@@ -267,5 +271,94 @@ node foundry/resources/app/main.js --userData=~/foundryuserdata
 
 ## Set up the Caddy Reverse Proxy
 
+> This section assumes that you have a valid domain name with an A record pointing to your `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns)) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
 
 
+<a name="C10" href="#C10">C10.</a> Run the following command to begin editing the Caddyfile:
+  
+  ```
+  sudo nano /etc/caddy/Caddyfile
+  ```
+  
+<a name="C11" href="#C11">C11.</a> Follow the steps below according to your relevant setup:
+
+<details><summary>Cloud-hosted server</summary>
+
+
+  <a name="C12a" href="#C12a">C12a.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` portion with your actual domain name:
+  
+  ```
+  # This replaces the existing content in /etc/caddy/Caddyfile
+
+  # A CONFIG SECTION FOR YOUR HOSTNAME
+  
+  your.hostname.com {
+      # PROXY ALL REQUEST TO PORT 30000
+      reverse_proxy localhost:30000
+  }
+
+  # Refer to the Caddy docs for more information:
+  # https://caddyserver.com/docs/caddyfile
+  ```
+  
+</details>
+
+<details><summary>Home network server</summary>
+  
+  <a name="C12b" href="#C12b">C12b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name:
+  
+  ```
+  # This replaces the existing content in /etc/caddy/Caddyfile
+
+  # A CONFIG SECTION FOR YOUR IP AND HOSTNAME
+  
+  {
+  		default_sni your.internal.ip.address
+  }
+  
+  your.internal.ip.address {
+  		tls internal
+  		reverse_proxy localhost:30000
+  }
+  
+  your.hostname.com {
+      # PROXY ALL REQUEST TO PORT 30000
+      reverse_proxy localhost:30000
+  }
+
+  # Refer to the Caddy docs for more information:
+  # https://caddyserver.com/docs/caddyfile
+  ```
+</details>
+
+<a name="C13" href="#C13">C13.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
+
+<a name="C14" href="#C14">C14.</a>	Restart Caddy to pick up the new settings by:
+```
+sudo service caddy restart
+```
+>Caddy handles all forwarding to HTTPS as well as the encryption certificates. No further configuration is needed to get those working. {.is-info}
+
+<a name="C15" href="#C15">C15.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
+```
+nano ~/foundryuserdata/Config/options.json
+```
+<a name="C16" href="#C16">C16.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are.
+```
+...
+"proxyPort": 443,
+...
+"proxySSL": true,
+...
+```
+>Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
+
+<a name="C17" href="#C17">C17.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
+
+<a name="C18" href="#C18">C18.</a>	Test your site by opening a new browser tab to your domain name or server's internal IP address. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+
+>Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
+
+>If you are hosting on your home network, you **must** use an external device to test the connection to the domain name. You can only test the connection to the internal IP address from within the network. {.is-warning}
+
+> This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. {.is-info}
