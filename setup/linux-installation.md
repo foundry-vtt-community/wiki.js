@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T02:07:15.421Z
+date: 2021-05-06T02:08:51.871Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -362,3 +362,7 @@ nano ~/foundryuserdata/Config/options.json
 >If you are hosting on your home network, you **must** use an external device to test the connection to the domain name. You can only test the connection to the internal IP address from within the network. {.is-warning}
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. {.is-info}
+
+# (Optional) D. Accessing Userdata Files with Cyberduck
+## Objective
+
