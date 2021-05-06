@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T02:08:51.871Z
+date: 2021-05-06T02:10:33.641Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -31,7 +31,7 @@ The following is required to complete this guide:
 a. Powershell in Windows.
 b. Terminal in Linux or MacOS. 
 2. Valid domain name, such as:
-a. A purchased domain name from a registrar like [namecheap](https://namecheap.com) or [gandi.net](https://gandi.net).
+a. A purchased domain name from a registrar like [Namecheap](https://namecheap.com) or [gandi.net](https://gandi.net).
 b. A free subdomain from a free domain name service like [Duck DNS](http://duckdns.org).
 
 
@@ -271,7 +271,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 ## Set up the Caddy Reverse Proxy
 
-> This section assumes that you have a valid domain name with an A record pointing to your `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns)) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
+> This section assumes that you have a valid domain name with an A record pointing to your `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns) if you are hosting on a home network) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
 
 
 <a name="C10" href="#C10">C10.</a> Run the following command to begin editing the Caddyfile:
