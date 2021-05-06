@@ -2,7 +2,7 @@
 title: Reorganize the helper methods used to compute sound and vision source polygons into the WallsLayer as a generalized computePolygon helper which both the sight and sounds layer use (with different arguments).
 description: 
 published: true
-date: 2021-04-14T12:27:36.968Z
+date: 2021-04-21T15:09:44.277Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:27:36.968Z

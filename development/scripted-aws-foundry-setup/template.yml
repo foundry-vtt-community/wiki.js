@@ -1,0 +1,711 @@
+Transform: AWS::Serverless-2016-10-31
+Parameters:
+  AMI:
+    Type: String
+    Default: ami-0932440befd74cdba
+  InstanceType:
+    Type: String
+    Default: t2.micro
+  HostedZone:
+    Type: String
+    Default: Z0........
+  DomainName:
+    Type: String
+    Default: foundry........
+  Email:
+    Type: String
+    Default: your@email.com
+  DownloadURL:
+    Type: String
+    Default: nodejs-url
+  VpcId:
+    Type: String
+  AdminIPs:
+    Type: String
+    Default: ""
+Resources:
+  TemporaryS3:
+    DeletionPolicy: Retain
+    Type: AWS::S3::Bucket
+  Lambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.lambda_handler
+      Runtime: python3.8
+      Policies:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: s3:*
+            Resource:
+              - !Sub arn:aws:s3:::${TemporaryS3}
+              - !Sub arn:aws:s3:::${TemporaryS3}/*
+      Environment:
+        Variables:
+          s3: !Ref TemporaryS3
+          url: !Ref DownloadURL
+      Timeout: 60
+      MemorySize: 1024
+      InlineCode: |
+        import os
+        import boto3
+        import json
+        import cfnresponse
+        import http.client
+        file_name = "foundryvtt.zip"
+        def lambda_handler(event, context):
+          try:
+            print(json.dumps(event))
+            s3bucket = os.environ.get("s3")
+            s3client = boto3.client("s3")
+
+            if event['RequestType'] == "Create":
+              url = os.environ.get("url")
+              conn = http.client.HTTPSConnection(url.split("https://")[1].split("/releases")[0])
+              conn.request("GET", url.split('.com')[1])
+              res = conn.getresponse()
+              data = res.read()
+              print(f"if this is shorter than 10000 the download was not completed {len(data)}")
+              if len(data) < 10000:
+                cfnresponse.send(event, context, cfnresponse.FAILED, {}, "CustomResourcePhysicalID")
+              else:
+                s3client.put_object(
+                  Bucket=s3bucket,
+                  Body=data,
+                  Key=file_name
+                  )
+                print("it acutally succeeded...")
+                responseData = {}
+                responseData['Location'] = f"Content is in s3 bucket {s3bucket} with name 'foundryvtt.zip' "
+                cfnresponse.send(event, context, cfnresponse.SUCCESS, responseData, "CustomResourcePhysicalID")
+            elif event['RequestType'] == "Delete":
+              s3client.delete_object(
+                Bucket=s3bucket,
+                Key=file_name
+              )
+              s3client.delete_bucket(
+                Bucket=s3bucket
+              )
+              cfnresponse.send(event, context, cfnresponse.SUCCESS, {}, "CustomResourcePhysicalID")
+            else:
+              cfnresponse.send(event, context, cfnresponse.SUCCESS, {}, "CustomResourcePhysicalID")
+          except Exception as e:
+            cfnresponse.send(event, context, cfnresponse.SUCCESS, {"Error": f"{e}"}, "CustomResourcePhysicalID")
+
+  CustomResource:
+    Type: Custom::DownloadFile
+    Properties:
+      ServiceToken: !GetAtt Lambda.Arn
+  Ec2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy
+      Policies:
+        - PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: 
+                  - s3:List*
+                  - s3:Get*
+                Resource: !Sub arn:aws:s3:::${TemporaryS3}/*
+          PolicyName: !Sub "GetFoundryZip-${AWS::StackName}"
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: !Sub ec2-profile-${AWS::StackName}
+      Roles:
+        - !Ref Ec2Role    
+  IAMUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: !Sub foundry-s3-user-${AWS::StackName}
+
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: True
+        BlockPublicPolicy: False
+        RestrictPublicBuckets: False
+        IgnorePublicAcls: True
+  S3BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowWhitelistedIPs
+            Effect: Allow
+            Principal: "*"
+            Action: s3:GetObject
+            Resource: !Sub "arn:aws:s3:::${S3Bucket}/*"
+            Condition:
+              IpAddress:
+                aws:SourceIp: [
+                  "0.0.0.0/0"
+                ]
+  IAMPolicy:
+    Type: AWS::IAM::Policy
+    Properties:
+      Users:
+        - !Ref IAMUser
+      PolicyName: !Sub foundry-s3-policy-${AWS::StackName}
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowSpecificS3Access
+            Effect: Allow
+            Action:
+              - s3:PutObject
+              - s3:GetObject
+              - s3:ListObject
+              - s3:DeleteObject
+              - s3:PutObjectAcl
+            Resource:
+              - !Sub "arn:aws:s3:::${S3Bucket}/*"
+              - !Sub "arn:aws:s3:::${S3Bucket}"
+          - Sid: ListAllBuckets
+            Effect: Allow
+            Action: s3:ListAllMyBuckets
+            Resource: "*"
+  Credentials:
+    Type: AWS::IAM::AccessKey
+    Properties: 
+      UserName: !Ref IAMUser
+  EC2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref AMI
+      SecurityGroupIds:
+        - !Ref SG
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -xe
+          mkdir /tmp/ssm
+          cd /tmp/ssm
+          export HOME=/home/ssm-user
+          exec > >(tee /var/log/initial-log.log|logger -t user-data -s 2>/dev/console) 2>&1
+            curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+            sudo dpkg -i session-manager-plugin.deb
+            curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            apt-get install -y nodejs 
+            apt-get install nginx unzip -y
+            rm /etc/nginx/sites-enabled/default
+            service nginx restart      
+            mkdir -p /home/ssm-user/foundry
+            cd /home/ssm-user/foundry
+            sudo apt-get install awscli -y
+            aws s3 cp s3://${TemporaryS3}/foundryvtt.zip ./foundryvtt.zip
+            unzip foundryvtt.zip
+            rm foundryvtt.zip
+            npm install pm2 -g
+          exec > >(tee /var/log/start.log|logger -t user-data -s 2>/dev/console) 2>&1
+            mkdir -p /home/ssm-user/.local/share/FoundryVTT
+            pm2 start "node /home/ssm-user/foundry/resources/app/main.js --port=8080" --name "foundry"
+            sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ssm-user --hp /home/ssm-user
+            pm2 save
+            sudo chmod a+rwx /home/ssm-user -R
+            echo "{
+              \"accessKeyId\": \"${Credentials}\", 
+              \"secretAccessKey\": \"${Credentials.SecretAccessKey}\",
+              \"region\": \"${AWS::Region}\"
+              }" | tee /home/ssm-user/.local/share/FoundryVTT/Config/aws.json > /dev/null
+            mkdir /var/log/nginx/foundry
+            echo "
+            # Most sites won't have configured favicon or robots.txt
+            # and since its always grabbed, turn it off in access log
+            # and turn off it's not-found error in the error log
+            location = /favicon.ico { access_log off; log_not_found off; }
+            location = /robots.txt { access_log off; log_not_found off; }
+            location = /apple-touch-icon.png { access_log off; log_not_found off; }
+            location = /apple-touch-icon-precomposed.png { access_log off; log_not_found off; }
+
+            # Rather than just denying .ht* in the config, why not deny
+            # access to all .invisible files
+            location ~ /\. { deny  all; access_log off; log_not_found off; }
+            " | tee /etc/nginx/conf.d/drop > /dev/null
+
+          echo "server {
+            listen 80;
+
+            # Adjust this to your the FQDN you chose!
+            server_name                 ${DomainName};
+
+            access_log                  /var/log/nginx/foundry/access.log;
+            error_log                   /var/log/nginx/foundry/error.log;
+            include conf.d/drop;
+
+            location ^~ /.well-known/acme-challenge {
+                allow all;
+                root /var/www/letsencrypt;
+                auth_basic off;
+            }
+
+            location / {
+                proxy_set_header        Host \$host;
+                proxy_set_header        X-Real-IP \$remote_addr;
+                proxy_set_header        X-Forwarded-For \$proxy_add_x_forwarded_for;
+                proxy_set_header        X-Forwarded-Proto \$scheme;
+
+                # Adjust the port number you chose!
+                proxy_pass              http://127.0.0.1:8080;
+
+                proxy_http_version      1.1;
+                proxy_set_header        Upgrade \$http_upgrade;
+                proxy_set_header        Connection \"Upgrade\";
+                proxy_read_timeout      90;
+
+                # Again, adjust both your FQDN and your port number here!
+                proxy_redirect          http://127.0.0.1:8080 http://${DomainName};
+            }
+          }" | tee /etc/nginx/sites-available/foundry > /dev/null
+          ln -s /etc/nginx/sites-available/foundry /etc/nginx/sites-enabled/foundry
+          sudo service nginx restart
+          exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+            snap install core; snap refresh core
+            snap install --classic certbot
+            ln -s /snap/bin/certbot /usr/bin/certbot
+            sudo certbot --nginx -n --agree-tos -m ${Email} -d ${DomainName}
+      InstanceType: !Ref InstanceType
+      IamInstanceProfile: !Ref InstanceProfile
+      Tags:
+        - Key: Name
+          Value: !Ref DomainName
+  FoundryDNS:
+    Type: AWS::Route53::RecordSet
+    Properties: 
+      Comment: DNS Entry for Foundry
+      HostedZoneId: !Ref HostedZone
+      Name: !Ref DomainName
+      ResourceRecords: 
+        - !GetAtt EC2.PublicIp
+      TTL: 300
+      Type: A
+  SG:
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: public
+      GroupName: !Sub public-access-${AWS::StackName}
+      SecurityGroupEgress: 
+        - CidrIp: "0.0.0.0/0"
+          Description: Anonymous access
+          IpProtocol: -1
+      SecurityGroupIngress: 
+        - CidrIp: "0.0.0.0/0"
+          Description: Anonymous access
+          FromPort: 443
+          IpProtocol: TCP
+          ToPort: 443
+        - CidrIp: "0.0.0.0/0"
+          Description: Anonymous access
+          FromPort: 80
+          IpProtocol: TCP
+          ToPort: 80
+      VpcId: !Ref VpcId
+
+  
+  Api:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: "Prd"
+      EndpointConfiguration:
+        Type: "REGIONAL"
+      Domain:
+        BasePath: /
+        CertificateArn: !GetAtt GetCertificate.ARN
+        DomainName: !Sub manage-${DomainName}
+        EndpointConfiguration: "REGIONAL"
+        Route53:
+          DistributionDomainName: !Sub manage-${DomainName}
+          HostedZoneId: !Ref HostedZone
+        SecurityPolicy: TLS_1_2
+
+  StopFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      InlineCode: !Sub |
+        import boto3
+        import json
+
+        client = boto3.client('ec2')
+        instance_id = "${EC2}"
+        AdminIPs = "${AdminIPs}"
+        source_ips = AdminIPs.split(',')
+
+        def lambda_handler(event, context):
+          ip = event['requestContext']['identity']['sourceIp']
+          if ip in source_ips:
+              stop_instance()
+              return {
+                  "statusCode": 200,
+                  "body": "Thanks! Shutting down"
+              }
+          else:
+              return {
+                  "statusCode": 403
+              }
+
+
+        def stop_instance():
+          client.stop_instances(
+              InstanceIds=[
+                  instance_id
+              ]
+          )
+
+      Handler: index.lambda_handler
+      Runtime: python3.8
+      Timeout: 10
+      Policies:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - ec2:StopInstances
+            Resource: '*'
+      Events:
+        Stop:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /stop
+            Method: get
+            RestApiId:
+              Ref: Api
+  StartFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      Handler: index.lambda_handler
+      Runtime: python3.8
+      Timeout: 60
+      InlineCode: !Sub |
+        import json
+        import boto3
+        from time import sleep
+        client = boto3.client('ec2')
+        route = boto3.client('route53')
+
+        instance_id = "${EC2}"
+        AdminIPs = "${AdminIPs}"
+        source_ips = AdminIPs.split(',')
+
+        def lambda_handler(event, context):
+          ip = event['requestContext']['identity']['sourceIp']
+          if ip in source_ips:
+              print("ip was found in list")
+              if get_state() == 'running':
+                  print("is already running")
+                  return redirect()
+              else:
+                  print("is not yet running")
+                  start_instance()
+                  print('instances started')
+                  while get_state() != 'running':
+                      sleep(1)
+                  print("is running now")
+                  update_dns()
+                  sleep(20)
+                  print('dns has been updated')
+                  return redirect()
+          else:
+            return {
+                "statusCode": 403
+            }
+        def update_dns():
+          response = client.describe_instances(
+              InstanceIds=[
+                  instance_id
+              ]
+          )['Reservations'][0]['Instances'][0]['PublicIpAddress']
+          print(response)
+          route.change_resource_record_sets(
+              HostedZoneId="${HostedZone}",
+              ChangeBatch={
+                  'Changes': [
+                      {
+                          'Action': 'UPSERT',
+                          'ResourceRecordSet': {
+                              'Name': "${DomainName}",
+                              'Type': 'A',
+                              'ResourceRecords': [
+                                  {
+                                      'Value': response,
+                                  }
+                              ],
+                              "TTL": 0
+                          }
+                      }
+                  ]
+              }
+          )
+
+        def start_instance():
+          client.start_instances(
+              InstanceIds=[
+                  instance_id
+              ]
+          )
+
+        def get_state():
+          response = client.describe_instances(
+              InstanceIds=[
+                  instance_id
+              ]
+          )
+          return response['Reservations'][0]['Instances'][0]['State']['Name']
+
+        def redirect():
+          return {
+              "statusCode": 301,
+              'headers':{
+                  "Location": 'https://${DomainName}',
+                  "Cache-Control": "no-store, max-age=0"
+              }
+          }
+
+      Policies:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - ec2:DescribeInstances
+              - ec2:StartInstances
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - route53:ChangeResourceRecordSets
+            Resource: "*"
+      Events:
+        Start:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /start
+            Method: get
+            RestApiId:
+              Ref: Api
+  RegisterIp:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      Handler: index.lambda_handler
+      Runtime: python3.8
+      InlineCode: !Sub |
+          import boto3
+          import logging
+          import json
+
+          logger = logging.getLogger("IPLogger")
+          logger.setLevel("DEBUG")
+          AdminIPs = "${AdminIPs}"
+          source_ips = AdminIPs.split(',')
+          s3 = boto3.client('s3')
+          ec2 = boto3.client('ec2')
+          bucket_name = "${S3Bucket}"
+          sg_group = "${SG}"
+
+          def lambda_handler(event, context):
+              logger.info(type(source_ips))
+              logger.info(json.dumps(event))
+              ip = event['requestContext']['identity']['sourceIp']
+              if ip not in source_ips:
+                  return {
+                      "statusCode": 403
+                  }
+              try:
+                  query_strings=event.get('queryStringParameters')
+                  to_add_ip = query_strings.get('ip')
+                  user_name = query_strings.get('name')
+                  if not user_name or not to_add_ip:
+                      return return_helper_syntax()
+                  logger.info(json.dumps(query_strings))
+                  result = s3.get_bucket_policy(Bucket=bucket_name)
+                  policy = json.loads(result['Policy'])
+                  statements = policy['Statement']
+                  for statement in statements:
+                      if statement['Effect'] == "Allow":
+                          continue
+                      condition = statement.get('Condition')
+                      list_of_ips = condition['NotIpAddress']['aws:SourceIp']
+                      if f"{to_add_ip}/32" not in list_of_ips:
+                          logger.info(f"ADDING IP: {to_add_ip}")
+                          list_of_ips.append(f"{to_add_ip}/32")
+                          condition['NotIpAddress']['aws:SourceIp'] = list_of_ips
+                  logger.info(policy)
+                  s3_result = s3.put_bucket_policy(
+                      Bucket=bucket_name,
+                      Policy=json.dumps(policy)
+
+                  )
+                  security_group = ec2.describe_security_groups(
+                      GroupIds=[
+                          sg_group
+                      ]
+                  )['SecurityGroups'][0]
+                  already_added = False
+                  for sg in security_group['IpPermissions']:
+                      for ips in sg['IpRanges']:
+                          if f"{to_add_ip}/32" in ips['CidrIp']:
+                              already_added = True
+                  if not already_added:
+                      ec2.authorize_security_group_ingress(
+                          GroupId=sg_group,
+                          IpPermissions=[
+                              {
+                                  'FromPort': 80,
+                                  'IpProtocol': 'tcp',
+                                  'IpRanges': [
+                                      {
+                                          'CidrIp': f'{to_add_ip}/32',
+                                          'Description': f'IP for {user_name}'
+                                      },
+                                  ],
+                                  'ToPort': 80,
+                              },
+                              {
+                                  'FromPort': 443,
+                                  'IpProtocol': 'tcp',
+                                  'IpRanges': [
+                                      {
+                                          'CidrIp': f'{to_add_ip}/32',
+                                          'Description': f'IP for {user_name}'
+                                      },
+                                  ],
+                                  'ToPort': 443,
+                              }
+                          ]
+                      )
+                  logger.info("succesfully updated sg")
+                  return {
+                      "statusCode": 200,
+                      "body": "You did it buddy!"
+                  }
+              except Exception:
+                  return return_helper_syntax()
+
+            def return_helper_syntax():
+              return {
+                  "statusCode": 200,
+                  "body": ("your call was incomplete, don't forget the syntax: \n \n"
+                          "https://url?ip=12.34.56.78&name=friendname\n \n"
+                          "you need the '?' followed by the keyword 'ip='\n"
+                          "do not use quotes or anything around the ip adress.\n"
+                          "followed by an '&' sign \n"
+                          "then use the name so you can check the ip adress with the name of the friend")
+              }
+
+      Policies:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:GetBucketPolicy
+              - s3:PutBucketPolicy
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - ec2:DescribeSecurityGroups
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - ec2:AuthorizeSecurityGroupIngress
+            Resource: !Sub arn:aws:ec2:${AWS::Region}:${AWS::AccountId}:security-group/${SG}
+            Resource: '*'
+      Events:
+        Start:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /register
+            Method: get
+            RestApiId:
+              Ref: Api
+  CertificateLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.lambda_handler
+      Runtime: python3.8
+      Policies:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: acm:*
+            Resource: "*"
+          - Effect: Allow
+            Action: route53:*
+            Resource: '*'
+      Timeout: 900
+      MemorySize: 128
+      InlineCode: !Sub |
+        import boto3
+        import cfnresponse
+        import json
+        from time import sleep
+        client = boto3.client('acm')
+
+        def lambda_handler(event,context):
+          if event['RequestType'] == "Create":
+            SLEEP = 0
+            MAX_SLEEP = 840
+            r53 = boto3.client('route53')
+            requestedArn = client.request_certificate(
+              DomainName='manage-${DomainName}',
+              ValidationMethod='DNS'
+            )['CertificateArn']
+            cert = client.describe_certificate(CertificateArn=requestedArn)['Certificate']
+            record = cert['DomainValidationOptions'][0]
+            print(cert)
+            print(json.dumps(record))
+            r53.change_resource_record_sets(
+              HostedZoneId='${HostedZone}',
+              ChangeBatch={
+                  'Changes': [
+                      {
+                          'Action': 'CREATE',
+                          'ResourceRecordSet': {
+                              'Name': record['ResourceRecord']['Name'],
+                              'Type': record['ResourceRecord']['Type'],
+                              'TTL': 300,
+                              'ResourceRecords': [
+                                  {
+                                      'Value': record['ResourceRecord']['Value']
+                                  },
+                              ]
+                          }
+                      },
+                  ]
+              }
+            )
+            while not get_status(requestedArn) and SLEEP < MAX_SLEEP:
+              SLEEP += 15
+              sleep(15)
+            if SLEEP >= MAX_SLEEP:
+              cfnresponse.send(event, context, cfnresponse.FAILED, {}, "CertificateValidation")
+            else:
+              cfnresponse.send(event, context, cfnresponse.SUCCESS, {"ARN": requestedArn}, "CertificateValidation")
+          elif event['RequestType'] == "Delete":
+              cfnresponse.send(event, context, cfnresponse.SUCCESS, {}, "CertificateValidation")
+
+        def get_status(arn):
+          cert = client.describe_certificate(CertificateArn=arn)['Certificate']
+          status = cert['DomainValidationOptions'][0]['ValidationStatus']
+          if status != "SUCCESS":
+              return False
+          return True
+  GetCertificate:
+    Type: Custom::Certificate
+    Properties:
+      ServiceToken: !GetAtt CertificateLambda.Arn

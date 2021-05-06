@@ -2,7 +2,7 @@
 title: ７．MOD紹介
 description: おススメのMOD一覧
 published: true
-date: 2021-04-06T18:22:22.112Z
+date: 2021-04-27T13:55:13.880Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-06T11:57:56.615Z
@@ -190,7 +190,7 @@ https://github.com/Moerill/mess
 ### Monk's Little Details（翻訳済）
 https://github.com/ironmonk88/monks-little-details
 
-痒いところに手が届く、さまざまな便利機能を提供する。戦闘のサポートから、各操作ツールへショートカットキーまで。コマを任意にテレポート移動させたり、倒したモンスターを血糊に変えたりといった機能もある。「Multiple Wall Point Mover」と「Combat Ready!」「Turn Marker」「GM Token-Drag Visibility」の機能は、概ねこれで代替できる。
+痒いところに手が届く、さまざまな便利機能を提供する。戦闘のサポートから、各操作ツールへショートカットキーまで。ターンを持っているコマを強調したり、コマを任意にテレポート移動させたり、倒したモンスターを血糊に変えたりといった機能もある。「Multiple Wall Point Mover」と「Combat Ready!」「Turn Marker」「GM Token-Drag Visibility」の機能は、概ねこれで代替できる。
 
 ### Monk's TokenBar（翻訳済）
 https://github.com/ironmonk88/monks-tokenbar
@@ -621,7 +621,7 @@ PCスペックから最適な設定をサジェストしてくれるMod。FVTT�
 ### Reset Movement（未対応）
 https://github.com/jessev14/Reset-Movement
 
-ターン中の移動をリセットし、ターン開始時の位置に戻すボタンを追加する。便利だけど「Monk's Little Details」や「Next Up」のマーカー機能で代用できる。でも面白い。
+ターン中の移動をリセットし、ターン開始時の位置に戻すボタンを追加する。便利だけど「Next Up」のマーカー機能で代用できる。でも面白い。
 
 ### Roofs ＆ Overhead Tiles（未翻訳）
 https://github.com/League-of-Foundry-Developers/roofs

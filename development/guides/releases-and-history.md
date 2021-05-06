@@ -2,12 +2,11 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-03-11T22:01:08.232Z
+date: 2021-04-30T16:02:04.698Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
 ---
-
 
 # Objectives
 
@@ -40,6 +39,10 @@ Installation is fairly straightforward and can be done in one of two ways.
 3. Foundry downloads the manifest's `download` url and checks if it is a zip file. If so, it unzips.
 
 ## How Foundry checks for Package Updates
+> This process has changed as of 0.8.2 with the introduction of "Sidegrading"
+{.is-warning}
+
+### Before 0.8.2
 
 0. User initiates the flow by either clicking on "Check Update" an individual module or the "Update All" button.
 1. Foundry fetches the manifest from the url in the currently installed package's manifest json.
@@ -47,6 +50,39 @@ Installation is fairly straightforward and can be done in one of two ways.
   2.a If the user is doing this on an individual package they have to then click the "Update" button.
 	Foundry uses its [`isNewerVersion` helper function](https://foundryvtt.com/api/global.html#isNewerVersion) to compare manifest version strings.
 3. If Foundry determines that the fetched manifest json has a newer version, it then downloads that manifest's `download` and checks if it is a zip file. If so, it unzips.
+
+
+### 0.8.2+
+
+0. User initiates the flow by either clicking on "Check Update" an individual module or the "Update All" button.
+1. If the Package is listed in the Package Repository:
+	1.a Foundry checks to see if the `manifest` field has changed in the Package Repository listing
+  1.b If so, Foundry prompts the User to see if they want to use the old local value, or the new Package Respository value (recommended)
+  1.c If the User selects "Yes", the local `manifest` is overwritten with the new value from the Package Repository
+1. Foundry fetches the manifest from the url in the currently installed package's manifest json.
+2. Foundry compares the `version` strings of the installed module's manifest against the fetched manifest.
+  2.a If the user is doing this on an individual package they have to then click the "Update" button.
+	Foundry uses its [`isNewerVersion` helper function](https://foundryvtt.com/api/global.html#isNewerVersion) to compare manifest version strings.
+3. If Foundry determines that the fetched manifest json has a newer version, it then downloads that manifest's `download` and checks if it is a zip file. If so, it unzips.
+4. If Foundry determines that no new version exists, but that new Remote metadata values exist for the version, Foundry will execute an automatic Sidegrade. The Fields are sidegraded according to the following table:
+
+|Manifest Field | Action Taken |
+--- | --- 
+|title|Overwritten with Remote Manifest Value|
+|description|Overwritten with Remote Manifest Value|
+|author|Overwritten with Remote Manifest Value|
+|authors|Overwritten with Remote Manifest Value|
+|url|Overwritten with Remote Manifest Value|
+|license|Overwritten with Remote Manifest Value|
+|readme|Overwritten with Remote Manifest Value|
+|bugs|Overwritten with Remote Manifest Value|
+|changelog|Overwritten with Remote Manifest Value|
+|system|Overwritten with Remote Manifest Value|
+|download|Overwritten with Remote Manifest Value|
+|manifest|If Package Repository value changed, prompt user to pick a version. If Remote changed, overwrite|
+|minimumCoreVersion|Overwritten with minimum value of Remote and Package Repository|
+|compatibleCoreVersion|Overwritten with maximum value of Remote and Package Repository|
+
 
 # Package Administration
 

@@ -2,7 +2,7 @@
 title: 2.0. Installation sous Linux
 description: 
 published: true
-date: 2021-01-05T15:21:09.786Z
+date: 2021-04-24T21:01:03.001Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
@@ -19,9 +19,12 @@ Je vous conseille tout de même de faire tourner FoundryVTT avec [PM2](https://p
 {.is-info}
 
 ## Différentes installations pour l'utilisation de Foundry VTT.
-- [Installation sous LINUX](https://foundryvtt.wiki/en/setup/Ubuntu-VM)
+- [Installation sous LINUX](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM)
 Nous utilisons ici l'installation de foundryVTT sur la distribution UBUNTU et ses dérivés.
 Nous utiliserons ici le logiciel [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/) permettant de contrôler finement le démarrage/arrêt du service.
+> En ce qui concerne la partie [Optional Step: Use SSL Encryption](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM#optional-step-use-ssl-encryption), nous vous conseillons de vous servir directement de la procédure d'installation que vous trouverez sur le site de [Cerbot](https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx) et de ne pas tenir compte de cette partie dans le tutoriel linux.
+{.is-warning}
+
 
 - [Installation sur des serveurs AWS d'Amazon](https://foundryvtt.wiki/fr/pour-commencer/aws)
 Guide d'installation en français, rédigé par **prolice#9101** sur le discord francophone.

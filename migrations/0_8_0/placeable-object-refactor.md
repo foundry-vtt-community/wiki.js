@@ -2,14 +2,14 @@
 title: Split the responsibility of the current PlaceableObject class into core data management, permission control, and configuration which extends EmbeddedEntity vs the Canvas object representation and UX which extends PlaceableObject
 description: 
 published: true
-date: 2021-02-07T17:40:58.106Z
+date: 2021-05-01T19:24:49.954Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:40:54.674Z
 ---
 
 # Summary
-https://gitlab.com/foundrynet/foundryvtt/-/issues/4090
+https://gitlab.com/foundrynet/foundryvtt/-/issues/4468
 
 ## What changed
 

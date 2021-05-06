@@ -2,11 +2,41 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-04-01T16:01:39.302Z
+date: 2021-04-21T16:20:14.663Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
 ---
+
+# Official API
+Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/), generated from the JSDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code.
+
+## Macros and Code examples
+
+### [Community Macros](https://github.com/foundry-vtt-community/macros)
+- Community contributed macros that can be downloaded as a module, a wide range of topics with pf1, pf2, and dnd5e system specific macros covered therein.
+
+
+### [Vance's Code Examples](https://github.com/VanceCole/macros)
+- Excellent resource covering a huge range of examples for how to interact with Foundry Core.
+
+
+### [Kekilla's Macros](https://github.com/Kekilla0/Personal-Macros)
+- Another well organized personal macro repository covering a wide range of useful applications.
+
+
+## Tutorials
+
+### [Spacemandev's FoundryVTT Development Video Series](https://www.youtube.com/watch?v=UDVH6UIFRos&list=PLLF8ndmyGEGyAWaZifYCzqMuRq2lsaENA)
+- Content that covers topics ranging from Setting up a development environment to the deep dive videos: Macros 101 and 102.
+
+
+### [Mougli's FoundryVTT System Development Video Series](https://www.youtube.com/watch?v=gcSN4AQcUzM&list=PLFV9z59nkHDccUbRXVt623UdloPTclIrz)
+- Video Series for those looking to create their own Systems.
+
+### [Svelte and Foundry](https://sunspots.eu/posts/foundry-svelte/)
+- A quick guide by Sunspots detailing their strategy for using Svelte to make Foundry Modules.
+
 
 ## Templates and Starter Kits
 
@@ -79,29 +109,3 @@ There are a variety of community-created module and system starter kits out ther
 ### [NickEast's Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) (now deprecated)
 - As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point. With 0.8.x coming out, NickEast has stated:
 > At this point I've moved to working with 0.8.x, which means my own type definitions are now pretty much "dead". I will start on my own "internal" definitions for 0.8.x, but I've yet to decide whether to start on a separate branch, or just make a clean slate... I'll keep everything open, but will focus on what I need instead of progressively increasing coverage.
-
-## Macros and Code examples
-
-### [Community Macros](https://github.com/foundry-vtt-community/macros)
-- Community contributed macros that can be downloaded as a module, a wide range of topics with pf1, pf2, and dnd5e system specific macros covered therein.
-
-
-### [Vance's Code Examples](https://github.com/VanceCole/macros)
-- Excellent resource covering a huge range of examples for how to interact with Foundry Core.
-
-
-### [Kekilla's Macros](https://github.com/Kekilla0/Personal-Macros)
-- Another well organized personal macro repository covering a wide range of useful applications.
-
-
-## Tutorials
-
-### [Spacemandev's FoundryVTT Development Video Series](https://www.youtube.com/watch?v=UDVH6UIFRos&list=PLLF8ndmyGEGyAWaZifYCzqMuRq2lsaENA)
-- Content that covers topics ranging from Setting up a development environment to the deep dive videos: Macros 101 and 102.
-
-
-### [Mougli's FoundryVTT System Development Video Series](https://www.youtube.com/watch?v=gcSN4AQcUzM&list=PLFV9z59nkHDccUbRXVt623UdloPTclIrz)
-- Video Series for those looking to create their own Systems.
-
-### [Svelte and Foundry](https://sunspots.eu/posts/foundry-svelte/)
-- A quick guide by Sunspots detailing their strategy for using Svelte to make Foundry Modules.

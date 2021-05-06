@@ -2,7 +2,7 @@
 title: Delete the legacy and unused jquery "shake" extension from the codebase
 description: 
 published: true
-date: 2021-04-14T12:14:31.319Z
+date: 2021-04-21T15:09:30.683Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:14:31.319Z

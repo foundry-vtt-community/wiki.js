@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2021-03-29T21:16:54.667Z
+date: 2021-04-21T16:18:24.020Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -18,7 +18,7 @@ For additional translations (including ones for game systems) see the [list of t
 | ar-AR | Arabic / عربى | [Latest version](https://gitlab.com/mr_aljabry/foundryvtt-lang-ar-ar/-/raw/master/Core/module.json) | ? |
 | ca-ES | Catalan / català | [Latest version](https://gitlab.com/montver/foundry-vtt-catala/-/raw/master/ca/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Spanish) |
 | zh-Hans | Chinese (simplified) / 中文（简体） | [Latest version](https://raw.githubusercontent.com/fvtt-cn/foundry_chn/main/module.json) | <i class="fas fa-comments"></i> Tencent QQ Group #: **716573917** |
-| zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7) |
+| zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | [HKTRPG Foundry VTT (中文)](https://discord.gg/vx4kcm7) |
 | cs-CZ | Czech / čeština | [Latest version](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json) | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) |
 | en-US | English (American) *[Default]* | — | <i class="fab fa-discord"></i> [The Foundry](https://discordapp.com/invite/DDBZUDf) (official) |
 | fi-FI | Finnish / suomi | *work in progress* | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |

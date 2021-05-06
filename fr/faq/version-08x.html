@@ -2,7 +2,7 @@
 title: FoundryVTT 0.8.x
 description: Quelques infos sur les changements liés à la branche 0.8
 published: true
-date: 2021-02-18T21:28:51.079Z
+date: 2021-05-01T14:19:40.082Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-02-14T21:54:00.270Z
@@ -13,20 +13,20 @@ dateCreated: 2021-02-14T21:54:00.270Z
 <p>Avec la venue de la version 0.8.0 arrive la première grosse mise à jour du socle FoundryVTT depuis sa sortie du Patreon et son passage en release.&nbsp;</p>
 <p>Cette page servira à synthétiser les informations / Faq / tips&nbsp;et suivre éventuellement les infos/correctifs</p>
 <p><mark class="pen-red"><strong>SI VOUS N’ÊTES PAS DÉVELOPPEURS N'INSTALLEZ PAS LA v0.8 AVANT SON STATUT RELEASE</strong></mark></p>
-<p><strong>Mise à jour 18/02/2020 : sortie v0.8.0 + patch note&nbsp;</strong></p>
+<p><strong>Mise à jour 01/05/2021 : sortie v0.8.2 &nbsp;</strong></p>
 <h2>Introduction&nbsp;(13/02/2021) :&nbsp;</h2>
 <p>Atropos prépare sa venue avec beaucoup de précaution, sachant qu’il s’agit d’une des versions les plus massives en terme d’heures de travail et de changement intrinsèques,</p>
 <p>vous retrouverez ci-dessous les grandes informations ‘généralistes’ issues de son Patch Notes qui accompagnait son live sur twitch <a href="https://gitlab.com/foundrynet/foundryvtt/-/issues/4615">https://gitlab.com/foundrynet/foundryvtt/-/issues/4615</a> &nbsp;(la video est présente sur Youtube : &nbsp;<a href="https://youtu.be/iKjPxMFqgmg">Alpha 0.8.0 Development Update and Q&amp;A</a> ) expurgées de la partie ‘technique’ qui concerne les développeurs (qui iront à la source&nbsp;:D )&nbsp;</p>
 <p><i>Note&nbsp;: comme ce résumé est orienté Utilisateur ‘grand public’ / ‘amateur bidouilleur’ , je pars d’une vision utilisateur Windows / application native.&nbsp;</i></p>
 <p>&nbsp;</p>
-<p><u>Versionning </u><strong><u>estimée</u></strong><u>&nbsp;de la </u><strong><u>branche 0.8</u></strong><u> (alpha/beta) :&nbsp;</u></p>
+<p><u>Versionning </u><strong><u>estimée</u></strong><u>&nbsp;de la </u><strong><u>branche 0.8</u></strong><u> (alpha/beta) #màj 01/05/2021 :&nbsp;</u></p>
 <p>Détail des versions et planning : <a href="https://gitlab.com/foundrynet/foundryvtt/-/milestones">https://gitlab.com/foundrynet/foundryvtt/-/milestones</a></p>
-<p>⇒ 0.8.0&nbsp;:18/02/2021 - canal alpha</p>
-<p>⇒ 0.8.1&nbsp;: mi Mars 2021</p>
-<p>⇒ 0.8.2&nbsp;: mi Avril 2021</p>
-<p><i>Puis des itérations plus rapides pour arriver à une 0.8.5 ou 0.8.6 pour finir sur le canal release <strong>mi Mai.</strong></i></p>
+<p>⇒ <a href="https://gitlab.com/foundrynet/foundryvtt/-/milestones/69"><strong>Alpha 0.8.0 - Next-Gen Infrastructure</strong></a>&nbsp;:18/02/2021</p>
+<p>⇒ <a href="https://gitlab.com/foundrynet/foundryvtt/-/milestones/62"><strong>Alpha 0.8.1 - Audio Overhaul</strong></a><strong> </strong>: 28/03/2021</p>
+<p>⇒ <a href="https://gitlab.com/foundrynet/foundryvtt/-/milestones/70"><strong>Alpha 0.8.2 - Overhead Tiles</strong></a>&nbsp;: 01/05/2021</p>
 <p>&nbsp;</p>
-<p><mark class="pen-green"><u>En parallèle, une nouvelle version 0.7.x sur le canal release sortira dans 2 à 3 semaines qui corrigera quelques Bugs et préparera la migration sur la 0.8.x</u></mark></p>
+<p><i>Puis des itérations plus rapides pour arriver à une 0.8.5 ou 0.8.6 pour finir sur le canal release <strong>mi Mai.</strong></i></p>
+<p><mark class="pen-green"><u>En parallèle, une nouvelle version 0.7.10 sur le canal release sortira qui corrigera quelques Bugs et préparera la migration sur la 0.8.x</u></mark></p>
 <p>&nbsp;</p>
 <p><strong><u>Point important&nbsp;:&nbsp;</u></strong></p>
 <p>La version 0.8.x met à jour le socle natif ( NodeJs 14 – Electron 12 – Chromium 89) cela <strong>empêche de pouvoir effectuer la mise à jour directement depuis le panel dédié de l’application&nbsp;</strong></p>
@@ -42,88 +42,103 @@ dateCreated: 2021-02-14T21:54:00.270Z
   <li><mark class="marker-pink"><strong>En complément du caractère buggé/instable des premières versions 0.8, il vous faudra donc rester en 0.7x si votre système ou vos modules vous sont indispensables et n'ont pas été adaptés.&nbsp;&nbsp;</strong></mark></li>
 </ul>
 <p>&nbsp;</p>
-<p><strong><u>Quelques éléments apportées par cette version &nbsp;:&nbsp;</u></strong></p>
-<ul>
-  <li>Possibilité de traduire (localiser) les écrans de configuration / connexion / joueurs.&nbsp;:D</li>
-  <li>Nouvelles bibliothèques d’icones</li>
-  <li>Mode ‘sans canevas’ possible</li>
-  <li>Les rencontres de combats ne sont plus forcément liés à une scène, une rencontre ‘sans scène’ peut du coup s’étendre sur plusieurs et gérer le combat distinctement de la scène affichée.</li>
-  <li>Personnalisation individuelle des préférences de tchat.</li>
-</ul>
-<p>ou encore : Passage en HTTP2 (amélioration réseau), amélioration des performances (algorithmes revus, etc…) , meilleurs gestion des packages (system, module, monde&nbsp;: par ex. introduction de la notion de ‘librairie’ important lors du chargement des modules) ….&nbsp;</p>
-<p>&nbsp;</p>
-<p><i>En simplifiant, pour donner une visibilité sur les impacts du code lui-même, les éléments importants d’évolution portent sur l’introduction d’un model&nbsp; ‘document’ qui entraîne des modifications sur&nbsp;:&nbsp;</i></p>
-<ul>
-  <li><i>Les compendiu/ms (manipulation plus simple, mise en cache).</i></li>
-  <li><i>Gestion des tok/ens non liés&nbsp;</i></li>
-  <li><i>Optimisation des échanges réseau&nbsp;</i></li>
-  <li><i>Manipulation de ‘documents’ (acteur, item … )&nbsp;</i></li>
-  <li><i>Modification des objets ‘canvas’ (qu’on pouvait placé sur la map&nbsp;: token, tuile )</i></li>
-  <li><i>&nbsp;Standardisation des fonctions d’import/export</i></li>
-  <li><i>Configuration des objets (au sens code ^^) étendues</i></li>
-</ul>
-<p>&nbsp;</p>
-<h2>PatchNote Version 0.8.0&nbsp;</h2>
-<p><i>Annonce Discord &nbsp;@Atropos :&nbsp;</i></p>
+<h2><a href="https://foundryvtt.com/releases/0.8.0">Apports Version 0.8.0</a>&nbsp;</h2>
 <p>&nbsp;</p>
 <figure class="table">
   <table>
     <tbody>
       <tr>
         <td>
-          <p><strong><u>Foundry Virtual Tabletop &nbsp;- Mise à jour Alpha 0.8.0</u></strong></p>
-          <p>Bonjour @everyone, je suis à la fois nerveux et excité de vous présenter la toute première version ‘alpha’ de la nouvelle branche de développement 0.8.x pour Foundry Virtual Tabletop. Cette mise à jour marque une étape majeure pour le logiciel, un travail énorme et réfléchi a été réalisé pour cette mise à jour et j'en suis très fier. Je suis convaincu qu'elle introduit un haut niveau de qualité architecturale logicielle qui permettra de poursuivre les développements de Foundry Virtual Tabletop - tant par moi-même que par notre fantastique communauté de développeurs - pour les années à venir.</p>
-          <p><code><mark class="pen-red"><strong>AVERTISSEMENT : les mises à jour sur le canal alpha impliquent de nouvelles fonctionnalités majeures qui sont susceptibles d'introduire des bugs imprévus, des incohérences dans les systèmes ou modules de jeu existants, ou d'autres problèmes qui perturberont l'utilisation du logiciel. N'installez pas cette mise à jour, sauf si vous le faites dans le but spécifique de tester le logiciel. L'objectif des canaux Alpha est de permettre de tester de nouvelles fonctionnalités et d'aider les développeurs à commencer le processus de mise à jour des packages qui sont touchés par ces changements. Si vous choisissez de mettre à jour cette version, vous vous exposez à un risque sérieux de faire une mauvaise expérience. Veuillez prendre cet avertissement à cœur.</strong></mark></code></p>
-          <p>Si vous choisissez d'installer la mise à jour Alpha 0.8.0, vous devez procéder à une nouvelle installation du logiciel. En raison de certaines modifications de l'infrastructure, il n'est pas possible de mettre à jour cette version à partir de l'application Foundry. Comme toujours, avant toute mise à jour importante :</p>
-          <p><code><mark class="pen-green">Veillez à sauvegarder soigneusement toutes les données critiques de l'utilisateur avant d'installer cette mise à jour.</mark></code></p>
-          <p>Les notes de mise à jour fournissent des détails complets sur le travail effectué pour cette mise à jour.</p>
+          <p><strong><u>Quelques éléments apportées par cette version &nbsp;:&nbsp;</u></strong></p>
           <ul>
-            <li>Notes de mise à jour complètes : <a href="https://foundryvtt.com/releases/0.8.0">https://foundryvtt.com/releases/0.8.0</a></li>
-            <li>Documentation de l'API Alpha : <a href="https://foundryvtt.com/api/alpha/">https://foundryvtt.com/api/alpha/</a></li>
-            <li>Canaux de feedback: <a href="https://discord.gg/foundryvtt">https://discord.gg/foundryvtt</a> =&gt; #080-feedback et #080-bug-reports</li>
+            <li>Possibilité de traduire (localiser) les écrans de configuration / connexion / joueurs.&nbsp;:D</li>
+            <li>Nouvelles bibliothèques d’icones</li>
+            <li>Mode ‘sans canevas’ possible</li>
+            <li>Les rencontres de combats ne sont plus forcément liés à une scène, une rencontre ‘sans scène’ peut du coup s’étendre sur plusieurs et gérer le combat distinctement de la scène affichée.</li>
+            <li>Personnalisation individuelle des préférences de tchat.</li>
           </ul>
-          <p>Merci à tous pour votre soutien continu !</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</figure>
-<figure class="table">
-  <table>
-    <tbody>
-      <tr>
-        <td>
-          <p>Download URLs</p>
-          <p>----------------------------</p>
-          <ul>
-            <li><strong>Windows</strong>: <a href="https://foundryvtt.com/releases/download?version=0.8.0&amp;platform=windows">https://foundryvtt.com/releases/download?version=0.8.0&amp;platform=windows</a></li>
-            <li><strong>MacOS</strong>: <a href="https://foundryvtt.com/releases/download?version=0.8.0&amp;platform=mac">https://foundryvtt.com/releases/download?version=0.8.0&amp;platform=mac</a></li>
-            <li><strong>Linux/Node.js</strong>: <a href="https://foundryvtt.com/releases/download?version=0.8.0&amp;platform=linux">https://foundryvtt.com/releases/download?version=0.8.0&amp;platform=linux</a></li>
-          </ul>
-          <p><mark class="pen-red"><strong>Pour accéder aux URL ci-dessus, vous devez être connecté au site web FoundryVTT et disposer d'une clé de licence valide</strong></mark></p>
+          <p>ou encore : Passage en HTTP2 (amélioration réseau), amélioration des performances (algorithmes revus, etc…) , meilleurs gestion des packages (system, module, monde&nbsp;: par ex. introduction de la notion de ‘librairie’ important lors du chargement des modules) ….&nbsp;</p>
           <p>&nbsp;</p>
-          <p>Bugs Connus : <a href="https://gitlab.com/foundrynet/foundryvtt/-/milestones/74">https://gitlab.com/foundrynet/foundryvtt/-/milestones/74</a></p>
+          <p><i>En simplifiant, pour donner une visibilité sur les impacts du code lui-même, les éléments importants d’évolution portent sur l’introduction d’un model&nbsp; ‘document’ qui entraîne des modifications sur&nbsp;:&nbsp;</i></p>
+          <ul>
+            <li><i>Les compendiu/ms (manipulation plus simple, mise en cache).</i></li>
+            <li><i>Gestion des tok/ens non liés&nbsp;</i></li>
+            <li><i>Optimisation des échanges réseau&nbsp;</i></li>
+            <li><i>Manipulation de ‘documents’ (acteur, item … )&nbsp;</i></li>
+            <li><i>Modification des objets ‘canvas’ (qu’on pouvait placé sur la map&nbsp;: token, tuile )</i></li>
+            <li><i>&nbsp;Standardisation des fonctions d’import/export</i></li>
+            <li><i>Configuration des objets (au sens code ^^) étendues</i></li>
+          </ul>
         </td>
       </tr>
     </tbody>
   </table>
 </figure>
-<h2>PatchNote Version 0.8.1&nbsp;</h2>
-<p><i><strong>A venir&nbsp;</strong></i></p>
 <p>&nbsp;</p>
+<h2><a href="https://foundryvtt.com/releases/0.8.1">Apports Version 0.8.1&nbsp;</a></h2>
 <p>&nbsp;</p>
-<h2><strong>FAQ/ Tips&nbsp;:&nbsp;</strong></h2>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong><u>Quelques éléments apportées par cette version &nbsp;:&nbsp;</u></strong></p>
+          <ul>
+            <li>Cette mise à jour redéfinit complètement la façon dont Foundry gère les listes de lecture audio et les sources audio ambiantes sur le canevas, notamment : la définition de la durée des fondus, une interface de contrôle améliorée pour l'audio, l'importation massive d'audio, la possibilité de désactiver temporairement les sources audio ambiantes, une nouvelle façon de définir l'audio ambiant (et aussi l'éclairage ambiant) pour qu'il ne soit actif qu'entre certains niveaux d'obscurité, et une nouvelle API audio beaucoup plus robuste.</li>
+            <li>Le panel audio supporte maintenant les dossiers</li>
+            <li>Les listes de lecture prennent désormais en charge l'importation en masse de fichiers sonores par dossier à partir d'un chemin de répertoire choisi.</li>
+            <li>Les listes de lecture et les documents PlaylistSound permettent désormais aux utilisateurs de définir une description. Cela permet d'annoter les pistes dans vos listes de lecture pour une référence rapide de leur but, par exemple : "Bande sonore de rage barbare, lunatique et violente".</li>
+            <li>Les scènes peuvent désormais désigner une piste spécifique au lieu d'une liste de lecture complète par défaut lorsque cette scène est activée.</li>
+            <li>Les listes de lecture peuvent désormais être filtrées par nom à l'aide du champ de recherche situé en haut de l'onglet de la liste de lecture.</li>
+            <li>Ajout de la prise en charge de M4A (.m4a) et OPUS (.opus) comme types de fichiers audio.</li>
+            <li>Les listes de lecture audio permettent désormais &nbsp;de définir une durée de fondu pour les transitions audio. La durée du fondu peut être configurée au niveau de la liste de lecture, affectant tous les sons de la liste de lecture (par défaut) ou au niveau de chaque piste.</li>
+            <li>Les sources audio d'ambiance peuvent désormais être désactivées en cliquant avec le bouton droit de la souris sur leur icône de contrôle.</li>
+            <li>Les contrôles de la scène de la couche de son ont maintenant un bouton à bascule pour la prévisualisation audio qui permet à un utilisateur GM ou assistant de prévisualiser l'audio ambiant en passant la souris dessus.</li>
+            <li>Les types de murs font désormais la différence entre la restriction de la vue et la restriction du son. Cela permet de créer des murs que le son peut traverser, mais pas la vue - ou vice versa.</li>
+            <li>Un nouveau paramètre de permission a été introduit pour permettre aux joueurs de créer des notes de carte à partir des entrées de journal qu'ils possèdent.</li>
+            <li>Améliorations majeures aux structures de données qui sous-tendent le système de lancer de dés (ajout du lancer de dés asynchrone en vue d'un remplacement total pour la 0.9.x)</li>
+            <li>La nouvelle implémentation de l'analyseur de dés permet d'attacher un texte spécifique aux objets NumericTerm dans une expression de type Roll, par exemple : /r 10 [dégâts de feu] + 2d8 [dégâts de foudre].</li>
+            <li>Le système de dés supporte maintenant les relances récursives qui continuent à relancer jusqu'à ce qu'une condition de résultat soit remplie.</li>
+            <li>Le traqueur de combat offre désormais une nouvelle option contextuelle "Effacer l'initiative" pour les combattants, qui remet leur initiative à l'état non lancé.</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 <p>&nbsp;</p>
-<h3><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;0 -&nbsp; comment je fais pour avoir accès à la 0.8.0 :&nbsp;</strong></h3>
-<p><strong>A préciser</strong> une fois la 0.8 sortie :) , on peut cependant dire :&nbsp;</p>
-<p><strong>Sur windows , Il faudra certainement télécharger directement et réinstaller le soft (montée de version Electron) : pensez à sauvegarder votre répertoire data.&nbsp;</strong></p>
+<h2><a href="https://foundryvtt.com/releases/0.8.2">Apports Version 0.8.2&nbsp;</a></h2>
+<p><strong><u>note 01/05/2021 </u>: bug sur la prise en compte de la localisation : </strong><mark class="marker-yellow"><strong>https://gitlab.com/foundrynet/foundryvtt/-/issues/4940 &nbsp;</strong></mark><strong>( remettre la clé à en.core dans option.json si besoin : &nbsp;</strong><mark class="marker-pink">"language":&nbsp;"en.core",</mark> )</p>
 <p>&nbsp;</p>
-<h3><strong>1 - «&nbsp;J’ai cliqué sur l’update / j'ai téléchargé &nbsp;» Je suis mal&nbsp;!! ma partie est demain plus rien ne marche&nbsp;!!! comment je fais&nbsp;???</strong></h3>
-<p><strong>A préciser</strong> une fois la 0.8 sortie, on peut cependant dire :&nbsp;</p>
-<p>Pour revenir en 0.7.x&nbsp;, il faut déjà préciser que suivant ce que vous avez lancé, potentiellement certaines migrations de données ont été effectuées, qui ne peuvent du coup pas être rétrogradé … dans ce cas-là, la seule possibilité serait que vous ayez une sauvegarde de votre répertoire data ( ou tout au moins des WORLD ).</p>
-<p>&nbsp;&nbsp;</p>
-<h3><strong>2 - Je suis sur Windows et je veux installer une version 0.8.x «&nbsp;en test&nbsp;» en plus de ma version 0.7.x «&nbsp;utilisable au quotidien&nbsp;»&nbsp;[sans me prendre trop la tête&nbsp;:D ]:</strong></h3>
-<p><i><strong>#Pas encore testé avec la 0.8 de fait -- rappel :&nbsp;</strong></i><a href="https://foundryvtt.com/article/installation/"><i>https://foundryvtt.com/article/installation/</i></a><i><strong>#</strong></i></p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <p><strong><u>Quelques éléments apportées par cette version &nbsp;:&nbsp;</u></strong></p>
+          <ul>
+            <li>L'onglet de tchat peut maintenant être ouvert dans une fenêtre séparée avec un clic droit comme les autres onglets de la barre latérale.</li>
+            <li>Création du système d'<i><mark class="pen-red">Overhead tiles</mark></i> qui permet de gérer une couche de premier plan sur les scènes ( canopées d'arbres, toits etc .. ) tout en prenant nativement en compte la visibilité etc.. (on peut les définir au dessus des tokens ou au dessus de la lumière et des tokens … <a href="https://www.twitch.tv/videos/1006261712?t=00h30m09s">la video d'Atropos est plus parlante :D</a> )</li>
+            <li>l'interface de configuration des tuiles &nbsp;a du coup été màj pour gérer ses nouvelles notions ( ‘toit’, opacité, occlusion mode ‘aucun’ , ‘fade tile’ etc …), ainsi que le HUD (en surplomb, sous les pieds) et&nbsp;gestion des tuiles videos ( en boucle ou pas, volume etc … )</li>
+            <li>Ajouts de 1500 icônes (pour un total de 5500).</li>
+            <li>Possibilité d'une configuration par défaut des tokens</li>
+            <li>mise en cache des modules afin de limiter la charge réseau</li>
+            <li>calcul des lignes de vision améliorée</li>
+            <li>les portes secrètes ont maintenant un icone dédié</li>
+            <li>détection des navigateurs non compatible amélioré</li>
+            <li>possibilité de lancer un monde en mode ‘sans échec’ (désactive les modules, les scènes, les liste de lectures )</li>
+            <li>l'insertion d'image pour TinyMCE ( note de journal par ex) , utilise maintenant la recherche standard de foundry (prévisualisation etc … )</li>
+            <li>avertissement en jeu si le système utilisé bénéficie d'une mise à jour</li>
+            <li>Le système de modules (package) a reçu quelques mises à jour à la fois des dépendances et de la structure des manifestes, améliorant ainsi l'UX et l'UI pour les utilisateurs et les développeurs de la communauté. (cf video)</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h2><strong>Je suis sur Windows et je veux installer une version 0.8.x «&nbsp;en test&nbsp;» en plus de ma version 0.7.x «&nbsp;utilisable au quotidien&nbsp;»&nbsp;[sans me prendre trop la tête&nbsp;:D ]:</strong></h2>
+<p><i><strong># rappel :&nbsp;</strong></i><a href="https://foundryvtt.com/article/installation/"><i>https://foundryvtt.com/article/installation/</i></a><i><strong>#</strong></i></p>
 <blockquote>
   <p><mark class="marker-pink"><strong>RAPPEL&nbsp;: La licence de FoundryVtt (link) permet les actions décrites ci-dessus TANT QUE VOUS N’OUVREZ PAS A VOS JOUEURS/MJ LES 2 ou + tables ( principe&nbsp;: 1 seul ‘instance’ de foundry en cours de jeux réel – 1 mj + X joueurs ) .&nbsp;</strong></mark></p>
   <p><mark class="marker-pink">Si pour une raison quelconque &nbsp;vous souhaitez héberger plusieurs parties en même temps en condition réelle de jeux (parce que vous avez la fibre etc ) , il vous faudra plusieurs licences.&nbsp;</mark></p>

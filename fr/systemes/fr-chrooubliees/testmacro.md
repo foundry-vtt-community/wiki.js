@@ -2,7 +2,7 @@
 title: COF : Test Macro
 description: Tu es flemmard du double click ? Bienvenue ici !
 published: true
-date: 2020-12-26T18:08:47.413Z
+date: 2021-04-21T15:02:53.031Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T17:43:57.857Z

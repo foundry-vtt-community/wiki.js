@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-01-31T11:04:51.610Z
+date: 2021-05-04T10:48:17.130Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -20,6 +20,7 @@ dateCreated: 2020-12-05T05:17:17.707Z
 - Developpement : [Mandar](https://foundryvtt.com/community/mandar) & [Vlyan](https://foundryvtt.com/community/vlyan)
 - Contribution: [Sasmira](https://foundryvtt.com/community/sasmira)
 - Compendiums : Carter & [Hrunh](https://foundryvtt.com/community/hrunh)
+- Wiki : [Hrunh](https://foundryvtt.com/community/hrunh)
 
 Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
 
@@ -108,7 +109,7 @@ Autres : (courtier) (bushi) (shugenja)
 
 ## Aventure officielle *Mariage à château Kyotei* 
 
-L'aventure officielle [Mariage à château Kyotei](/fr/https://foundryvtt.com/packages/l5r_mariage/) adaptée à Foundry est disponible en libre téléchargement.  
+L'aventure officielle [Mariage à château Kyotei](https://foundryvtt.com/packages/l5r_mariage) adaptée à Foundry est disponible en libre téléchargement.  
 Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure, ainsi que les personnages prétirés fournis gratuitement par l'éditeur. 
 
 ![pretires.jpg](/images/pretires.jpg) 

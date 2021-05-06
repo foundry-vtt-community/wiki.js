@@ -2,7 +2,7 @@
 title: 0.0. Pathfinder 1re Édition
 description: 
 published: true
-date: 2021-02-27T10:51:51.942Z
+date: 2021-04-21T15:07:17.942Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-27T10:49:09.292Z

@@ -2,7 +2,7 @@
 title: SD06 Extending-the-Actor-class
 description: 
 published: true
-date: 2020-12-20T21:51:33.828Z
+date: 2021-04-21T14:51:54.302Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z

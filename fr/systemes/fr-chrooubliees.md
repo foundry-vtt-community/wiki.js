@@ -2,12 +2,11 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2020-12-28T10:33:32.229Z
+date: 2021-05-02T08:54:41.172Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
 ---
-
 
 ![utilrequest_(3).jpg](/images/chroniquesoubliees/utilrequest_(3).jpg)
 ---
@@ -33,6 +32,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 > 1. - Cliquer sur "Install", CoF s'installe.
 
 > Le systeme des Chroniques Oubliées Fantasy ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
+Par contre si vous voulez récupérer les compendiums du SRD, il faut aussi installer le module COF-SRD.
 {.is-success}
 ---
 ### Je Cherche ou je partage des macros:
@@ -56,3 +56,6 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 ## 3. Je suis prêt ! Mais euh... je lance comment les dés sur mon ordi ? 
 - [Les tests via la fiche PJ/Rencontres](/fr/systemes/fr-chrooubliees/testdés)
 - [Les tests via les macros systèmes](/fr/systemes/fr-chrooubliees/testmacro)
+
+## 4. Sujets divers
+- [Configurer les effets sur les personnages ou les objets](/fr/systemes/fr-chrooubliees/effets)

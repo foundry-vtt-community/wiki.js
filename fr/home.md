@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-04-19T11:00:02.251Z
+date: 2021-04-25T07:51:42.920Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -24,6 +24,20 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 - Consulter le [FoundryVTT Community Wiki (en Anglais)](https://foundryvtt.wiki/en/home)
 - consulter les Ressources ci-dessous.
 
+## Vidéos tutorielles et Introduction
+ - 1 Achat et installation par Kyllian : [Achat & Installation](https://www.youtube.com/watch?v=uoTwImiVXBU)
+ - 2 Présentation didactique de [Foundry par Samuel Zitterman](https://www.youtube.com/watch?v=DYjrzwfLX80)
+ - 3 Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
+ - 4 Notes de Journaux et utilisation sur les scènes par Jonleb : [Journaux et Scenes](https://www.youtube.com/watch?v=BKRoX_F-fY0=)
+ - 5 Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
+ - 6 Utiliser le les transitions de scènes par Ceizyl : [module de transition de scène](https://www.youtube.com/watch?v=0bYxYCjegZY)
+ - 7 Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
+
+La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
+
+Aures vidéos : 
+ - 1 Interview autour de [FoundryVTT par JDRFactory](https://www.youtube.com/watch?v=mOWEWFj4ZEo)
+
 ## Ressources officielles ...
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop Website](http://foundryvtt.com)
 <i class="fab fa-discord"></i> [Discord](https://discordapp.com/invite/DDBZUDf)
@@ -34,10 +48,6 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
 <i class="fab fa-gitlab"></i> [Gitlab](https://gitlab.com/foundrynet)
 <i class="fab fa-gitlab"></i> [Gitlab Issue Tracker](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
-
-## ... et plus en français
-Vous pouvez retrouver déjà une Foire Aux Questions en français répondant à quelques interrogations : [FAQ Foundry](/fr/faq/faq-main)
-Et des [vidéos "tutorielles" en Français](/fr/faq/videos-tuto), présentant différents aspects de Foundry.
 
 ## Par ou Commencer ...
 Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT ?

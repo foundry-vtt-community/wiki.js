@@ -2,7 +2,7 @@
 title: RollTable#roll refactored to async to now return a Promise in support of asynchronous dice rolling infrastructure.
 description: 
 published: true
-date: 2021-04-14T12:32:05.756Z
+date: 2021-04-21T15:09:41.025Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:25:13.673Z

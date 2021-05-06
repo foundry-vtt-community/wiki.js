@@ -2,12 +2,11 @@
 title: 01 - Présentation
 description: 
 published: true
-date: 2021-02-23T18:26:56.182Z
+date: 2021-04-21T15:06:51.208Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-23T18:25:13.793Z
 ---
-
 
 ## Quelques points à savoir sur le systeme Dnd5 sur FoundryVTT : 
 

@@ -2,12 +2,11 @@
 title: League of FoundryVTT Developers
 description: 
 published: true
-date: 2020-12-06T16:28:11.458Z
+date: 2021-04-21T16:18:27.342Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-21T20:52:48.566Z
 ---
-
 
 <i class="fab fa-discord"></i> [Discord Server](https://discord.gg/2rHs78h)
 <i class="fab fa-github"></i> [Github Org](https://github.com/League-of-Foundry-Developers)

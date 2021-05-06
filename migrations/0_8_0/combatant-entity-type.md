@@ -2,7 +2,7 @@
 title: Create a Combatant embedded entity type which internalizes helper methods for manipulating a combatant entry within the Combat tracker.
 description: 
 published: true
-date: 2021-02-07T16:45:23.893Z
+date: 2021-04-21T15:04:59.534Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T16:45:20.716Z

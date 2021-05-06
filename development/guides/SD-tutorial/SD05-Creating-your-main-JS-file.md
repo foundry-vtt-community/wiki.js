@@ -2,7 +2,7 @@
 title: SD05 Creating-your-main-JS-file
 description: 
 published: true
-date: 2020-12-20T21:50:54.387Z
+date: 2021-04-21T14:51:52.179Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:47.008Z

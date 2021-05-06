@@ -2,7 +2,7 @@
 title: Move Actor owned item management methods (getOwnedItem, createOwnedItem, updateOwnedItem, deleteOwnedItem) to the deprecation path in favor of manipulating OwnedItem instances directly.
 description: 
 published: true
-date: 2021-02-07T17:39:17.906Z
+date: 2021-04-21T15:06:04.848Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:39:14.620Z

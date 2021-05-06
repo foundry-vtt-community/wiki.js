@@ -1,12 +1,20 @@
 ---
 title: Learning API
 description: 
-published: true
-date: 2020-10-12T17:07:46.949Z
+published: false
+date: 2021-05-05T13:26:37.970Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:07.619Z
 ---
+
+> ### This Page has been Unpublished
+> In an effort to clean up some older articles this page was unpublished for the following reasons:
+> - This page is a hodge podge of advice and practical snippets that have not been updated since the wiki migrated to wikijs.
+> - The page does not match its title, which leads me to believe it is some techniques for learning how to read and interact with the Foundry Core API.
+>
+> To be considered for re-publishing, please address the issue above and reach out to the Wiki admins on either the Foundry VTT or League of Foundry Devs discord.
+{.is-danger}
 
 Foundry VTT API can be used to write [script macros](../Macros) (that can be used from hotbar or from chat) or to write your own [extension modules](../Community-Modules) or even your own [system implementations](../System-Development-for-Beginners).
 
@@ -272,4 +280,4 @@ let roll = new Roll("1d20 + @abilities.str.mod + @strangeMacroishBonus", rollDat
   * `game.combat.combatants`: all "Combatant" objects of current combat.
 * distance between 2 tokens: [`canvas.grid.measureDistance(fromToken, toToken, {gridSpaces: True})`](https://foundryvtt.com/api/GridLayer.html#measureDistance)
 
-There are a lot of [other useful snippets](https://foundry-vtt-community.github.io/wiki/API-Snippets/).
+There are a lot of [other useful snippets](https://github.com/VanceCole/macros/tree/master).

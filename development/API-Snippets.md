@@ -1,12 +1,21 @@
 ---
 title: API Snippets
 description: 
-published: true
-date: 2021-01-14T03:56:06.367Z
+published: false
+date: 2021-05-05T13:30:10.748Z
 tags: dnd5e, javascript, api, code
 editor: markdown
 dateCreated: 2020-09-23T00:25:21.757Z
 ---
+
+> ### This Page has been Unpublished
+> In an effort to clean up some older articles this page was unpublished for the following reasons:
+> - These snippets are a mess.
+> - Any useful macros that work from this page belong in the Community Macros Module.
+> - It is unknown what the last Core version any of these snippets were tested in, many pre-date the wiki migration indicating that they are from before 0.7.
+>
+> To be considered for re-publishing, please address the issue above and reach out to the Wiki admins on either the Foundry VTT or League of Foundry Devs discord.
+{.is-danger}
 
 Code snippets seen on the Discord channel.
 
