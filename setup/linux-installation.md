@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T02:45:25.692Z
+date: 2021-05-06T02:47:24.731Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -82,8 +82,8 @@ We must use a non-root user that is part of the `sudoers` group to properly cont
 
 You can leave all other fields blank or fill with whatever info you'd like.
 
-:arrow_down_small:
-<details><summary>  Ubuntu/Debian/Raspberry Pi OS</summary>
+
+<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼</summary>
   
 ```
 adduser foundry
@@ -92,7 +92,7 @@ usermod -aG sudo foundry
 ```
 </details>
 
-<details><summary>CentOS/Red Hat/Fedora</summary>
+<details><summary>CentOS/Red Hat/Fedora ▼</summary>
   
 ```
 adduser foundry
@@ -126,7 +126,7 @@ We will now install the necessary software to run and manage Foundry behind a re
 
 <a name="B5" href="#B5">B5.</a> First, let's update the system to make sure we have everything as up-to-date as possible. This may take a few minutes.
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS</summary>
+<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
 sudo apt update
@@ -135,7 +135,7 @@ sudo apt upgrade -y
 ```
 </details>
 
-<details><summary>CentOS/Red Hat/Fedora</summary>
+<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
 sudo dnf update -y
@@ -149,14 +149,14 @@ sudo dnf update -y
 
 <a name="B6" href="#B6">B6.</a> Add the nodejs 14 repository to the system package manager:
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS</summary>
+<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
 curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 ```
 </details>
 
-<details><summary>CentOS/Red Hat/Fedora</summary>
+<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
@@ -165,7 +165,7 @@ curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 
 <a name="B7" href="#B7">B7.</a> Add the caddy repository to the system package manager:
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS</summary>
+<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
@@ -174,7 +174,7 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 ```
 </details>
 
-<details><summary>CentOS/Red Hat/Fedora</summary>
+<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
 sudo dnf install 'dnf-command(copr)'
@@ -184,7 +184,7 @@ sudo dnf copr enable @caddy/caddy -y
 
 <a name="B8" href="#B8">B8.</a> Install nodejs, caddy, unzip, and nano:
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS</summary>
+<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
 sudo apt update
@@ -192,7 +192,7 @@ sudo apt install nodejs caddy unzip nano -y
 ```
 </details>
 
-<details><summary>CentOS/Red Hat/Fedora</summary>
+<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
 sudo dnf install nodejs caddy unzip nano -y
@@ -282,7 +282,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
   
 <a name="C11" href="#C11">C11.</a> Follow the steps below according to your relevant setup:
 
-<details><summary>Cloud-hosted server</summary>
+<details><summary>Cloud-hosted server ▼ </summary>
 
 
   <a name="C12a" href="#C12a">C12a.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` portion with your actual domain name:
@@ -303,7 +303,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
   
 </details>
 
-<details><summary>Home network server</summary>
+<details><summary>Home network server ▼ </summary>
   
   <a name="C12b" href="#C12b">C12b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name and server internal IP address:
   
