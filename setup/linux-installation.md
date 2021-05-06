@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T02:34:14.352Z
+date: 2021-05-06T02:45:25.692Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -82,8 +82,8 @@ We must use a non-root user that is part of the `sudoers` group to properly cont
 
 You can leave all other fields blank or fill with whatever info you'd like.
 
-
-<details><summary>Ubuntu/Debian/Raspberry Pi OS</summary>
+:arrow_down_small:
+<details><summary>  Ubuntu/Debian/Raspberry Pi OS</summary>
   
 ```
 adduser foundry
