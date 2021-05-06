@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T02:50:50.152Z
+date: 2021-05-06T02:54:33.471Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -77,6 +77,8 @@ We must use a non-root user that is part of the `sudoers` group to properly cont
 ```
 
 <a name="B2" href="#B2">B2.</a> The `<user>` field will show you which user you are connected as. If it shows `root` then we need to create a new user and add them to sudoers. If the user is **NOT** `root` then you can skip and continue to step [B5](#system-setup).
+
+>Any references of `<user>` in the rest of the guide should be replaced with `foundry` in this case. {.is-info}
 
 <a name="B3" href="#B3">B3.</a> Click the heading for your linux distribution to expand the commands to create a new user. We will create a user named `foundry` and add them to sudoers. Choose a strong password for the user that you will remember.
 
