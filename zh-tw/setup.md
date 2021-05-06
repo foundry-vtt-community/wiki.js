@@ -16,7 +16,7 @@ dateCreated: 2021-04-21T14:44:25.744Z
 ## 下載
 可以通過[FoundryVTT.com]（https://foundryvtt.com）上的個人資料頁面下載FoundryVTT。通過單擊任意頁面右上角的用戶名，可以訪問您的個人資料頁面。在此頁面上，單擊您的頭像和用戶名下方的「Purchased Licenses」。您將在您的許可下找到適用於Windows，MacOS，Linux和Node.JS的下載鏈接。
 
-您將需要決定如何安裝FoundryVTT，但是共有3種常見設置：自行託管，雲託管和合作夥伴託管。 [這些選項的概述]（https://foundryvtt.com/article/hosting/）可在官方網站上找到。
+您將需要決定如何安裝FoundryVTT，但是共有3種常見設置：自行託管，雲託管和合作夥伴託管。 [方法](https://foundryvtt.com/article/hosting/)可在官方網站上找到。
 
 一旦確定了要託管FoundryVTT的方式，則應查看該套件的安裝指南。我們提供各種用於各種雲和自託管選項的。
 
