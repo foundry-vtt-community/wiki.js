@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: false
-date: 2021-05-06T02:10:33.641Z
+date: 2021-05-06T02:26:45.187Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -365,4 +365,35 @@ nano ~/foundryuserdata/Config/options.json
 
 # (Optional) D. Accessing Userdata Files with Cyberduck
 ## Objective
+At the end of this optional section, you will be able to directly access the files in your userdata directory with Cybderuck. This is useful for moving, deleting, or bulk uploading assets for Foundry. 
+
+## Install and Setup Cyberduck
+
+<a name="D1" href="#D1">D1.</a> Download and install Cyberduck for your platform from the [Cyberduck website](https://cyberduck.io/download/).
+
+<a name="D2" href="#D2">D2.</a> Once installed, open Cyberduck and click **Open Connection**:
+
+![Cyberduck - Open Connection](/images/generic-linux/cyberduck1.webp)
+
+<a name="D3" href="#D3">D3.</a> In the Open Connection window, click the dropdown menu and select **SFTP (SSH File Transfer Protocol)**
+
+![Cyberduck - Choose SFTP](/images/generic-linux/cyberduck2.webp)
+
+<a name="D4" href="#D4">D4.</a> Enter the following information in the corresponding fields, replacing any values in `<>` with the values as earlier in the guide:
+
+* Server: `<your.domain.name>` or `<server internal IP address>` if hosting in a home network
+* Username: `<user>` 
+* Password: `<password>` (Leave blank if your existing user needs an ssh private key file to connect)
+* SSH Private Key: Click `Browse` and select your SSH Private Key file. You may need to change the file type to **All Files**. Leave blank if using a password only. 
+
+<a name="D5" href="#D5">D5.</a> Click **Connect**
+
+<a name="D6" href="#D6">D6.</a> Double click on the `foundryuserdata` directory, then the `Data` directory.
+
+<a name="D7" href="#D7">D7.</a> Click the **Bookmark** menu, then **New Bookmark**. Close the window that pops up. 
+
+>You now have a bookmarked connection in Cyberduck to the location of your Foundry userdata directory. Simply launch Cyberduck and double click the bookmark to connect and manage your files. {.is-info}
+
+
+
 
