@@ -195,7 +195,7 @@ Displays this:
 
 **Learning HTML?**
 
-HTML非常簡單。 如果您在文本周圍加上<h1>標記</h1>，就已經是在使用HTML了！ 如果您想學習一些基本的HTML，則到[此處](https://www.freecodecamp.org/learn/)完成前幾節課，這不超過20分鐘。
+HTML非常簡單。 如果您在文本周圍加上標記，就已經是在使用HTML了！ 如果您想學習一些基本的HTML，則到[freecodecamp](https://www.freecodecamp.org/learn/)完成前幾節課，這不超過20分鐘。
 
 **Using the built-in HTML Editor**
 您不必完全學習任何HTML就能使您的格式美觀。 在任何描述框中（在您的角色，日誌，道具上），都應該有一個可以使用的文本編輯器。 只需將骰子和引用及按鈕結合使用，即可在那裡進行格式化，從而使事情變得更加漂亮。
@@ -213,5 +213,5 @@ HTML非常簡單。 如果您在文本周圍加上<h1>標記</h1>，就已經是
 這是嵌入規則引用，SRD，影片甚至角色卡的有用方法。 由於網站的私有設置，某些網站將不會接受使用嵌入，而某些網站（例如YouTube）則要求您使用特殊的嵌入鏈接。
 
 # Approximating a Character Sheet
-如果您使用的是Simple Worldbuilding System，則可以在角色的“描述”框中將易於使用（如果難看）的角色表與可單擊的擲骰按鈕放在一起，除了骰子語法，引用和格式外，什麼也不用。 在這裡有一個示範：
+如果您使用的是Simple Worldbuilding System，則可以在角色卡的“描述”框中放置可單擊的擲骰按鈕，除了骰子語法，引用和格式外，什麼也不用改變。 在這裡有一個示範：
 ![](https://paper-attachments.dropbox.com/s_18A9487B0EE61A81F393FA91A13C89DE192362383B6581DB8EF3234F6BDD2D71_1587945338468_image.png)

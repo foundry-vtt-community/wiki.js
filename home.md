@@ -13,6 +13,7 @@ dateCreated: 2020-09-18T19:13:46.176Z
 **NOTE:** This wiki serves as a repository of community-curated information about the **Foundry Virtual Tabletop** and is 100% community-managed and run. We do not represent Foundry Gaming, LLC in any way.
 
 ## Wiki Localizations
+- [正體中文 (Traditional Chinese)](https://foundryvtt.wiki/zh-tw/home)
 - [日本語 (Japanese)](https://foundryvtt.wiki/ja/home)
 - [English (English)](https://foundryvtt.wiki/en/home)
 - [Français (French)](https://foundryvtt.wiki/fr/home)
