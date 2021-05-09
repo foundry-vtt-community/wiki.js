@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-04-21T16:20:14.663Z
+date: 2021-05-09T05:33:21.806Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -53,6 +53,13 @@ There are a variety of community-created module and system starter kits out ther
 - Lightly Opinionated
 - **Supports:** Typescript
 - **Description:** A template for typescript projects that uses manifest+ and auto creates versions using Github Actions.
+
+
+### [TS Hot Module Replacement Template](https://github.com/Blackcloud010/FoundryVTT-Module-Template-Hotswap)
+- Lightly Opinionated
+- **Supports:** Typescript, Javascript, SCSS, ESLint
+- **Contains:** Bundler and Hot Module Replacement through webpack.
+- **Description:** A template for creating foundry modules using typescript. Project files are setup to be hot reloaded.
 
 
 ### [NickEast's Foundry Project Creator](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project) (now archived)
