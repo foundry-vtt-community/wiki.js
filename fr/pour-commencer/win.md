@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2021-04-26T20:07:21.067Z
+date: 2021-05-10T14:12:54.663Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -122,7 +122,6 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 >**<u>ATTENTION:</u>** Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher **UPnP** dans l'onglet 'Administration' de Foundry.
 >*Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
 La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT*.
-><u>**ATTENTION:**</u> Les utilisateurs **Freebox** devront choisir un port entre <u>**49152 et 65535**</u>, par exemple le choix du port **50000** pour Foundry VTT fonctionne parfaitement sur une freebox.
 {.is-warning}
 
 Par défaut, le port utilisé par Foundry VTT est le **Port 30000** et il faudra donc ouvrir ce dernier sur le NAT de votre Box Internet.
@@ -130,6 +129,12 @@ Afin que vous puissiez utiliser Foundry VTT, nous allons devoir utiliser la [red
 Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4**, il faudra dans un premier temps :
 	- `rediriger le port externe 30000 vers le port de destination 30000 en TCP.`
+
+### Utilisateur Freebox
+><u>**ATTENTION:**</u> Les utilisateurs **Freebox** (**hors Freebox Delta**) devront choisir un port entre <u>**49152 et 65535**</u>, par exemple le choix du port **50000** pour Foundry VTT fonctionne parfaitement sur une freebox.
+{.is-warning}
+
+
 
 ## Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
