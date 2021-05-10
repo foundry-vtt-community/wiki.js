@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2021-05-10T14:12:54.663Z
+date: 2021-05-10T14:37:17.340Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -130,11 +130,28 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 - **En IPv4**, il faudra dans un premier temps :
 	- `rediriger le port externe 30000 vers le port de destination 30000 en TCP.`
 
-### Utilisateur Freebox
+
+### Utilisateur Freebox et IPv4 Full-Stack
 ><u>**ATTENTION:**</u> Les utilisateurs **Freebox** (**hors Freebox Delta**) devront choisir un port entre <u>**49152 et 65535**</u>, par exemple le choix du port **50000** pour Foundry VTT fonctionne parfaitement sur une freebox.
 {.is-warning}
 
+Face à la pénurie des IPv4 (et à leur prix), Free a mis en place un système de partage des adresses IP entre 4 abonnés, comme donc une adresse d’immeuble partagée avec 4 logements. Ce système fait que chaque abonné se voit dédié une plage de ports (1-16363, puis 16384-32767 etc). On a donc une IP publique fixe mais partagée.
 
+Free change depuis quelques temps déjà les IP dites “Full Stack” de ses clients (fixes & dédiées) en IP partagées.
+
+Cela ne pose pas de problème pour la plupart des utilisateurs mais peut se révéler gênant pour ceux qui utilisent – par exemple – leur Freebox en mode “bridge” et y branchent un autre routeur qu’ils veulent pouvoir gérer entièrement, et qui utilisaient des ports .. qui sont désormais dédiés à d’autres clients (les 3 autres avec qui ils partagent une IP si vous avez bien suivi).
+
+Et Free change aussi – bizarrement – les IP publiques dédiées “fixes” de certains clients.. pour d’autres IP. Pourquoi, je l’ignore mais ça crée évidemment des surprises et des appels.
+
+Si vous avez besoin de demander une IPv4 publique “full stack” chez Free, ça se fait dans votre compte client, dans la section **“Ma Freebox”** :
+
+![ipv4-full-stack-demande-free-1024x759.webp](/setup/winstall/ipv4-full-stack-demande-free-1024x759.webp)
+
+Vous aurez ensuite un avertissement :
+
+![free-ipv4-full-stack-avertissement-1024x361.webp](/setup/winstall/free-ipv4-full-stack-avertissement-1024x361.webp)
+
+Validez, puis redémarrez votre box 30 minutes après (ou moins parfois) et vous bénéficieriez à nouveau d’une IP fixe (à peu près) v4 full-stack.
 
 ## Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
