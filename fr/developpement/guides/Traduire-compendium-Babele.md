@@ -1,15 +1,17 @@
 ---
-title: Traduire un compedium avec Babele
+title: Traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-11T17:07:36.849Z
+date: 2021-05-11T17:16:07.345Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
 ---
 
-# Traduire un compedium avec Babele
-  
+# Traduction simple d'un compedium avec Babele
+> Cet page explique comment mapper vos traductions de compendia grâce au module [Babele](/fr/developpement/guides/Traduire-compendium-Babele), leur permettant ainsi de rester compatibles avec un système de base et d'éviter de recréer tous les objets déjà présents. Attention, il n'explique pas comment traduire un système complet.
+{.is-info}
+
 ## Création d'un module
 ### Arborescence du dossier d'un module
 
@@ -22,10 +24,10 @@ dateCreated: 2021-05-11T14:37:27.438Z
 ### Structure des fichiers de traduction de Compendium
   
   
-> Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json*** (tel qu'exporté par Babele, voir plus bas), où :
->   - ***systeme*** correspond à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
->   - ***compendium*** au nom exact du fichier de compendium sans l'extension .db (ex: skills pour skills.db, feats pour feats.db, etc)
-{.is-warning}
+> Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json***, tel qu'exporté par Babele (voir plus bas).
+{.is-warning} 
+- ***systeme*** correspondant à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
+- ***compendium*** correpondant au nom exact du fichier de compendium sans l'extension .db (ex: skills pour skills.db, feats pour feats.db, etc)
 
   
   
