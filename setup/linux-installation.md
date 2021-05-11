@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-11T23:28:34.430Z
+date: 2021-05-11T23:33:55.462Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -44,7 +44,7 @@ This guide supports the following distributions:
 1. Debian 11 based, such as (but not limited to):
 a. Debian
 b. Ubuntu
-c. Raspberry Pi OS
+c. Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14)
 2. CentOS 8 based, such as (but not limited to):
 a. CentOS
 b. Red Hat Linux
