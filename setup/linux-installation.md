@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T13:17:14.166Z
+date: 2021-05-11T23:28:34.430Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -197,7 +197,7 @@ sudo apt install nodejs caddy unzip nano -y
 <details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
-sudo dnf install nodejs caddy unzip nano -y
+sudo dnf install nodejs npm caddy unzip nano -y
 ```
 </details>
 
