@@ -2,14 +2,14 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T16:02:24.865Z
+date: 2021-05-12T16:03:11.502Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
 ---
 
 # Débutant : traduction simple d'un compedium avec Babele
-> Cette page explique comment mapper vos traductions de compendia grâce au module [Babele](https://foundryvtt.com/packages/babele/), leur permettant ainsi de rester compatibles avec un système de base et d'éviter de recréer tous les objets déjà présents et de casser les différents liens vers d'autres fiches de personnage ou objets de compendium. Attention, il n'explique pas comment traduire un système complet.
+> Cette page explique comment mapper vos traductions de compendium grâce au module [Babele](https://foundryvtt.com/packages/babele/), leur permettant ainsi de rester compatibles avec un système de base et d'éviter de recréer tous les objets déjà présents et de casser les différents liens vers d'autres fiches de personnage ou objets de compendium. Attention, il n'explique pas comment traduire un système complet.
 {.is-info}
   
 Pour plus de détails sur la traduction d'un système complet ou le scripting avec Babele, voir sur la [page Gitlab du développeur](https://gitlab.com/riccisi/foundryvtt-babele).
@@ -164,7 +164,7 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 > Notez que chaque nom est systématiquement entouré de guillemets et terminé par une virgule (***à l'exeption du dernier élément d'une série***), obligatoire avec le format d'échange de données JSON : `"name": "Soldat",`.
 {.is-info}
 
-Plusieurs traductions d'objets seront placés à la suite les une des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.  
+Plusieurs traductions d'objets seront placées à la suite les unes des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.  
 
 ### Outils pour éditer ces fichiers
  
