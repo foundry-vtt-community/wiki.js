@@ -2,7 +2,7 @@
 title: Traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T08:20:23.744Z
+date: 2021-05-12T08:20:51.663Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -28,8 +28,7 @@ La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
 ```json
 {
     "label": "Classes FR",
-    "entries":
-  		{
+    "entries":{
        "Soldier": { 
            "name": "Soldat", 
            "description": "<p>Que vous ayez pris les armes pour protéger les autres ..." 
