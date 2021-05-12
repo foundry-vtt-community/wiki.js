@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2021-05-12T04:18:39.932Z
+date: 2021-05-12T04:19:31.539Z
 tags: manifest, manifest+
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -13,7 +13,9 @@ specification for module and system development intended to add additional data 
 Foundry VTT and by external applications.
 
 This specification is developed by The League of Extraordinary Foundry Developers. The core Foundry VTT software 
-simply ignores these additional manifest fields. A number of external applications including [The Bazaar](https://forge-vtt.com/bazaar) package browser on The Forge and [Foundry Hub](https://www.foundryvtt-hub.com/packages/) use this extended data to give the general public a rich experience by adding cover images, icons, enhanced contact details, and more.
+simply ignores these additional manifest fields. A number of external applications including [The Bazaar](https://forge-vtt.com/bazaar) package browser on 
+The Forge and [Foundry Hub](https://www.foundryvtt-hub.com/packages/) use this extended data to give the general public a rich experience by adding cover images, icons, 
+enhanced contact details, and more.
 
 <a name="package-manifest-standard-fields"></a>
 ## Package Manifest Standard Fields
