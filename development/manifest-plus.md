@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2021-05-12T01:48:55.602Z
+date: 2021-05-12T03:31:23.077Z
 tags: manifest, manifest+
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -57,12 +57,12 @@ All Manifest+ fields are *optional*, but they are all useful. We recommend inclu
 
 <a name="manifest-version"></a>
 ### Version
-Document Version: 1.1.1
+Document Version: 1.2.0
 
 It is recommended to include a `manifestPlusVersion` field in your manifest to denote which version of Manifest+ you have implemented. Breaking changes are not intended for this specification, but if they do occur the major version will be incremented in accordance with [semantic versioning](https://semver.org/).
 
 ```json
-"manifestPlusVersion": "1.1.1"
+"manifestPlusVersion": "1.2.0"
 ```
 
 
@@ -216,5 +216,5 @@ conflict occurs.
 #### version: 1.1.0
 - Added `ko-fi` to `authors`, expected to be only the ko-fi username.
 
-#### version: 1.1.1
+#### version: 1.2.0
 - Added `caption` field to the `media` array
