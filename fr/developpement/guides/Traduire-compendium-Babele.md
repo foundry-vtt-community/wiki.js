@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:00:08.001Z
+date: 2021-05-12T09:01:14.920Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -24,14 +24,13 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 Votre module doit idéalement comporter un fichier javascript de déclaration de traduction Babele du type suivant :
 ```js
 Hooks.on('init', () => {
-
-    if(typeof Babele !== 'undefined') {
-        Babele.get().register({
-            module: 'FoundryVTT-dnd5e-it',
-            lang: 'it',
-            dir: 'compendium'
-        });
-    }
+	if(typeof Babele !== 'undefined') {
+		Babele.get().register({
+			module: 'sfrpg-fr-translation',
+			lang: 'fr',
+			dir: 'compendium'
+		});
+	}
 });
 ```
   
