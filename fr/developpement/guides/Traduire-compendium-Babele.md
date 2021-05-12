@@ -2,14 +2,14 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T15:56:40.037Z
+date: 2021-05-12T15:58:11.231Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
 ---
 
 # Débutant : traduction simple d'un compedium avec Babele
-> Cet page explique comment mapper vos traductions de compendia grâce au module [Babele](https://foundryvtt.com/packages/babele/), leur permettant ainsi de rester compatibles avec un système de base et d'éviter de recréer tous les objets déjà présents. Attention, il n'explique pas comment traduire un système complet.
+> Cette page explique comment mapper vos traductions de compendia grâce au module [Babele](https://foundryvtt.com/packages/babele/), leur permettant ainsi de rester compatibles avec un système de base et d'éviter de recréer tous les objets déjà présents et de casser les différents liens vers d'autres fiches de personnage ou objets de compendium. Attention, il n'explique pas comment traduire un système complet.
 {.is-info}
   
 Pour plus de détails sur la traduction d'un système complet ou le scripting avec Babele, voir sur la [page Gitlab du développeur](https://gitlab.com/riccisi/foundryvtt-babele).
