@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T08:52:30.455Z
+date: 2021-05-12T08:54:03.761Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -43,6 +43,7 @@ La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
 }
 
 ```
+Le format de ce fichier est dit "***compatible***" dans Babele par opposition à l'ancien format "*legacy*".
 - l'attribut `"label"` correspond au nom long qui remplacera le nom du compendium dans Foundry VTT.
 - la liste `"entries"`correspond à la liste des objets du compendium
 - la liste `"Soldier"` correpond au nom **original** de l'objet à traduire ainsi qu'à l'objet lui même et ses détails :
