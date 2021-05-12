@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:46:58.395Z
+date: 2021-05-12T10:54:57.584Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -15,12 +15,12 @@ dateCreated: 2021-05-11T14:37:27.438Z
 Pour plus de détails sur la traduction d'un système complet ou le scripting avec Babele, voir sur la [page Gitlab du développeur](https://gitlab.com/riccisi/foundryvtt-babele).
   
 ## Index du document
-1. [Création d'un module](#creation-d-un-module)
-	1.1. [Arborescence du dossier d'un module](#arborescence-du-dossier-d'un-module)
-	1.2. [Fichier module.json type pour Babele](#fichier-module.json-type-pour-babele)
-	1.2. [Fichier d'enregistrement de Babele](#fichier-d'enregistrement-de-babele)
+1. [Création d'un module](#creation-dun-module)
+	1.1. [Arborescence du dossier d'un module](#arborescence-du-dossier-dun-module)
+	1.2. [Fichier module.json type pour Babele](#fichier-module-json-type-pour-babele)
+	1.2. [Fichier d'enregistrement de Babele](#fichier-denregistrement-de-babele)
 2. [Comment traduire](#comment-traduire)
-	2.1. [Récupérer les fichiers JSON de Babele](#récupérer-les-fichiers-json-de-babele)
+	2.1. [Récupérer les fichiers JSON de Babele](#recuperer-les-fichiers-json-de-babele)
   2.2. [Structure des fichiers de traduction JSON](#structure-des-fichiers-de-traduction-json)
 3. 
 4. 
