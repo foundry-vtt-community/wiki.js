@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T23:16:45.480Z
+date: 2021-05-12T23:18:08.256Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -100,7 +100,7 @@ Exemple type d'un fichier de module.json :
   4. `"version"`: la version minimale requise du système ou module requis par votre module.
 - `"esmodules"` : scripts à lancer au chargement du module. Typiquement le script register-babele.js, mais d'autres peuvent être ajouté.
 - `"packs"` : optionnel dans notre cas.
-- `"languages"` : langage du module.
+- `"languages"` : langages du module.
 - `"system"` : systèmes avec lesquels le module est compatible
 - `"systemVersion"` : la version du système avec le module est compatible.
 - `"url"` : url du site de documentation de ce module ou de son auteur.
