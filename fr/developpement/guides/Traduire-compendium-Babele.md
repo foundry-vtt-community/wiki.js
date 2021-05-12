@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T21:37:01.235Z
+date: 2021-05-12T22:47:02.133Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -23,10 +23,11 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 	2.1. [Récupérer les fichiers JSON de Babele](#récupérer-les-fichiers-json-de-babele)
   2.2. [Structure des fichiers de traduction JSON](#structure-des-fichiers-de-traduction-json)
   2.3. [Outils pour éditer ces fichiers](#outils-pour-éditer-ces-fichiers)
-3. [Diffuser son module](#diffuser-son-module)
-	3.1. [Diffuser son module](#diffuser-son-module)
-  3.2. [Partage de fichier ZIP](#partage-de-fichier-zip)
-  3.3. [Exemple de dépôt GitHub](#exemple-de-dépôt-github)
+3. 
+4. [Diffuser son module](#diffuser-son-module)
+	4.1. [Diffuser son module](#diffuser-son-module)
+  4.2. [Partage de fichier ZIP](#partage-de-fichier-zip)
+  4.3. [Exemple de dépôt GitHub](#exemple-de-dépôt-github)
   
 ## Création d'un module
 ### Arborescence du dossier d'un module
@@ -165,7 +166,28 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 Plusieurs traductions d'objets seront placées à la suite les unes des autres dans la liste `"entries"` et comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.  
 
 ### Outils pour éditer ces fichiers
- 
+
+## Ajouter des attribut à traduire
+
+### Définir les attributs
+```json
+"label": "Compendium-traduit",
+	"mapping": {
+		"source": "data.source",
+		"type": "data.type",
+    "subtype": "data.subtype"
+  },
+```
+### Ajouter les attributs à un objet
+```json
+{
+	...
+  "description": "<p>Lorem ipsum dolor sit amet</p>",
+  "source": "Règles p.42",
+	"type": "arme",
+	"subtype": "corps à corps"
+},
+```
 ## Diffuser son module
   
   
