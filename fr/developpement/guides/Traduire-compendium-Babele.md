@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:37:31.730Z
+date: 2021-05-12T09:38:07.741Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -62,7 +62,7 @@ Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le
  
 *Exemple : `sfrpg.classes.json`*
   
-### Structure des fichiers de traduction de Compendium
+### Structure des fichiers de traduction JSON
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
 ```json
 {
