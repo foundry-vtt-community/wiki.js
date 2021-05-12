@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T16:05:04.877Z
+date: 2021-05-12T16:09:23.879Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -119,7 +119,7 @@ Hooks.on('init', () => {
 	}
 });
 ```
-- l'attribut `module: 'systemefoundry-fr-translation'` spécifie le nom court du module de traduction.
+- l'attribut `module: 'systemefoundry-fr-translation'` spécifie le nom court du module de traduction à charger au lancement du monde.
 - L'attribut `dir: 'compendium'` permet de préciser le dossier à l'interieur duquel Babele trouvera les fichiers de traduction de compendia au format JSON.
   
 Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules. Par exemple, si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
@@ -161,7 +161,7 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 	1. `"name"` est le nom traduit de lobjet
   2. `"description"` est la... Traduction de la description de l'objet
 
-> Notez que chaque nom est systématiquement entouré de guillemets et terminé par une virgule (***à l'exeption du dernier élément d'une série***), obligatoire avec le format d'échange de données JSON : `"name": "Soldat",`.
+> Notez que chaque nom est systématiquement entouré de guillemets et terminé par une virgule (***à l'exeption du dernier élément d'une série***), format de d'écriture obligatoire pour les fichiers d'échange de données JSON. Par exemple : `"name": "Soldat",`.
 {.is-info}
 
 Plusieurs traductions d'objets seront placées à la suite les unes des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.  
