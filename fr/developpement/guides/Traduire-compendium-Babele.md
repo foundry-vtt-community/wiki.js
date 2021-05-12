@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T16:00:23.804Z
+date: 2021-05-12T16:00:54.860Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -119,7 +119,7 @@ Hooks.on('init', () => {
 	}
 });
 ```
-- l'attribut `module: 'systemefoundry-fr-translation'` spécifie le nom court du module de traduction (sans espace, ni caractère accentué ou spécial, ni majuscule).
+- l'attribut `module: 'systemefoundry-fr-translation'` spécifie le nom court du module de traduction.
 - L'attribut `dir: 'compendium'` permet de préciser le dossier à l'interieur duquel Babele trouvera les fichiers de traduction de compendia au format JSON.
   
 Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules : si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
