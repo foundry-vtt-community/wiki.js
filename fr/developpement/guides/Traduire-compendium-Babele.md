@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T22:57:12.758Z
+date: 2021-05-12T22:58:08.285Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
