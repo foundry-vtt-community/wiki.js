@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T15:58:11.231Z
+date: 2021-05-12T16:00:23.804Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -32,7 +32,6 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 ### Arborescence du dossier d'un module
   
 ![Compendium Folder.png](/fr/developpement/babele/dir-compendium.png "Compendium Folder")
-  
   
 ```
 systemefoundry-fr-translation
@@ -113,15 +112,15 @@ Votre module doit idéalement comporter un fichier javascript (par exemple : `re
 Hooks.on('init', () => {
 	if(typeof Babele !== 'undefined') {
 		Babele.get().register({
-			module: 'sfrpg-fr-translation',
+			module: 'systemefoundry-fr-translation',
 			lang: 'fr',
 			dir: 'compendium'
 		});
 	}
 });
 ```
-- l'attribut `module: 'sfrpg-fr-translation'` spécifie le module de traduction.
-- L'attribut `dir: 'compendium'` permet de préciser le dossier à l'interieur duquel Babele trouveras les fichiers de traduction de compendia au format JSON.
+- l'attribut `module: 'systemefoundry-fr-translation'` spécifie le nom court du module de traduction (sans espace, ni caractère accentué ou spécial, ni majuscule).
+- L'attribut `dir: 'compendium'` permet de préciser le dossier à l'interieur duquel Babele trouvera les fichiers de traduction de compendia au format JSON.
   
 Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules : si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
     
