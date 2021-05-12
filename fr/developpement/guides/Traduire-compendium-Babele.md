@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T08:56:47.114Z
+date: 2021-05-12T09:00:08.001Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -21,7 +21,19 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 
   
 ### Fichier d'enregistrement de Babele
-  
+Votre module doit idéalement comporter un fichier javascript de déclaration de traduction Babele du type suivant :
+```js
+Hooks.on('init', () => {
+
+    if(typeof Babele !== 'undefined') {
+        Babele.get().register({
+            module: 'FoundryVTT-dnd5e-it',
+            lang: 'it',
+            dir: 'compendium'
+        });
+    }
+});
+```
   
 ### Structure des fichiers de traduction de Compendium
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
