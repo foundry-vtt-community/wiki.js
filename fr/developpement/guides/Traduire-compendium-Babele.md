@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T11:35:16.428Z
+date: 2021-05-12T15:56:40.037Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -35,7 +35,7 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
   
   
 ```
-monmodule-fr-translation
+systemefoundry-fr-translation
 │   module.json
 │   register-babele.js
 │
@@ -47,7 +47,7 @@ monmodule-fr-translation
 Exemple type d'un fichier de module.json :
 ```json
 {
-  "name": "monmodule-fr-translation",
+  "name": "systemefoundry-fr-translation",
   "title": "Système Foundry - Traduction Française",
   "description": "Module de traduction du système Système Foundry en Français, basé sur Babele.",
   "version": "0.2.37",
