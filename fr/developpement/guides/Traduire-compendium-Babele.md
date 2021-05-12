@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T22:49:49.543Z
+date: 2021-05-12T22:50:43.150Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -170,7 +170,7 @@ Plusieurs traductions d'objets seront placées à la suite les unes des autres d
 ## Ajouter des attribut à traduire
 
 ### Définir les attributs
-Dans le fichier Babele JSON de traduction (du type *système.compedium.json*), ajouter vos mapping à la suite de l'attribut `"label"` et avant les `"entries"` comme dans l'exemple suivant :
+Dans les premières lignes du fichier Babele JSON de traduction (du type *système.compedium.json*), ajouter vos mappings à la suite de l'attribut `"label"` et avant les `"entries"` comme dans l'exemple suivant :
 ```json
 "label": "Compendium-traduit",
 	"mapping": {
