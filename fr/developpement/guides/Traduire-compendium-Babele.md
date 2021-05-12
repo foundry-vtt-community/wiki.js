@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T23:03:56.214Z
+date: 2021-05-12T23:16:45.480Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -86,26 +86,26 @@ Exemple type d'un fichier de module.json :
 }
 ```
 **Attributs notables :**
-- `"name"` : 
-- `"title"` : 
-- `"description"` : 
-- `"version"` : 
-- `"minimumCoreVersion"` : 
-- `"compatibleCoreVersion"` : 
-- `"author"` : 
-- `"dependencies"` : 
-	1. `"name"` : 
-  2. `"type"`: 
-  3. `"manifest"`: 
-  4. `"version"`: 
-- `"esmodules"` : 
-- `"packs"` : 
-- `"languages"` : 
-- `"system"` : 
-- `"systemVersion"` : 
-- `"url"` : 
-- `"manifest"` : 
-- `"download"` : 
+- `"name"` : nom court du module (lettres minuscule, sans caractère spécial ni accentué et sans espace).
+- `"title"` : titre plus détaillé et libre du module, celui qui s'affichera dans l'explorateur de modules de Foundry VTT.
+- `"description"` : description qui s'affichera dans les détails du module dans l'explorateur de modules de Foundry VTT.
+- `"version"` : version de ce module.
+- `"minimumCoreVersion"` : version minimale compatible de Foundry VTT.
+- `"compatibleCoreVersion"` : version maximale compatible de Foundry VTT.
+- `"author"` : auteur du module.
+- `"dependencies"` : dépendances du module, à savoir les autres modules ou systèmes nécessaires au fonctionnement de ce module. Typiquement les dépendances sont le système traduit ainsi que , bien entendu le module Babele.
+	1. `"name"` : nom du module ou du système requis par votre module.
+  2. `"type"`: système ou module
+  3. `"manifest"`: lien optionnel ciblant l'installation du module ou du système requis. Ce qui permet par exemple de proposer d'installer automatiquement Babele avec votre module.
+  4. `"version"`: la version minimale requise du système ou module requis par votre module.
+- `"esmodules"` : scripts à lancer au chargement du module. Typiquement le script register-babele.js, mais d'autres peuvent être ajouté.
+- `"packs"` : optionnel dans notre cas.
+- `"languages"` : langage du module.
+- `"system"` : systèmes avec lesquels le module est compatible
+- `"systemVersion"` : la version du système avec le module est compatible.
+- `"url"` : url du site de documentation de ce module ou de son auteur.
+- `"manifest"` : lien vers le manifest d'installation du module.
+- `"download"` : fichier ZIP à télécharger contenant tous les fichiers du module.
 
 ### Fichier d'enregistrement de Babele
 Votre module doit idéalement comporter un fichier javascript (par exemple : `register-babele.js`) permettant de déclarer automatiquement à Foundry VTT la traduction Babele lorsque le module est activé. Le fichier suivant est une déclaration typique :
