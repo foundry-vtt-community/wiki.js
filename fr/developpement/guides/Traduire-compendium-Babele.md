@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T08:54:03.761Z
+date: 2021-05-12T08:54:42.029Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -49,12 +49,10 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 - la liste `"Soldier"` correpond au nom **original** de l'objet à traduire ainsi qu'à l'objet lui même et ses détails :
 	1. `"name"` au nom traduit de lobjet
   2. `"description"` à la... Traduction de la description de l'objet
-  
 > Notez que chaque nom est systématiquement entouré de guillemets et terminé par une virgule (***à l'exeption du dernier élément d'une série***), obligatoire avec le format d'échange de données JSON : `"name": "Soldat",`.
 {.is-info}
 
-  
-  Plusieurs traductions d'objets seront placés à la suite les une des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.
+Plusieurs traductions d'objets seront placés à la suite les une des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.
   
 > Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json***, tel qu'exporté par Babele (voir plus bas).
 {.is-warning}
