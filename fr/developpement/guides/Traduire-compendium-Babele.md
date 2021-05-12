@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T11:03:18.431Z
+date: 2021-05-12T11:16:02.498Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -32,8 +32,69 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 ### Arborescence du dossier d'un module
 
 ### Fichier module.json type pour Babele
+Exemple type d'un fichier de module.json :
+```json
+{
+  "name": "monmodule-fr-translation",
+  "title": "Système Foundry - Traduction Française",
+  "description": "Module de traduction du système Système Foundry en Français, basé sur Babele.",
+  "version": "0.2.37",
+  "minimumCoreVersion" : "0.7.1",
+  "compatibleCoreVersion": "7.9.0",
+  "author": "Auteur du module",
+  "dependencies": [
+	{
+      "name": "system-de-base",
+	  "type": "system",
+	  "version": "1.3.22"
+    },
+    {
+      "name": "babele",
+	  "type": "module",
+	  "manifest": "https://gitlab.com/riccisi/foundryvtt-babele/raw/master/module/module.json",
+      "version": "1.28"
+    }
+  ],
+  "esmodules": [
+      "babele-register.js"
+    ],
+  "scripts": [ ],
+  "styles": [],
+  "packs": [],
+  "languages": [{
+  	"lang": "fr",
+  	"name": "Français",
+  	"path": "lang/fr.json"  	
+  }],
+  "system": "system-de-base",
+  "systemVersion": "1.3.22",
+  "url": "https://github.com/mon-compte/mon-repository",
+  "manifest": "https://github.com/mon-compte/mon-repository/raw/main/module.json",
+  "download": "https://github.com/mon-compte/mon-repository/archive/refs/heads/main.zip"
+}
+```
+**Attributs notables :**
+- `"name"` : "monmodule-fr-translation",
+- `"title"` : "Système Foundry - Traduction Française",
+- `"description"` : "Module de traduction du système Système Foundry en Français, basé sur Babele.",
+- `"version"` : "0.2.37",
+- `"minimumCoreVersion"` : "0.7.1",
+- `"compatibleCoreVersion"` : "7.9.0",
+- `"author"` : "Auteur du module",
+- `"dependencies"`
+	1. 
+  2. 
+  3. 
+  4. 
+- `"esmodules"` :
+- `"packs"` :
+- `"languages"` :
+- `"system"` :
+- `"systemVersion"` :
+- `"url"` :
+- `"manifest"` :
+- `"download"` :
 
-  
 ### Fichier d'enregistrement de Babele
 Votre module doit idéalement comporter un fichier javascript (par exemple : `register-babele.js`) permettant de déclarer la traduction Babele automatiquement à Foundry VTT lorsque le module est activé. Le fichier suivant est une déclaration typique :
 ```js
