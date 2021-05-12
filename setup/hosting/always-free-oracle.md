@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-05-06T13:28:07.606Z
+date: 2021-05-12T23:32:35.717Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -374,7 +374,7 @@ sudo service caddy restart
 
 <a id="D35" href="#D35">D35.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
 ```
-nano /home/ubuntu/.local/share/FoundryVTT/Config/options.json
+nano /home/ubuntu/foundryuserdata/Config/options.json
 ```
 <a id="D36" href="#D36">D36.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are.
 ```
