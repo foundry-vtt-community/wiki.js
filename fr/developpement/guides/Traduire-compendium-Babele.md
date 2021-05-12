@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T10:58:54.617Z
+date: 2021-05-12T11:02:59.045Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -22,11 +22,11 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 2. [Comment traduire](#comment-traduire)
 	2.1. [Récupérer les fichiers JSON de Babele](#récupérer-les-fichiers-json-de-babele)
   2.2. [Structure des fichiers de traduction JSON](#structure-des-fichiers-de-traduction-json)
-3. 
-4. 
-5. 
-6. 
-7. 
+  2.3. [Outils pour éditer ces fichiers](#outils-pour-éditer-ces-fichiers)
+3. [Diffuser son module](#diffuser-son-module)
+	3.1. [Diffuser son module](#diffuser-son-module)
+  3.2. [Partage de fichier ZIP](#partage-de-fichier-zip)
+  3.3. [Exemple de dépôt GitHub](#exemple-de-dépôt-github)
   
 ## Création d'un module
 ### Arborescence du dossier d'un module
@@ -101,6 +101,6 @@ Plusieurs traductions d'objets seront placés à la suite les une des autres dan
 ### Partage de fichier ZIP
   
   
-### Dépôt Git
+### Exemple de dépôt GitHub
   
   
