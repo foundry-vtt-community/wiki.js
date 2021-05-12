@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:30:59.215Z
+date: 2021-05-12T09:32:10.828Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -52,18 +52,13 @@ Hooks.on('init', () => {
   
 Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules : si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
     
-### Nom du fichier JSON de Babele
+## Comment traduire
+
+### Récupérer les fichiers JSON de Babele
 > Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json***, tel qu'exporté par Babele (voir plus bas).
 {.is-warning}
 - ***systeme*** correspondant à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
 - ***compendium*** correpondant au nom exact du fichier de compendium sans l'extension .db (ex: skills pour skills.db, feats pour feats.db, etc)
-
-  
-  
-## Comment traduire
-
-### Récupérer les fichiers JSON de Babele
-
 ### Structure des fichiers de traduction de Compendium
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
 ```json
