@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:32:10.828Z
+date: 2021-05-12T09:35:03.320Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -35,7 +35,7 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 
   
 ### Fichier d'enregistrement de Babele
-Votre module doit idéalement comporter un fichier javascript (par exemple : `register-babele.js`) de déclaration de traduction Babele du type suivant :
+Votre module doit idéalement comporter un fichier javascript (par exemple : `register-babele.js`) permettant de déclarer la traduction Babele automatiquement à Foundry VTT lorsque le module est activé. Le fichier suivant est une déclaration typique :
 ```js
 Hooks.on('init', () => {
 	if(typeof Babele !== 'undefined') {
