@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T16:00:54.860Z
+date: 2021-05-12T16:02:24.865Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -122,7 +122,7 @@ Hooks.on('init', () => {
 - l'attribut `module: 'systemefoundry-fr-translation'` spécifie le nom court du module de traduction.
 - L'attribut `dir: 'compendium'` permet de préciser le dossier à l'interieur duquel Babele trouvera les fichiers de traduction de compendia au format JSON.
   
-Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules : si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
+Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules. Par exemple, si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
     
 ## Comment traduire
 
@@ -158,8 +158,9 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 - l'attribut `"label"` correspond au nom long qui remplacera le nom du compendium dans Foundry VTT.
 - la liste `"entries"`correspond à la liste des objets du compendium
 - la liste `"Soldier"` correpond au nom **original** de l'objet à traduire ainsi qu'à l'objet lui même et ses détails :
-	1. `"name"` au nom traduit de lobjet
-  2. `"description"` à la... Traduction de la description de l'objet
+	1. `"name"` est le nom traduit de lobjet
+  2. `"description"` est la... Traduction de la description de l'objet
+
 > Notez que chaque nom est systématiquement entouré de guillemets et terminé par une virgule (***à l'exeption du dernier élément d'une série***), obligatoire avec le format d'échange de données JSON : `"name": "Soldat",`.
 {.is-info}
 
