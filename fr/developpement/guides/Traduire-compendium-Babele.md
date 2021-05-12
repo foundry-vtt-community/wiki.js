@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T22:58:08.285Z
+date: 2021-05-12T23:02:49.700Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -23,7 +23,9 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 	2.1. [Récupérer les fichiers JSON de Babele](#récupérer-les-fichiers-json-de-babele)
   2.2. [Structure des fichiers de traduction JSON](#structure-des-fichiers-de-traduction-json)
   2.3. [Outils pour éditer ces fichiers](#outils-pour-éditer-ces-fichiers)
-3. 
+3. [Ajouter des attributs à traduire](#ajouter-des-attributs-à-traduire)
+	3.1. [Définir les attributs](d#éfinir-les-attributs)
+  3.2. [Ajouter les attributs à un objet](#ajouter-les-attributs-à-un-objet)
 4. [Diffuser son module](#diffuser-son-module)
 	4.1. [Diffuser son module](#diffuser-son-module)
   4.2. [Partage de fichier ZIP](#partage-de-fichier-zip)
@@ -167,7 +169,7 @@ Plusieurs traductions d'objets seront placées à la suite les unes des autres d
 
 ### Outils pour éditer ces fichiers
 
-## Ajouter des attribut à traduire
+## Ajouter des attributs à traduire
 Si vous souhaitez ajouter des éléments de traduction en plus du nom de l'objet et de sa description, il faut définir quels champs de le fiche Foundry Babele devra mapper avec vos traductions.
 Puis, objet par objet, ajouter les valeurs pour ces champs.
 ### Définir les attributs
