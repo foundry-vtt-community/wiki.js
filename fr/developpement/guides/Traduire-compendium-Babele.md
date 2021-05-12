@@ -2,7 +2,7 @@
 title: Traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T07:56:58.726Z
+date: 2021-05-12T08:20:23.744Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -24,6 +24,33 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
   
   
 ### Structure des fichiers de traduction de Compendium
+La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
+```json
+{
+    "label": "Classes FR",
+    "entries":
+  		{
+       "Soldier": { 
+           "name": "Soldat", 
+           "description": "<p>Que vous ayez pris les armes pour protéger les autres ..." 
+      },
+      {
+      "Operative": { 
+           "name": "Agent", 
+           "description": "<p>Vous êtes une ombre. Vous vous déplacez rapidement ..." 
+      }
+    }
+}
+
+```
+- l'attribut `"label"` correspond au nom long qui remplacera le nom du compendium dans Foundry VTT.
+- la liste `"entries"`correspond à la liste des objets du compendium
+- la liste `"Soldier"` correpond au nom **original** de l'objet à traduire ainsi qu'à l'objet lui même et ses détails :
+	1. `"name"` au nom traduit de lobjet
+  2. `"description"` à la... Traduction de la description de l'objet
+  
+  Plusieurs traductions d'objets seront placés à la suite les une des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.
+  
 > Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json***, tel qu'exporté par Babele (voir plus bas).
 {.is-warning}
 - ***systeme*** correspondant à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
