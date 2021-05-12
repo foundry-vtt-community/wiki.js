@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:36:21.090Z
+date: 2021-05-12T09:37:31.730Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -59,6 +59,9 @@ Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le
 {.is-warning}
 - ***systeme*** correspondant à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
 - ***compendium*** correpondant au nom exact du fichier de compendium sans l'extension .db (ex: skills pour skills.db, feats pour feats.db, etc)
+ 
+*Exemple : `sfrpg.classes.json`*
+  
 ### Structure des fichiers de traduction de Compendium
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
 ```json
