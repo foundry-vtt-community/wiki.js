@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-12T09:27:06.796Z
+date: 2021-05-12T09:30:59.215Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -19,7 +19,9 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 	1.1. [Arborescence du dossier d'un module](#arborescence-du-dossier-d'un-module)
 	1.2. [Fichier module.json type pour Babele](#fichier-module.json-type-pour-babele)
 	1.2. [Fichier d'enregistrement de Babele](#fichier-d'enregistrement-de-babele)
-2. 
+2. [Comment traduire](#comment-traduire)
+	2.1. [Récupérer les fichiers JSON de Babele](#récupérer-les-fichiers-json-de-babele)
+  2.2. [Structure des fichiers de traduction de Compendium)(#structure-des-fichiers-de-traduction de-compendium)
 3. 
 4. 
 5. 
@@ -49,6 +51,18 @@ Hooks.on('init', () => {
 - L'attribut `dir: 'compendium'` permet de préciser le dossier à l'interieur duquel Babele trouveras les fichiers de traduction de compendia au format JSON.
   
 Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules : si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
+    
+### Nom du fichier JSON de Babele
+> Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json***, tel qu'exporté par Babele (voir plus bas).
+{.is-warning}
+- ***systeme*** correspondant à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
+- ***compendium*** correpondant au nom exact du fichier de compendium sans l'extension .db (ex: skills pour skills.db, feats pour feats.db, etc)
+
+  
+  
+## Comment traduire
+
+### Récupérer les fichiers JSON de Babele
 
 ### Structure des fichiers de traduction de Compendium
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
@@ -80,18 +94,6 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 {.is-info}
 
 Plusieurs traductions d'objets seront placés à la suite les une des autres dans la liste `"entries"` comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.  
-  
-### Nom du fichier JSON de Babele
-> Le nom du fichier JSON de Babele doit toujours être du type ***systeme.compendium.json***, tel qu'exporté par Babele (voir plus bas).
-{.is-warning}
-- ***systeme*** correspondant à la dénomination abrégée du système (ex: dnd5e, wfrp4, pf1, sfrpg, etc)
-- ***compendium*** correpondant au nom exact du fichier de compendium sans l'extension .db (ex: skills pour skills.db, feats pour feats.db, etc)
-
-  
-  
-## Comment traduire
-
-### Récupérer les fichiers JSON de Babele
 
 ### Outils pour éditer ces fichiers
  
