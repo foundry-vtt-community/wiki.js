@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-13T14:16:04.254Z
+date: 2021-05-13T14:20:41.528Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -168,6 +168,8 @@ Le format de ce fichier est dit "***compatible***" dans Babele par opposition à
 Plusieurs traductions d'objets seront placées à la suite les unes des autres dans la liste `"entries"` et comme dans l'exemple, chaque objet sera entre accolades `{ }` et les objets entre eux seront séparés par des `,`.  
 
 ### Outils pour éditer ces fichiers
+Voici une liste de quelques outils qui vous aiderons à éditer les fichiers :
+- Foundry VTT : tout simplement l'éditeur de description des objets à utiliser sur les objets du compendium dupliqué (voir section [Exporter un compendium pour Babele](#exporter-un-compendium-pour-babele)).
 
 ## Ajouter des attributs à traduire
 Si vous souhaitez ajouter des éléments de traduction en plus du nom de l'objet et de sa description, il faut définir quels champs de le fiche Foundry Babele devra mapper avec vos traductions.
