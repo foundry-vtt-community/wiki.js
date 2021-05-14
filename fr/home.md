@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-05-14T17:58:18.026Z
+date: 2021-05-14T18:38:31.966Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -52,6 +52,7 @@ Aures vidéos :
 ## Par ou Commencer ...
 Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT ?
 - [Pour Commencer](/fr/pour-commencer/setup)
+- [Mes joueurs n'arrivent pas à se connecter](/fr/pour-commencer/pbcnx)
 - [Installation sous Windows](/fr/pour-commencer/win)
 - [L'Audio/Video sous Foundry VTT](/fr/pour-commencer/av)
 - [Installation sous Linux](/fr/pour-commencer/linux)
