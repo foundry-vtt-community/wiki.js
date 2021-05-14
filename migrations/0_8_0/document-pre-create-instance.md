@@ -2,7 +2,7 @@
 title: Document pre-create hook events are now provided with the candidate Document instance instead of merely the raw data object provided for the creation.
 description: 
 published: true
-date: 2021-04-21T15:05:54.070Z
+date: 2021-04-21T16:44:54.277Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:28:42.634Z

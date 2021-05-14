@@ -2,7 +2,7 @@
 title: Add an asynchronous version of the dice and rolling APIs
 description: 
 published: true
-date: 2021-04-21T15:10:08.740Z
+date: 2021-04-21T16:50:34.265Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:50:50.088Z

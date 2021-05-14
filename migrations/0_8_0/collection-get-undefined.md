@@ -2,7 +2,7 @@
 title: Collection#get should return undefined on a failed lookup, rather than null, to remain compliant with the parent Map behavior.
 description: 
 published: true
-date: 2021-04-21T15:06:19.464Z
+date: 2021-04-21T16:45:28.361Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:47:51.837Z

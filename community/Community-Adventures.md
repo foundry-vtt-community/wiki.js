@@ -2,7 +2,7 @@
 title: Adventures
 description: 
 published: true
-date: 2021-04-21T16:19:12.257Z
+date: 2021-04-21T16:27:51.707Z
 tags: adventures, dnd5e
 editor: markdown
 dateCreated: 2020-09-23T00:24:10.616Z

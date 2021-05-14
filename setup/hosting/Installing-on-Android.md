@@ -2,7 +2,7 @@
 title: How to Install Foundry on an Android Phone
 description: A guide for installing Foundry on Android.
 published: true
-date: 2021-04-21T15:07:38.942Z
+date: 2021-04-21T16:47:20.889Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-21T22:25:01.724Z

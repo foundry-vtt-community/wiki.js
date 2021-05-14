@@ -2,7 +2,7 @@
 title: Redesign the game.audio.play utility method to resolve issues with incorrect howler syntax and to migrate to the new Web Audio SoundNode implementation.
 description: 
 published: true
-date: 2021-04-21T15:10:12.264Z
+date: 2021-04-21T16:50:38.746Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-14T12:55:26.524Z

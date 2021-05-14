@@ -2,7 +2,7 @@
 title: SD01 Getting-started
 description: 
 published: true
-date: 2021-04-21T14:51:41.275Z
+date: 2021-04-21T16:32:29.265Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z

@@ -2,7 +2,7 @@
 title: DigitalOcean Initialization-Script
 description: 
 published: true
-date: 2021-04-21T14:57:16.390Z
+date: 2021-04-21T16:30:31.068Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:27.050Z

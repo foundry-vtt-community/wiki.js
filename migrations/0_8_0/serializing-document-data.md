@@ -2,7 +2,7 @@
 title: Serializing a DocumentData instance will now only return the _source component of that data which needs to be persisted in the database rather than the full data object including derived data elements or downstream transformations
 description: 
 published: true
-date: 2021-04-21T15:06:12.452Z
+date: 2021-04-21T16:45:19.079Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:43:44.626Z

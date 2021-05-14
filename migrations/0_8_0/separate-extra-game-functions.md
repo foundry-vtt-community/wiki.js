@@ -2,7 +2,7 @@
 title: Separate functions and UI that are used exclusively outside the /game endpoint into a separate JS file which does not unnecessarily expose those to regular users.
 description: 
 published: true
-date: 2021-04-21T15:05:03.592Z
+date: 2021-04-21T16:43:48.086Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-07T16:49:30.225Z

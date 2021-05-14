@@ -2,7 +2,7 @@
 title: Kubernetes
 description: 
 published: true
-date: 2021-04-21T14:57:29.843Z
+date: 2021-04-21T16:30:50.602Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:40.922Z

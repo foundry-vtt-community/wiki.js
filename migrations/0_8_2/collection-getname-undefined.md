@@ -2,7 +2,7 @@
 title: Refector Collection#getName to return undefined if no match is found, to be consistent with Map#get and Array#find
 description: 
 published: true
-date: 2021-05-01T03:08:20.185Z
+date: 2021-05-01T03:08:23.326Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:08:20.185Z

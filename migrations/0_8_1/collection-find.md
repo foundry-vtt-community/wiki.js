@@ -2,7 +2,7 @@
 title: Collection#find should have the same return type as Array#find
 description: 
 published: true
-date: 2021-04-21T15:09:51.056Z
+date: 2021-04-21T16:50:09.272Z
 tags: 0.8.1
 editor: markdown
 dateCreated: 2021-04-14T12:35:14.411Z
