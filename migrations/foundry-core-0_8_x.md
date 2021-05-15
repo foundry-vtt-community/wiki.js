@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-15T05:28:07.911Z
+date: 2021-05-15T14:25:22.674Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -34,6 +34,8 @@ Relevant Issue: [Redesign the structure of ActorSheet#getData to provide more se
 
 ActorSheet's default `getData` method's return signature changed. If your system did not override this to create your own data for the template, your template might need adjusting.
 
+**It is highly recommended by Foundry to create your own return data object that is returned from this method**
+
 ### What changed between 0.7 and 0.8?
 
 In 0.7 `ActorSheet#getData()#actor` was a copy of `Actor#data`. In 0.8 it is a copy of the Actor document itself. This means the path to the value being changed is no longer the same as the path to the value being displayed.
@@ -50,6 +52,18 @@ Practically this is what might need to be changed in your handlebars templates:
 <input name="data.foo" value="{{data.data.foo}}" />
 ```
 
+### ✅ 0.8 recommended
+```js
+getData(options) {
+  let baseData = super.getData(options);
+  let sheetData = {};
+  sheetData.foo = baseData.actor.data.title;
+  return sheetData;
+}
+```
+```html
+<input name="data.foo" value="{{foo}}" />
+```
 
 ## Hooks
 
