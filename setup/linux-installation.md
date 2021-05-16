@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-12T01:16:05.423Z
+date: 2021-05-16T20:59:07.631Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -369,7 +369,7 @@ nano ~/foundryuserdata/Config/options.json
 ...
 "proxySSL": true,
 ...
-"hostname": "<your.domain.name>"
+"hostname": "<your.domain.name>",
 ...
 ```
 >Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
