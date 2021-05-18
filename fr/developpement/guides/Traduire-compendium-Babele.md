@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-18T20:40:59.896Z
+date: 2021-05-18T20:42:21.880Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -29,7 +29,7 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 4. [Diffuser son module](#diffuser-son-module)
 	4.1. [Diffuser son module](#diffuser-son-module)
   4.2. [Partage de fichier ZIP](#partage-de-fichier-zip)
-  4.3. [Utilisation un dépôt GitHub](#utilisation-un-dépôt-gitHub)
+  4.3. [Utilisation d'un dépôt GitHub](#utilisation-dun-dépôt-gitHub)
   
 ## Création d'un module
 ### Arborescence du dossier d'un module
@@ -218,7 +218,7 @@ Pour chaque objet, ajouter les attributs ainsi que les traduction à associer au
 ### Partage de fichier ZIP
 Pour partager simplement votre module de main en main, sur un quelconque service Drive ou sur Discord par exemple, il vous suffit de compresser en ZIP le dossier de votre module Foundry et de le transmettre.
   
-### Utilisation un dépôt GitHub
+### Utilisation d'un dépôt GitHub
 Pour avoir des informations claires sur l'utilisation de GitHub, conultez la [page dédiée à Git](/fr/developpement/guides/git).
   
   
