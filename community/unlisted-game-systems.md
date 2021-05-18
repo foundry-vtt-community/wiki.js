@@ -2,7 +2,7 @@
 title: Unlisted Game Systems
 description: 
 published: true
-date: 2021-05-04T19:29:35.823Z
+date: 2021-05-18T14:50:30.590Z
 tags: game systems
 editor: markdown
 dateCreated: 2020-09-23T00:24:22.792Z
@@ -141,17 +141,6 @@ This is an implementation of the Fantasy Flight Games Star Wars roleplaying syst
 Requires the [Special Dice Roller](https://foundry-vtt-community.github.io/wiki/Community-Modules/#special-dice-roller) module for dice.
 
 ---	
-
-## The Witcher TRPG	
-* **Author**: Parker S. (Discord: sparkcities#2000)
-* **Foundry VTT Compatibility**: 0.6.6	
-* **Translation Support**: English	
-### Link(s) to Game System	
-* https://github.com/sparkcity/fvtt-witcher
-### Description	
-An unofficial system to provide support for The Witcher TRPG by R. Talsorian Games in FVTT. Permitted for development and publishing on FVTT by R. Talsorian Games.
-
----
 
 ## Torchbearer
 * **Author**: Nick Serluco (Discord: yougotnick#9692)
