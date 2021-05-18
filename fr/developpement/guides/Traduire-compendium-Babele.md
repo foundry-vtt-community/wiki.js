@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-18T20:19:53.285Z
+date: 2021-05-18T20:20:03.057Z
 tags: compendium, guide, code, module, babele
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -141,7 +141,8 @@ Pour récupérer les fichiers de traduction Babele, il faut ouvrir un compendium
 
 En haut de la fenêtre de compendium, vous verrez un bouton "traduction" :
 
-Choisir un mode de fichier à récupérer (*il est souvent préférable d'opter pour le mode "Legacy"*).
+Choisir un mode de fichier à récupérer (*il est souvent préférable d'opter pour le mode "Legacy"*) :
+
   
 ### Structure des fichiers de traduction JSON
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
