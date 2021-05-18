@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-05T18:03:23.688Z
+date: 2021-05-18T23:40:38.246Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -16,7 +16,7 @@ As a result if you have a domain registered in AWS Route53 named myexample.com. 
 
 
 
-Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/en/setup/hosting/Ubuntu-VM) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
+Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/i/130) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
 
   - EC2 AMI
   - EC2 instancetype
