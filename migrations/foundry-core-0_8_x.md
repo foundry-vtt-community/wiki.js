@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-15T14:25:22.674Z
+date: 2021-05-19T17:45:12.656Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -70,14 +70,37 @@ getData(options) {
 > Most Likely Affects: Systems, Modules
 {.is-info}
 
-> Stub
-> New Hooks Documentation: https://foundryvtt.com/api/alpha/hookEvents.html
+### [New Hooks Documentation](https://foundryvtt.com/api/alpha/hookEvents.html)
 
+As part of the transition to Documents as the primary base for all data structures in Foundry Core, the hooks related to ~~Entities~~ Documents have been standardized.
+
+All Embedded Documents use the same hooks as their top-level counterparts:
+
+- preCreate[documentName]
+- create[documentName]
+- preUpdate[documentName]
+- update[documentName]
+- preDelete[documentName]
+- delete[documentName]
+
+There are more detailed docs about what each Hook does and what arguments it has available in the official [hookEvents documentation](https://foundryvtt.com/api/alpha/hookEvents.html).
+
+### Note for System Developers
+
+It is not recommended for Systems to leverage these hooks. Each of these hooks is fired by a corresponding method on the base Document type which you can overwrite for a more safe and consistent way to accomplish this logic.
+
+```js
+class MySystemActor extends Actor {
+  async _preCreate(data, options, user) {
+    // do stuff to data, options, etc
+  	await super.preCreate(data, options, user);
+  }
+}
+```
 
 ### What changed between 0.7 and 0.8?
 
-> Stub
-> [Hook Call Signatures standardized](https://foundryvtt.wiki/en/migrations/0_8_1/standard-hook-signatures)
+All hooks related to embedded entities were removed. These embedded entities are treated as Documents same as their Parents are in 0.8. As a result all of the hooks around EmbeddedDocuments and top level Documents could be standardized.
 
 
 ## Tiles
