@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-19T17:45:12.656Z
+date: 2021-05-19T20:37:33.865Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -87,13 +87,21 @@ There are more detailed docs about what each Hook does and what arguments it has
 
 ### Note for System Developers
 
-It is not recommended for Systems to leverage these hooks. Each of these hooks is fired by a corresponding method on the base Document type which you can overwrite for a more safe and consistent way to accomplish this logic.
+> The exception to this recommendation is if your system does something which actively prevents `Document` creation in some circumstances. It is impossible to prevent `Document` creation from the `_preCreate` method, use the corresponding `preCreate` hook instead.
+{.is-warning}
+
+Unless you are attempting to prevent the creation of a `Document`, it is not recommended for Systems to leverage these hooks. Each of these hooks is fired by a corresponding method on the base Document type which you can overwrite for a more safe and consistent way to accomplish your system's logic without interference.
 
 ```js
 class MySystemActor extends Actor {
   async _preCreate(data, options, user) {
     // do stuff to data, options, etc
-  	await super.preCreate(data, options, user);
+  	await super._preCreate(data, options, user);
+  }
+  
+  async _preUpdate(changed, options, user) {
+    // do stuff to changed, options, etc
+  	await super._preUpdate(changed, options, user);
   }
 }
 ```
