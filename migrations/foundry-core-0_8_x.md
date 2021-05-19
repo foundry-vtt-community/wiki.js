@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-19T20:37:33.865Z
+date: 2021-05-19T20:43:06.121Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -65,7 +65,7 @@ getData(options) {
 <input name="data.foo" value="{{foo}}" />
 ```
 
-## Hooks
+## Document CRUD Hooks and Methods
 
 > Most Likely Affects: Systems, Modules
 {.is-info}
@@ -92,6 +92,7 @@ There are more detailed docs about what each Hook does and what arguments it has
 
 Unless you are attempting to prevent the creation of a `Document`, it is not recommended for Systems to leverage these hooks. Each of these hooks is fired by a corresponding method on the base Document type which you can overwrite for a more safe and consistent way to accomplish your system's logic without interference.
 
+
 ```js
 class MySystemActor extends Actor {
   async _preCreate(data, options, user) {
@@ -105,6 +106,19 @@ class MySystemActor extends Actor {
   }
 }
 ```
+
+#### Changing data during these methods
+When making a change to a document in one of these methods it is necessary to use the `update` method to persist the change to the database.
+```js
+class MySystemActor extends Actor {
+ async _preCreate(data, options, user) {
+   this.data.update({ someChange }); // note we are using `this` instead of the provided `data`
+   // do stuff to data, options, etc
+  	await super._preCreate(data, options, user);
+ }
+}
+```
+
 
 ### What changed between 0.7 and 0.8?
 
