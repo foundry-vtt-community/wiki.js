@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-20T19:35:52.286Z
+date: 2021-05-20T19:42:25.191Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -128,7 +128,7 @@ class MySystemActor extends Actor {
 ```
 
 ### Changing data during these methods and hooks
-When making a change to a document in one of these methods/hooks it is necessary to use the `update` method on the document itself to persist the change to the database.
+When making a change to a document in one of these methods/hooks it is necessary to use the `update` method on the document's `DocumentData` instance to persist the change to the database.
 
 #### Hook example
 ```js
