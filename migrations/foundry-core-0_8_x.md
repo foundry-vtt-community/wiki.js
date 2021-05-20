@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-20T13:47:25.104Z
+date: 2021-05-20T19:35:52.286Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -127,8 +127,17 @@ class MySystemActor extends Actor {
 }
 ```
 
-#### Changing data during these methods
-When making a change to a document in one of these methods it is necessary to use the `update` method to persist the change to the database.
+### Changing data during these methods and hooks
+When making a change to a document in one of these methods/hooks it is necessary to use the `update` method on the document itself to persist the change to the database.
+
+#### Hook example
+```js
+Hooks.on('preCreateActor', (document, data, options, userId) => {
+  document.data.update({ someChange });
+});
+```
+
+#### Method Example
 ```js
 class MySystemActor extends Actor {
  async _preCreate(data, options, user) {
