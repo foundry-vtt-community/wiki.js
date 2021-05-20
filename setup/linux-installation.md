@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-20T19:33:56.774Z
+date: 2021-05-20T19:37:01.844Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -230,7 +230,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 <a id="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="C2" href="#C2">C2.</a>	Select the latest stable version, and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="C2" href="#C2">C2.</a>	Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
