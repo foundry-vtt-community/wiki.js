@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-19T20:43:09.377Z
+date: 2021-05-20T13:47:25.104Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -15,7 +15,21 @@ dateCreated: 2021-05-01T03:24:28.830Z
 > Most Likely Affects: Systems, Modules
 {.is-info}
 
-> Stub
+
+In 0.7 many of the core data structures were based on `Entity`. There were some that were not though, and those that were had inconsistent APIs for CRUD (create, read, update, delete) operations.
+
+In 0.8 **all** of the non-PIXI data structures in Foundry are `Document`s. The `Document` class has a base-level API for CRUD operations which keeps these consistent across all of its implementations.
+
+This includes Embedded ~~Entities~~ Documents, which had a large API difference from their top-level counterparts in 0.7. In 0.8 embedded `Document`s are the same class as top-level `Document`s. The APIs to interact with them are identical, though parent Documents have some extra API for reacting to change in their embedded documents.
+
+
+### DocumentData
+All Documents have a `DocumentData` instance which is designed such that it maintains a separation of the underlying source state and a derived/manipulated local copy.
+
+This `DocumentData` will purge any unexpected data (i.e. arbitrary data not in the Schema) from itself.
+
+If you are a system this is unlikely to affect you, as your `template.json` informs the schema for your Documents. Modules however will have to be extra strict about ensuring their data is confined to `flags`.
+
 
 ### What changed between 0.7 and 0.8?
 
@@ -23,6 +37,12 @@ dateCreated: 2021-05-01T03:24:28.830Z
 > [Entity -> Document](https://foundryvtt.wiki/en/migrations/0_8_0/no-base-entity)
 > All APIs standardized
 
+As a result of the shift to Document architecture, it is no longer advisable for modules to pass arbitrary data alongside the document's defined schema during creation/update. This data should be added to a document's `flags` or passed through the `options` provided during the document creation or else it risks being purged by the DocumentData's schema validation.
+
+### Embedded ~~Entities~~ Documents
+
+> Stub.
+> Something about how embeddedEntities are interacted with has changed...
 
 ## ActorSheet#getData
 
