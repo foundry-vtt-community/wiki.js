@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-18T23:40:38.246Z
+date: 2021-05-18T23:40:42.247Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
