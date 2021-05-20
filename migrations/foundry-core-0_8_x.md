@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-20T19:42:25.191Z
+date: 2021-05-20T20:23:47.519Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -16,17 +16,29 @@ dateCreated: 2021-05-01T03:24:28.830Z
 {.is-info}
 
 
-In 0.7 many of the core data structures were based on `Entity`. There were some that were not though, and those that were had inconsistent APIs for CRUD (create, read, update, delete) operations.
+Every instance of `Document` contains an instance `DocumentData` which represents the data actually persisted to the backend.
 
-In 0.8 **all** of the non-PIXI data structures in Foundry are `Document`s. The `Document` class has a base-level API for CRUD operations which keeps these consistent across all of its implementations.
+### Document
+`Document` has standardized CRUD (Create, Read, Update, Delete) methods:
+- `create`, `update`, and `delete` affect the data persisted to the backend.
+- `data` is an instance of `DocumentData`
 
-This includes Embedded ~~Entities~~ Documents, which had a large API difference from their top-level counterparts in 0.7. In 0.8 embedded `Document`s are the same class as top-level `Document`s. The APIs to interact with them are identical, though parent Documents have some extra API for reacting to change in their embedded documents.
 
+Some subclasses of `Document` (e.g. `Actor`) then implement methods like `prepareData` which mutate the Document instance's `data` without persisting those mutations to the backend.
 
 ### DocumentData
-All Documents have a `DocumentData` instance which is designed such that it maintains a separation of the underlying source state and a derived/manipulated local copy.
 
-This `DocumentData` will purge any unexpected data (i.e. arbitrary data not in the Schema) from itself.
+All Documents have a `DocumentData` instance which is designed such that it maintains a separation of the underlying source state and a derived/manipulated local copy. `DocumentData` has standardized ~~C~~RU~~D~~ methods:
+
+- `update` does not not affect the data persisted to the backend. It is instead useful for cases where something on the front-end is temporarily out of sync with the database (e.g. animating a Token's position).
+- A `Document`'s instance of `DocumentData` is mutable without affecting the corresponding database entry.
+
+
+#### Validations
+
+`DocumentData` is governed by a Schema, `DocumentData#validate` is run during initialization and updates which will purge any 'unexpected' data (i.e. arbitrary data not in the Schema) from itself.
+
+As a result of the shift to Document architecture, it is no longer advisable for modules to pass arbitrary data alongside the document's defined schema during creation/update. This data should be added to a document's `flags` or passed through the `options` provided during the document creation or else it risks being purged by the `DocumentData`'s schema validation.
 
 If you are a system this is unlikely to affect you, as your `template.json` informs the schema for your Documents. Modules however will have to be extra strict about ensuring their data is confined to `flags`.
 
@@ -35,9 +47,13 @@ If you are a system this is unlikely to affect you, as your `template.json` info
 
 > Stub
 > [Entity -> Document](https://foundryvtt.wiki/en/migrations/0_8_0/no-base-entity)
-> All APIs standardized
+> All APIs standardized, Validation will purge non-schema data
 
-As a result of the shift to Document architecture, it is no longer advisable for modules to pass arbitrary data alongside the document's defined schema during creation/update. This data should be added to a document's `flags` or passed through the `options` provided during the document creation or else it risks being purged by the DocumentData's schema validation.
+In 0.7 many of the core data structures were based on `Entity`. There were some that were not though, and those that were had inconsistent APIs for CRUD (create, read, update, delete) operations.
+
+In 0.8 **all** of the non-PIXI data structures in Foundry are `Document`s. The `Document` class has a base-level API for CRUD operations which keeps these consistent across all of its implementations.
+
+This includes Embedded ~~Entities~~ Documents, which had a large API difference from their top-level counterparts in 0.7. In 0.8 embedded `Document`s are the same class as top-level `Document`s. The APIs to interact with them are identical, though parent Documents have some extra API for reacting to change in their embedded documents.
 
 ### Embedded ~~Entities~~ Documents
 
