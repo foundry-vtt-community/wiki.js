@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-20T20:23:47.519Z
+date: 2021-05-20T20:25:08.599Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -16,7 +16,7 @@ dateCreated: 2021-05-01T03:24:28.830Z
 {.is-info}
 
 
-Every instance of `Document` contains an instance `DocumentData` which represents the data actually persisted to the backend.
+Every instance of `Document` contains an instance `DocumentData` which represents the data actually persisted to the backend. [System Diagram](https://gitlab.com/foundrynet/foundryvtt/-/issues/4373) which might help explain the architecture.
 
 ### Document
 `Document` has standardized CRUD (Create, Read, Update, Delete) methods:
