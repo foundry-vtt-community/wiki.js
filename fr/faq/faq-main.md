@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2021-04-21T16:36:39.398Z
+date: 2021-05-21T22:15:56.815Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -19,7 +19,7 @@ FoundryVTT a démarré son développement notamment car l'auteur principal ne tr
 
 ## Très bien, mais je vois que le truc est en bêta, comment qu’on l’achète ?
 
-A ce jour (octobre 2020), Foundry est en version 0.6.6, achetable en 1 fois pour la somme de 60$. Une réduction est appliquée pour les développeurs et les supporters de Patreon, basés sur la durée de support (le soft est gratuit au final pour les développeurs et ceux présents depuis plus d’1 an grosso-modo).
+A ce jour (mai 2021), Foundry est en version 0.7.9, achetable en 1 fois pour la somme de 60$. Une réduction est appliquée pour les développeurs et les supporters de Patreon, basés sur la durée de support (le soft est gratuit au final pour les développeurs et ceux présents depuis plus d’1 an grosso-modo).
 
 ## Putain, 60$ ?
 
