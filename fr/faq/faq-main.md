@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2021-05-21T22:15:56.815Z
+date: 2021-05-21T22:17:52.455Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -58,7 +58,7 @@ Si, il va y en avoir, et ça déjà démarré avec TheForge et FoundryServer.
 
 ## Y’a quoi comme jeu dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 03/09/2020, on recense 57 « systems » : 
+Dans Foundry, les « jeux » sont appelés « systems ». Au 20/05/2021, on recense 130+ « systems » : 
 - 13th age,
 - Appel de Cthulhu, DeltGree
 - D&D5,
@@ -68,13 +68,12 @@ Dans Foundry, les « jeux » sont appelés « systems ». Au 03/09/2020, on rece
 - Starfinder, 
 - Savage Worlds, 
 - Warhammer 4, etc ...
-
-D’autres systèmes sont en développement, tel que : 
 - Degenesis,
 - Dungeon Crawl Classics,
 - Monster of the Week,
 - Numenera,
 - Runequest…. 
+- ....
 
 Un système générique permet de plus de rapidement démarrer une table autour d’un jeu non supporté.
 
