@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-20T20:25:08.599Z
+date: 2021-05-22T15:39:59.535Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -88,7 +88,7 @@ Practically this is what might need to be changed in your handlebars templates:
 <input name="data.foo" value="{{data.data.foo}}" />
 ```
 
-### ✅ 0.8 recommended
+#### ✅ 0.8 recommended
 ```js
 getData(options) {
   let baseData = super.getData(options);
@@ -196,3 +196,46 @@ All hooks related to embedded entities were removed. These embedded entities are
 > [Howler Removed](https://foundryvtt.wiki/en/migrations/0_8_2/tiles-layers)
 > [New Sound API](https://foundryvtt.com/api/alpha/AudioHelper.html)
 
+## Settings
+
+> Most likely affects: Modules
+{.is-info}
+
+### New Setting Types
+
+Two often-asked-for setting types have been added in 0.8:
+- DirectoryPicker
+- FilePicker
+
+
+### Reloading onChange
+
+A change in the way 0.8 processes `onChange` callbacks in settings as they are saved has made it unadvisable to use `window.location.reload()` directly. Doing so will trigger the refresh and sometimes cause a race condition that results in some settings not being saved.
+
+#### :x: 0.7
+```js
+game.settings.register("myModule", "mySetting", {
+  ...,
+  onChange: window.location.reload
+}
+                       
+game.settings.register("myModule", "myOtherSetting", {
+  ...,
+  onChange: window.location.reload
+}
+```
+
+#### ✅ 0.8 recommended
+```js
+const debouncedReload = foundry.utils.debounce(window.location.reload, 100);
+
+game.settings.register("myModule", "mySetting", {
+  ...,
+  onChange: debouncedReload
+}
+                       
+game.settings.register("myModule", "myOtherSetting", {
+  ...,
+  onChange: debouncedReload
+}
+```
