@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-22T16:24:24.349Z
+date: 2021-05-22T16:49:38.076Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -60,46 +60,7 @@ This includes Embedded ~~Entities~~ Documents, which had a large API difference 
 > Stub.
 > Something about how embeddedEntities are interacted with has changed...
 
-## ActorSheet#getData
-
-> Most Likely Affects: Systems
-{.is-info}
-
-Relevant Issue: [Redesign the structure of ActorSheet#getData to provide more sensible references for the actor, its data, and any items or effects that the actor owns.
-](https://gitlab.com/foundrynet/foundryvtt/-/issues/4321)
-
-ActorSheet's default `getData` method's return signature changed. If your system did not override this to create your own data for the template, your template might need adjusting.
-
-**It is highly recommended by Foundry to create your own return data object that is returned from this method**
-
-### What changed between 0.7 and 0.8?
-
-In 0.7 `ActorSheet#getData()#actor` was a copy of `Actor#data`. In 0.8 it is a copy of the Actor document itself. This means the path to the value being changed is no longer the same as the path to the value being displayed.
-
-Practically this is what might need to be changed in your handlebars templates:
-
-#### :x: 0.7
-```html
-<input name="data.foo" value="{{data.foo}}" />
-```
-
-#### :heavy_check_mark: 0.8
-```html
-<input name="data.foo" value="{{data.data.foo}}" />
-```
-
-#### ✅ 0.8 recommended
-```js
-getData(options) {
-  let baseData = super.getData(options);
-  let sheetData = {};
-  sheetData.foo = baseData.actor.data.title;
-  return sheetData;
-}
-```
-```html
-<input name="data.foo" value="{{foo}}" />
-```
+---
 
 ## Document CRUD Hooks and Methods
 
@@ -143,25 +104,42 @@ class MySystemActor extends Actor {
 }
 ```
 
-### Changing data during these methods and hooks
-When making a change to a document in one of these methods/hooks it is necessary to use the `update` method on the document's `DocumentData` instance to persist the change to the database.
+### Changing data during `pre<Action>` methods and hooks
+The purpose of `pre<Action>` events like the `Document#_preCreate` method or the `preCreate<Document>` hook is to modify the outgoing data that will be dispatched to the server as part of the operation.
 
-#### Hook example
+### For Creation Operations
+For creation operations, the data that will be sent to the server is the source data for the pending `Document` which exists locally, but has not yet been saved. As part of the creation workflow (and after `preCreate` functions are called) the document data is sent via `Document#toObject`. This means, in order to modify a pending document prior to it's creation, you need to modify the source data of the Document itself using `Document#data#update()`.
+
+Example Usage, `Document#_preCreate`
 ```js
-Hooks.on('preCreateActor', (document, data, options, userId) => {
-  document.data.update({ someChange });
+async _preCreate(createData, options, user) {
+  this.data.update({name: "Some other name"});
+}
+```
+
+Example Usage, `preCreate` Hook
+```js
+Hooks.on("preCreateActor", (document, createData, options, userId) => {
+  doc.data.update({name: "Some other name"});
 });
 ```
 
-#### Method Example
+### For Update Operations
+
+For update operations, the data that will be sent to the server is the differential change data that will alter the existing source data for the `Document`. The update workflow sends this changed data directly to the server, so in order to modify the contents of an update operation you need to modify this change data object directly.
+
+Example Usage, `Document#_preUpdate`
 ```js
-class MySystemActor extends Actor {
- async _preCreate(data, options, user) {
-   this.data.update({ someChange }); // note we are using `this` instead of the provided `data`
-   // do stuff to data, options, etc
-  	await super._preCreate(data, options, user);
- }
+async _preUpdate(updateData, options, user) {
+  updateData.name = "Some new name";
 }
+```
+
+Example Usage, `preUpdate` Hook	
+```js
+Hooks.on("preUpdateActor", (document, updateData, options, userId) => {
+  updateData.name = "Some new name";
+});
 ```
 
 
@@ -169,6 +147,50 @@ class MySystemActor extends Actor {
 
 All hooks related to embedded entities were removed. These embedded entities are treated as Documents same as their Parents are in 0.8. As a result all of the hooks around EmbeddedDocuments and top level Documents could be standardized.
 
+---
+
+## ActorSheet#getData
+
+> Most Likely Affects: Systems
+{.is-info}
+
+Relevant Issue: [Redesign the structure of ActorSheet#getData to provide more sensible references for the actor, its data, and any items or effects that the actor owns.
+](https://gitlab.com/foundrynet/foundryvtt/-/issues/4321)
+
+ActorSheet's default `getData` method's return signature changed. If your system did not override this to create your own data for the template, your template might need adjusting.
+
+**It is highly recommended by Foundry to create your own return data object that is returned from this method**
+
+### What changed between 0.7 and 0.8?
+
+In 0.7 `ActorSheet#getData()#actor` was a copy of `Actor#data`. In 0.8 it is a copy of the Actor document itself. This means the path to the value being changed is no longer the same as the path to the value being displayed.
+
+Practically this is what might need to be changed in your handlebars templates:
+
+#### :x: 0.7
+```html
+<input name="data.foo" value="{{data.foo}}" />
+```
+
+#### :heavy_check_mark: 0.8
+```html
+<input name="data.foo" value="{{data.data.foo}}" />
+```
+
+#### ✅ 0.8 recommended
+```js
+getData(options) {
+  let baseData = super.getData(options);
+  let sheetData = {};
+  sheetData.foo = baseData.actor.data.title;
+  return sheetData;
+}
+```
+```html
+<input name="data.foo" value="{{foo}}" />
+```
+
+---
 
 ## Tiles & Canvas Layers
 
@@ -228,6 +250,8 @@ In 0.8 they were changed to look like this:
 
 The `TilesLayer` was merged with the `BackgroundLayer` in a new type of Canvas Layer: [`MapLayer`](https://foundryvtt.com/api/alpha/MapLayer.html), which contains 1 background image and an arbitrary number of tiles. There are two `MapLayer`s in 0.8 canvases: `BackgroundLayer` and `ForegroundLayer`.
 
+---
+
 ## Canvas Placeables
 
 ### PlaceableObject document change
@@ -261,6 +285,7 @@ canvas.sight.refresh();
 canvas.perception.refresh();
 ```
 
+---
 
 ## Audio
 
@@ -274,6 +299,8 @@ canvas.perception.refresh();
 > Stub
 > [Howler Removed](https://foundryvtt.wiki/en/migrations/0_8_2/tiles-layers)
 > [New Sound API](https://foundryvtt.com/api/alpha/AudioHelper.html)
+
+---
 
 ## Settings
 
