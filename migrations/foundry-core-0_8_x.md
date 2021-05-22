@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-22T15:39:59.535Z
+date: 2021-05-22T15:41:26.047Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -210,7 +210,7 @@ Two often-asked-for setting types have been added in 0.8:
 
 ### Reloading onChange
 
-A change in the way 0.8 processes `onChange` callbacks in settings as they are saved has made it unadvisable to use `window.location.reload()` directly. Doing so will trigger the refresh and sometimes cause a race condition that results in some settings not being saved.
+A change in the way 0.8 processes `onChange` callbacks in settings as they are saved has made it unadvisable to use `window.location.reload()` directly. Doing so will trigger the refresh and sometimes cause a race condition that results in some settings not being saved. It is instead recommended to create a debounced reload callback and use that in each of your settings.
 
 #### :x: 0.7
 ```js
