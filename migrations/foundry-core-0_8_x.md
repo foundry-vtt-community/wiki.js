@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-22T15:41:26.047Z
+date: 2021-05-22T16:22:10.205Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -170,17 +170,96 @@ class MySystemActor extends Actor {
 All hooks related to embedded entities were removed. These embedded entities are treated as Documents same as their Parents are in 0.8. As a result all of the hooks around EmbeddedDocuments and top level Documents could be standardized.
 
 
-## Tiles
+## Tiles & Canvas Layers
 
 > Most Likely Affects: Modules
 {.is-info}
 
-> Stub
+Foundry 0.8 introduces Overhead Tiles and images to the canvas layer. There is an [official document](https://foundryvtt.com/article/canvas-layers/) with some details about this.
 
 ### What changed between 0.7 and 0.8?
 
-> Stub
-> [TilesLayer was merged into BackgroundLayer/ForegroundLayer](https://foundryvtt.wiki/en/migrations/0_8_2/tiles-layers)
+> ##### Relevant Issue
+> [Refactor the TilesLayer to combine it into the BackgroundLayer which contains Tile objects for a single vertical cross-section of the Scene alongside a background image which fills the Scene canvas.
+](https://gitlab.com/foundrynet/foundryvtt/-/issues/4856)
+
+<div style="display: flex">
+<div style="width: 50%; margin-right: 0.5em;">
+  
+In 0.7 the canvas layers looked like this:
+```
+// order top to bottom
+   ControlsLayer
+   EffectsLayer
+🠗  SoundsLayer
+   SightLayer
+   LightingLayer
+   TokenLayer
+   NotesLayer
+🠗  WallsLayer
+🠕  TemplateLayer
+   GridLayer
+   DrawingsLayer
+-  TilesLayer
+   BackgroundLayer
+```
+</div>
+<div style="width: 50%; margin-left: 0.5em;">
+
+In 0.8 they were changed to look like this:
+```
+// order top to bottom
+   ControlsLayer
+   EffectsLayer
+   SightLayer
+   LightingLayer
+   SoundsLayer
++  ForegroundLayer
+   TokenLayer
+   NotesLayer
+   TemplateLayer
+   WallsLayer
+   GridLayer
+   DrawingsLayer
++- BackgroundLayer
+```
+</div>
+</div>
+
+The `TilesLayer` was merged with the `BackgroundLayer` in a new type of Canvas Layer: [`MapLayer`](https://foundryvtt.com/api/alpha/MapLayer.html), which contains 1 background image and an arbitrary number of tiles. There are two `MapLayer`s in 0.8 canvases: `BackgroundLayer` and `ForegroundLayer`.
+
+## Canvas Placeables
+
+### PlaceableObject document change
+
+> ##### Relevant Issue
+> [Split the responsibility of the current PlaceableObject class into core data management, permission control, and configuration which extends EmbeddedEntity vs the Canvas object representation and UX which extends PlaceableObject](https://gitlab.com/foundrynet/foundryvtt/-/issues/4468)
+
+Canvas Placeables are all Documents embedded in a Scene Document. They leverage the standardized Document API to control the data management of the placeable.
+
+#### Token
+
+> Stub. Code sample desired.
+
+The biggest change is to Tokens, which now have a TokenDocument. The recommended way to create a token from an Actor is no longer `Token.fromActor` but instead passing the result from `Actor#getTokenData` to `TokenDocument`'s constructor.
+
+### PerceptionManager
+
+> ##### Relevant Issue
+> [Introduce the PerceptionManager class which centralizes scheduling and execution of refresh workflows for lighting, sight, sound, and overhead tiles.
+](https://gitlab.com/foundrynet/foundryvtt/-/issues/4035)
+
+The recommended way to refresh Sight, Sound, and Lighting in 0.8 is now through the [`PerceptionManager`](https://foundryvtt.com/api/alpha/PerceptionManager.html). This centralizes scheduling and is thus a more performant way to manually update perception related things.
+
+#### :x: 0.7
+```js
+canvas.sight.refresh();
+```
+
+#### ✅ 0.8 recommended
+```js
+canvas.perception.refresh();
+```
 
 
 ## Audio
