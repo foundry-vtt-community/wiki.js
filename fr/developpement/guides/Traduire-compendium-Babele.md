@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-23T11:03:21.053Z
+date: 2021-05-23T17:19:37.813Z
 tags: localization, development, tutorial, template, compendium, translations, modules, languages, translation, guide, code, module, localizations, babele, didacticiel
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -139,18 +139,18 @@ Il est par ailleurs **fortement conseillé de créer et dédié un monde à la t
 
 Voici une démarche possible pour la traduction de description en utilisant Foundry.
 - Dupliquez le compendium que vous souhaitez traduire et le nommer avec une marque différente de l'original :
-![dupliquer-compendium01.png](/fr/developpement/dupliquer-compendium01.png)
-![dupliquer-compendium02.png](/fr/developpement/dupliquer-compendium02.png)
+![dupliquer-compendium01.png](/setup/babele/dupliquer-compendium01.png)
+![dupliquer-compendium02.png](/setup/babele/dupliquer-compendium02.png)
 
 - Ouvrez votre compendium, puis un objet. Pour modifier la description de l'objet, cliquez sur le bouton qui apparaît en haut à droite du texte de la description :
-![dupliquer-compendium03.png](/fr/developpement/dupliquer-compendium03.png)
-![dupliquer-compendium04.png](/fr/developpement/dupliquer-compendium04.png)
-![dupliquer-compendium05.png](/fr/developpement/dupliquer-compendium05.png)
+![dupliquer-compendium03.png](/setup/babele/dupliquer-compendium03.png)
+![dupliquer-compendium04.png](/setup/babele/dupliquer-compendium04.png)
+![dupliquer-compendium05.png](/setup/babele/dupliquer-compendium05.png)
 - Une fois vos objets traduits, récupérez les fichiers de traduction Babele en cliquant sur le bouton "Traduction" en haut de votre compendium :
-![dupliquer-compendium06.png](/fr/developpement/dupliquer-compendium06.png)
+![dupliquer-compendium06.png](/setup/babele/dupliquer-compendium06.png)
 
 - Choisissez un mode de fichier à récupérer (*il est souvent préférable d'opter pour le mode "Legacy"*) :
-![dupliquer-compendium07.png](/fr/developpement/dupliquer-compendium07.png)
+![dupliquer-compendium07.png](/setup/babele/dupliquer-compendium07.png)
   
 ### Structure des fichiers de traduction JSON
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
