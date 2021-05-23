@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-23T10:45:10.729Z
+date: 2021-05-23T10:46:07.961Z
 tags: localization, development, tutorial, template, compendium, translations, modules, languages, translation, guide, code, module, localizations, babele, didacticiel
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -139,7 +139,7 @@ Il est par ailleurs **fortement conseillé de créer et dédié un monde à la t
 
 Voici une démarche possible pour la traduction de description en utilisant Foundry.
 - Dupliquez le compendium que vous souhaitez traduire et le nommer avec une marque différente de l'original :
-![dupliquer-compendium01.png](/fr/developpement/dupliquer-compendium01.png)![dupliquer_compendium01.webp](/setup/babele/dupliquer_compendium01.webp) ![dupliquer-compendium02.png](/fr/developpement/babele/dupliquer-compendium02.png)
+![dupliquer-compendium01.png](/fr/developpement/dupliquer-compendium01.png) ![dupliquer-compendium02.png](/fr/developpement/babele/dupliquer-compendium02.png)
 
 - Ouvrez votre compendium, puis un objet. Pour modifier la description de l'objet, cliquez sur le bouton qui apparaît en haut à droite du texte de la description :
 ![dupliquer-compendium03.png](/fr/developpement/babele/dupliquer-compendium03.png) ![dupliquer-compendium04.png](/fr/developpement/babele/dupliquer-compendium04.png) ![dupliquer-compendium05.png](/fr/developpement/babele/dupliquer-compendium05.png)
