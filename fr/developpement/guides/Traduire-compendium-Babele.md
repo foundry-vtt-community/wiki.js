@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-23T17:20:37.415Z
+date: 2021-05-23T17:23:43.874Z
 tags: localization, development, tutorial, template, compendium, translations, modules, languages, translation, guide, code, module, localizations, babele, didacticiel
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -142,8 +142,9 @@ Voici une démarche possible pour la traduction de description en utilisant Foun
 ![dupliquer-compendium01.png](/setup/babele/dupliquer-compendium01.png)
 ![dupliquer-compendium02.png](/setup/babele/dupliquer-compendium02.png)
 
-- Ouvrez votre compendium, puis un objet. Pour modifier la description de l'objet, cliquez sur le bouton qui apparaît en haut à droite du texte de la description :
+- Ouvrez votre compendium, puis un objet :
 ![dupliquer-compendium03.png](/setup/babele/dupliquer-compendium03.png)
+- Pour modifier la description de l'objet, cliquez sur le bouton qui apparaît en haut à droite du texte de la description :
 ![dupliquer-compendium04.png](/setup/babele/dupliquer-compendium04.png)
 ![dupliquer-compendium05.png](/setup/babele/dupliquer-compendium05.png)
 - Une fois vos objets traduits, récupérez les fichiers de traduction Babele en cliquant sur le bouton "Traduction" en haut de votre compendium :
