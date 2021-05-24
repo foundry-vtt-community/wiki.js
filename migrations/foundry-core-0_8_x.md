@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-22T16:49:38.076Z
+date: 2021-05-24T01:03:30.579Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -120,7 +120,7 @@ async _preCreate(createData, options, user) {
 Example Usage, `preCreate` Hook
 ```js
 Hooks.on("preCreateActor", (document, createData, options, userId) => {
-  doc.data.update({name: "Some other name"});
+  document.data.update({name: "Some other name"});
 });
 ```
 
