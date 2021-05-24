@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-05-19T22:24:42.862Z
+date: 2021-05-24T11:31:39.274Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -115,9 +115,8 @@ Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'
 ![pretires.jpg](/images/pretires.jpg) 
 
 ## Aventure officielle *Le parchemin ou le Sabre*
-(https://foundryvtt.com/packages/l5r5e-world-scroll) adaptée à Foundry est disponible en libre téléchargement.  
+L'aventure officielle [Le Parchemin ou le Sabre](https://foundryvtt.com/packages/l5r5e-world-scroll) adaptée à Foundry est disponible en libre téléchargement.  
 Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure fourni gratuitement par l'éditeur. 
-
 
 
 ## Informations
