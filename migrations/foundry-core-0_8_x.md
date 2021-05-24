@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-24T01:04:29.818Z
+date: 2021-05-24T16:32:22.765Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -309,9 +309,30 @@ canvas.perception.refresh();
 
 ### New Setting Types
 
-Two often-asked-for setting types have been added in 0.8:
+Two often-asked-for setting types have been [added in 0.8](https://gitlab.com/foundrynet/foundryvtt/-/issues/2888):
 - DirectoryPicker
 - FilePicker
+
+#### Example Registrations
+```js
+game.settings.register("core", "chooseFile", {
+  name: "Choose A File",
+  hint: "You can use a file-picker to choose a certain file",
+  scope: "client",
+  config: true,
+  type: String,
+  filePicker: true // This is the important part
+});
+
+game.settings.register("core", "chooseFolder", {
+  name: "Choose Folder",
+  hint: "You can also choose a certain folder",
+  scope: "client",
+  config: true,
+  type: String,
+  filePicker: true // This is the important part
+});
+```
 
 
 ### Reloading onChange
