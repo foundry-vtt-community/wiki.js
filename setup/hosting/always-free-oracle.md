@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-05-20T19:36:22.105Z
+date: 2021-05-27T23:46:26.458Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -22,6 +22,7 @@ This guide provides easy to follow steps for a relatively simple installation of
   4. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
   5. A backup policy that automatically keeps 5 backups in case of emergencies.
   
+>The Oracle Always Free Tier meets the **minimum** requirements to host core Foundry VTT server. The use of large number (thousand+) of entities in the sidebar or compendiums, or certain modules may exceed the available resources. {.is-warning} 
 
 ## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
