@@ -2,7 +2,7 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-04-21T16:38:04.146Z
+date: 2021-05-28T04:11:57.696Z
 tags: localization, translation, guide
 editor: markdown
 dateCreated: 2020-11-19T16:43:45.270Z
@@ -91,3 +91,16 @@ Add newly localizable strings on update notes if possible. If you would like to 
 {.is-info}
 
 This is advice for both developers and translators. Try to avoid including flags when showcasing the currently supported languages or when releasing a translation module. Certain countries do not necessarily associate themselves with the flag that a language is primarily known for, and may cause unwanted political friction (trust me, you don’t want to deal with this). Try using IETF language codes (RFC 4646) instead.
+
+## Load order of localization
+At most times, load order is not important, but it can be critical if there is a conflict of keys.
+
+Foundry loads translation modules, which means the latter will override the former translation if key conflicts.
+
+The load order is:
+1. Core Translations
+2. Default Module (World - Core settings)
+3. System Integrated Translations
+4. Non-default Modules
+
+Non-default Modules sort alphabetically, so the initial character of a module name matters. In other words, A module of which name starts with `Z` will override the translation of those same keys that comes with a module of which name starts with `A`.
