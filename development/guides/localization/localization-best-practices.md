@@ -2,7 +2,7 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-05-28T04:20:03.146Z
+date: 2021-05-28T04:20:12.667Z
 tags: localization, translation, guide
 editor: markdown
 dateCreated: 2020-11-19T16:43:45.270Z
@@ -95,7 +95,7 @@ This is advice for both developers and translators. Try to avoid including flags
 ## Load order of localization
 At most times, load order is not important, but it can be critical if there is a conflict of keys.
 
-Foundry loads translation modules in a specific orders, which means the latter will override the former translation if key conflicts.
+Foundry loads translation modules in a specific order, which means the latter will override the former translation if key conflicts.
 
 The load order is:
 1. Core Translations
