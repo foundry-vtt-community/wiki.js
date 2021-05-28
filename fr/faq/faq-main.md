@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2021-05-21T22:17:52.455Z
+date: 2021-05-28T10:27:29.801Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -136,6 +136,10 @@ Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de 
 ## Bah finalement, on peut faire la même chose avec un de meeting vidéo et partage d’écran
 
 Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme Roll20, Astral, FantasyGrounds, Foundry etc offrent toutefois des capacités des gestion des scènes, des actions, des PNJs qui sont difficilement atteignables avec un simple outil de meeting. Mais l’important c’est de jouer de toute manière.
+
+## J'aime pas jouer en ligne, c'est de la m..., alors ça me sert à rien
+
+Cete attitude connue et un brin rétrograde est compréhensible, mais à titre perso je maitrise plus sur table réelle que virtuelle, et j'utilise Foundry dans tout les cas. C'est devenu un précieux outil de gestion et d'animation des parties dont je ne saurais plus me passer sur table désormais. Plus de détails ici : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/ 
 
 ## Bon je veux bien regarder, il n'y a pas une vidéo de démonstration ?
 
