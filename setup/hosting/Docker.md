@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-04-21T16:30:31.155Z
+date: 2021-05-31T21:36:12.112Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -107,52 +107,30 @@ Please visit the README in the [fvtt-docker repository](https://github.com/Benja
 **Dockerfile** describe installation of your container
 
 ```yaml
-FROM ubuntu:latest
+FROM alpine:3.13
 
-# make directory
-RUN mkdir -p /home/foundry/fvtt
-RUN mkdir -p /root/.local/share/FoundryVTT
-
-# Build-arg: User ID for the created foundry user
-ENV UID=1026
-# Build-arg: Group ID for the created group
-ENV GUID=65534
 # Set the foundry install home
+RUN adduser -D foundry
+RUN mkdir -p /home/foundry/fvtt
+RUN mkdir -p /home/foundry/fvttdata
+
 ENV FOUNDRY_HOME=/home/foundry/fvtt
+ENV FOUNDRY_DATA=/home/foundry/fvttdata
 
-RUN echo "UID ${UID}"
-# add a foundry group with a guid listed above
-
-RUN echo "UID: ${UID} GUID: $GUID"
-# create the foundry use
-RUN adduser -u $UID -h "$FOUNDRY_HOME" -D foundry
+RUN apk add --update nodejs=14.16.1-r1
 
 # Set the current working directory
 WORKDIR "${FOUNDRY_HOME}"
 
-# installing unzip and bash shell
-RUN apt-get update
+#copy found
+COPY ./foundryvtt-0.8.5.zip .
 
-# curl nodejs nginx unzip
-RUN apt-get install apt-utils -y
-RUN apt-get install curl -y
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN apt-get -y install nodejs
-RUN apt-get -y install nginx unzip
-
-# nginx pararm 
-RUN rm /etc/nginx/sites-enabled/default
-RUN service nginx restart
-
-# copy found
-COPY ./foundryvtt*.zip .
-
-# unzip 
+#unzip
 RUN unzip foundryvtt*.zip
 RUN rm foundryvtt*.zip
 
 EXPOSE 30000
-CMD [ "node", "resources/app/main.js" ]
+CMD node ${FOUNDRY_HOME}/resources/app/main.js --dataPath=${FOUNDRY_DATA}
 ```
 
 ###  **docker-compose.yml** describe creation image
@@ -161,22 +139,20 @@ version: '3.3'
 
 services:
    fvtt:
+        container_name: Fvtt
         build:
             context: ./
             dockerfile: ./Dockerfile
-            args:
-                UID: 1026
-                GUID: 65534
-        image: fvtt:1.11.0            
-        container_name: FoudryVTT
+        image: fvtt:3.0
+        volumes:
+          - /data/your/folder/app:/home/foundry/fvtt
+          - /data/your/folder/data:/home/foundry/fvttdata
         ports:
             - "30000:30000"
-        restart: always
-
 ```
 
-#### **foundryvtt-x.x.x.zip** FoundryVTT (Available on [https://foundryvtt.com](foundryvtt.com))
-copy your foundryvtt-x.x.x.zip file to the same level as the other files
+#### **foundryvtt-x.8.5.zip** FoundryVTT (Available on [https://foundryvtt.com](foundryvtt.com))
+copy your foundryvtt-x.8.5.zip file to the same level as the other files
 
 
 ### *Build image*
@@ -185,15 +161,18 @@ copy your foundryvtt-x.x.x.zip file to the same level as the other files
 After build image you can use or test your container with this commands :
 
 Run the container (for test no save modifications)
-#### `sudo docker run --restart=always --name FoundryVTT.x.x.x -p 30000:30000 -d fvtt:1.11.0`
+#### `sudo docker run --restart=unless-stopped --name Fvtt -p 30000:30000 -d fvtt:3.0`
 
 
 #### Run the docker with volume map for save yours modifications : ####
 ```
-sudo docker run --restart=always --name FoundryVTT.x.x.x -p 30000:30000 \
- -v /YourLocalDirectory1:/home/foundry/fvtt \
- -v /yourLocalDirectory2:/root/.local/share/FoundryVTT \
--d fvtt:1.11.0
+sudo docker run \
+--restart=unless-stopped \
+--name Fvtt \
+-p 30000:30000 \
+-v /data/your/folder/app:/home/foundry/fvttd \
+-v /data/your/folder/data:/home/foundry/fvttdata \
+-d fvtt:3.0
 ```
 
 ---
