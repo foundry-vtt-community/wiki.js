@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-28T19:57:22.000Z
+date: 2021-05-31T10:37:09.371Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -86,7 +86,7 @@ nano /var/log/start.log
 nano /var/log/user-data.log
 ```
 
-If you encounter an error that cannot be fixed by running it again please leave a comment with your error on my github: https://github.com/dirkvandooren/AWS_FoundryVTT/issues 
+If you encounter an error that cannot be fixed by running it again please leave a comment with your error on my github: https://github.com/dirkvandooren/AWS_FoundryVTT/issues or send me a message on Discord @Dofthorn
 
 To renew the certificate.
 make the security group for your ec2 temporarily reachable for HTTP and HTTPS by adding an entry for HTTP and one for HTTPS to your security group allowing 0.0.0.0/0 
