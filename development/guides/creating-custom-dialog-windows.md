@@ -2,7 +2,7 @@
 title: Creating Custom Dialog Windows
 description: A guide on how to create dialog windows with custom content, styling, and buttons.
 published: true
-date: 2021-06-01T22:24:10.841Z
+date: 2021-06-01T22:24:51.275Z
 tags: development, dialog, window
 editor: markdown
 dateCreated: 2021-06-01T15:03:28.882Z
@@ -12,9 +12,9 @@ Custom dialog windows are a straightfoward way to interface with users to carry 
 This article aims to walk through the process of creating a custom dialog window from scratch.
 This guide is geared towards beginners but can be applied to more complex module development as well.
 # The Dialog Class
-The [`Dialog`](https://foundryvtt.com/api/Dialog.html) class is an extension of the `Application` class. For our purposes, this just means that the foundation of a dialog window is the same as most of the other windows/UI elements you are already familiar with.
+The [`Dialog`](https://foundryvtt.com/api/Dialog.html) class is an extension of the [`Application`](https://foundryvtt.com/api/Application.html) class. For our purposes, this just means that the foundation of a dialog window is the same as most of the other windows/UI elements you are already familiar with.
 
-`Dialog` instances are intended for basic interfacing. For more complex data handling, consider using [FormApplication](/en/development/guides/understanding-form-applications).
+`Dialog` instances are intended for basic interfacing. For more complex data handling, consider using [`FormApplication`](/en/development/guides/understanding-form-applications).
 
 A custom dialog window is comprised of the following elements:
 * **Title:** What appears in the dialog header.
