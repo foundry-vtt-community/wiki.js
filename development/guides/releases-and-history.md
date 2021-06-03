@@ -2,7 +2,7 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-04-30T16:02:08.522Z
+date: 2021-06-03T11:54:36.355Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -61,7 +61,6 @@ Installation is fairly straightforward and can be done in one of two ways.
   1.c If the User selects "Yes", the local `manifest` is overwritten with the new value from the Package Repository
 1. Foundry fetches the manifest from the url in the currently installed package's manifest json.
 2. Foundry compares the `version` strings of the installed module's manifest against the fetched manifest.
-  2.a If the user is doing this on an individual package they have to then click the "Update" button.
 	Foundry uses its [`isNewerVersion` helper function](https://foundryvtt.com/api/global.html#isNewerVersion) to compare manifest version strings.
 3. If Foundry determines that the fetched manifest json has a newer version, it then downloads that manifest's `download` and checks if it is a zip file. If so, it unzips.
 4. If Foundry determines that no new version exists, but that new Remote metadata values exist for the version, Foundry will execute an automatic Sidegrade. The Fields are sidegraded according to the following table:
