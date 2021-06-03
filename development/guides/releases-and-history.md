@@ -2,7 +2,7 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-06-03T13:12:19.185Z
+date: 2021-06-03T13:13:26.341Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -216,7 +216,7 @@ Their `module.json` already leverages the `releases/latest` Github Repo url to e
   4.a. Set the tag name to "2.23.1"
   4.b. Add some change notes to the body of the release
   4.c. Attach the `module.json` and `module.zip` files to the release
-5. Double-check your release by copying the URLs for the manifest and download into your web browser. The text-only manifest should display, and you should automatically start downloading the zip file. If necessary, fix these links before proceeding.
+5. *(Optional but recommended)* Double-check your release by copying the URLs for the manifest and download into your web browser. The text-only manifest should display, and you should automatically start downloading the zip file. If necessary, fix these links before proceeding.
 6. Open AmazingModule's Foundry Package Admin page.
 7. At the very bottom of the Package Version list, fill in the fields for this new release.
   - Version: `2.23.1`
