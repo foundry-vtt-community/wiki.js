@@ -2,7 +2,7 @@
 title: Refactor the TilesLayer to combine it into the BackgroundLayer which contains Tile objects for a single vertical cross-section of the Scene alongside a background image which fills the Scene canvas.
 description: 
 published: true
-date: 2021-05-01T03:05:06.974Z
+date: 2021-06-05T20:59:22.736Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:04:47.807Z
@@ -19,7 +19,7 @@ The TilesLayer has been merged with BackgroundLayer, and a new ForegroundLayer h
 
 Check that your logic around Tiles doesn't reference `canvas.tiles` and instead checks for Tiles within `canvas.background` and/or `canvas.foreground`.
 
-* [Unverified] 
+* `canvas.background.tiles` and `canvas.foreground.tiles` work
 
 ### Research Notes
 
