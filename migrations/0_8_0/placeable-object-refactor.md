@@ -2,7 +2,7 @@
 title: Split the responsibility of the current PlaceableObject class into core data management, permission control, and configuration which extends EmbeddedEntity vs the Canvas object representation and UX which extends PlaceableObject
 description: 
 published: true
-date: 2021-05-01T19:24:56.751Z
+date: 2021-06-05T21:08:53.394Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:40:54.674Z
@@ -18,6 +18,7 @@ The `PlaceableObject` class now takes an `EmbeddedDocument` as its parameter inp
 ## What you need to change
 
 - [Unverified] AbientLight, AmbientSound, Drawing, Note, Tile, Token, Wall all are affected by this.
+- [Verified] Tile is affected by this
 
 ### Research Notes
 
