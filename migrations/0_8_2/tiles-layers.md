@@ -2,7 +2,7 @@
 title: Refactor the TilesLayer to combine it into the BackgroundLayer which contains Tile objects for a single vertical cross-section of the Scene alongside a background image which fills the Scene canvas.
 description: 
 published: true
-date: 2021-06-05T20:59:22.736Z
+date: 2021-06-05T20:59:26.260Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:04:47.807Z
