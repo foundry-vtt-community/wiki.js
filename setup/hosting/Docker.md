@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-06-10T20:58:37.605Z
+date: 2021-06-10T20:59:18.680Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -98,7 +98,6 @@ Please visit the README in the [fvtt-docker repository](https://github.com/Benja
 # trotroyanas's docker-compose Setup
 
 ### For this you only need 3 files.
-<!--ts-->
       * Dockerfile
       * docker-compose.yml
       * foundryvtt-x.x.x.zip (Available on [https://foundryvtt.com](foundryvtt.com))
