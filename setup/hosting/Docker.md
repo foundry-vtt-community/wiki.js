@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-06-10T20:49:04.317Z
+date: 2021-06-10T20:53:22.245Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -11,16 +11,6 @@ dateCreated: 2020-09-23T00:34:32.550Z
 You can use Docker to run Foundry VTT. You may use several different approaches.
 
 Here is a table of the approaches detailed within as well as notes on their complexity and extra features.
-
-| Author                                     | Difficulty | Extra Features     | Notes                        |
-| ------------------------------------------ | ---------- | ------------------ | ---------------------------- |
-| [mikysan](#mikysans-simple-dockerfile)     | simple     |                    | Simple Dockerfile            |
-| [Jake](#jake)        | simple     |                    | Updated version of mikysan's |
-| [Felddy](#felddys-easy-one-step-docker-container)      | moderate     |                    | Set and Forget, Configurable           |
-| [trotroyanas](#trotroyanass-docker-compose-setup) | moderate   |                    |                              |
-| [thomasfa18](#mikysans-simple-dockerfile)  | moderate   |                    |                              |
-| [DireckHit](#direckthits-guide-to-running-fvtt-docker-with-traefik-and-portainer)   | complex    | Traefik, Portainer | Good for Remote Hosting      |
-| [Vicknesh](#vickneshs-docker-deployment-guide)    | complex    | Caddy for TLS      |                              |
 
 ---
 
