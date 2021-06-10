@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-06-10T20:57:30.872Z
+date: 2021-06-10T20:58:01.355Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -81,6 +81,17 @@ docker run \
 ```
 
 For more information about the available configuration options please see the [project README](https://github.com/felddy/foundryvtt-docker#readme).  If you have any questions please feel free to contact me on the FoundryVTT discord: `@felddy`
+
+---
+
+
+# DirecktHit's Guide to Running FVTT-Docker with Traefik and Portainer
+
+Please visit [DirecktHit's blog](https://benprice.dev/posts/fvtt-docker-tutorial/) for the most up to date directions.
+
+## DirecktHit's Docker Hub Image via `docker-compose`
+
+Please visit the README in the [fvtt-docker repository](https://github.com/BenjaminPrice/fvtt-docker) for the most up to date directions.
 
 ---
 
