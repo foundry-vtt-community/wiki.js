@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-06-10T20:58:01.355Z
+date: 2021-06-10T20:58:37.605Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -92,6 +92,87 @@ Please visit [DirecktHit's blog](https://benprice.dev/posts/fvtt-docker-tutorial
 ## DirecktHit's Docker Hub Image via `docker-compose`
 
 Please visit the README in the [fvtt-docker repository](https://github.com/BenjaminPrice/fvtt-docker) for the most up to date directions.
+
+---
+
+# trotroyanas's docker-compose Setup
+
+### For this you only need 3 files.
+<!--ts-->
+      * Dockerfile
+      * docker-compose.yml
+      * foundryvtt-x.x.x.zip (Available on [https://foundryvtt.com](foundryvtt.com))
+
+**Dockerfile** describe installation of your container
+
+```yaml
+FROM alpine:3.13
+
+# Set the foundry install home
+RUN adduser -D foundry
+RUN mkdir -p /home/foundry/fvtt
+RUN mkdir -p /home/foundry/fvttdata
+
+ENV FOUNDRY_HOME=/home/foundry/fvtt
+ENV FOUNDRY_DATA=/home/foundry/fvttdata
+
+RUN apk add --update nodejs=14.16.1-r1
+
+# Set the current working directory
+WORKDIR "${FOUNDRY_HOME}"
+
+#copy found
+COPY ./foundryvtt-0.8.5.zip .
+
+#unzip
+RUN unzip foundryvtt*.zip
+RUN rm foundryvtt*.zip
+
+EXPOSE 30000
+CMD node ${FOUNDRY_HOME}/resources/app/main.js --dataPath=${FOUNDRY_DATA}
+```
+
+###  **docker-compose.yml** describe creation image
+```yaml
+version: '3.3'
+
+services:
+   fvtt:
+        container_name: Fvtt
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        image: fvtt:3.0
+        volumes:
+          - /data/your/folder/app:/home/foundry/fvtt
+          - /data/your/folder/data:/home/foundry/fvttdata
+        ports:
+            - "30000:30000"
+```
+
+#### **foundryvtt-x.8.5.zip** FoundryVTT (Available on [https://foundryvtt.com](foundryvtt.com))
+copy your foundryvtt-x.8.5.zip file to the same level as the other files
+
+
+### *Build image*
+`sudo docker-compose build`
+
+After build image you can use or test your container with this commands :
+
+Run the container (for test no save modifications)
+#### `sudo docker run --restart=unless-stopped --name Fvtt -p 30000:30000 -d fvtt:3.0`
+
+
+#### Run the docker with volume map for save yours modifications : ####
+```
+sudo docker run \
+--restart=unless-stopped \
+--name Fvtt \
+-p 30000:30000 \
+-v /data/your/folder/app:/home/foundry/fvttd \
+-v /data/your/folder/data:/home/foundry/fvttdata \
+-d fvtt:3.0
+```
 
 ---
 
