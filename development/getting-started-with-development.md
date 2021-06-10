@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-06-10T20:41:52.495Z
+date: 2021-06-10T20:42:21.205Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -252,5 +252,3 @@ This isn't necessarily a bad pattern but it can save you some headaches if you a
 ## Monkeypatch
 
 > stub [monkeypatch](https://davidwalsh.name/monkey-patching)
-
-test
