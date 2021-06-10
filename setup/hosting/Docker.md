@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-06-10T20:59:18.680Z
+date: 2021-06-10T21:00:53.715Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -264,5 +264,3 @@ It is a similar process to achieve the same using a computer, assuming you have 
 # Vicknesh's Docker Deployment guide
 
 Guide for setting up FoundryVTT with Caddy for TLS can be found [https://github.com/svicknesh/foundryvtt-docker-deploy](https://github.com/svicknesh/foundryvtt-docker-deploy)
-
-test
