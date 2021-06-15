@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-05-24T16:32:26.830Z
+date: 2021-06-15T02:35:37.424Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -59,6 +59,15 @@ This includes Embedded ~~Entities~~ Documents, which had a large API difference 
 
 > Stub.
 > Something about how embeddedEntities are interacted with has changed...
+
+When creating an embeddedDocument, `createEmbeddedDocuments` expects the data of the Document instead of a Document instance.
+
+```js
+const item = await somePack.getDocument('foo');
+
+await actor.createEmbeddedDocuments("Item", [item.data]);
+```
+
 
 ---
 
