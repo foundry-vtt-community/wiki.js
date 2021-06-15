@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-06-15T02:35:37.424Z
+date: 2021-06-15T15:32:04.030Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -62,10 +62,13 @@ This includes Embedded ~~Entities~~ Documents, which had a large API difference 
 
 When creating an embeddedDocument, `createEmbeddedDocuments` expects the data of the Document instead of a Document instance.
 
+> When passing existing `Document` data to create and update functions, it is recommended to use the new `Document#toObject()` method instead of the `DocumentData` instance, in order to avoid inconsistent behavior. Read more about `Document#toObject()` in this [GitLab issue](https://gitlab.com/foundrynet/foundryvtt/-/issues/4862).
+{.is-warning}
+
 ```js
 const item = await somePack.getDocument('foo');
 
-await actor.createEmbeddedDocuments("Item", [item.data]);
+await actor.createEmbeddedDocuments("Item", [item.toObject()]);
 ```
 
 
