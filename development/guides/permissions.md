@@ -2,7 +2,7 @@
 title: Using Permissions in Foundry
 description: A guide on who can do what where, and how that affects your UI
 published: true
-date: 2021-06-15T20:16:12.246Z
+date: 2021-06-15T20:17:26.119Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-11T18:51:47.310Z
@@ -16,7 +16,7 @@ dateCreated: 2021-06-11T18:51:47.310Z
 > - How to query permission proactively
 > - General advice on UI best practices
 
-## How to set Permissions via API
+## How to set permissions via API
 To set or change the permissions users have for a given document, you just need to update the `permission` property as follows:
 
 ```javascript
