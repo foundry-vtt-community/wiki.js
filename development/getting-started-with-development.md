@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-06-17T13:35:26.059Z
+date: 2021-06-17T16:35:53.699Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -95,56 +95,9 @@ To pull this off first you have to find where the method or function is in the g
 
 ## How do I make an API available to other modules?
 
-The convention among Foundry VTT Development community (and the official recommendation from Atropos himself) is to expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`. Additionally, any module can call an arbitrary hook to inform other modules about events.
+*Main article: [Library Modules](/en/development/library-modules)*
 
-Together these two methods provide a bulletproof way for a module to expose an API to other modules.
-
-
-### Example
-
-> #### Package Load Order
-> It is a best practice to leverage a custom hook because packages fire hooks like `ready` and `init` in a specific order which you cannot control. A module might load before yours does, and if it relies on your module's api at ready, it will not have a good way to do so. 
-{.is-warning}
-
-#### cool-module
-Cool module needs to set up some settings before it can reliably provide an API.
-```js
-class MyCoolClass {
-  // ...
-  
-  static myStaticMethod(argument) {
-    // does stuff you want other modules to have access to
-  }
-}
-
-
-Hooks.on('init', () => {
-	// my module needs to do something to set itself up (e.g. register settings)
-  // ...
-  
-  // once set up, we create our API object
-	game.modules.get('cool-module').api = {
-    coolStaticMethod: MyCoolClass.myStaticMethod
-  };
-  
-  // now that we've created our API, inform other modules we are ready
-  // provide a reference to the module api as the hook arguments for good measure
-  Hooks.callAll('coolModuleReady', game.modules.get('cool-module').api);
-});
-```
-
-#### awesome-module
-A different module can now reliably use this api like so.
-```js
-// if I need to do something as soon as the cool-module is ready
-Hooks.on('coolModuleReady', (api) => {
-  // do what I need with their api
-});
-
-// alternatively if I know that the API should be populated when I need it,
-// I can defensively use the api on game.modules
-game.modules.get('cool-module')?.api?.coolStaticMethod(someInput)
-```
+The convention among Foundry VTT Development community (and the official recommendation from Atropos himself) is to expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`. Additionally, any module can call a custom hook to inform other modules about events.
 
 
 ## How do I handle keyboard events?
