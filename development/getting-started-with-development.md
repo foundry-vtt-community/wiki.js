@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-06-17T13:33:19.547Z
+date: 2021-06-17T13:35:26.059Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -275,11 +275,11 @@ This isn't necessarily a bad pattern but it can save you some headaches if you a
 
 ## Object-oriented Programming (OOP)
 
-> stub
-> [MDN basics article](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-> compare to [Functional Programming](https://opensource.com/article/17/6/functional-javascript)
-
 OOP is a coding paradigm that is widely used in the Foundry Development community as it is what Foundry itself is built on. In essence, it values splitting functionality and data mangement into ES2020 `Class`es as opposed to a lot of independent functions and variables.
+
+> #### Further reading
+> - [MDN basics article](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS) 
+> - [Dev.to comparison vs Functional Programming](https://dev.to/bhaveshdaswani93/oop-vs-fp-with-javascript-39jf)
 
 ## Promise
 
