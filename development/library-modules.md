@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-06-17T16:37:20.714Z
+date: 2021-06-17T16:37:31.530Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -31,7 +31,7 @@ Together these two methods provide a bulletproof way for a module to expose an A
 > #### Package Load Order
 > It is a best practice to leverage a custom hook because packages fire hooks like `ready` and `init` in a specific order which you cannot control. A module might load before yours does, and if it relies on your module's api at ready, it will not have a good way to do so. 
 >
-> Using the `library` field in your manifest will mitigate the risk of a different package loading before yours.
+> Using the `library` field in your manifest will mitigate the risk of a different package loading before yours, if applicable.
 {.is-warning}
 
 ##### cool-module
