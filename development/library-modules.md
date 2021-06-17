@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-06-17T16:47:59.033Z
+date: 2021-06-17T16:59:34.514Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -98,6 +98,8 @@ More than simply wrapping an existing js lib, these are made specifically with f
 - [DF's Hotkeys](https://foundryvtt.com/packages/lib-df-hotkeys/) - It allows modules to register their own Keyboard Shortcuts and gives way for users to then customize those hotkey bindings.
 - [SocketLib](https://github.com/manuelVo/foundryvtt-socketlib) - Provides commonly needed socket patterns in an abstracted form.
 - [Arbron's Context Menu Library](https://github.com/arbron/fvtt-context-menu-library) - Allows expansion of context menus for Compendium Entries and Module Management.
+- [Scene Packer](https://github.com/League-of-Foundry-Developers/scene-packer) - A toolset for content creators which helps package scenes for compendium distribution.
+- [libCaptions](https://github.com/bekriebel/fvtt-module-lib-captions) - Provides a way for other modules to display captions in the FVTT interface.
 
 
 
