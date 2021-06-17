@@ -1,8 +1,8 @@
 ---
 title: Foundry's Built-in CSS Framework
 description: An overview of the built-in CSS styles used and provided by Foundry
-published: false
-date: 2021-06-16T23:48:33.866Z
+published: true
+date: 2021-06-17T12:59:31.182Z
 tags: css
 editor: markdown
 dateCreated: 2021-06-16T23:48:33.866Z
