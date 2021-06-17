@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-06-15T15:32:04.030Z
+date: 2021-06-17T12:53:49.752Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -134,6 +134,20 @@ Example Usage, `preCreate` Hook
 Hooks.on("preCreateActor", (document, createData, options, userId) => {
   document.data.update({name: "Some other name"});
 });
+```
+
+#### Adding Items to an Actor during preCreate
+
+Use `Actor#_preCreate` to add the items to the parent's embedded document collection.
+
+```js
+async _preCreate(data, options, user) {
+  await super._preCreate(data, options, user);
+  const item = new CONFIG.Item.documentClass({name: 'Foo', type: 'feat'});
+  const items = this.items.map(i => i.toObject());
+  items.push(item.toObject());
+  this.data.update({ items });
+}
 ```
 
 ### For Update Operations
