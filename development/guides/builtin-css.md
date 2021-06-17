@@ -2,11 +2,14 @@
 title: Foundry's Built-in CSS Framework
 description: An overview of the built-in CSS styles used and provided by Foundry
 published: true
-date: 2021-06-17T14:11:08.421Z
+date: 2021-06-17T14:33:23.915Z
 tags: css
 editor: markdown
 dateCreated: 2021-06-16T23:48:33.866Z
 ---
+
+> Last updated for v0.8.7
+{.is-info}
 
 # Foundry's style.css
 
@@ -55,9 +58,33 @@ The `li` has the `flexrow` class, so it will automatically place its child eleme
 
 The `flexcol` class can be used on an HTML component so that it lays out its children vertically.
 
-### `flex0`
+#### Example 
 
-### `flex1`, `flex2`, `flex3`
+### `flex0`, `flex1`, `flex2`, `flex3`
+
+These are shorthand classes for setting the [`flex-grow` style](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flex-grow) of an element. By default, the elements within a flex container are distributed evenly; these classes provide a fast way to change the relative ratios of the elements within a flex container for when you want specific elements to take up more or less space within the container.
+
+* `flex0` - This element should not take up any more space than its fixed height or width.
+* `flex1` - This element should attempt to take up 1 "unit" of space within the container. This is the default value for an element.
+* `flex2` - This element should attempt to take up twice as much space as any `flex1` elements
+* `flex3` - This element should attempt to take up three times as much space as any `flex1` elements
+
+> Note that only the numbers `0 - 3` are provided; an arbitrary `flexN` is not supported.
+{.is-warning}
+
+#### Example
+
+```html
+{{!-- actor.hbs --}}
+<form class="flexcol" autocomplete="off">
+  <header class="flex0" style="border: 2px solid red"><p>The Header takes up only as much space as needed by its height</p></header>
+  <section class="flex1" style="border: 2px solid green"><p>flex1 - A normal section</p></section>
+  <section class="flex3" style="border: 2px solid blue"><p>flex3 - A huge section</p></section>
+  <section class="flex2" style="border: 2px solid orange"><p>flex2 - Not quite as huge</p></section>
+</form>
+```
+
+![flex-ratios.png](/development/guides/builtin-css/flex-ratios.png)
 
 # Font Awesome
 
