@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-06-17T16:59:34.514Z
+date: 2021-06-17T17:03:40.731Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -100,7 +100,7 @@ More than simply wrapping an existing js lib, these are made specifically with f
 - [Arbron's Context Menu Library](https://github.com/arbron/fvtt-context-menu-library) - Allows expansion of context menus for Compendium Entries and Module Management.
 - [Scene Packer](https://github.com/League-of-Foundry-Developers/scene-packer) - A toolset for content creators which helps package scenes for compendium distribution.
 - [libCaptions](https://github.com/bekriebel/fvtt-module-lib-captions) - Provides a way for other modules to display captions in the FVTT interface.
-
+- [Developer Mode](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode) - Allows modules to register and read debug flags.
 
 
 
