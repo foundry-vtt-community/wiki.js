@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-06-17T16:34:56.764Z
+date: 2021-06-17T16:36:35.138Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -22,11 +22,9 @@ Leverage the manifest JSON field `library` to inform Foundry Core that this modu
 
 ### Follow the [Best Practices](/en/development/guides/package-best-practices) for module APIs
 
-
 The convention among Foundry VTT Development community (and the official recommendation from Atropos himself) is to expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`. Additionally, any module can call an arbitrary hook to inform other modules about events.
 
 Together these two methods provide a bulletproof way for a module to expose an API to other modules.
-
 
 #### Example
 
