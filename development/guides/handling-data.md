@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-06-17T15:00:36.259Z
+date: 2021-06-17T15:02:08.857Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -154,7 +154,7 @@ console.log(someVariable); // expected to be 'foo'
 ```
 
 ### Reloading after setting a setting
-Sometimes a settings' value changing means that the foundry client should reload for it to take effect. This can be accomplished with the `onChange` callback but should be debounced to allow for the case where several changed settings require a reload.
+Sometimes a setting's value changing means that the foundry client should reload for it to take effect. This can be accomplished with the `onChange` callback but should be debounced to allow for the case where several changed settings require a reload.
 
 ```js
 const debouncedReload = foundry.utils.debounce(window.location.reload, 100);
