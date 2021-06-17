@@ -2,7 +2,7 @@
 title: Library Modules
 description: A quick list of known library modules which offer functionality for other modules to extend.
 published: true
-date: 2021-06-17T16:37:31.530Z
+date: 2021-06-17T16:47:59.033Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-02T19:37:27.342Z
@@ -81,22 +81,24 @@ game.modules.get('cool-module')?.api?.coolStaticMethod(someInput)
 ### Javascript Library packages
 Rather than including these js libs in your own module's files, you can make use of these commonly re-used packages.
 
-- Mathjs https://github.com/League-of-Foundry-Developers/mathjs-lib
-- Codemirror https://github.com/League-of-Foundry-Developers/codemirror-lib
-- Introjs https://github.com/League-of-Foundry-Developers/intro.js-lib
-- Sortablejs https://github.com/League-of-Foundry-Developers/sortablejs-lib
-
+- [Mathjs](https://github.com/League-of-Foundry-Developers/mathjs-lib)
+- [Codemirror](https://github.com/League-of-Foundry-Developers/codemirror-lib)
+- [Introjs](https://github.com/League-of-Foundry-Developers/intro.js-lib)
+- [Sortablejs](https://github.com/League-of-Foundry-Developers/sortablejs-lib)
+- [Ace](https://github.com/arcanistzed/acelib)
 
 ### Foundry Specific Functionality
 
 More than simply wrapping an existing js lib, these are made specifically with foundry's use cases in mind.
 
-- libWrapper https://github.com/ruipin/fvtt-lib-wrapper - Useful for overwriting methods you don't control in a way which allows for conflict resolution.
-- Chat Commands https://foundryvtt.com/packages/_chatcommands/ - Allows modules to define their own chat commands.
-- Color Settings https://github.com/ardittristan/VTTColorSettings - Adds color picker as settings option and form option.
-- Find the Path https://github.com/dwonderley/lib-find-the-path/ - Provides a library that performs system-agnostic path planning calculations for two-dimensional, square grids.
-- DF's Hotkeys https://foundryvtt.com/packages/lib-df-hotkeys/ - It allows modules to register their own Keyboard Shortcuts and gives way for users to then customize those hotkey bindings.
-- SocketLib https://github.com/manuelVo/foundryvtt-socketlib - Provides commonly needed socket patterns in an abstracted form.
+- [libWrapper](https://github.com/ruipin/fvtt-lib-wrapper) - Useful for overwriting methods you don't control in a way which allows for conflict resolution.
+- [Chat Commands](https://foundryvtt.com/packages/_chatcommands/) - Allows modules to define their own chat commands.
+- [Color Settings](https://github.com/ardittristan/VTTColorSettings) - Adds color picker as settings option and form option.
+- [Find the Path](https://github.com/dwonderley/lib-find-the-path/) - Provides a library that performs system-agnostic path planning calculations for two-dimensional, square grids.
+- [DF's Hotkeys](https://foundryvtt.com/packages/lib-df-hotkeys/) - It allows modules to register their own Keyboard Shortcuts and gives way for users to then customize those hotkey bindings.
+- [SocketLib](https://github.com/manuelVo/foundryvtt-socketlib) - Provides commonly needed socket patterns in an abstracted form.
+- [Arbron's Context Menu Library](https://github.com/arbron/fvtt-context-menu-library) - Allows expansion of context menus for Compendium Entries and Module Management.
+
 
 
 
