@@ -2,7 +2,7 @@
 title: Foundry's Built-in CSS Framework
 description: An overview of the built-in CSS styles used and provided by Foundry
 published: true
-date: 2021-06-17T14:37:35.694Z
+date: 2021-06-17T15:36:24.191Z
 tags: css
 editor: markdown
 dateCreated: 2021-06-16T23:48:33.866Z
@@ -30,10 +30,26 @@ Foundry provides a few general classes for employing CSS flexbox in your layouts
 > If you're not familiar with flexbox, CSS Tricks has a solid guide [here](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 {.is-info}
 
+### `flexcol`
+
+The `flexcol` class can be used on an HTML component so that it lays out its children vertically. The browser will attempt to distribute the height of all the children equally, down to their minimum. If the minimum heights of all the children exceed the component's height, then children will automatically flow to a new column.
+
+#### Example
+
+```html
+{{!-- actor.hbs --}}
+<form class="editable flexcol" autocomplete="off">
+  <section style="border: 2px solid red"><p>Section 1</p></section>
+  <section style="border: 2px solid green"><p>Section 2</p></section>
+  <section style="border: 2px solid blue"><p>Section 3</p></section>
+  <section style="border: 2px solid orange"><p>Section 4</p></section>
+</form>
+```
+![flexcol.png](/development/guides/builtin-css/flexcol.png)
 
 ### `flexrow`
 
-The `flexrow` class can be used on an HTML component so that it automatically lays out its children horizontally. If the width of all the children exceed the component's width, then children will automatically wrap to a new row.
+The `flexrow` class can be used on an HTML component so that it automatically lays out its children horizontally. The browser will attempt to distribute the width of all the children equally, down to their minimum. If the minimum widths of all the children exceed the component's width, then children will automatically flow to a new row.
 
 #### Example
 
@@ -53,12 +69,6 @@ The following snippet shows a handlebars template for an ActorSheet implementati
 The `li` has the `flexrow` class, so it will automatically place its child elements horizontally, in the order in which they appear in the code:
 
 ![skills.png](/development/guides/builtin-css/skills.png)
-
-### `flexcol`
-
-The `flexcol` class can be used on an HTML component so that it lays out its children vertically.
-
-#### Example 
 
 ### `flex0`, `flex1`, `flex2`, `flex3`
 
