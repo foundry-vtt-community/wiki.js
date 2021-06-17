@@ -2,7 +2,7 @@
 title: Foundry's Built-in CSS Framework
 description: An overview of the built-in CSS styles used and provided by Foundry
 published: true
-date: 2021-06-17T15:36:24.191Z
+date: 2021-06-17T16:04:57.178Z
 tags: css
 editor: markdown
 dateCreated: 2021-06-16T23:48:33.866Z
@@ -98,9 +98,18 @@ These are shorthand classes for setting the [`flex-grow` style](https://css-tric
 
 # Font Awesome
 
-Foundry also includes the free Font Awesome icon font set.
+Foundry also includes the free [Font Awesome](https://fontawesome.com/v5.15/how-to-use/on-the-web/referencing-icons/basic-use) icon font set.
 
-`TODO: Example`
+#### Example
+
+```html
+<p>
+  <i class="fas fa-book-dead"></i>
+  Font Awesome in an Actor sheet
+  <i class="fas fa-ghost"></i>
+</p>
+```
+![fa.png](/development/guides/builtin-css/fa.png)
 
 # Helper Utilities
 
