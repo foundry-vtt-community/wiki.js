@@ -2,7 +2,7 @@
 title: Foundry's Built-in CSS Framework
 description: An overview of the built-in CSS styles used and provided by Foundry
 published: true
-date: 2021-06-17T13:02:03.055Z
+date: 2021-06-17T13:05:09.060Z
 tags: css
 editor: markdown
 dateCreated: 2021-06-16T23:48:33.866Z
@@ -18,7 +18,7 @@ To obtain or view the main `style.css` file:
 
 1. In your Foundry installation, the file can be found at `$installDirectory/resources/app/public/css/style.css`
 1. Using the Style editor in your browser's developer console, locate the file named `style.css`:
-![foundrycss.png](/development/foundrycss.png)
+![foundrycss.png](/development/guides/builtin-css/foundrycss.png)
 
 ## Flexbox Classes
 
