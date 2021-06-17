@@ -2,7 +2,7 @@
 title: Foundry's Built-in CSS Framework
 description: An overview of the built-in CSS styles used and provided by Foundry
 published: true
-date: 2021-06-17T13:05:09.060Z
+date: 2021-06-17T14:11:08.421Z
 tags: css
 editor: markdown
 dateCreated: 2021-06-16T23:48:33.866Z
@@ -30,7 +30,26 @@ Foundry provides a few general classes for employing CSS flexbox in your layouts
 
 ### `flexrow`
 
-The `flexrow` class can be used on an HTML component so that it lays out its children horizontally.
+The `flexrow` class can be used on an HTML component so that it automatically lays out its children horizontally. If the width of all the children exceed the component's width, then children will automatically wrap to a new row.
+
+#### Example
+
+The following snippet shows a handlebars template for an ActorSheet implementation which contains a list of `skills`. For each Skill, there is an `img`, an `h4` containing the name, and then a `div` which could contain buttons or other information.
+
+```html
+{{!-- actor.hbs --}}
+{{#each skills as |s|}}
+<li class="flexrow">
+  <img src="{{s.img}}" title="{{s.name}}" width="24" height="24" />
+  <h4>{{s.name}}</h4>
+  <div></div>
+</li>
+{{/each}}
+```
+
+The `li` has the `flexrow` class, so it will automatically place its child elements horizontally, in the order in which they appear in the code:
+
+![skills.png](/development/guides/builtin-css/skills.png)
 
 ### `flexcol`
 
