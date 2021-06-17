@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-06-10T20:42:21.205Z
+date: 2021-06-17T13:33:19.547Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -24,7 +24,9 @@ dateCreated: 2021-02-05T16:13:36.470Z
 
 ## Is there a list of hooks?
 
-[There is a community maintained hook typescript definition and documentation file.](https://github.com/League-of-Foundry-Developers/foundry-vtt-types/blob/foundry-0.7.9/foundry/hooks.d.ts) But there's an easier way to discover what hook you can use for a specific piece of functionality:
+[There is some official documentation about hooks as of 0.8.](https://foundryvtt.com/api/hookEvents.html)
+
+[There is also a community maintained hook typescript definition and documentation file.](https://github.com/League-of-Foundry-Developers/foundry-vtt-types/blob/foundry-0.7.9/foundry/hooks.d.ts) But there's an easier way to discover what hook you can use for a specific piece of functionality:
 
 ```js
 CONFIG.debug.hooks = true;
@@ -91,38 +93,64 @@ To pull this off first you have to find where the method or function is in the g
 
 > [Stub](https://github.com/VanceCole/macros/blob/master/sockets.js)
 
-## How do I make functions available to other modules?
+## How do I make an API available to other modules?
 
-> Stub
-> 
-> [Example: DevMode](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode/blob/f1f98916d25c633ac22020e30cc335a786ed5aa4/src/foundryvtt-devMode.ts#L57)
-> Basically you will want to put something namespaced on window or global this, then fire a custom hook.
->
-> I would not recommend putting the whole class on window, rather I think it's a better idea to put a few functions as a dedicated api.
->
-> This makes it easier to not break api consumers code when your own code changes. Since you are providing these specific api methods, you can ensure that their shape doesn't change
->
-> There's two ways to accomplish this and I'm not really sure why one is better, or even if one is better:
-> ```js
-> window[MODULE_ID] = {
->   someFunction: YourClass.method
-> }
-> ```
-> 
-> Putting it on the window allows an optional dependency like so window['your-module']?.someFunction.
-> 
-> ```js
-> globalThis[MODULE_ID] = {
->   someFunction: YourClass.method
-> }
-> ```
-> 
-> Putting it on the globalThis doesn't seem to allow the same thing.
+The convention among Foundry VTT Development community (and the official recommendation from Atropos himself) is to expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`. Additionally, any module can call an arbitrary hook to inform other modules about events.
+
+Together these two methods provide a bulletproof way for a module to expose an API to other modules.
+
+
+### Example
+
+> #### Package Load Order
+> It is a best practice to leverage a custom hook because packages fire hooks like `ready` and `init` in a specific order which you cannot control. A module might load before yours does, and if it relies on your module's api at ready, it will not have a good way to do so. 
+{.is-warning}
+
+#### cool-module
+Cool module needs to set up some settings before it can reliably provide an API.
+```js
+class MyCoolClass {
+  // ...
+  
+  static myStaticMethod(argument) {
+    // does stuff you want other modules to have access to
+  }
+}
+
+
+Hooks.on('init', () => {
+	// my module needs to do something to set itself up (e.g. register settings)
+  // ...
+  
+  // once set up, we create our API object
+	game.modules.get('cool-module').api = {
+    coolStaticMethod: MyCoolClass.myStaticMethod
+  };
+  
+  // now that we've created our API, inform other modules we are ready
+  // provide a reference to the module api as the hook arguments for good measure
+  Hooks.callAll('coolModuleReady', game.modules.get('cool-module').api);
+});
+```
+
+#### awesome-module
+A different module can now reliably use this api like so.
+```js
+// if I need to do something as soon as the cool-module is ready
+Hooks.on('coolModuleReady', (api) => {
+  // do what I need with their api
+});
+
+// alternatively if I know that the API should be populated when I need it,
+// I can defensively use the api on game.modules
+game.modules.get('cool-module')?.api?.coolStaticMethod(someInput)
+```
 
 
 ## How do I handle keyboard events?
 
 > Stub. There's a [KeyboardManager](https://foundryvtt.com/api/KeyboardManager.html) class that might be useful here.
+> There's also some library modules which allow keybind registration.
 
 ## What is a flag and how do I use them?
 
@@ -142,7 +170,7 @@ Settings, like flags, are a way for modules to store and persist data. Settings 
 
 For system independence, it's often a good idea to allow data paths to be defined by a setting (e.g. if you want to reference an attribute modifier in a dialog, then you could hard-code `modifier = actor.attributes.str.mod`, but that path is 5e specific - so allowing a user to define the path to the attribute modifier makes it easy to tweak your module for a specific system).
 
-This can be done with the `getProperty(object, key)` function, e.g. `modifier = getProperty(actor, attributeKey)`.
+This can be done with the [`getProperty(object, key)`](https://foundryvtt.com/api/module-helpers.html#.getProperty) function, e.g. `modifier = getProperty(actor, attributeKey)`.
 
 
 # Common Hurdles and How to Overcome Them
@@ -244,6 +272,14 @@ someOtherFunction() {
 In the example above, `someFunction` mutates `foo`. Depending on the order in which it is called (before or after `someOtherFunction`) this might cause `someOtherFunction` to behave unexpectedly.
 
 This isn't necessarily a bad pattern but it can save you some headaches if you avoid mutating things as much as possible. Instead try to make duplicates of your data when you want to change it.
+
+## Object-oriented Programming (OOP)
+
+> stub
+> [MDN basics article](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+> compare to [Functional Programming](https://opensource.com/article/17/6/functional-javascript)
+
+OOP is a coding paradigm that is widely used in the Foundry Development community as it is what Foundry itself is built on. In essence, it values splitting functionality and data mangement into ES2020 `Class`es as opposed to a lot of independent functions and variables.
 
 ## Promise
 
