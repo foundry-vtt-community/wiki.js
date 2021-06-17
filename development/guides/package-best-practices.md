@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2021-06-17T15:18:16.611Z
+date: 2021-06-17T15:22:02.520Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -56,12 +56,16 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 - Make use of as many existing strings as possible.
 - Keep your localization strings confined to your package's namespace.
 
-## Files and Dependencies
+## Files
 - Paths to your files use the exact same case-sensitive directories as in the package download zip. Windows, Linux, and OSX treat capitalization of directories differently.
 - Do not use spaces in file names or directory names. All directories should be URL-compatible. We recommend using `kebab-case` where your spaces are replaced with `-`.
 - Never do a relative import (esmodule) from one module to another (or to a system). If you need access to something, contact the developer and ask them to expose it instead.
-- A dependency on another module should be resolved by `CONFIG` variables defined by that dependency or namespaced classes or Hooks.
 - Remember that other people host foundry differently, including on setups which change the root directory.
+
+## Module APIs and Dependencies
+- Expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`.
+- Leverage custom hooks to provide a reliable way for other packages to react to events caused by your module.
+- Depend on every module in the dependency tree for your package, Foundry does not handle dependency-trees with 2+ levels during install or activation.
 
 ## Code Practices
 This section was last updated for Foundry VTT 0.7.7.
