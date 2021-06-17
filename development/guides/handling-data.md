@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-04-21T16:47:55.578Z
+date: 2021-06-17T15:00:36.259Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -130,7 +130,8 @@ await game.settings.register('myModuleName', 'mySettingName', {
   },
   onChange: value => { // value is the new value of the setting
     console.log(value)
-  }
+  },
+  filePicker: false,	// set true with a String `type` to use a file picker input
 });
 ```
 
@@ -151,6 +152,24 @@ Settings can be read with [`game.settings.get`](https://foundryvtt.com/api/Clien
 const someVariable = game.settings.get('myModuleName','myModuleSetting');
 console.log(someVariable); // expected to be 'foo'
 ```
+
+### Reloading after setting a setting
+Sometimes a settings' value changing means that the foundry client should reload for it to take effect. This can be accomplished with the `onChange` callback but should be debounced to allow for the case where several changed settings require a reload.
+
+```js
+const debouncedReload = foundry.utils.debounce(window.location.reload, 100);
+
+game.settings.register("myModuleName", "myModuleSetting", {
+  // ...,
+  onChange: debouncedReload
+}
+
+game.settings.register("myModuleName", "myOtherSetting", {
+  // ...,
+  onChange: debouncedReload
+}
+```
+
 
 ### Setting Menus
 
