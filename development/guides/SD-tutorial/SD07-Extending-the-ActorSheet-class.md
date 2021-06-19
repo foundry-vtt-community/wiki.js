@@ -2,7 +2,7 @@
 title: SD07 Extending the ActorSheet class
 description: 
 published: true
-date: 2021-06-19T15:27:44.398Z
+date: 2021-06-19T15:55:00.098Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
@@ -103,6 +103,17 @@ Much like the Actor class' `prepareData()` method, we can use the `getData()` me
     return context;
   }
 ```
+
+The first thing we're doing here is setting a new constant called `context` that's equal to `super.getData()`. We're using `context` for the variable name so that we can avoid the `data.data` changes mentioned in the previous step of the tutorial and can instead use references like `context.data.attributes.level.value`.
+
+### What is super.getData()?
+Calling `super.getData()` will execute the `getData()` method in the `ActorSheet` class that we extended for this, so it's helpful to be aware of what exactly that gives when we execute it. As of Foundry 0.8.6, it returns an object structured as:
+
+- `data`: A safe duplicate of the actor's data usable in sheets
+- `editable`: A boolean for whether or not this actor sheet should be editable
+- `actor`: The actor document
+- `items`: Items on the actor document
+- `effects`: Active Effects on the actor document
 
 
 ## activateListeners()
