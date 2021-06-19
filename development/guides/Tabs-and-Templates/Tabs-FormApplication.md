@@ -2,7 +2,7 @@
 title: 2. Extending FormApplication with Tabbed Template
 description: Guide to extending FormApplication to use a tabbed template
 published: true
-date: 2021-06-19T17:10:01.999Z
+date: 2021-06-19T22:02:02.682Z
 tags: template, html, formapplication, tabs
 editor: markdown
 dateCreated: 2021-06-19T16:53:47.366Z
@@ -15,6 +15,8 @@ dateCreated: 2021-06-19T16:53:47.366Z
 This guide provides some examples of using html templates, tabs, and handlebars in Foundry VTT dialogs or sheets. In this guide, we will extend the FormApplication class for a basic tabbed version.
 
 See [Template Basics](/en/development/guides/Tabs-and-Templates/Template-Basics) for an overview of templates in Foundry VTT.
+
+See [Understanding Form Applications](/en/development/guides/understanding-form-applications) for more details on how the FormApplication class works.
 
 # Example: All the tabs
 The following code creates a tabbed display. Using handlebars, we are able to dynamically set the number of tabs by passing an array of tab properties, one for each tab. 
