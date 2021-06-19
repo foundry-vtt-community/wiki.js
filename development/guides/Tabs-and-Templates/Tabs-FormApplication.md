@@ -2,7 +2,7 @@
 title: 2. Extending FormApplication with Tabbed Template
 description: Guide to extending FormApplication to use a tabbed template
 published: true
-date: 2021-06-19T16:54:42.574Z
+date: 2021-06-19T17:10:01.999Z
 tags: template, html, formapplication, tabs
 editor: markdown
 dateCreated: 2021-06-19T16:53:47.366Z
@@ -88,7 +88,7 @@ d.render(true);
 ```
 Notes:
 - Passing `{ tabs: [{ navSelector: ".tabs", contentSelector: ".content", initial: "tab1" }]}` is (basically) telling the Application class how to track when you select different tabs.
-- See html tabs guide - Dialog for an example of extending the Dialog class.
+- See [Extending Dialog with Tabs](/en/development/guides/Tabs-and-Templates/Extending-Dialog-with-Tabs) for an example of extending the Dialog class.
 
 
 ### 2. Subclass `FormApplication`.
