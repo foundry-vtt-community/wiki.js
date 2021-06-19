@@ -1,8 +1,8 @@
 ---
-title: SD07 Extending-the-ActorSheet-class
+title: SD07 Extending the ActorSheet class
 description: 
 published: true
-date: 2021-04-21T16:32:55.808Z
+date: 2021-06-19T14:58:22.265Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
@@ -10,11 +10,9 @@ dateCreated: 2020-09-23T00:35:58.947Z
 
 The ActorSheet class is the class associated with our actor's character sheets. Let's take a look at what Boilerplate System does:
 
-## defaultOptions()
+## Class definition and defaultOptions()
 
 Every sheet needs to define its default options.
-
-<!--- {% raw %} --->
 
 ```js
 /**
@@ -30,50 +28,91 @@ export class BoilerplateActorSheet extends ActorSheet {
       template: "systems/boilerplate/templates/actor/actor-sheet.html",
       width: 600,
       height: 600,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
     });
+  }
+
+  /** @override */
+  get template() {
+    return `systems/boilerplate/templates/actor/actor-${this.actor.data.type}-sheet.html`;
   }
 ```
 
-<!--- {% endraw %} --->
+First, we're exporting the class (don't forget to rename yours!) and defining the default options for the sheet. In the `defaultOptions()` method we need to return a mergedObject of the default options from the main ActorSheet class and our customizations. Those customizations are:
 
-First, we're exporting the class (don't forget to rename yours!) and defining the default options for the sheet. In the <!-- {% raw %} -->`defaultOptions()`<!-- {% endraw %} --> method we need to return a mergedObject of the default options from the main ActorSheet class and our customizations. Those customizations are:
-
--  **classes**: an array of CSS classes to apply to the character sheet.
-* **template**: the path to the Handlebars HTML template that we'll use for this character sheet. This needs to be relative to Foundry's root, so you need to include <!-- {% raw %} -->`systems/MYSYSTEMNAME`<!-- {% endraw %} --> in the start of the path.
-* **width**: default window width
-* **height**: default window height
+- **classes**: an array of CSS classes to apply to the character sheet.
+* **template**: the path to the Handlebars HTML template that we'll use for this character sheet. This needs to be relative to Foundry's root, so you need to include `systems/MYSYSTEMNAME` in the start of the path. If you have multiple actor or sheet types, you can also use a `get template()` method to compute the template name dynamically.
+* **width**: default window width.
+* **height**: default window height.
 * **tabs**: Use this to define your tabs on the character sheet. This should match up with what you've created in your HTML template, but you must have a nav selector CSS class, content selector CSS class, and choose a default/initial tab.
+
+### get template()
+
+Document sheets also support a special `template()` getter method (see the `get` prefix before it) that can be used to retrieve the template name dynamically. Normally you don't have access to the actor data in the `defaultOptions()` getter method, so you have to use this method if you want to do something like including the actor type in the template name. For example, the following would allow for templates named `actor-character-sheet.html` and `actor-npc-sheet.html`:
+
+```js
+  /** @override */
+  get template() {
+    return `systems/boilerplate/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+  }
+```
 
 ## getData()
 
-Much like the Actor class' <!-- {% raw %} -->`prepareData()`<!-- {% endraw %} --> method, we can use the <!-- {% raw %} -->`getData()`<!-- {% endraw %} --> method to derive new data for the character sheet. The main difference is that values created here will only be available within this class and on the character sheet's HTML template. If you were to use your browser's inspector to take a look at an actor's available data, you wouldn't see these values in the list, unlike those created in prepareData().
+Much like the Actor class' `prepareData()` method, we can use the `getData()` method to derive new data for the character sheet. The main difference is that values created here will only be available within this class and on the character sheet's HTML template. If you were to use your browser's inspector to take a look at an actor's available data, you wouldn't see these values in the list, unlike those created in prepareData().
 
-<!--- {% raw %} --->
+> **Actor#prepareData() or ActorSheet#getData()?**
+> Both of these methods are capable of calculating derived data that you can display on your sheet. The major difference is that data in the actor sheet's `getData()` method is _only_ available to the sheet itself.
+{.is-info}
 
 ```js
   /* -------------------------------------------- */
 
   /** @override */
   getData() {
-    const data = super.getData();
-    data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
+    // Retrieve the data structure from the base sheet. You can inspect or log
+    // the context variable to see the structure, but some key properties for
+    // sheets are the actor object, the data object, whether or not it's
+    // editable, the items array, and the effects array.
+    const context = super.getData();
+
+    // Use a safe clone of the actor data for further operations.
+    const actorData = context.actor.data;
+
+    // Add the actor's data to context.data for easier access, as well as flags.
+    context.data = actorData.data;
+    context.flags = actorData.flags;
+
+    // Prepare character data and items.
+    if (actorData.type == 'character') {
+      this._prepareItems(context);
+      this._prepareCharacterData(context);
     }
-    return data;
+
+    // Prepare NPC data and items.
+    if (actorData.type == 'npc') {
+      this._prepareItems(context);
+    }
+
+    // Add roll data for TinyMCE editors.
+    context.rollData = context.actor.getRollData();
+
+    // Prepare active effects
+    context.effects = prepareActiveEffectCategories(this.actor.effects);
+
+    return context;
   }
 ```
 
-<!--- {% endraw %} --->
+
 
 There's not a whole lot happening in this example of getData(), as we're just checking to see what kind of attribute this is and setting the type to Boolean if it's a checkbox. You may not need to use this, so feel free to skip over it if you have everything you need from the prepareData() method instead.
 
 ## activateListeners()
 
-If you want your sheet to be interactive, this is where that needs to happen. The <!-- {% raw %} -->`activateListeners()`<!-- {% endraw %} --> method is where you can execute jQuery on your sheet to do things like create rollable skills and powers, add new items, or delete items. This method is passed an <!-- {% raw %} -->`html`<!-- {% endraw %} --> object that behaves much like <!-- {% raw %} -->`$('.sheet')`<!-- {% endraw %} --> would if you were trying to run jQuery logic on your sheet in your browser's console.
+If you want your sheet to be interactive, this is where that needs to happen. The `activateListeners()` method is where you can execute jQuery on your sheet to do things like create rollable skills and powers, add new items, or delete items. This method is passed an `html` object that behaves much like `$('.sheet')` would if you were trying to run jQuery logic on your sheet in your browser's console.
 
-<!--- {% raw %} --->
+
 
 ```js
   /** @override */
@@ -102,13 +141,13 @@ If you want your sheet to be interactive, this is where that needs to happen. Th
   }
 ```
 
-<!--- {% endraw %} --->
+
 
 The Boilerplate System includes three examples of click listeners, one to create new items, one to edit existing items, and one to delete items. We'll revisit this later in the tutorial to add a listener for rollable attributes.
 
-The first click listener we added was to create new items, but notice that it uses <!-- {% raw %} -->`this._onItemCreate.bind(this)`<!-- {% endraw %} --> rather than calling its code directly like the edit and delete listeners do. You can follow that code pattern to break your listeners into custom methods to make your code more organized as it grows over time. For now, let's take a closer look at the <!-- {% raw %} -->`_onItemCreate()`<!-- {% endraw %} --> custom method:
+The first click listener we added was to create new items, but notice that it uses `this._onItemCreate.bind(this)` rather than calling its code directly like the edit and delete listeners do. You can follow that code pattern to break your listeners into custom methods to make your code more organized as it grows over time. For now, let's take a closer look at the `_onItemCreate()` custom method:
 
-<!--- {% raw %} --->
+
 
 ```js
   /* -------------------------------------------- */
@@ -141,19 +180,19 @@ The first click listener we added was to create new items, but notice that it us
   }
 ```
 
-<!--- {% endraw %} --->
 
-We're doing a few different things here. First, we're getting the element (header) that was clicked, and then we're finding out what type of item it was. In this case that type is <!-- {% raw %} -->`item`<!-- {% endraw %} -->, but it could also be something like <!-- {% raw %} -->`feature`<!-- {% endraw %} --> or <!-- {% raw %} -->`spell`<!-- {% endraw %} -->.  After that, we're grabbing any custom data attributes on the element that was clicked and using them to create a new <!-- {% raw %} -->`itemData`<!-- {% endraw %} --> object. Finally, we're passing all of that over to <!-- {% raw %} -->`this.actor.createdOwnedItem(itemData)`<!-- {% endraw %} --> to create the item on this actor.
+
+We're doing a few different things here. First, we're getting the element (header) that was clicked, and then we're finding out what type of item it was. In this case that type is `item`, but it could also be something like `feature` or `spell`.  After that, we're grabbing any custom data attributes on the element that was clicked and using them to create a new `itemData` object. Finally, we're passing all of that over to `this.actor.createdOwnedItem(itemData)` to create the item on this actor.
 
 And since these examples have all been the individual sections, don't forget your closing bracket for the class itself!
 
-<!--- {% raw %} --->
+
 
 ```js
 }
 ```
 
-<!--- {% endraw %} --->
+
 
 ---
 
