@@ -2,7 +2,7 @@
 title: SD07 Extending the ActorSheet class
 description: 
 published: true
-date: 2021-06-19T14:58:22.265Z
+date: 2021-06-19T15:27:44.398Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
@@ -62,7 +62,7 @@ Document sheets also support a special `template()` getter method (see the `get`
 Much like the Actor class' `prepareData()` method, we can use the `getData()` method to derive new data for the character sheet. The main difference is that values created here will only be available within this class and on the character sheet's HTML template. If you were to use your browser's inspector to take a look at an actor's available data, you wouldn't see these values in the list, unlike those created in prepareData().
 
 > **Actor#prepareData() or ActorSheet#getData()?**
-> Both of these methods are capable of calculating derived data that you can display on your sheet. The major difference is that data in the actor sheet's `getData()` method is _only_ available to the sheet itself.
+> Both of these methods are capable of calculating derived data that you can display on your sheet. The major difference is that data in the actor sheet's `getData()` method is _only_ available to the sheet itself. That means that `getData()` is great for derived data that's useful on the sheet (such as the width of an XP progress bar) or for making more convenient data structures (such as filtering the items into groups based on item type), but should be avoided for data that's useful in other contexts (such as calculated ability score modifiers).
 {.is-info}
 
 ```js
@@ -104,9 +104,6 @@ Much like the Actor class' `prepareData()` method, we can use the `getData()` me
   }
 ```
 
-
-
-There's not a whole lot happening in this example of getData(), as we're just checking to see what kind of attribute this is and setting the type to Boolean if it's a checkbox. You may not need to use this, so feel free to skip over it if you have everything you need from the prepareData() method instead.
 
 ## activateListeners()
 
