@@ -2,7 +2,7 @@
 title: SD07 Extending the ActorSheet class
 description: 
 published: true
-date: 2021-06-19T15:55:00.098Z
+date: 2021-06-20T03:21:12.287Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
@@ -106,14 +106,38 @@ Much like the Actor class' `prepareData()` method, we can use the `getData()` me
 
 The first thing we're doing here is setting a new constant called `context` that's equal to `super.getData()`. We're using `context` for the variable name so that we can avoid the `data.data` changes mentioned in the previous step of the tutorial and can instead use references like `context.data.attributes.level.value`.
 
-### What is super.getData()?
-Calling `super.getData()` will execute the `getData()` method in the `ActorSheet` class that we extended for this, so it's helpful to be aware of what exactly that gives when we execute it. As of Foundry 0.8.6, it returns an object structured as:
+> **What is super.getData()?**
+>
+> Calling `super.getData()` will execute the `getData()` method in the `ActorSheet` class that we extended for this, so it's helpful to be aware of what exactly that gives when we execute it. As of Foundry 0.8.6, it returns an object structured as:
+>
+> `data`: A safe duplicate of the actor's data usable in sheets
+> `actor`: The actor document
+> `items`: Items on the actor document
+> `effects`: Active Effects on the actor document
+> `cssClass`: This will be either `editable` or `locked` based on whether the actor is editable
+> `editable`: A boolean for whether or not this actor sheet should be editable
+> `document`: A reference to `this.document`, as with the actor document earlier
+> `limited`: Whether or not the document should have limited permissions
+> `options`: Options passed to the `getData()` call
+> `owner`: A boolean for if this user is either the document's owner or a GM.
+> `title`: The sheet applications' title
+{.is-info}
 
-- `data`: A safe duplicate of the actor's data usable in sheets
-- `editable`: A boolean for whether or not this actor sheet should be editable
-- `actor`: The actor document
-- `items`: Items on the actor document
-- `effects`: Active Effects on the actor document
+After grabbing an initial data object for the sheet and storing it in the `context` variable, we then grab the actor data like so:
+
+```js
+// Use a safe clone of the actor data for further operations.
+const actorData = this.actor.data.toObject(false);
+
+// Add the actor's data to context.data for easier access, as well as flags.
+context.data = actorData.data;
+context.flags = actorData.flags;
+```
+
+The first line is the most important one, as that's what retrieves a safe copy of the actor's data for sheet manipulation purposes. It uses the document data's built in `toObject()` method and gives it the `false` parameter, which instructs Foundry to not just convert this to a plain object but to also run a deep clone on nested objects/arrays. Just using `this.actor.data` can work, but if you don't use `this.actor.data.toObject(false)`, you can run into difficult to debug issues related to the original object.
+
+Afterwards, we set up new properties for both `context.data` and `context.flags` based on the actorData that we just retrieved. The `context.data` property is the one that will be used frequently in your Handlebars templates later, as its essentially the cleanest and most direct set of the actor's data. The flags are useful to go ahead and include the structure for, but they tend to be more useful for modules than systems (flags are used for arbitrary data structures that don't have to fit the system's template.json).
+
 
 
 ## activateListeners()
