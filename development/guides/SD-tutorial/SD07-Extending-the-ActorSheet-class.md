@@ -1,8 +1,8 @@
 ---
-title: SD07 Extending the ActorSheet class
+title: 07. Extending the ActorSheet class
 description: 
 published: true
-date: 2021-06-20T03:21:12.287Z
+date: 2021-06-20T03:44:16.248Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
@@ -123,22 +123,124 @@ The first thing we're doing here is setting a new constant called `context` that
 > `title`: The sheet applications' title
 {.is-info}
 
-After grabbing an initial data object for the sheet and storing it in the `context` variable, we then grab the actor data like so:
+### Retrieving actorData and context
 
-```js
-// Use a safe clone of the actor data for further operations.
-const actorData = this.actor.data.toObject(false);
-
-// Add the actor's data to context.data for easier access, as well as flags.
-context.data = actorData.data;
-context.flags = actorData.flags;
-```
+After grabbing an initial data object for the sheet and storing it in the `context` variable, we then grab the actor data (line 12 in the code snippet earlier).
 
 The first line is the most important one, as that's what retrieves a safe copy of the actor's data for sheet manipulation purposes. It uses the document data's built in `toObject()` method and gives it the `false` parameter, which instructs Foundry to not just convert this to a plain object but to also run a deep clone on nested objects/arrays. Just using `this.actor.data` can work, but if you don't use `this.actor.data.toObject(false)`, you can run into difficult to debug issues related to the original object.
 
 Afterwards, we set up new properties for both `context.data` and `context.flags` based on the actorData that we just retrieved. The `context.data` property is the one that will be used frequently in your Handlebars templates later, as its essentially the cleanest and most direct set of the actor's data. The flags are useful to go ahead and include the structure for, but they tend to be more useful for modules than systems (flags are used for arbitrary data structures that don't have to fit the system's template.json).
 
+### Preparing Items
 
+Further down in the `getData()` method, we had the following snippet.
+
+```js
+// Prepare character data and items.
+if (actorData.type == 'character') {
+  this._prepareItems(context);
+  this._prepareCharacterData(context);
+}
+
+// Prepare NPC data and items.
+if (actorData.type == 'npc') {
+  this._prepareItems(context);
+}
+```
+
+That checks the actor's type and then calls a few custom methods that we've written to prepare items and prepare additional character data. Let's look at this methods in more detail:
+
+```js
+/**
+ * Organize and classify Items for Character sheets.
+ *
+ * @param {Object} actorData The actor to prepare.
+ *
+ * @return {undefined}
+ */
+_prepareItems(context) {
+  // Initialize containers.
+  const gear = [];
+  const features = [];
+  const spells = {
+    0: [],
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: []
+  };
+
+  // Iterate through items, allocating to containers
+  for (let i of context.items) {
+    i.img = i.img || DEFAULT_TOKEN;
+    // Append to gear.
+    if (i.type === 'item') {
+      gear.push(i);
+    }
+    // Append to features.
+    else if (i.type === 'feature') {
+      features.push(i);
+    }
+    // Append to spells.
+    else if (i.type === 'spell') {
+      if (i.data.spellLevel != undefined) {
+        spells[i.data.spellLevel].push(i);
+      }
+    }
+  }
+
+  // Assign and return
+  context.gear = gear;
+  context.features = features;
+  context.spells = spells;
+}
+```
+
+In this method, we're creating a few different containers like `gear`, `features`, and `spells`. These aren't required, but they're very useful as they allow us to easily access the filtered items in those categories in our Handlebars templates.
+
+After creating the containers, we then loop through `context.items`, which is our collection of all of the actor's items from the `getData()` method earlier. On each step of the loop we check the item type (or spell level, for our spells) and then push them into the appropriate container based on that information.
+
+After the loop, we then assign those containers back to the `context` variable so that we can easily access them in our Handlebars templates later.
+
+Next, let's look at the `_prepareCharacterData()` method that was referenced earlier:
+
+```js
+/**
+ * Organize and classify Items for Character sheets.
+ *
+ * @param {Object} actorData The actor to prepare.
+ *
+ * @return {undefined}
+ */
+_prepareCharacterData(context) {
+  // Handle ability scores.
+  for (let [k, v] of Object.entries(context.data.abilities)) {
+    v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
+  }
+}
+```
+
+We're not doing much here since most logic in this step is more appropriate for `Actor#prepareDerivedData()`, but what we are doing is computing translated versions of the ability score labels. You can call `game.i18n.localize()` or `game.i18n.format()` to translate a string, and in this case those strings are stored in a constant such as `CONFIG.BOILERPLATE.abilities['str']`.
+
+### Wrapping up getData()
+
+For the last few lines of the `getData()` method, we wrap up with the following:
+
+```js
+// Add roll data for TinyMCE editors.
+context.rollData = context.actor.getRollData();
+
+return context;
+```
+
+For the first line we're using `context.rolldata` and setting it equal to the actor's roll data. This is completely optional, but if you have the actor's roll data stored in that way, you can pass it to any text editors you create in your sheet templates so that any inline rolls in them (like `[[@abilities.str.mod+@attributes.level.value]]`) will render correctly in the sheet.
+
+Finally, the `getData()` method requires us to return the object that we're passing to the sheet, so we return the `context` variable we've been working with up to this point.
 
 ## activateListeners()
 
@@ -151,31 +253,31 @@ If you want your sheet to be interactive, this is where that needs to happen. Th
   activateListeners(html) {
     super.activateListeners(html);
 
+    // Render the item sheet for viewing/editing prior to the editable check.
+    html.find('.item-edit').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      item.sheet.render(true);
+    });
+
+    // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
+    if (!this.isEditable) return;
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
-    // Update Inventory Item
-    html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
-      item.sheet.render(true);
-    });
-
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
+      item.delete();
       li.slideUp(200, () => this.render(false));
     });
   }
 ```
 
-
-
-The Boilerplate System includes three examples of click listeners, one to create new items, one to edit existing items, and one to delete items. We'll revisit this later in the tutorial to add a listener for rollable attributes.
+The Boilerplate System includes a few examples of click listeners, one to create new items, one to edit existing items, and one to delete items. We'll revisit this later in the tutorial to add a listener for rollable attributes.
 
 The first click listener we added was to create new items, but notice that it uses `this._onItemCreate.bind(this)` rather than calling its code directly like the edit and delete listeners do. You can follow that code pattern to break your listeners into custom methods to make your code more organized as it grows over time. For now, let's take a closer look at the `_onItemCreate()` custom method:
 
@@ -189,7 +291,7 @@ The first click listener we added was to create new items, but notice that it us
    * @param {Event} event   The originating click event
    * @private
    */
-  _onItemCreate(event) {
+  async _onItemCreate(event) {
     event.preventDefault();
     const header = event.currentTarget;
     // Get the type of item to create.
@@ -208,23 +310,17 @@ The first click listener we added was to create new items, but notice that it us
     delete itemData.data["type"];
 
     // Finally, create the item!
-    return this.actor.createOwnedItem(itemData);
+    return await Item.create(itemData, {parent: this.actor});
   }
 ```
 
-
-
-We're doing a few different things here. First, we're getting the element (header) that was clicked, and then we're finding out what type of item it was. In this case that type is `item`, but it could also be something like `feature` or `spell`.  After that, we're grabbing any custom data attributes on the element that was clicked and using them to create a new `itemData` object. Finally, we're passing all of that over to `this.actor.createdOwnedItem(itemData)` to create the item on this actor.
+We're doing a few different things here. First, we're getting the element (header) that was clicked, and then we're finding out what type of item it was. In this case that type is `item`, but it could also be something like `feature` or `spell`.  After that, we're grabbing any custom data attributes on the element that was clicked and using them to create a new `itemData` object. Finally, we're creating the item and saving it on the actor with `await Item.create(itemData, {parent: this.actor})`. Alternatively, you can also use `await this.actor.createEmbeddedDocuments('Item', [itemData])` which supports an array of items to add to the actor.
 
 And since these examples have all been the individual sections, don't forget your closing bracket for the class itself!
-
-
 
 ```js
 }
 ```
-
-
 
 ---
 
