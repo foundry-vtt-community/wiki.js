@@ -2,7 +2,7 @@
 title: 【6-2】アイテムシートの使い方
 description: 
 published: true
-date: 2021-04-21T16:48:52.603Z
+date: 2021-06-20T16:33:05.242Z
 tags: サタスペ
 editor: ckeditor
 dateCreated: 2021-03-28T20:14:33.683Z
@@ -10,11 +10,13 @@ dateCreated: 2021-03-28T20:14:33.683Z
 
 <h3><span class="text-big">アイテムシートの使い方</span></h3>
 <p>&nbsp;</p>
-<p>ここでは、3種類（カルマ・アイテム・チャットパレット）のアイテムシートの使い方についてそれぞれ軽く説明していきたいと思います。</p>
+<p>ここでは、4種類（カルマ・アイテム・チャットパレット・調査）のアイテムシートの使い方についてそれぞれ軽く説明していきたいと思います。</p>
 <figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-03-21_175919.png">
-  <figcaption>3種類のアイテムシート</figcaption>
+  <figcaption>カルマ・アイテム・チャットパレットのアイテムシート</figcaption>
 </figure>
-<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_233244.png">
+  <figcaption>調査のアイテムシート</figcaption>
+</figure>
 <h4>カルマ</h4>
 <p>&nbsp;</p>
 <p>カルマのアイテムシートは下の画像のようになっています。</p>
@@ -37,7 +39,7 @@ dateCreated: 2021-03-28T20:14:33.683Z
 <p>&nbsp;</p>
 <p>カルマの設定タブでは、判定の種類について設定できます。</p>
 <p>デフォルトの状態では下の画像のように「判定なし☑」となっています。</p>
-<figure class="image image-style-align-left image_resized" style="width:28.7%;"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-03-29_204546.png">
+<figure class="image image_resized image-style-align-left" style="width:28.7%;"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-03-29_204546.png">
   <figcaption>カルマシート：判定の設定（なし）</figcaption>
 </figure>
 <p>&nbsp;</p>
@@ -112,12 +114,52 @@ dateCreated: 2021-03-28T20:14:33.683Z
 <h4>チャットパレット</h4>
 <p>&nbsp;</p>
 <p>チャットパレットを作成すると、コマンド入力欄が1つもない状態の空のチャットパレットができます。</p>
-<p><mark class="marker-yellow">＋マークのボタンをクリックする度に、コマンド入力欄が追加されます</mark>。</p>
-<p>ダイスボットコマンドには、<mark class="marker-yellow">BCDiceのサタスペのコマンドを入力できます</mark>。</p>
-<p>追加テキストには、コマンド以外のロールプレイのセリフや、そのコマンドが何のコマンドなのかの説明等を入力してロール結果と同時に出力することができます。</p>
-<p><mark class="marker-yellow">キャラクターシートにドラッグアンドドロップすることで、ダイスボットコマンド内の{}による置換や()による加算減算処理が有効化されます</mark>。</p>
-<p>この状態でもロールは可能ですが、<mark class="marker-yellow">{}や()については特に変更・反映されることなく、そのままBCDiceのコマンドとして入力される</mark>ことになります。</p>
-<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-03-29_214056.png">
+<p>一番上でシステムを選択でき、その横のⓘマークを押せば選択中のシステムのコマンド一覧が出てきます。</p>
+<p>機能は、アクターシート内のチャットパレットと同じです。（詳しくは<a href="https://foundryvtt.wiki/ja/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E5%88%A5/%E3%82%B5%E3%82%BF%E3%82%B9%E3%83%9A/%E3%80%906-1%E3%80%91%E3%82%A2%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9">【6-1】アクターシートの使い方</a>を参照ください。）</p>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_235307.png">
   <figcaption>チャットパレットシート</figcaption>
 </figure>
 <p>&nbsp;</p>
+<h4>調査</h4>
+<p>&nbsp;</p>
+<p>調査のアイテムシートを作成すると、下の画像のようなシートができます。</p>
+<p><mark class="marker-pink">※調査のアイテムシートはプレイヤー権限も含めて全員が編集できる必要があるので、デフォルトの権限をオーナーに変更してください。</mark></p>
+<p><mark class="marker-pink">※プレイヤー権限とゲームマスター権限で見えるシートが違っています。具体的には、③の赤丸内の⚙のマークがプレイヤー権限にはありません。</mark></p>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_232536.png">
+  <figcaption>調査のアイテムシート作成時の画面（カワイイを選択していること以外）</figcaption>
+</figure>
+<p>①SL0に追加：スタートトピックを追加するボタン。</p>
+<p>②トピック（タグ）：左から順に、トピック（タグ）の趣味、リンクをのばす（枝分かれのアイコン）、リンクを削除する（🚮）になっています。</p>
+<ul>
+  <li>トピック（タグ）の趣味：任意の場合は、ドロップダウンリスト形式で選択できますが、リンクを伸ばすを誰かが1回でも使用すると選択できずその時の趣味で固定されます。</li>
+  <li>リンクをのばす：クリックすると下の画像のようなポップアップウィンドウが出てきます。「リンクを作る」をクリックすると、もう1つ下の画像のように上位（下位）リンクが作られます。</li>
+  <li>リンクを削除する：リンクが削除されます。<mark class="marker-pink">削除したリンクから別のリンクがのびている場合、その先のリンクもまとめて全て削除されます</mark>。</li>
+</ul>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_232829.png">
+  <figcaption>リンクをのばす</figcaption>
+</figure>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_233141.png">
+  <figcaption>SL2にランダムに5つのリンクがのびた</figcaption>
+</figure>
+<p>③ゲームマスター用設定画面：クリックするとゲームマスター用の調査の設定画面に移ります。この説明は以下で別に行います。</p>
+<p>&nbsp;</p>
+<p><strong>ゲームマスター用設定画面</strong></p>
+<p>ここでは、ゲームマスター権限のみが設定・閲覧できるゲームマスター用設定画面について説明します。</p>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_233552.png">
+  <figcaption>ゲームマスター用設定画面</figcaption>
+</figure>
+<p>①プレイヤー用画面に戻る：ここをクリックすればプレイヤー側に表示されている画面に戻ります。</p>
+<p>②ターゲットトピックの追加・削除：「ターゲットトピック追加」をクリックすれば、一番下に新しいターゲットトピックの枠が表示されます。「ターゲットトピック削除」をクリックすれば、一番下のターゲットトピックの枠が削除されます。</p>
+<p>③タグの追加・削除：ターゲットトピックのタグを追加できます。「タグ追加」をクリックすれば、そのターゲットトピック内のタグが追加されます。「タグ削除」をクリックすれば、最後に追加したタグから順番に消去されます。</p>
+<p>④ターゲットトピックを公開する・到達時に自動再生するプレイリスト：ターゲットトピックを公開するに✓を入れると、プレイヤー側の画面上でターゲットトピック（SL?の趣味〇〇）が参照できるようになります（下の画像参照）。到達時に自動再生するプレイリストを選択すると、このターゲットトピックに誰かが到達した際に、現在流れているBGMを停止し、ここで指定したプレイリストが順番に再生されます。</p>
+<p>⑤情報：このターゲットトピックに誰かが到達した際に、自動的にここに書かれた内容がチャットログにDDの名前で公開されます。入力してなくても問題ないです。</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_234300.png">
+  <figcaption>ターゲットトピックを公開した場合のPL側の画面</figcaption>
+</figure>
+<p style="text-align:center;"><span class="text-huge"><strong>↓</strong></span></p>
+<figure class="image"><img src="/images/japanese-community/satasupe/tagselect.png">
+  <figcaption>SL2のターゲットトピック指定の趣味のエクストリームを選択すると…</figcaption>
+</figure>
+<p style="text-align:center;"><span class="text-huge"><strong>↓</strong></span></p>
+<figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-20_234550.png"></figure>
