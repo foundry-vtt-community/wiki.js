@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-05-23T02:42:25.501Z
+date: 2021-06-21T15:19:42.484Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -26,6 +26,9 @@ Atropos has a Developer API Documentation section on the official `foundryvtt.co
 
 
 ## Tutorials
+
+### [Boilerplate System Development Tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD01-Getting-started)
+- Wiki hosted guide to accompany and explain the Boilerplate system as well as a lot of core system development concepts.
 
 ### [Spacemandev's FoundryVTT Development Video Series](https://www.youtube.com/watch?v=UDVH6UIFRos&list=PLLF8ndmyGEGyAWaZifYCzqMuRq2lsaENA)
 - Content that covers topics ranging from Setting up a development environment to the deep dive videos: Macros 101 and 102.
@@ -74,11 +77,13 @@ There are a variety of community-created module and system starter kits out ther
 - Has VS Code Debugger integration out of the box
 - **Description:** A bare bones template that plugs into the debugger features of Visual Studio Code.
 
+
 ### [TyphonJS's Demo Rollup Module](https://github.com/typhonjs-fvtt/demo-rollup-module)
 - Very Opinionated
 - Uses Rollup to bundle your module with examples of cleanly including node module libraries into final package
 - **Supports:** Javascript, Sass / SCSS / PostCSS, minification / mangling w/ sourcemaps, and auto creates versions using Github Actions.
 - **Description:** A starter project template demonstrating Rollup to bundle your module code regardless if you plan to include Node modules or not.
+
 
 ### [ghost's Foundry Factory](https://github.com/ghost91-/foundry-factory)
 - Supports different presets that can be chosen from.
@@ -88,6 +93,7 @@ There are a variety of community-created module and system starter kits out ther
 - **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps, npm, yarn, yarn2
 - **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects.
 
+
 ### [Dragon Flagon TS Automated Module Template](https://github.com/flamewave000/fvtt-module-template)
 - Lightly Opinionated
 - This module template has an opinionated folder structure, but otherwise nothing else.
@@ -95,6 +101,16 @@ There are a variety of community-created module and system starter kits out ther
 - **Uses**: Gulp and TypeScript
 - **Supports**: JavaScript, TypeScript, SourceMaps, Automated Bundling (.zip and manifest generation)
 - **Description**: A TypeScript+Gulp template for a more automated FoundryVTT module development. In this system, you perform minimal changes to the module.json as it is populated automatically based on the package.json and the files present. Will allow you to run a series of Gulp watchers that will automatically build/update files to your dev environment whenever you save a file you've changed.
+
+
+### [Boilerplate System](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate)
+
+> Boilerplate System has an accompanying [Yeoman Generator](https://gitlab.com/asacolips-projects/foundry-mods/foundry-generator)
+{.is-info}
+
+- Lightly Opinionated
+- **Supports:** Javascript, SCSS
+- **Description:** This system is a boilerplate system that you can use as a starting point for building your own custom systems. It's similar to Simple World-building, but has examples of creating attributes in code rather than dynamically through the UI.
 
 ## Development Tools
 
