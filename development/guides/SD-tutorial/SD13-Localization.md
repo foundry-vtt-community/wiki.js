@@ -2,13 +2,23 @@
 title: SD13 Localization
 description: 
 published: true
-date: 2021-04-21T16:40:06.811Z
+date: 2021-06-21T13:18:17.562Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T22:06:29.592Z
 ---
 
+> **Not Updated for Foundry 0.8.x**
+>
+> This section of the system development tutorial has not yet been updated for Foundry 0.8.x versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for 0.8.x).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
+
 Supporting localization in your new system is critical to allow the maximum number of GMs and players to use your system. Localization provides others with the ability to translate your work into their language. It is easier to build into a system from the start when compared to coming back and adding it. Foundry uses the browser's language settings to determine which localization to use when displaying text. 
+
+> For more detailed information on localization, head to the [Localization Best Practices](/en/development/guides/localization/localization-best-practices) page.
+{.is-info}
+
 
 ## What do I localize?
 Every string that you display to a user should be localizable. A general rule is to allow localization of any strings that you display in your system. You don't need to localize text that the GM or players enter in Foundry. Typical areas of localization are:
