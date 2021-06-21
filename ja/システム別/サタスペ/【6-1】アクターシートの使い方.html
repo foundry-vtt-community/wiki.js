@@ -2,7 +2,7 @@
 title: 【6-1】アクターシートの使い方
 description: 
 published: true
-date: 2021-06-20T17:00:31.282Z
+date: 2021-06-21T11:28:56.908Z
 tags: サタスペ
 editor: ckeditor
 dateCreated: 2021-03-28T19:08:14.676Z
@@ -144,6 +144,20 @@ dateCreated: 2021-03-28T19:08:14.676Z
 <p>どどんとふの頃のチャットパレットの入力方式と対応しています（おそらく、ユドナリウムなども同じ形式のはず）。</p>
 <p>また、変数とダイスボットコマンド以外に文字を入れないようにしてください。</p>
 <p>上の画像の場合、「入力例：」というダイスボットコマンドがチャットパレット内にできてしまいます。</p>
+<p>&nbsp;</p>
+<blockquote>
+  <p><strong>Tips:fvtt-bcdiceと連携する</strong></p>
+  <p>モジュール「fvtt-bcdice」を導入し、アクティブ化させている人には、下の画像のようにさらに「コピペでロード」以外にもう1つボタン（「fvtt-bcdiceからロード」）が表示されるようになっています。</p>
+  <figure class="image"><img src="/images/japanese-community/satasupe/fvttbcdice.png">
+    <figcaption>fvtt-bcdiceからロード</figcaption>
+  </figure>
+  <p>このボタンをクリックし、出てきたポップアップウィンドウ内のドロップダウンリストには、fvtt-bcdiceで設定した「タブ」の名前が表示されます。</p>
+  <p>このタブを選択する（あるいは「全て」を選択する）と、下の画像のようにfvtt-bcdiceで設定した「Macro」（ダイスボットコマンド+追加テキスト）と「置き換え」の内容がサタスペのキャラシのチャットパレットにロードされます。</p>
+  <p>（置き換えの方法がfvtt-bcdiceと"サタスペ"のチャパレでは少し違っているが、その差異についても自動変換される（具体的には、fvtt-bcdiceの置き換えは、同じ文字か{}で囲まれた計算式に対応した文字と同じ文字がコマンドに遭った場合に置き換えており、"サタスペ"では{}で囲まれた文字がコマンド内にあった場合に置き換えている））</p>
+  <figure class="image"><img src="/images/japanese-community/satasupe/スクリーンショット_2021-06-21_201334.png">
+    <figcaption>自動的にfvtt-bcdiceで設定したチャットパレットが"サタスペ"のキャラシにロードされた！</figcaption>
+  </figure>
+</blockquote>
 <p>&nbsp;</p>
 <h5>ボタン</h5>
 <p>&nbsp;</p>
