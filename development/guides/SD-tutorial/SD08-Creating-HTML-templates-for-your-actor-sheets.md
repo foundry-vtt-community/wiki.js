@@ -2,11 +2,18 @@
 title: SD08 Creating-HTML-templates-for-your-actor-sheets
 description: 
 published: true
-date: 2021-06-20T03:47:46.428Z
+date: 2021-06-21T13:16:24.422Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z
 ---
+
+> **Not Updated for Foundry 0.8.x**
+>
+> This section of the system development tutorial has not yet been updated for Foundry 0.8.x versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for 0.8.x).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
+
 
 In addition to the JS classes that define them, actors and items also have HTML templates that define the structure of your character and item sheets. In the Boilerplate System, these are placed in `/templates/actor/actor-sheet.html` and `/templates/item/item-sheet.html`. These paths are not discovered automatically; you have to define specify their full path in your ActorSheet and ItemSheet class' defaultOptions() method. You'll probably add many more templates than just these two as your system gets further into development, but the process is the same for all of them.
 
