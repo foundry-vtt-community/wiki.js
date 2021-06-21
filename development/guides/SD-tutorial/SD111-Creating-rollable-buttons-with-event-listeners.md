@@ -2,11 +2,17 @@
 title: SD11.1 Creating-rollable-buttons-with-event-listeners
 description: 
 published: true
-date: 2021-04-21T16:33:12.807Z
+date: 2021-06-21T13:17:21.598Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:24.667Z
 ---
+
+> **Not Updated for Foundry 0.8.x**
+>
+> This section of the system development tutorial has not yet been updated for Foundry 0.8.x versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for 0.8.x).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
 
 To make things on your character sheet rollable, you'll need to add a class that you can listen for in your sheet's <!-- {% raw %} -->`activateListeners()`<!-- {% endraw %} --> method. In the Boilerplate System, ability rolls have an example of this with a <!-- {% raw %} -->`rollable`<!-- {% endraw %} --> class. Let's look at the ability modifier line from <!-- {% raw %} -->`actor-sheet.html`<!-- {% endraw %} -->:
 
