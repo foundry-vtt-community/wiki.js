@@ -2,10 +2,10 @@
 title: Home
 description: 
 published: true
-date: 2021-04-21T16:18:20.381Z
+date: 2021-05-19T14:09:59.194Z
 tags: 
 editor: markdown
-dateCreated: 2020-09-18T19:13:46.176Z
+dateCreated: 2021-05-14T17:58:11.311Z
 ---
 
 # Welcome to the Foundry VTT Community!
@@ -13,11 +13,11 @@ dateCreated: 2020-09-18T19:13:46.176Z
 **NOTE:** This wiki serves as a repository of community-curated information about the **Foundry Virtual Tabletop** and is 100% community-managed and run. We do not represent Foundry Gaming, LLC in any way.
 
 ## Wiki Localizations
-- [正體中文 (Traditional Chinese)](https://foundryvtt.wiki/zh-tw/home)
-- [日本語 (Japanese)](https://foundryvtt.wiki/ja/home)
-- [English (English)](https://foundryvtt.wiki/en/home)
-- [Français (French)](https://foundryvtt.wiki/fr/home)
-- [Suomi (Finnish)](https://foundryvtt.wiki/fi/home)
+- [English (English)](/en/home)
+- [Suomi (Finnish)](/fi/home)
+- [Français (French)](/fr/home)
+- [日本語 (Japanese)](/ja/home)
+- [正體中文 (Traditional Chinese)](/zh-tw/home)
 
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop website](http://foundryvtt.com)

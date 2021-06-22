@@ -2,7 +2,7 @@
 title: Package Releases and Version History
 description: Foundry's Package manager supports a history of package releases, this guide intends to lay out some ways to accommodate that.
 published: true
-date: 2021-04-30T16:02:04.698Z
+date: 2021-06-03T13:14:18.949Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:45:56.156Z
@@ -61,7 +61,6 @@ Installation is fairly straightforward and can be done in one of two ways.
   1.c If the User selects "Yes", the local `manifest` is overwritten with the new value from the Package Repository
 1. Foundry fetches the manifest from the url in the currently installed package's manifest json.
 2. Foundry compares the `version` strings of the installed module's manifest against the fetched manifest.
-  2.a If the user is doing this on an individual package they have to then click the "Update" button.
 	Foundry uses its [`isNewerVersion` helper function](https://foundryvtt.com/api/global.html#isNewerVersion) to compare manifest version strings.
 3. If Foundry determines that the fetched manifest json has a newer version, it then downloads that manifest's `download` and checks if it is a zip file. If so, it unzips.
 4. If Foundry determines that no new version exists, but that new Remote metadata values exist for the version, Foundry will execute an automatic Sidegrade. The Fields are sidegraded according to the following table:
@@ -217,13 +216,14 @@ Their `module.json` already leverages the `releases/latest` Github Repo url to e
   4.a. Set the tag name to "2.23.1"
   4.b. Add some change notes to the body of the release
   4.c. Attach the `module.json` and `module.zip` files to the release
-5. Open AmazingModule's Foundry Package Admin page.
-6. At the very bottom of the Package Version list, fill in the fields for this new release.
+5. *(Optional but recommended)* Double-check your release by opening your release's attached module.json and copying the URLs for the "manifest" and "download" into your web browser. The text-only manifest should display, and you should automatically start downloading the zip file. If necessary, fix these links before proceeding.
+6. Open AmazingModule's Foundry Package Admin page.
+7. At the very bottom of the Package Version list, fill in the fields for this new release.
   - Version: `2.23.1`
   - Manifest: `https://github.com/ElfFriend-DnD/AmazingModule/releases/download/2.23.1/module.json`
   - Changelog:  `https://github.com/ElfFriend-DnD/AmazingModule/releases/tag/2.23.1`
   - Required Core Version and Compatible Core Version as required.
-7. Hit Save.
+8. Hit Save.
 
 
 ## GitLab

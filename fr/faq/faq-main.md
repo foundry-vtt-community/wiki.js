@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2021-04-21T16:22:39.843Z
+date: 2021-05-28T10:27:33.422Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -19,7 +19,7 @@ FoundryVTT a démarré son développement notamment car l'auteur principal ne tr
 
 ## Très bien, mais je vois que le truc est en bêta, comment qu’on l’achète ?
 
-A ce jour (octobre 2020), Foundry est en version 0.6.6, achetable en 1 fois pour la somme de 60$. Une réduction est appliquée pour les développeurs et les supporters de Patreon, basés sur la durée de support (le soft est gratuit au final pour les développeurs et ceux présents depuis plus d’1 an grosso-modo).
+A ce jour (mai 2021), Foundry est en version 0.7.9, achetable en 1 fois pour la somme de 60$. Une réduction est appliquée pour les développeurs et les supporters de Patreon, basés sur la durée de support (le soft est gratuit au final pour les développeurs et ceux présents depuis plus d’1 an grosso-modo).
 
 ## Putain, 60$ ?
 
@@ -58,7 +58,7 @@ Si, il va y en avoir, et ça déjà démarré avec TheForge et FoundryServer.
 
 ## Y’a quoi comme jeu dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 03/09/2020, on recense 57 « systems » : 
+Dans Foundry, les « jeux » sont appelés « systems ». Au 20/05/2021, on recense 130+ « systems » : 
 - 13th age,
 - Appel de Cthulhu, DeltGree
 - D&D5,
@@ -68,13 +68,12 @@ Dans Foundry, les « jeux » sont appelés « systems ». Au 03/09/2020, on rece
 - Starfinder, 
 - Savage Worlds, 
 - Warhammer 4, etc ...
-
-D’autres systèmes sont en développement, tel que : 
 - Degenesis,
 - Dungeon Crawl Classics,
 - Monster of the Week,
 - Numenera,
 - Runequest…. 
+- ....
 
 Un système générique permet de plus de rapidement démarrer une table autour d’un jeu non supporté.
 
@@ -137,6 +136,10 @@ Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de 
 ## Bah finalement, on peut faire la même chose avec un de meeting vidéo et partage d’écran
 
 Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme Roll20, Astral, FantasyGrounds, Foundry etc offrent toutefois des capacités des gestion des scènes, des actions, des PNJs qui sont difficilement atteignables avec un simple outil de meeting. Mais l’important c’est de jouer de toute manière.
+
+## J'aime pas jouer en ligne, c'est de la m..., alors ça me sert à rien
+
+Cete attitude connue et un brin rétrograde est compréhensible, mais à titre perso je maitrise plus sur table réelle que virtuelle, et j'utilise Foundry dans tout les cas. C'est devenu un précieux outil de gestion et d'animation des parties dont je ne saurais plus me passer sur table désormais. Plus de détails ici : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/ 
 
 ## Bon je veux bien regarder, il n'y a pas une vidéo de démonstration ?
 

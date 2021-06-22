@@ -2,7 +2,7 @@
 title: Deprecate use of the Howler.js library (immediately) in favor of a move to using native and more modern Web Audio APIs.
 description: 
 published: true
-date: 2021-04-21T15:10:16.534Z
+date: 2021-04-21T16:50:43.056Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-14T13:00:53.923Z

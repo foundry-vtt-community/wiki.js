@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2021-05-05T18:03:20.358Z
+date: 2021-05-31T10:37:12.929Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -16,7 +16,7 @@ As a result if you have a domain registered in AWS Route53 named myexample.com. 
 
 
 
-Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/en/setup/hosting/Ubuntu-VM) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
+Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/setup/hosting/Self-Hosting-on-AWS) and [Ubuntu-VM](/i/130) I scripted their solutions using cloudformation. You only need to get a few values to fill (will point out where to find them) in the script:
 
   - EC2 AMI
   - EC2 instancetype
@@ -28,7 +28,7 @@ Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/set
   - AdminIPs (this will be used to only allow your API getting called from these adresses)
   
  If you know how and where to get these skip to the deployment step.
- Here is the script: [template.yml](/development/scripted-aws-foundry-setup/template.yml)
+ Here is the script: [template.yml](/development/template.yml)
 
 ## AMI and Instancetype
 
@@ -86,7 +86,7 @@ nano /var/log/start.log
 nano /var/log/user-data.log
 ```
 
-If you encounter an error that cannot be fixed by running it again please leave a comment with your error on my github: https://github.com/dirkvandooren/AWS_FoundryVTT/issues 
+If you encounter an error that cannot be fixed by running it again please leave a comment with your error on my github: https://github.com/dirkvandooren/AWS_FoundryVTT/issues or send me a message on Discord @Dofthorn
 
 To renew the certificate.
 make the security group for your ec2 temporarily reachable for HTTP and HTTPS by adding an entry for HTTP and one for HTTPS to your security group allowing 0.0.0.0/0 

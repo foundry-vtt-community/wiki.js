@@ -2,7 +2,7 @@
 title: Improve TokenConfig.getTrackedAttributes to differentiate between "base" attributes which can be edited and "derived" attributes which are deterministic. Prevent the editing derived tracked attributes through the Token HUD.
 description: 
 published: true
-date: 2021-04-21T15:05:10.687Z
+date: 2021-04-21T16:43:57.266Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T16:54:35.763Z

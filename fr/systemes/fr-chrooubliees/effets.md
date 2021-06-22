@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2021-05-03T13:38:20.176Z
+date: 2021-05-03T13:38:23.711Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z

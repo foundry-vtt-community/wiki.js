@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-05-04T10:48:17.130Z
+date: 2021-05-24T11:31:42.722Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -113,6 +113,10 @@ L'aventure officielle [Mariage à château Kyotei](https://foundryvtt.com/packag
 Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure, ainsi que les personnages prétirés fournis gratuitement par l'éditeur. 
 
 ![pretires.jpg](/images/pretires.jpg) 
+
+## Aventure officielle *Le parchemin ou le Sabre*
+L'aventure officielle [Le Parchemin ou le Sabre](https://foundryvtt.com/packages/l5r5e-world-scroll) adaptée à Foundry est disponible en libre téléchargement.  
+Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure fourni gratuitement par l'éditeur. 
 
 
 ## Informations

@@ -2,7 +2,7 @@
 title: Standardize the representation of the canvas global to have the same expected properties in cases where a canvas is used as well as in cases where no canvas is present.
 description: 
 published: true
-date: 2021-04-21T15:05:29.315Z
+date: 2021-04-21T16:44:20.861Z
 tags: 0.8.0
 editor: markdown
 dateCreated: 2021-02-07T17:05:34.935Z

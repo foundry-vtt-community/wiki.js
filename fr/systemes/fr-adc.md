@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2021-04-21T14:59:45.222Z
+date: 2021-04-21T16:35:00.292Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z

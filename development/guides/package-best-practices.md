@@ -2,18 +2,20 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2021-04-21T16:22:14.624Z
+date: 2021-06-17T15:22:02.520Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
 ---
 
+
+This article was last updated for Foundry VTT 0.8.7.
+
 ## Releases and Updates
-This section was last updated for Foundry VTT 0.7.7.
 
 For more details about how Foundry VTT installs and updates packages, see the full article [Package Releases and Version History](/en/development/guides/releases-and-history).
 
-## `version`
+### `version`
 - Use a `string` for the version number instead of a `float` because for example `0.9` would be superior to `0.10` if using floats.
 - Use [Semantic Versioning](https://semver.org/).
 - Every change, even something that only changes the manifest and does not change the package contents, should increment something in the version number.
@@ -21,7 +23,7 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 > You should never have two different versions of your package with the exact same version number.
 {.is-danger}
 
-## `manifest`
+### `manifest`
 - A package's `manifest` URL should use a stable url that always points at the Latest manifest JSON.
 - A package's `manifest` URL should be Raw JSON or a download link, not the github html view of the JSON.
 
@@ -41,11 +43,11 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 >  ⚠️ This url will break if the module's files are rearranged, but apart from that it is stable.
 {.is-success}
 
-## `download`
+### `download`
 - The package `download` URL should point to a specific zip that matches the version.
 - Package manifest should never download the "latest" zip (e.g. a zip of the current `master` branch) but rather each version's module.json `manifest` url would download that specific version.
 
-# Localization
+## Localization
 
 > There's a lot of nuance to localization that can't be summed up quickly. Take a look at the dedicated [Localization Best Practices](/en/development/guides/localization/localization-best-practices) article for more in depth best practices.
 {.is-info}
@@ -54,20 +56,24 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 - Make use of as many existing strings as possible.
 - Keep your localization strings confined to your package's namespace.
 
-# Files and Dependencies
-- Paths to your files use the exact same case-sensitive directories as in the download zip. Windows, Linux, and OSX treat capitalization of directories differently.
+## Files
+- Paths to your files use the exact same case-sensitive directories as in the package download zip. Windows, Linux, and OSX treat capitalization of directories differently.
 - Do not use spaces in file names or directory names. All directories should be URL-compatible. We recommend using `kebab-case` where your spaces are replaced with `-`.
 - Never do a relative import (esmodule) from one module to another (or to a system). If you need access to something, contact the developer and ask them to expose it instead.
-- A dependency on another module should be resolved by `CONFIG` variables defined by that dependency or namespaced classes or Hooks.
+- Remember that other people host foundry differently, including on setups which change the root directory.
 
-# Code Practices
+## Module APIs and Dependencies
+- Expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`.
+- Leverage custom hooks to provide a reliable way for other packages to react to events caused by your module.
+- Depend on every module in the dependency tree for your package, Foundry does not handle dependency-trees with 2+ levels during install or activation.
+
+## Code Practices
 This section was last updated for Foundry VTT 0.7.7.
 
 - The [`libWrapper` library module](https://github.com/ruipin/fvtt-lib-wrapper) is an excellent dependency to aid in the "patching" of core functions.
 - Foundry VTT core has a keyboard manager class accessible `game.keyboard`. It is recommended to leverage this when your module needs to know the state of the keyboard.
-- Consider using [WeakMaps](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) when you need to attach additional properties to core objects that don't have flags.
 
-# Overwriting Foundry VTT Core Behavior
+## Overwriting Foundry VTT Core Behavior
 - Code as defensively as possible when writing a module which aims to overwrite or replace Core functionality/logic. If something causes an error in your logic, it would be best to implement a fallback to the core behavior you are replacing.
 
 From Atropos:

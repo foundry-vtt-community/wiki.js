@@ -2,7 +2,7 @@
 title: Setting up-Players
 description: 
 published: true
-date: 2021-04-21T16:21:14.915Z
+date: 2021-04-21T16:29:19.094Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:17.211Z

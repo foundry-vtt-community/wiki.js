@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-05-06T03:15:22.450Z
+date: 2021-05-27T23:46:30.946Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -22,6 +22,7 @@ This guide provides easy to follow steps for a relatively simple installation of
   4. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
   5. A backup policy that automatically keeps 5 backups in case of emergencies.
   
+>The Oracle Always Free Tier meets the **minimum** requirements to host core Foundry VTT server. The use of large number (thousand+) of entities in the sidebar or compendiums, or certain modules may exceed the available resources. {.is-warning} 
 
 ## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
@@ -274,9 +275,9 @@ sudo apt-get install nano unzip -y
 ## Install and launch Foundry
 <a id="D16" href="#D16">D16.</a>  Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="D17" href="#D17">D17.</a>  Click on the gear icon (:link:) next to the **Node.js** latest version to copy a download url. 
+<a id="D17" href="#D17">D17.</a>  Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
-> Be sure to click the gear icon (:link:) and not the link itself to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
+> Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
 <a id="D18" href="#D18">D18.</a>  Run the following commands, pasting the download url where you see `<download url>`. In most terminals, you can right click to paste the copied url.
 ```
@@ -336,7 +337,7 @@ pm2 save
 
 ## Reverse Proxy and HTTPS Configuration with Caddy
 
-> This section assumes that you have a valid domain name with an A record pointing to `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns)) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
+> This section assumes that you have a valid domain name with an A record pointing to `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
 
 
 <a id="D30" href="#D30">D30.</a>  Install Caddy to use as a reverse proxy by running the following commands:
@@ -374,7 +375,7 @@ sudo service caddy restart
 
 <a id="D35" href="#D35">D35.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
 ```
-nano /home/ubuntu/.local/share/FoundryVTT/Config/options.json
+nano /home/ubuntu/foundryuserdata/Config/options.json
 ```
 <a id="D36" href="#D36">D36.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are.
 ```
@@ -450,8 +451,14 @@ At the end of this section you will have a policy that automatically retains 5 r
 
 > Restoring from backup is beyond the scope of this guide. More information can be found in the [Oracle Docs](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm) should you need to restore from backup. {.is-info} 
 
+# F. Optional: Accessing Userdata Files
+## Objective
+If you would like to access the files in your userdata directory directly to move, delete, manage, or bulk upload, then we will need to set up Cyberduck to do so. 
 
-# F. Optional: S3 Storage Setup
+## Set Up Cyberduck
+You may follow the steps in the Linux Installation Guide to [set up Cyberduck](https://foundryvtt.wiki/en/setup/linux-installation#optional-d-accessing-userdata-files-with-cyberduck) to access your userdata files. Be sure to use the SSH Private Key method using the key file saved in a safe place. 
+
+# G. Optional: S3 Storage Setup
 ## Objective
 At the end of this section, you will have a functional S3 storage bucket that Foundry can access to store assets under the “Amazon S3” tab in the file picker. This allows you to have extra storage beyond that provided by the instance volume and serve large assets more efficiently. 
 

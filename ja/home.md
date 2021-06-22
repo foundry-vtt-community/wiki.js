@@ -2,7 +2,7 @@
 title: １．はじめに
 description: 
 published: true
-date: 2021-04-21T16:20:38.029Z
+date: 2021-05-15T10:14:44.624Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -20,14 +20,16 @@ dateCreated: 2020-12-01T14:32:37.818Z
   <li>MODによりFVTTの機能を拡張できます。FVTTのコミュニティでは開発者が基本ツールに含めた機能以外に、ユーザーが作った拡張機能（MOD）を導入することができ、より便利に活用することが可能です。</li>
   
   ## 日本語便利リンク
-  <i class="fab fa-discord"></i> [オンセ工房日本語支援サーバ](https://discord.com/invite/vM4YM27)
-  <i class="fas fa-pen-square"></i> [旧オンセ工房Wiki](https://dndjp.mixh.jp/fvtt/doku.php)
+  <i class="fab fa-discord"></i> [オンセ工房日本支部(Foundry VTT)](https://discord.com/invite/vM4YM27)
+    <i class="fab fa-twitter-square"></i> [オンセ工房（Foundry VTT）日本支部ツイッター](https://twitter.com/home)
   <i class="fab fa-twitter-square"></i> [佐藤真裸さんのFVTT紹介](https://twitter.com/sa10trpg/status/1308413633198784513)
+    <i class="fab fa-twitter-square"></i> [佐藤真裸さんのMod紹介](https://twitter.com/i/events/1309498983123804160)
   <i class="fab fa-patreon"></i> [オンセ工房支援Patreon](https://www.patreon.com/onsekobo)
   <i class="fas fa-dice-d20"></i> [Foundry VTT専用レンタルサーバ](https://as.forge-vtt.com/)
   
   ## 英語公式のリンク
 <i class="fas fa-dice-d20"></i> [Foundry VTT ホームページ（購入はここから）](http://foundryvtt.com)
+      <i class="fab fa-twitter-square"></i> [Foundry VTT公式ツイッター](https://twitter.com/FoundryVTT)
 <i class="fab fa-reddit"></i> [SubReddit](https://www.reddit.com/r/FoundryVTT/)
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/user/TamrielFoundry)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)

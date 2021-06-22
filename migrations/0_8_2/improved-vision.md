@@ -2,7 +2,7 @@
 title: Improve the handling of vision and lighting rendering to make use of the canvas buffer region while obscuring it from Token vision (unless the controlled Token is within that buffer)
 description: 
 published: true
-date: 2021-05-01T03:02:20.849Z
+date: 2021-05-01T03:02:24.675Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:02:20.849Z

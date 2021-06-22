@@ -2,7 +2,7 @@
 title: Prevent submitting overridden values via an ActorSheet submission by removing fields which currently have an active effect override from the submitted data structure
 description: 
 published: true
-date: 2021-05-01T02:59:52.894Z
+date: 2021-05-01T02:59:57.004Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T02:59:52.894Z

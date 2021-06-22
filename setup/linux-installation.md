@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-05-06T03:12:35.413Z
+date: 2021-05-20T19:37:06.435Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -44,7 +44,7 @@ This guide supports the following distributions:
 1. Debian 11 based, such as (but not limited to):
 a. Debian
 b. Ubuntu
-c. Raspberry Pi OS
+c. Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14)
 2. CentOS 8 based, such as (but not limited to):
 a. CentOS
 b. Red Hat Linux
@@ -230,9 +230,9 @@ At the end of this section you will have a functional installation of Foundry us
 
 <a id="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="C2" href="#C2">C2.</a>	Click on the gear icon (:link:) next to the **Node.js** latest version to copy a download url. 
+<a id="C2" href="#C2">C2.</a>	Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
-> Be sure to click the gear icon (:link:) and not the link itself to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
+> Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
 <a id="C3" href="#C3">C3.</a>	Run the following commands, pasting the download url where you see `<download url>`. In most terminals, you can right click to paste the copied url.
 ```
@@ -369,14 +369,20 @@ nano ~/foundryuserdata/Config/options.json
 ...
 "proxySSL": true,
 ...
-"hostname": "<your.domain.name>"
+"hostname": "<your.domain.name>",
 ...
 ```
 >Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
 
 <a id="C20" href="#C20">C20.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-<a id="C21" href="#C21">C21.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+<a id="C21" href="#C21">C21.</a> Restart Foundry to pick up the changes to configuration: 
+
+```
+pm2 restart foundry
+```
+
+<a id="C22" href="#C22">C22.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 >Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
 

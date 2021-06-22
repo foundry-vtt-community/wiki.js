@@ -2,11 +2,17 @@
 title: SD11.3 Grouping-items-by-type
 description: 
 published: true
-date: 2021-04-21T14:52:07.521Z
+date: 2021-06-21T13:17:42.881Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:30.378Z
 ---
+
+> **Not Updated for Foundry 0.8.x**
+>
+> This section of the system development tutorial has not yet been updated for Foundry 0.8.x versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for 0.8.x).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
 
 Most of the time, you probably don't want to output every owned item for an actor directly on the actor's character sheet. If you have multiple item types (like items, features, and spells), those should be sorted into groups and displayed under their own headlines or tabs. In order to do that, we'll need to make some adjustments in our ActorSheet class to group the items.
 

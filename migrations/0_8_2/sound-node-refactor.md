@@ -2,7 +2,7 @@
 title: Refactor the SoundNode class into the Sound class which controls playback and the AudioContainer class which interfaces with the underlying Web Audio API for different node types.
 description: 
 published: true
-date: 2021-05-01T03:06:58.343Z
+date: 2021-05-01T03:07:01.587Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:06:58.343Z

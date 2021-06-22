@@ -2,7 +2,7 @@
 title: Création de Races
 description: Alors on veut jouer au Créateur ? A l'alchimie des Corps et de l'âme ? Alors vous êtes au bon endroit
 published: true
-date: 2021-04-21T15:02:24.194Z
+date: 2021-04-21T16:40:21.340Z
 tags: custom, cof, species
 editor: markdown
 dateCreated: 2020-12-23T14:28:48.110Z

@@ -2,11 +2,17 @@
 title: SD11.4 Separating-item-types-into-tabs
 description: 
 published: true
-date: 2021-04-21T14:52:09.753Z
+date: 2021-06-21T13:17:58.993Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:36.715Z
 ---
+
+> **Not Updated for Foundry 0.8.x**
+>
+> This section of the system development tutorial has not yet been updated for Foundry 0.8.x versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for 0.8.x).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
 
 Now that we've created separate groups of items in the ActorSheet class, we can update our items tab to replace it with multiple tabs, one for each type of item. First, we need to add the new tabs to our navigation.
 
