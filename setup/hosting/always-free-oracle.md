@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-06-23T14:18:56.113Z
+date: 2021-06-23T14:21:23.099Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -153,11 +153,11 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <details><summary>How many CPU cores and how much RAM should I use? ▼</summary>
 
-  As of June 7, 2021 Oracle offers [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 4 Ampere and 24GB of RAM spread over 1 to 4 instances, for free. 
+  As of June 7, 2021 Oracle offers [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 4 Ampere cores and 24GB of RAM spread over up to 4 instances, for free. 
   
   This guide leaves the default selection of 1 core and 6GB of RAM as that is more than enough to run Foundry. 
   
-  An additional core may help increase performance of Foundry and a few more gigs of RAM could help in the most extreme cases for resource-intensive modules. 
+  An additional core may help increase performance of Foundry slightly and a few more gigs of RAM could help in the most extreme cases for resource-intensive modules. 
   
   Think carefully about the overall usage plans for the Always Free services. It is not possible to flexibly increase or decrease the cores/RAM on the fly, you'll have to recreate the instances if you want to change the resources. 
   
