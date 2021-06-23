@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-06-23T14:37:40.276Z
+date: 2021-06-23T14:37:55.603Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -159,7 +159,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
   
   An additional core may help increase performance of Foundry slightly and a few more gigs of RAM could help in the most extreme cases for resource-intensive modules. 
   
-  You can edit the shape after creation if you change your mind. 
+  You can flexibly edit the shape after creation if you change your mind. 
   
   In the vast majority of cases, 1 core and 6GB is recommended for Foundry. 
 
