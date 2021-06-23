@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-06-23T14:11:15.846Z
+date: 2021-06-23T14:18:42.307Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -448,21 +448,17 @@ At the end of this section you will have a policy that automatically retains 5 r
 
 <a id="E7" href="#E7">E7.</a> Click **Add Schedule**.
 
-<a id="E8" href="#E8">E8.</a> Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing **Block Storage** -> **Volume Groups**.
+<a id="E8" href="#E8">E8.</a> Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing **Compute** -> **Instances**.
 
-![Volume Groups Menu](/images/oracle/image21.webp)
+<a id="E9" href="#E9">E9.</a> Click the **Foundry** instance.
 
-<a id="E9" href="#E9">E9.</a> Click **Create Volume Group**.
+<a id="E10" href="#E10">E10.</a>  Scroll down the page, and click **Boot Volume** unde the Resources menu on the left side. 
 
-<a id="E10" href="#E10">E10.</a>  Enter a name for the volume group, such as `foundry-volume-group`. 
+<a id="E11" href="#E11">E11.</a>  Click the **instance-xxxxxxxxx (Boot Volume)** link under the Boot Volume Name heading.
 
-<a id="E11" href="#E11">E11.</a>  Select the `foundry-backup` backup policy.
+<a id="E12" href="#E12">E12.</a>  Click the **Edit** button near the top of the page, just under the instance-xxxxxx (Boot Volume) title.
 
-<a id="E12" href="#E12">E12.</a>  Select the `foundry (Boot Volume)` volume.
-
-<a id="E13" href="#E13">E13.</a>  Click **Create**.
-
-![Create Volume Group](/images/oracle/image26.webp)
+<a id="E13" href="#E13">E13.</a>  Scroll down the pop-out pane to Backup Policies, and select the **foundry-backup** policy from the dropdown. Click **Save Changes*
 
 <a id="E14" href="#E14">E14.</a>  You have now given your instance a backup policy that will run automatically. 
 
