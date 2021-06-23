@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-06-23T14:42:51.739Z
+date: 2021-06-23T14:51:56.205Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -57,6 +57,8 @@ At the end of this section, you will have a registered account with Oracle Cloud
 <a id="B1" href="#B1">B1.</a> Review the availability of [Always Free services in your preferred region](https://www.oracle.com/cloud/data-regions.html). At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
 
 <a id="B2" href="#B2">B2.</a> Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
+
+>When choosing your home region, pay special attention to any notices regarding availability of `Arm Ampere A1 Compute` capacity. Be very sure to choose a region with availability otherwise you will not be able to create the instance mentioned in this guide and access the Always Free services. {.is-warning}
 
 <a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
 
