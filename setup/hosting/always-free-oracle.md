@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-05-27T23:46:30.946Z
+date: 2021-06-23T13:58:57.604Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -16,13 +16,14 @@ This guide provides easy to follow steps for a relatively simple installation of
 
 * You will end up with:
 
-  1. A VM that runs Foundry 24/7, including after restarts.
-  2. A domain name and an automatically managed encrypted connection to your Foundry instance.
-  3. Roughly 40GB (optionally increased to roughly 90GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
-  4. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
-  5. A backup policy that automatically keeps 5 backups in case of emergencies.
+  1. A VM with 1 cpu core (optionally increased to 4 cores) and 6GB of RAM (optionally increased to 24GB).
+  2. Foundry running 24/7, including after restarts.
+  3. A domain name and an automatically managed encrypted connection to your Foundry instance.
+  4. Roughly 40GB (optionally increased to roughly 190GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
+  5. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
+  6. A backup policy that automatically keeps 5 backups in case of emergencies.
   
->The Oracle Always Free Tier meets the **minimum** requirements to host core Foundry VTT server. The use of large number (thousand+) of entities in the sidebar or compendiums, or certain modules may exceed the available resources. {.is-warning} 
+
 
 ## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
@@ -136,19 +137,21 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <a id="C19" href="#C19">C19.</a>  Click the **Change Image** button to select a new OS image.
 
-<a id="C20" href="#C20">C20.</a>  From the pop-out list, :ballot_box_with_check:`check` **Canonical Ubuntu**. Ensure that the OS Version is **20.04 Minimal**.
+<a id="C20" href="#C20">C20.</a>  From the pop-out list, :ballot_box_with_check:`check` **Canonical Ubuntu**. Ensure that the OS Version is **20.04** and **not** 20.04 Minimal.
+
+![Select non-Minimal Ubuntu 20.04](/images/oracle/ubuntu-2004.webp)
 
 <a id="C21" href="#C21">C21.</a>  Click **Select Image**.
 
 <a id="C22" href="#C22">C22.</a>  To change the type of VM to an Always Free Tier VM, click **Change Shape**.
 
-![Change Shape](/images/oracle/image15b.webp)
+![Change Shape](/images/oracle/ubuntu-ampere.webp)
 
-<a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Specialty and Legacy**. 
+<a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Ampere**. 
 
-<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.E2.1.Micro shape**.
+<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.A1.Flex shape**.
 
-![Select Shape](/images/oracle/image11.webp)
+![Select Shape](/images/oracle/ampere-shape.webp)
 
 
 >If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.E2.1.Micro shape, then you will have to contact Oracle Support to resolve the issue. Choosing any other shape will incur charges. {.is-info}
