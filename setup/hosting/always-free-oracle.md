@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-06-23T15:13:37.016Z
+date: 2021-06-23T15:20:23.793Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -211,7 +211,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 >By specifying a larger Boot Volume you will be able to have up to roughly 190GB of storage for Foundry assets. However, doing so will prevent the use of multiple Compute VM instances that are provided with the Always Free Tier (not used in this guide). Think carefully about your desired future usage for the Always Free Tier before making this change. {.is-warning}
 
 <a id="C33" href="#C33">C33.</a>  All other options should be left at default. Click **Create**. 
->If you receive an `Out of capacity for shape VM.Standard.A1.Flex in availability domain` error, then there are no more Always Free Tier instances available at the moment. According to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
+>If you receive an `Out of capacity for shape VM.Standard.A1.Flex in availability domain` error, then there are no more Always Free Tier instances available at the moment. You can try selecting a different Availability Domain above (double check that it is always-free tagged). Otherwise, according to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
 
 <a id="C34" href="#C34">C34.</a>  Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
 
