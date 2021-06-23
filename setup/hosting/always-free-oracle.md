@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-06-23T15:20:23.793Z
+date: 2021-06-23T15:22:51.040Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -172,6 +172,8 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <details><summary>What if I can't choose the VM.Standard.A1.Flex shape? ▼</summary>
 	
+  First, try switching to another Availability Domain (checking to ensure it is tagged `always-free`) to see if there are A1 instances in other Availability Domains within your home region. The number of Availability Domains differs in each reagion, with some regions only having 1.
+  
   The older `VM.Standard.E2.1.Micro` instances should still be available in all regions. That instance type is limited to 1 throttled OCPU, 1GB RAM, and 50mbps external network speeds. While lower in resources than the new A1 instances, it is still enough to meet the **minimum** requirements to host Foundry.
   
   You can choose the `VM.Standard.E2.1.Micro` shape in step [C24](#C24) above, under the `Legacy and Specialty` section instead of the `VM.Standard.A1.Flex` shape mentioned in the step, and then continue the guide.
