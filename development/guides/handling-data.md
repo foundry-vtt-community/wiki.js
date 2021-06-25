@@ -2,13 +2,13 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-06-17T15:02:08.857Z
+date: 2021-06-25T14:33:18.293Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
 ---
 
-This article is primarily geared towards Module development, but Systems can make use of its contents as well. It largely ignores the options for data storage that Systems have that come with being able to control Entity types via the system template.json.
+This article is primarily geared towards Module development, but Systems can make use of its contents as well. It largely ignores the options for data storage that Systems have that come with being able to control Document types via the system template.json.
 
 ## Data Storage Flowchart
 
@@ -19,7 +19,7 @@ This article is primarily geared towards Module development, but Systems can mak
 if "It's a lot of data" then
 	->[Yes] "JSON/FileUpload"
 else
-  if "Data is asociated with an Entity" then
+  if "Data is asociated with an Document" then
     ->[Yes] "Flag"
   else
     -->[No] "Setting"
@@ -40,8 +40,8 @@ endif
 
 Use case flowchart:
 1. I want to store a _lot_ of data and don't want it to affect performance -> **FileUpload with JSON**. Note that permissions might be set up on the world such that only the GM can upload files.
-2. I want to store data associated with a particular entity -> **Flag**. Some entities are not editable by all clients and flags respect that.
-3. I want to store data not associated with a particular entity:
+2. I want to store data associated with a particular document -> **Flag**. Some documents are not editable by all clients and flags respect that.
+3. I want to store data not associated with a particular document:
 	  1. The data does not have to be shared between clients -> **Setting, scope `client`**.
  	  2. The data does have to shared between clients:
 		    1. All clients can access and modify -> **Setting with a GM Proxy** is the only way to do this, it is not pretty.
@@ -50,29 +50,29 @@ Use case flowchart:
 
 ## Flags
 
-Flags are the safest way that modules can store arbitrary data on existing entities. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
+Flags are the safest way that modules can store arbitrary data on existing documents. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
 
 A flag does not have to be a specific type, anything which can be `JSON.stringify`ed is valid.
 
-> Lots of things in Foundry Core are entities and can thus accept flags, not just Actors, Items, and things Systems normally interact with. There is a list of Entity Subclasses on the [api page for Entity](https://foundryvtt.com/api/Entity.html).
+> Lots of things in Foundry Core are documents and can thus accept flags, not just Actors, Items, and things Systems normally interact with. There is a list of Document Subclasses on the [api page for Document](https://foundryvtt.com/api/abstract.Document.html).
 
 ### Setting a flag's value
-Flags are automatically namespaced within the first parameter given to [`Entity#setFlag`](https://foundryvtt.com/api/Entity.html#setFlag).
+Flags are automatically namespaced within the first parameter given to [`Document#setFlag`](https://foundryvtt.com/api/abstract.Document.html#setFlag).
 
 ```js
 const newFlagValue = 'foo';
 
-someEntity.setFlag('myModuleName', 'myFlagName', newFlagValue);
+someDocument.setFlag('myModuleName', 'myFlagName', newFlagValue);
 ```
 
 #### Can I mutate the value itself?
-Setting a flag's value without `setFlag` will not persist that change in the database. This should only be done as part of a larger operation which persists an entity's data in the database, for example as a part of character sheet editing.
+Setting a flag's value without `setFlag` will not persist that change in the database. This should only be done as part of a larger operation which persists an documents's data in the database, for example as a part of character sheet editing.
 
 ### Getting a flag's value
-There are two places to get a flag value: On the data model itself, or with [`Entity#getFlag`](https://foundryvtt.com/api/Entity.html#getFlag)
+There are two places to get a flag value: On the data model itself, or with [`Document#getFlag`](https://foundryvtt.com/api/abstract.Document.html#getFlag)
 
 ```js
-const flagValue = someEntity.getFlag('myModuleName', 'myFlagName');
+const flagValue = someDocument.getFlag('myModuleName', 'myFlagName');
 // flagValue === 'foo'
 ```
 
@@ -80,17 +80,17 @@ const flagValue = someEntity.getFlag('myModuleName', 'myFlagName');
 {.is-danger}
 
 #### On the data model itself
-This can be somewhat tricky as it might be different depending on what entity you're dealing with. Somewhere in the entity's data object there is a `flags` key. The object attached is keyed by module `name`, which is itself an object keyed by flag name, as registered in `setFlag`.
+This can be somewhat tricky as it might be different depending on what document you're dealing with. Somewhere in the document's data object there is a `flags` key. The object attached is keyed by module `name`, which is itself an object keyed by flag name, as registered in `setFlag`.
 
 ### Unset a flag
-A safe way to delete your flag's value is with [`Entity#unsetFlag`](https://foundryvtt.com/api/Entity.html#unsetFlag). This will fully delete that key from your module's flags on the provided entity.
+A safe way to delete your flag's value is with [`Document#unsetFlag`](https://foundryvtt.com/api/abstract.Document.html#unsetFlag). This will fully delete that key from your module's flags on the provided document.
 
 ```js
-someEntity.unsetFlag('myModuleName', 'myFlagName');
+someDocument.unsetFlag('myModuleName', 'myFlagName');
 ```
 
 ### How do I use this?
-It's arbitrary data that you can safely control on any `Entity`. Because of this, all of the hooks related to that entity are going to have your flag available when they fire.
+It's arbitrary data that you can safely control on any `Document`. Because of this, all of the hooks related to that document are going to have your flag available when they fire.
 
 For example, if I have a flag on a Scene, I can check if that flag exists when the `updateScene` hook fires.
 
@@ -104,7 +104,7 @@ Hooks.on('updateScene', (scene, data) => {
 
 ## Settings
 
-Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific entity however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
+Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific document however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
 
 For the vast majority of use-cases, settings are intended to be modified by a UI, either a Menu or within the Module Settings panel itself. These settings are intended to be used to modify the functionality of a module or system, rather than store arbitrary data for that module or system.
 
