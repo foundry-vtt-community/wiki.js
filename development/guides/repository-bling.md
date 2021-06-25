@@ -2,8 +2,8 @@
 title: Repository Bling
 description: A quick guide to tricking out your repository readme.
 published: true
-date: 2021-04-21T16:43:01.549Z
-tags: 
+date: 2021-06-25T16:28:21.750Z
+tags: repo bling, badges, shields
 editor: markdown
 dateCreated: 2021-02-06T02:17:25.208Z
 ---
