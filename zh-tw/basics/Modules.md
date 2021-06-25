@@ -10,10 +10,10 @@ dateCreated: 2021-04-21T14:51:27.389Z
 
 模塊MOD增強或替換了Foundry VTT中的功能。 大多數模塊MOD由一個module.json文件 去描述模塊MOD內容 及 <module name>.js文件構成。 一些模塊MOD還包括`css`和`html`文件。
 
-# Finding Modules
+# 尋找MOD
 瀏覽官方模塊MOD列表是找到模塊MOD的最簡單方法。 某些未列出的模塊可以通過[未列出的模塊](/en/community/community-unlisted-modules) Wiki頁面找到。
 
-# Installing Modules
+# 安裝MOD
 
 ## Via Manifest URL
 1. 在網絡瀏覽器中打開Foundry設置頁面

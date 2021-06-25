@@ -1,5 +1,5 @@
 ---
-title: Chat
+title: 聊天
 description: 
 published: true
 date: 2021-05-07T01:53:34.362Z
@@ -8,31 +8,31 @@ editor: markdown
 dateCreated: 2021-04-21T14:51:15.058Z
 ---
 
-# Chat, Macro, & Formatting Guide
+# 聊天, Macro, & 格式指南
 
-# 聊天命令
+# 聊天命令 Chat
 
 輸入信息時，用戶可以在命令前添加信息前綴。 下面列出了一些與發送聊天信息有關的命令：
 
-## In Character
+## 角色發言 In Character
 
 句型: `/ic {message}`
 
 使信息由關聯角色說出。 如果已選擇角色的Token（或通過“玩家配置”視窗選擇說話者）後，玩家將自動以角色說話，而無需為每條信息輸入此命令。
 
-## Out of Character
+## 超遊 Out of Character
 
 句型: `/ooc {message}`
 
 使信息以超遊（OOC）角度發出。 OOC信息將以玩家的顏色進行輸出，以使其更易於識別。沒有指定說話者或選定TOKEN的玩家將自動(OOC)。
 
-## Emotes
+## 動作 Emotes
 
 句型: `/emote {message}` or `/em {message}` , `/me {message}`
 
 使信息成為所選角色執行的表情動作。 表情是玩家通過文本傳達的角色內動作，因此要求玩家已選擇Token（或通過“玩家配置”鏈接角色）。 輸入`/ emote 揮動他的手`。同時一個叫Simon的角色將發送信息：`Simon揮動他的手。`
 
-## Whispered Messages
+## 私訊 Whispered Messages
 
 句型: `/whisper {target} {message}` or `/w {target} {message}` or `@{target} {message}`
 
@@ -43,13 +43,13 @@ dateCreated: 2021-04-21T14:51:15.058Z
 請注意，您可以通過在方括號中用逗號分隔的形式，同時向多個用戶發送信息。 例如`/w [Andrew, Tim, Julia] 你覺得怎樣？` 或 `@[James,Alicia]我們應該進攻還是偷偷溜走？` 
 最後，用`GM`或`players`可以分別私訊所有GM用戶或所有非GM用戶。
 
-# What is a macro?
+# 什麼是macro? What is a macro?
 
 Macro是一種讓玩家快捷地去進行某些動作的方式。它可以是MOD命令，私訊或格式化的文本。
 
 您可以在[此處](https://foundryvtt.com/article/macros/) 上了解有關Macros的更多信息。
 
-# Rolling Dice
+# 擲骰 Rolling Dice
 
 基本上，骰子的工作方式如下：
 
@@ -66,11 +66,11 @@ Macro是一種讓玩家快捷地去進行某些動作的方式。它可以是MOD
 
 您可以在 [這裡](https://foundryvtt.com/article/dice/) 中找到更複雜的骰子語法（例如Roll和保留）。
 
-### More dice tips:
+### 更多擲骰提示 More dice tips:
 
 * 支援某些JS 方式運算擲骰 [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) . 例如 `[[ 1d6 + round(7/2) ]]`
 
-## Roll Commands
+## 擲骰指令 Roll Commands
 
 `/r` or `/roll`該命令會進行正常的公開擲骰。 您也可以使用以下替代命令：
 
@@ -81,7 +81,7 @@ Macro是一種讓玩家快捷地去進行某些動作的方式。它可以是MOD
 `/sr` or `/selfroll` 僅向您顯示該擲骰。
 
 
-## Using Attributes
+## 使用屬性 Using Attributes
 
 如果您使用的是`Simple Worldbuilding System`，則角色卡會在“屬性”中儲存有關角色的不同基本屬性。 你可以將屬性用作公式中的變量，因此，當您更改一個屬性時，所有公式，Macros等都會同步更新。
 
@@ -98,7 +98,7 @@ Macro是一種讓玩家快捷地去進行某些動作的方式。它可以是MOD
 
 除非您選擇了其他Token，否則它將自動從你所分配到角色的屬性中提取數據。
 
-### Seeing a list of attributes
+### 查看屬性 Seeing a list of attributes
 
 
 如果您想查看可以使用的 @屬性 列表，請打開控制台（F12）並鍵入`_token.actor.data.data`（已選擇token）。 您將看到可以用 點. 表示 的選項列表。 例如，如果您希望引用stealth ，則為： `@skills.ste.mod`
@@ -106,7 +106,7 @@ Macro是一種讓玩家快捷地去進行某些動作的方式。它可以是MOD
 您可以使用@符號訪問的頂級屬性是：`@abilities，@attributes，@bonuses，@currency，@details，@resources，@skills，@spells，@traits`
 
 
-# Formatting
+# 格式 Formatting
 
 ## Inline Rolls
 
@@ -139,7 +139,7 @@ Sad 一步跳起 [[/r 2d10+5]]米 跳過那隻頑皮的章魚龍.
 
 您可以將內嵌式擲骰嵌入到Foundry上的任何文本框中（包括在角色卡，日記條目，Macros和聊天框裡），並且可以使用HTML格式，只要在粘貼之前壓縮代碼即可 。有關更多信息，請參見HTML格式。
 
-## Comments
+## 註釋 Comments
 
 您可以通過在文字末尾的後面加上＃來添加註釋，如下所示：
 
@@ -161,7 +161,7 @@ Sad 一步跳起 [[/r 2d10+5]]米 跳過那隻頑皮的章魚龍.
 
 See HTML Formatting for more information on HTML.
 
-## References
+## 引用 References
 
 您可以在Foundry的 *任何* 文本框中引用Foundry中的幾乎所有項目，如下所示：
 
@@ -193,7 +193,7 @@ Displays this:
 
 您可以使用HTML格式化Macro,日誌等（基本上所有帶有文本框的內容）。
 
-**Learning HTML?**
+**學習HTML? Learning HTML?**
 
 HTML非常簡單。 如果您在文本周圍加上標記，就已經是在使用HTML了！ 如果您想學習一些基本的HTML，則到[freecodecamp](https://www.freecodecamp.org/learn/)完成前幾節課，這不超過20分鐘。
 
