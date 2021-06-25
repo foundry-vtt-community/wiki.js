@@ -1,9 +1,9 @@
 ---
-title: Languages
-description: Translations available for Foundry VTT.
+title: 語言
+description: 可用於Fvtt的翻譯.
 published: true
 date: 2021-05-07T01:53:40.792Z
-tags: translations, languages, localizations
+tags: 翻譯, 語言, 本地化
 editor: markdown
 dateCreated: 2021-04-21T14:44:20.433Z
 ---
@@ -13,7 +13,7 @@ Foundry Virtual Tabletop具有廣泛的國際社區，其核心(自0.7.9版開�
 有關其他翻譯(包括遊戲系統的翻譯)，請參見Foundry VTT網站上的[翻譯MOD列表](https://foundryvtt.com/packages/tag/translation)(始終是最新的)或[Wiki上的翻譯](https://foundryvtt.wiki/en/community/Community-Translations)頁面(可能不是最新的)。
 
 
-## 安裝翻譯模塊MOD
+## 安裝翻譯MOD
 1. 安裝模塊MOD的最簡單方法，就是右鍵單擊要安裝的語言的「最新版本」鏈接，然後復制該鏈接。 請注意，最新版本可能僅支持遊戲的最新版本。
 1. 在Foundry VTT中，打開「Add-On Modules附加模塊」。
 ![add-on_modules_tab.png](/fvtt-ui/add-on_modules_tab.png)

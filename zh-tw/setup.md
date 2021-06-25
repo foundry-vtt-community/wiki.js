@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: 準備開始
 description: 
 published: true
 date: 2021-05-07T01:53:43.977Z

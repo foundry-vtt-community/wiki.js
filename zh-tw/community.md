@@ -1,6 +1,6 @@
 ---
-title: Community
-description: Information about the FoundryVTT Community
+title: 社區
+description: 關於FoundryVTT社區的信息
 published: true
 date: 2021-04-21T16:51:52.710Z
 tags: 
