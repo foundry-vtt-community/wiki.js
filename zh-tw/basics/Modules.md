@@ -15,7 +15,7 @@ dateCreated: 2021-04-21T14:51:27.389Z
 
 # 安裝MOD
 
-## Via Manifest URL
+## 經 Manifest URL
 1. 在網絡瀏覽器中打開Foundry設置頁面
 2. 單擊`Add-on Modules`選項卡
 3. 單擊`Install Module`按鈕
@@ -23,7 +23,7 @@ dateCreated: 2021-04-21T14:51:27.389Z
 5. 單擊`Install`
  
 
-# Developing Modules
+# 開發MOD
 在官方的Foundry知識庫中有一個[模塊MOD開發簡介](https://foundryvtt.com/article/module-development/)頁面，這是一個很好的開始。
 
 使用Foundry VTT API開發模塊MOD，API將在[Foundry VTT官方網站](https://foundryvtt.com/api/)上有記錄。
