@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-05-27T23:46:30.946Z
+date: 2021-06-23T15:22:51.040Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -16,13 +16,14 @@ This guide provides easy to follow steps for a relatively simple installation of
 
 * You will end up with:
 
-  1. A VM that runs Foundry 24/7, including after restarts.
-  2. A domain name and an automatically managed encrypted connection to your Foundry instance.
-  3. Roughly 40GB (optionally increased to roughly 90GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
-  4. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
-  5. A backup policy that automatically keeps 5 backups in case of emergencies.
+  1. A VM with 1 cpu core (optionally increased to 4 cores) and 6GB of RAM (optionally increased to 24GB).
+  2. Foundry running 24/7, including after restarts.
+  3. A domain name and an automatically managed encrypted connection to your Foundry instance.
+  4. Roughly 40GB (optionally increased to roughly 190GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data).
+  5. Outbound data transfer of 10TB per month, more than enough for hosting Foundry even with daily sessions.
+  6. A backup policy that automatically keeps 5 backups in case of emergencies.
   
->The Oracle Always Free Tier meets the **minimum** requirements to host core Foundry VTT server. The use of large number (thousand+) of entities in the sidebar or compendiums, or certain modules may exceed the available resources. {.is-warning} 
+
 
 ## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
@@ -56,6 +57,15 @@ At the end of this section, you will have a registered account with Oracle Cloud
 <a id="B1" href="#B1">B1.</a> Review the availability of [Always Free services in your preferred region](https://www.oracle.com/cloud/data-regions.html). At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
 
 <a id="B2" href="#B2">B2.</a> Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
+
+>When choosing your home region, pay special attention to any notices regarding availability of `Arm Ampere A1 Compute` capacity. Be very sure to choose a region with availability otherwise you will not be able to create the instance mentioned in this guide and access the Always Free services. {.is-warning}
+
+<details><summary>What if I can't choose a region that has Arm Ampere A1 availability? ▼</summary>
+	
+  The older `VM.Standard.E2.1.Micro` instances should still be available in all regions. That instance type is limited to 1 throttled OCPU, 1GB RAM, and 50mbps external network speeds. While lower in resources than the new A1 instances, it is still enough to meet the **minimum** requirements to host Foundry.
+  
+  You can choose the `VM.Standard.E2.1.Micro` shape in step [C24](#C24) instead of the `VM.Standard.A1.Flex` shape mentioned in the step, and then continue the guide.
+</details>
 
 <a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
 
@@ -136,22 +146,43 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <a id="C19" href="#C19">C19.</a>  Click the **Change Image** button to select a new OS image.
 
-<a id="C20" href="#C20">C20.</a>  From the pop-out list, :ballot_box_with_check:`check` **Canonical Ubuntu**. Ensure that the OS Version is **20.04 Minimal**.
+<a id="C20" href="#C20">C20.</a>  From the pop-out list, :ballot_box_with_check:`check` **Canonical Ubuntu**. Ensure that the OS Version is **20.04** and **not** 20.04 Minimal.
+
+![Select non-Minimal Ubuntu 20.04](/images/oracle/ubuntu-2004.webp)
 
 <a id="C21" href="#C21">C21.</a>  Click **Select Image**.
 
 <a id="C22" href="#C22">C22.</a>  To change the type of VM to an Always Free Tier VM, click **Change Shape**.
 
-![Change Shape](/images/oracle/image15b.webp)
+![Change Shape](/images/oracle/ubuntu-ampere.webp)
 
-<a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Specialty and Legacy**. 
+<a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Ampere**. 
 
-<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.E2.1.Micro shape**.
+<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.A1.Flex shape**.
 
-![Select Shape](/images/oracle/image11.webp)
+<details><summary>How many CPU cores and how much RAM should I use? ▼</summary>
+
+  As of June 7, 2021 Oracle offers [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 4 Ampere cores and 24GB of RAM spread over up to 4 instances, for free. This guide leaves the default selection of 1 core and 6GB of RAM as that is more than enough to run Foundry. 
+  
+  An additional core may help increase performance of Foundry slightly and a few more gigs of RAM could help in the most extreme cases for resource-intensive modules. You can flexibly edit the shape after creation if you want to adjust the resources after creation. 
+  
+  In the vast majority of cases, 1 core and 6GB is recommended for Foundry. 
+
+</details>
+
+<details><summary>What if I can't choose the VM.Standard.A1.Flex shape? ▼</summary>
+	
+  First, try switching to another Availability Domain (checking to ensure it is tagged `always-free`) to see if there are A1 instances in other Availability Domains within your home region. The number of Availability Domains differs in each reagion, with some regions only having 1.
+  
+  The older `VM.Standard.E2.1.Micro` instances should still be available in all regions. That instance type is limited to 1 throttled OCPU, 1GB RAM, and 50mbps external network speeds. While lower in resources than the new A1 instances, it is still enough to meet the **minimum** requirements to host Foundry.
+  
+  You can choose the `VM.Standard.E2.1.Micro` shape in step [C24](#C24) above, under the `Legacy and Specialty` section instead of the `VM.Standard.A1.Flex` shape mentioned in the step, and then continue the guide.
+</details>
+
+![Select Shape](/images/oracle/ampere-shape.webp)
 
 
->If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.E2.1.Micro shape, then you will have to contact Oracle Support to resolve the issue. Choosing any other shape will incur charges. {.is-info}
+>If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.A1.Flex shape, then you will have to contact Oracle Support to resolve the issue. Choosing other shapes may incur charges. {.is-info}
 
 <a id="C25" href="#C25">C25.</a>  Click **Select Shape**.
 
@@ -176,13 +207,13 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <a id="C31" href="#C31">C31.</a> Scroll down to **Boot Volume**.
 
-<a id="C32" href="#C32">C32.</a> Optionally, :ballot_box_with_check:`check` the **Specify a custom boot volume size** option and enter `100` in the **Boot volume size (GB)** box that appears.
+<a id="C32" href="#C32">C32.</a> Optionally, :ballot_box_with_check:`check` the **Specify a custom boot volume size** option and enter up to `200` in the **Boot volume size (GB)** box that appears.
 >Leaving the default boot volume size will provide you with roughly 40GB of storage for Foundry, which is usually more than enough for even the most asset-heavy campaigns. {.is-info}
 
->By specifying a larger Boot Volume you will be able to have roughly 90GB of storage for Foundry assets. However, doing so will prevent the use of the second Compute VM instance that is provided with the Always Free Tier (not used in this guide). Think carefully about your desired future usage for the Always Free Tier before making this change. {.is-warning}
+>By specifying a larger Boot Volume you will be able to have up to roughly 190GB of storage for Foundry assets. However, doing so will prevent the use of multiple Compute VM instances that are provided with the Always Free Tier (not used in this guide). Think carefully about your desired future usage for the Always Free Tier before making this change. {.is-warning}
 
 <a id="C33" href="#C33">C33.</a>  All other options should be left at default. Click **Create**. 
->If you receive an `Out of capacity for shape VM.Standard.E2.1.Micro in availability domain` error, then there are no more Always Free Tier instances available at the moment. According to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
+>If you receive an `Out of capacity for shape VM.Standard.A1.Flex in availability domain` error, then there are no more Always Free Tier instances available at the moment. You can try selecting a different Availability Domain above (double check that it is always-free tagged). Otherwise, according to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
 
 <a id="C34" href="#C34">C34.</a>  Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
 
@@ -431,21 +462,17 @@ At the end of this section you will have a policy that automatically retains 5 r
 
 <a id="E7" href="#E7">E7.</a> Click **Add Schedule**.
 
-<a id="E8" href="#E8">E8.</a> Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing **Block Storage** -> **Volume Groups**.
+<a id="E8" href="#E8">E8.</a> Assign the backup policy to the existing volume on our Compute VM by clicking the menu button, and choosing **Compute** -> **Instances**.
 
-![Volume Groups Menu](/images/oracle/image21.webp)
+<a id="E9" href="#E9">E9.</a> Click the **Foundry** instance.
 
-<a id="E9" href="#E9">E9.</a> Click **Create Volume Group**.
+<a id="E10" href="#E10">E10.</a>  Scroll down the page, and click **Boot Volume** unde the Resources menu on the left side. 
 
-<a id="E10" href="#E10">E10.</a>  Enter a name for the volume group, such as `foundry-volume-group`. 
+<a id="E11" href="#E11">E11.</a>  Click the **instance-xxxxxxxxx (Boot Volume)** link under the Boot Volume Name heading.
 
-<a id="E11" href="#E11">E11.</a>  Select the `foundry-backup` backup policy.
+<a id="E12" href="#E12">E12.</a>  Click the **Edit** button near the top of the page, just under the instance-xxxxxx (Boot Volume) title.
 
-<a id="E12" href="#E12">E12.</a>  Select the `foundry (Boot Volume)` volume.
-
-<a id="E13" href="#E13">E13.</a>  Click **Create**.
-
-![Create Volume Group](/images/oracle/image26.webp)
+<a id="E13" href="#E13">E13.</a>  Scroll down the pop-out pane to Backup Policies, and select the **foundry-backup** policy from the dropdown. Click **Save Changes**.
 
 <a id="E14" href="#E14">E14.</a>  You have now given your instance a backup policy that will run automatically. 
 

@@ -2,7 +2,7 @@
 title: Contribution Guide
 description: 
 published: true
-date: 2021-06-17T19:20:32.030Z
+date: 2021-06-25T14:36:07.392Z
 tags: meta
 editor: markdown
 dateCreated: 2021-06-17T19:20:32.030Z
@@ -12,6 +12,12 @@ dateCreated: 2021-06-17T19:20:32.030Z
 
 - Ensure your path is a url-friendly slug with no capitalizations.
 
+## Compatibility Notice
+```
+> Page is known to be up to date with Core Version 8
+{.is-info}
+```
+Include a notice at the top of a page which details when the page is last known to be accurate.
 
 ## Assets
 
