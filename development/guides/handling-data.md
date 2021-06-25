@@ -2,11 +2,14 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-06-25T14:33:18.293Z
+date: 2021-06-25T14:34:02.459Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
 ---
+
+> Page is known to be up to date with Core Version 8
+{.is-info}
 
 This article is primarily geared towards Module development, but Systems can make use of its contents as well. It largely ignores the options for data storage that Systems have that come with being able to control Document types via the system template.json.
 
