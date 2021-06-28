@@ -2,7 +2,7 @@
 title: Self Hosting-on-AWS
 description: 
 published: true
-date: 2021-05-23T18:34:09.016Z
+date: 2021-06-28T01:17:45.926Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:51.723Z
@@ -11,7 +11,7 @@ dateCreated: 2020-09-23T00:34:51.723Z
 # Self-Hosting on AWS
 ## 1. Introduction, Requirements, and A Disclaimer
 
-While the official KB provides some useful information for setting up Foundry VTT on AWS, a complete guide to doing so is outside its scope.  However, a guide to doing so that also outlines some best practices for the use of Amazon Web Services seems like it would be handy to help others along and make their setup process a little smoother.  This guide is intended as an outline of the basic infrastructure needed and how to set it up on AWS.  It is not intended as a guide for setting up and configuring the server itself.  The excellent Ubuntu setup guide [here](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM) more than adequately documents how to set up the actual webserver and Foundry server.  I'll relink it again at the appropriate point in this guide, but you might want to keep it open in a separate tab.  Also, while this guide is intended to be approachable by people with little to no experience with the AWS platform, it is not intended as a general introduction to it.
+While the official KB provides some useful information for setting up Foundry VTT on AWS, a complete guide to doing so is outside its scope.  However, a guide to doing so that also outlines some best practices for the use of Amazon Web Services seems like it would be handy to help others along and make their setup process a little smoother.  This guide is intended as an outline of the basic infrastructure needed and how to set it up on AWS.  It is not intended as a guide for setting up and configuring the server itself.  The excellent Linux installation guide [here](https://foundryvtt.wiki/en/setup/linux-installation) more than adequately documents how to set up the actual webserver and Foundry server.  I'll relink it again at the appropriate point in this guide, but you might want to keep it open in a separate tab.  Also, while this guide is intended to be approachable by people with little to no experience with the AWS platform, it is not intended as a general introduction to it.
 
 I personally selected AWS in particular because it offers a very robust cloud hosting platform with a deep list of options and services at a competitive price.  Additionally, for those who haven't used AWS before, they offer new accounts [a number of services free for the first year](https://aws.amazon.com/free/?all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc), which covers most of the expense of self-hosting Foundry in the cloud, and the fees for hosting are nominal thereafter.  AWS is by default pay as you go for all services, and only a certain level of usage is covered under the free tier.  If you are concerned about the potential charges involved, I highly suggest setting up a [billing alert](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/monitor_estimated_charges_with_cloudwatch.html) using AWS Cloudwatch after setting everything up.  Amazon will automatically notify you when it projects you'll go over your limits.  Do note that as the author of this guide, I do not take responsibility for any overage charges accidentally incurred.  I will do my best to keep everything within the free tier, however.
 
@@ -188,7 +188,7 @@ Click the Attach existing policies directly button.  This will bring up a long l
 
 ## 7. Server Setup
 
-You're now ready to set up your new AWS-hosted Ubuntu server with Foundry.  Again, you can find the generic guide [here](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM).
+You're now ready to set up your new AWS-hosted Ubuntu server with Foundry.  Again, you can find the generic guide [here]https://foundryvtt.wiki/en/setup/linux-installation).
 
 You'll need the private key you created in order to log in via ssh.  Before you log in, though, you'll need to change the permissions on the keyfile so other users on your computer can't read it.  On Linux/MacOS, you can do so with the following command:
 
