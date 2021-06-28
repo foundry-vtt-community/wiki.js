@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-06-28T09:13:32.173Z
+date: 2021-06-28T11:54:45.542Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -38,7 +38,7 @@ La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
 Aures vidéos : 
  - 1 Interview autour de [FoundryVTT par JDRFactory](https://www.youtube.com/watch?v=mOWEWFj4ZEo)
  - Les Chroniques de la [Fonderie, Episode 1](https://youtu.be/Etu9de6gxOg)
- - Les Chroniques de la [Fonderie, Episode 2](https://www.youtube.com/watch?v=FJvgne_7iqI&t=211s) avec Kakaroto (TheForge)
+ - Les Chroniques de la [Fonderie, Episode 2](https://youtube.com/playlist?list=PLLTwqC7aX_kh92eXRI3N1yubUqhLzcCex) avec Kakaroto (TheForge)
 
 ## Ressources officielles ...
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop Website](http://foundryvtt.com)
