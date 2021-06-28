@@ -1,0 +1,76 @@
+<!--
+title: iPad/iPhoneでFoundry VTTにアクセスする
+description: iPad/iPhoneでFoundry VTTにアクセスするための諸準備と実際のやり方
+published: true
+date: 2021-06-28T15:06:11.817Z
+tags: 
+editor: ckeditor
+dateCreated: 2021-06-28T15:06:11.817Z
+-->
+
+<h1>iPad/iPhoneでFoundry VTTにアクセスするための諸準備</h1>
+<h2>■ はじめに</h2>
+<p>&nbsp;実証実験が少ないため、うまくできない可能性もあるかもしれません。</p>
+<p>&nbsp;要となるのは最新のWebkit WebGL2.0を用意することとそれを有効化することと思われます。</p>
+<p>&nbsp;ちなみにスマートフォンだと画面が小さすぎるため見学する以外では適さないという意見も頂いています。</p>
+<p>&nbsp;</p>
+<h2>■ iPad/iPhoneでFoundry VTTにアクセスするためのPL側の準備</h2>
+<p>動作が確認できているiPad/iPhoneのOSバージョン</p>
+<p>&nbsp;14.5.0　以上（ 14.5.0 と 14.5.1 と 14.6.0 では動作確認済み）</p>
+<p>&nbsp;注意：アクセスしようとしているFoundry VTTのバージョンによっては端末のバージョン不足となる場合もあるかもしれません</p>
+<p>&nbsp;</p>
+<h3>iPad/iPhoneでSafariのWebGL 2.0を有効にする方法</h3>
+<p>1. iPadの設定アイコンを開く</p>
+<p>2. 設定アイコンからSafariメニューを開く</p>
+<p>3. Safariメニューから詳細を開く</p>
+<p>4. 詳細からExperimental Featuresを開く</p>
+<p>5. WebGL 2.0をOnにする</p>
+<p>注意：iPad/iPhoneでは今のところ他のブラウザのWebGL 2.0を有効化する手立てが見つかっていません。</p>
+<p>&nbsp;</p>
+<h2>■ タブレット/スマートフォンなどでFoundry VTTを楽しむためのおすすめハードウェアや下準備</h2>
+<p>Bluetoothマウス</p>
+<p>&nbsp;マウスがあると画面を誤操作せずに操作性が向上します</p>
+<p>&nbsp;下記マウスなら多くのOSで使えて汎用性が高いのでおすすめです</p>
+<p>&nbsp;</p>
+<p>Bluetoothキーボード</p>
+<p>&nbsp;チャットなどの文字入力が必要な場合、キーボード無しだと文字入力スペースに画面を占有されてしまうのでこちらも有用です(おすすめは無いのでお好きな物を)</p>
+<p>&nbsp;</p>
+<h3>おすすめの下準備：</h3>
+<p>&nbsp;PLとしてログイン後にマクロバーによく使うロール/判定を登録しておく</p>
+<p>&nbsp;他にも何かあったかも...？</p>
+<p>&nbsp;</p>
+<p>注意点：他の端末(例えばAndroid)であればSafari以外が推奨ですが、iPad/iPhoneではSafariでのみ扱える</p>
+<p>&nbsp;</p>
+<h2>■ タブレット/スマートフォンなどでFoundry VTTにアクセスするためのサーバー側の準備</h2>
+<p>動作が確認できているFoundy VTTのバージョン</p>
+<p>&nbsp;0.7.9 (その他は未確認)</p>
+<p>&nbsp;</p>
+<p>推奨するModule：</p>
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>BubbleRolls</td>
+        <td>ロール/判定の結果がマップ上に配置されたPCアイコンの吹き出しに表示される</td>
+      </tr>
+      <tr>
+        <td>&nbsp;E-Z Roller</td>
+        <td>チャットを開かなくても判定時に操作が必要なメッセージがポップアップウインドウで表示される</td>
+      </tr>
+      <tr>
+        <td>Hey,listen! - Chat Notifications</td>
+        <td>チャットを開かなくても画面の端に数秒で消えるメッセージが表示される(不要な場合は個別設定で行数を０に)</td>
+      </tr>
+      <tr>
+        <td>Minimal UI</td>
+        <td>各種ツールアイコンが折り畳まれて、Foundy VTTの弱点である画面占有率が少なくなる(注意：マウスが無い場合は操作に難あり)</td>
+      </tr>
+      <tr>
+        <td>TouchVTT</td>
+        <td>タッチ操作を可能にする</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<p>この場を借りて、実験にご協力頂いた皆様に御礼を申し上げます。</p>
