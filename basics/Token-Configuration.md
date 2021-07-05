@@ -2,7 +2,7 @@
 title: Token Configuration
 description: 
 published: true
-date: 2021-07-05T08:15:32.842Z
+date: 2021-07-05T09:14:42.354Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:23:45.372Z
@@ -63,7 +63,9 @@ Again, the rotation field is grayed out and can only be changed on the map, usin
 A possible workaround, or **issue**, regarding the inability to manually change the token's rotation, lies with the default's configuration ability to "Assign" a token. If a default token is set in such a way, it will remember the rotation setting for future uses, which is not an issue with the coordinates since those are the ones you drag the token to when you put them on the map.
 
 # Vision Tab
-This tab is mainly useful for maps that do not use _Global Illumination_, and are thus "dark" by default. The _Has Vision_ option should be checked if you want to track this token's vision, even if such vision happens to be "0" (effectively blind). Leave it unchecked for tokens you do not care to use the vision options for at all.
+This tab is mainly useful for maps that do not use *_Global Illumination_*, and are thus "dark" by default. The *_Has Vision_* option should be checked if you want to track this token's vision, even if such vision happens to be "0" (effectively blind). Leave it unchecked for tokens you do not care to use the vision options for at all.
+
+**Be advised** *_Has Vision_* needs to be check in order for your players to see any scene that has the *Token Vision* option check in its configuration, regardless of any light sources or *_Global Illumination_* being set. Otherwise it will result in the player seeing a black screen and getting the *"You do not own any Tokens with vision on this scene"* message.
 
 ## Vision Fields
 The vision fields determine how far a token can see (as bright or dim light) in **the absence of a light source**. There is currently no support for the overlap of dim vision and dim light to result in bright vision as with Darkvision in the D&D 5e system.
