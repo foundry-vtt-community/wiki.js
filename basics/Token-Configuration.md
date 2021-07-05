@@ -2,7 +2,7 @@
 title: Token Configuration
 description: 
 published: true
-date: 2021-07-05T08:13:57.679Z
+date: 2021-07-05T08:15:32.842Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:23:45.372Z
@@ -40,7 +40,7 @@ To allow this, the path for the image must be set using a special path type endi
 
 Ex: `storage/tokens/goblin/*` will choose any image in the `goblin/` folder. 
 
-You may also set it to use a limited set of images from a file using the format `folder/desc*` where `desc` is a leading part of the image file name.
+You may also set it to use a limited set of images from a folder using the format `folder/desc*` where `desc` is a leading part of the image file name.
 
 Ex: `storage/tokens/goblin/red*` will choose between any image that starts with 'red' in the `goblin` folder. 
 
