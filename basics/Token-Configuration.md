@@ -2,7 +2,7 @@
 title: Token Configuration
 description: 
 published: true
-date: 2021-07-05T08:04:10.391Z
+date: 2021-07-05T08:13:57.679Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:23:45.372Z
@@ -37,9 +37,12 @@ There is currently no file preview available, but this might change in the futur
 Only available in the default token configuration, this option let's you have a **randomized image** when you put down a certain kind of tokens. This is useful mostly for nameless NPCs, such as commoners in a tavern of perhaps some goblins you have with different fighting stances or color schemes to make it more immersive for your player than all identical tokens, and saving you the trouble of changing it in every unique token's settings.
 
 To allow this, the path for the image must be set using a special path type ending with `*` . This can be set to a folder containing only the images you want the token to be selected from by using the format `folder/*` with `folder` being the folder name and any image inside it will be chosen. 
-Example `storage/tokens/goblin/*` will choose any image in the `goblin/` folder. 
+
+Ex: `storage/tokens/goblin/*` will choose any image in the `goblin/` folder. 
+
 You may also set it to use a limited set of images from a file using the format `folder/desc*` where `desc` is a leading part of the image file name.
-Example `storage/tokens/goblin/red*` will choose between any image that starts with 'red' in the `goblin` folder. 
+
+Ex: `storage/tokens/goblin/red*` will choose between any image that starts with 'red' in the `goblin` folder. 
 
 ## Token Size
 The width and height values specified here are set to a number of grid squares (or hexes) and determine how much space the token takes on the field.
