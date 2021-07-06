@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-06-25T16:26:33.433Z
+date: 2021-07-06T13:27:04.417Z
 tags: settings, flags, data
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -103,6 +103,47 @@ Hooks.on('updateScene', (scene, data) => {
     console.log(data);
   }
 });
+```
+
+### Some Details about `setFlag` and objects
+
+When the thing being set is an object, the API doesn't replace the object with the value provided in the setFlag call, instead it merges the update in.
+
+When you look at the code, this makes sense. `Document#setFlag` is a very thin wrapper around `Document#update`, but it isn't necessarily what you would expect.
+
+Example to demonstrate:
+```js
+game.user.setFlag('world', 'todos', { foo: 'bar', zip: 'zap' });
+// flag value: { foo: 'bar', zip: 'zap' }
+
+game.user.setFlag('world', 'todos', {});
+// flag value: { foo: 'bar', zip: 'zap' }
+// no change because update was empty
+
+game.user.setFlag('world', 'todos', { zip: 'zop' });
+// flag value: { foo: 'bar', zip: 'zop' }
+```
+
+`Document#setFlag` should perhaps be thought about as "updateFlag" instead, but that's only partly true because it can set that which doesn't exist yet.
+
+Where this has the most effect is when one wants to store data as an object, and wants to be able to delete keys. 
+
+The initial instinct of "I'll setFlag with an object that has everything but that thing which was deleted," doesn't work here. Instead you can either jerryrig `unsetFlag` in an unintuitive way:
+```js
+game.user.unsetFlag('world', 'todos.foo');
+// flag value: { zip: 'zop' }
+```
+
+OR you can use the foundry-specific `-=key: null` syntax:
+```js
+game.user.setFlag('world', 'todos', { ['-=foo']: null });
+// flag value: { zip: 'zop' }
+```
+
+If you're happy with the key being `null`, setting it to `null` explicitly works as you'd expect:
+```js
+game.user.setFlag('world', 'todos', { foo: null });
+// flag value: { foo: null, zip: 'zop' }
 ```
 
 ## Settings
