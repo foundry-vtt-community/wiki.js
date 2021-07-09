@@ -2,7 +2,7 @@
 title: Journal
 description: 
 published: true
-date: 2021-07-09T09:25:29.100Z
+date: 2021-07-09T09:28:54.501Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:38.240Z
@@ -11,7 +11,7 @@ dateCreated: 2020-09-23T00:22:38.240Z
 The journal is where you can take all sorts of notes and prepare your handouts. They are not limited to text and can both insert images directly inside the text with the rich text field, plus each entry can also be assigned a main image that can be displayed as a standalone handout, useful for showcasing that awesome artwork of your city! As with actors, scenes and items, you can organize them into folders to keep them organized.
 
 # Linking Entities
-One of Foundry's feature allows you to link entities in the various rich text editor in the platform. However, the synthax is often forgotten, so here it is: **`@EntityType[EntityId]`**. There are currently five `EntityType` supported like such:
+One of Foundry's feature allows you to link entities in the various rich text editor in the platform. However, the synthax is often forgotten, so here it is: **`@EntityType[EntityId]`**. `{displayed text}`(spaces ok) can be added to the end to change the text of the link. There are currently five `EntityType` supported like such:
 * Actors
 * Items (Reminder that in Foundry, this applies to many different things, including spells, classes and feats!)
 * JournalEntry (no space)
