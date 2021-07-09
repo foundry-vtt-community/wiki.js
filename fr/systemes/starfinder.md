@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-07-09T08:18:38.082Z
+date: 2021-07-09T08:19:17.416Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -18,10 +18,10 @@ Pour les détails concernant le système de base de Starfinder (sfrpg) en anglai
 * Le module de traduction **Babele**
 * Le module de traduction en français **sfrpg-fr-translation**
   
-Le module **![sfrpg-fr-translation](https://foundryvtt.com/packages/sfrpg-fr-translation)** permet de traduire les compendia présents dans le système **Starfinder** au niveau des livres de officiels de Starfinder disponibles en français.
+Le module **[sfrpg-fr-translation](https://foundryvtt.com/packages/sfrpg-fr-translation)** permet de traduire les compendia présents dans le système **Starfinder** au niveau des livres de officiels de Starfinder disponibles en français.
 La page du module sur le site de Foundry VTT : https://foundryvtt.com/packages/sfrpg-fr-translation
 
-> **Ce module nécessite l'installation du module de traduction *![Babele](https://foundryvtt.com/packages/babele)*.**
+> **Ce module nécessite l'installation du module de traduction *[Babele](https://foundryvtt.com/packages/babele)*.**
 {.is-warning}
 
 ## Installation du module sfrpg-fr-translation
