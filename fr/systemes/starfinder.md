@@ -2,7 +2,7 @@
 title: Starfinder
 description: Support pour Starfinder
 published: true
-date: 2021-05-05T09:33:01.372Z
+date: 2021-07-09T08:18:38.082Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T09:50:40.490Z
@@ -14,28 +14,28 @@ Pour les détails concernant le système de base de Starfinder (sfrpg) en anglai
   
 # Système et modules nécessaires
 * Le module **fr-FR-Core Game** (traduction de Foundry en français)
-* Le système **Starfinder** (déjà localisé en français)
-* Le module de compendia français **starfinder-fr**
+* Le système **Starfinder** (dont la base est déjà localisée en français)
+* Le module de traduction **Babele**
+* Le module de traduction en français **sfrpg-fr-translation**
   
-Le module **starfinder-fr** permet d'importer dans les compendia de votre monde un ensemble d'objets en français disponibles dans les livres de Starfinder.  
-Les items disponibles sont : armes, armures, classes, conditions, équipement, races, sorts, thèmes et modules de vaisseaux.  
-Beaucoup d'objets de Stafinder ont été créés et le travail de la communauté continue.
+Le module **![sfrpg-fr-translation](https://foundryvtt.com/packages/sfrpg-fr-translation)** permet de traduire les compendia présents dans le système **Starfinder** au niveau des livres de officiels de Starfinder disponibles en français.
+La page du module sur le site de Foundry VTT : https://foundryvtt.com/packages/sfrpg-fr-translation
 
-> **Pour le moment, aucun besoin du module de traduction *Babele*.**
+> **Ce module nécessite l'installation du module de traduction *![Babele](https://foundryvtt.com/packages/babele)*.**
 {.is-warning}
 
-## Installation du module starfinder-fr
+## Installation du module sfrpg-fr-translation
   
-> Installez le module de compendia français pour Starfinder en copiant ce lien dans Foundry VTT :  
-**https://github.com/aldarion-jdr/starfinder-fr/raw/main/module.json**  
+> Installez le module de traduction français pour Starfinder en copiant ce lien dans Foundry VTT :  
+**https://github.com/aldarion-jdr/sfrpg-fr-translation/raw/main/module.json**  
 {.is-success}
   
 ## Github et développement du module
 Adresse du Github du module:  
-https://github.com/aldarion-jdr/starfinder-fr
+https://github.com/aldarion-jdr/sfrpg-fr-translation
   
-Signaler une erreur :  
-https://github.com/aldarion-jdr/starfinder-fr/issues
+Signaler une erreur ou une coquille dans la traduction :  
+https://github.com/aldarion-jdr/sfrpg-fr-translation/issues
   
 ## Modules conseillés par la communauté  
   
