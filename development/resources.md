@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-07-11T17:03:06.802Z
+date: 2021-07-11T17:04:14.392Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -147,7 +147,7 @@ There are a variety of community-created module and system starter kits out ther
 - Wraps CONFIG.debug in a client setting which preserves your choices.
 
 
-### [1000Nettles' Foundry Magic L10n](https://www.npmjs.com/package/foundry-magic-l10n)
+### [1000Nettles' Foundry Magic L10n](https://github.com/1000nettles/foundry-magic-l10n)
 
 - This CLI tool allows you, a module or system developer, to generate 10 different localization files in the FoundryVTT "language file" format. This utilizes AWS Translate - a "fluent and accurate machine translation" engine. It takes your base English translations, and converts them into language files for you to download and include in your own modules and systems.
 
