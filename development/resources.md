@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-07-11T17:04:14.392Z
+date: 2021-07-11T19:33:32.305Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -30,11 +30,14 @@ Atropos has a Developer API Documentation section on the official `foundryvtt.co
 ### [Boilerplate System Development Tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD01-Getting-started)
 - Wiki hosted guide to accompany and explain the Boilerplate system as well as a lot of core system development concepts.
 
-### [Spacemandev's FoundryVTT Development Video Series](https://www.youtube.com/watch?v=UDVH6UIFRos&list=PLLF8ndmyGEGyAWaZifYCzqMuRq2lsaENA)
+### [Foundry VTT Module Making for Beginners](https://hackmd.io/@akrigline/ByHFgUZ6u)
+- A tutorial covering every step from "I have no files" to "I have a module which interacts with Flags, Settings, FormApplication, CSS, Localization, Hooks, and more." 
+
+### [Spacemandev's Foundry VTT Development Video Series](https://www.youtube.com/watch?v=UDVH6UIFRos&list=PLLF8ndmyGEGyAWaZifYCzqMuRq2lsaENA)
 - Content that covers topics ranging from Setting up a development environment to the deep dive videos: Macros 101 and 102.
 
 
-### [Mougli's FoundryVTT System Development Video Series](https://www.youtube.com/watch?v=gcSN4AQcUzM&list=PLFV9z59nkHDccUbRXVt623UdloPTclIrz)
+### [Mougli's Foundry VTT System Development Video Series](https://www.youtube.com/watch?v=gcSN4AQcUzM&list=PLFV9z59nkHDccUbRXVt623UdloPTclIrz)
 - Video Series for those looking to create their own Systems.
 
 ### [Svelte and Foundry](https://sunspots.eu/posts/foundry-svelte/)
