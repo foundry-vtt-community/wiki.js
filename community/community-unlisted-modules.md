@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2021-04-21T16:34:28.526Z
+date: 2021-07-11T20:13:59.221Z
 tags: modules
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -337,7 +337,7 @@ These are modules which have had their functionality merged into core.
 - ZoomKey
 
 ### 0.7.x
-- [Deselection](https://github.com/Sky-Captain-13/foundry/tree/master/deselection)
+- Deselection
 - [Noback](https://github.com/VanceCole/noback)
 - [No Summon Vision](https://github.com/schultzcole/FVTT-No-Summon-Vision)
 - [Token Owner Selection Tweak](https://github.com/ElfFriend-DnD/foundryvtt-tokenOwnerSelectionTweak)
