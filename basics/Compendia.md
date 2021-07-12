@@ -2,7 +2,7 @@
 title: Compendia
 description: 
 published: true
-date: 2021-07-12T08:52:18.376Z
+date: 2021-07-12T09:14:56.686Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
@@ -18,13 +18,16 @@ Compendiums can be add in several ways. They may come with a game system directl
 
 Each Compendium can only contain one type of document: Actors, Items, Journal Entries, Macro Commands, Playlists, Rollable Tables or Scenes. Data contained in compendium packs are not loaded until needed, reducing the amount of data that a particular user must load when first joining a game.
 
-**Createing and Using Compendium Pack**
+## Createing and Using Compendium Pack
 
 A Compendium can be easily created in any World. First, navigate to the Compendiums Sidebar Tab, and then click the `Create Compendium` button. Enter the name of the Compendium (for example "Player Characters") and choose the type of document that will be contained in from the Document Type dropdown. After your Compendium has been created, clicking upon the Compendium name in the Sidebar will open a new window that will allow you to drag and drop from a Sidebar Tab into the Compendium.
 
 Compendium Packs and their contents are automatically sorted alphabetically.
 
 You can also export whole folders to compendiums by right clicking the folder and clicking the `Export to Compendium` option. This then gives you the ability to choose the destination pack (the compendium you want to export the folder's entities to), and if you want to overwrite existing entries with the same names. If the `Merge by name?` option is toggled off, then new copies of similar entities will be added. This is useful for storing multiple versions of the same document in a compendium.
+
+## Locking Compendiums
+You can toggle a lock on a compendium by navigating to the Compendium Packs tab, right clicking on name of the compendium and choosing `Toggle Edit Lock`. This can help prevent making any unwanted changes.  
 
 **Entities in compendiums can now edited directly!**
 This means you do not have to import an entity in order to make any changes. 
