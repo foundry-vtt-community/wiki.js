@@ -2,7 +2,7 @@
 title: Compendia
 description: 
 published: true
-date: 2021-07-12T09:14:56.686Z
+date: 2021-07-12T13:36:31.769Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
@@ -29,8 +29,13 @@ You can also export whole folders to compendiums by right clicking the folder an
 ## Locking Compendiums
 You can toggle a lock on a compendium by navigating to the Compendium Packs tab, right clicking on name of the compendium and choosing `Toggle Edit Lock`. This can help prevent making any unwanted changes.  
 
-**Entities in compendiums can now edited directly!**
-This means you do not have to import an entity in order to make any changes. 
+**Entities in compendiums can now be edited directly!**
+This means you no longer have to import an entity in order to make any changes to it.
+
+# Linking Entities
+
+Entities in compendiums can be link just like ones in your game world. They can be used in Journal Entries, Map notes, or Rolltables. Simply drag and drop the entitie from the compendium to the editable filed you want to link it to.
+This will show up as the standard linking format of `@Entity(
 
 # Tips and Tricks
 
