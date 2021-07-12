@@ -2,7 +2,7 @@
 title: Compendia
 description: 
 published: true
-date: 2021-07-12T13:36:31.769Z
+date: 2021-07-12T14:19:26.246Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
@@ -18,7 +18,7 @@ Compendiums can be add in several ways. They may come with a game system directl
 
 Each Compendium can only contain one type of document: Actors, Items, Journal Entries, Macro Commands, Playlists, Rollable Tables or Scenes. Data contained in compendium packs are not loaded until needed, reducing the amount of data that a particular user must load when first joining a game.
 
-## Createing and Using Compendium Pack
+## Creating and Using Compendium Pack
 
 A Compendium can be easily created in any World. First, navigate to the Compendiums Sidebar Tab, and then click the `Create Compendium` button. Enter the name of the Compendium (for example "Player Characters") and choose the type of document that will be contained in from the Document Type dropdown. After your Compendium has been created, clicking upon the Compendium name in the Sidebar will open a new window that will allow you to drag and drop from a Sidebar Tab into the Compendium.
 
@@ -34,10 +34,28 @@ This means you no longer have to import an entity in order to make any changes t
 
 # Linking Entities
 
-Entities in compendiums can be link just like ones in your game world. They can be used in Journal Entries, Map notes, or Rolltables. Simply drag and drop the entitie from the compendium to the editable filed you want to link it to.
-This will show up as the standard linking format of `@Entity(
+Entities in compendiums can be linked just like the ones in your game world. They can be used in Journal Entries, Map notes, or Roll Tables. Simply drag and drop the entities from the compendium to the editable filed you want to link it to.
+This will show up as the standard linking format of `@Entitytype(EntityId)`. In journal any field that requires saving after editing, such as journal entries the link will not show up until after you save. Fields like roll tables, there will be no link button, only the full formated id. 
+
+# Sharing with players
+
+You can allow your players to have access to compendiums by hiding the compendia. Navigate to the `Compendium Packs` tab on the sidebar, then right click on a compendium. Select `Toggle Visability`. An eye symbol with a line crossed out will appear next to those that you have hidden from your players. 
+
+This can be usefull in that you may want to let your players have access to a compendium full of spells when they need to add them, but you may not want to them to have access to one where you keep all of your monsters. 
+
+**NOTE:** Any compendium your players have access to, they will see all of the entities within.  
+
+# Importing Compendium Packs
+
+If you would like to import all of the content in a compendium pack you can do so by right-clicking the pack in the Compendium sidebar then selecting the `Import All Content` option. This will open a dialog allowing you to change the name of the folder which the compendium pack's content should be imported into. It will use the compendium's name if you choose not to edit the name, or if you leave the field blank. You can also import a single entity by opening the compendium folder, right clicking on the entity, and choosing `Import Entry`. 
+
+Once content has been imported into a game world it becomes a localized part of that world, and any changes made to the documents will not be reflected in the compendium unless you also export the content back to the compendium, or create a new compendium with the changed documents.
 
 # Tips and Tricks
+
+## `Do I need a compendium?`
+
+Storing unused Entities in a Compendium **greatly** reduces the time it takes to load your world. Even though each Actor, Item, or other document may be small, as their numbers start to rise into the hundreds the amount of data that gets transferred to each of your players when they join can cause your world to slow down over time. It is a best to practice good organization.
 
 ## Sharing compendia between worlds
 
