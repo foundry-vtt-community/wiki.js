@@ -2,7 +2,7 @@
 title: ４．よくある質問
 description: よくある質問
 published: true
-date: 2021-07-16T16:27:40.083Z
+date: 2021-07-16T16:36:33.073Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T10:43:54.439Z
@@ -18,7 +18,7 @@ dateCreated: 2021-02-06T10:43:54.439Z
 　
  Foundry VTTにおける動作要件についてまとめています。
 
-クライアント側(ＰＬやＧＭ)における必要動作環境
+クライアント側(PLやGM)における必要動作環境
 
 ・Windows 10・macOS Catalina以降・64ビットアーキテクチャに対応したLinux
 ・ハードウェアアクセラレーションを使用可能な統合GPU(Intel UHD Graphics や Radeon RX Vega 等)
@@ -26,7 +26,7 @@ dateCreated: 2021-02-06T10:43:54.439Z
 ・1366x768以上のモニター (ただし、解像度が最低限の場合、UIの多くの部分が窮屈になってしまうため1920x1080が推奨される。)
 ・ハードウェアアクセラレーションを有効にしたChrome、Firefox、Opera、Edgeなどの最新のWebブラウザ。(現時点では、Safariはサポートされていません。）
 
-クライアント側(ＰＬやＧＭ)における推奨動作環境
+クライアント側(PLやGM)における推奨動作環境
 ・Windows 10・macOS Catalina以降・64ビットアーキテクチャに対応したLinux
 ・WebGL 2.0に対応した独立GPU(Geforce GTX1060 や Radeon RX 550 等)
 ・1920x1080 またはそれ以上の解像度を表示できるモニター
