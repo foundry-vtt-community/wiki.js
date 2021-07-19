@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-05-24T11:31:42.722Z
+date: 2021-07-19T19:25:39.799Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -20,6 +20,7 @@ dateCreated: 2020-12-05T05:17:17.707Z
 - Developpement : [Mandar](https://foundryvtt.com/community/mandar) & [Vlyan](https://foundryvtt.com/community/vlyan)
 - Contribution: [Sasmira](https://foundryvtt.com/community/sasmira)
 - Compendiums : Carter & [Hrunh](https://foundryvtt.com/community/hrunh)
+- Adaptation des aventures : Carter
 - Wiki : [Hrunh](https://foundryvtt.com/community/hrunh)
 
 Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
@@ -118,6 +119,19 @@ Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'
 L'aventure officielle [Le Parchemin ou le Sabre](https://foundryvtt.com/packages/l5r5e-world-scroll) adaptée à Foundry est disponible en libre téléchargement.  
 Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure fourni gratuitement par l'éditeur. 
 
+![scroll.jpg](/images/scroll.jpg)
+
+## Aventure officielle *Dans le Palais du Champion d'Emeraude*
+L'aventure officielle [Dans le Palais du Champion d'Emeraude](https://foundryvtt.com/packages/l5r5e-world-palace) adaptée à Foundry est disponible en libre téléchargement.  
+Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure fourni gratuitement par l'éditeur. 
+
+![palace.jpg](/images/palace.jpg)
+
+## Aventure officielle *Les Queues Nouées*
+L'aventure officielle [Les Queues Nouées](https://foundryvtt.com/packages/l5r5e-world-tails) adaptée à Foundry est disponible en libre téléchargement.  
+Elle contient tout le nécessaire pour permettre à un Maitre de Jeu de mener l'aventure fourni gratuitement par l'éditeur. 
+
+![shadowland.jpg](/images/shadowland.jpg)
 
 ## Informations
 
