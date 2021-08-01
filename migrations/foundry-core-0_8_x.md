@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-06-17T12:53:49.752Z
+date: 2021-08-01T19:49:47.021Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -380,7 +380,9 @@ game.settings.register("myModule", "myOtherSetting", {
 
 #### ✅ 0.8 recommended
 ```js
-const debouncedReload = foundry.utils.debounce(window.location.reload, 100);
+const debouncedReload = foundry.utils.debounce(() => {
+  window.location.reload();
+}, 100);
 
 game.settings.register("myModule", "mySetting", {
   ...,
