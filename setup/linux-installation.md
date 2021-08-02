@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-08-02T14:20:11.365Z
+date: 2021-08-02T14:20:50.777Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -333,7 +333,7 @@ pm2 save
   # A CONFIG SECTION FOR YOUR IP AND HOSTNAME
   
   {
-  		default_sni your.internal.ip.address
+      default_sni your.internal.ip.address
   }
   
   your.internal.ip.address {
