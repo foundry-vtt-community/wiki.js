@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-08-02T14:12:21.029Z
+date: 2021-08-02T14:20:11.365Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -314,7 +314,7 @@ pm2 save
   your.hostname.com {
       # PROXY ALL REQUEST TO PORT 30000
       reverse_proxy localhost:30000
-  		encode zstd gzip
+      encode zstd gzip
   }
 
   # Refer to the Caddy docs for more information:
@@ -337,15 +337,16 @@ pm2 save
   }
   
   your.internal.ip.address {
-  		tls internal
-  		reverse_proxy localhost:30000
-  		encode zstd gzip
+      # PROXY ALL REQUEST TO PORT 30000
+      tls internal
+      reverse_proxy localhost:30000
+      encode zstd gzip
   }
   
   your.hostname.com {
       # PROXY ALL REQUEST TO PORT 30000
       reverse_proxy localhost:30000
-  		encode zstd gzip
+      encode zstd gzip
   }
 
   # Refer to the Caddy docs for more information:
