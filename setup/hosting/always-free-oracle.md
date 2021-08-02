@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-07-31T19:23:40.070Z
+date: 2021-08-02T14:11:29.749Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -391,6 +391,7 @@ sudo nano /etc/caddy/Caddyfile
 your.hostname.com {
     # PROXY ALL REQUEST TO PORT 30000
     reverse_proxy localhost:30000
+    encode zstd gzip
 }
 
 # Refer to the Caddy docs for more information:
