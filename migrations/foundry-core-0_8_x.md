@@ -2,7 +2,7 @@
 title: Migration Summary for 0.8.x
 description: 
 published: true
-date: 2021-08-01T19:49:47.021Z
+date: 2021-08-04T02:34:57.953Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-01T03:24:28.830Z
@@ -394,3 +394,53 @@ game.settings.register("myModule", "myOtherSetting", {
   onChange: debouncedReload
 }
 ```
+
+## Icons
+There were some Icon file path changes between 0.7 and 0.8. This list is formatted like `old/file/path -> new/file/path`.
+
+<details>
+<summary>List of Icon File diffs:</summary>
+
+```
+public/icons/commodities/flowers/lily-water-white.webp -> public/icons/commodities/flowers/lily-water-white.webppublic/icons/commodities/gems/gem-faceted-diamond-silver-.webp
+public/icons/commodities/stone/geode-raw-brown.webp -> public/icons/commodities/stone/geode-raw-brown.webppublic/icons/commodities/stone/stone-cratered-brown.webp
+public/icons/containers/kitchenware/vase-013.webp -> public/icons/containers/kitchenware/jug-bottle-clay-brown-gold-blue.webp
+public/icons/containers/kitchenware/vase-015.webp -> public/icons/containers/kitchenware/jug-clay-brown-sealed.webp
+public/icons/containers/kitchenware/vase-003.webp -> public/icons/containers/kitchenware/jug-clay-brown.webp
+public/icons/containers/kitchenware/vase-001.webp -> public/icons/containers/kitchenware/jug-terracotta-orange.webp
+public/icons/containers/kitchenware/vase-004.webp -> public/icons/containers/kitchenware/jug-wrapped-red.webp
+public/icons/containers/kitchenware/vase-009.webp -> public/icons/containers/kitchenware/vase-bottle-brown.webp
+public/icons/containers/kitchenware/vase-014.webp -> public/icons/containers/kitchenware/vase-clay-brown-large.webp
+public/icons/containers/kitchenware/vase-002.webp -> public/icons/containers/kitchenware/vase-clay-brown.webp
+public/icons/containers/kitchenware/vase-012.webp -> public/icons/containers/kitchenware/vase-clay-cracked-grey.webp
+public/icons/containers/kitchenware/vase-011.webp -> public/icons/containers/kitchenware/vase-clay-cracked-white.webp
+public/icons/containers/kitchenware/vase-007.webp -> public/icons/containers/kitchenware/vase-clay-etched-brown.webp
+public/icons/containers/kitchenware/vase-005.webp -> public/icons/containers/kitchenware/vase-clay-painted-blue-gold.webp
+public/icons/containers/kitchenware/vase-008.webp -> public/icons/containers/kitchenware/vase-clay-painted-brown-white.webp
+public/icons/containers/kitchenware/vase-006.webp -> public/icons/containers/kitchenware/vase-terracotta-jeweled-orange.webp
+public/icons/containers/kitchenware/vase-010.webp -> public/icons/containers/kitchenware/vase-wood-wrapped-brown.webp
+public/icons/environment/wilderness/mine-entrance-02.webp -> public/icons/environment/wilderness/mine-exterior-entrance.webp
+public/icons/environment/wilderness/mine-entrance-01.webp -> public/icons/environment/wilderness/mine-interior-dungeon-door.webp
+public/icons/equipment/chest/breastplate-metal-pieced-grey-02.webp -> public/icons/equipment/chest/breastplate-gorget-steel-purple.webp
+public/icons/equipment/chest/breastplate-metal-white-01.webp -> public/icons/equipment/chest/breastplate-gorget-steel-white.webp
+public/icons/equipment/chest/breastplate-metal-white-02.webp -> public/icons/equipment/chest/breastplate-gorget-steel.webp
+public/icons/equipment/chest/breastplate-pieced-black-01.webp -> public/icons/equipment/chest/breastplate-layered-gilded-black.webp
+public/icons/equipment/chest/breastplate-pieced-black-02.webp -> public/icons/equipment/chest/breastplate-layered-steel-black.webp
+public/icons/equipment/head/goggles-03.webp -> public/icons/equipment/head/goggles-leather-tan.webp
+public/icons/equipment/head/helm-norman-02.webp -> public/icons/equipment/head/helm-barbute-steel-grey.webp
+public/icons/equipment/head/helm-norman-03.webp -> public/icons/equipment/head/helm-rounded-reinforced-leather.webp
+public/icons/equipment/head/hood-green-02.webp -> public/icons/equipment/head/hood-cloth-green-white.webp
+public/icons/equipment/head/hood-pink-gilded-02.webp -> public/icons/equipment/head/hood-cloth-trimmed-pink-gold.webp
+public/icons/equipment/head/hood-purple-mask-02.webp -> public/icons/equipment/head/hood-cowl-mask-purple.webp
+public/icons/equipment/leg/pants-brown-leather-pants-fur-01.webp -> public/icons/equipment/leg/pants-leather-furred-brown-white.webp
+public/icons/equipment/leg/pants-brown-leather-pants-fur-02.webp -> public/icons/equipment/leg/pants-leather-furred-tan-white.webp
+public/icons/equipment/waist/sash-purple-cloth-03.webp -> public/icons/equipment/waist/cloth-sash-purple.webp
+public/icons/equipment/wrist/bracer-purple-gilded-02.webp -> public/icons/equipment/wrist/bracer-burnished-steel-purple.webp
+public/icons/equipment/wrist/bracer-shadow-02.webp -> public/icons/equipment/wrist/bracer-leather-black--steel.webp
+public/icons/equipment/wrist/bracer-purple-gilded-03.webp -> public/icons/equipment/wrist/bracer-leather-purple-steel.webp
+public/icons/sundries/flags/banner-flag-pirate-02.webp -> public/icons/sundries/flags/banner-flag-pirate-blue.webp
+public/icons/sundries/misc/pipe-wooden-02.webp -> public/icons/sundries/misc/pipe-wooden-curved-oak.webp
+public/icons/sundries/misc/pipe-wooden-01.webp -> public/icons/sundries/misc/pipe-wooden-straight-brown.webp
+public/icons/weapons/staves/staff-orb-red-02.webp -> public/icons/weapons/staves/staff-ornate-orb-steel-red.webp
+```
+</details>
