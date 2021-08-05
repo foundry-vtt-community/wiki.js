@@ -2,7 +2,7 @@
 title: ６．素材集
 description: 素材集
 published: true
-date: 2021-04-21T16:43:18.976Z
+date: 2021-08-05T23:41:06.556Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T11:02:35.590Z
@@ -21,5 +21,6 @@ https://github.com/Sa10yama/siritoriooga
 https://github.com/Sa10yama/kumasora
 - レベル３～５ ショートキャンペーン　**竜祭 ～Dragon Festival～**
 https://github.com/BrotherSharper/dragonfestival1
-
+- レベル８　ショートシナリオ **紅蓮の炎の中で** (MTGフォーゴトン・レルム探訪）
+https://github.com/BrotherSharper/scarlet-flame-ja
 
