@@ -2,11 +2,14 @@
 title: Introduction to PIXI in Foundry VTT
 description: 
 published: true
-date: 2021-04-21T16:34:18.203Z
+date: 2021-08-12T16:03:47.688Z
 tags: guide, pixi, layer, canvas, filter
 editor: markdown
 dateCreated: 2020-09-23T07:01:33.581Z
 ---
+
+> This is known to be accurate as of Foundry Core 0.7.x
+{.is-info}
 
 This guide is intended to be a crash course in how to draw things on the canvas in Foundry VTT using PIXI.
 
