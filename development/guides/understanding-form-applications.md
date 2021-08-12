@@ -2,29 +2,34 @@
 title: Understanding FormApplication
 description: 
 published: true
-date: 2021-05-03T17:06:10.115Z
+date: 2021-08-12T16:05:30.539Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-22T16:19:21.040Z
 ---
 
+> This is known to be accurate as of Foundry Core 0.8.x
+{.is-info}
+
+
 [`FormApplication`](https://foundryvtt.com/api/FormApplication.html) is an abstract subclass of `Application` designed specifically for the case where you have some underlying data object and you want to present a UI to configure that data object.
 
-# FormApplication vs Dialog
-Use a **dialog** if...
-- You are writing a macro. Defining and instanciating a FormApplication class within the limitations of a macro is not practical
-- You need only relatively simple input, or only a confirmation or similar
-- You are simply displaying simple output and not taking complex user input
-
+## FormApplication vs Dialog vs Application
 Use **Application** if...
 - You need only a blank window in which to render your own components and have no need of FormApplication's advanced features
+- You have no interactive elements
+
+Use a **Dialog** if...
+- You are writing a macro. Defining and instanciating a `FormApplication` class within the limitations of a macro is not practical
+- You need only relatively simple input, e.g. a confirmation or similar
+- You are simply displaying simple output and not taking complex user input
 
 Use **FormApplication** if...
 - You need data binding to a complex object that resembles foundry entity data
 - You need a TinyMCE editor or other input type that requires support from the FormApplication class
 
 
-# What does a FormApplication do?
+## What does a FormApplication do?
 When you create an instance of a `FormApplication` subclass, you must provide the underlying object which the `FormApplication` will modify. When the `FormApplication` is submitted (and in other configurable scenarios), the `FormApplication` will apply the changes to the form to the provided data object.
 
 `FormApplication` also provides some useful default functionality for things you might want your form to do, including:
@@ -35,25 +40,30 @@ When you create an instance of a `FormApplication` subclass, you must provide th
  - Handle color picker and range type inputs, so that the value chosen in these inputs is displayed in an associated input field (i.e. show the hex code of a chosen color in a textbox next to the color picker).
    - Using this requires your form HTML to be set up in the way that the `FormApplication` expects.
 
-# How does it do it?
-When a `FormApplication` is submitted, it gathers all of the input fields in the form and puts them in an object (with the help of [`FormDataExtended`](https://foundryvtt.com/api/FormDataExtended.html)). This object is then passed to the abstract method `FormApplication#_updateObject`, which updates the underlying object according to whatever logic is defined there by the concrete subclass you are using.
+## How does it do it?
+When a `FormApplication`'s `<form>` element is submitted, it gathers all of the input fields in the form and puts them in an object (with the help of [`FormDataExtended`](https://foundryvtt.com/api/FormDataExtended.html)). This object is then passed to the abstract method `FormApplication#_updateObject`, which updates the underlying object according to whatever logic is defined there by the concrete subclass you are using.
 
-# How do I use it?
+## How do I use it?
 
-## Creating a subclass of `FormApplication`
+### Defining a subclass of `FormApplication`
 Since `FormApplication` is an abstract class, you must define a subclass for it which meets some default assumptions. Some of these assumptions are listed in the documentation for the class, but a detailed list is included here for clarity:
 
 1. `FormApplication`s are intended to target/edit one object at a time.
-2. As with all `Application` subclasses, you must override `Application.defaultOptions` in your subclass and at least provide a Handlebars template to be displayed as the content of the `Application`. `FormApplication` adds an additonal requirement that your template should have a single `FORM` element as its outermost element.
+
+2. As with all `Application` subclasses, you must override `Application.defaultOptions` in your subclass and at least provide a Handlebars template to be displayed as the content of the `Application`. `FormApplication` adds an additonal requirement that your template should have a single `<form>` element as its outermost element.
    - TODO: include notes about valid default option properties (see [`Application` docs](https://foundryvtt.com/api/alpha/Application.html)).
    - TODO: include notes about `FormApplication` specific options: `closeOnSubmit`, `submitOnChange`, `submitOnClose`, and `editable`.
+
 3. Your subclass *must* override the abstract method `FormApplication#_updateObject`. `FormApplication` does not have a default implementation for this method, which is responsible for applying the form data to the underlying data object. It is up to you to determine how to interpret the form data and apply it.
 
-## Using your subclass
+### Using your subclass
 
 When you create an instance of your `FormApplication` subclass, you must provide a reference to the object that the form is modifying, like so: `new MyFormApplication(myObject).render(true)`. So long as you have implemented your subclass according to the requirements listed above, `FormApplication` should handle the rest.
 
-## Example
+> :warning: This example does not seem to match up with the statement above as it does not require an object be present. We should add that providing an object is not necessary.
+{.is-warning}
+
+### Example
 ```js
 /**
  * Define your class that extends FormApplication
@@ -119,7 +129,7 @@ new MyFormApplication('example').render(true);
 </form>
 ```
 
-# The `options` object.
+## The `options` object.
 All `Application`s including all `FormApplication`s have an `options` object which sets certain parameters for the function of the app.
 
 The following options are available:
@@ -196,5 +206,21 @@ Since your application `extends FormApplication` the method `super` calls the co
 
 Note also, that if you are creating an application, you can add your own options! All you must do to define a new option, is add it to `defaultOptions` so that it has some initial value.
 
-# 0.7.x vs 0.8.x
+## Reacting to Input Changes
+
+To force your FormApplication to rerender when any inputs are changed, add `this.render()` at the end of your `FormApplication#_updateObject` method.
+
+```js
+async _updateObject(event, formData) {
+  // normal updateObject stuff
+  
+  this.render(); // rerenders the FormApp with the new data.
+}
+```
+
+## The `render` method
+
+`Application#render` itself is not `async`, which means it cannot be awaited to ensure that the rendering process is finished e.g. before manipulating the resulting HTML element. The `async` method actually rendering the `Application` is `Application#_render`, for which `render` is a thin wrapper adding some error handling in the form of a console message and setting `this._state = Application.RENDER_STATES.ERROR` in case `_render` throws an error.
+
+## 0.7.x vs 0.8.x
 TODO
