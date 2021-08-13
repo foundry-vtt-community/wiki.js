@@ -2,46 +2,52 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T12:47:46.394Z
+date: 2021-08-13T13:29:15.958Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
 ---
 
-The Foundry API provides it's own hooking system for us to take advantage of.
-Most of the time, it's used to piggyback on a variety of runtime events, ranging from a simple `'hoverToken'` (the mouse entering/exiting a token area) to **any Document update** sent to the database, through **every rendering of any Application**.
-But, like anything Foundry, it can be daunting at first, and there's definitely more than meets the eye.<br/>
 
-If you don't care about the specifics, you can skip to the good part : [registering a hook](#answering-the-call--how-to-register-and-unregister-a-hook-).
+> This document is up to date as of 0.8.8
+{.is-info}
+
+
+The Foundry API provides it's own event system for developers to take advantage of in the form of Hooks.
+Most of the time, it's used to piggyback on a variety of runtime events, ranging from a simple `'hoverToken'` (the mouse entering/exiting a token area) to **any Document update** sent to the database, through **every rendering of any Application**.
+But, like anything Foundry, it can be daunting at first, and there's definitely more than meets the eye.
+
+If you don't care about the specifics, you can skip to the good part: [registering a hook callback](#answering-the-call--how-to-register-and-unregister-a-hook-).
 
 # The Hooks class
 Although the Foundry API documentation mentions a constructor to get new instances of the [Hooks](https://foundryvtt.com/api/Hooks.html) class, it's only used as a 'global constant', providing **a set of static methods** (and some private attributes), hence the use of a capital 'H' in the syntax `Hooks.once('init', ...` that most of us declared at some point.
-Some Foundry 'events' use a `Hooks.call()` or a `Hooks.callAll()`, with a hard-coded or dynamic hookName as well as a various number of arguments, ie :
+Some Foundry 'events' use a `Hooks.call()` or a `Hooks.callAll()`, with a hard-coded or dynamic hookName as well as a various number of arguments, for example:
 ```javascript
 Hooks.callAll("ready");
-//called at the beginning of the initialize sequence of a Game
+// called when the game is done initializing its data structure and is 'ready'
 ``` 
 ```javascript
 Hooks.call("dropCanvasData", this, data);
-//when anything is dragDropped onto the canvas
-//('this' being the canvas instance) 
+// when anything is dragDropped onto the canvas
+// ('this' being the canvas instance) 
 ``` 
 ```javascript
 Hooks.callAll(`update${doc.documentName}`, doc, change, options, userId);
-//that will trigger for any document type,
-//giving us a wide range of hookNames to deal with like
-//'updateActor', 'updateMacro', 'updateChatMessage'...
+// that will trigger for any document type,
+// giving us a wide range of hookNames to deal with like
+// 'updateActor', 'updateMacro', 'updateChatMessage'...
 ``` 
 At which point the Hooks class will check if any hook has been registered with that name and, for each one, will execute it's accompanying function. If you did not register a specific hook all this does is just screaming into the void.
-<br/>
 
 ### .on or .once :
 In order to receive the call, and piggyback on the triggering event, you must have registered a hook with a matching name and the callback function to be executed.
-Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in Hooks._hooks for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.
-**ⓘ** It is worth noting that the hook registering function **returns the index of the newly created hook**, that can be used as an argument for the unregistering process.<br/>
+Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in `Hooks._hooks` for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.
+
+**ⓘ** It is worth noting that the hook registering function **returns the index of the newly created hook**, that can be used as an argument for the unregistering process.
+
 ![Hooks._hooks](https://drive.google.com/uc?export=view&id=1kbuBCf2z0hC-pxeIscxrkg_BV9qDg6kB)
 Logging the hook container shows all the registered hooks along with their array of callback functions. Since 'init' and 'ready' were already called (and registered for a one time only) they now display as empty arrays.
-<br/>
+
 
 ### .call or .callAll or more...
 Not all calls are created equal, and it can impact the extent of what you can do when answering them.
@@ -74,7 +80,7 @@ ie : returning false when answering a `Hooks.call("dropCanvasData")` will **prev
 ``` 
 Unfortunately, you cannot know, without searching in foundry.js, if a call is interruptible or not (thus returning false being sometimes meaningless), oh, wait, you can, I compiled a [raw list just below](#raw-list-of-hooks-as-of-088) !
 
-# Where there's a hook, there's a way (Knowing what to hook on to)
+# Where there's a hook, there's a way (Knowing what to hook in to)
 Knowing if a hook even exists and it's argument list could be painfull, but hopefully, Foundry conveniently provides a Boolean that can be toggled for that : 
 This can be typed directly in the console or in your `Hooks.on('init', ...)`, for instance.
 ```javascript
@@ -177,9 +183,9 @@ Hooks.call(`get${cls.name}SoundContext`, html, entryOptions)
 ```
 </details>
 
-# Answering the call : how to register (and unregister) a hook : 
-## Registering a hook
-It's JavaScript, so there are many ways to implement your hook register. ie inline, inline with an arrow function, by reference, with or without arguments, with a .bind(this)...
+# Answering the call: How to Register (and Unregister) a Hook Callback 
+## Registering a hook callback
+It's JavaScript, so there are many ways to implement your hook callback. ie inline, inline with an arrow function, by reference, with or without arguments, with a .bind(this)...
 ```javascript
 //classic inline callback function
 Hooks.once('init', async function () {
@@ -219,22 +225,27 @@ Hooks.on('createActor', async function (actor, options, userID) {
   if (userID != game.user.id) { return;}
 ```
 
-## Removing a hook
-Sometimes it can be usefull (and not only good practice) to unregister a hook.
-**⚠** As a matter of fact, the 'Hooks._hooks' object keeps a reference to every function instances you registered it with, thus preventing any [**garbage collection**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).<br/>
+## Removing a hook callback
+Sometimes it can be usefull (and not only good practice) to unregister a hook callback.
+**⚠** As a matter of fact, the 'Hooks._hooks' object keeps a reference to every function instances you registered it with, thus preventing any [**garbage collection**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).
+
+
 ie : If you've declared a hook in an Application instance, **closing said application will not free up the memory** for there is still a reference to it somewhere in the Hooks._hooks (and the app instance will still respond to it's calls after being closed).
 Hence the need for **proper hook disposal** :  
+
 ### removing by index
 It's as easy as `Hooks.off('updateActor', myHookIndex);` but it obviously **requires having stored the hookIndex** on registration.
-One could imagine storing pairs of {hookName, hookIndex} in order to later unregister multiple hooks in a row.<br/>
+One could imagine storing pairs of {hookName, hookIndex} in order to later unregister multiple hooks in a row.
 
 ### removing by function reference
 This way might seem easier (and cleaner, codewise), but in some instances, it can prove challenging. Basic syntax, using previous example would be
 `Hooks.off('updateActor', this.onUpdateActor);`.
 But, remember how we declared said hook [earlier](#registering-a-hook) using a `.bind(this)` ?
-Well this is going to make things harder.<br/>
+Well this is going to make things harder.
+
 In this instance, `Hooks.off('updateActor', this.onUpdateActor);` will fail to remove the hook, as well as `Hooks.off('updateActor', this.onUpdateActor.bind(this));`.
-A solution to this, *courtesy of @Calego#0914* is to declare the callback as an arrow function like so :<br/>
+A solution to this, *courtesy of @Calego#0914* is to declare the callback as an arrow function like so:
+
 ```javascript
   onUpdateActor = (actor, data, options, userId) => {
     if ( actor.id !== this.diceThrow.actor.id ) { return ; }
@@ -273,7 +284,7 @@ Using an arrow declaration implies a 'this' being in a broader context than just
 }
 ```
 
-# Calling : When there's no hook to hold on to
+# Calling: When there's no hook to hold on to
 At some point, you might want to create your own calls, be it to enrich the API your module provides or just to facilitate your own coding implementation.
 As and example, I'll leave you with a convenient snippet of my own that adds a callAll() when the user changes it's rollMode using the dropDown list from the chatLog side panel : 
 ```javascript
