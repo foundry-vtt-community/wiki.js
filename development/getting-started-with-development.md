@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-06-17T16:35:53.699Z
+date: 2021-08-13T13:18:42.652Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -17,16 +17,17 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > None of the code within this document is guaranteed to work and should be tested before used in a world that you care about.
 {.is-warning}
 
-> This document is up to date as of 0.7.9
+> This document is up to date as of 0.8.8
 {.is-info}
 
 # FAQs
 
 ## Is there a list of hooks?
+*Main article: [Hooks Listening & Calling](/en/development/guides/Hooks_Listening_Calling)*
 
 [There is some official documentation about hooks as of 0.8.](https://foundryvtt.com/api/hookEvents.html)
 
-[There is also a community maintained hook typescript definition and documentation file.](https://github.com/League-of-Foundry-Developers/foundry-vtt-types/blob/foundry-0.7.9/foundry/hooks.d.ts) But there's an easier way to discover what hook you can use for a specific piece of functionality:
+[There is also a community maintained hook typescript definition and documentation file.](https://github.com/League-of-Foundry-Developers/foundry-vtt-types/blob/foundry-0.8.x/src/foundry/foundry.js/hooks.d.ts) But there's an easier way to discover what hook you can use for a specific piece of functionality:
 
 ```js
 CONFIG.debug.hooks = true;
@@ -47,6 +48,7 @@ someEntity.update({
 ```
 
 ## What does Foundry VTT use for templating?
+*Main article: [Template Basics](/en/development/guides/Tabs-and-Templates/Template-Basics)*
 
 The `.html` files in Foundry are actually [Handlebars](https://handlebarsjs.com/) files. In your own packages you can use either `.html` or `.hbs`.
 
@@ -90,6 +92,8 @@ To pull this off first you have to find where the method or function is in the g
 ```
 
 ## How do I get started with sockets?
+
+The easiest way to use Sockets in a module is via [Socketlib](https://github.com/manuelVo/foundryvtt-socketlib). This library provides a useful abstraction layer on top of the core socket implementation.
 
 > [Stub](https://github.com/VanceCole/macros/blob/master/sockets.js)
 
@@ -182,20 +186,14 @@ In this example, the manifest at `modules/my-module-name/dist/module.json` will 
 
 There's basically three options for modules for how to store data: Flags, Settings, and Files.
 
-# Hello World Module Walkthrough 
+# Module Development Tutorial
+
+If you'd like a tutorial that walks through each step one at a time sequentially, this community made tutorial touches on a lot of the basics:
+
+> ### [Foundry VTT Module Making for Beginners](https://hackmd.io/@akrigline/ByHFgUZ6u)
+> This covers everything from "I have no files" to "I have a module which interacts with Flags, Settings, FormApplication, CSS, Localization, Hooks, and more." 
 
 
-> ### [Stub](https://www.reddit.com/r/restofthefuckingowl/), should be its own guide article.
-> https://foundryvtt.com/article/module-development/
-> 1. Create your directory
-> 1.a Symlink from a /dist directory
-> 2. Common gotchyas with manifest.json and file structure
-> 3. Include a script file
-> 6. Include localization
-> 4. Include a template
-> 5. Include CSS
-> 6. ???
-> 7. Profit
 
 
 # Appendix 1: Fun Javascript Terminology
