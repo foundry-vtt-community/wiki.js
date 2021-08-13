@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T12:24:15.578Z
+date: 2021-08-13T12:41:18.386Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -210,7 +210,7 @@ Weirdly enough, I once thought I could declare `Hooks.on('renderChatLog', chat.a
 <br/>
 
 ### ⚠ the issue with having multiple clients.
-Some game events triggered by a user, can generate a hook call for all connected clients. Depending on what you use it for, that can be an unwanted behavior. Hence the need for some checks in your hooks.
+Some game events triggered by a user, can generate a hook call for all connected clients. Depending on what you use it for, that can be an unwanted behavior. **Hence the need for some checks in your hooks.**
 A classic example of this, is the use of the 'actorCreate' hook to populate a list of default items (that's prior 0.8.x and the advent of the #_preCreate() 👍 ).
 ```javascript
 Hooks.on('createActor', async function (actor, options, userID) {
