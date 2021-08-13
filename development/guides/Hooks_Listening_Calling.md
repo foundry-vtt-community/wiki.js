@@ -2,35 +2,38 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T11:35:11.211Z
+date: 2021-08-13T11:39:28.992Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
 ---
 
-The Foundry API provides it's own hooking system for us to take advantage of.<br/>
-Most of the time, it's used to piggyback on a variety of runtime events, ranging from a simple `'hoverToken'` (the mouse entering/exiting a token area) to **any Document update** sent to the database, through **every rendering of any Application**.<br/>
+The Foundry API provides it's own hooking system for us to take advantage of.
+Most of the time, it's used to piggyback on a variety of runtime events, ranging from a simple `'hoverToken'` (the mouse entering/exiting a token area) to **any Document update** sent to the database, through **every rendering of any Application**.
 But, like anything Foundry, it can be daunting at first, and there's definitely more than meets the eye.<br/>
 
 If you don't care about the specifics, you can skip to the good part : [registering a hook](#answering-the-call--how-to-register-and-unregister-a-hook-).
 
 # The Hooks class
 Although the Foundry API documentation mentions a constructor to get new instances of the [Hooks](https://foundryvtt.com/api/Hooks.html) class, it's only used as a 'global constant', providing **a set of static methods** (and some private attributes), hence the use of a capital 'H' in the syntax `Hooks.once('init', ...` that most of us declared at some point.
-
 Some Foundry 'events' use a `Hooks.call()` or a `Hooks.callAll()`, with a hard-coded or dynamic hookName as well as a various number of arguments.<br/>
 ie :
 ```javascript
 Hooks.callAll("ready");
+//called at the beginning of the initialize sequence of a Game
 ``` 
-called at the beginning of the initialize sequence of a Game,<br/>
 ```javascript
 Hooks.call("dropCanvasData", this, data);
+//when anything is dragDropped onto the canvas
+//('this' being the canvas instance) 
 ``` 
-when anything is dragDropped onto the canvas ('this' being the canvas instance) 
 ```javascript
 Hooks.callAll(`update${doc.documentName}`, doc, change, options, userId);
+//that will trigger for any document type,
+//giving us a wide range of hookNames to deal with like
+//'updateActor', 'updateMacro', 'updateChatMessage'...
 ``` 
-that will trigger for any document type, giving us a wide range of hookNames to deal with like 'updateActor', 'updateMacro', 'updateChatMessage'...<br/>
+<br/>
 At which point the Hooks class will check if any hook has been registered with that name and, for each one, will execute it's accompanying function. If you did not register a specific hook all this does is just screaming into the void.
 
 ### .on or .once :
