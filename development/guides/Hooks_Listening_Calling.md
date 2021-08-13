@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T11:39:28.992Z
+date: 2021-08-13T11:58:16.974Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -16,8 +16,7 @@ If you don't care about the specifics, you can skip to the good part : [register
 
 # The Hooks class
 Although the Foundry API documentation mentions a constructor to get new instances of the [Hooks](https://foundryvtt.com/api/Hooks.html) class, it's only used as a 'global constant', providing **a set of static methods** (and some private attributes), hence the use of a capital 'H' in the syntax `Hooks.once('init', ...` that most of us declared at some point.
-Some Foundry 'events' use a `Hooks.call()` or a `Hooks.callAll()`, with a hard-coded or dynamic hookName as well as a various number of arguments.<br/>
-ie :
+Some Foundry 'events' use a `Hooks.call()` or a `Hooks.callAll()`, with a hard-coded or dynamic hookName as well as a various number of arguments, ie :
 ```javascript
 Hooks.callAll("ready");
 //called at the beginning of the initialize sequence of a Game
@@ -33,34 +32,35 @@ Hooks.callAll(`update${doc.documentName}`, doc, change, options, userId);
 //giving us a wide range of hookNames to deal with like
 //'updateActor', 'updateMacro', 'updateChatMessage'...
 ``` 
-<br/>
 At which point the Hooks class will check if any hook has been registered with that name and, for each one, will execute it's accompanying function. If you did not register a specific hook all this does is just screaming into the void.
+<br/>
 
 ### .on or .once :
 In order to receive the call, and piggyback on the triggering event, you must have registered a hook with a matching name and the callback function to be executed.
-Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in Hooks._hooks for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.<br/>
+Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in Hooks._hooks for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.
 ⓘ It is worth noting that the hook registering function **returns the index of the newly created hook**, that can be used as an argument for the unregistering process.<br/>
 ![Hooks._hooks](https://drive.google.com/uc?export=view&id=1kbuBCf2z0hC-pxeIscxrkg_BV9qDg6kB)
-<br/>
 Logging the hook container shows all the registered hooks along with their array of callback functions. Since 'init' and 'ready' were already called (and registered for a one time only) they now display as empty arrays.
+<br/>
 
 ### .call or .callAll or more...
 Not all calls are created equal, and it can impact the extent of what you can do when answering them.
-Hooks.callAll() will execute All the callback functions that were registered for that event, regardless of what they're actually doing. ie :<br/>
+`Hooks.callAll()` will execute All the callback functions that were registered for that event, regardless of what they're actually doing. ie :
+
 ```javascript
 Hooks.on("init", async function () {
 //obviously triggered by a Hooks.callAll() that's gonna call every module/system that registered 'init', no matter what
 });
 ``` 
-Hooks.call() will execute all the callback functions until the end of it's array or if any one of the callback returns false.
+`Hooks.call()` will execute all the callback functions until the end of it's array or if any one of the callback returns false.
 In the later case, one usually returns false to signify that the hook has been dealt with and no further calls are needed.
 ```javascript
 Hooks.on("renderCompendium", (compendiumApp, html, appData) => {
 //TODO : add real world, working example
 });
 ``` 
-But there's one last relevant case regarding Hooks.call(). Since the call waits for a returned boolean, in order to decide whether it's worth calling the rest of the callback stack, some Foundry events use that fact to allow the callback the power to decide if the calling event should proceed with it's natural conclusion.<br/>
-ie : returning false when answering a Hooks.call("dropCanvasData") will prevent the placeableObject to be created on the canvas.
+But there's one last relevant case regarding `Hooks.call()`. Since the call waits for a returned boolean, in order to decide whether it's worth calling the rest of the callback stack, some Foundry events use that fact to grant the callback the power to decide if the calling event should proceed with it's natural conclusion.
+ie : returning false when answering a Hooks.call("dropCanvasData") will **prevent the placeableObject to be created on the canvas.**
 ```javascript
   //if there's a canvas init, register a permanent protection against some 'types'
   Hooks.once('canvasInit', (canvas) => {
@@ -72,15 +72,15 @@ ie : returning false when answering a Hooks.call("dropCanvasData") will prevent 
     });
   });
 ``` 
-Unfortunately, you cannot know, without searching in foundry.js, if a call is interruptible or not (thus return false sometimes being meaningless).
+Unfortunately, you cannot know, without searching in foundry.js, if a call is interruptible or not (thus returning false being sometimes meaningless).
 
 # Where there's a hook, there's a way (Knowing what to hook on to)
 Knowing if a hook even exists and it's arguments could be painfull, but Foundry conveniently provides a Boolean that can be toggled for that : 
+This can be typed directly in the console or in your `Hooks.on('init', ...)`, for instance.
 ```javascript
 CONFIG.debug.hooks = true;
 ``` 
-This can be typed directly in the console or in your `Hooks.on('init', ...)`, for instance.<br/>
-An **even more convenient way** is having a 'script' macro to toggle it on/off _(from @Eunomiac#8172, on the League's discord server)_ : 
+An **even more convenient way** is having a 'script' macro to toggle it on/off *(from @Eunomiac#8172, on the League's discord server)* : 
 ```javascript
 CONFIG.debug.hooks = !CONFIG.debug.hooks;
 if (CONFIG.debug.hooks)
@@ -88,15 +88,15 @@ if (CONFIG.debug.hooks)
 else
     console.log("HOOK LISTENING DISABLED.");
 ``` 
-From there, it's pretty straight forward to just _'do an action in game'_ and see if any hook is called, how many arguments it has and their nature/content.<br/>
+From there, it's pretty straight forward to just _'do an action in game'_ and see if any hook is called, how many arguments it has and their nature/content.
 ![debug hooks](https://drive.google.com/uc?export=view&id=1FEDnrXtThbxhDVghh0NGyzGw9wsMyxWI)
-<br/>
+
 We can see that, in accordance with [the example above](#the-hooks-class), we do indeed have 
 * a doc, here a ChatMessage instance,
 * an object containing what has changed (what was updated),
 * the options passed to the update call, and
-* an Id, that's in this case the user that triggered the update.
-
+* an Id that's, in this case, the user that triggered the update.
+<br/>
 ### Raw list of hooks as of 0.8.8
 <details>
   <summary>click me</summary>
@@ -178,7 +178,7 @@ Hooks.call(`get${cls.name}SoundContext`, html, entryOptions)
 
 # Answering the call : how to register (and unregister) a hook : 
 ## Registering a hook
-It's JavaScript, so there are many ways to implement your hook register. ie inline, inline with an arrow function, by reference, with or without arguments, with a bind(this)...<br/>
+It's JavaScript, so there are many ways to implement your hook register. ie inline, inline with an arrow function, by reference, with or without arguments, with a bind(this)...
 ```javascript
 //classic inline callback function
 Hooks.once('init', async function () {
@@ -203,13 +203,14 @@ onUpdateActor(actor, data, options, userId) {
 ```
 
 ### Where should I declare my hook ?
-Most general purpose hooks would usually be in your main module file(though I would advise for some restraint on the inline declarations, but that's besides the point), and more specific ones in the classes that need them.<br/>
-However some events are dependent on other (ie a dragDrop on the canvas will only happen after the canvas own init as in [the example above](#on-or-once-)), hence often declaring a Hooks.on inside the callback for another hook.<br/>
-Weirdly enough, I once thought I could declare `Hooks.on('renderChatLog', chat.addChatListeners);` inside the 'ready' hook. Well tuns out it doesn't work and has to be declared on the same level as said 'ready' hook.<br/>
+Most general purpose hooks would usually be in your main module file(though I would advise for some restraint on the inline declarations, but that's besides the point), and more specific ones in the classes that need them.
+However some events are dependent on other (ie a dragDrop on the canvas will only happen after the canvas own init as in [the example above](#on-or-once-)), hence often declaring a Hooks.on inside the callback for another hook.
+Weirdly enough, I once thought I could declare `Hooks.on('renderChatLog', chat.addChatListeners);` inside the 'ready' hook. Well tuns out it doesn't work and has to be declared on the same level as said 'ready' hook.
+<br/>
 
 ### ⚠ the issue with having multiple clients.
-Some game events triggered by a user, can generate a hook call for all connected clients. Depending on what you use it for, that can be an unwanted behavior. Hence the need for some checks in your hooks.<br/>
-A classic example of this, is the use of the 'actorCreate' hook to populate a list of default items (that's prior 0.8.x and the advent of the #_preCreate() 👍 ).<br/>
+Some game events triggered by a user, can generate a hook call for all connected clients. Depending on what you use it for, that can be an unwanted behavior. Hence the need for some checks in your hooks.
+A classic example of this, is the use of the 'actorCreate' hook to populate a list of default items (that's prior 0.8.x and the advent of the #_preCreate() 👍 ).
 ```javascript
 Hooks.on('createActor', async function (actor, options, userID) {
   //check current user is the one that triggered the création
@@ -218,28 +219,29 @@ Hooks.on('createActor', async function (actor, options, userID) {
 ```
 
 ## Removing a hook
-Sometimes it can be usefull (and not only good practice) to unregister a hook.<br/>
+Sometimes it can be usefull (and not only good practice) to unregister a hook.
 ⚠ As a matter of fact, the 'Hooks._hooks' object keeps a reference to every function instances you registered it with, thus preventing any [garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).<br/>
-ie : If you've declared a hook in an Application instance, **closing said application will not free up the memory** for there is still a reference to it somewhere in the Hooks._hooks (and the app instance will still respond to it's calls after being closed).<br/>
+ie : If you've declared a hook in an Application instance, **closing said application will not free up the memory** for there is still a reference to it somewhere in the Hooks._hooks (and the app instance will still respond to it's calls after being closed).
 Hence the need for **proper hook disposal** :  
 ### removing by index
-It's as easy as `Hooks.off('updateActor', myHookIndex);` but it obviously requires having stored the hookIndex on registration.<br/>
+It's as easy as `Hooks.off('updateActor', myHookIndex);` but it obviously requires having stored the hookIndex on registration.
 One could imagine storing pairs of {hookName, hookIndex} in order to later unregister multiple hooks in a row.<br/>
 
 ### removing by function
-This way might seem easier (and cleaner, codewise), but in some instances, it can prove challenging. Basic syntax, using previous example would be `Hooks.off('updateActor', this.onUpdateActor);`.<br/>
-But, remember how we declared said hook [earlier](#registering-a-hook) using a bind(this) ? Well this is going to make things harder.<br/>
+This way might seem easier (and cleaner, codewise), but in some instances, it can prove challenging. Basic syntax, using previous example would be `Hooks.off('updateActor', this.onUpdateActor);`.
+But, remember how we declared said hook [earlier](#registering-a-hook) using a bind(this) ?
+Well this is going to make things harder.<br/>
 In this instance, `Hooks.off('updateActor', this.onUpdateActor);` will fail to remove the hook, as well as `Hooks.off('updateActor', this.onUpdateActor.bind(this));`.<br/>
-A solution to this, courtesy of @Calego is to declare the callback as an arrow function like so :<br/>
+A solution to this, *courtesy of @Calego* is to declare the callback as an arrow function like so :<br/>
 ```javascript
   onUpdateActor = (actor, data, options, userId) => {
     if ( actor.id !== this.diceThrow.actor.id ) { return ; }
     //...
   }
 ```
-Using the arrow declaration implies a 'this' being in a broader context than just the function itself, in that case, our class instance. This allows for a cleaner declaration : 
+Using an arrow declaration implies a 'this' being in a broader context than just the function itself, in that case, our class instance. This allows for a cleaner declaration : 
 ```javascript
- export default class DiceDialogue extends Application {
+ export default class DiceDialog extends Application {
   
   /** @override */
   constructor(diceThrow, options) {
@@ -270,7 +272,7 @@ Using the arrow declaration implies a 'this' being in a broader context than jus
 ```
 
 # Calling : When there's no hook to hold on to
-At some point, you might want to create your own calls, be it to enrich the API your module provides or just to facilitate your own coding implementation.<br/>
+At some point, you might want to create your own calls, be it to enrich the API your module provides or just to facilitate your own coding implementation.
 As and example, I'll leave you with a convenient snippet of my own that adds a callAll() when the user changes it's rollMode using the dropDown list from the chatLog side panel : 
 ```javascript
 Hooks.once('ready', async function () {
