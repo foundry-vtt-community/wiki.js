@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T15:36:37.660Z
+date: 2021-08-13T15:38:27.255Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -119,7 +119,7 @@ We can see that, in accordance with [the example above](#the-hooks-class), we do
 {.is-info}
 
 <details>
-  <summary>Raw list as of 0.8.8</summary>
+  <summary>Spoiler: Raw list as of 0.8.8</summary>
   
 Hooks.callAll() 
 ```javascript
