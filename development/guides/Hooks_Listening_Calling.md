@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T13:36:15.861Z
+date: 2021-08-13T15:36:37.660Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -114,12 +114,13 @@ We can see that, in accordance with [the example above](#the-hooks-class), we do
 * the id of the user that triggered the update
 
 
+### List of hooks
+> The Foundry VTT API documentation provides a [List of hookEvents](https://foundryvtt.com/api/hookEvents.html), as the following list lacks context and might not stand the passage of future versions.
+{.is-info}
 
-### Raw list of hooks as of 0.8.8
-//todo : add some context
 <details>
-  <summary>click me</summary>
-
+  <summary>Raw list as of 0.8.8</summary>
+  
 Hooks.callAll() 
 ```javascript
 Hooks.callAll("updateWorldTime", worldTime, dt)
@@ -298,7 +299,13 @@ Using an arrow declaration implies a 'this' being in a broader context than just
 
 # Calling: When there's no hook to hold on to
 At some point, you might want to create your own calls, be it to enrich the API your module provides or just to facilitate your own coding implementation.
-As and example, I'll leave you with a convenient snippet of my own that adds a callAll() when the user changes it's rollMode using the dropDown list from the chatLog side panel : 
+> The [Library Module](https://foundryvtt.wiki/en/development/library-modules) page, provides a good example of a 'Hooks.callAll' in a module to advertize it's readyness alongside a reference to it's own API.
+{.is-info}
+
+> It is worth mentionning at this point that hook calls are not sockets. Although some core events might give the impression that a single call happens for every client, hooks calls are local.
+{.is-warning}
+
+A more 'niche' use case, if you need a hook for some core event that doesn't provide feedback. The following example adds a callAll() when the user changes it's rollMode using the dropDown list from the chatLog side panel : 
 ```javascript
 Hooks.once('ready', async function () {
 
