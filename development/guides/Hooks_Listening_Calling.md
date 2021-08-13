@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T13:29:15.958Z
+date: 2021-08-13T13:36:15.861Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -39,7 +39,7 @@ Hooks.callAll(`update${doc.documentName}`, doc, change, options, userId);
 ``` 
 At which point the Hooks class will check if any hook has been registered with that name and, for each one, will execute it's accompanying function. If you did not register a specific hook all this does is just screaming into the void.
 
-### .on or .once :
+### .on or .once:
 In order to receive the call, and piggyback on the triggering event, you must have registered a hook with a matching name and the callback function to be executed.
 Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in `Hooks._hooks` for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.
 
@@ -51,22 +51,26 @@ Logging the hook container shows all the registered hooks along with their array
 
 ### .call or .callAll or more...
 Not all calls are created equal, and it can impact the extent of what you can do when answering them.
-`Hooks.callAll()` will execute All the callback functions that were registered for that event, regardless of what they're actually doing. ie :
+`Hooks.callAll()` will execute All the callback functions that were registered for that event, regardless of what they're actually doing.
 
 ```javascript
 Hooks.on("init", async function () {
 //obviously triggered by a Hooks.callAll() that's gonna call every module/system that registered 'init', no matter what
 });
 ``` 
-`Hooks.call()` will execute all the callback functions until the end of it's array or if any one of the callback returns false.
-In the later case, one usually returns false to signify that the hook has been dealt with and no further calls are needed.
+
+`Hooks.call()` will execute all the callback functions until the end of it's array or if any one of the callback returns false. In the later case, one usually returns false to signify that the hook has been dealt with and no further calls are needed.
+
 ```javascript
 Hooks.on("renderCompendium", (compendiumApp, html, appData) => {
-//TODO : add real world, working example
+//TODO: add real world, working example
 });
 ``` 
+
 But there's one last relevant case regarding `Hooks.call()`. Since the call waits for a returned boolean, in order to decide whether it's worth calling the rest of the callback stack, some Foundry events use that fact to grant the callback the power to decide if the calling event should proceed with it's natural conclusion.
-ie : returning false when answering a `Hooks.call("dropCanvasData")` will **prevent the placeableObject to be created on the canvas.**
+
+For example, returning `false` in a `Hooks.call("dropCanvasData")` callback will **prevent the placeableObject to be created on the canvas.**
+
 ```javascript
   //if there's a canvas init, register a permanent protection against some 'types'
   Hooks.once('canvasInit', (canvas) => {
@@ -83,9 +87,11 @@ Unfortunately, you cannot know, without searching in foundry.js, if a call is in
 # Where there's a hook, there's a way (Knowing what to hook in to)
 Knowing if a hook even exists and it's argument list could be painfull, but hopefully, Foundry conveniently provides a Boolean that can be toggled for that : 
 This can be typed directly in the console or in your `Hooks.on('init', ...)`, for instance.
+
 ```javascript
 CONFIG.debug.hooks = true;
 ``` 
+
 An **even more convenient way** is having a 'script' macro to toggle it on/off *(from @Eunomiac#8172, on the League's discord server)* : 
 ```javascript
 CONFIG.debug.hooks = !CONFIG.debug.hooks;
@@ -94,15 +100,21 @@ if (CONFIG.debug.hooks)
 else
     console.log("HOOK LISTENING DISABLED.");
 ``` 
+
+> Bonus Tip: Install [Developer Mode](https://www.foundryvtt-hub.com/package/_dev-mode/) and you can explore the hooks debug more easily.
+{.is-info}
+
 From there, it's pretty straight forward to just _'do an action in game'_ and see if any hook is called, how many arguments it has and their nature/content.
 ![debug hooks](https://drive.google.com/uc?export=view&id=1FEDnrXtThbxhDVghh0NGyzGw9wsMyxWI)
 
 We can see that, in accordance with [the example above](#the-hooks-class), we do indeed have 
-* a doc, here a ChatMessage instance,
-* an object containing what has changed (what was updated),
-* the options passed to the update call, and
-* an Id that's, in this case, the user that triggered the update.
-<br/>
+* a document, here a ChatMessage
+* an object containing what has changed (what was updated)
+* the options passed to the update call
+* the id of the user that triggered the update
+
+
+
 ### Raw list of hooks as of 0.8.8
 //todo : add some context
 <details>
@@ -217,7 +229,7 @@ Weirdly enough, I once thought I could declare `Hooks.on('renderChatLog', chat.a
 
 ### ⚠ the issue with having multiple clients.
 Some game events triggered by a user, can generate a hook call for all connected clients. Depending on what you use it for, that can be an unwanted behavior. **Hence the need for some checks in your hooks.**
-A classic example of this, is the use of the 'actorCreate' hook to populate a list of default items (that's prior 0.8.x and the advent of the #_preCreate() 👍 ).
+A classic example of this, is the use of the 'actorCreate' hook to populate a list of default items (that's prior 0.8.x and the advent of the `#_preCreate()` 👍 ).
 ```javascript
 Hooks.on('createActor', async function (actor, options, userID) {
   //check current user is the one that triggered the création
