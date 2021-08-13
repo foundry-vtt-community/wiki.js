@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T12:20:47.736Z
+date: 2021-08-13T12:21:29.583Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -266,7 +266,7 @@ Using an arrow declaration implies a 'this' being in a broader context than just
     Hooks.off('updateActor', this.onUpdateActor);
     Hooks.off('updateCoreRollMode', this.onUpdateCoreRollMode);
     Hooks.off('systemSettingChanged', this.onSystemSettingChanged);
-    this.diceThrow = null;
+    this.diceThrow = null; //remove circular reference
     
     return super.close(options);
   }
