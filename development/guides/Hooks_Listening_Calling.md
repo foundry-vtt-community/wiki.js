@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T15:38:27.255Z
+date: 2021-08-13T16:05:53.509Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -92,7 +92,7 @@ This can be typed directly in the console or in your `Hooks.on('init', ...)`, fo
 CONFIG.debug.hooks = true;
 ``` 
 
-An **even more convenient way** is having a 'script' macro to toggle it on/off *(from @Eunomiac#8172, on the League's discord server)* : 
+An **even more convenient way** is having a 'script' macro to toggle it on/off *(courtesy from @Eunomiac#8172, on the League's discord server)* : 
 ```javascript
 CONFIG.debug.hooks = !CONFIG.debug.hooks;
 if (CONFIG.debug.hooks)
