@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T12:21:29.583Z
+date: 2021-08-13T12:24:15.578Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -234,7 +234,7 @@ This way might seem easier (and cleaner, codewise), but in some instances, it ca
 But, remember how we declared said hook [earlier](#registering-a-hook) using a `.bind(this)` ?
 Well this is going to make things harder.<br/>
 In this instance, `Hooks.off('updateActor', this.onUpdateActor);` will fail to remove the hook, as well as `Hooks.off('updateActor', this.onUpdateActor.bind(this));`.
-A solution to this, *courtesy of @Calego* is to declare the callback as an arrow function like so :<br/>
+A solution to this, *courtesy of @Calego#0914* is to declare the callback as an arrow function like so :<br/>
 ```javascript
   onUpdateActor = (actor, data, options, userId) => {
     if ( actor.id !== this.diceThrow.actor.id ) { return ; }
