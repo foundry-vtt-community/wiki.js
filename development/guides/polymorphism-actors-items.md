@@ -2,7 +2,7 @@
 title: Using Polymorphism with Actors and Items in Foundry
 description: 
 published: false
-date: 2021-08-14T19:10:34.039Z
+date: 2021-08-14T19:12:43.530Z
 tags: development
 editor: markdown
 dateCreated: 2021-08-14T19:09:54.861Z
