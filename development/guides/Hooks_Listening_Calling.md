@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-13T16:05:53.509Z
+date: 2021-08-14T08:19:58.117Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -318,6 +318,6 @@ Hooks.once('ready', async function () {
     //replace the original onChange function (_setRollMode) with our own that actually provides a Hooks call
     const rollModeSetting = game.settings.settings.get('core.rollMode');
     rollModeSetting.onChange = onRollModeChange;
-    game.settings.settings.get('core.rollMode', rollModeSetting);
+    game.settings.settings.set('core.rollMode', rollModeSetting);
 });
 ``` 
