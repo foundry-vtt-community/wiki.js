@@ -2,7 +2,7 @@
 title: Using Vite to build for Foundry
 description: a guide~
 published: true
-date: 2021-08-17T06:55:11.373Z
+date: 2021-08-17T19:41:14.561Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
@@ -14,25 +14,25 @@ This article will walk you through an example of using Vite to bundle for Foundr
 
 # Why?
 
-Vite taps into the state-of-the-art Rollup ecosystem for production builds. In the Lancer system, we build about 215kb of typescript system code + 10mb of runtime `node_modules` into a 500kb final bundle, after code splitting and tree shaking, in 15s. 
+Vite taps into the state-of-the-art Rollup ecosystem for production builds. In the Lancer system, we build about 215kb of typescript code + 10mb of runtime `node_modules` into a 500kb final bundle, after code splitting and tree shaking, in 15s. 
 
 More interesting, though, is the vite dev server. It starts up instantly and sits in front of your foundry server, intercepting requests to your module or system. This allows it to not just immediately serve changed files, but in many cases, to *hot-reload* the corresponding modules without having to restart your foundry session or even closing the modal you're working on. 
 
-Caveats up front: this hot-reloading takes a small amount of work to enable for bog-standard ES modules. However, it is automatic for CSS and for many component frameworks (Svelte, for instance.)
+Caveats up front: this hot-reloading takes a small amount of work to enable for bog-standard ES modules. However, it is automatic for CSS and for many component frameworks (Svelte, for instance).
 
 # How?
 
 ### Production Builds
 
-After a quick `npm install --save-dev vite`, the core of the configuration file will be `vite.config.js`. Vite is also fully typed in Typescript, so you can use its config type in a `vite.config.ts` if you like — that's what we'll demonstrate here.
+After a quick `npm install --save-dev vite`, the core configuration file is `vite.config.js`. Vite is also fully typed in Typescript, so you can use its config type in a `vite.config.ts` if you like — that's what we'll demonstrate here.
 
-The core of a foundry vite config is as follows:
+Start with something like this.
 
 `vite.config.ts`:
 ```typescript
 import type { UserConfig } from 'vite';
 const config: UserConfig = {
-  public: 'public',
+  publicDir: 'public',
   base: '/systems/lancer/',
   server: {
     port: 30001,
@@ -61,11 +61,11 @@ const config: UserConfig = {
 export default config;
 ```
 
-This is what sets up the vite dev server as a proxy on top of foundry. Read `base` as: mount all source files under `/systems/lancer/`, and read the `server.proxy` section as: proxy all urls that do not begin with `/systems/lancer` to foundry, and the `/socket.io` url to foundry's websocket server. 
+The `server` section sets up the vite dev server as a proxy on top of foundry. Read `base` as: mount all source files under `/systems/lancer/`, and read the `server.proxy` section as: proxy all urls that do not begin with `/systems/lancer` to foundry, and the `/socket.io` url to foundry's websocket server. 
 
-It also sets up the build under "library mode" defaults, making sure to compile to the modern esmodule standard. Vite will compile typescript/coffeescript/scss/sass/etc automatically, as long as the corresponding compiler is installed. `build.lib.entry` is the initial source file of your application, the one that eventually depends on everything your application needs.
+The `build` section sets up the build under "library mode" defaults, making sure to compile to the modern esmodule standard. `build.lib.entry` is the initial source file of your application, the one that eventually `import`s everything your application needs.
 
-This includes your style files. Vite assumes your build's entrypoint will eventually depend on everything it needs to process. If you haven't been coding under this assumption, the easiest way to satisfy this is to add a line to your entrypoint like 
+This needs to include your style files. Vite assumes your build's entrypoint will eventually depend on everything it needs to process. If you haven't been coding under this assumption, the easiest way to satisfy this is to add a line to your entrypoint like 
 
 ```typescript
 import './lancer.scss';
@@ -75,11 +75,41 @@ You will also probably need to include certain files in the build as-is, without
 
 What should this `system.json` point to? When built, this vite build will produce the entrypoints `dist/index.js` and `dist/style.css`, and so your `system.json` can refer to those files.
 
-This is sufficient to use vite as a bundler: `npx vite build` will build your module/system into `dist`. A couple more steps are necessary to use the vite development server.
+This is sufficient to use vite as a bundler: `npx vite build` will build your module/system into `dist`. 
+
+```
+$ npx vite build
+vite v2.5.0 building for production...
+✓ 963 modules transformed.
+rendering chunks (9)...
+
+../dist/lancer.es.js     0.04 KiB / brotli: 0.05 KiB
+../dist/lancer.es.js.map 0.09 KiB
+../dist/aws-exports.js   0.92 KiB / brotli: 0.42 KiB
+../dist/aws-exports.js.map 2.32 KiB
+../dist/index.js         1.69 KiB / brotli: 0.70 KiB
+../dist/index.js.map     5.04 KiB
+../dist/marked.js        46.42 KiB / brotli: 12.97 KiB
+../dist/marked.js.map    137.94 KiB
+../dist/index4.js        52.08 KiB / brotli: 14.08 KiB
+../dist/index4.js.map    238.45 KiB
+../dist/Credentials.js   138.40 KiB / brotli: 29.90 KiB
+../dist/Credentials.js.map 968.75 KiB
+../dist/style.css        36.59 KiB / brotli: 7.38 KiB
+../dist/index2.js        144.89 KiB / brotli: 34.89 KiB
+../dist/index2.js.map    602.29 KiB
+../dist/index3.js        179.36 KiB / brotli: 33.85 KiB
+../dist/index3.js.map    1536.81 KiB
+../dist/lancer.js        1030.44 KiB / brotli: skipped (large chunk)
+../dist/lancer.js.map    1777.34 KiB
+
+```
 
 ### Development Server
 
-The dev server assumes that `index.html` is your application's entrypoint (it doesn't read `build.lib.entry`). Since we know this file will be mounted at `/systems/lancer/index.html`, we create a simple file that redirects to `/` — i.e., the url that will be proxied to `/` for foundry, the login screen.
+A couple more steps are necessary to use the vite development server.
+
+The dev server assumes that `index.html` is an _application_'s entrypoint (`build.lib.entry` being the _library_'s entrypoint). Since we know this file will be mounted at `/systems/lancer/index.html`, we create a simple file that redirects to `/` — i.e., foundry's login screen.
 
 `index.html`:
 ```html
@@ -100,7 +130,7 @@ The dev server assumes that `index.html` is your application's entrypoint (it do
 
 From here, we set up a dev environment within foundry as normal. 
 
-Just a couple more steps: since we've told foundry, via `system.json`, to look for `/systems/lancer/index.js` and `/systems/lancer/style.css`, we should make those files.
+Since we've told foundry, via `system.json`, to look for `/systems/lancer/index.js` and `/systems/lancer/style.css`, we should make those files.
 
 `index.js`:
 ```javascript
@@ -109,7 +139,7 @@ Just a couple more steps: since we've told foundry, via `system.json`, to look f
 // in dev, foundry loads index.js, this file, which loads lancer.ts
 
 window.global = window; // some of your dependencies might need this
-import * as LANCER from './lancer.ts';
+import './lancer.ts';
 ```
 
 If you've imported your \*css from your code files as suggested above, this will be sufficient, as the vite dev server will also see this import and load the corresponding css. In this case the only reason to also make a `style.css` is to silence the console error during development.
@@ -127,17 +157,28 @@ If you've imported your \*css from your code files as suggested above, this will
 
 Now you can start foundry, then start `npx vite serve`, to launch the vite dev server.
 
+```
+$ npx vite serve
+
+  vite v2.5.0 dev server running at:
+
+  > Local: http://localhost:30001/systems/lancer/
+  > Network: use `--host` to expose
+
+  ready in 205ms.
+```
+
 ### Hot Module Replacement
 
 On the average project, the vite server will only hot-reload css by default. If you happen to be using a component library, like Svelte or Vue, their plugins do come with hot-reloading support; even preserving state across hot-reloads.
 
-However, mostly we use plain javascript modules, in foundry development. To hot-reload an ES module, you need to transform it into code that looks like this:
+However, mostly we use plain modules in foundry development. To hot-reload an ES module, you need to transform it into code that looks like this:
 
 ```javascript
 let _foo = ...;
 export { _foo as foo };
 
-// this exact if statement guarantees this will be tree-shaken out in prod
+// this exact if statement guarantees vite will tree-shake this out in prod
 if (import.meta.hot) {
    import.meta.hot.accept(newModule => {
      _foo = newModule.foo;
@@ -148,6 +189,12 @@ if (import.meta.hot) {
 This requires that all your exports are `export let`s, rather than `export const`s. If this is acceptable, the hot-reloading code can be committed to your repository, as it will be tree-shaken out and not appear in production builds. If you want your modules to `export const`, you can still do this transformation just while you're working on the code, of course.
 
 See Vite's [HMR api](https://vitejs.dev/guide/api-hmr) for more details.
+
+### Plugins
+
+Vite comes with support for Typescript, JSX, PostCSS, CSS Modules, and WASM out of the box. It also supports other css preprocessors without requiring a specific plugin, but you have to `npm install --save-dev sass` or `less` or `stylus` as you require. 
+
+For more complicated needs, there are many high quality plugins available, like `@vitejs/plugin-vue` and `@sveltejs/vite-plugin-svelte`. 
 
 # Appendices
 
@@ -183,6 +230,8 @@ To fix this, add the module to `optimizeDeps.exclude`. However, if that module h
 If you're using `vite-plugin-svelte` from within an ES module, you should know that it expects to import a commonjs file. To handle that, you will need to rename that file to `.cjs` and explicitly name it as the config file for the plugin.
 
 ### Full `vite.config.ts`
+
+With all of the caveats above accounted for, the Lancer system's config file looks like this:
 
 `vite.config.ts`:
 ```typescript
