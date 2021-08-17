@@ -2,7 +2,7 @@
 title: Using Vite to build for Foundry
 description: everything you ever wanted from hot module replacement but were afraid to ask
 published: true
-date: 2021-08-17T19:54:13.152Z
+date: 2021-08-17T19:59:28.057Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
@@ -83,26 +83,25 @@ vite v2.5.0 building for production...
 ✓ 963 modules transformed.
 rendering chunks (9)...
 
-../dist/lancer.es.js     0.04 KiB / brotli: 0.05 KiB
-../dist/lancer.es.js.map 0.09 KiB
-../dist/aws-exports.js   0.92 KiB / brotli: 0.42 KiB
-../dist/aws-exports.js.map 2.32 KiB
-../dist/index.js         1.69 KiB / brotli: 0.70 KiB
-../dist/index.js.map     5.04 KiB
-../dist/marked.js        46.42 KiB / brotli: 12.97 KiB
-../dist/marked.js.map    137.94 KiB
-../dist/index4.js        52.08 KiB / brotli: 14.08 KiB
-../dist/index4.js.map    238.45 KiB
-../dist/Credentials.js   138.40 KiB / brotli: 29.90 KiB
-../dist/Credentials.js.map 968.75 KiB
-../dist/style.css        36.59 KiB / brotli: 7.38 KiB
-../dist/index2.js        144.89 KiB / brotli: 34.89 KiB
-../dist/index2.js.map    602.29 KiB
-../dist/index3.js        179.36 KiB / brotli: 33.85 KiB
-../dist/index3.js.map    1536.81 KiB
-../dist/lancer.js        1030.44 KiB / brotli: skipped (large chunk)
-../dist/lancer.js.map    1777.34 KiB
-
+dist/lancer.es.js     0.04 KiB / brotli: 0.05 KiB
+dist/lancer.es.js.map 0.09 KiB
+dist/aws-exports.js   0.92 KiB / brotli: 0.42 KiB
+dist/aws-exports.js.map 2.32 KiB
+dist/index.js         1.69 KiB / brotli: 0.70 KiB
+dist/index.js.map     5.04 KiB
+dist/marked.js        46.42 KiB / brotli: 12.97 KiB
+dist/marked.js.map    137.94 KiB
+dist/index4.js        52.08 KiB / brotli: 14.08 KiB
+dist/index4.js.map    238.45 KiB
+dist/Credentials.js   138.40 KiB / brotli: 29.90 KiB
+dist/Credentials.js.map 968.75 KiB
+dist/style.css        36.59 KiB / brotli: 7.38 KiB
+dist/index2.js        144.89 KiB / brotli: 34.89 KiB
+dist/index2.js.map    602.29 KiB
+dist/index3.js        179.36 KiB / brotli: 33.85 KiB
+dist/index3.js.map    1536.81 KiB
+dist/lancer.js        1030.44 KiB / brotli: skipped (large chunk)
+dist/lancer.js.map    1777.34 KiB
 ```
 
 ### Development Server
