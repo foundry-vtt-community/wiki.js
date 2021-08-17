@@ -2,7 +2,7 @@
 title: Using Vite to build for Foundry
 description: a guide~
 published: true
-date: 2021-08-17T05:52:46.709Z
+date: 2021-08-17T05:56:54.428Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
@@ -26,6 +26,7 @@ After a quick `npm install --save-dev vite`, the core of the configuration file 
 
 The core of a foundry vite config is as follows:
 
+`vite.config.ts`:
 ```typescript
 import type { UserConfig } from 'vite';
 const config: UserConfig = {
@@ -76,7 +77,10 @@ This is sufficient to use vite as a bundler. A couple more steps are necessary t
 
 ---
 
+The dev server assumes that `index.html` is your application's entrypoint; it doesn't read `build.lib.entry` above. Since we know this file will be mounted at `/systems/lancer/index.html`, we create a simple file that redirects to `/` — i.e., the url that will be proxied to `/` for foundry, the login screen.
 
+`index.html`:
+```
 
 
 This is, then, the full `vite.config.ts` for our Lancer system.
