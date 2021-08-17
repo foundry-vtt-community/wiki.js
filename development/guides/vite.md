@@ -2,7 +2,7 @@
 title: Using Vite to build for Foundry
 description: everything you ever wanted from hot module replacement but were afraid to ask
 published: true
-date: 2021-08-17T20:03:22.378Z
+date: 2021-08-17T20:06:50.156Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
@@ -211,7 +211,7 @@ If you happen to be using `@aws-sdk`, there is a [bug](https://github.com/aws-am
   resolve: {
     alias: [{
       find: "./runtimeConfig",
-      replacement: ("./runtimeConfig.browser"),
+      replacement: "./runtimeConfig.browser",
     }]
   },
 ```
@@ -257,7 +257,7 @@ const config: UserConfig = {
   resolve: {
     alias: [{
       find: "./runtimeConfig",
-      replacement: ("./runtimeConfig.browser"), // thanks @aws-sdk
+      replacement: "./runtimeConfig.browser", // thanks @aws-sdk
     }]
   },
   optimizeDeps: {
