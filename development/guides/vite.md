@@ -1,8 +1,8 @@
 ---
 title: Using Vite to build for Foundry
-description: a guide~
+description: everything you ever wanted from hot module replacement and were afraid to ask
 published: true
-date: 2021-08-17T19:41:14.561Z
+date: 2021-08-17T19:45:38.173Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
