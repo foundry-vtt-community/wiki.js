@@ -1,8 +1,8 @@
 ---
 title: Using Vite to build for Foundry
-description: everything you ever wanted from hot module replacement and were afraid to ask
+description: everything you ever wanted from hot module replacement but were afraid to ask
 published: true
-date: 2021-08-17T19:45:38.173Z
+date: 2021-08-17T19:54:13.152Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
@@ -18,7 +18,7 @@ Vite taps into the state-of-the-art Rollup ecosystem for production builds. In t
 
 More interesting, though, is the vite dev server. It starts up instantly and sits in front of your foundry server, intercepting requests to your module or system. This allows it to not just immediately serve changed files, but in many cases, to *hot-reload* the corresponding modules without having to restart your foundry session or even closing the modal you're working on. 
 
-Caveats up front: this hot-reloading takes a small amount of work to enable for bog-standard ES modules. However, it is automatic for CSS and for many component frameworks (Svelte, for instance).
+Caveats up front: this hot-reloading takes a small amount of work to enable for bog-standard ES modules. However, it is automatic for CSS and for many component frameworks like Svelte.
 
 # How?
 
