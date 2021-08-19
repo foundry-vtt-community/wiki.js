@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-19T11:48:38.377Z
+date: 2021-08-19T11:50:03.052Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -64,7 +64,7 @@ Hooks.on("renderCompendium", (compendiumApp, html, appData) => {
 });
 ``` 
 
-But there's one last relevant case regarding `Hooks.call()`. Since the call waits for a returned boolean, in order to decide whether it's worth calling the rest of the callback stack, some Foundry events use that fact to grant the callback the power to decide if the calling event should proceed with it's natural conclusion.
+But there's **one last relevant case** regarding `Hooks.call()`. Since the call waits for a returned boolean, in order to decide whether it's worth calling the rest of the callback stack, some Foundry events use that fact to grant the callback the power to decide if the calling event should proceed with it's natural conclusion.
 
 For example, returning `false` in a `Hooks.call("dropCanvasData")` callback will **prevent the placeableObject to be created on the canvas.**
 
