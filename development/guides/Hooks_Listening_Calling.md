@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-14T08:23:58.317Z
+date: 2021-08-19T11:29:41.815Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -41,12 +41,9 @@ At which point the Hooks class will check if any hook has been registered with t
 
 ### .on or .once:
 In order to receive the call, and piggyback on the triggering event, you must have registered a hook with a matching name and the callback function to be executed.
-Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in `Hooks._hooks` for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.
+Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both cases the callback is stored in a private variable for later use, the former remaining callable until manually unregistered, and the later being removed with a `Hooks.off()` after it's first and only callback has been executed.
 
 **ⓘ** It is worth noting that the hook registering function **returns the index of the newly created hook**, that can be used as an argument for the unregistering process.
-
-![Hooks._hooks](https://drive.google.com/uc?export=view&id=1kbuBCf2z0hC-pxeIscxrkg_BV9qDg6kB)
-Logging the hook container shows all the registered hooks along with their array of callback functions. Since 'init' and 'ready' were already called (and registered for a one time only) they now display as empty arrays.
 
 
 ### .call or .callAll or more...
@@ -240,10 +237,10 @@ Hooks.on('createActor', async function (actor, options, userID) {
 
 ## Removing a hook callback
 Sometimes it can be usefull (and not only good practice) to unregister a hook callback.
-**⚠** As a matter of fact, the 'Hooks._hooks' object keeps a reference to every function instances you registered it with, thus preventing any [**garbage collection**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).
+> As a matter of fact, since the Hooks object keeps a reference to each instance of the callback function that was registered, it stands to reason that there cannot be any [**garbage collection**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).
+{.is-warning}
 
-
-ie : If you've declared a hook in an Application instance, **closing said application will not free up the memory** for there is still a reference to it somewhere in the Hooks._hooks (and the app instance will still respond to it's calls after being closed).
+ie : If you've declared a hook in an Application instance, **closing said application will not free up the memory** for there is still a reference to it somewhere in the Hooks object (and the app instance will still respond to it's calls after being closed).
 Hence the need for **proper hook disposal** :  
 
 ### removing by index
