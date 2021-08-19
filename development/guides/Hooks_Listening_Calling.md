@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-19T11:33:53.328Z
+date: 2021-08-19T11:39:44.235Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -17,7 +17,7 @@ The Foundry API provides it's own event system for developers to take advantage 
 Most of the time, it's used to piggyback on a variety of runtime events, ranging from a simple `'hoverToken'` (the mouse entering/exiting a token area) to **any Document update** sent to the database, through **every rendering of any Application**.
 But, like anything Foundry, it can be daunting at first, and there's definitely more than meets the eye.
 
-If you don't care about the specifics, you can skip to the good part: [registering a hook callback](#answering-the-call--how-to-register-and-unregister-a-hook-).
+If you don't care about the specifics, you can skip ahead to the good stuff: [registering a hook callback](#answering-the-call-how-to-register-and-unregister-a-hook-callback).
 
 # The Hooks class
 Although the Foundry API documentation mentions a constructor to get new instances of the [Hooks](https://foundryvtt.com/api/Hooks.html) class, it's only used as a 'global constant', providing **a set of static methods** (and some private attributes), hence the use of a capital 'H' in the syntax `Hooks.once('init', ...` that most of us declared at some point.
@@ -79,7 +79,7 @@ For example, returning `false` in a `Hooks.call("dropCanvasData")` callback will
     });
   });
 ``` 
-Unfortunately, you cannot know, without searching in foundry.js, if a call is interruptible or not (thus returning false being sometimes meaningless), oh, wait, you can, I compiled a [raw list just below](#raw-list-of-hooks-as-of-088) !
+Unfortunately, you cannot know, without searching in foundry.js, if a call is interruptible or not (thus returning false being sometimes meaningless).
 
 # Where there's a hook, there's a way (Knowing what to hook in to)
 Knowing if a hook even exists and it's argument list could be painfull, but hopefully, Foundry conveniently provides a Boolean that can be toggled for that : 
