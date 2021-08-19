@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-19T11:29:41.815Z
+date: 2021-08-19T11:33:53.328Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -237,7 +237,7 @@ Hooks.on('createActor', async function (actor, options, userID) {
 
 ## Removing a hook callback
 Sometimes it can be usefull (and not only good practice) to unregister a hook callback.
-> As a matter of fact, since the Hooks object keeps a reference to each instance of the callback function that was registered, it stands to reason that there cannot be any [**garbage collection**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).
+> As a matter of fact, since the Hooks object **keeps a reference** to each callback instance that was registered, it stands to reason that there cannot be any [**garbage collection**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management#references).
 {.is-warning}
 
 ie : If you've declared a hook in an Application instance, **closing said application will not free up the memory** for there is still a reference to it somewhere in the Hooks object (and the app instance will still respond to it's calls after being closed).
