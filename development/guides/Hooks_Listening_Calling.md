@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-19T11:39:44.235Z
+date: 2021-08-19T11:44:24.507Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -221,7 +221,7 @@ onUpdateActor(actor, data, options, userId) {
 
 ### Where should I declare my hook ?
 Most general purpose hooks would usually be in your main module file (though I would advise for some restraint on the inline declarations, but that's besides the point), and more specific ones in the classes that need them.
-However some events are dependent on other one (ie a dragDrop on the canvas will only happen after the canvas own init, as in [the example above](#on-or-once-)), hence often declaring a Hooks.on inside the callback for another hook.
+However some events are dependent on other one (ie a dragDrop on the canvas will only happen after the canvas own init, as in [the example above](#on-or-once)), hence often declaring a Hooks.on inside the callback for another hook.
 Weirdly enough, I once thought I could declare `Hooks.on('renderChatLog', chat.addChatListeners);` inside the 'ready' hook. Well tuns out it doesn't work and has to be declared on the same level as said 'ready' hook.
 <br/>
 
@@ -250,7 +250,7 @@ One could imagine storing pairs of {hookName, hookIndex} in order to later unreg
 ### removing by function reference
 This way might seem easier (and cleaner, codewise), but in some instances, it can prove challenging. Basic syntax, using previous example would be
 `Hooks.off('updateActor', this.onUpdateActor);`.
-But, remember how we declared said hook [earlier](#registering-a-hook) using a `.bind(this)` ?
+But, remember how we declared said hook [earlier](#registering-a-hook-callback) using a `.bind(this)` ?
 Well this is going to make things harder.
 
 In this instance, `Hooks.off('updateActor', this.onUpdateActor);` will fail to remove the hook, as well as `Hooks.off('updateActor', this.onUpdateActor.bind(this));`.
