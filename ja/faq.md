@@ -2,7 +2,7 @@
 title: ４．よくある質問
 description: よくある質問
 published: true
-date: 2021-07-16T16:36:52.704Z
+date: 2021-08-19T09:47:07.392Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T10:43:54.439Z
@@ -15,6 +15,8 @@ dateCreated: 2021-02-06T10:43:54.439Z
 　FVTTのライセンスはホスト（GM）が持っていれば、他の参加者は購入しなくてもセッションに参加できます。
  <br />
 ### Q.FVTTはどんな環境で使える？
+
+　以下を読まずに手っ取り早く確認した人は https://onsekobo-server.as.forge-vtt.com/ にアクセスし、ユーザ名のドロップダウンから好きなPL番号を選んで、パスワードを空で入ってください。ロードが最後まで完了したら遊べるという認識でOKです。
 　
  Foundry VTTにおける動作要件についてまとめています。
 
