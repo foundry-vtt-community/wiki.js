@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-19T11:44:24.507Z
+date: 2021-08-19T11:47:50.878Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -46,7 +46,7 @@ Hooks can be registered either with `Hooks.on()` or `Hooks.once()`. In both case
 **ⓘ** It is worth noting that the hook registering function **returns the index of the newly created hook**, that can be used as an argument for the unregistering process.
 
 
-### .call or .callAll or more...
+### .call or .callAll and more...
 Not all calls are created equal, and it can impact the extent of what you can do when answering them.
 `Hooks.callAll()` will execute All the callback functions that were registered for that event, regardless of what they're actually doing.
 
@@ -221,7 +221,7 @@ onUpdateActor(actor, data, options, userId) {
 
 ### Where should I declare my hook ?
 Most general purpose hooks would usually be in your main module file (though I would advise for some restraint on the inline declarations, but that's besides the point), and more specific ones in the classes that need them.
-However some events are dependent on other one (ie a dragDrop on the canvas will only happen after the canvas own init, as in [the example above](#on-or-once)), hence often declaring a Hooks.on inside the callback for another hook.
+However some events are dependent on other one (ie a dragDrop on the canvas will only happen after the canvas own init, as in [the example above](#call-callall-and-more)), hence often declaring a Hooks.on inside the callback for another hook.
 Weirdly enough, I once thought I could declare `Hooks.on('renderChatLog', chat.addChatListeners);` inside the 'ready' hook. Well tuns out it doesn't work and has to be declared on the same level as said 'ready' hook.
 <br/>
 
