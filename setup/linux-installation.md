@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-08-21T16:33:38.865Z
+date: 2021-08-21T18:18:05.647Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -237,7 +237,7 @@ At the end of this section you will have a functional installation of Foundry us
 <a id="C3" href="#C3">C3.</a>	Run the following commands, pasting the download url where you see `<download url>`. In most terminals, you can right click to paste the copied url.
 ```
 mkdir ~/foundry
-wget --output_document ~/foundry/foundryvtt.zip "<download url>"
+wget --output-document ~/foundry/foundryvtt.zip "<download url>"
 ```
 > Make sure to include the quote symbols before and after the `<download url>` or the file may not download properly. {.is-info}
 
