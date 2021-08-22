@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2021-08-22T21:45:15.057Z
+date: 2021-08-22T22:02:22.029Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -32,6 +32,7 @@ dateCreated: 2021-05-14T17:58:11.311Z
 ## Communities
 <i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/2rHs78h) – Unofficial module, system and content developers.
 <i class="fab fa-reddit"></i> [Reddit: /r/FoundryVTT subreddit](https://www.reddit.com/r/FoundryVTT/) – Independently-run community for Foundry troublshooting and sharing your Foundry creativity.
+<i class="fab fa-users"></i> [Foundry Hub](https://foundryvtt-hub.com/) - Partnered Foundry blog and forums for high quality articles and discussion.
 
 ### Regional Communities
 <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) – Unofficial Spanish community.
