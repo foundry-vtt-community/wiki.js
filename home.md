@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2021-08-22T21:37:36.162Z
+date: 2021-08-22T21:45:15.057Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -60,7 +60,7 @@ The **official** demo runs the **latest release** of FVTT and is available for a
 Link: https://demo.forge-vtt.com/
 Password: `forge`
 
-The Forge demo (FVTT **0.6.6**) is hosted by The Forge. It includes a tutorial for first time users and additional tweaks to the Foundry VTT experience for The Forge hosting platform.
+The Forge demo is hosted by The Forge. It includes a tutorial for first time users and additional tweaks to the Foundry VTT experience for The Forge hosting platform.
 
 ## Collaborative Modules
 Below are the Foundry VTT Community Wiki contributed modules. Anyone can share their content with the rest of the community via Pull request to be merged into a module update.
