@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2021-07-09T02:14:47.431Z
+date: 2021-08-22T21:37:36.162Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -23,7 +23,6 @@ dateCreated: 2021-05-14T17:58:11.311Z
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop website](http://foundryvtt.com)
 <i class="fab fa-discord"></i> [Discord](https://discordapp.com/invite/DDBZUDf)
 <i class="fab fa-twitter"></i> [Twitter](https://twitter.com/FoundryVTT)
-<i class="fab fa-reddit"></i> [Subreddit](https://www.reddit.com/r/FoundryVTT/)
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
@@ -32,8 +31,9 @@ dateCreated: 2021-05-14T17:58:11.311Z
 
 ## Communities
 <i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/2rHs78h) – Unofficial module, system and content developers.
+<i class="fab fa-reddit"></i> [Reddit: /r/FoundryVTT subreddit](https://www.reddit.com/r/FoundryVTT/) – Independently-run community for Foundry troublshooting and sharing your Foundry creativity.
 
-### Local Communities
+### Regional Communities
 <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) – Unofficial Spanish community.
 <i class="fab fa-discord"></i> [Discord: Foundry_ITA](https://discord.gg/hsRcTby) – Unofficial Italian community.
 <i class="fab fa-discord"></i> [Discord: オンセ工房日本支部(Foundry VTT)](https://discord.gg/vM4YM27) – Unofficial Japanese community.
