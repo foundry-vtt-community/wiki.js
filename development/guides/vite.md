@@ -2,7 +2,7 @@
 title: Using Vite to build for Foundry
 description: everything you ever wanted from hot module replacement but were afraid to ask
 published: true
-date: 2021-08-17T20:06:50.156Z
+date: 2021-08-23T04:04:19.007Z
 tags: development, javascript
 editor: markdown
 dateCreated: 2021-08-17T05:52:46.709Z
@@ -75,7 +75,7 @@ You will also probably need to include certain files in the build as-is, without
 
 What should this `system.json` point to? When built, this vite build will produce the entrypoints `dist/index.js` and `dist/style.css`, and so your `system.json` can refer to those files.
 
-This is sufficient to use vite as a bundler: `npx vite build` will build your module/system into `dist`. You may also wish at this point, if you haven't done so already, to link your system's folder within foundry to this `dist` folder, like `ln -s ~/.local/share/FoundryVTT/systems/lancer /home/sohum/versioned/foundryvtt-lancer/dist`.
+This is sufficient to use vite as a bundler: `npx vite build` will build your module/system into `dist`. You may also wish at this point, if you haven't done so already, to link your system's folder within foundry to this `dist` folder, like `ln -s ~/path/to/foundryvtt-lancer/dist ~/.local/share/FoundryVTT/Data/systems/lancer `.
 
 ```
 $ npx vite build
