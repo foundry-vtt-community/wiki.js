@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2021-08-24T13:28:39.247Z
+date: 2021-08-24T13:40:44.872Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -94,11 +94,12 @@ Hooks.on('renderJournalDirectory', (app, html, data) => {
 });
 ```
 
-By default, this will make all buttons in the header squish down as small as their content allows before wrapping, if you wish to avoid that behavior, add some CSS to `.actions-buttons buttons` which allows them a `flex-basis: 45%`.
+By default, this will make all buttons in the header squish down to hide their text before wrapping, if you wish to avoid that behavior, add some CSS to `.actions-buttons button` which forces their `min-width` to be `max-content`, for bonus compatibility with some systems, also add `white-space: nowrap`.
 
 ```css
-.actions-buttons buttons {
-  flex-basis: 45%;
+.actions-buttons button {
+    min-width: max-content;
+    white-space: nowrap;
 }
 ```
 
