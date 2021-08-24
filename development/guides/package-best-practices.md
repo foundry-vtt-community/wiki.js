@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2021-08-24T13:28:18.935Z
+date: 2021-08-24T13:28:39.247Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -83,6 +83,7 @@ From Atropos:
 
 ## UI Practices
 
+### Sidebar Tab Action Buttons
 When adding buttons to the Heading of a Sidebar Tab, append your buttons to the `.actions-buttons` div and not to the `.directory-header` div.
 
 ```js
