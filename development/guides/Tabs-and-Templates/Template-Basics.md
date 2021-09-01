@@ -2,7 +2,7 @@
 title: 1. Template Basics
 description: Basic guide to using HTML templates in FoundryVTT. 
 published: true
-date: 2021-06-19T16:54:20.658Z
+date: 2021-09-01T02:41:35.137Z
 tags: template, handlebars, html, formapplication
 editor: markdown
 dateCreated: 2021-06-19T16:20:49.323Z
@@ -20,7 +20,7 @@ This guide provides some examples of using html templates and handlebars in Foun
 Templates are just html files that can be loaded into Foundry, in lieu of hard-coding all the html within your javascript macro, module, or system.
 
 Examples:
-- [Midi-Qol templates](https://gitlab.com/tposney/midi-qol/master/src/templates/)
+- [Midi-Qol templates](https://gitlab.com/tposney/midi-qol/-/tree/master/templates)
 - [VanceCole template example](https://github.com/VanceCole/macros/blob/master/handlebars-templates.js)
 
 ## What are handlebars?
