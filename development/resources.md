@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-07-11T19:33:32.305Z
+date: 2021-09-01T07:49:40.267Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -58,6 +58,14 @@ There are a variety of community-created module and system starter kits out ther
 
 
 ### Generators
+
+
+#### [Scene Packer Module Generator](https://sneat.github.io/scene-packer-module-generator/)
+- Very lightly opinionated
+- Bootstraps modules
+- **Supports**: JavaScript
+- **Description**: Fill in the form and download an empty (standalone) module. Optionally supports creating a Scene Packer integrated module. Primary use case is for content creators and non-developers.
+
 
 
 #### [ghost's Foundry Factory](https://github.com/ghost91-/foundry-factory)
