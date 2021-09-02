@@ -2,7 +2,7 @@
 title: Aria
 description: 
 published: true
-date: 2021-04-21T16:39:57.338Z
+date: 2021-09-02T13:06:53.101Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-15T10:30:41.035Z
@@ -24,7 +24,9 @@ Depuis lors, l’Ennemi arpente le monde comme un homme. Lentement et sûrement,
 
 ## Contacts
 
-Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur Discord
+Developeur du système : Dilomos (Jonathan Bernard) Contacter moi sur les Discord  : La Fonderie / Elder-Craft (communauté) / FibreTigre 
+em@il : dilomos@gmail.com
+
 **Suggestions et bugs** : [https://gitreports.com/issue/Dilomos/aria_foundryvtt](https://gitreports.com/issue/Dilomos/aria_foundryvtt).
 Projet : [https://github.com/Dilomos/aria_foundryvtt](https://github.com/Dilomos/aria_foundryvtt).
 
