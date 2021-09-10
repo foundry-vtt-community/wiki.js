@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2021-09-10T19:58:17.897Z
+date: 2021-09-10T20:47:49.753Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -406,6 +406,173 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 | ru-RU | Russian / русский | <i class="fab fa-github"></i> [GitHub](https://github.com/Phenomen/foundry-vtt-ru) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) | [i18n editor](https://github.com/jcbvm/i18n-editor) (locally) |
 | es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) | [POEditor](https://poeditor.com/), [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Catalan), custom R code (locally) |
 | sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | [MIT](https://github.com/xdy/foundryvtt-lang-sv/blob/master/LICENSE) | *none* | [IntelliJ IDEA](https://www.jetbrains.com/idea/) (locally) |
+
+# Core Localization File Compatibility
+The table below lists various statistics of the core English translation file across different Foundry VTT versions. The data are intended to help translators determine whether it is necessary for them to update their core translation and for users who are using older version of the application to figure out if a core translation file for one version of the application will work in another version.
+
+<table>
+	<thead>
+	<tr>
+		<th rowspan="2" style="border-right:1px solid;">Foundry VTT Version</th>
+		<th colspan="2" style="border:none;border-left:1px solid;border-right:1px solid;">Combatible</th>
+		<th colspan="3" style="border:none;border-left:1px solid;border-right:1px solid;">Keys<a href="#footnote-1"><sup>1</sup></a></th>
+		<th colspan="3" style="border:none;border-left:1px solid;border-right:1px solid;">Characters<a href="#footnote-1"><sup>1</sup></a></th>
+		<th colspan="2" style="border:none;border-left:1px solid;">Words<a href="#footnote-1"><sup>1</sup></a> <a href="#footnote-2"><sup>2</sup></a></th>
+	</tr>
+	<tr style="text-align:right;">
+		<th style="border-left:1px solid;">Backwards<a href="#footnote-3"><sup>3</sup></a></th>
+		<th style="border-right:1px solid;">Forwards<a href="#footnote-4"><sup>4</sup></a></th>
+		<th style="border-left:1px solid;">Added</th>
+		<th>Changed</th>
+		<th style="border-right:1px solid;">Removed</th>
+		<th style="border-left:1px solid;">Added</th>
+		<th>Changed</th>
+		<th style="border-right:1px solid;">Removed</th>
+		<th style="border-left:1px solid;">Added</th>
+		<th>Removed</th>
+	</tr>
+	</thead>
+	<tbody style="text-align:right;">
+		<tr>
+		<td>0.7.0</td>
+		<td><i>?</i></td>
+		<td>No</td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+		<td><i>?</i></td>
+	</tr>
+	<tr>
+		<td>0.7.1</td>
+		<td>No</td>
+		<td>No</td>
+		<td>56</td>
+		<td>4</td>
+		<td>7</td>
+		<td>1622</td>
+		<td>20</td>
+		<td>126</td>
+		<td>247</td>
+		<td>21</td>
+	</tr>
+	<tr>
+		<td>0.7.2</td>
+		<td>No</td>
+		<td>No</td>
+		<td>48</td>
+		<td>5</td>
+		<td>5</td>
+		<td>1601</td>
+		<td>80</td>
+		<td>68</td>
+		<td>246</td>
+		<td>10</td>
+	</tr>
+	<tr>
+		<td>0.7.3</td>
+		<td>No</td>
+		<td>No</td>
+		<td>58</td>
+		<td>2</td>
+		<td>2</td>
+		<td>1612</td>
+		<td>77</td>
+		<td>157</td>
+		<td>253</td>
+		<td>26</td>
+	</tr>
+	<tr>
+		<td>0.7.4</td>
+		<td>No</td>
+		<td>No</td>
+		<td>117</td>
+		<td>4</td>
+		<td>15</td>
+		<td>2663</td>
+		<td>111</td>
+		<td>386</td>
+		<td>407</td>
+		<td>59</td>
+	</tr>
+	<tr>
+		<td>0.7.5</td>
+		<td><strong>Yes</strong></td>
+		<td>No</td>
+		<td>11</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1001</td>
+		<td>0</td>
+		<td>0</td>
+		<td>148</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>0.7.6</td>
+		<td><strong>Yes</strong></td>
+		<td><strong>Yes</strong></td>
+		<td>7</td>
+		<td>0</td>
+		<td>0</td>
+		<td>48</td>
+		<td>0</td>
+		<td>0</td>
+		<td>9</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>0.7.7</td>
+		<td><strong>Yes</strong></td>
+		<td>No</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>0.7.8</td>
+		<td><strong>Yes</strong></td>
+		<td>No</td>
+		<td>2</td>
+		<td>0</td>
+		<td>0</td>
+		<td>188</td>
+		<td>0</td>
+		<td>0</td>
+		<td>27</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>0.7.9</td>
+		<td>No</td>
+		<td><i>?</i></td>
+		<td>2</td>
+		<td>0</td>
+		<td>2</td>
+		<td>249</td>
+		<td>0</td>
+		<td>188</td>
+		<td>37</td>
+		<td>27</td>
+	</tr>
+	</tbody>
+</table>
+
+**<a id="footnote-1"><sup>1</sup></a>**: These values are in comparison to the *previous* version's (row's) translation file.
+
+**<a id="footnote-2"><sup>2</sup></a>**: Words were counted by naïvely splitting strings by whitespaces which may not be accurate.
+
+**<a id="footnote-3"><sup>3</sup></a>**: With translation files, *backwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **previous** row B. This property of the translation file is chainable: if the previous row B is **also** backwards compatible with the next previous row C, the original file A is also compatible with the oldest version C. For example the core translation for **FVTT 0.7.8** will work all the way back with **FVTT 0.7.4**.
+
+**<a id="footnote-4"><sup>4</sup></a>**: With translation files, *forwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **next** row B. This property of the translation file is chainable: if the next row B is **also** forwards compatible with the row after that C, the original file A is also compatible with this newest version C. For example the core translation for **FVTT 0.7.6** will also work with **FVTT 0.7.7**.
 
 # Appendix
 
