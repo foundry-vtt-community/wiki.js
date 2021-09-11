@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2021-09-10T21:11:30.503Z
+date: 2021-09-11T05:56:33.689Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -410,6 +410,9 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 # Core Localization File Compatibility
 The table below lists various statistics of the core English translation file across different Foundry VTT versions. The data are intended to help translators determine whether it is necessary for them to update their core translation and for users who are using older version of the application to figure out if a core translation file for one version of the application will work in another version.
 
+> The caveat is that this data are only for the core English translation file that comes with the application. Although in theory the data should be applicable for other languages, it may not be.
+{.is-warning}
+
 <table>
 	<thead>
 	<tr>
@@ -460,9 +463,9 @@ The table below lists various statistics of the core English translation file ac
 
 **<a id="footnote-2"><sup>2</sup></a>**: Words were counted by naïvely splitting strings by whitespaces which may not be accurate.
 
-**<a id="footnote-3"><sup>3</sup></a>**: With translation files, *backwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **previous** row B. This property of the translation file is chainable: if the previous row B is **also** backwards compatible with the next previous row C, the original file A is also compatible with the oldest version C. For example the core translation for **FVTT 0.7.8** will work all the way back with **FVTT 0.7.4**.
+**<a id="footnote-3"><sup>3</sup></a>**: With translation files, *backwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **previous** row B. This property of the translation file is chainable: if the previous row B is **also** backwards compatible with the next previous row C, the original file A is also compatible with this oldest version C. For example the core translation for **FVTT 0.7.8** will work all the way back with **FVTT 0.7.4**.
 
-**<a id="footnote-4"><sup>4</sup></a>**: With translation files, *forwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **next** row B. This property of the translation file is chainable: if the next row B is **also** forwards compatible with the row after that C, the original file A is also compatible with this newest version C. For example the core translation for **FVTT 0.7.6** will also work with **FVTT 0.7.7**.
+**<a id="footnote-4"><sup>4</sup></a>**: With translation files, *forwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **next** row B. This property of the translation file is chainable: if the next row B is **also** forwards compatible with the row C after that, the original file A is also compatible with this newest version C. For example the core translation for **FVTT 0.7.6** will also work with **FVTT 0.7.7**.
 
 # Appendix
 
