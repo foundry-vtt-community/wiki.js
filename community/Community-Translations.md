@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2021-09-11T18:12:30.324Z
+date: 2021-09-11T19:14:24.295Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -285,8 +285,8 @@ This module adds the option to select the Korean language from the FoundryVTT se
 * **Foundry VTT Compatibility**: 0.5+
 
 #### Link(s) to Translation
-* GitLab: [https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese)
-* Manifest: [https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/raw/master/pt-BR/module.json](https://gitlab.com/elvis-pereira/foundryvtt-brazilian-portuguese/raw/master/pt-BR/module.json)
+* GitLab: [https://gitlab.com/fvtt-brasil/core](https://gitlab.com/fvtt-brasil/core)
+* Manifest: [https://gitlab.com/fvtt-brasil/core/-/raw/master/pt-BR/module.json](https://gitlab.com/fvtt-brasil/core/-/raw/master/pt-BR/module.jsonn)
 
 #### Description
 This module adds the option to select the Português (Brasil) language from the FoundryVTT settings menu. Selecting this option will translate various aspects of the program interface.
