@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-08-12T00:20:41.044Z
+date: 2021-09-12T02:06:58.209Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -488,6 +488,45 @@ If you would like to access the files in your userdata directory directly to mov
 
 ## Set Up Cyberduck
 You may follow the steps in the Linux Installation Guide to [set up Cyberduck](https://foundryvtt.wiki/en/setup/linux-installation#optional-d-accessing-userdata-files-with-cyberduck) to access your userdata files. Be sure to use the SSH Private Key method using the key file saved in a safe place. 
+
+## Nemo or Nautilas
+Linux users won't be able to install CyberDuck, but they don't need to, because they can simply connect to their server within their File Browser.
+
+<a id="F1" href="#F1">F1.</a> Move the `foundry.key` file that you created earlier in this guide to your `~/.ssh` directory, then open a terminal there.
+
+<a id="F2" href="#F2">F2.</a> Create a new `.pem` file from it:
+```
+openssl rsa -in foundry.key -text > foundry.pem
+```
+
+<a id="F3" href="#F3">F3.</a> Edit your `.ssh` config:
+```
+gedit ~/.ssh/config
+```
+Add this entry:
+```
+Host foundry  
+  HostName <public ip address>
+  User ubuntu
+  Port 22
+  IdentityFile ~/.ssh/foundry.pem
+  Compression yes
+```
+
+<a id="F4" href="#F4">F4.</a> Update the permissions of the new `.pem` file and the `.ssh` folder:
+```
+sudo chmod 600 foundry.pem
+sudo chmod 755 ~/.ssh
+```
+
+<a id="F5" href="#F5">F5.</a> Open your File Browser.
+### Nautilas
+Go to "Other Locations" and enter `ssh://foundry` in the the text field on the bottom.
+![nautilas.webp](/images/oracle/nautilas.webp)
+
+### Nemo
+Go to **File -> Connect to Server...** and then enter `foundry` where it says `server`:
+![nemo.webp](/images/oracle/nemo.webp)
 
 # G. Optional: S3 Storage Setup
 ## Objective
