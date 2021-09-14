@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T20:42:29.014Z
+date: 2021-09-14T20:44:44.004Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -45,7 +45,7 @@ Troubleshooting assistance for this guide can be found on the official Foundry D
 
 
 ## Disclaimer 
-While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, you are fully responsible for ensuring that no costs will be incurred. It is recommended to conduct a [Cost Analysis](https://cloud.oracle.com/account-management/cost-analysis) and/or set a budget after this guide is complete to ensure that all services are Always Free. 
+While this guide is written to target the Always Free Tier and should not result in any charges if followed correctly, you are fully responsible for ensuring that no costs will be incurred. It is recommended to conduct a [Cost Analysis and set a budget](#g-optional-budget-and-cost-analysis)  after this guide is complete to ensure that all services are Always Free. 
 
 All information in this guide is accurate as of the date it was written. 
 
