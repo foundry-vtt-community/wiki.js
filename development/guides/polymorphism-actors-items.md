@@ -2,7 +2,7 @@
 title: Using Polymorphism with Actors and Items in Foundry
 description: 
 published: false
-date: 2021-08-14T19:12:43.530Z
+date: 2021-09-14T01:56:47.849Z
 tags: development
 editor: markdown
 dateCreated: 2021-08-14T19:09:54.861Z
@@ -10,7 +10,7 @@ dateCreated: 2021-08-14T19:09:54.861Z
 
 # Using Polymorphism with Actors and Items
 
-Foundry makes it easy to use your own, custom classes for system-specific Actor and Item!
+If you're reading this, it's probably not news to you but Foundry makes it easy to use your own, custom classes for system-specific Actor and Item!
 
 ```js
 //Somewhere in your initialization code
@@ -18,15 +18,16 @@ CONFIG.Actor.documentClass = MySystemActor;
 CONFIG.Item.documentClass = MySystemItem;
 ```
 
-BOOM! Just add your own class and you're done. In most cases, that's great, because Actors are all pretty much the same.
+BOOM! Just plug in your own subclasses and you're done. In most cases, that's great, because Actors or Items are all pretty much the same.
 
-For simple cases, checking the `type` of your `Entity` would do the trick, but for massive differences, this would make for code that is full of `if` and `switch` statements on that property. Handle a handful of exceptions and you're all right.
+Of course there will be differences. For simple cases, checking the `type` of your `Entity` would do the trick. Handle a handful of exceptions and you're all right.
 
 In some cases, however, some kinds of `Actor`s or `Item`s could be very, very different from one another. Some examples?
 
 - In the Cypher RPG system (which also powers Numenera, The Strange, etc.), PCs and NPCs are mechanically VERY different. While PCs have 3 different stats, NPCs have none of them. NPCs also have a target level, something which PCs do not have.
 - Minor NPCs in the d00Lite system (Barebones Fantasy, Art of Wuxia, etc.) don't get a full character sheet: they get a title (eg. "Soldier"), a single percentage related to their title and HP. That's it.
-- Forbidden Lands' monsters ...
+
+There are certainly many more.
 
 In such cases, checking for `type` willy-nilly would make for code that is fairly very hard to read and, especially, to maintain.
 
@@ -40,15 +41,13 @@ This is mostly aimed at system developers. I expect you're familiar with polymor
 
 ## Disclaimer
 
-This is obviously working around the (very reasonable) constraints of the base Foundry system - ie. this is a hack. It works - and has been working for me for quite some time - but it might break in the future. YMMV, *caveat emptor* and all that.
+This is obviously working around the (very reasonable) constraints of the base Foundry system - ie. this is a hack. It works - and has been working for me for quite some time - but there is no guarantee it might not break in the future. YMMV, *caveat emptor* and all that.
 
 ## Your new best friend: the `Proxy` object
 
-NOTE: if you're already familiar with Javascript Proxies, simply skip this section.
+This is not meant as a tutorial on the `Proxy` object: check out the MDN docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
-
-...
+But, in a nutshell, proxies wrap another object and can intercept pretty much any call or operator action made on a object. It has a ton of uses and is easily abused.
 
 ## How to use it?
 
@@ -76,9 +75,9 @@ Let's leave them as simple class declarations for now. Later on you'll be able t
 
 This is where most of the magic will happen.
 
-Basically, we need to create a proxy object that will act as a fake `Actor` or `Item` subclass but will actually intercept some of the calls made by Foundry to make it act like a regular class. It will then act as a kind of factory.
+Basically, we need to create a `Proxy` that will act as a fake `Actor` or `Item` subclass but will actually intercept some of the calls made by Foundry to make it behave like a regular class. It will then act as a kind of factory.
 
-From what I've seen so far, the following needs to be overridden:
+The following needs to be overridden:
 
 - the `new` operator
 - calls to the `create` and `createDocuments` methods
@@ -141,18 +140,18 @@ export const MySystemActorProxy = new Proxy(function () {}, {
 });
 ```
 
-And that's it. The `default` inside the `get` switch really is the key to "fake" polymorphism: any call to any other property is sent to the base class.
+And that's it. The `default` inside the `get` switch really is the key to "fake" polymorphism: any call to any other property is sent to the base class. `Error`s are thrown if any unknown behavior is detected.
 
 ### The final step: set your `Proxy` as your `documentClass`
 
-Come back to your initialization code and set it:
+Come back to your initialization code and set your newly created `Proxy` object as the "class" to use:
 
 ```js
 CONFIG.Actor.documentClass = MySystemActorProxy;
 ```
 
-... aaaaand you're done.
+... aaaaand you're done. You may now cackle gleefully for having fooled Foundry.
 
-Afterwards, anytime Foundry needs to create an `Actor` it will call `new CONFIG.Actor.documentClass(...)` which gets intercepted by your `Proxy`: in turn, it creates the right object according to your class mapping.
+Afterwards, anytime Foundry needs to create an `Actor` it will call `new CONFIG.Actor.documentClass(...)` which gets intercepted by your `Proxy`: in turn, it creates the right object according to your class mapping and that object is returned transparently.
 
 You can now come back to your `MySystemPCActor` and `MySystemNPCActor` classes and add whatever features you need. The ~~world~~ `Actor` or `Item` is now your oyster.
