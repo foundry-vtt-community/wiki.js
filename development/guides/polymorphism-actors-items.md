@@ -2,7 +2,7 @@
 title: Using Polymorphism with Actors and Items in Foundry
 description: 
 published: false
-date: 2021-09-14T01:56:47.849Z
+date: 2021-09-14T01:58:07.028Z
 tags: development
 editor: markdown
 dateCreated: 2021-08-14T19:09:54.861Z
@@ -48,6 +48,8 @@ This is obviously working around the (very reasonable) constraints of the base F
 This is not meant as a tutorial on the `Proxy` object: check out the MDN docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 
 But, in a nutshell, proxies wrap another object and can intercept pretty much any call or operator action made on a object. It has a ton of uses and is easily abused.
+
+So the plan, here, is to use a `Proxy` to intercept any call that would make Foundry stop and yell at you for doing something you should totally NOT be doing.
 
 ## How to use it?
 
