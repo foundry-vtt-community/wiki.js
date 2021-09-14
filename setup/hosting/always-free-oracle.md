@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T19:48:27.975Z
+date: 2021-09-14T19:58:58.936Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -602,7 +602,20 @@ Go to "Other Locations" and enter `ssh://foundry` in the the text field on the b
 Go to **File -> Connect to Server...** and then enter `foundry` where it says `server`:
 ![nemo.webp](/images/oracle/nemo.webp)
 
-# G. Optional: S3 Storage Setup
+# G. Optional: Budget and Cost Analysis
+## Objective
+At the end of this section you will confirm that your instance will not incur any charges and optionally set up a warning if charges do occur. 
+
+## Costs
+All resources mentioned and configured in this guide are `Always Free` and should never incur any costs over the lifetime of the account. If all steps were followed carefully, the Cost Analysis below should always show no costs projected. 
+
+In the case that the Cost Analysis shows some cost projected either a non-free resource was created, or the A1 instance was created above the Always Free tier limits, or there is some kind of error on Oracle's end. 
+
+If you see a projected cost from the Cost Analysis and are within 30 days of account creation then contact Oracle Support by clicking the Help button at the top-right of the screen, and starting a chat or creating a support request. 
+
+
+
+# H. Optional: S3 Storage Setup
 ## Objective
 At the end of this section, you will have a functional S3 storage bucket that Foundry can access to store assets under the “Amazon S3” tab in the file picker. This allows you to have extra storage beyond that provided by the instance volume and serve large assets more efficiently. 
 
