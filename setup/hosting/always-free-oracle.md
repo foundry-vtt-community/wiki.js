@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T19:05:17.317Z
+date: 2021-09-14T19:27:14.436Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -70,7 +70,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
 >  Some users in certain regions may require manual account verification which could take a few days of extra time.{.is-info}
 
-<a id="B4" href="#B4">B4.</a> **Added September 2021**: Due to changes in the A1 free tier, accounts must be upgraded to **Pay As You Go** accounts to retain services long-term. This guide is specifically written to use only `Always Free` services that will not incur any charges on a Pay As You Go account. 
+<a id="B4" href="#B4">B4.</a> **Added September 2021**: Due to changes in the way trial accounts work, accounts must be upgraded to **Pay As You Go** accounts to retain services long-term without interruption. This guide is specifically written to use only `Always Free` services that will not incur any charges on a Pay As You Go account. 
 
 <details><summary>Why do I need to upgrade my account to Pay As You Go? ▼</summary>
 
@@ -108,6 +108,36 @@ At the end of this section, you will have a registered account with Oracle Cloud
   We ***highly*** recommend setting up backups in [Section E](#e-optional-backup-policy-setup) to minimize potential data loss. 
 
 </details>
+
+<details><summary>I choose to  <b>&nbsp;NOT&nbsp;</b>  upgrade to Pay As You Go ▼</summary>
+
+  You can continue to follow this guide without upgrading to Pay As You Go. All the services will work without issue for at least the first 30 days since your account creation. 
+  
+  After the first 30 days, your A1 instance will be disabled. This instance is what Foundry is running on. Your Foundry will become inaccessible and it will look like your Foundry installation is down. 
+  
+  After an additional 30 days, the Foundry A1 instance will will be deleted (terminated) including any data that is not backed up. 
+  
+  After that point, you must delete the existing A1 instance, and then restore your volume from backup and recreate a new A1 instance using your backup in order to keep using Foundry on the Always Free Tier. 
+  
+  Instructions on how to restore from backup can be found in the [Oracle Documentation](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm).
+  
+  If you'd like to continue without setting up a Pay As You Go account, skip ahead to [Compute and Networking Setup](#c-compute-and-networking-setup).
+
+</details>
+
+<a id="B5" href="#B5">B5.</a> Open the navigation menu and click **Governance & Administration** -> **Cost Management** -> **Payment Method**.
+
+<a id="B6" href="#B6">B6.</a> Under Account Type, select **Pay-as-You-Go**.
+
+<a id="B7" href="#B7">B7.</a> If present, **Edit** your current credit card information or **Add** a new credit card. Click **Finish** when completed.
+
+<a id="B8" href="#B8">B8.</a> Read the terms and conditions and select the check box to indicate your agreement.
+
+>Read carefully. Starting a Pay As You Go account may require temporary authorization charges to be made against your credit card. {.is-warning}
+
+<a id="B9" href="#B9">B9.</a> Click **Start Paid Account**.
+
+
 
 > If the services described in the next section are not listed, you may need to wait a few more minutes for the account to be fully provisioned. A status notification appears at the top of the page when logged in to Oracle Cloud if the account has not yet been fully provisioned. {.is-info}
 
