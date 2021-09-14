@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T19:58:58.936Z
+date: 2021-09-14T20:07:38.507Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -122,7 +122,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
   
   After an additional 30 days, the Foundry A1 instance will will be deleted (terminated) including any data that is not backed up. 
   
-  After that point, you must delete the existing A1 instance, and then restore your volume from backup and recreate a new A1 instance (pending availability in your region) using your backup in order to keep using Foundry on the Always Free Tier. 
+  After that point, you must delete the existing A1 instance, and recreate a new A1 instance (pending availability in your region) and attach it to your existing Boot Volume (or a volume restored from backup). 
   
   Instructions on how to restore from backup can be found in the [Oracle Documentation](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm).
   
@@ -612,6 +612,8 @@ All resources mentioned and configured in this guide are `Always Free` and shoul
 In the case that the Cost Analysis shows some cost projected either a non-free resource was created, or the A1 instance was created above the Always Free tier limits, or there is some kind of error on Oracle's end. 
 
 If you see a projected cost from the Cost Analysis and are within 30 days of account creation then contact Oracle Support by clicking the Help button at the top-right of the screen, and starting a chat or creating a support request. 
+
+## View Cost Analysis
 
 
 
