@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T19:32:39.893Z
+date: 2021-09-14T19:33:09.660Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -81,7 +81,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
   
   (Text quoted 2021-09-14)
   
-  In order to avoid data loss, the upgrade to Pay As You Go must be done before the A1 instance is disabled.
+  In order to avoid data loss and service interruption, the upgrade to Pay As You Go must be done before the A1 instance is disabled.
 
 </details>
 
