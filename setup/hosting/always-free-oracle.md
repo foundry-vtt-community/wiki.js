@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T19:34:37.315Z
+date: 2021-09-14T19:44:11.168Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -37,6 +37,11 @@ b.  Terminal in Linux and MacOS.
 a.  A purchased domain name.
 b.  A free subdomain from a service like [Duck DNS](http://duckdns.org). 
 4. A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. Authorization charges may appear temporarily. 
+
+## Getting Help
+If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
+
+Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C31) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/6BzyC7swej).
 
 
 ## Disclaimer 
