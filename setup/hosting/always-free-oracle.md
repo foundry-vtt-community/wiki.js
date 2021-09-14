@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-12T02:06:58.209Z
+date: 2021-09-14T18:45:57.319Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -36,8 +36,7 @@ b.  Terminal in Linux and MacOS.
 3. Valid domain name (for secure connection with HTTPS only), such as:
 a.  A purchased domain name.
 b.  A free subdomain from a service like [Duck DNS](http://duckdns.org). 
-
-A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. 
+4. A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. Authorization charges may appear temporarily. 
 
 
 ## Disclaimer 
@@ -70,6 +69,19 @@ At the end of this section, you will have a registered account with Oracle Cloud
 <a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
 
 >  Some users in certain regions may require manual account verification which could take a few days of extra time.{.is-info}
+
+<a id="B4" href="#B4">B4.</a> **Added September 2021**: Due to changes in the A1 free tier, accounts must be upgraded to **Pay As You Go** accounts to retain services long-term. This guide is specifically written to use only `Always Free` services that will not incur any charges on a Pay As You Go account. 
+
+<details><summary>Why do I need to upgrade my account to Pay As You Go? ▼</summary>
+
+  As of September 2021 (possibly earlier), Oracle disables the always-free A1 Ampere instances used in this guide after roughly 60 days unless an account has been upgraded to Pay As You Go. This is confirmed in their FAQ under the [*What happens when my Free Trial expires or my credits are used up?*](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20happens%20when%20my%20Free%20Trial%20expires%20or%20my%20credits%20are%20used%20up%3F) heading:
+  
+  >Resources identified as Always Free will not be reclaimed. After your Free Trial expires, you'll continue to be able to use and manage your existing Always Free resources, and can create new Always Free resources according to tenancy limits.
+
+	>However, Ampere A1 Compute instances are disabled when your trial ends and then deleted (terminated) after 30 days, unless you upgrade to a paid account. To continue using Arm-based compute instances as an Always Free user, you must delete your existing Ampere A1 Compute instances and create new Ampere A1 Compute instances.
+  >(Text quoted 2021-09-14)
+
+</details>
 
 
 > If the services described in the next section are not listed, you may need to wait a few more minutes for the account to be fully provisioned. A status notification appears at the top of the page when logged in to Oracle Cloud if the account has not yet been fully provisioned. {.is-info}
