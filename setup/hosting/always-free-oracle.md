@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T20:09:30.015Z
+date: 2021-09-14T20:42:29.014Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -614,7 +614,52 @@ In the case that the Cost Analysis shows some cost projected either a non-free r
 If you see a projected cost from the Cost Analysis and are within 30 days of account creation then contact Oracle Support by clicking the Help button at the top-right of the screen, and starting a chat or creating a support request. 
 
 ## View Cost Analysis
+<a id="G1" href="#G1">G1.</a> Open the Navigation Menu and click **Governane & Administration** -> **Cost Management** -> **Cost Analysis**
 
+<a id="G2" href="#G2">G2.</a> On the Cost Analysis page, click to check the :ballot_box_with_check:`Show Forecast` option. This enables displaying future costs.
+
+<a id="G3" href="#G3">G3.</a> Change the `Granularity` to **Monthly**.
+
+<a id="G4" href="#G4">G4.</a> Set a date many months into the future under `End Forecast Date (UTC)`.
+
+![Cost Analysis Page Setup](/images/oracle/cost-analysis-1.webp)
+
+<a id="G5" href="#G5">G5.</a> Click **Apply**
+
+>Note that it may take a few moments for the Cost Analysis to generate. {.is-info}
+
+<a id="G6" href="#G6">G6.</a> Once it has finished generating, review the Cost Details. You should see a completely empty chart and a table with only zeroes, indicating no costs incured at any point in the projected future.
+
+![Cost Analysis Chart](/images/oracle/cost-analysis-2.webp)
+
+>If you see any projected costs here, please review all the services you've set up to ensure they have an `always-free` tag. If you are within 30 days of your account creation, please contact Oracle Support for further assistance. 
+>
+>All steps in this guide have been carefully written to ensure that only `always-free` tagged resources are used and should not have any costs associated with them. {.is-warning}
+
+## Set Budget Warning
+<a id="G7" href="#G7">G7.</a> On the same Cost Management page as above, click **Budets**.
+
+<a id="G8" href="#G8">G8.</a> Click **Create Budget**.
+
+<a id="G9" href="#G9">G9.</a> Enter `foundry_budget` in the **Name** field.
+
+<a id="G10" href="#G10">G10.</a> Enter `Budget warning for Foundry cost forecast` in the **Description** field.
+
+<a id="G11" href="#G11">G11.</a> Under **Target Compartment** choose your `root` compartment.
+
+<a id="G12" href="#G12">G12.</a> Under **Monthly Budget Amount** enter `1`. 
+
+<a id="G13" href="#G13">G13.</a> Under **Budget Alert Rule (Optional)** -> **Threshold Metric** choose `Forecast Spend` to warn on upcoming charges. 
+
+<a id="G14" href="#G14">G14.</a> Under **Threshold %** enter `1` to warn on minimum forecast charges. 
+
+![Budget Warning Setup](/images/oracle/cost-analysis-3.webp)
+
+<a id="G15" href="#G15">G15.</a> Enter any **Email Recipients** where you would like to receive these warnings. 
+
+<a id="G16" href="#G16">G16.</a> Click **Create**.
+
+>You now have a warning that will send you an email on the first of the month if there are any projected costs whatsoever. {.is-info}
 
 
 # H. Optional: S3 Storage Setup
