@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-14T21:14:12.409Z
+date: 2021-09-21T12:59:14.366Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -53,7 +53,7 @@ All information in this guide is accurate as of the date it was written.
 ## Objective
 At the end of this section, you will have a registered account with Oracle Cloud that has access to the Always Free Tier services. 
 
-## Steps
+## Account Creation and Upgrade
 > A valid credit card is required to sign up for an account with Oracle Cloud in order to access the Always Free Tier services. 
 {.is-warning}
 
@@ -135,6 +135,10 @@ At the end of this section, you will have a registered account with Oracle Cloud
 <a id="B5" href="#B5">B5.</a> Open the navigation menu and click **Governance & Administration** -> **Cost Management** -> **Payment Method**.
 
 <a id="B6" href="#B6">B6.</a> Under Account Type, select **Pay As You Go**.
+
+>If you get a message that `this account is manage by enterprise agreement` and `upgrade operation is not available` then your account has not finished provisioning. Please wait a few minutes until your account has finished provisioning.
+>
+>If your account does not complete provisioning after 30 minutes, please contact Oracle support {.is-warning}
 
 <a id="B7" href="#B7">B7.</a> If present, **Edit** your current credit card information or **Add** a new credit card. Click **Finish** when completed.
 
