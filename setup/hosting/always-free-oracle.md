@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-28T15:56:13.831Z
+date: 2021-09-28T16:01:56.795Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -148,7 +148,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
 <a id="B9" href="#B9">B9.</a> Click **Start Paid Account**.
 
-<a id="B10" href="#B10">B10.</a> Once you complete the remainder of this guide, be sure to review a [Cost Analysis](#g-optional-budget-and-cost-analysis) to ensure that no costs will be incured. 
+<a id="B10" href="#B10">B10.</a> Once you complete the remainder of this guide, be sure to review a [Cost Analysis](#g-optional-budget-and-cost-analysis) to ensure that no costs will be incured. The account must be at least 10 days old to forecast costs into the future, but you may view past costs before that date as confirmation. 
 
 
 
@@ -624,9 +624,13 @@ If you see a projected cost from the Cost Analysis and are within 30 days of acc
 
 <a id="G2" href="#G2">G2.</a> On the Cost Analysis page, click to check the :ballot_box_with_check:`Show Forecast` option. This enables displaying future costs.
 
-<a id="G3" href="#G3">G3.</a> Change the `Granularity` to **Monthly**.
+>Accounts must be at least 10 days old to access the `Show Forecast` feature and may only forecast into the future the age of the account. For example, an account that is 11 days old can only forecast 11 days into the future. 
+>
+>You may still conduct a Cost Analysis to confirm no costs have been incured in the recent past witout forecasting into the future. {.is-info}
 
-<a id="G4" href="#G4">G4.</a> Set a date many months into the future under `End Forecast Date (UTC)`.
+<a id="G3" href="#G3">G3.</a> Choose the `Granularity`, either **Daily** or **Monthly**.
+
+<a id="G4" href="#G4">G4.</a> If forecasting, set a date many days or months into the future under `End Forecast Date (UTC)`. 
 
 ![Cost Analysis Page Setup](/images/oracle/cost-analysis-1.webp)
 
@@ -634,7 +638,7 @@ If you see a projected cost from the Cost Analysis and are within 30 days of acc
 
 >Note that it may take a few moments for the Cost Analysis to generate. {.is-info}
 
-<a id="G6" href="#G6">G6.</a> Once it has finished generating, review the Cost Details. You should see a completely empty chart and a table with only zeroes, indicating no costs incured at any point in the projected future.
+<a id="G6" href="#G6">G6.</a> Once it has finished generating, review the Cost Details. You should see a completely empty chart and a table with only zeroes, indicating no costs incured at any point including in the projected future.
 
 ![Cost Analysis Chart](/images/oracle/cost-analysis-2.webp)
 
