@@ -2,7 +2,7 @@
 title: systemd
 description: Alternative instructions for using systemd within an unbuntu install
 published: true
-date: 2021-09-29T14:05:42.568Z
+date: 2021-09-29T14:10:18.675Z
 tags: hosting, ubuntu, systemd
 editor: markdown
 dateCreated: 2021-09-29T13:59:30.180Z
@@ -11,7 +11,7 @@ dateCreated: 2021-09-29T13:59:30.180Z
 # Systemd
 For admins wishing to use systemd instead of pm2 use the following systemd script.
 
-The script assumes that you are running under the user "foundry" and that your foundry install is at /srv/foundry
+The script assumes that you are running under the user "foundry" and that your foundry install is at "/srv/foundry"
 
 > [Unit]
 > Description=FoundryVTT Service
