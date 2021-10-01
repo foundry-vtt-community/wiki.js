@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-10-01T20:09:57.328Z
+date: 2021-10-01T20:14:33.644Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -568,9 +568,9 @@ If you would like to access the files in your userdata directory directly to mov
 
 ## Install and Setup Cyberduck
 
-<a id="D1" href="#D1">D1.</a> Download and install Cyberduck for your platform from the [Cyberduck website](https://cyberduck.io/download/).
+<a id="F1" href="#F1">F1.</a> Download and install Cyberduck for your platform from the [Cyberduck website](https://cyberduck.io/download/).
 
-<a id="D2" href="#D2">D2.</a> Once installed, open Cyberduck and click **Open Connection**:
+<a id="F2" href="#F2">F2.</a> Once installed, open Cyberduck and click **Open Connection**:
 
 ![Cyberduck - Open Connection](/images/generic-linux/cyberduck1.webp)
 
@@ -578,32 +578,34 @@ If you would like to access the files in your userdata directory directly to mov
 
 ![Cyberduck - Choose SFTP](/images/generic-linux/cyberduck2.webp)
 
-<a id="D4" href="#D4">D4.</a> Enter the following information in the corresponding fields, replacing any values in `<>` with the values as earlier in the guide:
+<a id="F4" href="#F4">F4.</a> Enter the following information in the corresponding fields, replacing any values in `<>` with the values as earlier in the guide:
 
 * Server: `<your.domain.name>` or `<server IP address>` 
 * Username: `ubuntu` 
 * Password: Leave blank
 * SSH Private Key: Click `Browse` and select your `foundry.key` file. You may need to change the file type to **All Files**. 
 
-<a id="D5" href="#D5">D5.</a> Click **Connect**
+<a id="F5" href="#F5">F5.</a> Click **Connect**
 
-<a id="D6" href="#D6">D6.</a> Double click on the `foundryuserdata` directory, then the `Data` directory.
+<a id="F6" href="#F6">F6.</a> Double click on the `foundryuserdata` directory, then the `Data` directory.
 
-<a id="D7" href="#D7">D7.</a> Click the **Bookmark** menu, then **New Bookmark**. Close the window that pops up. 
+<a id="F7" href="#F7">F7.</a> Click the **Bookmark** menu, then **New Bookmark**. Close the window that pops up. 
 
 >You now have a bookmarked connection in Cyberduck to the location of your Foundry userdata directory. Simply launch Cyberduck and double click the bookmark to connect and manage your files. {.is-info}
 
 ## Nemo or Nautilas
 Linux users won't be able to install CyberDuck, but they don't need to, because they can simply connect to their server within their File Browser.
 
-<a id="F1" href="#F1">F1.</a> Move the `foundry.key` file that you created earlier in this guide to your `~/.ssh` directory, then open a terminal there.
+>This section is for Linux users only. Windows and MacOS users can use Cyberduck above. {.is-warning}
 
-<a id="F2" href="#F2">F2.</a> Create a new `.pem` file from it:
+<a id="F8" href="#F8">F8.</a> Move the `foundry.key` file that you created earlier in this guide to your `~/.ssh` directory, then open a terminal there.
+
+<a id="F9" href="#F9">F9.</a> Create a new `.pem` file from it:
 ```
 openssl rsa -in foundry.key -text > foundry.pem
 ```
 
-<a id="F3" href="#F3">F3.</a> Edit your `.ssh` config:
+<a id="F10" href="#F10">F10.</a> Edit your `.ssh` config:
 ```
 gedit ~/.ssh/config
 ```
@@ -617,13 +619,13 @@ Host foundry
   Compression yes
 ```
 
-<a id="F4" href="#F4">F4.</a> Update the permissions of the new `.pem` file and the `.ssh` folder:
+<a id="F11" href="#F11">F11.</a> Update the permissions of the new `.pem` file and the `.ssh` folder:
 ```
 sudo chmod 600 foundry.pem
 sudo chmod 755 ~/.ssh
 ```
 
-<a id="F5" href="#F5">F5.</a> Open your File Browser.
+<a id="F12" href="#F12">F12.</a> Open your File Browser.
 ### Nautilas
 Go to "Other Locations" and enter `ssh://foundry` in the the text field on the bottom.
 ![nautilas.webp](/images/oracle/nautilas.webp)
