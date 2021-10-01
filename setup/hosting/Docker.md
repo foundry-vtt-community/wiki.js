@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2021-10-01T22:32:12.539Z
+date: 2021-10-01T22:43:54.777Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -274,7 +274,7 @@ Guide for setting up FoundryVTT with Caddy for TLS can be found [https://github.
 
 [YouTube Tutorial](https://www.youtube.com/watch?v=5L8Y2-JoGss)
 
-
+1. Launch Via Docker
 ```sh
 docker run --rm -it \
   -p 4444:4444 \
@@ -285,3 +285,5 @@ docker run --rm -it \
   mbround18/foundryvtt-docker:latest
 ```
 
+2. Navigate to [127.0.0.1:4444](http://1237.0.0.1:4444)
+3. Follow directions on screen. 
