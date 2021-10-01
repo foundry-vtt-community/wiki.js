@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-09-28T16:01:56.795Z
+date: 2021-10-01T20:09:57.328Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -566,8 +566,32 @@ At the end of this section you will have a policy that automatically retains 5 r
 ## Objective
 If you would like to access the files in your userdata directory directly to move, delete, manage, or bulk upload, then we will need to set up Cyberduck to do so. 
 
-## Set Up Cyberduck
-You may follow the steps in the Linux Installation Guide to [set up Cyberduck](https://foundryvtt.wiki/en/setup/linux-installation#optional-d-accessing-userdata-files-with-cyberduck) to access your userdata files. Be sure to use the SSH Private Key method using the key file saved in a safe place. 
+## Install and Setup Cyberduck
+
+<a id="D1" href="#D1">D1.</a> Download and install Cyberduck for your platform from the [Cyberduck website](https://cyberduck.io/download/).
+
+<a id="D2" href="#D2">D2.</a> Once installed, open Cyberduck and click **Open Connection**:
+
+![Cyberduck - Open Connection](/images/generic-linux/cyberduck1.webp)
+
+<a id="D3" href="#D3">D3.</a> In the Open Connection window, click the dropdown menu and select **SFTP (SSH File Transfer Protocol)**
+
+![Cyberduck - Choose SFTP](/images/generic-linux/cyberduck2.webp)
+
+<a id="D4" href="#D4">D4.</a> Enter the following information in the corresponding fields, replacing any values in `<>` with the values as earlier in the guide:
+
+* Server: `<your.domain.name>` or `<server IP address>` 
+* Username: `ubuntu` 
+* Password: Leave blank
+* SSH Private Key: Click `Browse` and select your `foundry.key` file. You may need to change the file type to **All Files**. 
+
+<a id="D5" href="#D5">D5.</a> Click **Connect**
+
+<a id="D6" href="#D6">D6.</a> Double click on the `foundryuserdata` directory, then the `Data` directory.
+
+<a id="D7" href="#D7">D7.</a> Click the **Bookmark** menu, then **New Bookmark**. Close the window that pops up. 
+
+>You now have a bookmarked connection in Cyberduck to the location of your Foundry userdata directory. Simply launch Cyberduck and double click the bookmark to connect and manage your files. {.is-info}
 
 ## Nemo or Nautilas
 Linux users won't be able to install CyberDuck, but they don't need to, because they can simply connect to their server within their File Browser.
