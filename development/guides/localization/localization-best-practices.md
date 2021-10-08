@@ -2,7 +2,7 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-10-08T16:37:35.027Z
+date: 2021-10-08T16:39:01.198Z
 tags: localization, translation, guide
 editor: markdown
 dateCreated: 2020-11-19T16:43:45.270Z
@@ -48,7 +48,7 @@ Try to manually add empty line breaks to denote the end of one portion (menus et
 
 Would be best if we could have comments, but JSON doesn’t work that way.
 
-The localization keys are JSON data, so you can also organize strings hierarchically. This is useful for large localization files where small typos can cause hard to find errors. The follow is equivalent to the multi-part strings in the previous example:
+The localization keys are JSON data, so you can also organize strings hierarchically. This is useful for large localization files where small typos can cause hard to find errors. The following is equivalent to the multi-part strings in the previous example:
 
 ```json
 "minor-qol": {
