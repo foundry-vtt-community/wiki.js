@@ -2,7 +2,7 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-05-28T04:20:16.830Z
+date: 2021-10-08T16:37:35.027Z
 tags: localization, translation, guide
 editor: markdown
 dateCreated: 2020-11-19T16:43:45.270Z
@@ -47,6 +47,27 @@ If a module, try to split strings into blocks by menu they appear on. If a syste
 Try to manually add empty line breaks to denote the end of one portion (menus etc.) and the start of another (settings etc.). This way we don’t have to spend much time opening it up inside of the application to check what we just translated.
 
 Would be best if we could have comments, but JSON doesn’t work that way.
+
+The localization keys are JSON data, so you can also organize strings hierarchically. This is useful for large localization files where small typos can cause hard to find errors. The follow is equivalent to the multi-part strings in the previous example:
+
+```json
+"minor-qol": {
+  "ItemDeleteCheck": {
+    "Name": "...",
+    "Hint": "..."
+  },
+	"DamageImmunities": {
+    "Name": "...",
+		"Hint": "..."
+  },
+	"SpeedItemRolls": {
+  	"Name": "...",
+		"Hint": "..."
+	}
+}
+```
+
+You can mix and match hierarchical structures and multi-part strings freely, giving you some freedom in laying out your localization files for best readability. Just remember that legal JSON may not have a comma after the last item in any `{ }` group.
 
 ## Be careful of word order and grammar
 Let us assume the phrase “This is an apple” as an example. In English, you might want to translate this as follows:
