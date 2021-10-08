@@ -2,7 +2,7 @@
 title: Localization Best Practices
 description: Describes some best practices for package developers who wish to enable their package to be translated.
 published: true
-date: 2021-10-08T16:39:01.198Z
+date: 2021-10-08T16:41:52.456Z
 tags: localization, translation, guide
 editor: markdown
 dateCreated: 2020-11-19T16:43:45.270Z
@@ -56,14 +56,14 @@ The localization keys are JSON data, so you can also organize strings hierarchic
     "Name": "...",
     "Hint": "..."
   },
-	"DamageImmunities": {
+  "DamageImmunities": {
     "Name": "...",
-		"Hint": "..."
+    "Hint": "..."
   },
-	"SpeedItemRolls": {
-  	"Name": "...",
-		"Hint": "..."
-	}
+  "SpeedItemRolls": {
+    "Name": "...",
+    "Hint": "..."
+  }
 }
 ```
 
