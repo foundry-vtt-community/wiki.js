@@ -2,7 +2,7 @@
 title: よくある質問&Tips
 description: よくありそうな質問と便利なテクニックをまとめています
 published: true
-date: 2021-10-21T15:06:14.140Z
+date: 2021-10-21T15:06:29.626Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-11T02:48:19.206Z
@@ -10,7 +10,7 @@ dateCreated: 2021-09-11T02:48:19.206Z
 
 # PathfinderRPG1e よくある質問&Tips
 
-最終更新：2021/10/21
+最終更新：2021/10/22
 編集時のバージョン FoundryVTT 0.8.9、Pathfinder1e 0.79.7
 
 ## 日本語化関係
