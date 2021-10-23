@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-10-01T20:14:33.644Z
+date: 2021-10-23T15:47:49.133Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -122,7 +122,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
   
   After the first 30 days, your A1 instance will be disabled. This instance is what Foundry is running on. Your Foundry will become inaccessible and it will look like your Foundry installation is down. 
   
-  After an additional 30 days, the Foundry A1 instance will will be deleted (terminated) including any data that is not backed up. 
+  After an additional 30 days, the Foundry A1 instance will be deleted (terminated) including any data that is not backed up. 
   
   After that point, you must delete the existing A1 instance, and recreate a new A1 instance (pending availability in your region) and attach it to your existing Boot Volume (or a volume restored from backup). 
   
