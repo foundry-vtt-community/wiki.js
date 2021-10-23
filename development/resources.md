@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2021-09-01T07:49:40.267Z
+date: 2021-10-23T18:27:26.466Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -149,7 +149,7 @@ There are a variety of community-created module and system starter kits out ther
 - [Demo of it in action](https://github.com/typhonjs-fvtt/demo-rollup-module/blob/main/.eslintrc)
 
 
-### [Quench - End to End testing within Foundry](https://github.com/schultzcole/FVTT-Quench)
+### [Quench - End to End testing within Foundry](https://github.com/Ethaks/FVTT-Quench)
 - Allows devs to register end to end tests powered by Mocha (and also includes Chai), which are then run in-game in a native Foundry Application.
 
 
