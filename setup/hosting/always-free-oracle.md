@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-10-25T20:59:28.027Z
+date: 2021-10-25T21:00:44.559Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -138,7 +138,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
 </details>
 
-<details><summary>My instance was **disabled**! ▼</summary>
+<details><summary>My instance was <b>&nbsp;disabled&nbsp;</b>! ▼</summary>
 
   If your instance has been disabled, you must create a new A1 instance to continue using the Always Free Tier. You can **keep the same boot volume and all data on it**. 
   
