@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2021-04-21T16:40:26.149Z
+date: 2021-10-28T11:14:13.760Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -13,7 +13,7 @@ Sur cette page nous traiterons de la façon de créer son personnage et comment 
 > La création de Personnage permet de créer à la fois des Personnage Jouables (PJ), des Personnages Non-Jouables (PNJ) ou des Rencontres (pour faire simple : tous ce qui sera en opposition aux héros).
 {.is-info}
 
-> Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à chaque type de personnage que vous aller créer.
+> Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à chaque type de personnage que vous allez créer.
 {.is-info}
 ---
 
@@ -22,7 +22,7 @@ Sur cette page nous traiterons de la façon de créer son personnage et comment 
 Pour créer un "PJ" il faut d'abord aller dans l'onglet "Personnage" de la barre d'outils. 
 Cliquez ensuite sur "Créer Personnage".
 Dans l'onglet "Nom" : c'est le nom de votre PJ
-Dans l'onglet "Type" : selectionnez "Character"
+Dans l'onglet "Type" : sélectionnez "Personnage"
 
 ![créa_pj.png](/images/chroniquesoubliees/créa_pj.png)
 
@@ -30,65 +30,65 @@ Dans l'onglet "Type" : selectionnez "Character"
 En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
 ![créa_pj_portrait.png](/images/chroniquesoubliees/créa_pj_portrait.png)
 
-## 3. La Race de mon PJ:
-Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de double-cliquer sur la case blanche à côté de l'onglet race.
-Cela ouvre le Compendium Race du Système. Faites glisser la race choisie dans la case. 
+## 3. La Race de mon PJ
+Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de faire un clic droit sur la case blanche à côté de l'onglet race.
+Cela ouvre le Compendium Races du Système. Faites glisser la race choisie dans la case. 
 > **Les caractéristiques liées à la Race se mettent à jour automatiquement.**
 {.is-success}
 
 Vous pouvez aussi y glisser une Race de votre imagination.
-> Pour des infos sur la création des Races, c'est [ici](/fr/systemes/fr-chrooubliees/species)
+> Pour des infos sur la création de nouvelles Races, c'est [ici](/fr/systemes/fr-chrooubliees/species)
 {.is-info}
 
 ![créa_pj_choixrace.png](/images/chroniquesoubliees/créa_pj_choixrace.png)
 
-## 4. Le Profil de mon PJ:
-Il est temps maintenant de choisir le Profil de votre PJ : pour cela il suffit de double-cliquer sur la case blanche à côté de l'onglet Profil.
-Cela ouvre le Compendium Profil du Système. Faites glisser le Profil choisi dans la case. 
+## 4. Le Profil de mon PJ
+Il est temps maintenant de choisir le Profil de votre PJ : pour cela il suffit de faire un clic droit sur la case blanche à côté de l'onglet Profil.
+Cela ouvre le Compendium Profils du Système. Faites glisser le Profil choisi dans la case. 
 > **Les voies et capacités liées au Profil se mettent à jour automatiquement (dans l'onglet Voies & Capacitées).**
 {.is-success}
 
 Vous pouvez aussi y glisser un Profil de votre imagination.
-> Pour des infos sur la création des Profils, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
+> Pour des infos sur la création de nouveaux Profils, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
 
 ![créa_pj_choixprofil.png](/images/chroniquesoubliees/créa_pj_choixprofil.png)
 
-## 5. Les Caractérisques de mon PJ:
+## 5. Les Caractéristiques de mon PJ
 Revenons ensuite sur l'onglet "Caractéristiques".
-Vous pouvez choisir vous même les scores de Caractéristiques en modifiant la case "Base"
-Ou vous pouvez laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."** au dessus de la Case FOR
-> Un message vous demandera si vous souhaitez vraiment remplacer les caractéristiques"
+Vous pouvez choisir vous même les scores de Caractéristiques en modifiant la case "Base".
+Vous pouvez aussi laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."** au dessus de la Case FOR.
+> Un message vous demandera si vous souhaitez vraiment remplacer les caractéristiques.
 {.is-warning}
 
-> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiative** se mettent **automatiquement à jour**
+> Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiative** se mettent **automatiquement à jour**.
 {.is-success}
 
 ![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
 
 ## 6. Les points de vie de mon PJ:
-En cliquant sur le "Dé Vitalité" au dessus de la Case PV.
+En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va calculer les points de vie de votre personnage.
 
-> Un message vous demandera si vous souhaitez vraiment remplacer les points de vie"
+> Un message vous demandera si vous souhaitez vraiment remplacer les points de vie.
 {.is-warning}
 
-> Le système calcul automatiquement les PV de votre PJ en prenant la formule:
-**Dé de vie** (lié au profil) + **Modificateur de CONSTITUTION**
+> Le système calcule automatiquement les PV de votre PJ en prenant la formule:
+**Dé de vie** (lié au profil) + **Modificateur de CONSTITUTION**.
 {.is-success}
 
 ![créa_pj_pv.png](/images/chroniquesoubliees/créa_pj_pv.png)
 
-## 7. L'histoire de mon PJ:
+## 7. L'histoire de mon PJ
 On a tous besoin d'un peu de background pour faire vivre son PJ.
-Et bien vous pouvez remplir toutes les infos sur sa vie dans l'onglet "Description":
-du plus simple avec les zones à remplir, en allant vers la longue tirade des ses origines ... en cliquant sur le bouton modifier de la zone "Description"
+Et bien vous pouvez remplir toutes les infos sur son histoire dans l'onglet "Description".
+Vous pouvez faire simple avec les 6 zones à remplir, ou faire une longue tirade sur ses origines en cliquant sur le bouton modifier de la zone "Description".
 ![créa_pj_description.png](/images/chroniquesoubliees/créa_pj_description.png)
 
-## 8. Son inventaire de base:
+## 8. Son inventaire de base
 Votre profil vous donne droit à un inventaire de base.
-Pour retrouver cet Inventaire, ouvrez la description de votre Profil.
-Ici je double clique sur "Barde".
-Cette opération m'ouvre le **Compendium des Profils**. Je clique sur celui du Barde et je vois dans la Description les **"Possessions de départs"**.
+Pour retrouver ce que contient cet Inventaire, ouvrez la description de votre Profil.
+Ici je clique sur "Barde".
+Cette opération m'ouvre la page du Barde dans le **Compendium des Profils**. Je vois alors ses objets dans les **"Possessions de départs"** de la Description .
 
 J'ouvre ensuite le **Compendium des Equipements** et je fais glisser sur ma fiche de personnage tous les équipements correspondants 
 
