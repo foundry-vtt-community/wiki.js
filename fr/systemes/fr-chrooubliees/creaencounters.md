@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2021-10-28T13:03:52.493Z
+date: 2021-10-28T13:06:13.941Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -54,7 +54,6 @@ Dans l'onglet "Type" : selectionnez "Rencontre"
 ### 2. Un Monstre moche comme je souhaite
 En cliquant sur le portrait noir, vous pouvez personnaliser l'image de votre rencontre via le gestionnaire de fichier de FoundryVTT.
 Dans l'onglet "Prototype Token" en haut à droite, puis "Images", vous pouvez également modifier l'**Image du token** qui apparaitra sur les scènes jouées.
-
 
 ### 3. La Carte d'identité de la Rencontre
 A partir de maintenant, on voit la grande différence avec les feuilles de PJ et PNJ. Il n'est plus question de Profils et de Race.
