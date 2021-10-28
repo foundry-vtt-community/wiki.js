@@ -2,13 +2,14 @@
 title: Création de Marchands/Coffres
 description: Il est frais mon poisson, il est frais !
 published: true
-date: 2021-10-28T13:22:48.603Z
+date: 2021-10-28T18:00:18.364Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-28T13:19:12.524Z
 ---
 
 Sur cette page nous traiterons de la façon de créer un Marchand ou un Coffre.
+
 
 > L'outil de création de Personnage permet de créer à la fois des Personnages Jouables (PJ), des Personnages Non-Jouables (PNJ), des Rencontres (pour faire simple : tout ce qui sera opposé aux héros) et des Coffres (pour présenter une liste d'objets aux joueurs).
 {.is-info}
