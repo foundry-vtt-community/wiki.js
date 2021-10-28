@@ -2,14 +2,13 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2021-10-28T18:00:06.598Z
+date: 2021-10-28T18:00:24.366Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
 ---
 
 Sur cette page nous traiterons de la façon de créer une Rencontre.
-
 
 > L'outil de création de Personnage permet de créer à la fois des Personnages Jouables (PJ), des Personnages Non-Jouables (PNJ), des Rencontres (pour faire simple : tout ce qui sera opposé aux héros) et des Coffres (pour présenter une liste d'objets aux joueurs).
 {.is-info}
