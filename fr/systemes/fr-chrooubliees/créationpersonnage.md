@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2021-10-28T11:27:50.590Z
+date: 2021-10-28T11:36:51.834Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -18,10 +18,10 @@ Sur cette page nous traiterons de la façon de créer son personnage jouable et 
 ---
 
 # La création d'un PJ
-## 1. La Naissance
+## 1. La Naissance de mon PJ
 Pour créer un "PJ" il faut d'abord aller dans l'onglet "Personnage" de la barre d'outils. 
 Cliquez ensuite sur "Créer Personnage".
-Dans l'onglet "Nom" : c'est le nom de votre PJ
+Dans l'onglet "Nom" : choisissez le nom de votre PJ
 Dans l'onglet "Type" : sélectionnez "Personnage"
 
 ![créa_pj.png](/images/chroniquesoubliees/créa_pj.png)
@@ -32,11 +32,11 @@ En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre pe
 
 ## 3. La Race de mon PJ
 Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de faire un clic droit sur la case blanche à côté de l'onglet race.
-Cela ouvre le Compendium Races du Système. Faites glisser la race choisie dans la case. 
+Cela ouvre le **Compendium Races** du Système. Faites glisser la race choisie dans la case. 
 > **Les caractéristiques liées à la Race se mettent à jour automatiquement.**
 {.is-success}
 
-Vous pouvez aussi y glisser une Race de votre imagination.
+Vous pouvez aussi y glisser une autre Race issue de votre imagination.
 > Pour des infos sur la création de nouvelles Races, c'est [ici](/fr/systemes/fr-chrooubliees/species)
 {.is-info}
 
@@ -44,18 +44,18 @@ Vous pouvez aussi y glisser une Race de votre imagination.
 
 ## 4. Le Profil de mon PJ
 Il est temps maintenant de choisir le Profil de votre PJ : pour cela il suffit de faire un clic droit sur la case blanche à côté de l'onglet Profil.
-Cela ouvre le Compendium Profils du Système. Faites glisser le Profil choisi dans la case. 
+Cela ouvre le **Compendium Profils** du Système. Faites glisser le Profil choisi dans la case. 
 > **Les voies et capacités liées au Profil se mettent à jour automatiquement (dans l'onglet Voies & Capacitées).**
 {.is-success}
 
-Vous pouvez aussi y glisser un Profil de votre imagination.
+Vous pouvez aussi y glisser un autre Profil issu de votre imagination.
 > Pour des infos sur la création de nouveaux Profils, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
 
 ![créa_pj_choixprofil.png](/images/chroniquesoubliees/créa_pj_choixprofil.png)
 
 ## 5. Les Caractéristiques de mon PJ
-Revenons ensuite sur l'onglet "Caractéristiques".
+Revenons ensuite sur le reste de l'onglet "Caractéristiques".
 Vous pouvez choisir vous même les scores de Caractéristiques en modifiant la case "Base".
 Vous pouvez aussi laisser la chance décider pour vous (ou par flemmardise avouons le...) en cliquant sur le **"Dé CARAC."** au dessus de la Case FOR.
 > Un message vous demandera si vous souhaitez vraiment remplacer les caractéristiques.
@@ -66,13 +66,13 @@ Vous pouvez aussi laisser la chance décider pour vous (ou par flemmardise avouo
 
 ![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
 
-## 6. Les points de vie de mon PJ:
+## 6. Les points de vie de mon PJ
 En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va calculer les points de vie de votre personnage.
 
 > Un message vous demandera si vous souhaitez vraiment remplacer les points de vie.
 {.is-warning}
 
-> Le système calcule automatiquement les PV de votre PJ en prenant la formule:
+> Le système calcule automatiquement les PV de votre PJ avec la formule :
 **Dé de vie** (lié au profil) + **Modificateur de CONSTITUTION**.
 {.is-success}
 
@@ -82,13 +82,14 @@ En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va c
 On a tous besoin d'un peu de background pour faire vivre son PJ.
 Et bien vous pouvez remplir toutes les infos sur son histoire dans l'onglet "Description".
 Vous pouvez faire simple avec les 6 zones à remplir, ou faire une longue tirade sur ses origines en cliquant sur le bouton modifier de la zone "Description".
+
 ![créa_pj_description.png](/images/chroniquesoubliees/créa_pj_description.png)
 
-## 8. Son inventaire de base
+## 8. L'inventaire de base de mon PJ
 Votre profil vous donne droit à un inventaire de base.
 Pour retrouver ce que contient cet Inventaire, faites un clic gauche sur votre profil via l'onglet "Caractéristiques" pour afficher sa description. 
 Ici je clique sur "Barde".
-Cette opération m'ouvre la page du Barde dans le **Compendium des Profils**. Je vois alors ses objets dans les **"Possessions de départs"** de la Description.
+Cette opération ouvre la page du Barde dans le **Compendium des Profils**. Je vois alors ses objets dans les **"Possessions de départs"** de la Description.
 
 J'ouvre ensuite l'onglet "Inventaire" de mon personnage. Un clic droit sur cet onglet ouvre le **Compendium des Equipements**. Je peux alors faire glisser sur ma fiche de personnage tous les équipements souhaités.
 
