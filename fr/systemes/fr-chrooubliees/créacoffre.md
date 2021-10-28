@@ -2,7 +2,7 @@
 title: Création de Marchands/Coffres
 description: 
 published: true
-date: 2021-10-28T13:19:12.524Z
+date: 2021-10-28T13:20:17.111Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-28T13:19:12.524Z
@@ -25,7 +25,7 @@ Cliquez ensuite sur "Créer Personnage".
 Dans l'onglet "Nom" : choisissez le nom de votre Marchand ou Coffre
 Dans l'onglet "Type" : sélectionnez "Vendeur/coffre"
 
-# Changer l'aspect de mon marchand
+# Changer l'aspect de mon Marchand
 
 En cliquant sur l'image de la bourse, vous pouvez personnaliser l'image de votre marchand via le gestionnaire de fichier de FoundryVTT.
 
