@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2021-10-28T10:15:43.612Z
+date: 2021-10-28T11:38:19.270Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -10,7 +10,7 @@ dateCreated: 2020-10-16T20:12:43.951Z
 
 ![utilrequest_(3).jpg](/images/chroniquesoubliees/utilrequest_(3).jpg)
 ---
-### Qu’est-ce que CoF : 
+### Qu’est-ce que CoF ?
 Le jeu et l'univers sont basés sur celui de Donjons & Dragons tout en adoptant un système 1d20 simplifié.
 
 Le joueur choisit un peuple (humain, elfe sylvain, nain...) et un profil (guerrier, magicien, rôdeur...), qui correspond à la classe de Donjons et Dragons.
@@ -46,7 +46,7 @@ Par contre si vous voulez récupérer les compendiums du SRD (races, classes, re
 - [Créer un Adversaire (Rencontre)](/fr/systemes/fr-chrooubliees/creaencounters)
 
 
-## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer :
+## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer
 - [Je veux jouer avec des Règles additionnelles](/fr/systemes/fr-chrooubliees/reglesaddtionnelles) 
 - [J'aimerais créer mes Profils, Voies et Capacités](/fr/systemes/fr-chrooubliees/customisation).
 -  [Je ne trouve pas la Race qui me convient](/fr/systemes/fr-chrooubliees/species)
