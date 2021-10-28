@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2021-10-28T11:45:14.085Z
+date: 2021-10-28T11:55:09.900Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -10,7 +10,7 @@ dateCreated: 2020-12-23T16:41:05.529Z
 
 Sur cette page nous traiterons de la façon de créer son personnage jouable et comment bien utiliser sa fiche de PJ.
 
-> L'outil de création de Personnage permet de créer à la fois des Personnages Jouables (PJ), des Personnages Non-Jouables (PNJ), des Rencontres (pour faire simple : tous ce qui sera opposé aux héros) et des Coffres (pour présenter une liste d'objets aux joueurs).
+> L'outil de création de Personnage permet de créer à la fois des Personnages Jouables (PJ), des Personnages Non-Jouables (PNJ), des Rencontres (pour faire simple : tout ce qui sera opposé aux héros) et des Coffres (pour présenter une liste d'objets aux joueurs).
 {.is-info}
 
 > Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à chaque type de personnage que vous allez créer.
@@ -29,6 +29,8 @@ Dans l'onglet "Type" : sélectionnez "Personnage"
 ## 2. Un PJ à mon image
 En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
 ![créa_pj_portrait.png](/images/chroniquesoubliees/créa_pj_portrait.png)
+
+En allant dans l'onglet "Prototype Token" en haut à droite, puis "Images", vous pouvez également modifier l'**Image du token** qui apparaitra sur les scènes jouées.
 
 ## 3. La Race de mon PJ
 Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de faire un clic droit sur la case blanche à côté de l'onglet race.
