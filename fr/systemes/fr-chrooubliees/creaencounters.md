@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2021-10-28T12:00:32.320Z
+date: 2021-10-28T13:03:52.493Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -48,13 +48,16 @@ Pour créer une "Rencontre" il faut d'abord aller dans l'onglet "Personnage" de 
 Cliquez ensuite sur "Créer Personnage".
 Dans l'onglet "Nom" : choisissez le nom de votre Rencontre
 Dans l'onglet "Type" : selectionnez "Rencontre"
+
 ![crea_encounter.png](/images/chroniquesoubliees/customisation/crea_encounter.png)
 
 ### 2. Un Monstre moche comme je souhaite
-En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
+En cliquant sur le portrait noir, vous pouvez personnaliser l'image de votre rencontre via le gestionnaire de fichier de FoundryVTT.
+Dans l'onglet "Prototype Token" en haut à droite, puis "Images", vous pouvez également modifier l'**Image du token** qui apparaitra sur les scènes jouées.
 
-### 3. La Carte d'identité de la "Rencontre"
-A partir de maintenant, on voit la grande différence avec les feuilles de PJ et PNJ.Il n'est plus question de Profils et de Race.
+
+### 3. La Carte d'identité de la Rencontre
+A partir de maintenant, on voit la grande différence avec les feuilles de PJ et PNJ. Il n'est plus question de Profils et de Race.
 
 A vous de choisir les points suivants en fonction du Livre de Règles p.211 :
 - NC
@@ -62,61 +65,62 @@ A vous de choisir les points suivants en fonction du Livre de Règles p.211 :
 - Archétype
 - Catégorie
 - Boss
+
 ![crea_rencontre_id.png](/images/chroniquesoubliees/customisation/crea_rencontre_id.png)
 
-### 4. Les Caractéristiques de la "Rencontre"
-Ici aussi un changement majeur : **Vous ne rentrez que les MOD**, c'est la valeur qui sera mise automatiquement à jour.
+### 4. Les Caractéristiques de la Rencontre
+Ici aussi un changement majeur : **vous ne rentrez que les MOD**, c'est la valeur qui sera mise automatiquement à jour par le système.
 
-Vous definissez aussi vous-même les valeurs des **Attaques** (CONTACT, DISTANCE, MAGIQUE)
+Vous devez ensuite definir vous-même les valeurs des **Attaques** (CONTACT, DISTANCE, MAGIQUE).
 
-La **DEF**, les **PV**, et l'**INIT** sont à remplir aussi manuellement
+La **DEF**, les **PV**, et l'**INIT** sont aussi à remplir manuellement.
 
 ![crea_renc_caract.png](/images/chroniquesoubliees/customisation/crea_renc_caract.png)
 
 ### 5. L'Onglet Combat
 Ici pas d'arme à équiper.
-En général les attaques de la Rencontre sont inscrites dans sa description. Etant souvent propre à la créature il est plus simple de la créer soit même.
+En général les attaques de la Rencontre sont données dans sa description et sont souvent propres à la créature. Il faut donc les créer soi même.
 
-- Il vous faut définir un "**NOM**".
-- Puis dans la case "**MOD**" y inscrire la valeur de "touche".
-- **La plage des critiques** est modifiable. Vous pouvez par exemple choisir qu'un adversaire à un coup critique à partir de 17. Vous inscrivez donc 17, le système prendra en Critique tous dés compris entre 17 et 20.
-- Dans la Case "**DM**" vous entez la formule de dégats.
+- Pour commencer il vous faut choisr le "**Nom**" de l'attaque.
+- Puis dans la case "**Mod**" y inscrire le modificateur représentant la chance de toucher.
+- La plage des **Critiques** est modifiable: vous pouvez par exemple choisir qu'un adversaire ait un coup critique à partir de 17. Vous inscrivez donc 17 et le système prendra en Critique tous dés compris entre 17 et 20.
+- Dans la Case "**DM**" vous devez entrer la formule de dégats.
 
-> La créature est prête à attaquer, une fois en combat **cliquez sur le petit D20** pour lancer l'attaque.
+> La créature est prête à attaquer. Une fois en combat cliquez sur le petit **D20** pour lancer l'attaque avec son test de réussite ou sur les 2 **D6** pour faire uniquement un jet de dégâts.
 {.is-success}
 
 ![créa_renc_combat.png](/images/chroniquesoubliees/customisation/créa_renc_combat.png)
 
-### 6. L'Onglet "Inventaire"
+### 6. L'Onglet Inventaire
 En général les Rencontres ne possèdent pas ou peu d'inventaire.
-Mais vous pouvez y glisser des Bourses pleines d'argent, ou des Objets Magiques par Exemple.
+Mais vous pouvez y glisser des Bourses pleines d'argent, ou des Objets Magiques par exemple.
+Un clic droit sur cet onglet ouvre le **Compendium des Equipements**, permettant d'ajouter directement des objets parmis la liste.
 
-> Pour la création d'Objet c'est par [ici](/fr/systemes/fr-chrooubliees/creaobjets) 
+> Pour des infos sur la création de nouveaux Objets, c'est [ici](/fr/systemes/fr-chrooubliees/creaobjets)
 {.is-info}
 
+### 7. L'Onglet Voies & Capacités
+Un clic droit sur le nom de l'onglet permet d'ouvrir le **Compendium "Voies des rencontres"**. Vous y trouverez l'intégralité des voies des créatures.
 
+Ensuite faites les glisser dans la fiche pour que la créature en bénéficie. Vous n'avez plus qu'à selectionner les capacités qu'elle maitrise dans cette voie.
 
-### 7. L'Onglet "Voies & Capacités"
-Vous trouverez tout en tas de Capacité dans le **Compendium "Capacités des Rencontres**", ainsi que des Voies dans le **Compendium "Voies"**.
-
-Vous les faites glisser dans la fiche pour que la créature la possède.
-
+Vous pouvez également utiliser le **Compendium "Capacités des rencontres**", pour retrouver l'intégralité des capacités de créatures crées dans le système.
 > **Une fois une Voie ou Capacité importée vous pouvez la modifier depuis votre fiche de Rencontre**.
 C'est ce que je vais faire pour la Capacité "Vol (Pixie)" en Modifiant juste l'intitulé de la Capacité.
 {.is-info}
 
 ![créa_rencontre_cap1.png](/images/chroniquesoubliees/customisation/créa_rencontre_cap1.png)
 
-> Si vous ne trouvez pas de "**Voies**" ou "**Capacités**" qui vous correspondent vous pouvez en créer de nouvelles. 
-Voir [ici](/fr/systemes/fr-chrooubliees/customisation)
+> Si vous ne trouvez pas de **Voies** ou **Capacités** qui vous correspondent vous pouvez en créer de nouvelles. 
+Pour des infos sur la création de nouvelles **Voies** ou **Capacités**, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
 
-Ici j'aurais besoin de créer la "Capacité" *Immobilité*
+Ici j'avais besoin de créer la Capacité *Immobilité* :
 
 ![créa_renc_cap3.png](/images/chroniquesoubliees/customisation/créa_renc_cap3.png)
 
 ### 8. L'Onglet "Description"
-Tout ce que vous pouvez écrire, décrire, inventer sur votre "Rencontre"
+Tout ce que vous voulez écrire, décrire, inventer sur votre Rencontre.
 
 > **FELICITATIONS** ! Vous être prêt à ~~faire mordre la poussière à vos PJ~~ proposer un peu de résistance à vos PJ
 {.is-success}
