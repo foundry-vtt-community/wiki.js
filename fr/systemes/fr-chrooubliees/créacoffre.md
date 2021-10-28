@@ -1,8 +1,8 @@
 ---
 title: Création de Marchands/Coffres
-description: 
+description: Il est frais mon poisson, il est frais !
 published: true
-date: 2021-10-28T13:20:17.111Z
+date: 2021-10-28T13:22:48.603Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-28T13:19:12.524Z
