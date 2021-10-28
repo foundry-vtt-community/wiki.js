@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2021-10-28T10:12:36.716Z
+date: 2021-10-28T10:15:43.612Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -31,11 +31,11 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 > 3. - Cliquer sur "Install System" et chercher le système **"**Chroniques Oubliées Fantasy**"** par Zigmund
 > 1. - Cliquer sur "Install", CoF s'installe.
 
-> Le systeme des Chroniques Oubliées Fantasy ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
+> Le système des Chroniques Oubliées Fantasy ne nécessite pas de traduction ou autres modules pour fonctionner automatiquement.
 Par contre si vous voulez récupérer les compendiums du SRD (races, classes, rencontres, équipements...), il faut aussi installer le module COF-SRD.
 {.is-success}
 ---
-### Je Cherche ou je partage des macros:
+### Je Cherche ou je partage des macros :
 > [La boite à macros](/fr/systemes/fr-chrooubliees/macros)
 {.is-info}
 ---	
@@ -46,7 +46,7 @@ Par contre si vous voulez récupérer les compendiums du SRD (races, classes, re
 - [Créer un Adversaire (Rencontre)](/fr/systemes/fr-chrooubliees/creaencounters)
 
 
-## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer:
+## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer :
 - [Je veux jouer avec des Règles additionnelles](/fr/systemes/fr-chrooubliees/reglesaddtionnelles) 
 - [J'aimerais créer mes Profils, Voies et Capacités](/fr/systemes/fr-chrooubliees/customisation).
 -  [Je ne trouve pas la Race qui me convient](/fr/systemes/fr-chrooubliees/species)
