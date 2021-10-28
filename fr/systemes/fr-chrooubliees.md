@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2021-10-28T11:38:19.270Z
+date: 2021-10-28T13:20:30.750Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -44,6 +44,7 @@ Par contre si vous voulez récupérer les compendiums du SRD (races, classes, re
 - [Créer un Personnage Joueur (PJ)](/fr/systemes/fr-chrooubliees/créationpersonnage)
 - [Créer un PNJ](/fr/systemes/fr-chrooubliees/créapnj)
 - [Créer un Adversaire (Rencontre)](/fr/systemes/fr-chrooubliees/creaencounters)
+- [Créer un Marchand](/fr/systemes/fr-chrooubliees/créacoffre)
 
 
 ## 2. Bon... c'est beau tout ça mais moi je veux personnaliser ma façon de jouer
