@@ -2,7 +2,7 @@
 title: Chroniques Oubliées Fantasy
 description: Support pour Chroniques Oubliées
 published: true
-date: 2021-05-02T08:54:44.534Z
+date: 2021-10-28T10:12:36.716Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T20:12:43.951Z
@@ -32,7 +32,7 @@ Il faut avoir acquis les rangs inférieurs d'une voie donnée avant de pouvoir p
 > 1. - Cliquer sur "Install", CoF s'installe.
 
 > Le systeme des Chroniques Oubliées Fantasy ne necessite pas de traduction ou autres modules pour fonctionner automatiquement.
-Par contre si vous voulez récupérer les compendiums du SRD, il faut aussi installer le module COF-SRD.
+Par contre si vous voulez récupérer les compendiums du SRD (races, classes, rencontres, équipements...), il faut aussi installer le module COF-SRD.
 {.is-success}
 ---
 ### Je Cherche ou je partage des macros:
