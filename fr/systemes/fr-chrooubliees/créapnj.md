@@ -1,8 +1,8 @@
 ---
-title: Création PNJ
+title: Création d'un PNJ
 description: Toute aventure mérite un bon PNJ, bon ou méchant. A vous de choisir maintenant
 published: true
-date: 2021-10-28T11:47:02.199Z
+date: 2021-10-28T17:59:49.155Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:48:09.541Z
