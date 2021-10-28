@@ -2,15 +2,15 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2021-10-28T11:24:18.352Z
+date: 2021-10-28T11:27:50.590Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
 ---
 
-Sur cette page nous traiterons de la façon de créer son personnage et comment bien utiliser sa fiche de PJ
+Sur cette page nous traiterons de la façon de créer son personnage jouable et comment bien utiliser sa fiche de PJ.
 
-> La création de Personnage permet de créer à la fois des Personnage Jouables (PJ), des Personnages Non-Jouables (PNJ) ou des Rencontres (pour faire simple : tous ce qui sera en opposition aux héros).
+> L'outil de création de Personnage permet de créer à la fois des Personnage Jouables (PJ), des Personnages Non-Jouables (PNJ), des Rencontres (pour faire simple : tous ce qui sera opposé aux héros) et des Coffres (pour présenter une liste d'objets aux joueurs).
 {.is-info}
 
 > Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à chaque type de personnage que vous allez créer.
