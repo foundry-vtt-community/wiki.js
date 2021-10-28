@@ -2,23 +2,23 @@
 title: Création PNJ
 description: Toute aventure mérite un bon PNJ, bon ou méchant. A vous de choisir maintenant
 published: true
-date: 2021-04-21T16:40:35.460Z
+date: 2021-10-28T11:45:30.230Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:48:09.541Z
 ---
 
-Sur cette page nous traiterons de la façon de créer un PNJ
+Sur cette page nous traiterons de la façon de créer un personnage non-jouable.
 
-> La création de Personnage permet de créer à la fois des Personnage Jouables (PJ), des Personnages Non-Jouables (PNJ) ou des Rencontres (pour faire simple : tous ce qui sera en opposition aux héros).
+> L'outil de création de Personnage permet de créer à la fois des Personnages Jouables (PJ), des Personnages Non-Jouables (PNJ), des Rencontres (pour faire simple : tout ce qui sera opposé aux héros) et des Coffres (pour présenter une liste d'objets aux joueurs).
 {.is-info}
 
 > Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à chaque type de personnage que vous aller créer.
 {.is-info}
 ---
 > Il y a 2 façons de créer un PNJ :
--Soit en utilisant la façon d'un PJ (pour les PNJ qui pourraient être jouer dans le futur, ou pour les PNJ vraiments importants)
--Soit en utilisant la méthode des "Rencontres" : pour un PNJ Mineur, une création rapide
+-Soit en utilisant le type "PNJ" lors de la création (pour les PNJ qui pourraient être joué dans le futur, ou pour les PNJ vraiments importants) et dans ce cas la procédure est la même que pour un PJ.
+-Soit en utilisant le type "Rencontres" lors de la création (pour un PNJ Mineur, ou une création rapide) et dans ce cas la procédure est la même que pour le reste des Rencontres.
 {.is-warning}
 
 Je vous invite à retourner sur la page :
