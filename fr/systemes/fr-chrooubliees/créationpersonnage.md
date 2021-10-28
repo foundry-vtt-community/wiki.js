@@ -2,7 +2,7 @@
 title: Création PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2021-10-28T11:14:13.760Z
+date: 2021-10-28T11:24:18.352Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -86,21 +86,21 @@ Vous pouvez faire simple avec les 6 zones à remplir, ou faire une longue tirade
 
 ## 8. Son inventaire de base
 Votre profil vous donne droit à un inventaire de base.
-Pour retrouver ce que contient cet Inventaire, ouvrez la description de votre Profil.
+Pour retrouver ce que contient cet Inventaire, faites un clic gauche sur votre profil via l'onglet "Caractéristiques" pour afficher sa description. 
 Ici je clique sur "Barde".
-Cette opération m'ouvre la page du Barde dans le **Compendium des Profils**. Je vois alors ses objets dans les **"Possessions de départs"** de la Description .
+Cette opération m'ouvre la page du Barde dans le **Compendium des Profils**. Je vois alors ses objets dans les **"Possessions de départs"** de la Description.
 
-J'ouvre ensuite le **Compendium des Equipements** et je fais glisser sur ma fiche de personnage tous les équipements correspondants 
+J'ouvre ensuite l'onglet "Inventaire" de mon personnage. Un clic droit sur cet onglet ouvre le **Compendium des Equipements**. Je peux alors faire glisser sur ma fiche de personnage tous les équipements souhaités.
 
 ![créa_pj_inventaire.png](/images/chroniquesoubliees/customisation/créa_pj_inventaire.png)
 
-Je peux ensuite décider d'équiper ou non certains équipements en cliquant sur le petit bouclier. Les Items équipés se retrouvent dans l'onglet "Combat".
+Je peux ensuite décider d'équiper ou non certains objets en cliquant sur le petit bouclier. Les objets équipés se retrouvent dans l'onglet "Combat".
 
-> Pour des infos sur la création des Objets, c'est [ici](/fr/systemes/fr-chrooubliees/creaobjets)
+> Pour des infos sur la création de nouveaux Objets, c'est [ici](/fr/systemes/fr-chrooubliees/creaobjets)
 {.is-info}
 
-> **Un Item "Equipé" modifie automatiquement les Caractéristiques associées**
-Exemple : L'armure de cuir équipée ajoute +2 en DEF automatiquement
+> **Un objet "Equipé" modifie automatiquement les Caractéristiques associées**
+Exemple : l'armure de cuir équipée ajoute +2 en DEF automatiquement
 {.is-success}
 
 ![pj_inventaire_2.png](/images/chroniquesoubliees/customisation/pj_inventaire_2.png)
