@@ -1,8 +1,8 @@
 ---
-title: Création PJ
+title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2021-10-28T12:50:09.957Z
+date: 2021-10-28T17:59:17.908Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
