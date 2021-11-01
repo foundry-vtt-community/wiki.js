@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-11-01T19:46:59.199Z
+date: 2021-11-01T20:16:40.382Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -435,7 +435,7 @@ At the end of this optional section, you will be able to directly access the fil
 The minimum RAM requirement for hosting Foundry is 1GB, however some systems or modules may use more than the minimum RAM. If your linux host has less than 2GB of RAM you can create a swapfile to prevent out-of-memory errors when using heavier modules, systems, or large compendiums. 
 
 ## Create and Enable Swapfile
-The instructions below are compatible with Debian 11 (including Ubuntu) / CentOS 8 (including Red Hat) or newer.
+The instructions below are compatible with the <a href="#preferred-linux-distributions">preferred linux distributions</a>.
 
 All commands below are assumed to be entered by a non-root sudoer user, such as the `foundry` user created in <a href="#B1">B1</a> to B4. 
 
