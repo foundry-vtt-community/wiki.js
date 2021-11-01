@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-11-01T19:32:48.365Z
+date: 2021-11-01T19:37:37.716Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -461,7 +461,7 @@ sudo swapon /swapfile
 sudo nano /etc/fstab
 ```
 
-<a id="E6" href="#E6">E6.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**. Save the file using `ctrl-x` and `y`.
+<a id="E6" href="#E6">E6.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**. Press <kbd>ctrl</kbd>-<kbd>x</kbd> and then <kbd>y</kbd>, and then <kbd>enter</kbd> to save the changes to the file. 
 ```
 /swapfile swap swap defaults 0 0
 ```
