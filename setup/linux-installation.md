@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-08-21T18:18:05.647Z
+date: 2021-11-01T19:29:14.594Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -425,6 +425,59 @@ At the end of this optional section, you will be able to directly access the fil
 
 >You now have a bookmarked connection in Cyberduck to the location of your Foundry userdata directory. Simply launch Cyberduck and double click the bookmark to connect and manage your files. {.is-info}
 
+# (Optional) E. Creating Swapfile
+## Objective
+The minimum RAM requirement for hosting Foundry is 1GB, however some systems or modules may use more than the minimum RAM. If your linux host has less than 2GB of RAM you can create a swapfile to prevent out-of-memory errors when using heavier modules, systems, or large compendiums. 
 
+## Create and Enable Swapfile
+The instructions below are compatible with Debian 11 (including Ubuntu) / CentOS 8 (including Red Hat) or newer.
+
+All commands below are assumed to be entered by a non-root sudoer user, such as the `foundry` user created in <a href="#B1">B1</a> to B4. 
+
+<a id="E1" href="#E1">E1.</a> Create a file to be used as swap:
+```
+sudo fallocate -l 2G /swapfile
+```
+>This will create a 2GB swapfile which is a recommended size for hosts with 1GB of RAM. You can increase this size as you'd like, but it is not recommended to create a smaller swapfile. {.is-info}
+
+<a id="E2" href="#E2">E2.</a> Change the permissions to prevent regular users from accessing the swapfile:
+```
+sudo chmod 600 /swapfile
+```
+
+<a id="E3" href="#E3">E3.</a> Mark the swapfile as a linux swap area:
+```
+sudo mkswap /swapfile
+```
+
+<a id="E4" href="#E4">E4.</a> Activate the swapfile:
+```
+sudo swapon /swapfile
+```
+
+<a id="E5" href="#E5">E5.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
+
+```
+sudo nano /etc/fstab
+```
+
+<a id="E6" href="#E6">E6.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**:
+```
+/swapfile swap swap defaults 0 0
+```
+
+<a id="E7" href="#E7">E7.</a> Verify the swapfile exists and is enabled:
+```
+sudo swapon --show
+```
+
+You should see an output like this:
+```
+NAME      TYPE      SIZE  USED PRIO
+/swapfile file        2G    0B   -1
+```
+
+
+You now have a swapfile enabled and should be protected against out-of-memory errors.
 
 
