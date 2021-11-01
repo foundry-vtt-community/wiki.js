@@ -2,7 +2,7 @@
 title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-11-01T19:37:37.716Z
+date: 2021-11-01T19:44:35.875Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -450,20 +450,20 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 ```
 
-<a id="E4" href="#E4">E4.</a> Activate the swapfile:
-```
-sudo swapon /swapfile
-```
-
-<a id="E5" href="#E5">E5.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
+<a id="E4" href="#E4">E4.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
 
 ```
 sudo nano /etc/fstab
 ```
 
-<a id="E6" href="#E6">E6.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**. Press <kbd>ctrl</kbd>-<kbd>x</kbd> and then <kbd>y</kbd>, and then <kbd>enter</kbd> to save the changes to the file. 
+<a id="E5" href="#E5">E5.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**. Press <kbd>ctrl</kbd>-<kbd>x</kbd> and then <kbd>y</kbd>, and then <kbd>enter</kbd> to save the changes to the file. 
 ```
 /swapfile swap swap defaults 0 0
+```
+
+<a id="E6" href="#E6">E6.</a> Enable the swapfile specified in `fstab`:
+```
+sudo swapon -a
 ```
 
 <a id="E7" href="#E7">E7.</a> Verify the swapfile exists and is enabled:
