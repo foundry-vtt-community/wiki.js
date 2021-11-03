@@ -2,7 +2,7 @@
 title: よくある質問&Tips
 description: よくありそうな質問と便利なテクニックをまとめています
 published: true
-date: 2021-10-22T11:38:40.824Z
+date: 2021-11-03T12:29:45.274Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-11T02:48:19.206Z
@@ -10,7 +10,7 @@ dateCreated: 2021-09-11T02:48:19.206Z
 
 # PathfinderRPG1e よくある質問&Tips
 
-最終更新：2021/10/22
+最終更新：2021/11/3
 編集時のバージョン FoundryVTT 0.8.9、Pathfinder1e 0.79.7
 
 ## 日本語化関係
@@ -424,11 +424,6 @@ https://github.com/baileymh/pf1e-archetypes
 - **Pathfinder 1e Content：**
 https://github.com/baileymh/pf1e-content  
 非常に多くのデータを追加する辞典MODです。
-
-- **PF1e UE Treasure Generator：**
-https://github.com/websterguy/pf1e-treasure-generator  
-Ultimate Equipmentの宝物の生成が行えるMODです。
-アイテムタブの下部に**Generate Treasure**が追加されているのでそこから起動します。
 
 - **SBC | PF1 Statblock Converter：**
 https://github.com/Lavaeolous/PF1-StatBlock-Converter-Module  
