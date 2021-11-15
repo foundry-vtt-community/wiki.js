@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2021-11-15T15:57:54.188Z
+date: 2021-11-15T16:06:31.497Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -18,6 +18,8 @@ If a page appears here which does not conform the to style notes below it may be
 Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/).
 
 This is generated from the JSDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code.
+
+---
 
 ## Style Notes
 
@@ -102,6 +104,10 @@ Each API page should have the following at Heading Level 2 (as the main title of
 3. **API Interactions** - Individual api methods and properties should be documented here. Do not document every method or property the way the official docs do, instead focus on the parts which are most likely to be useful.
 4. **Specific Use Cases** - Snippets for accomplishing specific goals related to the API concept being explored. These snippets might require the use of several methods or properties strung together.
 5. **Troubleshooting** - Any common errors that are easy to run into should be documented as well as some common reasons why the error might be appearing.
+
+Each heading level 2 section should have a horizontal rule between them.
+
+Other sections can be appended to the end of the document as deemed necessary.
 
 ### Stubs
 
