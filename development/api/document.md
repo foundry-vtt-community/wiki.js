@@ -2,7 +2,7 @@
 title: Document
 description: 
 published: true
-date: 2021-11-15T16:24:39.782Z
+date: 2021-11-15T16:27:46.865Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -384,7 +384,7 @@ someDocument.update({
 });
 ```
 
-> Updating an embedded document in this way will bypass that embedded document's [update event cycle](#Update-Event-Cycle). In the example below, only the Actor will go through the event cycle.
+> Updating an embedded document in this way will bypass that embedded document's [update event cycle](#update-event-cycle). In the example below, only the Actor will go through the event cycle.
 {.is-warning}
 
 #### Example: Updating an Item on an Actor
@@ -408,7 +408,7 @@ actorFoo.update({
 ### Creating Embedded Documents as part of the parent Update
 
 
-> Documents created in this way do not undergo the full document [creation event cycle](#Creation-Event-Cycle).
+> Documents created in this way do not undergo the full document [creation event cycle](#creation-event-cycle).
 > 
 > This has some dangers when used in conjunction with unlinked tokens (which this author does not understand yet).
 {.is-warning}
