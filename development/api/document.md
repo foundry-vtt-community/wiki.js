@@ -2,7 +2,7 @@
 title: Document
 description: 
 published: true
-date: 2021-11-15T16:05:03.879Z
+date: 2021-11-15T16:24:39.782Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -42,7 +42,7 @@ There are 2 kinds of `Document`: Primary and Embedded. Embedded Documents are fu
 
 #### Primary Documents
 
-These are stored in their own database table within the active World or [Compendium](/bloGIXUtSXifRV48TQa2gA).
+These are stored in their own database table within the active World or Compendium.
 
 Notable Examples:
 
@@ -76,7 +76,7 @@ This `data._source` property should rarely be accessed, instead access a Documen
 
 #### Validation
 
-`DocumentData` is governed by a Schema, `DocumentData#validate` is run during initialization and updates which will purge any 'unexpected' data (i.e. arbitrary data not in the Schema) from itself. As a result of these validations, it is impossible for a package to store arbitrary data on a Document without using [Flags](/moiaiMGWRMKFhP9BeB0ufA).
+`DocumentData` is governed by a Schema, `DocumentData#validate` is run during initialization and updates which will purge any 'unexpected' data (i.e. arbitrary data not in the Schema) from itself. As a result of these validations, it is impossible for a package to store arbitrary data on a Document without using Flags.
 
 > An exception to this rule is Systems which can define Actor and Item data templates. But even they cannot store arbitrary data not present in the template.
 {.is-warning}
@@ -218,7 +218,7 @@ actor.items.getName('Bar');
 actor.data.items.getName('Bar'); // also works
 ```
 
-A Primary Document might also be in a [Compendium](/bloGIXUtSXifRV48TQa2gA). Documents in compendiums are not necessarily available immediately in the world and often require asynchronous operations to retrieve first. See the Compendium article for more details.
+A Primary Document might also be in a Compendium. Documents in compendiums are not necessarily available immediately in the world and often require asynchronous operations to retrieve first. See the Compendium article for more details.
 
 ### Update the Database
 
