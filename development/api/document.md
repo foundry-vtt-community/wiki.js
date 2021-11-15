@@ -2,16 +2,11 @@
 title: Document
 description: 
 published: true
-date: 2021-11-15T16:03:42.636Z
+date: 2021-11-15T16:04:04.915Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
 ---
-
----
-tags: wiki
----
-# Document
 
 ![Up to date as of v8](https://img.shields.io/badge/FoundryVTT-v8-informational)
 
