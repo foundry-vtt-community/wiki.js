@@ -2,14 +2,13 @@
 title: Settings
 description: 
 published: true
-date: 2021-11-17T15:31:39.865Z
+date: 2021-11-17T15:31:55.995Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
 ---
 
 # Setting
-###### tags: `wiki`
 
 ![Up to date as of v8](https://img.shields.io/static/v1?label=FoundryVTT&message=v8&color=informational)
 
