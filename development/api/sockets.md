@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2021-11-17T14:06:05.915Z
+date: 2021-11-17T14:06:36.496Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -244,7 +244,7 @@ socket.on('module.my-module', handleEvent);
 ### No socket event is broadcast
 
 Run through this checklist of common issues:
-1. Does your manifest include the `socket: true` property mentioned in the [Prerequisites](#Prerequisites)?
+1. Does your manifest include the `socket: true` property mentioned in the [Prerequisites](#prerequisites)?
 2. Have you restarted the world since modifying the manifest JSON?
 3. Are you broadcasting with the correct namespace on your event? (Also mentioned in the Prerequisites section)
 4. Are you trying to respond to the broadcast from the emitting client? (Emitters do not recieve the broadcast, some strategies above for handling this.)
