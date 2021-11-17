@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2021-11-17T14:06:36.496Z
+date: 2021-11-17T14:10:01.555Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -19,7 +19,7 @@ dateCreated: 2021-11-17T14:06:05.915Z
 
 Foundry Core uses socket.io v4 behind the scenes for its websocket connections between Server and Client. It exposes the active socketio connection directly on `game.socket`, allowing packages to emit and respond to events they create. As such, most of the [socket.io documentation](https://socket.io/docs/v4/) is directly applicable to foundry's usage.
 
-This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other Document update cycle event.
+This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other [Document](/en/development/api/document) [update cycle event](/en/development/api/document#event-cycles).
 
 ## Key Concepts
 
