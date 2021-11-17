@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2021-11-15T16:09:58.302Z
+date: 2021-11-17T18:01:19.143Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -33,6 +33,36 @@ Everything you need to know about the data architecture of Foundry VTT Core (aka
 - Document Modification Context
 - How to Create/Read/Update/Delete a Document
 - Document CRUD Event Cycles
+
+
+### [Flags](/en/development/api/flags)
+Everything you need to know about the data architecture of Foundry VTT Core (aka Documents).
+
+#### Topics
+- Location on the Schema
+- Flag Scopes and Data Structure
+- How to Set/Read/Unset a Flag
+- Gotchas with Objects
+
+
+### [Settings](/en/development/api/settings)
+Everything you need to know about using Settings for your package.
+
+#### Topics
+- World vs Client setting scope
+- Registering Settings
+- How to Create/Read/Update/Delete a Setting
+- Setting Menus
+- Possible Setting configurations
+
+
+### [Sockets](/en/development/api/sockets)
+API documentation for the Socket functionality available to packages.
+
+#### Topics
+- Prerequisites
+- Emitting events
+- Responding to broadcasts
 
 
 ---
