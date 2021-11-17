@@ -2,7 +2,7 @@
 title: Flags
 description: 
 published: true
-date: 2021-11-17T14:27:34.646Z
+date: 2021-11-17T15:33:01.661Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -23,6 +23,8 @@ Flags are the safest way that packages can store arbitrary data on existing docu
 {.is-warning}
 
 A flag does not have to be a specific type, anything which can be `JSON.stringify`ed is valid.
+
+---
 
 ## Key Concepts
 
@@ -48,6 +50,8 @@ flags: {
   }
 }
 ```
+
+---
 
 ## API Interactions
 
@@ -203,6 +207,8 @@ If you're happy with the key being `null`, setting a key's value to `null` expli
 game.user.setFlag('world', 'todos', { foo: null });
 // flag value: { foo: null, zip: 'zop' }
 ```
+
+---
 
 ## Troubleshooting
 
