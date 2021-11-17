@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-11-17T15:32:33.466Z
+date: 2021-11-17T15:46:18.436Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -238,6 +238,10 @@ FormApplications in particular allow you to run any logic you want during the `_
 ---
 
 ## Troubleshooting
+
+### Cannot set properties of undefined (setting 'key')
+
+Happens when `game.settings.register` is called with an invalid first argument. This first argument is intended to be the `id` or `name` of an active package.
 
 ### Not a registered game setting
 
