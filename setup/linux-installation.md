@@ -1,14 +1,14 @@
 ---
-title: Linux Installation Guide
+title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-11-01T20:17:02.337Z
+date: 2021-11-18T14:32:10.145Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
 ---
 
-# General Linux Installation and Usage Guide
+# Recommended Linux Installation and Usage Guide
 
 # A. Overview
 ## Objective
