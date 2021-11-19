@@ -2,7 +2,7 @@
 title: 4.1 Créer plusieurs parties à partir d'une seule et même préparation.
 description: 
 published: true
-date: 2021-04-21T16:49:29.443Z
+date: 2021-11-19T14:49:11.912Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-12T11:07:10.096Z
@@ -55,3 +55,5 @@ Vous faites votre première séance dans les campagnes et c'est la qu'il faudra 
 
 Voila, vous avez fait la mise à jour de votre préparation sur chaque campagne.
 Les points négatifs, c'est que cela remet à zero tout ce qui a pu etre crée et qui ne se trouve pas sur la feuille de personnage du joueur tel que les macros dans les barres des taches.
+
+## [Vidéo explicative](https://youtu.be/nAs0q99ID6U)
