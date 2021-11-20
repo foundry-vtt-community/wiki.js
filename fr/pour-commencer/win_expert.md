@@ -2,7 +2,7 @@
 title: 1.1. Installation Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T17:06:43.550Z
+date: 2021-11-20T17:07:25.439Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -12,7 +12,7 @@ Il existe différentes manières de faire l'installation d'un logiciel, comme no
 Cette installation de FoundryVTT est une installation en mode serveur, c'est à dire que le logiciel n'utilisera pas d'interface graphique tel que nous avons pu le voir dans l'installation précédente.
 L'application ne sera accessible que via un navigateur, de préférence sous Chrome/Chromium, à partir une adresse IP locale ou distante en fonction de votre type d'installation (machine locale ou serveur distant dédié par exemple).
 
-## Nous allons vous présenter ici, d'installation de FoundryVTT en mode serveur.
+## Installation de FoundryVTT en mode serveur.
 >- Cette installation fonctionne aussi bien sur un poste de travail Windows 10/11 qu'un serveur Windows.
 >- Nous ne rentrerons pas dans les détails pour certaines parties de l'installation, comme les diverses installations de logiciels dont vous pouvez trouver la liste ci-dessous.
 Nous partons du principe que vous êtes "Expert" en informatique et que vous possédez des connaissances supérieures à celle d'un utilisateur final.
