@@ -1,8 +1,8 @@
 ---
-title: 1.1. Installation Windows (mode serveur)
+title: 1.1. Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T18:16:08.944Z
+date: 2021-11-20T18:18:12.248Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
