@@ -2,7 +2,7 @@
 title: 1.1. Installation Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T18:13:26.782Z
+date: 2021-11-20T18:16:08.944Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -112,6 +112,11 @@ On peut exécuter PM2 au démarrage de Windows en installant le paquet ci-dessou
 
 >npm install pm2-windows-startup -g
 >pm2-startup install
+
+## Vérifier que FoundryVTT fonctionne
+- Lancer un navigateur
+- Entrer l'url suivante :
+>http://127.0.0.1:30000
 
 ## Paramétrage de Foundry VTT
 En ce qui concerne le paramétrage sous windows, je vous invite à vous référer à la procédure suivante et de la dérouler à partir de [Pare-feu et redirection de Port sur votre Box Internet.](https://foundryvtt.wiki/fr/pour-commencer/win#pare-feu-et-redirection-de-port-sur-votre-box-internet) et jusqu'à la fin.
