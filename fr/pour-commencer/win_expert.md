@@ -2,7 +2,7 @@
 title: 1.1. Installation Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T17:11:28.724Z
+date: 2021-11-20T17:48:01.684Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -12,7 +12,7 @@ Il existe différentes manières de faire l'installation d'un logiciel, comme no
 Cette installation de FoundryVTT est une installation en mode serveur, c'est à dire que le logiciel n'utilisera pas d'interface graphique tel que nous avons pu le voir dans l'installation précédente.
 L'application ne sera accessible que via un navigateur, de préférence sous Chrome/Chromium, à partir une adresse IP locale ou distante en fonction de votre type d'installation (machine locale ou serveur distant dédié par exemple).
 
-## Installation de FoundryVTT en mode serveur.
+# Installation de FoundryVTT en mode serveur.
 >- Cette installation fonctionne aussi bien sur un poste de travail Windows 10/11 qu'un serveur Windows.
 >- Nous ne rentrerons pas dans les détails pour certaines parties de l'installation, comme les diverses installations de logiciels dont vous pouvez trouver la liste ci-dessous.
 Nous partons du principe que vous êtes "Expert" en informatique et que vous possédez des connaissances supérieures à celle d'un utilisateur final.
@@ -27,7 +27,6 @@ Contrairement à la procédure précédente, nous aurons besoin d'installation e
 Une fois que vous avez téléchargé les différents exécutables pour Windows, faites en l'installation.
 Décompressez l'archive .zip de FoundryVTT, à l'endroit que vous désirez, que cela soit dans une partition dédiée ou dans program files.
 >Pour tous les exécutables, merci de faire un Clic droit sur l'exécutable et de les "Exécuter en tant qu'Administrateur".
-{.is-warning}
 
 
 ### Pour l'explication de la procédure, nous allons vous donner un exemple de configuration foundryVTT: 
@@ -35,4 +34,46 @@ Décompressez l'archive .zip de FoundryVTT, à l'endroit que vous désirez, que 
 - Foundry VTT (Système), Partition dédiée, emplacement : e:/foundryvtt
 - Foundry VTT (Data), Partition dédiée, emplacement : e:/foundryvtt_data
 
+## Héberger Node.js sur Windows avec PM2
+Le PM2 est un gestionnaire de processus hautes performances et facile à utiliser pour les noeuds. Il est gratuit, multiplateforme, open source et dispose d'un équilibreur de charge intégré.
 
+### Installation de PM2
+Vous devez d'abord installer PM2. Pour que l'installation fonctionne, il faut impérativement avoir installé au préalable NodeJS sur votre machine.
+- Ouvrer PowerShell ou le terminal de votre choix en mode Administrateur puis exécutez la commande ci-dessous dans n'importe quel répertoire :
+> npm install pm2 -g
+
+#### Installation de PM2 sous Windows 10
+Sous Windows 10, vous devez lancer les deux commandes suivantes dans PowerShell en mode administrateur :
+
+> npm install pm2 -g
+> Set-ExecutionPolicy RemoteSigned
+
+> **Remarque :** Il préférable de ne pas installer node-windows en même temps de pm2 car des conflits de codes existent entre les deux modules et empêche le lancement de la commande pm2.
+{.is-warning}
+
+## Héberger votre application Node.js
+Normalement, héberger votre application Node.js avec PM2 est aussi simple que ABC.
+- Ouvrez n'importe quel terminal, accédez au répertoire racine de votre projet
+- Naviguer dans le répertoire système FoundryVTT jusqu'au fichier **"main.js"** se trouvant dans **".\foundryvtt\resources\app\"**
+- Exécutez la commande selon la syntaxe ci-dessous :
+
+>pm2 start .\main.js --namespace foundry
+
+![pm2_start.png](/setup/winstall/pm2_start.png)
+
+- Puis enregistrer la liste actuelle des processus
+- exécutez la commande ci-dessous :
+
+>pm2 save
+
+![pm2_save.png](/setup/winstall/pm2_save.png)
+
+Voila, c'est tout. Votre application est désormais hébergée et accessible sur le port spécifié.
+
+## Exécution de PM2 au démarrage de Windows
+On peut exécuter PM2 au démarrage de Windows en installant le paquet ci-dessous :
+
+>npm install pm2-windows-startup -g
+>pm2-startup install
+
+Désormais, à chaque redémarrage de la fenêtre, votre liste de processus enregistrée sera à nouveau exécutée. Assurez-vous d'exécuter la commande pm2 save après avoir ajouté de nouveaux processus.
