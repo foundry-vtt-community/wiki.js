@@ -2,7 +2,7 @@
 title: 1.1. Installation Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T17:48:01.684Z
+date: 2021-11-20T18:03:11.280Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -70,6 +70,43 @@ Normalement, héberger votre application Node.js avec PM2 est aussi simple que A
 
 Voila, c'est tout. Votre application est désormais hébergée et accessible sur le port spécifié.
 
+### Autres commandes PM2 utiles
+On peut afficher la liste des processus enregistrés par PM2 avec la commande suivante :
+
+>pm2 list
+
+on aura un résultat ressemblant à ceci :
+![pm2_list.png](/setup/winstall/pm2_list.png)
+
+- La commande ci-dessous arrêtera le processus spécifié. Vous pouvez spécifier le processus par l'identificateur de processus ou le nom du processus. 
+- Pour arrêter le processus par son nom de processus dans le répertoire racine :
+
+>pm2 stop .\main.js
+
+- Pour arrêter le processus par son nom de processus n'importe ou :
+
+>pm2 stop foundry
+
+- Pour arrêter le processus par son identificateur de processus n'importe ou :
+
+>pm2 stop 0
+
+- Pour supprimer un processus, on indique pm2 delete :
+
+>pm2 delete 0
+
+- Pour redémarrer un processus, on indique pm2 restart :
+
+>pm2 restart 0
+
+- Pour lancer le moniteur de processus de PM2 :
+
+>pm2 monit
+
+on aura un résultat ressemblant à ceci :
+
+![pm2_monit.png](/setup/winstall/pm2_monit.png)
+
 ## Exécution de PM2 au démarrage de Windows
 On peut exécuter PM2 au démarrage de Windows en installant le paquet ci-dessous :
 
@@ -77,3 +114,6 @@ On peut exécuter PM2 au démarrage de Windows en installant le paquet ci-dessou
 >pm2-startup install
 
 Désormais, à chaque redémarrage de la fenêtre, votre liste de processus enregistrée sera à nouveau exécutée. Assurez-vous d'exécuter la commande pm2 save après avoir ajouté de nouveaux processus.
+
+
+[*Sources*](https://www.gladir.com/SOFTWARE/PM2/comment-heberger-node-js-sur-windows-server-avec-pm2.htm)
