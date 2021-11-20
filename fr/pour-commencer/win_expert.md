@@ -2,7 +2,7 @@
 title: 1.1. Installation Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T18:03:11.280Z
+date: 2021-11-20T18:13:26.782Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -60,13 +60,13 @@ Normalement, héberger votre application Node.js avec PM2 est aussi simple que A
 >pm2 start .\main.js --namespace foundry
 
 ![pm2_start.png](/setup/winstall/pm2_start.png)
-
 - Puis enregistrer la liste actuelle des processus
 - exécutez la commande ci-dessous :
 
 >pm2 save
 
 ![pm2_save.png](/setup/winstall/pm2_save.png)
+Désormais, à chaque redémarrage de la fenêtre, votre liste de processus enregistrée sera à nouveau exécutée. Assurez-vous d'exécuter la commande pm2 save après avoir ajouté de nouveaux processus.
 
 Voila, c'est tout. Votre application est désormais hébergée et accessible sur le port spécifié.
 
@@ -113,7 +113,8 @@ On peut exécuter PM2 au démarrage de Windows en installant le paquet ci-dessou
 >npm install pm2-windows-startup -g
 >pm2-startup install
 
-Désormais, à chaque redémarrage de la fenêtre, votre liste de processus enregistrée sera à nouveau exécutée. Assurez-vous d'exécuter la commande pm2 save après avoir ajouté de nouveaux processus.
+## Paramétrage de Foundry VTT
+En ce qui concerne le paramétrage sous windows, je vous invite à vous référer à la procédure suivante et de la dérouler à partir de [Pare-feu et redirection de Port sur votre Box Internet.](https://foundryvtt.wiki/fr/pour-commencer/win#pare-feu-et-redirection-de-port-sur-votre-box-internet) et jusqu'à la fin.
 
 
-[*Sources*](https://www.gladir.com/SOFTWARE/PM2/comment-heberger-node-js-sur-windows-server-avec-pm2.htm)
+
