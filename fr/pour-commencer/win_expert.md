@@ -2,7 +2,7 @@
 title: 1.1. Installation Windows (mode serveur)
 description: 
 published: true
-date: 2021-11-20T17:07:25.439Z
+date: 2021-11-20T17:11:28.724Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -23,8 +23,10 @@ Contrairement à la procédure précédente, nous aurons besoin d'installation e
 - [FoundryVTT version Linux/Nodejs](https://foundryvtt.com/) : Prendre la dernière version Stable de FoundryVTT pour Linux/Nodejs.
 - [NodeJS LTS](https://nodejs.org/en/download/) : Prendre la dernière version LTS (.msi) de Nodejs pour windows 64-bit.
 
-Une fois que vous avez téléchargé les différents exécutables pour Windows, faites en l'installation. 
->Pour tous les exécutables, Clic droit sur l'exécutable, "Exécuter en tant qu'Administrateur".
+
+Une fois que vous avez téléchargé les différents exécutables pour Windows, faites en l'installation.
+Décompressez l'archive .zip de FoundryVTT, à l'endroit que vous désirez, que cela soit dans une partition dédiée ou dans program files.
+>Pour tous les exécutables, merci de faire un Clic droit sur l'exécutable et de les "Exécuter en tant qu'Administrateur".
 {.is-warning}
 
 
@@ -32,4 +34,5 @@ Une fois que vous avez téléchargé les différents exécutables pour Windows, 
 - Environnement : Windows 11 professional 64-bit
 - Foundry VTT (Système), Partition dédiée, emplacement : e:/foundryvtt
 - Foundry VTT (Data), Partition dédiée, emplacement : e:/foundryvtt_data
+
 
