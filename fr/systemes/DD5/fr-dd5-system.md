@@ -2,7 +2,7 @@
 title: 01 - Présentation
 description: 
 published: true
-date: 2021-04-21T16:46:11.989Z
+date: 2021-11-21T14:43:19.369Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-23T18:25:13.793Z
@@ -41,6 +41,9 @@ Une précision néanmoins : en Français peut se rajouter le droit de l'auteur d
 ---
 
 - En anglais existe des modules d'intégrations plus poussés avec DndBeyond et également des utilitaires d'import de campagne roll20 dnd5
+
+### Tutoriel sur Youtube : 
+[Tutoriel DD5 pour Foundry VTT (Kyl Game)](https://youtu.be/hz8vv_qvfNY)
 
 
 *Note : comme pour le logo ci-dessus, [un fan-kit est dispo](https://dnd.wizards.com/articles/features/fan-site-kit)*
