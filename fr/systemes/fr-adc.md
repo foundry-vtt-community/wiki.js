@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2021-04-21T16:35:00.292Z
+date: 2021-11-21T14:37:45.342Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -29,6 +29,9 @@ Le système CoC7 propose aussi une implémentation succincte des règles de Pulp
 
 ## Module recommandé
 - [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/): Ajoute des dés en 3D.
+
+## Tutoriel sur Youtube
+- [Tutoriel AdC sur Foundry VTT (Kyl Game)](https://youtu.be/XkpVSr75A8k)
 
 ## FAQ
 **Pourquoi je n'ai qu'un contenu limité et en anglais livré avec le système ?**
