@@ -2,7 +2,7 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2021-11-27T13:49:58.765Z
+date: 2021-11-27T14:24:02.598Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
@@ -63,25 +63,51 @@ dateCreated: 2020-11-10T02:09:22.459Z
   <li>I am a novice at these processes so I am open to automation suggestions or similar! - Diabolicbutterfly</li>
 </ul>
 <h1>Alternate way for hosting Foundry VTT on a Synology NAS using Docker</h1>
-<p>This is a different way for hosting Foundry VTT using Docker. This is quite simple recipe, maybe the simplest for non technical people, with a specific combination of services that make life easier.&nbsp;</p>
+<p>This is a different way for hosting Foundry VTT using Docker. This is quite simple recipe, maybe the simplest <strong>for non technical people</strong>, with a specific combination of services that make life easier.&nbsp;</p>
 <p>The goal of this tutorial is to :</p>
 <ul>
   <li>Host VTT Foundry on your Synology NAS</li>
   <li>Set up HTTPS provided that you have a domain name somewhere</li>
+  <li>Make it run permanently (you can actually toggle it on or off)</li>
 </ul>
 <h3>Prerequisites</h3>
 <ul>
   <li>Have a Foundry VTT license</li>
   <li>Have a domain name</li>
-  <li>Have a Synology NAS (not too old, I'm based on DSM 6.2.4)</li>
+  <li>Have an up to date Synology NAS (this is based on DSM 6.2.4)</li>
 </ul>
-<p>Have your domain or subdomain point to your NAS public IP</p>
+<h3>Have your domain or subdomain point to your NAS public IP</h3>
 <p>I'm already using a synology adress such as myquickconnectid<strong>.synology.me</strong> in order to connect to my NAS. It supports HTTPS (port 443). Since this adress is already used, I need another one for Foundry VTT. &nbsp;Make your to make it point to your NAS public IP. This kind of DNS configuration can take several hours or a couple of days.</p>
-<p>Install Docker your NAS</p>
+<h3>Install Docker your NAS</h3>
 <p>In the package manager, install “Docker”</p>
-<p>Prepare the <a href="https://github.com/felddy">felddy</a>/<a href="https://github.com/felddy/foundryvtt-docker"><strong>foundryvtt-docker</strong></a> image</p>
+<h3>Prepare the <a href="https://github.com/felddy">felddy</a>/<a href="https://github.com/felddy/foundryvtt-docker"><strong>foundryvtt-docker</strong></a> image</h3>
 <p>In Docker, go to Registry and look for “felddy”. Download the felddy/foundryvtt-docker image, when prompted choose the “release” tag.</p>
-<p>Now, in the Image section of Docker, add&nbsp;</p>
+<p>Now, in the Image section of Docker, Launch this image (this creates a “Container”, that is an instance of this image), you will be prompted for configuration, go directly to <strong>advanced settings</strong>:</p>
+<ul>
+  <li>Enable auto-restart: checked</li>
+  <li>Declare a folder for Foundry VTT to store its files. <strong>Volume → Add Folder</strong>:<ul>
+      <li>Choose a folder in your own NAS volumes for Foundry VTT data and config</li>
+      <li>Type “/data” for the mounted path</li>
+      <li>It is useful to access such files directly, otherwise they are embedded in the container</li>
+    </ul>
+  </li>
+  <li>Leave default port settings</li>
+  <li>In the Environment tab, add the CONTAINER_PRESERVE_CONFIG variable and set it to <strong>true</strong></li>
+</ul>
+<p><strong>Apply these settings without running the container yet (uncheck “Run this container…”)</strong></p>
+<p>Now go the <strong>Container </strong>section in Docker and <strong>Edit</strong> the details of your container, go to the <strong>Environment</strong> tab, and add a <strong>FOUNDRY_RELEASE_URL</strong> variable, leave it empty for now.</p>
+<h3>Get a temporary Foundry VTT Linux/NodeJS download URL</h3>
+<p>You need to be logged in https://foundryvtt.com/</p>
+<p>Go to your account page, and click Purchased Licences button.</p>
+<p><strong>Make sure you select the Linux/NodeJS operating system selected </strong>and click the <strong>Timed URL </strong>button.</p>
+<p>You now have 5 minutes to paste this link into the value of the FOUNDRY_RELEASE_URL variable of your container.</p>
+<p>Apply your change and <strong>Start</strong> the container, you can use the toggle on the right for starting or stopping the container.</p>
+<h3>Test that Foundry VTT runs locally in HTTP</h3>
+<p>Assuming your are on your local network with the NAS, use a web browser connect to your NAS on port 30000. Ex: http://mynasnameorip:30000/</p>
+<p>Virtual VTT should run there.</p>
+<p>If not you can go the Container <strong>Details</strong>, in the <strong>Log</strong> tab. This gives you the execution details on what's going on in the Container.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
