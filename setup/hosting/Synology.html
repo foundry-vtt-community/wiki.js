@@ -2,7 +2,7 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2021-04-21T16:37:38.308Z
+date: 2021-11-27T13:49:58.765Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
@@ -62,3 +62,26 @@ dateCreated: 2020-11-10T02:09:22.459Z
   <li>To properly shutdown your foundry instance, ctrl-c (or similar hotkey in your client) shuts down the instance properly (note using Forever you need to use a different shutdown process).</li>
   <li>I am a novice at these processes so I am open to automation suggestions or similar! - Diabolicbutterfly</li>
 </ul>
+<h1>Alternate way for hosting Foundry VTT on a Synology NAS using Docker</h1>
+<p>This is a different way for hosting Foundry VTT using Docker. This is quite simple recipe, maybe the simplest for non technical people, with a specific combination of services that make life easier.&nbsp;</p>
+<p>The goal of this tutorial is to :</p>
+<ul>
+  <li>Host VTT Foundry on your Synology NAS</li>
+  <li>Set up HTTPS provided that you have a domain name somewhere</li>
+</ul>
+<h3>Prerequisites</h3>
+<ul>
+  <li>Have a Foundry VTT license</li>
+  <li>Have a domain name</li>
+  <li>Have a Synology NAS (not too old, I'm based on DSM 6.2.4)</li>
+</ul>
+<p>Have your domain or subdomain point to your NAS public IP</p>
+<p>I'm already using a synology adress such as myquickconnectid<strong>.synology.me</strong> in order to connect to my NAS. It supports HTTPS (port 443). Since this adress is already used, I need another one for Foundry VTT. &nbsp;Make your to make it point to your NAS public IP. This kind of DNS configuration can take several hours or a couple of days.</p>
+<p>Install Docker your NAS</p>
+<p>In the package manager, install “Docker”</p>
+<p>Prepare the <a href="https://github.com/felddy">felddy</a>/<a href="https://github.com/felddy/foundryvtt-docker"><strong>foundryvtt-docker</strong></a> image</p>
+<p>In Docker, go to Registry and look for “felddy”. Download the felddy/foundryvtt-docker image, when prompted choose the “release” tag.</p>
+<p>Now, in the Image section of Docker, add&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
