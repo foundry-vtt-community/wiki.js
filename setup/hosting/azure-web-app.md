@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-10T03:43:23.963Z
+date: 2021-12-10T03:44:33.398Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -19,7 +19,7 @@ Great shout-out to [Felddy](https://github.com/felddy/foundryvtt-docker#readme) 
 | Name | Description | URL |
 | ----------- | ----------- |
 | Docker Image | Prebuilt Image| armyguy255a/foundryvtt:latest |
-| Git Repository | Manual Build |[URL](https://github.com/ArmyGuy255A/foundryvtt-docker/tree/armyguy/azureci)
+| Git Repository | Manual Build |[URL](https://github.com/ArmyGuy255A/foundryvtt-docker/tree/armyguy/azureci) |
 
 ### Docker Compose
 While docker images remain consistent, compose files may change from time-to-time. Therefore, please use the following compose file when running this image within Azure. It's important that Foundry runs on port 80. The Application Service or Container Instance will take care of handling all the SSL requirements for you.
