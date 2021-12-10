@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-10T03:41:47.183Z
+date: 2021-12-10T03:43:23.963Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -17,7 +17,7 @@ Azure can accomodate a friendly budget for most people. If you need a developmen
 ## Docker
 Great shout-out to [Felddy](https://github.com/felddy/foundryvtt-docker#readme) for creating the docker container for Foundry. I made a couple of tweaks to the image to make it compatible within Azure. We'll be using my docker image located here: 
 | Name | Description | URL |
-|
+| ----------- | ----------- |
 | Docker Image | Prebuilt Image| armyguy255a/foundryvtt:latest |
 | Git Repository | Manual Build |[URL](https://github.com/ArmyGuy255A/foundryvtt-docker/tree/armyguy/azureci)
 
@@ -50,7 +50,7 @@ code docker-compose.yml
 3. Jump to the appropriate section that suit's your requirement
 
 | Tier | Description |
-|
+| ----------- | ----------- |
 | BUDGETEER | No dedicated backend storage |
 | WEEKENDER | Persistent Storage but no SSL |
 | ENTHUSIEST | When you gotta have the right Domain Name with SSL & Persistent Storage |
