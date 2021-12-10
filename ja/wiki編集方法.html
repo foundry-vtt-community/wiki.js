@@ -2,7 +2,7 @@
 title: Wikiの編集方法
 description: Wikiを編集するにあたって、必要な流れなどをまとめています
 published: true
-date: 2021-12-10T14:46:00.444Z
+date: 2021-12-10T17:23:12.668Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-11-29T06:05:08.950Z
@@ -15,6 +15,7 @@ dateCreated: 2021-11-29T06:05:08.950Z
 <p>&nbsp;</p>
 <p>先ず、Wikiを編集するには、編集用のアカウントを所持している必要があります。</p>
 <p>既にDiscordやGitHubのアカウントを持っている方は、１．を飛ばして２．へどうぞ。</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <h1>１．アカウント作成</h1>
 <p>DiscordやGitHubのアカウントを持っていない場合、今回はgithubというプログラムコード共有サイトのアカウントを取る方法を紹介します。</p>
@@ -38,6 +39,7 @@ dateCreated: 2021-11-29T06:05:08.950Z
 <p>自分のプロフィール画面へ遷移すればアカウント作成は以上です。</p>
 <p>但し、この後のログインがしやすくなるので、この画面はこのままにしておくといいかもしれません。</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 <h1>２．ログイン方法</h1>
 <p>&nbsp;</p>
 <p>では、FVTTのWikiの方へログインしてみましょう。</p>
@@ -54,10 +56,69 @@ dateCreated: 2021-11-29T06:05:08.950Z
 <p>無事ログインできると、英語版のWikiのホームページへ飛ぶので、日本語のページを選択します。</p>
 <p>Wikiの編集権限上、トップページ等は編集できませんが、フォルダの中にあるページに関しては、自由にページの作成や編集が可能です。</p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
 <h1>３．ページの編集方法</h1>
 <p>&nbsp;</p>
 <p>ここから先は、実際にページを作成・編集する時の話をして行きます。</p>
 <p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/wiki_makepageui.png"></figure>
+<p>&nbsp;</p>
+<p>右上のアイコンから、ページを新しく作成する事が出来ます。</p>
+<p>右下のアイコンでは、ページの編集が出来ます。</p>
+<p>尚、通常のアカウントでは、トップページや一部のページでは編集が行えません。</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<h2>ページの作成</h2>
+<p>&nbsp;</p>
+<p>ページの作成アイコンをクリックすると、次の画面になります。</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/wiki_makepage.png"></figure>
+<p>&nbsp;</p>
+<p>上はページの位置を決める際に参考にする程度で、ここで入力が必要なのは、パスを打ち込む部分だけです。</p>
+<p>このパスは、必ず「/テスト/テスト」の様に、「/」の後に一つフォルダの名前を入力し、更に「/」をいれることでその下にページを作るようにしてください。</p>
+<p>上手く行かないと、未承認画面が表示され、ページの作成が出来ません。</p>
+<p>また、このパスはwiki上では大きくは表示されないので、分かりやすく自由な名前にしてください。</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/wiki_editer.png"></figure>
+<p>&nbsp;</p>
+<p>次の画面で、どの方式でページを作成するかを選べます。</p>
+<p>プログラムなどの経験がある方は、「Markdown」や「Code」を選択すると自由にページを表現できますが、基本的には見たままに編集できる「Visual Editor」をお勧めします。</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/wiki_property1.png"></figure>
+<p>&nbsp;</p>
+<p>次に、ページの設定を決められます。</p>
+<p>タイトル：wikiの左端に表示される、ページのタイトル</p>
+<p>簡単な説明：タイトルの下に表示される説明</p>
+<p>パス：wikiのページの位置、基本変更する必要はありません</p>
+<p>カテゴリー：現在は使用されていません</p>
+<p>&nbsp;</p>
+<p>「予約」の部分を選択すると、次の設定が見られます。</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/wiki_property2.png"></figure>
+<p>&nbsp;</p>
+<p>公開状態：ページを公開状態にするか、非公開状態にするかを選べます。分かりにくいですが、右の状態が公開状態になります。</p>
+<p>公開の開始日時と、終了日時も設定する事が出来ますが、基本設定する事は無いと思います。</p>
+<p>&nbsp;</p>
+<p>OKを押すと、ページの設定が反映され、記事作成の画面へ移動します。</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h2>ページの編集</h2>
+<p>&nbsp;</p>
+<p>ページの編集画面は次の様になっています。</p>
+<p>&nbsp;</p>
+<figure class="image"><img src="/images/japanese-community/wiki_pageui.png">
+  <figcaption>いずれここにUIの説明も載せます</figcaption>
+</figure>
+<p>&nbsp;</p>
+<p>基本的にはテンプレート等はなく、自由に記事作成をしてください。</p>
+<p>トップページや既にある記事などを参考に書くのもいいでしょう。</p>
+<p>&nbsp;</p>
+<p><span class="text-big"><mark class="pen-red"><strong>但し、画像をページに挿入したい場合、注意点があります。</strong></mark></span></p>
+<p>画像を挿入する場合、画像をアップロードする場所は、「　/images/japanese-community/　」の中に、分かりやすいようにフォルダを新規作成し、そちらに入れるようにしてください。システム毎か、ユーザー毎に分けられていれば十分です。</p>
+<p>&nbsp;</p>
+<p>もしWiki作成について分からない点がある際は、Discord鯖の日本支部の方で、Wiki担当者であるmissileか、Brother Sharpの方まで連絡下さい。</p>
+<p>&nbsp;</p>
+<p>また、Wikiの記事を作成したり、既存の記事を編集した際に、Discord鯖の日本支部の「wiki」チャンネルで、宣伝をしてもいいかもしれません。</p>
+<p>その情報が欲しかった！という反応が貰えるかもしれません。「ついでにこういう情報も乗っけてくれない？」という反応があるかもしれません。</p>
+<p>いずれにせよ、皆さんのWikiの活発な活動へのご協力を、お願いします！</p>
 <p>&nbsp;</p>
