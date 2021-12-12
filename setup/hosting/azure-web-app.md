@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-10T03:44:51.117Z
+date: 2021-12-12T21:39:54.905Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -80,13 +80,21 @@ services:
 
 #### Deploy via CLI
 
+1. Use the same technique for creating a deployment script as the .yml file. This time, make it executable
+
+```bash
+code budget-deployment.sh
+chmod +x budget-deployment.sh
+```
+
+2. Replace the resource group name with whatever value you want. I recommend keeping it as FoundryVTT.
 ```bash
 #/bin/bash
 
 # Variables
-appName="FoundryVTT-$random"
-asp="$appName-ASP"
 resourceGroup=FoundryVTT
+appName="$resourceGroup$random"
+asp="$appName-ASP"
 location="EastUS"
 
 # Create a Resource Group
@@ -104,4 +112,10 @@ az webapp config container set --multicontainer-config-file docker-compose.yml -
 # Copy the result of the following command into a browser to see the web app.
 echo http://$appName.azurewebsites.net
 ```
+
+3. Run the script.
+```code
+./budget-deployment.sh
+```
+
 
