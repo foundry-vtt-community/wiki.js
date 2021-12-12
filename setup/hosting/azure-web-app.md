@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-12T21:43:44.104Z
+date: 2021-12-12T22:04:50.971Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -72,7 +72,6 @@ services:
       - FOUNDRY_PASSWORD=YourFoundryPassword
       - FOUNDRY_USERNAME=YourFoundryUsername
       - FOUNDRY_ADMIN_KEY=yourCoolFoundaryPassword123
-      - CONTAINER_PRESERVE_OWNER=^.*data.*$
       - CONTAINER_PRESERVE_CONFIG=true
 ```
 2. Ensure you replace everything in here with your values. 
@@ -92,8 +91,8 @@ chmod +x budget-deployment.sh
 #/bin/bash
 
 # Variables
-resourceGroup=FoundryVTT
-appName="$resourceGroup$RANDOM"
+resourceGroup="demofoundry"
+appName="${resourceGroup}$RANDOM"
 asp="$appName-ASP"
 location="EastUS"
 
@@ -103,13 +102,11 @@ az group create --name $resourceGroup --location $location
 # Create an App Service Plan
 az appservice plan create --name $asp --resource-group $resourceGroup --location $location --is-linux --sku F1
 
-# Create a Web App
-az webapp create --name $appName --plan $asp --resource-group $resourceGroup
-
-# Configure Web App with a Multi-Container Docker Compose file
-az webapp config container set --multicontainer-config-file docker-compose.yml --name $appName --resource-group $resourceGroup
+# Create a Web App with a Multi-Container Docker File
+az webapp create --name $appName --plan $asp --resource-group $resourceGroup --multicontainer-config-type Compose --multicontainer-config-file docker-compose.yml
 
 # Copy the result of the following command into a browser to see the web app.
+echo "Your FoundryVTT Site should be ready in a few minutes."
 echo http://$appName.azurewebsites.net
 ```
 
