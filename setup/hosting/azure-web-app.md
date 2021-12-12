@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-12T22:04:50.971Z
+date: 2021-12-12T22:12:19.063Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -95,6 +95,9 @@ resourceGroup="demofoundry"
 appName="${resourceGroup}$RANDOM"
 asp="$appName-ASP"
 location="EastUS"
+
+#Update the docker compose file
+sed -i 's/appurl/http:\/\/$appName.azurewebsites.net' docker-compose.yml
 
 # Create a Resource Group
 az group create --name $resourceGroup --location $location
