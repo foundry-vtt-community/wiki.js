@@ -2,7 +2,7 @@
 title: Unlisted Modules
 description: 
 published: true
-date: 2021-07-11T20:13:59.221Z
+date: 2021-12-12T22:14:15.776Z
 tags: modules
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
@@ -12,11 +12,14 @@ Get Modules for Foundry VTT on the official site: [https://foundryvtt.com/packag
 
 The list below is an unofficial and incomplete list of unlisted game modules.
 
-# Foundry VTT Modules (Universal)
+# Unlisted Foundry VTT Modules
 
+<details><summary>
 Foundry modules that work across all or most systems are noted here. These may include reskins, general improvement mods, and more.
-
----
+  
+> Many of the modules are incompatible with version 0.8.x and higher. Proceed with caution.
+{.is-danger}
+</summary>
 
 ## Create Actors from Folder
 * **Author**: _cody#4113 on Discord
@@ -97,23 +100,6 @@ Enabling the module will cause any roll you attempt to make open up a prompt tha
 
 ---
 
-## Haste
-
-* **Author**: grape_juice#2539 on Discord, support on [Patreon](https://www.patreon.com/foundry_grape_juice).
-* **Foundry VTT Compatibility**: 0.6.0+
-* **System Compatibility (If applicable)**: Universal
-
-### Link to Module
-* [https://gitlab.com/jesusafier/haste](https://gitlab.com/jesusafier/haste)
-
-
-### Description
-An experimental performance enhancement tweak modules for FoundryVTT it has 2 features:
-
-- Wall fix - patches the FOW LOS FOV calculation to be much more efficient using spatial grid calculations. Big words that mean performance is basically unchanged when running 4000+ walls and 50+ light sources on large scenes.
-- Adaptive GPU FPS - Stops the canvas redraws when no changes occurred in the scene, reduces GPU usage to 0% unless a token moves or the canvas is panned. Best used when disabling cursor pointers. When using this options you can set the FPS limiter to 60fps.
-
----
 
 ## Infinite Folders
 
@@ -210,7 +196,7 @@ Foundry modules that work within Dungeons and Dragons 5th Edition are noted here
 
 * **Author**: Frederik Eschmann (Aylas#4838 on Discord; FreddyEs on GitHub)
 * **Foundry VTT Compatibility**: 0.4.5+
-* **System Compatibility (If applicable)**: D&D 5e v0.81+
+* **System Compatibility (If applicable)**: DnD 5e v0.81+
 
 ### Link to Module
 * [https://fvtt-modules.eschmann.online/](https://fvtt-modules.eschmann.online/)
@@ -231,32 +217,9 @@ Note: In Version 1.0.0, this module will also add styles for the ChatLog Message
 * The module is paywalled, and requires subscribing to KaKaRoTo’s [Patreon](https://www.patreon.com/kakaroto).
 
 ### Description 
-This module is a PC application that imports most facets of a Roll 20 campaign, including scenes, walls, dynamic lighting, character sheets (D&D 5e), handouts, chat logs and more. 
+This module is a PC application that imports most facets of a Roll 20 campaign, including scenes, walls, dynamic lighting, character sheets (DnD 5e), handouts, chat logs and more. 
 
 Bear in mind that exporting a campaign from Roll20 may violate the EULA.
-
----
-
-## Summoner
-
-* **Author**: Jon Whitehouse Discord@MTGCarver#7753
-* **Foundry VTT Compatibility**: 0.6.0
-* **System Compatibility (If applicable)**: DnD5e
-
-### Link to Module
-* [https://github.com/Jonwh25/summoner](https://github.com/Jonwh25/summoner)
-
-### Description
-This FoundryVTT Module adds a simple compendium pack to help with DnD5e spells that summon creatures. It is nothing fancy. My players were casting find familiar and I tried to use the npc creatures that are in the DnD5e system and it wasn't working. So all I did was create actor/player types for each creature they could summon.
-
-Hope this saves you some time.
-
-Right now this only supports the following spells:
-
-*Find Familiar
-*Unseen Servant
-
----
 
 
 # Foundry VTT Modules for GURPS
@@ -313,7 +276,7 @@ This module adds the 'Slashing' weapon quality as well as the expanded weapons f
 ### Link to Module
 * [https://github.com/DasSauerkraut/wfrp-gwmwg](https://github.com/DasSauerkraut/wfrp-gwmwg)
 
----
+</details>
 
 # Defunct Foundry VTT Modules
 
@@ -335,12 +298,24 @@ These are modules which have had their functionality merged into core.
 - Tiles Browser
 - Z Order
 - ZoomKey
+- [Batch Permission Change by Folder](https://github.com/wsaunders1014/BatchPermissionsByFolder)
 
 ### 0.7.x
 - Deselection
 - [Noback](https://github.com/VanceCole/noback)
 - [No Summon Vision](https://github.com/schultzcole/FVTT-No-Summon-Vision)
 - [Token Owner Selection Tweak](https://github.com/ElfFriend-DnD/foundryvtt-tokenOwnerSelectionTweak)
+- [Quick Scene View](https://gitlab.com/reichler/quicksceneview)
+- [Note Text Color](https://github.com/earlSt1/vtt-note-text-color)
+
+### 0.8.x
+
+- [Roofs](https://github.com/League-of-Foundry-Developers/roofs)
+
+### v9
+
+- [Button Overflow](https://github.com/ardittristan/VTTButtonOverflow)
+- [Macro Folders](https://github.com/earlSt1/vtt-macro-folders)
 
 
 ### Integrated into Core DND5E System
@@ -371,7 +346,27 @@ These modules have either been directly subsumed by other modules, or discontinu
 | [Roll20 NPC Importer, for 5e](https://github.com/syl3r86/roll20npcimporter) | [R20 Converter](https://github.com/kakaroto/R20Converter) |
 | [Spell Browser](https://github.com/syl3r86/Spell-Browser) | [Compendium Browser](https://foundryvtt.com/packages/compendium-browser/) |
 | [CursorZoom](https://github.com/itamarcu/CursorZoom) | [Zoom/Pan Options](https://foundryvtt.com/packages/zoom-pan-options/) |
-
+| [Show Drag Distance](https://github.com/wsaunders1014/ShowDragDistance) | [Drag Ruler](https://github.com/manuelVo/foundryvtt-drag-ruler)
+| [Mess](https://github.com/Moerill/Mess) | [Mars](https://github.com/Moerill/fvtt-mars-5e)
+| [Blood 'n Guts](https://github.com/edzillion/blood-n-guts) | [Splatter](https://github.com/theripper93/Splatter)
+| [Group Initiative](https://github.com/tonifisler/foundry-group-initiative) | [Combat Tracker Groups](https://github.com/arcanistzed/ctg)
+| [Target Enhancements](https://github.com/eadorin/target-enhancements) | [Smart Target](https://github.com/theripper93/Smart-Target)
+| [The Furnace](https://github.com/League-of-Foundry-Developers/fvtt-module-furnace) | See the README |
+| [Favorite Items Tab](https://github.com/syl3r86/favtab) | [dnd5e Character Actions](https://github.com/ElfFriend-DnD/foundryvtt-dnd5eCharacterActions) |
+| [SVG Loader](https://gitlab.com/moerills-fvtt-modules/svg-loader) | [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import) |
+| Teleport | [Multilevel Tokens](https://github.com/grandseiken/foundryvtt-multilevel-tokens) |
+| [Look at That](https://github.com/wsaunders1014/LookAtThat) | [Pings](https://gitlab.com/foundry-azzurite/pings/) or [PnP - Pointer and Pings](https://foundryvtt.com/packages/pointer/) |
+| [Sky's Token Tooltips](https://github.com/Sky-Captain-13/foundry) | [Token Tooltip Alt](https://foundryvtt.com/packages/token-tooltip-alt) |
+| Dynamic Effects SRD | [Dynamic Active Effects SRD](https://github.com/kandashi/Dynamic-Effects-SRD) |
+| [GM Background](https://github.com/death-save/gm-bg) | ~~[Scenery - Background Image Variation Manager](https://github.com/VanceCole/scenery)~~ |
+| [Token Bar](https://www.foundryvtt-hub.com/package/tokenbar) | [Token Action HUD](https://github.com/Drental/fvtt-tokenactionhud)
+| [Darker Vision for 5e](https://github.com/Voldemalort/darker-vision-for-5e); [Darkvision5e](https://gitlab.com/Nessin/darkvision5e) | [Perfect Vision](https://github.com/dev7355608/perfect-vision) |
+| [I See You 5e](https://github.com/herasrobert/icu5e) | ~~[Conditional Visibility](https://github.com/gludington/conditional-visibility)~~ |
+| [Module Settings Sorter](https://github.com/eadorin/module-settings-sorter) | |
+| [Token Hotbar](https://github.com/League-of-Foundry-Developers/foundry-token-hotbar) | [Token Hotbar](https://github.com/janssen-io/foundry-tokenhotbar-js) |
+| [The Expanse (Age System)](https://gitlab.com/TheGrandPickle/the-expanse) | [The Expanse (AGE) Official System](https://github.com/Foxfyre/expanse) |
+| [Image Fog](https://github.com/ElfFriend-DnD/foundryvtt-imageFog) | [Simple Fog](https://github.com/League-of-Foundry-Developers/simplefog) |
+| [Bullseye](https://gitlab.com/Ionshard/foundry-vtt-bullseye) | [Bullseye NG](https://github.com/DrMcCoy/bullseye-ng) |
 
 ## Discontinued or Abandoned Modules
 
@@ -417,6 +412,148 @@ We consider a module abandoned if its author has disappeared for several months 
 * **Author**: RaySSharma#4736 on Discord
 * **Project**: [https://github.com/RaySSharma/fvtt-rolltable-buttons/tree/84c2634e31c084cf0f87614fa43257c1c2f9fe32](https://github.com/RaySSharma/fvtt-rolltable-buttons/tree/84c2634e31c084cf0f87614fa43257c1c2f9fe32)
 * **Description**: This module adds a button to the chat controls for easier access to rolltables. Came about as a way to add critical-hit decks for players.
+
+---
+  
+## Haste
+
+* **Author**: grape_juice#2539 on Discord, support on [Patreon](https://www.patreon.com/foundry_grape_juice).
+* **Foundry VTT Compatibility**: 0.6.0+
+* **System Compatibility (If applicable)**: Universal
+
+### Link to Module
+* [https://gitlab.com/jesusafier/haste](https://gitlab.com/jesusafier/haste)
+
+
+### Description
+An experimental performance enhancement tweak modules for FoundryVTT it has 2 features:
+
+- Wall fix - patches the FOW LOS FOV calculation to be much more efficient using spatial grid calculations. Big words that mean performance is basically unchanged when running 4000+ walls and 50+ light sources on large scenes.
+- Adaptive GPU FPS - Stops the canvas redraws when no changes occurred in the scene, reduces GPU usage to 0% unless a token moves or the canvas is panned. Best used when disabling cursor pointers. When using this options you can set the FPS limiter to 60fps.
+  
+---
+
+## Summoner
+
+* **Author**: Jon Whitehouse Discord@MTGCarver#7753
+* **Foundry VTT Compatibility**: 0.6.0
+* **System Compatibility (If applicable)**: DnD5e
+
+### Link to Module
+* [https://github.com/Jonwh25/summoner](https://github.com/Jonwh25/summoner)
+
+### Description
+This FoundryVTT Module adds a simple compendium pack to help with DnD5e spells that summon creatures. It is nothing fancy. My players were casting find familiar and I tried to use the npc creatures that are in the DnD5e system and it wasn't working. So all I did was create actor/player types for each creature they could summon.
+
+Hope this saves you some time.
+
+Right now this only supports the following spells:
+
+*Find Familiar
+*Unseen Servant
+
+---
+
+## SVG Loader
+
+* **Author**: Moerill#7205 on Discord. He accepts donations at his [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FYZ294SP2JBGS&source=url).
+* **Foundry VTT Compatibility**: 0.3+
+* **System Compatibility (If applicable)**: Universal
+
+### Link to Module
+* [https://gitlab.com/moerills-fvtt-modules/svg-loader](https://gitlab.com/moerills-fvtt-modules/svg-loader)
+
+### Description
+This module allows to load walls, lights and sources through .svg files, provided e.g. by DungeonFog.
+
+---
+
+## Follow Me
+
+* **Author**: [Brunshine](https://brunhine.com)
+* **Foundry VTT Compatibility**: pre 0.7.x
+* **System Compatibility (If applicable)**: Universal
+
+### Link to Module
+* https://brunhine.com/fvtt/followme
+
+### Description
+
+Follow Me is a module for Foundry VTT that allows tokens to follow or be followed by other tokens.
+
+---
+
+## Track-Tracker
+
+* **Author**: CarterDC
+* **Foundry VTT Compatibility**: 0.8.x
+
+### Link to Module
+* https://github.com/CarterDC/track-tracker
+
+### Description
+
+This module for Foundry Virtual Tabletop adds new functionnalities to the Playlist Sidebar.
+
+It's main purpose is to display a progression tracker for each currently playing track. It also adds some other related features and, as a result, changes the overall layout of the "currently playing" pannel.
+
+Other features include a mark-in / mark-out system (to only play selected parts) available from the context menu. The current time is displayed in a tooltip over the tracker. Also a mute button, because why not.
+
+---
+
+## Pick up Stix
+
+* **Author**: Kyle McKnight 
+* **Foundry VTT Compatibility**: 0.6.x - 0.7.x
+
+### Link to Module
+* https://github.com/kamcknig/pick-up-stix
+
+### Description
+
+Pick-Up-Stix allows you to create tokens out of items. These tokens can then be interacted with by players. Tokens can either be single items or containers that hold multiple other items and/or currency that can be looted by players.
+
+---
+
+## MINDMAP - Moerills Indecision Negator, Decision Maker, And Planner
+
+* **Author**: Moerill
+* **Foundry VTT Compatibility**: 0.5.5
+
+### Link to Module
+* https://gitlab.com/moerills-fvtt-modules/graphs
+
+### Description
+This module for Foundry VTT adds a third view to each Journal Entry: The MindMap View.
+In this view you organize you can create a network graph for organizing your relations, flow charts, campaign structures, ideas or whatever you can imagine! Just Drag the data from the sidebar to begin planning.
+
+---
+
+## Speaker Stats
+
+* **Author**: jvir
+* **Foundry VTT Compatibility**: 0.5.x
+
+### Link to Module
+* https://gitlab.com/jvir/foundryvtt-speakerstats
+
+### Description
+
+A simple module that keeps statistics of time spoken by each player for GM control. This way he can know if a player is participating too little and try to correct it (or not).
+
+---
+
+## Route Finder
+
+* **Author**: Exote
+* **Foundry VTT Compatibility**: 0.6.0
+
+### Link to Module
+* https://github.com/Exote/foundry-vtt-pathfinding
+
+### Description
+
+A module to find the shortest route for a token to reach a chosen point.
 
 ---
 
