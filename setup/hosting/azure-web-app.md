@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-12T21:39:54.905Z
+date: 2021-12-12T21:43:44.104Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -93,7 +93,7 @@ chmod +x budget-deployment.sh
 
 # Variables
 resourceGroup=FoundryVTT
-appName="$resourceGroup$random"
+appName="$resourceGroup$RANDOM"
 asp="$appName-ASP"
 location="EastUS"
 
