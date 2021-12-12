@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-12T22:13:01.268Z
+date: 2021-12-12T22:25:10.992Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -42,12 +42,7 @@ Once you're in, I highly recommend opening an [**Azure Cloud Shell**](https://do
 	a. You can create a new or use an existing storage account. (It's basically free.)
   - **Note** : Do this if you want lots of persistent storage for modules.
 
-2. Create the .yml file in the Cloud Shell
-```bash
-code docker-compose.yml
-```
-
-3. Jump to the appropriate section that suit's your requirement
+2. Jump to the appropriate section that suit's your requirement
 
 | Tier | Description |
 | ----------- | ----------- |
@@ -58,7 +53,11 @@ code docker-compose.yml
 ### BUDGETEER (FREE)
 All you need for this implementation is a free App Service Plan and an App Service. 
 
-1. Copy the following YAML into the *docker-compose.yml* in the cloud shell
+2. Create the .yml file in the Cloud Shell
+```bash
+code docker-compose-budget.yml
+```
+1. Copy the following YAML into the *docker-compose-budget.yml* in the cloud shell
 ```yml
 version: "3.8"
 
@@ -92,13 +91,14 @@ chmod +x budget-deployment.sh
 
 # Variables
 resourceGroup="demofoundry"
+configFile=docker-compose-budget.yml
 appName="${resourceGroup}$RANDOM"
 asp="$appName-ASP"
 location="EastUS"
 appUrl=http://$appName.azurewebsites.net
 
 #Update the docker compose file
-sed -i 's/appurl/$appUrl' docker-compose.yml
+sed -i 's/appurl/$appUrl' docker-compose-budget.yml
 
 # Create a Resource Group
 az group create --name $resourceGroup --location $location
