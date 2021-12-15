@@ -2,15 +2,13 @@
 title: Dialog
 description: 
 published: true
-date: 2021-12-15T22:09:07.377Z
+date: 2021-12-15T22:10:19.749Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-12-15T22:09:07.377Z
 ---
 
 # Dialog
-###### tags: `wiki`
-
 ![Up to date as of v8](https://img.shields.io/static/v1?label=FoundryVTT&message=v8&color=informational)
 
 ## Overview
