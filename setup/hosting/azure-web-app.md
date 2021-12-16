@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-16T03:43:21.997Z
+date: 2021-12-16T03:43:49.071Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -33,7 +33,7 @@ Nobody can deny that running Foundry on your favorite laptop at home is pretty s
 ## Getting Started
 First, ensure you have an active Azure Subscription. You can get one here: [Azure](https://portal.azure.com)
 
-### Dev / Test Tier (F1 or B1)
+### Dev / Test Tier ( App Service Plan / F1 or B1)
 All you need for this implementation is an F1 or B1 App Service Plan and an App Service. 
 
 1. Copy the following YAML into the *docker-compose.yml* and save it locally. You will use this .yml file when you deploy to Azure
