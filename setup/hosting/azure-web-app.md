@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-12T22:32:14.742Z
+date: 2021-12-16T03:32:00.993Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -44,78 +44,94 @@ Once you're in, I highly recommend opening an [**Azure Cloud Shell**](https://do
 
 2. Jump to the appropriate section that suit's your requirement
 
-| Tier | Description |
-| ----------- | ----------- |
-| BUDGETEER | No dedicated backend storage |
-| WEEKENDER | Persistent Storage but no SSL |
-| ENTHUSIEST | When you gotta have the right Domain Name with SSL & Persistent Storage |
 
-### BUDGETEER (FREE)
-All you need for this implementation is a free App Service Plan and an App Service. 
+### Dev / Test Tier (F1 or B1)
+All you need for this implementation is a F1 or B1 App Service Plan and an App Service. 
 
-2. Create the .yml file in the Cloud Shell
-```bash
-code docker-compose-budget.yml
-```
-1. Copy the following YAML into the *docker-compose-budget.yml* in the cloud shell
+1. Copy the following YAML into the *docker-compose.yml* and save it locally. You will use this .yml file when you deploy to Azure
 ```yml
 version: "3.8"
 
 services:
   foundry:
     image: armyguy255a/foundryvtt:latest
-    hostname: yourAppName.azurewebsites.net
+    hostname: YourAppName.azurewebsites.net
     init: true
     restart: always
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/Data:/data
     environment:
       - FOUNDRY_PASSWORD=YourFoundryPassword
       - FOUNDRY_USERNAME=YourFoundryUsername
-      - FOUNDRY_ADMIN_KEY=yourCoolFoundaryPassword123
+      - FOUNDRY_ADMIN_KEY=YourFoundryVTTAdminPassword
+      - CONTAINER_CACHE=/data/cache
+      - CONTAINER_PRESERVE_OWNER=^.*data.*$
+      - CONTAINER_PATCHES=/data/patches
       - CONTAINER_PRESERVE_CONFIG=true
+      - CONTAINER_VERBOSE=true
+    ports:
+      - 80:2085
 ```
-2. Ensure you replace everything in here with your values. 
-3. Save and close the file. 
+2. Deploy to Azure
 
 #### Deploy via CLI
 
-1. Use the same technique for creating a deployment script as the .yml file. This time, make it executable
+Note: I appologize for not populating this section. I found some serious problems when deploying via the CLI and it required significant changes to make operational. I will only post instructions for manually deploying. You CAN deploy this via CI/CD if you wanted to. This is beyond the scope of this wiki entry. 
 
-```bash
-code budget-deployment.sh
-chmod +x budget-deployment.sh
-```
+#### Deploy via Azure Portal
 
-2. Replace the resource group name with whatever value you want. I recommend keeping it as FoundryVTT.
-```bash
-#/bin/bash
+1. Ensure you select the .yml file that is suits your budget. Remember, you get what you pay for!
 
-# Variables
-resourceGroup="demofoundry"
-configFile=docker-compose-budget.yml
-appName="${resourceGroup}$RANDOM"
-asp="$appName-ASP"
-location="EastUS"
+2. Navigate to https://portal.azure.com
 
-#Update the docker compose file
-sed -i 's/appurl/http:\/\/'$appName'.azurewebsites.net/' docker-compose.yml
+3. Click on "+ Create a Resource"
 
-# Create a Resource Group
-az group create --name $resourceGroup --location $location
+4. Create a Web App
+**Basics Tab**
+a. Recommend creating a new Resource Group called **FoundryVTT**
+b. Name: Use a **unique** name
+c. Publish: **Docker Container**
+d. Operating System: **Linux**
+e. Region: Choose a location **closest** to you
+f. App Service Plan: Choose the Tier that suits your lifestyle. **You can always scale this up or down**.
+**Docker Tab**
+a. Options: **Docker Compose (Preview)**
+b. Image Source: **Docker Hub**
+c. Access Type: **Public**
+d. Configuration File: Select your **docker-compose** file
+**Review Tab**
+a. Ensure you selected the correct App Service Plan tier. F1 is Free.
+b. Click **Review + Create**
+c. Click **Create**
+**Post Deployment**
+a. Click **Go To Resource** or navigate to your App Service you named in the Basic's Tab
+b. Click on the **Configuration** blade
+c. Set the **WEBSITES_ENABLE_APP_SERVICE_STORAGE** application setting to **true**\
+	**Note**: This will enable persistent storage across reboots on the app service. 
+d. Click on the **Overview** blade
+e. Restart the App Service
+f. Navigate to your application using the URL provided in the **Overview** blade
 
-# Create an App Service Plan
-az appservice plan create --name $asp --resource-group $resourceGroup --location $location --is-linux --sku F1
+**Note**: Your installation can take from 5-10 minutes to initialize. Please be patient as your app service downloads the docker image and initializes
 
-# Create a Web App with a Multi-Container Docker File
-az webapp create --name $appName --plan $asp --resource-group $resourceGroup --multicontainer-config-type Compose --multicontainer-config-file docker-compose.yml
+### Troubleshooting
+Troubleshooting can be a pain. Luckily, there are only a few things that can go wrong here.
 
-# Copy the result of the following command into a browser to see the web app.
-echo "Your FoundryVTT Site should be ready in a few minutes."
-echo http://$appName.azurewebsites.net
-```
+#### : ( Application Error
+This is pretty common, and frustrating. Use these steps to help troubleshoot.
+1. Click on the **Deployment Center** blade
+2. Click on **Logs**
 
-3. Run the script.
-```code
-./budget-deployment.sh
-```
+Scan through the logs and find your issue/resolution below. 
+
+#### Foundry doesn't load the License Agreement
+- This seems to happen most frequently when using the Free Tier. You could try using the B1 tier. It's still fairly cheap. I'm not sure what the exact cause is here. It could be related to the available CPU on the free tier. I think it might just be too slow, I'm afraid. You can always switch this back to F1 at the end of your game session. This will save you some $$$. 
+- Maybe you didn't wait long enough. Try refreshing the browser. 
+
+#### Stopping site *YourAppNameHere* because it failed during startup.
+- This one is easy. Something happened with your persistent volume.
+- The app service can't map the volume in your docker-compose. Usually caused because the WEBSITES_ENABLE_APP_SERVICE_STORAGE setting wasn't set to **true**. Ensure you restart the app service and try again.
+
+
 
 
