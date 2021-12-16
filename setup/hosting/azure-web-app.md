@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-16T03:32:00.993Z
+date: 2021-12-16T03:40:24.695Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -22,13 +22,10 @@ Great shout-out to [Felddy](https://github.com/felddy/foundryvtt-docker#readme) 
 | Git Repository | Manual Build |[URL](https://github.com/ArmyGuy255A/foundryvtt-docker/tree/armyguy/azureci) |
 
 ### Docker Compose
-While docker images remain consistent, compose files may change from time-to-time. Therefore, please use the following compose file when running this image within Azure. It's important that Foundry runs on port 80. The Application Service or Container Instance will take care of handling all the SSL requirements for you.
-
-Here's the basic docker-compose.yml file we'll use for the deployments.
-
+While docker images remain consistent, compose files may change from time-to-time. Therefore, please use the following compose file in this wiki to run within Azure. It's important that Foundry runs on port 80 in Azure. The Application Service or Container Instance will take care of handling all the SSL requirements for you.
 
 ### SSL
-No need to worry about SSL if you are on a paid tier. It comes standard. If you want to implement a custom domain name with a custom SSL certificate, that's not a problem either. You can pick up a cheap .app domain name from GoDaddy that comes with a free SSL certificate for about $19. 
+No need to worry about SSL if you are on a paid tier. If you care about encryption, be sure to choose the B1 subscription plan. It comes standard. If you want to implement a custom domain name with a custom SSL certificate, that's not a problem either. You can pick up a cheap .app domain name from GoDaddy that comes with a free SSL certificate for about $19. The B1 service plan will allow you to use a cert from GoDaddy and register your custom domain name.
 
 ## Let's PaaS
 Nobody can deny that running Foundry on your favorite laptop at home is pretty sweet. But, imagine telling your friends that you're running it in the cloud without the virtual machine. That's right... Each of these implemetations takes advantage of a concept known as Platform as a Service. This is the cheapest way to implement anything in the cloud. Let's get started!
@@ -36,17 +33,8 @@ Nobody can deny that running Foundry on your favorite laptop at home is pretty s
 ## Getting Started
 First, ensure you have an active Azure Subscription. You can get one here: [Azure](https://portal.azure.com)
 
-Once you're in, I highly recommend opening an [**Azure Cloud Shell**](https://docs.microsoft.com/en-us/azure/cloud-shell/overview) and using the commands I provide in this tutorial.
-
-1. Open a new Cloud Shell
-	a. You can create a new or use an existing storage account. (It's basically free.)
-  - **Note** : Do this if you want lots of persistent storage for modules.
-
-2. Jump to the appropriate section that suit's your requirement
-
-
 ### Dev / Test Tier (F1 or B1)
-All you need for this implementation is a F1 or B1 App Service Plan and an App Service. 
+All you need for this implementation is an F1 or B1 App Service Plan and an App Service. 
 
 1. Copy the following YAML into the *docker-compose.yml* and save it locally. You will use this .yml file when you deploy to Azure
 ```yml
@@ -72,13 +60,12 @@ services:
     ports:
       - 80:2085
 ```
-2. Deploy to Azure
 
-#### Deploy via CLI
+### Deploy via CLI
 
 Note: I appologize for not populating this section. I found some serious problems when deploying via the CLI and it required significant changes to make operational. I will only post instructions for manually deploying. You CAN deploy this via CI/CD if you wanted to. This is beyond the scope of this wiki entry. 
 
-#### Deploy via Azure Portal
+### Deploy via Azure Portal
 
 1. Ensure you select the .yml file that is suits your budget. Remember, you get what you pay for!
 
@@ -126,11 +113,11 @@ Scan through the logs and find your issue/resolution below.
 
 #### Foundry doesn't load the License Agreement
 - This seems to happen most frequently when using the Free Tier. You could try using the B1 tier. It's still fairly cheap. I'm not sure what the exact cause is here. It could be related to the available CPU on the free tier. I think it might just be too slow, I'm afraid. You can always switch this back to F1 at the end of your game session. This will save you some $$$. 
-- Maybe you didn't wait long enough. Try refreshing the browser. 
+- Maybe you didn't wait long enough. Try refreshing the browser.
 
 #### Stopping site *YourAppNameHere* because it failed during startup.
 - This one is easy. Something happened with your persistent volume.
-- The app service can't map the volume in your docker-compose. Usually caused because the WEBSITES_ENABLE_APP_SERVICE_STORAGE setting wasn't set to **true**. Ensure you restart the app service and try again.
+- The app service can't map the volume in your docker-compose. Usually caused because the WEBSITES_ENABLE_APP_SERVICE_STORAGE setting wasn't set to **true**. Ensure you correct this problem, restart the app service and try again.
 
 
 
