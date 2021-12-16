@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-16T03:40:24.695Z
+date: 2021-12-16T03:43:02.061Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -100,6 +100,11 @@ e. Restart the App Service
 f. Navigate to your application using the URL provided in the **Overview** blade
 
 **Note**: Your installation can take from 5-10 minutes to initialize. Please be patient as your app service downloads the docker image and initializes
+
+### Better Backend Storage (Storage Account)
+I prefer to use a storage account to house all of my data. You should too. It's cheap and a great way to make sure you never lose your hardcore, custom-built campaign. Here's what you need to do!
+1. Deploy a storage account
+
 
 ### Troubleshooting
 Troubleshooting can be a pain. Luckily, there are only a few things that can go wrong here.
