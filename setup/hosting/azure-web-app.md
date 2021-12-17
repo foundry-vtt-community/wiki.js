@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-17T18:32:43.661Z
+date: 2021-12-17T18:33:33.938Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
