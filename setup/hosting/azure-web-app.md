@@ -2,7 +2,7 @@
 title: Azure App Service
 description: Getting Started with Foundry VTT hosted in Azure
 published: true
-date: 2021-12-16T03:43:49.071Z
+date: 2021-12-17T18:32:17.271Z
 tags: azure, self-hosting, docker, app service, web app, container, application service, web application
 editor: markdown
 dateCreated: 2021-12-10T03:41:47.183Z
@@ -57,8 +57,6 @@ services:
       - CONTAINER_PATCHES=/data/patches
       - CONTAINER_PRESERVE_CONFIG=true
       - CONTAINER_VERBOSE=true
-    ports:
-      - 80:2085
 ```
 
 ### Deploy via CLI
@@ -69,7 +67,7 @@ Note: I appologize for not populating this section. I found some serious problem
 
 1. Ensure you select the .yml file that is suits your budget. Remember, you get what you pay for!
 
-2. Navigate to https://portal.azure.com
+2. Navigate to [Azure](https://portal.azure.com)
 
 3. Click on "+ Create a Resource"
 
@@ -87,7 +85,7 @@ b. Image Source: **Docker Hub**
 c. Access Type: **Public**
 d. Configuration File: Select your **docker-compose** file
 **Review Tab**
-a. Ensure you selected the correct App Service Plan tier. F1 is Free.
+a. Ensure you selected the correct App Service Plan tier. F1 is Free. I recommend **B1** (~$20/month)
 b. Click **Review + Create**
 c. Click **Create**
 **Post Deployment**
@@ -101,10 +99,74 @@ f. Navigate to your application using the URL provided in the **Overview** blade
 
 **Note**: Your installation can take from 5-10 minutes to initialize. Please be patient as your app service downloads the docker image and initializes
 
+### Minimize Costs
+The great thing about the cloud is you only pay for what you use. That said, Microsoft will continue to bill you even if your app service is not used. Be sure to scale your App Service down when you're finished with your gaming session. Since this IS the cloud, you could just delete the app service alltogether IF you're using backend storage. See below on how to set that up.
+
 ### Better Backend Storage (Storage Account)
 I prefer to use a storage account to house all of my data. You should too. It's cheap and a great way to make sure you never lose your hardcore, custom-built campaign. Here's what you need to do!
 
-### Troubleshooting
+**Create a Storage Account**
+1. Navigate to [Azure](https://portal.azure.com)
+2. Click on "+ Create a Resource"
+3. Create a Storage Account with the following settings
+	* **Resource Group**: Use the same as your app service
+	* **Storage Account Name**: Any unique name
+	* **Performance**: Standard
+	* **Redundancy**: Locally Redundant Storage
+4. Click on **Review + Create**
+5. Click **Create**
+
+**Create a File Share**
+1. Navigate to the new Storage Account you just created
+2. Click the **File Shares** blade under **Data storage** in the navigation pane
+3. Click the **+ File Share** button
+4. Create any name you want (Remember this!)
+5. Ensure the Tier is set to **Tranaction Optimized**
+5. Click **Create**
+
+**Modify App Service Configuration**
+1. Navigate to your App Service
+2. Click on the **Configuration** blade under **Settings**
+3. Ensure the **WEBSITES_ENABLE_APP_SERVICE_STORAGE** application setting is set to **true**
+4. Click on the **Path mappings** tab
+5. Click the **+ New Azure Storage Mount** button and use the following parameters
+* Name: **fvttbackend** (This is the mount point!)
+* Configuration Options: basic
+* Storage Accounts: Select **your storage account** you made earlier
+* Storage Type: Azure Files
+* Storage Container: Select **your file share** you made earlier
+* Mount Path: /data
+6. Click **OK**
+7. Click **Save**
+
+**Update the docker-compose Configuration**
+1. Click on the **Deployment Center** blade in the Deployment section
+2. Replace the Config Settings volume configuration with the following changes:
+**BEFORE**
+```yml
+    volumes:
+      - ${WEBAPP_STORAGE_HOME}/Data:/data
+```
+**AFTER**
+```yml
+    volumes:
+      - fvttbackend:/data
+```
+3. Click **Save**
+4. Wait or Manually restart the App Service
+
+**Confirmation**
+You can verify that everything is working correctly if you navigate back to your Storage Account and open your file share. You should have 4 folders in the file share directory when the app service is restarted.
+
+- cache
+- Config
+- Data
+- Logs
+
+### Migrate from Local Hosting to the Cloud
+I recommend using the Storage Account option in this case. Basically, you can use a tool like [Azure Storage Explorer](https://azure.microsoft.com/en-us/features/storage-explorer/#overview) to drag-and-drop your local Foundry data to the Storage Account. Only the folders listed in the aforementioned Confirmation section are important.
+
+## Troubleshooting
 Troubleshooting can be a pain. Luckily, there are only a few things that can go wrong here.
 
 #### : ( Application Error
