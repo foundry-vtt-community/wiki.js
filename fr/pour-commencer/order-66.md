@@ -2,7 +2,7 @@
 title: ! Mise à jour v9
 description: Procédure de mise à jour vers la v9
 published: true
-date: 2021-12-20T15:39:11.946Z
+date: 2021-12-20T15:51:28.211Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T12:19:28.031Z
@@ -72,4 +72,12 @@ Lorsque toutes les sauvegardes sont faites, il ne reste plus qu'à faire la mise
 ## 4. Restoration d'une version précédente.
 
 Il se peut que votre migration soit un échec en terme de mise à jour de Systèmes & Modules, ce qui est souvent le cas lors de la livraison d'une nouvelle version.
+
+> Pour cela, il suffit de : 
+> - Supprimmer ou désinstaller la version en cours,
+> - Supprimmer ou renommer le répertoire Data,
+> - Installer la version antérieure, que vous avez téléchargé au préalable,
+> - Restorer vos anciennes Data depuis votre Sauvegarde.
+		*Si, vous avez une installation custom, il faudra sans doute lancer une première fois foundry afin de modifier le path dans le **"Chemin des données utilisateur"** et lui indiquer l'emplacement de vos datas. 
+    Redémarrer foundry afin de prendre en compte le changement et de pointer sur le bon répertoire Data.*
 
