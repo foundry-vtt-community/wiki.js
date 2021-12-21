@@ -2,7 +2,7 @@
 title: ! Mise à jour v9
 description: Procédure de mise à jour vers la v9
 published: true
-date: 2021-12-20T15:51:28.211Z
+date: 2021-12-20T23:59:56.893Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T12:19:28.031Z
@@ -18,7 +18,7 @@ Cette procédure permet de faire le passage, avec un risque minimal, d'une versi
 
 > Cette procédure est faite sur un environnement spécifique d'installation sous Windows 10/11 mais s'applique parfait dans un environnement classique d'installation tel que vous pouvez retrouver dans la [Procédure d'installation Windows](https://foundryvtt.wiki/fr/pour-commencer/win). 
 > La partie **Sauvegarde** peut s'appliquer à tous les systèmes d'exploitation.
-> Avant de vous lancer dans la migration de votre VTT, il est fort conseillé de vérifier que les mises à jour de vos modules et systèmes soient disponibles pour vos différents Mondes. Vous pouvez trouver ces informations sur le site officiel de [Foundry VTT > System & Modules](https://foundryvtt.com/packages/) ou via le [Discord de la communauté francophone](https://discord.gg/pPSDNJk) ou encore via cette [Documentation](https://docs.google.com/spreadsheets/d/1ppPR348igxL75M_G7dWl3otzXYpPwrnj7NVSDP8GmVw/edit#gid=0) {.is-warning} 
+> Avant de vous lancer dans la migration de votre VTT, il est fort conseillé de vérifier que les mises à jour de vos modules et systèmes soient disponibles pour vos différents Mondes. Vous pouvez trouver ces informations sur le site officiel de [Foundry VTT > System & Modules](https://foundryvtt.com/packages/) ou via le [Discord de la communauté francophone](https://discord.gg/pPSDNJk) ou encore via cette [Documentation](https://docs.google.com/spreadsheets/d/e/2PACX-1vQB3hKXseLn1ROUxepiw09GYQPG8ikwZjY_Nkde9KnC9PUJA0gNWBuMIJ66iU0qokAbERQ8jF-Bwwrh/pubhtml?gid=0&single=true) {.is-warning} 
 
 
 
