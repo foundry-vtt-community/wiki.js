@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-11-18T14:32:10.145Z
+date: 2021-12-21T16:38:34.056Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -235,7 +235,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 <a id="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="C2" href="#C2">C2.</a>	Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="C2" href="#C2">C2.</a>	Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -251,6 +251,9 @@ wget --output-document ~/foundry/foundryvtt.zip "<download url>"
 unzip ~/foundry/foundryvtt.zip -d ~/foundry/
 rm ~/foundry/foundryvtt.zip
 ```
+
+> If you get an error when unzipping Foundry, please ensure you've downloaded the **Linux/NodeJS** version and if not, repeat step [C2](#C2). {.is-warning}
+
 <a id="C5" href="#C5">C5.</a>	Create the User Data folder for Foundry to store data:
 ```
 mkdir -p ~/foundryuserdata
