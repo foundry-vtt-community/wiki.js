@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2021-11-17T18:01:19.143Z
+date: 2021-12-21T03:57:23.003Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -24,6 +24,16 @@ This is generated from the JSDoc comments within `foundry.js` that is accessible
 ## Exisiting Documentation
 
 
+
+### [Dialog](/en/development/api/dialog)
+API documentation for the Dialog UI class used to inform and prompt users with simple popups.
+
+#### Topics
+- Use with a Promise or Callback
+- Prompt and Confirm factories
+- Form Inputs with Dialogs
+
+
 ### [Document](/en/development/api/document)
 Everything you need to know about the data architecture of Foundry VTT Core (aka Documents).
 
@@ -36,7 +46,7 @@ Everything you need to know about the data architecture of Foundry VTT Core (aka
 
 
 ### [Flags](/en/development/api/flags)
-Everything you need to know about the data architecture of Foundry VTT Core (aka Documents).
+Everything you need to know about using Flags to store arbitrary data on Documents.
 
 #### Topics
 - Location on the Schema
