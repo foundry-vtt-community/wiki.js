@@ -2,7 +2,7 @@
 title: ! Mise à jour v9
 description: Procédure de mise à jour vers la v9
 published: true
-date: 2021-12-20T23:59:56.893Z
+date: 2021-12-21T19:01:28.524Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T12:19:28.031Z
@@ -30,8 +30,6 @@ Vous trouverez sur le site [Foundry VTT](https://foundryvtt.com/), dans la Rubri
 
 > - Télécharger la version dans laquelle votre VTT est : **Actuellement en version 0.8.9 (build255)**,
 > - Télécharger la version cible : **Actuellement en v9 (buildXXX)**
-> - Télécharger la dernière version de Node.js : [NodeJS LTS](https://nodejs.org/en/download/) 
-*Prendre la dernière version LTS (.msi) de Nodejs pour windows 64-bit.*
 
 ![1.software.png](/setup/winstall/1.software.png)
 
@@ -64,7 +62,6 @@ Afin de savoir ce que vous devez sauvegarder :
 
 Lorsque toutes les sauvegardes sont faites, il ne reste plus qu'à faire la mise à jour des logiciels.
 
-> - Installer la dernière version LTS de NodeJS.
 > - Installer la nouvelle version de foundry VTT
 		*Vous pouvez suivre la [Procédure d'installation Windows](https://foundryvtt.wiki/fr/pour-commencer/win#installation-de-foundry-virtual-tabletop) si nécessaire.*
 > - Lancer Foundry VTT et faire les différentes mises à jour des modules et systèmes.
