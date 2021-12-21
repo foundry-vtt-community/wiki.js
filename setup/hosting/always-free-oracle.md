@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2021-10-25T21:01:26.337Z
+date: 2021-12-21T16:39:40.075Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -403,7 +403,7 @@ sudo apt-get install nano unzip -y
 ## Install and launch Foundry
 <a id="D16" href="#D16">D16.</a>  Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="D17" href="#D17">D17.</a>  Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="D17" href="#D17">D17.</a>  Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -419,6 +419,8 @@ wget --output-document ~/foundry/foundryvtt.zip "<download url>"
 unzip ~/foundry/foundryvtt.zip -d ~/foundry/
 rm ~/foundry/foundryvtt.zip
 ```
+> If you get an error when unzipping Foundry, please ensure you've downloaded the **Linux/NodeJS** version and if not, repeat step [D17](#D17). {.is-warning}
+
 <a id="D20" href="#D20">D20.</a>  Create the User Data folder for Foundry to store data:
 ```
 mkdir -p ~/foundryuserdata
