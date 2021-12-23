@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2021-05-03T13:38:23.711Z
+date: 2021-12-23T17:15:29.142Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -85,11 +85,10 @@ Par exemple, si vous voulez donner un bonus de +4 à la valeur de charisme :
 
 Les attaques
 - data.attacks.melee.bonus : attaque de contact
-- data.attacks.melee.malus : attaque de contact
 - data.attacks.ranged.bonus : attaque à distance
-- data.attacks.ranged.malus : attaque à distance
 - data.attacks.magic.bonus : attaque magique
-- data.attacks.magic.malus : attaque magique
+
+Pour donner un malus de 2, il faut mettre un bonus de -2.
 
 Les attributs secondaires
 - data.attributes.hp.bonus : Points de vie
@@ -97,6 +96,5 @@ Les attributs secondaires
 - data.attributes.mp.bonus : Points de magie (Mana points)
 - data.attributes.rp.bonus : Points de recup (recovery points)
 - data.attributes.init.bonus : score d'initiative
-- data.attributes.init.malus : score d'initiative
 - data.attributes.def.bonus : score de def
 - data.attributes.def.malus : score de def
