@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2021-12-24T20:11:53.625Z
+date: 2021-12-24T20:13:04.352Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -17,7 +17,7 @@ dateCreated: 2021-05-14T17:58:11.311Z
 - **Finnish :** [Suomi](/fi/home)
 - **French :** [Français](/fr/home)
 - **Japanese :** [日本語](/ja/home)
-- **Traditional Chinese :** [正體中文](/zhtw/home)
+- **Traditional Chinese :** [正體中文](/zh-tw/home)
 
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop website](http://foundryvtt.com)
