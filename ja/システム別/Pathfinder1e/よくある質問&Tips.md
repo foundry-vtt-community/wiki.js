@@ -2,7 +2,7 @@
 title: よくある質問&Tips
 description: よくありそうな質問と便利なテクニックをまとめています
 published: true
-date: 2021-11-23T00:03:20.392Z
+date: 2021-12-29T06:20:14.333Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-11T02:48:19.206Z
@@ -10,18 +10,20 @@ dateCreated: 2021-09-11T02:48:19.206Z
 
 # PathfinderRPG1e よくある質問&Tips
 
-最終更新：2021/11/23
-編集時のバージョン FoundryVTT 0.8.9、Pathfinder1e 0.79.8
+最終更新：2021/12/29
+編集時のバージョン FoundryVTT v9(build238)、Pathfinder1e 0.80.2
 
 ## エラー関係
 
-### Script Change are disabled on this world.というエラーメッセージが表示される
+### このワールドではスクリプトの変更が無効に設定されています。（原文：Script Change are disabled on this world.）というエラーメッセージが表示される
 
 PF1e 0.79.8以降ではセキュリティの観点からスクリプトの実行に許可が必要になりました。特徴やバフの変更タブにある演算子が`S`のものが対象です。
 
-クラス特徴辞典のアーマー・クラス・ボーナス（モンク、UCモンク、ブローラー）にスクリプトが使用されているので、これらを使用する場合はスクリプトを使用せずに演算子を`+`にして数字に書き換え対応するか、**自己責任**でシステム設定の`Enable Script Changes`にチェックを入れてスクリプトの使用を許可してください。
+クラス特徴辞典のアーマー・クラス・ボーナス（モンク、UCモンク、ブローラー）にスクリプトが使用されているので、これらを使用する場合はスクリプトを使用せずに演算子を`+`にして数字に書き換え対応するか、**自己責任**でシステム設定の`スクリプトの変更を有効にする（原文：Enable Script Changes）`にチェックを入れてスクリプトの使用を許可してください。
 
 マクロやスクリプトコールは今まで通り許可しなくても使用できます。
+
+PF1e 0.79.9でモンクとUCモンクのアーマー・クラス・ボーナスはスクリプトを使用しないように修正されました。
 
 ## 日本語化関係
 
@@ -418,7 +420,7 @@ https://github.com/SvenWerlen/fvtt-spellcaster-utility-pf1
 
 - **Koboldworks - Little Helper for PF1：**
 https://gitlab.com/koboldworks/pf1/little-helper  
-様々な細かい調整が行われるMODです。詳細はサイトで確認してください。
+様々な細かい調整が行われるMODです。攻撃ロールのダイス目が表示されるようになる機能が便利です。詳しい内容はサイトで確認してください。
 
 - **Koboldworks - Item Hints for Pathfinder 1e：**
 https://gitlab.com/mkah-fvtt/pf1/item-hints  
@@ -443,6 +445,10 @@ https://github.com/baileymh/pf1e-content
 - **SBC | PF1 Statblock Converter：**
 https://github.com/Lavaeolous/PF1-StatBlock-Converter-Module  
 テキストデータからアクターを作成します。
+
+- **Pathfinder 1e Statblock Library：**
+https://github.com/baileymh/statblock-library
+ジャーナルにAdventure Pathをはじめとする様々なクリーチャーのデータが追加されます。これらのデータは上記のSBC modを使用することでアクターデータにコンバート出来ます。
 
 ## よく使う変数
 
