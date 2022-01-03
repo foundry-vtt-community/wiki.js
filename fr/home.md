@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-01-03T20:35:27.626Z
+date: 2022-01-03T20:40:49.616Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -25,18 +25,19 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 - consulter les Ressources ci-dessous.
 
 ## Vidéos tutorielles et Introduction
- - 1 Achat et installation par Kyllian : [Achat & Installation](https://www.youtube.com/watch?v=uoTwImiVXBU)
- - 2 Présentation didactique de [Foundry par Samuel Zitterman](https://www.youtube.com/watch?v=DYjrzwfLX80)
- - 3 Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
- - 4 Notes de Journaux et utilisation sur les scènes par Jonleb : [Journaux et Scenes](https://www.youtube.com/watch?v=BKRoX_F-fY0=)
- - 5 Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
- - 6 Utiliser le les transitions de scènes par Ceizyl : [module de transition de scène](https://www.youtube.com/watch?v=0bYxYCjegZY)
- - 7 Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
+ - Achat et installation par Kyllian : [Achat & Installation](https://www.youtube.com/watch?v=uoTwImiVXBU)
+ - Présentation didactique de [Foundry par Samuel Zitterman](https://www.youtube.com/watch?v=DYjrzwfLX80)
+ - Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
+ - Notes de Journaux et utilisation sur les scènes par Jonleb : [Journaux et Scenes](https://www.youtube.com/watch?v=BKRoX_F-fY0=)
+ - Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
+ - Utiliser le les transitions de scènes par Ceizyl : [module de transition de scène](https://www.youtube.com/watch?v=0bYxYCjegZY)
+ - Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
+ - [Présentation de DnD et HnD par Cimeryl](https://www.youtube.com/watch?v=MAhBP1vaFyQ)
 
 La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
 
 Aures vidéos : 
- - 1 Interview autour de [FoundryVTT par JDRFactory](https://www.youtube.com/watch?v=mOWEWFj4ZEo)
+ - Interview autour de [FoundryVTT par JDRFactory](https://www.youtube.com/watch?v=mOWEWFj4ZEo)
  - Les Chroniques de la [Fonderie, Episode 1](https://youtu.be/Etu9de6gxOg)
  - Les Chroniques de la [Fonderie, Episode 2](https://youtube.com/playlist?list=PLLTwqC7aX_kh92eXRI3N1yubUqhLzcCex) avec Kakaroto (TheForge)
  - Les Chroniques la [Fonderie, Episode 3](https://www.youtube.com/watch?v=5qcPK2kp8Hs ) avec JDW (DiceSoNice, FoundryHub)
