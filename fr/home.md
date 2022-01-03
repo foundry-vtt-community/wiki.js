@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2021-10-04T08:48:32.520Z
+date: 2022-01-03T20:35:27.626Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -40,6 +40,13 @@ Aures vidéos :
  - Les Chroniques de la [Fonderie, Episode 1](https://youtu.be/Etu9de6gxOg)
  - Les Chroniques de la [Fonderie, Episode 2](https://youtube.com/playlist?list=PLLTwqC7aX_kh92eXRI3N1yubUqhLzcCex) avec Kakaroto (TheForge)
  - Les Chroniques la [Fonderie, Episode 3](https://www.youtube.com/watch?v=5qcPK2kp8Hs ) avec JDW (DiceSoNice, FoundryHub)
+ - Les Chroniques de la [Fonderie, Episode 4](https://www.youtube.com/watch?v=ezpl66lRde4) avec Kristov et Zigmund pour les univers Chroniques Oubliées
+ - Les Chroniques de la [Fonderie, Episode 5](https://www.youtube.com/watch?v=MRJv3-xWCeQ) avec Rectulo et Sasmira pour Pathfinder 2
+ - A venir le 30/01/22 : DnD5 et HnD avec Cimeryl et Maxime !
+
+## Scénarios et contenus 
+
+[Scénarios recensés en VO et VF, par systèmes](/fr/scenarios/scenarios)
 
 ## Ressources officielles ...
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop Website](http://foundryvtt.com)
