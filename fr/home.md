@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-01-03T20:40:49.616Z
+date: 2022-01-03T20:41:19.341Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -33,6 +33,7 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
  - Utiliser le les transitions de scènes par Ceizyl : [module de transition de scène](https://www.youtube.com/watch?v=0bYxYCjegZY)
  - Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
  - [Présentation de DnD et HnD par Cimeryl](https://www.youtube.com/watch?v=MAhBP1vaFyQ)
+ - [Présentation du système Warhammer v4 par Kyllian](https://www.youtube.com/watch?v=fRlOZLHXNbg)
 
 La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
 
