@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2021-07-06T13:27:04.417Z
+date: 2022-01-03T14:13:56.454Z
 tags: settings, flags, data
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -52,6 +52,8 @@ Use case flowchart:
 
 
 ## Flags
+
+*Main API Documentation Article: [Flags](https://foundryvtt.wiki/en/development/api/flags)*
 
 Flags are the safest way that modules can store arbitrary data on existing documents. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
 
@@ -147,6 +149,8 @@ game.user.setFlag('world', 'todos', { foo: null });
 ```
 
 ## Settings
+
+*Main API Documentation Article: [Settings](https://foundryvtt.wiki/en/development/api/settings)*
 
 Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific document however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
 
