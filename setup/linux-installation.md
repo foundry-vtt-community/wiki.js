@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2021-12-21T16:38:34.056Z
+date: 2022-01-10T23:07:16.571Z
 tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -159,14 +159,14 @@ sudo dnf update -y
 <details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 ```
 </details>
 
 <details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
-curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
 ```
 </details>
 
@@ -212,7 +212,7 @@ sudo dnf install nodejs caddy unzip nano -y
 node --version
 npm --version
 ```
-Node should return a version of 14 or greater. The npm version doesn't matter, but should return something. 
+Node should return a version of 16 or greater. The npm version doesn't matter, but should return something. 
 
 <a id="B10" href="#B10">B10.</a> Install pm2:
 
