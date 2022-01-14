@@ -2,7 +2,7 @@
 title: Self Hosting on Azure
 description: Simple Steps to follow to setup an Azure Free Tier VM
 published: true
-date: 2021-04-23T01:17:50.803Z
+date: 2022-01-14T14:23:53.777Z
 tags: azure, hosting, setup, getting started, vm
 editor: markdown
 dateCreated: 2020-11-19T05:34:12.177Z
@@ -76,4 +76,4 @@ ssh -i /path/to/keypair.pem azureuser@<your-instance-public-ip>
 
 This should work in both a Linux or MacOS terminal, *and* Windows PowerShell in Windows 10. Just remember that Windows points its \ slashes the other way.
 
-You're now ready connected to your new Azure-hosted Ubuntu server. You can now follow the rest of the guide [here.](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM)
+You're now ready connected to your new Azure-hosted Ubuntu server. You can now follow the rest of the guide [here.](https://foundryvtt.wiki/en/setup/linux-installation)
