@@ -2,7 +2,7 @@
 title: Scénarios et Contenus
 description: 
 published: true
-date: 2021-12-14T23:21:40.245Z
+date: 2022-01-18T19:55:58.403Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-30T09:20:34.884Z
@@ -85,6 +85,7 @@ Cette page maintenue par la communauté recense les scénarios disponibles, que 
 - [[Le Parchemin ou le Sabre gratuit]](https://foundryvtt.com/packages/l5r5e-world-scroll)
 - [[Les Queues Nouées gratuit]](https://foundryvtt.com/packages/l5r5e-world-tails)
 - [[La Crête des Vagues, gratuit]](https://foundryvtt.com/packages/l5r5e-world-waves)
+- [[Le Bandit de Grand Chemin, gratuit]](https://foundryvtt.com/packages/l5r5e-world-highwayman)
 
 ### Warhammer v4
 
