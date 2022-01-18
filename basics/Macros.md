@@ -2,7 +2,7 @@
 title: Macros
 description: 
 published: true
-date: 2022-01-18T18:35:33.042Z
+date: 2022-01-18T18:38:23.131Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:44.591Z
@@ -50,7 +50,7 @@ Some examples of using script macros follows.
 await game.tables.getName('Table Name').draw();
 ```
 
-Replace the table name with the one you want to use.
+Replace the `Table Name` with the one you want to use.
 
 #### Rolling a skill check for DnD 5e
 
