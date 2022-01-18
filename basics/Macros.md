@@ -2,7 +2,7 @@
 title: Macros
 description: 
 published: true
-date: 2021-04-21T16:18:45.824Z
+date: 2022-01-18T18:35:33.042Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:44.591Z
@@ -47,8 +47,7 @@ Some examples of using script macros follows.
 #### Random Table Roll 
 
 ```js
-const table = game.tables.entities.find(t => t.name === "MY TABLE NAME");
-table.draw();
+await game.tables.getName('Table Name').draw();
 ```
 
 Replace the table name with the one you want to use.
