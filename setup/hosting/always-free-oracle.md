@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-01-10T23:06:21.856Z
+date: 2022-01-20T22:07:34.647Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -47,7 +47,7 @@ Troubleshooting assistance for this guide can be found on the official Foundry D
 >
 >Have you received an error message stating "**instance is disabled and will not accept any actions or requests**?"
 >
->See <a href="#B4">B4</a> onward for an explanation and the <a href="#i-restore-disabled-a1-instance">Restore Disabled A1 Instance</a> section for instructions on how to restore your Foundry instance. {.is-danger}
+>See the <a href="#archived-information">archived information</a> onward for an explanation and the <a href="#i-restore-disabled-a1-instance">Restore Disabled A1 Instance</a> section for instructions on how to restore your Foundry instance. {.is-danger}
 
 
 ## Disclaimer 
@@ -77,96 +77,31 @@ At the end of this section, you will have a registered account with Oracle Cloud
   You can choose the `VM.Standard.E2.1.Micro` shape in step [C24](#C24) instead of the `VM.Standard.A1.Flex` shape mentioned in the step, and then continue the guide.
 </details>
 
-<a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account.
+<a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account. You are now ready to continue this guide!
+
+<details><summary>Don't I need to upgrade my account to Pay As You Go or my instance will be disabled? ▼</summary>
+
+  As of January 2022 (possibly earlier), Oracle changed their policy for A1 always free instances. They will no longer be disabled at the expiry of your free trial credits and any A1 instances set up as directed in this guide will not be disabled by Oracle at that time. 
+  
+  See the updated FAQ under the [*What happens when my Free Trial expires or my credits are used up?*](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20happens%20when%20my%20Free%20Trial%20expires%20or%20my%20credits%20are%20used%20up%3F) heading:
+  
+  
+  >When you've reached the end of your 30-day trial or used all your Free Trial credits (whichever comes first), you’ll be notified and will have a grace period of 30 days, starting from the expiration date, to upgrade to paid.
+  > ...
+  >**Resources identified as Always Free will not be reclaimed**. After your Free Trial expires, you'll continue to be able to use and manage your existing Always Free resources, and can create new Always Free resources according to tenancy limits.
+  >(Emphasis added)
+  
+  (Text quoted 2022-01-20)
+  
+  A Pay As You Go account is no longer needed to prevent A1 always free instances from being disabled.
+  
+
+</details>
 
 >  Some users in certain regions may require manual account verification which could take a few days of extra time.{.is-info}
 
-<a id="B4" href="#B4">B4.</a> **Added September 2021**: Due to changes in the way trial accounts work, accounts must be upgraded to **Pay As You Go** accounts to retain services long-term without interruption. This guide is specifically written to use only `Always Free` services that will not incur any charges on a Pay As You Go account. 
-
-<details><summary>Why do I need to upgrade my account to Pay As You Go? ▼</summary>
-
-  As of September 2021 (possibly earlier), Oracle terminates the `Always Free` A1 Ampere instances used in this guide after roughly 60 days unless an account has been upgraded to Pay As You Go. This is confirmed in their FAQ under the [*What happens when my Free Trial expires or my credits are used up?*](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20happens%20when%20my%20Free%20Trial%20expires%20or%20my%20credits%20are%20used%20up%3F) heading:
-  
-  >Resources identified as Always Free will not be reclaimed. After your Free Trial expires, you'll continue to be able to use and manage your existing Always Free resources, and can create new Always Free resources according to tenancy limits.
-  >However, Ampere A1 Compute instances are disabled when your trial ends and then deleted (terminated) after 30 days, unless you upgrade to a paid account. To continue using Arm-based compute instances as an Always Free user, you must delete your existing Ampere A1 Compute instances and create new Ampere A1 Compute instances.
-  
-  (Text quoted 2021-09-14)
-  
-  In order to avoid data loss and service interruption, the upgrade to Pay As You Go must be done before the A1 instance is disabled.
-
-</details>
-
-<details><summary>Won't I be charged money if I upgrade my account to Pay As You Go? ▼</summary>
-
-  If you use only resources tagged with the `Always Free` tag, you will never be charged for them regardless if you have a trial account or a Pay As You Go account. This guide has been written to only use those specific resources. 
-  
-  See [What are Always Free services?](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20are%20Always%20Free%20services%3F) and [Always Free Resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#:~:text=All%20Oracle%20Cloud%20Infrastructure%20accounts%20(whether%20free%20or%20paid)%20have%20a%20set%20of%20resources%20that%20are%20free%20of%20charge%20for%20the%20life%20of%20the%20account.%20These%20resources%20display%20the%20Always%20Free%20label%20in%20the%20Console%20(for%20Ampere%20A1%20Compute%20shapes%2C%20see%20Compute).).
-  
-  When upgrading your account to Pay As You Go, you may see temporary authorization charges on your credit card (depending on region). These charges should be released within a few days once the authorization is complete. 
-  
-  We recommend conducting a [Cost Analysis](#g-optional-budget-and-cost-analysis) after completing this guide for peace of mind. The account must be a minimum of 10 days old to conduct a cost analysis forecast. 
-  
-  If you see any other charges on the credit card, contact Oracle support.
-
-</details>
-
-<details><summary>Can I continue without upgrading to Pay As You Go / What happens if I don't upgrade to Pay As You Go? ▼</summary>
-
-  You can continue to use this guide and set up all the services without upgrading to Pay As You Go. As per the Oracle Always Free FAQ, your A1 instance (the cloud server you set up that runs Foundry) may be disabled and eventually deleted if you don't upgrade to Pay As You Go. See [*What happens when my Free Trial expires or my credits are used up?*](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20happens%20when%20my%20Free%20Trial%20expires%20or%20my%20credits%20are%20used%20up%3F)
-  
-  You can set everything up in this guide without upgrading to Pay As You Go immediately, however if you don't do so before your A1 instance is disabled you risk losing data and would need to re-set up your server. 
-  
-  We recommend upgrading your account now so that you do not risk having services disabled, however you are free to choose when/if you upgrade your account.
-  
-  We ***highly*** recommend setting up backups in [Section E Backup Policy Setup](#e-optional-backup-policy-setup) to minimize potential data loss. 
-
-</details>
-
-<details><summary>I choose to  <b>&nbsp;NOT&nbsp;</b>  upgrade to Pay As You Go ▼</summary>
-
-  You can continue to follow this guide without upgrading to Pay As You Go. All the services will work without issue for at least the first 30 days since your account creation. 
-  
-  After the first 30 days, your A1 instance will be disabled. This instance is what Foundry is running on. Your Foundry will become inaccessible and it will look like your Foundry installation is down. 
-  
-  After an additional 30 days, the Foundry A1 instance will be deleted (terminated) including any data that is not backed up. 
-  
-  After that point, you must delete the existing A1 instance, and recreate a new A1 instance (pending availability in your region) and attach it to your existing Boot Volume (or a volume restored from backup). 
-  
-  Instructions on how to restore from backup can be found in the [Oracle Documentation](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm).
-  
-  If you'd like to continue without setting up a Pay As You Go account, skip ahead to [Compute and Networking Setup](#c-compute-and-networking-setup).
-
-</details>
-
-<details><summary>My instance was <b>&nbsp;disabled</b>! ▼</summary>
-
-  If your instance has been disabled, you must create a new A1 instance to continue using the Always Free Tier. You can **keep the same boot volume and all data on it**. 
-  
-  Please follow the steps in the <a href="#i-restore-disabled-a1-instance">Restore Disabled A1 Instance</a> section. 
-  
-</details>
-
-<a id="B5" href="#B5">B5.</a> Open the navigation menu and click **Governance & Administration** -> **Cost Management** -> **Payment Method**.
-
-<a id="B6" href="#B6">B6.</a> Under Account Type, select **Pay As You Go**.
-
->If you get a message that `this account is manage by enterprise agreement` and `upgrade operation is not available` then your account has not finished provisioning. Please wait a few minutes until your account has finished provisioning.
->
->If your account does not complete provisioning after 30 minutes, please contact Oracle support {.is-warning}
-
-<a id="B7" href="#B7">B7.</a> If present, **Edit** your current credit card information or **Add** a new credit card. Click **Finish** when completed.
-
-<a id="B8" href="#B8">B8.</a> Read the terms and conditions and :ballot_box_with_check:`check` the check box to indicate your agreement.
-
->Read carefully. Starting a Pay As You Go account may require temporary authorization charges to be made against your credit card. {.is-warning}
-
-<a id="B9" href="#B9">B9.</a> Click **Start Paid Account**.
-
-<a id="B10" href="#B10">B10.</a> Once you complete the remainder of this guide, be sure to review a [Cost Analysis](#g-optional-budget-and-cost-analysis) to ensure that no costs will be incured. The account must be at least 10 days old to forecast costs into the future, but you may view past costs before that date as confirmation. 
-
-
-
 > If the services described in the next section are not listed, you may need to wait a few more minutes for the account to be fully provisioned. A status notification appears at the top of the page when logged in to Oracle Cloud if the account has not yet been fully provisioned. {.is-info}
+
 
  
 
@@ -757,5 +692,103 @@ To see why the instance has been disabled, check step <a href="#B4">B4</a>.
 
 <a id="I11" href="#I11">I11.</a> If you set up a domain name, you will need to point the domain's A record to the instances `<Public IP address>`. If you did not set up a domain name, you can now connect to Foundry directly, using a link like this: `http://<Public IP Address>:30000`
 
+# J. Archived: A1 Disabling and Upgrading to Pay As You Go (Reference Only)
+## Purpose
+
+This section contains outdated information, left here for reference only. This information is outdated and should only be used to reference previous instructions for informational purposes. 
+
+## Archived Information
+
+>The section below is reproduced as it was written before January 20th, 2022. {.is-warning}
+
+<a>B4.</a> **Added September 2021**: Due to changes in the way trial accounts work, accounts must be upgraded to **Pay As You Go** accounts to retain services long-term without interruption. This guide is specifically written to use only `Always Free` services that will not incur any charges on a Pay As You Go account. 
+
+<details><summary>Why do I need to upgrade my account to Pay As You Go? ▼</summary>
+
+  As of September 2021 (possibly earlier), Oracle terminates the `Always Free` A1 Ampere instances used in this guide after roughly 60 days unless an account has been upgraded to Pay As You Go. This is confirmed in their FAQ under the [*What happens when my Free Trial expires or my credits are used up?*](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20happens%20when%20my%20Free%20Trial%20expires%20or%20my%20credits%20are%20used%20up%3F) heading:
+  
+  >Resources identified as Always Free will not be reclaimed. After your Free Trial expires, you'll continue to be able to use and manage your existing Always Free resources, and can create new Always Free resources according to tenancy limits.
+  >However, Ampere A1 Compute instances are disabled when your trial ends and then deleted (terminated) after 30 days, unless you upgrade to a paid account. To continue using Arm-based compute instances as an Always Free user, you must delete your existing Ampere A1 Compute instances and create new Ampere A1 Compute instances.
+  
+  (Text quoted 2021-09-14)
+  
+  In order to avoid data loss and service interruption, the upgrade to Pay As You Go must be done before the A1 instance is disabled.
+
+</details>
+
+<details><summary>Won't I be charged money if I upgrade my account to Pay As You Go? ▼</summary>
+
+  If you use only resources tagged with the `Always Free` tag, you will never be charged for them regardless if you have a trial account or a Pay As You Go account. This guide has been written to only use those specific resources. 
+  
+  See [What are Always Free services?](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20are%20Always%20Free%20services%3F) and [Always Free Resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#:~:text=All%20Oracle%20Cloud%20Infrastructure%20accounts%20(whether%20free%20or%20paid)%20have%20a%20set%20of%20resources%20that%20are%20free%20of%20charge%20for%20the%20life%20of%20the%20account.%20These%20resources%20display%20the%20Always%20Free%20label%20in%20the%20Console%20(for%20Ampere%20A1%20Compute%20shapes%2C%20see%20Compute).).
+  
+  When upgrading your account to Pay As You Go, you may see temporary authorization charges on your credit card (depending on region). These charges should be released within a few days once the authorization is complete. 
+  
+  We recommend conducting a [Cost Analysis](#g-optional-budget-and-cost-analysis) after completing this guide for peace of mind. The account must be a minimum of 10 days old to conduct a cost analysis forecast. 
+  
+  If you see any other charges on the credit card, contact Oracle support.
+
+</details>
+
+<details><summary>Can I continue without upgrading to Pay As You Go / What happens if I don't upgrade to Pay As You Go? ▼</summary>
+
+  You can continue to use this guide and set up all the services without upgrading to Pay As You Go. As per the Oracle Always Free FAQ, your A1 instance (the cloud server you set up that runs Foundry) may be disabled and eventually deleted if you don't upgrade to Pay As You Go. See [*What happens when my Free Trial expires or my credits are used up?*](https://www.oracle.com/cloud/free/faq.html#:~:text=What%20happens%20when%20my%20Free%20Trial%20expires%20or%20my%20credits%20are%20used%20up%3F)
+  
+  You can set everything up in this guide without upgrading to Pay As You Go immediately, however if you don't do so before your A1 instance is disabled you risk losing data and would need to re-set up your server. 
+  
+  We recommend upgrading your account now so that you do not risk having services disabled, however you are free to choose when/if you upgrade your account.
+  
+  We ***highly*** recommend setting up backups in [Section E Backup Policy Setup](#e-optional-backup-policy-setup) to minimize potential data loss. 
+
+</details>
+
+<details><summary>I choose to  <b>&nbsp;NOT&nbsp;</b>  upgrade to Pay As You Go ▼</summary>
+
+  You can continue to follow this guide without upgrading to Pay As You Go. All the services will work without issue for at least the first 30 days since your account creation. 
+  
+  After the first 30 days, your A1 instance will be disabled. This instance is what Foundry is running on. Your Foundry will become inaccessible and it will look like your Foundry installation is down. 
+  
+  After an additional 30 days, the Foundry A1 instance will be deleted (terminated) including any data that is not backed up. 
+  
+  After that point, you must delete the existing A1 instance, and recreate a new A1 instance (pending availability in your region) and attach it to your existing Boot Volume (or a volume restored from backup). 
+  
+  Instructions on how to restore from backup can be found in the [Oracle Documentation](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm).
+  
+  If you'd like to continue without setting up a Pay As You Go account, skip ahead to [Compute and Networking Setup](#c-compute-and-networking-setup).
+
+</details>
+
+<details><summary>My instance was <b>&nbsp;disabled</b>! ▼</summary>
+
+  If your instance has been disabled, you must create a new A1 instance to continue using the Always Free Tier. You can **keep the same boot volume and all data on it**. 
+  
+  Please follow the steps in the <a href="#i-restore-disabled-a1-instance">Restore Disabled A1 Instance</a> section. 
+  
+</details>
+
+<a>B5.</a> Open the navigation menu and click **Governance & Administration** -> **Cost Management** -> **Payment Method**.
+
+<a>B6.</a> Under Account Type, select **Pay As You Go**.
+
+>If you get a message that `this account is manage by enterprise agreement` and `upgrade operation is not available` then your account has not finished provisioning. Please wait a few minutes until your account has finished provisioning.
+>
+>If your account does not complete provisioning after 30 minutes, please contact Oracle support {.is-warning}
+
+<a>B7.</a> If present, **Edit** your current credit card information or **Add** a new credit card. Click **Finish** when completed.
+
+<a>B8.</a> Read the terms and conditions and :ballot_box_with_check:`check` the check box to indicate your agreement.
+
+>Read carefully. Starting a Pay As You Go account may require temporary authorization charges to be made against your credit card. {.is-warning}
+
+<a>B9.</a> Click **Start Paid Account**.
+
+<a>B10.</a> Once you complete the remainder of this guide, be sure to review a [Cost Analysis](#g-optional-budget-and-cost-analysis) to ensure that no costs will be incured. The account must be at least 10 days old to forecast costs into the future, but you may view past costs before that date as confirmation. 
+
+
+
+
+
+
+> The text above this point is archived text from before January 20, 2022. {.is-warning}
 
 
