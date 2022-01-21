@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-01-20T22:07:34.647Z
+date: 2022-01-21T14:35:26.240Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -661,7 +661,7 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 ## Objective
 This section helps users who have had their A1 Ampere instances disabled at the end of the trial account period. These instances are still `Always Free` and can continue to be used. Once restored as described below, the instances should remain running without issue or fear of being disabled. 
 
-To see why the instance has been disabled, check step <a href="#B4">B4</a>.
+To see why the instance has been disabled, check step B4 in the <a href="#archived-information">archived information</a>.
 
 ## Restore Instance Including All Data
   To create a new instance that retains all data up to the point it was disabled:
