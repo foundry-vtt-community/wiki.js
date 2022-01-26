@@ -2,7 +2,7 @@
 title: １．はじめに
 description: 
 published: true
-date: 2021-05-15T10:14:44.624Z
+date: 2022-01-26T07:20:14.923Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -23,7 +23,7 @@ dateCreated: 2020-12-01T14:32:37.818Z
   <i class="fab fa-discord"></i> [オンセ工房日本支部(Foundry VTT)](https://discord.com/invite/vM4YM27)
     <i class="fab fa-twitter-square"></i> [オンセ工房（Foundry VTT）日本支部ツイッター](https://twitter.com/home)
   <i class="fab fa-twitter-square"></i> [佐藤真裸さんのFVTT紹介](https://twitter.com/sa10trpg/status/1308413633198784513)
-    <i class="fab fa-twitter-square"></i> [佐藤真裸さんのMod紹介](https://twitter.com/i/events/1309498983123804160)
+    <i class="fab fa-youtube"></i> [マサトさんの紹介動画](https://www.youtube.com/channel/UC_x4oXdRovJvC55ZtS9TUSw)
   <i class="fab fa-patreon"></i> [オンセ工房支援Patreon](https://www.patreon.com/onsekobo)
   <i class="fas fa-dice-d20"></i> [Foundry VTT専用レンタルサーバ](https://as.forge-vtt.com/)
   
