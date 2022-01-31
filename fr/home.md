@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-01-03T20:43:09.130Z
+date: 2022-01-31T06:42:25.639Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -46,8 +46,9 @@ Les émissions et interview en français :
  - Les Chroniques la [Fonderie, Episode 3](https://www.youtube.com/watch?v=5qcPK2kp8Hs ) avec JDW (DiceSoNice, FoundryHub)
  - Les Chroniques de la [Fonderie, Episode 4](https://www.youtube.com/watch?v=ezpl66lRde4) avec Kristov et Zigmund pour les univers Chroniques Oubliées
  - Les Chroniques de la [Fonderie, Episode 5](https://www.youtube.com/watch?v=MRJv3-xWCeQ) avec Rectulo et Sasmira pour Pathfinder 2
- - A venir le 30/01/22 : DnD5 et HnD avec Cimeryl et Maxime !
-
+ - Les Chroniques de la [Fonderie, Episode 6](https://www.youtube.com/watch?v=W1tgPJyUHlw) avec Cimeryl et Maxime pour D&D et HnD
+ - A venir : émission de Février consacrée à Warhammer
+ 
 ## Scénarios et contenus 
 
 [Scénarios recensés en VO et VF, par systèmes](/fr/scenarios/scenarios)
