@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2022-02-02T00:53:55.052Z
+date: 2022-02-02T00:56:46.805Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -73,7 +73,7 @@ There are a variety of community-created module and system starter kits out ther
   - ghost's Gulp + Rollup Preset (very opinionated)
   - League Basic JS Module Template (lightly opinionated, see above)
 - Bootstraps both modules and systems
-- **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps, npm, yarn, yarn2, CI pipelines (GitHub and GitLab)
+- **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps, npm, yarn, yarn2, CI pipelines for checks and releases (GitHub and GitLab)
 - **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects.
 
 
