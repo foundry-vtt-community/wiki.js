@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2022-02-04T00:35:08.789Z
+date: 2022-02-04T00:45:59.289Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -17,7 +17,7 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 
 ### `version`
 - Use a `string` for the version number instead of a `float` because for example `0.9` would be superior to `0.10` if using floats.
-- Use [Semantic Versioning](https://semver.org/).
+- Use [Semantic Versioning](https://semver.org/), but keep in mind that the additional labels for pre-release and build metadata are not supported by Foundry VTT's [`isNewerVersion`](https://foundryvtt.com/api/module-helpers.html#.isNewerVersion) helper so they should be avoided.
 - Every change, even something that only changes the manifest and does not change the package contents, should increment something in the version number.
 
 > You should never have two different versions of your package with the exact same version number.
@@ -53,7 +53,8 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 {.is-info}
 
 - Don't hardcode your strings, use localization **right from the start**. It is easier to localize from the start rather than going back through at the end.
-- Make use of as many existing strings as possible.
+- Re-use as many core and system keys as possible, but understand that some languages might have longer or shorter words than you expect. In cases where a flexible layout is not possible, it is recommended to create a new key with the same text to allow translators to provide a custom translation that fits the static layout best. 
+
 - Keep your localization strings confined to your package's namespace.
 
 ## Files
