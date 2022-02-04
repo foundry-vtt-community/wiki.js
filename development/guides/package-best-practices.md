@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2021-08-24T13:40:44.872Z
+date: 2022-02-04T00:35:08.789Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -68,10 +68,8 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 - Depend on every module in the dependency tree for your package, Foundry does not handle dependency-trees with 2+ levels during install or activation.
 
 ## Code Practices
-This section was last updated for Foundry VTT 0.7.7.
-
 - The [`libWrapper` library module](https://github.com/ruipin/fvtt-lib-wrapper) is an excellent dependency to aid in the "patching" of core functions.
-- Foundry VTT core has a keyboard manager class accessible `game.keyboard`. It is recommended to leverage this when your module needs to know the state of the keyboard.
+- It is recommended to leverage the keybinding and setting registration APIs rather than attempt to implement them yourself with native Event Listeners or the Local Storage API.
 
 ## Overwriting Foundry VTT Core Behavior
 - Code as defensively as possible when writing a module which aims to overwrite or replace Core functionality/logic. If something causes an error in your logic, it would be best to implement a fallback to the core behavior you are replacing.
