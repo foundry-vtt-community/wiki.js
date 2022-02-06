@@ -2,14 +2,14 @@
 title: GreenSock
 description: Enabling and accessing the powerful GreenSock animation API in your system or module.
 published: true
-date: 2022-02-06T08:13:05.793Z
+date: 2022-02-06T08:19:02.559Z
 tags: greensock
 editor: markdown
 dateCreated: 2022-02-06T08:13:05.793Z
 ---
 
 ## What Is GreenSock?
-The [GreenSock Animation Platform](https://greensock.com/) ("gsap" for short) is a robust JavaScript toolset that provides a host of powerful, easy-to-use, high-performance features for animating just about any visual element your module or system adds to the Foundry experience.  Foundry not only exposes the core GreenSock API from within its native code, it also includes the complete suite of premium "Club GreenSock" features for your use. Powerful, fully-featured and easy to use, GreenSock is an excellent way to add visual flare to your creative endeavors.
+The [GreenSock Animation Platform](https://greensock.com/) ("gsap" for short) is a robust JavaScript toolset that provides a host of powerful, easy-to-use, high-performance features for animating just about any visual element your module or system adds to the Foundry experience.  Foundry not only exposes the core GreenSock API from within its native code, it also includes the complete suite of premium "Club GreenSock" features for your use --- many of which offer unique functionality especially well-suited to Foundry projects.
 
 ## Learning the GreenSock API
 A tutorial on GreenSock's features is beyond the scope of this article, but don't be discouraged: GreenSock's documentation is excellent, and is directed at the beginner. Start [here](https://greensock.com/get-started/) for an introduction and feature overview, then head over to the [GSAP](https://greensock.com/docs/v3/GSAP) chapter of the [GreenSock Docs](https://greensock.com/docs/v3) and poke around: there are plenty of videos, examples, CodePen tutorials and the like to get you started.
@@ -32,7 +32,7 @@ Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `
   ...
 }
 ```
-### 2) Import `gsap` and Any Desired Plugins As Needed in your JavaScript Files
+### 2) Import `gsap` and Any Desired Plugins As Needed in Your JavaScript Files
 The `gsap` object serves as the access point for most of GreenSock's functionality, and is the default export from `greensock/esm/all.js`. In many cases, this will be all you need to accomplish your animation goals:
 ```javascript
 import gsap from "/scripts/greensock/esm/all.js";
