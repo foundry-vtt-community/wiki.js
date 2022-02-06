@@ -2,23 +2,23 @@
 title: GreenSock
 description: Enabling and accessing the powerful GreenSock animation API in your system or module.
 published: true
-date: 2022-02-06T08:19:02.559Z
+date: 2022-02-06T08:22:09.497Z
 tags: greensock
 editor: markdown
 dateCreated: 2022-02-06T08:13:05.793Z
 ---
 
 ## What Is GreenSock?
-The [GreenSock Animation Platform](https://greensock.com/) ("gsap" for short) is a robust JavaScript toolset that provides a host of powerful, easy-to-use, high-performance features for animating just about any visual element your module or system adds to the Foundry experience.  Foundry not only exposes the core GreenSock API from within its native code, it also includes the complete suite of premium "Club GreenSock" features for your use --- many of which offer unique functionality especially well-suited to Foundry projects.
+The [GreenSock Animation Platform](https://greensock.com/) ("GSAP" for short) is a robust JavaScript toolset that provides a host of powerful, easy-to-use, high-performance features for animating just about any visual element your module or system adds to the Foundry experience.  Foundry not only exposes the core GreenSock API from within its native code, it also includes the complete suite of premium "Club GreenSock" features for your use — many of which offer unique functionality especially well-suited to Foundry projects.
 
 ## Learning the GreenSock API
 A tutorial on GreenSock's features is beyond the scope of this article, but don't be discouraged: GreenSock's documentation is excellent, and is directed at the beginner. Start [here](https://greensock.com/get-started/) for an introduction and feature overview, then head over to the [GSAP](https://greensock.com/docs/v3/GSAP) chapter of the [GreenSock Docs](https://greensock.com/docs/v3) and poke around: there are plenty of videos, examples, CodePen tutorials and the like to get you started.
 
 ## Implementing GreenSock in Your Foundry Project
-Enabling GreenSock in your Foundry project, then accessing it from within your scripts, isn't especially well-documented and is the main purpose of this guide.  Fortunately, the process isn't difficult --- follow these few quick steps, and you'll be off to the races:
+Enabling GreenSock in your Foundry project, then accessing it from within your scripts, isn't especially well-documented and is the main purpose of this guide.  Fortunately, the process isn't difficult — follow these few quick steps, and you'll be off to the races:
 
 ### 1) Add a Reference in Your `system.json`/`module.json` File
-Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `system.json`/`module.json` file, for example:
+Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `system.json`/`module.json` file, e.g.:
 
 ```json
 {
