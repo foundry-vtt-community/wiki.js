@@ -2,7 +2,7 @@
 title: Cartes & maps
 description: 
 published: true
-date: 2022-02-07T13:32:38.820Z
+date: 2022-02-07T13:44:31.162Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-07T13:32:38.820Z
@@ -18,7 +18,7 @@ https://gamemaster.pixelastic.com/maps/
 https://www.reddit.com/r/battlemaps/
 http://rpgmapshare.com/piwigo/gallery/
 https://www.deviantart.com/henning/art/Mansions-of-Madness-Forbidden-Alchemy-expansion-329025095
+https://watabou.itch.io/medieval-fantasy-city-generator
+https://azgaar.github.io/Fantasy-Map-Generator/
 
 ## Payant
-
-
