@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-02-07T13:29:06.728Z
+date: 2022-02-07T13:30:38.215Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -101,6 +101,12 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - barbarians of Lemuria
 - Yggdrasill
 
+## Resources (map, musiques, etc)
+
+ - [Cartes & Maps](/fr/resources/maps)
+ - [Musiques](/fr/resources/musiques)
+ - [Art/Ambiance](/fr/resources/artambiance)
+ - [Tokens](/fr/resources/tokens)
 
 ## Démos publiques de Foundry
 Vous trouverez ci-dessous la démo officielle de la VTT Foundry, ainsi que les démos et systèmes maintenus par la communauté.
