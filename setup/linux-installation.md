@@ -1,14 +1,14 @@
 ---
-title: Linux Installation Guide
+title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-02-08T02:31:32.242Z
+date: 2022-02-08T02:32:49.583Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
 ---
 
-# General Linux Installation and Usage Guide
+# Recommended Linux Installation and Usage Guide
 
 # A. Overview
 ## Objective
@@ -53,6 +53,11 @@ c. Fedora
 Any distrition that uses the `apt` or `dnf` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
 
 >This guide requires Debian 11 or CentOS 8 based distributions or higher. Using lower versions may not function properly. {.is-info}
+
+## Getting Help
+If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
+
+Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C5) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/6BzyC7swej).
 
 # B. User and General System Setup
 ## Objective
@@ -230,7 +235,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 <a id="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="C2" href="#C2">C2.</a>	Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="C2" href="#C2">C2.</a>	Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -246,6 +251,9 @@ wget --output-document ~/foundry/foundryvtt.zip "<download url>"
 unzip ~/foundry/foundryvtt.zip -d ~/foundry/
 rm ~/foundry/foundryvtt.zip
 ```
+
+> If you get an error when unzipping Foundry, please ensure you've downloaded the **Linux/NodeJS** version and if not, repeat step [C2](#C2). {.is-warning}
+
 <a id="C5" href="#C5">C5.</a>	Create the User Data folder for Foundry to store data:
 ```
 mkdir -p ~/foundryuserdata
@@ -430,7 +438,7 @@ At the end of this optional section, you will be able to directly access the fil
 The minimum RAM requirement for hosting Foundry is 1GB, however some systems or modules may use more than the minimum RAM. If your linux host has less than 2GB of RAM you can create a swapfile to prevent out-of-memory errors when using heavier modules, systems, or large compendiums. 
 
 ## Create and Enable Swapfile
-The instructions below are compatible with Debian 11 (including Ubuntu) / CentOS 8 (including Red Hat) or newer.
+The instructions below are compatible with the <a href="#preferred-linux-distribution">preferred linux distributions</a>.
 
 All commands below are assumed to be entered by a non-root sudoer user, such as the `foundry` user created in <a href="#B1">B1</a> to B4. 
 
@@ -450,20 +458,20 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 ```
 
-<a id="E4" href="#E4">E4.</a> Activate the swapfile:
-```
-sudo swapon /swapfile
-```
-
-<a id="E5" href="#E5">E5.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
+<a id="E4" href="#E4">E4.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
 
 ```
 sudo nano /etc/fstab
 ```
 
-<a id="E6" href="#E6">E6.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**:. Save the file using `ctrl-x` and `y`.
+<a id="E5" href="#E5">E5.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**. Press <kbd>ctrl</kbd>-<kbd>x</kbd> and then <kbd>y</kbd>, and then <kbd>enter</kbd> to save the changes to the file. 
 ```
 /swapfile swap swap defaults 0 0
+```
+
+<a id="E6" href="#E6">E6.</a> Enable the swapfile specified in `fstab`:
+```
+sudo swapon -a
 ```
 
 <a id="E7" href="#E7">E7.</a> Verify the swapfile exists and is enabled:
