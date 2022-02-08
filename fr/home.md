@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-02-07T13:30:38.215Z
+date: 2022-02-08T17:36:38.035Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -36,6 +36,8 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
  - [Présentation du système Warhammer v4 par Kyllian](https://www.youtube.com/watch?v=fRlOZLHXNbg)
  - [Adapter un scénario existant sur FoundryVTT par Carter](https://www.youtube.com/watch?v=1wH3rwtNKWg)
  - [Tutoriel Alien RPG par Kyllian](https://www.youtube.com/watch?v=MDibd3_wrqU)
+ - [Tutoriel Appel de Cthulhu par Kyllian](https://youtu.be/s1TcRm85Dsg)
+ - [Modules pratiques par Carter](https://youtu.be/_cyLUEiTkaU)
 
 La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
 
