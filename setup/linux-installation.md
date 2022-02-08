@@ -1,14 +1,14 @@
 ---
-title: Recommended Linux Installation Guide
+title: Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-01-26T21:44:04.999Z
-tags: linux, raspberry pi, installation, debian, ubuntu, centos, caddy, reverse proxy, cyberduck
+date: 2022-02-08T02:31:32.242Z
+tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
 ---
 
-# Recommended Linux Installation and Usage Guide
+# General Linux Installation and Usage Guide
 
 # A. Overview
 ## Objective
@@ -54,17 +54,12 @@ Any distrition that uses the `apt` or `dnf` package managers *should* be compati
 
 >This guide requires Debian 11 or CentOS 8 based distributions or higher. Using lower versions may not function properly. {.is-info}
 
-## Getting Help
-If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
-
-Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C5) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/6BzyC7swej).
-
 # B. User and General System Setup
 ## Objective
 
 At the end of this section, you will have a non-root user setup to run Foundry as well as the necessary software to run Foundry managed behind a reverse proxy. 
 
->This section assumes that you are connected via terminal to your linux server. This can be either through direct local access to a terminal or through ssh. {.is-info}
+>This section assumes that you are connected via terminal to your linux server. This can be either throught direct local access to a terminal or through ssh. {.is-info}
 
 >How to connect to your server is out of scope for this guide. You should have terminal access if you installed linux on a local pc, or if you are using a cloud VPS/VM provider then review their documentation for how to get `ssh` or `terminal` access to your instance. {.is-info}
 
@@ -159,14 +154,14 @@ sudo dnf update -y
 <details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
-curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 ```
 </details>
 
 <details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
 ```
 </details>
 
@@ -212,7 +207,7 @@ sudo dnf install nodejs caddy unzip nano -y
 node --version
 npm --version
 ```
-Node should return a version of 16 or greater. The npm version doesn't matter, but should return something. 
+Node should return a version of 14 or greater. The npm version doesn't matter, but should return something. 
 
 <a id="B10" href="#B10">B10.</a> Install pm2:
 
@@ -235,7 +230,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 <a id="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="C2" href="#C2">C2.</a>	Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="C2" href="#C2">C2.</a>	Select the recommended version and Linux in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -251,9 +246,6 @@ wget --output-document ~/foundry/foundryvtt.zip "<download url>"
 unzip ~/foundry/foundryvtt.zip -d ~/foundry/
 rm ~/foundry/foundryvtt.zip
 ```
-
-> If you get an error when unzipping Foundry, please ensure you've downloaded the **Linux/NodeJS** version and if not, repeat step [C2](#C2). {.is-warning}
-
 <a id="C5" href="#C5">C5.</a>	Create the User Data folder for Foundry to store data:
 ```
 mkdir -p ~/foundryuserdata
@@ -438,7 +430,7 @@ At the end of this optional section, you will be able to directly access the fil
 The minimum RAM requirement for hosting Foundry is 1GB, however some systems or modules may use more than the minimum RAM. If your linux host has less than 2GB of RAM you can create a swapfile to prevent out-of-memory errors when using heavier modules, systems, or large compendiums. 
 
 ## Create and Enable Swapfile
-The instructions below are compatible with the <a href="#preferred-linux-distribution">preferred linux distributions</a>.
+The instructions below are compatible with Debian 11 (including Ubuntu) / CentOS 8 (including Red Hat) or newer.
 
 All commands below are assumed to be entered by a non-root sudoer user, such as the `foundry` user created in <a href="#B1">B1</a> to B4. 
 
@@ -458,20 +450,20 @@ sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 ```
 
-<a id="E4" href="#E4">E4.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
+<a id="E4" href="#E4">E4.</a> Activate the swapfile:
+```
+sudo swapon /swapfile
+```
+
+<a id="E5" href="#E5">E5.</a> Ensure that the swapfile is enabled permanently by editing the `/etc/fstab` file. 
 
 ```
 sudo nano /etc/fstab
 ```
 
-<a id="E5" href="#E5">E5.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**. Press <kbd>ctrl</kbd>-<kbd>x</kbd> and then <kbd>y</kbd>, and then <kbd>enter</kbd> to save the changes to the file. 
+<a id="E6" href="#E6">E6.</a> Paste the following line at the end of the fstab file while **making sure the rest of fstab file is not modified**:. Save the file using `ctrl-x` and `y`.
 ```
 /swapfile swap swap defaults 0 0
-```
-
-<a id="E6" href="#E6">E6.</a> Enable the swapfile specified in `fstab`:
-```
-sudo swapon -a
 ```
 
 <a id="E7" href="#E7">E7.</a> Verify the swapfile exists and is enabled:
