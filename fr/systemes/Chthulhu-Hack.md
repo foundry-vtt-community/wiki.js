@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2022-02-10T20:37:02.864Z
+date: 2022-02-10T20:39:19.671Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -55,6 +55,9 @@ Système créé par **Kristov**
 - Definition : utilisé pour les statuts des tables Hors Jeu, Folie temporaire et Choc ; ajouté au personnage via drag and drop
 	- Prise en compte du désavantage pour certains statuts Hors Jeu
   - Une icône apparait sur le token en cas de condition
+
+### Divers
+- Fenêtre "Statut des joueurs pour le MJ" : lorsqu'un joueur se connecte, le nom du joueur et des informations sur le personnage sont affichées. Les informations sont le nom du joueur, du personnage et les différentes ressources utilisées (en fonction des options activées)
 
 ### Options
 
