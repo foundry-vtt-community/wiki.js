@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2021-04-21T16:39:04.541Z
+date: 2022-02-10T20:37:02.864Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -25,9 +25,9 @@ Le **MJ** prépare et raconte l’histoire. Il décrit le monde, les PNJ, les p�
 
 Le **MJ** écoute les joueurs et collabore avec eux pour créer une histoire palpitante, souvent en s’appuyant sur l’imagination fertile des joueurs et parfois même en retournant contre eux les idées et les craintes verbalisées pour leurs personnages.
 
-### installer le soft et le système
-- avoir foundryVTT d'installé
-- avoir le système Cthulhu Hack d'installé
+### Les prérequis
+- Avoir installé Foundr VTT
+- Avoir installé le système Cthulhu Hack depuis l'interface de Foundry
 
 Voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 
@@ -35,7 +35,7 @@ Voir la page https://foundryvtt.wiki/fr/pour-commencer/setup pour ces étapes
 ## Ce que propose le système de Cthulhu Hack VF
 Système créé par **Kristov**
 
-### Actor
+### Acteur / Actor
 
 - Personnage
   - Ajout/modification/suppression des objets et des capacités spéciales
@@ -46,7 +46,7 @@ Système créé par **Kristov**
 	- Les attaques sont sous forme d'item avec jet de dommage intégré
 
 
-### Item
+### Objet / Item
 
 - Ability : capacité spéciale
 - Item : gestion du dé de matériel avec possibilité de faire un jet (limitation connue : en cas de perte de ressource, il faut diminuer le dé à la main)
@@ -59,7 +59,7 @@ Système créé par **Kristov**
 ### Options
 
 - **Fortune** : active/désactive l'affichage sur la fiche
-	- Le MJ active l'option et met le nombre de jetons disponibles pour les joueurs
+	- Le MJ active l'option et saisit le nombre de jetons disponibles pour les joueurs
 	- Affichage du nombre de jetons sous le portrait
   - Possibilité d'en dépenser un uniquement pour un MJ
 	- La dépense est affichée pour tout le monde dans le chat
@@ -69,6 +69,7 @@ Système créé par **Kristov**
 
 - **Dé de vie en tant que ressource** : active/désactive l'affichage sur la fiche
 - **Richesse en tant que ressource** : active/désactive l'affichage sur la fiche
+- **Ressource diverse** : saisir un nom de ressource qui remplacera la ressource Richesse
 
 ### Compendiums
 
@@ -88,6 +89,6 @@ Système créé par **Kristov**
 
 ## Notes de Mise à Jour
 
-https://gitlab.com/foundryvtt2/FoundryVTT-Cthulhu-Hack/-/blob/main/CHANGELOG
+https://github.com/Qaw/cthulhuhack/blob/main/CHANGELOG
 
 
