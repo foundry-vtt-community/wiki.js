@@ -2,7 +2,7 @@
 title: Cthulhu Hack
 description: Cthulhu Hack VF © 2018 est un supplément édité par les XII Singes © 2006-2018 authorized translation of Cthulhu Hack © 2017 Paul Baldowski.
 published: true
-date: 2022-02-10T20:41:15.749Z
+date: 2022-02-10T20:43:06.148Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:14:37.025Z
@@ -60,6 +60,7 @@ Système créé par **Kristov**
 ### Divers
 - Fenêtre "Statut des joueurs pour le MJ" : lorsqu'un joueur se connecte, le nom du joueur et des informations sur le personnage sont affichées. Les informations sont le nom du joueur, du personnage et les différentes ressources utilisées (en fonction des options activées)
 - Les dés customisés pour le module Dice So Nice : un preset et un thème Cthulhu Hack sont proposés dans les options de Dice So Nice
+- Le module Token Action HUD est supporté et permet de simplifier la gestion des PJs
 
 ### Options
 
