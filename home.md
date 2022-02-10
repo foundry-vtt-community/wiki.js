@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-02-04T00:54:35.731Z
+date: 2022-02-10T04:47:40.837Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -30,7 +30,8 @@ dateCreated: 2021-05-14T17:58:11.311Z
 <i class="fab fa-gitlab"></i> [Gitlab Issue Tracker](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
 
 ## Communities
-<i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/2rHs78h) – Unofficial module, system and content developers.
+<i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/fvttdevleague) – Unofficial community for module and system developers.
+<i class="fas fa-globe"></i> [World Smiths](https://discord.gg/2YCFD8fxG7) – A community of content creators dedicated to providing help and facilitating collaboration on world content.
 <i class="fab fa-reddit"></i> [Reddit: /r/FoundryVTT subreddit](https://www.reddit.com/r/FoundryVTT/) – Independently-run community for Foundry troubleshooting and sharing your Foundry creativity.
 <i class="fas fa-users"></i> [Foundry Hub](https://foundryvtt-hub.com/) - Partnered Foundry blog and forums for high quality articles and discussion.
 
@@ -64,7 +65,7 @@ Password: `forge`
 The Forge demo is hosted by The Forge. It includes a tutorial for first time users and additional tweaks to the Foundry VTT experience for The Forge hosting platform.
 
 ## Collaborative Modules
-Below are the Foundry VTT Community Wiki contributed modules. Anyone can share their content with the rest of the community via Pull request to be merged into a module update.
+Below are the Foundry VTT Community Wiki contributed modules. Anyone can share their content with the rest of the community via Pull Request to be merged into a module update.
 
 ### <i class="fas fa-magic"></i> Foundry Community Macros
 Repository: https://github.com/foundry-vtt-community/macros
