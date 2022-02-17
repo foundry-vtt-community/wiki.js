@@ -2,7 +2,7 @@
 title: 02: Stuff-to-be-aware-of
 description: 
 published: true
-date: 2022-02-17T19:52:48.449Z
+date: 2022-02-17T19:53:21.005Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:29.131Z
@@ -15,7 +15,7 @@ Before we start diving into development, there are a few useful things to know a
 Systems are built using HTML, CSS, and Javascript. Teaching those is outside the scope of this tutorial, but there are many great courses out there on different platforms such as:
 
 * [https://www.freecodecamp.org/learn](https://www.freecodecamp.org/learn)
-* [https://exercism.org/](https://exercism.org/)
+* [https://www.exercism.org/](https://www.exercism.org/)
 * [https://www.codecademy.com/](https://www.codecademy.com/)
 * [https://www.udemy.com/courses/development/web-development/](https://www.udemy.com/courses/development/web-development/)
 * [https://www.khanacademy.org/](https://www.khanacademy.org/)
