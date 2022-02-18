@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2022-02-18T17:00:42.505Z
+date: 2022-02-18T17:03:33.609Z
 tags: localization, development, tutorial, template, compendium, translations, modules, languages, translation, guide, code, module, localizations, babele, didacticiel
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -26,9 +26,10 @@ Pour plus de détails sur la traduction d'un système complet ou le scripting av
 3. [Ajouter des attributs à traduire](#ajouter-des-attributs-à-traduire)
 	3.1. [Définir les attributs](#définir-les-attributs)
   3.2. [Ajouter les attributs à un objet](#ajouter-les-attributs-à-un-objet)
-4. [Diffuser son module](#diffuser-son-module)
-  4.1. [Partage de fichier ZIP](#partage-de-fichier-zip)
-  4.2. [Utilisation d'un dépôt GitHub](#utilisation-dun-dépôt-github)
+4. [Traduire une table aléatoire](#Traduire-une-table-aléatoire)
+5. [Diffuser son module](#diffuser-son-module)
+  5.1. [Partage de fichier ZIP](#partage-de-fichier-zip)
+  5.2. [Utilisation d'un dépôt GitHub](#utilisation-dun-dépôt-github)
   
 ## Création d'un module
 ### Arborescence du dossier d'un module
@@ -215,7 +216,7 @@ Pour chaque objet, ajouter les attributs ainsi que les traduction à associer au
 	"subtype": "corps à corps"
 },
 ```
-### Traduire une table aléatoire 
+## Traduire une table aléatoire 
 Depuis la version 2.1.0 Babele supporte la traduction des tables aléatoires. 
 Les éléments vont se faire à l'aide de l'attribut `"results"`
 La traduction des éléments de texte va se faire sous la forme : 
