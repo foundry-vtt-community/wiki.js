@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-02-10T04:47:40.837Z
+date: 2022-02-18T15:53:39.140Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -10,7 +10,7 @@ dateCreated: 2021-05-14T17:58:11.311Z
 
 # Welcome to the Foundry VTT Community!
 
-**NOTE:** This wiki serves as a repository of community-curated information about the **Foundry Virtual Tabletop** and is 100% community-managed and run. We do not represent Foundry Gaming, LLC in any way.
+**NOTE:** This unofficial wiki serves as a repository of community-curated information about the **Foundry Virtual Tabletop** and is 100% community-managed and run. We do not represent Foundry Gaming, LLC in any way.
 
 ## Wiki Localizations
 - **English :** [English](/en/home)
