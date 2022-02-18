@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2021-05-23T17:23:48.663Z
+date: 2022-02-18T17:00:42.505Z
 tags: localization, development, tutorial, template, compendium, translations, modules, languages, translation, guide, code, module, localizations, babele, didacticiel
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -215,6 +215,28 @@ Pour chaque objet, ajouter les attributs ainsi que les traduction à associer au
 	"subtype": "corps à corps"
 },
 ```
+### Traduire une table aléatoire 
+Depuis la version 2.1.0 Babele supporte la traduction des tables aléatoires. 
+Les éléments vont se faire à l'aide de l'attribut `"results"`
+La traduction des éléments de texte va se faire sous la forme : 
+```json
+{
+  "label": "Nom du compendium ",
+  "entries": [
+    {
+      "id": "id de la table ",
+      "name": "Nom de la table ",
+      "description": "Description de la table ",
+      "results": {
+        "1-1": "Texte traduit",
+        "4-5": "Texte traduit"
+      }
+    }
+  ]
+}
+
+```
+Il convient de mettre les mêmes intervalles que la table à traduire. Si un intervalle correspond à un résultat qui renvoie vers une autre table traduite ou un autre élément traduit des compendiums, il n’est pas nécessaire de le définir (intervalle "2-3" dans l'exemple ci-dessus).
 ## Diffuser son module
   
 ### Partage de fichier ZIP
