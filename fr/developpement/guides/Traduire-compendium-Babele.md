@@ -2,7 +2,7 @@
 title: Débutant : traduction simple d'un compedium avec Babele
 description: Mini guide pour traduire un compendium à l'aide du module Babele
 published: true
-date: 2022-02-20T10:01:21.310Z
+date: 2022-02-20T10:18:51.660Z
 tags: localization, development, tutorial, template, compendium, translations, modules, languages, translation, guide, code, module, localizations, babele, didacticiel
 editor: markdown
 dateCreated: 2021-05-11T14:37:27.438Z
@@ -124,7 +124,24 @@ Hooks.on('init', () => {
 - L'attribut `dir: 'compendium'` permet de préciser le dossier à l'intérieur duquel Babele trouvera les fichiers de traduction de compendia au format JSON.
   
 Bien entendu tous ces attributs sont **sensibles à la casse**. Utilisez donc le nom exact en tenant compte des majuscules et minuscules. Par exemple, si le nom court du module est `wfrp4-wfrp4e-npc-generator`noter dans ce fichier `module: 'wfrp4-wfrp4e-npc-generator'` et non pas `module: '[WFRP4] NPC generator'`.
-    
+
+## Traduction sans module
+> Il est recommandé d'utiliser un module mais la traduction sans module peut servir à faire des tests rapides. {.is-warning}
+### Créer le répertoire contenant les Json de traduction
+Créer un répertoire **compendiums** dans le répertoire **data** de foundryVTT. Puis un répertoire nommé **fr** dans le répertoire **compendiums**.
+```
+Data
+│		compendiums
+│   		fr
+|					systeme.compendium.json			    
+```
+### Référencer le répertoire dans le module Babele
+Lancez votre monde dans FoundryVTT.
+Allez dans **Paramètres**->**Configuration des options**.
+Cliquez sur l'onglet **Modules**. Scrollez jusqu'à trouver le module Babele.
+Dans le champs **Translations Files Directory** entrez '**compendiums**'.
+Sauvegarder vos paramètres
+
 ## Comment traduire
 
 ### Récupérer les fichiers JSON de Babele
@@ -153,7 +170,7 @@ Voici une démarche possible pour la traduction de description en utilisant Foun
 
 - Choisissez un mode de fichier à récupérer (*il est souvent préférable d'opter pour le mode "Legacy"*) :
 ![dupliquer-compendium07.png](/setup/babele/dupliquer-compendium07.png)
-  
+
 ### Structure des fichiers de traduction JSON
 La structure basique d'un fichier JSON de traduction Babele se présente ainsi :
 ```json
