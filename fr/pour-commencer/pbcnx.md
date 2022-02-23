@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2021-07-25T10:44:47.179Z
+date: 2022-02-23T06:20:59.128Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -35,6 +35,10 @@ Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieu
 Ca peut venir de plusieurs choses. Vérifiez bien que vous avez une adresse IP fixe et que vous pouvez ouvrir le port 30000 auprès de votre opérateur. Ensuite, venez faire un tour sur le Discord, section #support-technique.
 
 Vou pouvez aussi consulter la page https://foundryvtt.wiki/fr/pour-commencer/win, qui contient de détails supplémentaires et des exemples.
+
+## Avez vous un VPN sur le PC ? 
+
+Si oui, vérifiez bien qu'une tache lui appartenant ne s'execute pas en fond. Si oui, assurez de bien le/les stopper avant de ré-essayer. 
 
 
 
