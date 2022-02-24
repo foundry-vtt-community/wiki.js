@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-02-08T02:32:49.583Z
+date: 2022-02-24T03:24:50.168Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -44,7 +44,7 @@ This guide supports the following distributions:
 1. Debian 11 based, such as (but not limited to):
 a. Debian
 b. Ubuntu
-c. Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14)
+c. Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14+)
 2. CentOS 8 based, such as (but not limited to):
 a. CentOS
 b. Red Hat Linux
@@ -154,19 +154,19 @@ sudo dnf update -y
 
 >If after entering the correct password, you receive an error: `<user> is not in the sudoers file` or similar, then you must login as **root** and complete ther [User Setup](#user-setup). {.is-warning}
 
-<a id="B6" href="#B6">B6.</a> Add the nodejs 14 repository to the system package manager:
+<a id="B6" href="#B6">B6.</a> Add the nodejs 16 repository to the system package manager:
 
 <details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
-curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
 ```
 </details>
 
 <details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
-curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
 ```
 </details>
 
