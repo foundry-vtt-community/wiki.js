@@ -2,7 +2,7 @@
 title: Introduction to PIXI in Foundry VTT
 description: 
 published: true
-date: 2022-02-24T04:30:46.527Z
+date: 2022-02-24T04:31:47.035Z
 tags: guide, pixi, layer, canvas, filter
 editor: markdown
 dateCreated: 2020-09-23T07:01:33.581Z
@@ -186,7 +186,7 @@ function updateBlurFilterStrength(strength) {
 ```
 
 ## Coordinates
-- ### Translating coordinates from global to local
+
 - ### Canvas Coordinates
 ```js
 /**
