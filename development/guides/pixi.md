@@ -2,7 +2,7 @@
 title: Introduction to PIXI in Foundry VTT
 description: 
 published: true
-date: 2021-08-12T16:03:47.688Z
+date: 2022-02-24T04:30:46.527Z
 tags: guide, pixi, layer, canvas, filter
 editor: markdown
 dateCreated: 2020-09-23T07:01:33.581Z
@@ -187,7 +187,23 @@ function updateBlurFilterStrength(strength) {
 
 ## Coordinates
 - ### Translating coordinates from global to local
-- ### Mouse position
+- ### Canvas Coordinates
+```js
+/**
+ * @description Executes callback function for a (left-)click event
+ * @param {event} onClickEvent 
+ * @returns {object} returns data object with x and y canvas coordinates, scaled to canvas size
+ */
+async function getCursorCoordinates(onClickEvent){
+    const [x, y] = [onClickEvent.clientX, onClickEvent.clientY];
+    const t = this.stage.worldTransform;
+    
+    return cursorCoordinates = {
+        x = (x - t.tx) / canvas.stage.scale.x,
+        y = (y - t.ty) / canvas.stage.scale.y
+    };
+};
+```
 ## Renderer
 ## Ticker & Animation
 ## Collision
