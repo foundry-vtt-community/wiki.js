@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2021-04-21T16:37:29.229Z
+date: 2022-02-28T17:51:55.513Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -15,6 +15,8 @@ dateCreated: 2020-10-31T00:54:43.133Z
 *c'est une liste 'statique' pour aiguiller les premières recherches, soumise aux aléas des versions et des màj 
 En cas de soucis sur un module, posez la question sur le discord, et signalez les màj necessaires sur cette liste !*
 
+**MAJ** 28/02/2022
+
 **Sources :**  
 
 - *initiée avec La liste partagée par [@Sokharr](https://discordapp.com/channels/715943353409339425/716213970297552897/761528675506061333)*
@@ -26,19 +28,21 @@ En cas de soucis sur un module, posez la question sur le discord, et signalez le
 
 Dans le menu "installer un module", chaque module à une (trop) courte description, mais surtout un lien vers son repository de sources qui portera (fréquemment) un descriptif, des vidéos etc pour expliquer le concept super trop moumoute du module !
 
-**Compatibilités des modules suite passage en 0.7.5 :**  
+**Compatibilités des modules**  
 
-le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryVTT/comments/jfs3sw/list_of_all_currently_updated_popular_modules/g9mo5ox/)
+Lors des gros changements de versions, il peux se passer un certains temps (de quelques jours à plusieurs semaines) avant qu'un module soit mis à jour.
+
+Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs mises à jour par semaine. (Faites le avec précaution un jour de partie néanmoins)
 
 ----------
 
 ## Traduction :
-- **french [core]** : la traduction des menus de FoundryVTT
+- **FR - Traduction du core** : Traduction des menus de FoundryVTT
 - **babele** : Indispensable pour la traduction, sert de socle pour porter les compendiums dans la langue choisie
-- **French [Dnd5]** : la traduction du systeme DD5
-- **French [wrfp4]** : la traduction du systeme Wrfp4 
-- **Français [pathfinder 2]** : traduction de l'interface pathfinder 2
-- **Pathfinder 2 - translations for compendiums (french)** : prise en charge des compendiums pour pf2
+- **fr-FR - DND5 System** : la traduction du système DD5
+- **Translation : French [WFRP4]** : Traduction du système Warhammer 4 
+- **Français [Pathfinder 2]** : traduction de l'interface pathfinder 2
+- **Pathfinder 2 - Translations for compendiums (French)** : prise en charge des compendiums pour pf2
 
 ## Génériques
 
@@ -47,17 +51,16 @@ le mieux est d'aller consulter [ce fil Reddit](https://www.reddit.com/r/FoundryV
 ### Amélioration de l'audio *(Audio Improvements)*
 - **Ambient Doors** : pour personnaliser les sons liés aux portes
 
-### Amélioration de l'automatisation *(Automation Enhancers)*
+### Gestion du Temps
 - **about-time** : Permet de gérer le temps en jeu et les saisons, les évênements spéciaux, etc.
-- **Macro Marker** : permet de personnaliser (effets ..) la barre de macro
+
 
 ### Tchat et Messagerie *(Chat Log and Messaging)*
-- **actually-private-rolls** : Permet de cacher complètement les jets de dés du MJ rien ne s'affiche lorsque le MJ fait un jet caché.  **[KO en 0.7.5 ???]**
-- **polyglot** : permet d'écrire en d'autres langues. par exemple "vous trouvez un livre dans la langue NAINE" ben je montre l'article écrit en Nain et uniquement les joeurs qui connaissent cette langues peuvent lire sinon c'est dans une police symbole
-- **health monitor** : spam le tchat en cas de modification des valeurs hud du token
+- **Hide GMrolls** : Permet de cacher complètement les jets de dés du MJ rien ne s'affiche lorsque le MJ fait un jet caché.
+- **polyglot** : Permet d'écrire en d'autres langues. Par exemple "vous trouvez un livre en langue NAINE" : uniquement les joueurs qui connaissent cette langue peuvent le lire sinon c'est dans une police symbole
+- **Autocomplete Whisper** : Affiche les noms des joueurs pour les "chuchoter"
  
 ### Amélioration des Combats *(Combat Enhancements)*
-- **combat effects tracker** : permet de suivre les effets dans le combat tracker avec décompte automatique par round
 - **combat utility belt** : pas mal de petite chose bien utiles pour le MJ
 - **let me roll that for you** : Permet de demander directement au joueur le jet à faire. avec Midi quality of life, permet de demander directement le bon test de sauvegarde avec les sorts par exemple.
 - **Not Your Turn !**: Pour éviter qu'un joueur bouge son perso quand ce n'est pas son tour, il a un message et son token est bloqué, pratique avec certains joueurs indiciplinés :)
