@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T07:05:27.965Z
+date: 2022-03-01T08:09:04.973Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -17,9 +17,9 @@ Oui, tout à fait, c'est dans la même catégorie de logiciels. Il existe à mon
 ## Du coup c'est quoi la différence avec Roll20 ?
 FoundryVTT a démarré son développement notamment car l'auteur principal ne trouvait pas son compte avec Roll20. Il a donc conçu FoundryVTT comme une plateforme générique de gestion de règles de JDR, quelle qu'elles soient. Ainsi, tout système de JDR est vu comme un plugin, à installer en plus de Foundry. De plus, FoundryVTT offre une grande liberté pour son installation et sa gestion : soit en local, soit en serveur privé, soit encore en hébergement tiers. J'y reviendrais plus bas. Enfin, son modèle de licence est ultra-simple et appréciable : vous achetez le logiciel, et c'est à vous une fois pour toute. Pas d'abonnement, rien, nada. Vous achetez, et c'est à vous.
 
-## Très bien, mais je vois que le truc est en bêta, comment qu’on l’achète ?
+## Très bien, ~~mais je vois que le truc est en bêta~~, comment qu’on l’achète ?
 
-A ce jour (mars 2022), Foundry est en version 9, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
+A ce jour (mars 2022), Foundry n'est plus en beta. Il est en version 9, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
 
 ## Putain, 60$ ?
 
@@ -68,7 +68,8 @@ Dans Foundry, les « jeux » sont appelés « systems ». Au 01/03/2022, on rece
 - Tales From The Loop
 - Anneau Unique
 - Fate, 
-- Pathfinder 1/2, 
+- Pathfinder 1,
+- Pathfinder 2, 
 - Shadowrun 5/6/Anarchy, 
 - Starfinder, 
 - Savage Worlds, 
@@ -84,7 +85,7 @@ Un système générique permet de plus de rapidement démarrer une table autour 
 
 ## C’est tout en anglais ce machin !
 
-Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite bar « Baktov », ainsi que les systèmes D&D5 (Baktov également), Shadowrun, Starfinder, Savage Worlds (ça c’est bibi) et Warhammer 4 (ça c’est bibi aussi). Cependant, pour l’instant, il faut reconnaître qu’une partie importante du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
+Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite bar « Baktov », ainsi que les systèmes D&D5 (Baktov également), Shadowrun, Starfinder, Savage Worlds (ça c’est bibi), Pathfinder 1 (wiki PF-FR) & Pathfinder 2 (rectulo) et Warhammer 4 (ça c’est bibi aussi). Cependant, pour l’instant, il faut reconnaître qu’une partie importante du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
 
 ## J’ai vu qu’il y avait des modules, c’est quoi ?
 
