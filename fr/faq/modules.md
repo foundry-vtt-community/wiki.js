@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2022-03-01T00:31:43.733Z
+date: 2022-03-01T00:32:11.682Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -75,7 +75,7 @@ Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs 
 *Encore une fois ces modules ne sont pas indispensables, mais peuvent améliorer votre expérience de jeu selon vos désirs personnel.*
 *Certains modules peuvent nécéssiter d'autres modules (dépendances)
 
-### Dnd 5 et dérivés SRD
+### Donjons et Dragons 5e et dérivés SRD
 
 ##### Feuille de Personnage
 - **Tidy5e Sheet** : Amélioration de la Feuille de personnage la plus populaire (il en existe d'autres)
