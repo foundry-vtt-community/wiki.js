@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T07:00:55.986Z
+date: 2022-03-01T07:02:08.214Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -101,8 +101,7 @@ Mon choix – partial s’il en est – est expliqué sur [cette page](http://ww
 
 ## Est-ce qu’il a des coupures audio/video ou autres ?
 
-Tout n’est pas parfait, le soft est en fin de bêta et a encore quelques bugs, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session [Jitsi](http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
-Beaucoup utilisent également l'audio via un serveur Discord.
+Tout n’est pas parfait, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session [Jitsi](http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal, ou bien d'utiliser un canal audio sous Discord. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
 
 ## Y'a plein de versions, j'y comprends rien.
 
