@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:17:52.042Z
+date: 2022-03-01T08:18:58.269Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -16,9 +16,8 @@ Ce qu'il faut savoir avant tout :
 
 **NOTE :** Ce wiki est destiné à recevoir les informations importantes et "statiques" pour FoundryVTT, en complément du <i class="fab fa-discord"></i> [Francophone](https://discord.gg/pPSDNJk) et est géré à 100% par la communauté. Nous ne représentons en aucune façon Foundry Gaming LLC.
 
-## Partenaires 
-[Les Partenaires](fr/sections/partenaires)
-
+## Partenaires
+[Les partenaires](/fr/pages/partenaires)
 
 Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous invitons à :
 - Nous rejoindre sur le <i class="fab fa-discord"></i> [Francophone](https://discord.gg/pPSDNJk).
