@@ -2,7 +2,7 @@
 title: CoC ou CoCth
 description: Choisir la skin de sa fiche PJ
 published: true
-date: 2021-04-21T16:41:04.369Z
+date: 2022-03-01T18:01:34.225Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T18:20:06.666Z
@@ -19,10 +19,10 @@ Vous n'avez rien à faire pour jouer avec ce visuel.
 # La Feuille de PJ CoCth
 Voici la démarche pour changer le visuel si vous jouez à CoCth :
 - Onglet "**Paramètres**"
-- Boutons "**Configuration des Options**"
-- Dans l'onglet "Système de jeu" activez "Points de Folies" et "Skin CoC Cthulhu)
+- Bouton "**Configuration des Options**"
+- Dans l'onglet "Système de jeu" activez l'option "Points de Folies"
 
-![chemin_skin_cocth.png](/images/chroniques-oubliées-contemporain/chemin_skin_cocth.png)
+Il faudra ensuite installer manuellement le module COC Cthulhu, allez vous renseigner sur le Discord.
 
 Et voici la feuille Correspondante :
 
