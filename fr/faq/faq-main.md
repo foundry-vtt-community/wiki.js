@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T06:57:33.799Z
+date: 2022-03-01T06:58:23.830Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -31,7 +31,7 @@ C’est une question qui revient très souvent : donc, non bien sûr les joueurs
 
 ## Admettons que je l’achète. Est-ce que je dois re-payer pour les mises à jour ?
 
-Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’achat. Ce qui va peut-être venir en supplément (et je dis peut-être, on en sait rien), ce sont des éventuelles licences officielles, signées avec les éditeurs, et venant avec un module complet, et pour lesquels l’éditeur demande lui même une rétribution. Mais tant que que l’on joue avec les modules et systèmes disponibles, il n’y a rien d’autre à payer que le prix d’achat initial.
+Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’achat. Ce qui peut venir en supplément, ce sont certaines licences officielles de contenus, signées avec les éditeurs, et venant avec un module complet, et pour lesquels l’éditeur demande lui même une rétribution. Mais tant que que l’on joue avec les modules et systèmes disponibles gratuitement, il n’y a rien d’autre à payer que le prix d’achat initial.
 
 ## J’y connais rien en informatique, je peux m’en servir quand même ?
 
