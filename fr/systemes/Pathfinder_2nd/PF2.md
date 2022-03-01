@@ -2,8 +2,8 @@
 title: 0.0. Pathfinder Seconde Édition
 description: 
 published: true
-date: 2022-03-01T08:30:28.124Z
-tags: 
+date: 2022-03-01T08:31:24.393Z
+tags: pathfinder 2e, foundry
 editor: markdown
 dateCreated: 2021-02-27T10:55:46.524Z
 ---
