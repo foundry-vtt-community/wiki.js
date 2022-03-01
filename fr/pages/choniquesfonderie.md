@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2022-03-01T15:24:46.722Z
+date: 2022-03-01T15:24:54.367Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -20,6 +20,6 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 4](https://www.youtube.com/watch?v=ezpl66lRde4) avec Kristov et Zigmund pour les univers Chroniques Oubliées
  - Les Chroniques de la [Fonderie, Episode 5](https://www.youtube.com/watch?v=MRJv3-xWCeQ) avec Rectulo et Sasmira pour Pathfinder 2
  - Les Chroniques de la [Fonderie, Episode 6](https://www.youtube.com/watch?v=W1tgPJyUHlw) avec Cimeryl et Maxime pour D&D et HnD
- - Les Chroniques de la [Fonderie, Episode 6](https://www.youtube.com/watch?v=DnbxYBE3XCs) avec Kyllian pour Warhammer
+ - Les Chroniques de la [Fonderie, Episode 7](https://www.youtube.com/watch?v=DnbxYBE3XCs) avec Kyllian pour Warhammer
   
  - A venir : émission de Mars avec SecretFire de la team Foundry US + Un système de jeu !
