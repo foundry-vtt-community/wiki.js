@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T06:53:58.322Z
+date: 2022-03-01T06:55:15.626Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -15,11 +15,11 @@ FoundryVTT est un logiciel permettant de jouer à des jeux de rôles sur table e
 Oui, tout à fait, c'est dans la même catégorie de logiciels. Il existe à mon sens deux grandes catégories de logiciels de table virtuelles : les "clients lourds" et les applications webs. Les clients lourds sont des applications (des .exe quoi, pour les Windoziens) à installer sur<strong> chaque</strong> poste des joueurs. Les applications Web nécessitent un serveur (soit auto-hébergé, soit hébergé par un tiers) et le MJ et les joueurs utilisent simplement un navigateur (Chrome conseillé) pour y accéder. FoundryVTT  est dans la catégorie des applications web, comme Roll20 ou AstralTableTop.
 
 ## Du coup c'est quoi la différence avec Roll20 ?
-FoundryVTT a démarré son développement notamment car l'auteur principal ne trouvait pas son compte avec Roll20. Il a donc conçu FoundryVTT comme une plateforme générique de gestion de règles de JDR, quelle qu'elles soient. Ainsi, tout système de JDR est vu comme un plugin, à installer en plus de Foundry. De plus, FoundryVTT offre une grande liberté pour son installation et sa gestion : soit en local, soit en serveur privé, soit encore en hébergement tiers. J'y reviendrais plus bas. Enfin, son modèle de licence est ultra-simple et appréciable : vous achetez le logiciel, est c'est à vous une fois pour toute. Pas d'abonnement, rien, nada. Vous achetez, et c'est à vous.
+FoundryVTT a démarré son développement notamment car l'auteur principal ne trouvait pas son compte avec Roll20. Il a donc conçu FoundryVTT comme une plateforme générique de gestion de règles de JDR, quelle qu'elles soient. Ainsi, tout système de JDR est vu comme un plugin, à installer en plus de Foundry. De plus, FoundryVTT offre une grande liberté pour son installation et sa gestion : soit en local, soit en serveur privé, soit encore en hébergement tiers. J'y reviendrais plus bas. Enfin, son modèle de licence est ultra-simple et appréciable : vous achetez le logiciel, et c'est à vous une fois pour toute. Pas d'abonnement, rien, nada. Vous achetez, et c'est à vous.
 
 ## Très bien, mais je vois que le truc est en bêta, comment qu’on l’achète ?
 
-A ce jour (mai 2021), Foundry est en version 0.7.9, achetable en 1 fois pour la somme de 60$. Une réduction est appliquée pour les développeurs et les supporters de Patreon, basés sur la durée de support (le soft est gratuit au final pour les développeurs et ceux présents depuis plus d’1 an grosso-modo).
+A ce jour (mars 2022), Foundry est en version 9, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement.
 
 ## Putain, 60$ ?
 
