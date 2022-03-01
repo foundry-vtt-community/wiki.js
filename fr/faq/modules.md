@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2022-03-01T00:32:11.682Z
+date: 2022-03-01T00:33:56.035Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -74,6 +74,7 @@ Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs 
 ## Modules Spécifiques Systèmes
 *Encore une fois ces modules ne sont pas indispensables, mais peuvent améliorer votre expérience de jeu selon vos désirs personnel.*
 *Certains modules peuvent nécéssiter d'autres modules (dépendances)
+
 
 ### Donjons et Dragons 5e et dérivés SRD
 
