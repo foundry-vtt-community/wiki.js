@@ -2,7 +2,7 @@
 title: Tutos, FAQ et autres
 description: 
 published: true
-date: 2022-03-01T08:22:48.100Z
+date: 2022-03-01T08:28:10.581Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:22:48.100Z
@@ -15,6 +15,8 @@ La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
 
  - Achat et installation par Kyllian : [Achat & Installation](https://www.youtube.com/watch?v=uoTwImiVXBU)
  - Présentation didactique de [Foundry par Samuel Zitterman](https://www.youtube.com/watch?v=DYjrzwfLX80)
+  - Interview autour de [FoundryVTT par JDRFactory](https://www.youtube.com/watch?v=mOWEWFj4ZEo)
+  - Présentation générale de [FoundrVTT par Gogots](https://www.youtube.com/watch?v=_y0MHujjD34&t=6685s)
  - Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
  - Notes de Journaux et utilisation sur les scènes par Jonleb : [Journaux et Scenes](https://www.youtube.com/watch?v=BKRoX_F-fY0=)
  - Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
