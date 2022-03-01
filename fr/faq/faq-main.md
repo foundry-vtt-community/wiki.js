@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T06:48:24.200Z
+date: 2022-03-01T06:52:22.147Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -159,3 +159,8 @@ La règle pour déterminer les origines des soucis c'est ça :
 
 Si le problème est côté serveur, il faut vérifier votre bande passante et probablement faire des essais sans UPnP.
 Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
+
+## Je change de PC : je peux récupérer tout mon contenu ?
+
+Oui, bien sûr. Les données de Foundry sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data` que vous pouvez configurer dans l'interface de Foundry. Donc changer de PC équivaut à recopier votre répertoire `worlds`, tout simplement.
+Notez que vous pouvez parfaitement avoir 1 installation de Foundry sur votre PC/Mac local (pour préparer vos parties par exemple) et 1 installation en ligne sur un serveur (TheForge par exemple), tout ça avec la même licence.
