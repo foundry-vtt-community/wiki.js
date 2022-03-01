@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:25:38.174Z
+date: 2022-03-01T08:29:26.061Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -22,6 +22,10 @@ Ce qu'il faut savoir avant tout :
 ## Les Chroniques de la Fonderie
 Chaque mois, l'équipe du Discord Fr de FoundryVTT et GeekPowa propose une petite émission d'1 heure sur un thème particulier. La liste [des émissions ici](/fr/pages/choniquesfonderie)
 
+## Ressources officielles
+
+Une série de liens [de ressources officielles](/fr/pages/ressourcesoff)
+
 ## Partenaires
 [Les partenaires](/fr/pages/partenaires)
 
@@ -36,16 +40,6 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 
 [Scénarios recensés en VO et VF, par systèmes](/fr/scenarios/scenarios)
 
-## Ressources officielles ...
-<i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop Website](http://foundryvtt.com)
-<i class="fab fa-discord"></i> [Discord](https://discordapp.com/invite/DDBZUDf)
-<i class="fab fa-twitter"></i> [Twitter](https://twitter.com/FoundryVTT)
-<i class="fab fa-reddit"></i> [Subreddit](https://www.reddit.com/r/FoundryVTT/)
-<i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
-<i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
-<i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
-<i class="fab fa-gitlab"></i> [Gitlab](https://gitlab.com/foundrynet)
-<i class="fab fa-gitlab"></i> [Gitlab Issue Tracker](https://gitlab.com/foundrynet/foundryvtt/-/boards?milestone_title=No+Milestone&)
 
 ## Par ou Commencer ...
 Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT ?
