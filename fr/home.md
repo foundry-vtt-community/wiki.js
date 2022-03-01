@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:30:57.567Z
+date: 2022-03-01T08:33:28.949Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -15,12 +15,15 @@ Ce qu'il faut savoir avant tout :
 - ***et que vous n'avez PAS besoin d'un Patreon, comme c'est parfois indiqué sur des sites/blogs***
 
 **NOTE :** Ce wiki est destiné à recevoir les informations importantes et "statiques" pour FoundryVTT, en complément du <i class="fab fa-discord"></i> [Francophone](https://discord.gg/pPSDNJk) et est géré à 100% par la communauté. Nous ne représentons en aucune façon Foundry Gaming LLC.
-## Pour démarrer ! 
 
+## Pour démarrer ! 
 [Tutoriels, FAQ et autres informations](/fr/page/tutosfaq)
 
 ## Les Chroniques de la Fonderie
-Chaque mois, l'équipe du Discord Fr de FoundryVTT et GeekPowa propose une petite émission d'1 heure sur un thème particulier. La liste [des émissions ici](/fr/pages/choniquesfonderie)
+Chaque mois, l'équipe du Discord Fr de FoundryVTT et GeekPowa proposent une petite émission d'1 heure sur un thème particulier. La liste [des émissions ici](/fr/pages/choniquesfonderie)
+
+## Systèmes en Français et Contenus disponibles
+Cette [section recense des informations courantes sur les systèmes de jeu traduits et certains modules de scénarios clés en mains.](/fr/pages/systemescontenus)
 
 ## Ressources officielles
 
@@ -36,40 +39,6 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 
 
  
-## Scénarios et contenus 
-
-[Scénarios recensés en VO et VF, par systèmes](/fr/scenarios/scenarios)
-
-
-
-
-## Les différentes Versions de Foundry VTT
-- **Version Stable actuelle : v9.249 (version conseillée)
-
-## Les systèmes en français
-- [Aria - Game of Roles](https://foundryvtt.wiki/fr/systemes/aria)
-- [Appel de Cthulhu 7e](/fr/systemes/fr-adc)
-- [Brigandyne](https://foundryvtt.wiki/fr/systemes/brigandyne)
-- [Chroniques Oubliées Contemporain](https://foundryvtt.wiki/fr/systemes/Chroniques-Oubliées-Contemporain)
-- [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
-- [Core-system](/fr/systemes/core-system)
-- [Cthulhu Hack](https://foundryvtt.wiki/fr/systemes/Chthulhu-Hack)
-- [Delta Green](https://foundryvtt.wiki/fr/systemes/dg)
-- [Dungeons and Dragons 5e](https://foundryvtt.wiki/fr/systemes/DD5/fr-dd5-system)
-    - [Héros & Dragons](/fr/systemes/fr-hnd) (Dépendance: nécessite DD5)
-- [Free League](https://foundryvtt.wiki/fr/systemes/free-league)
-- [Legende les Cinq Anneaux 5e](https://foundryvtt.wiki/fr/systemes/l5r)
-- [Pathfinder 1re édition](/fr/systemes/Pathfinder_1re/PF1)
-- [Pathfinder Seconde édition](/fr/systemes/Pathfinder_2nd/PF2)
-- [Rêve de Dragon](/fr/systemes/rdd)
-- [SWADE - Savage Worlds](/fr/systemes/fr-swade)
-    - [Deadlands Reloaded](/fr/systemes/fr-deadlands) (Dépendance: nécessite SWADE)
-- [Starfinder](/fr/systemes/starfinder)
-- [Starwars FFG](/fr/systemes/swffg)
-- [Warhammer 4e](/fr/systemes/fr-wfrp4e)
-- [World of Darkness](https://foundryvtt.wiki/fr/systemes/wod)
-- barbarians of Lemuria
-- Yggdrasill
 
 ## Resources (map, musiques, etc)
 
