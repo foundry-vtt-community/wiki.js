@@ -2,7 +2,7 @@
 title: Tutos, FAQ et autres
 description: 
 published: true
-date: 2022-03-01T08:31:29.245Z
+date: 2022-03-01T08:40:53.902Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:22:48.100Z
@@ -39,5 +39,6 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
  - [Tutoriel Alien RPG par Kyllian](https://www.youtube.com/watch?v=MDibd3_wrqU)
  - [Tutoriel Appel de Cthulhu par Kyllian](https://youtu.be/s1TcRm85Dsg)
  - [Modules pratiques par Carter](https://youtu.be/_cyLUEiTkaU)
+ - [Modules communautaires](/fr/pages/modulescommuns)
 
 
