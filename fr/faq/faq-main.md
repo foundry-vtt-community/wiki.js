@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T06:52:22.147Z
+date: 2022-03-01T06:53:58.322Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -164,3 +164,9 @@ Si le problème est côté joueurs, il est souvent du soit à leur mauvaise conn
 
 Oui, bien sûr. Les données de Foundry sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data` que vous pouvez configurer dans l'interface de Foundry. Donc changer de PC équivaut à recopier votre répertoire `worlds`, tout simplement.
 Notez que vous pouvez parfaitement avoir 1 installation de Foundry sur votre PC/Mac local (pour préparer vos parties par exemple) et 1 installation en ligne sur un serveur (TheForge par exemple), tout ça avec la même licence.
+
+## Je veux faire des sauvegardes, ça marche comment ?
+
+Comme dit au paragraphe précédent, les données utilisateurs de Foundry sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data` (répertoire que vous pouvez configurer dans l'interface de Foundry). Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à l'archiver quelque part, tout simplement.
+
+
