@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T07:44:21.962Z
+date: 2022-03-01T07:44:31.834Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -76,7 +76,7 @@ Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT
 - [Si vous avez des déconnexions régulières](/fr/pour-commencer/dcnx-upnp)
 
 ## Les différentes Versions de Foundry VTT
-- **Version Stable actuel : v9.249 (version conseillée)
+- **Version Stable actuelle : v9.249 (version conseillée)
 
 ## Les systèmes en français
 - [Aria - Game of Roles](https://foundryvtt.wiki/fr/systemes/aria)
