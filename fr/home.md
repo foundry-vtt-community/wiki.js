@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:35:30.292Z
+date: 2022-03-01T08:36:30.337Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -27,9 +27,10 @@ Cette [section recense des informations courantes sur les systèmes de jeu tradu
 
 ## Ressources pour le jeu
 [Compilation et liens vers des ressources pour jouer en ligne](/fr/pages/ressourcesjeux) (tokens, art, images d'ambiance, musiques)
+
 ## Ressources officielles
 
-Une série de liens [de ressources officielles](/fr/pages/ressourcesoff)
+Une série de liens [de ressources officielles](/fr/pages/ressourcesoff) pour FoundryVTT.
 
 ## Partenaires
 [Les partenaires](/fr/pages/partenaires)
