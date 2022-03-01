@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2021-05-28T10:27:33.422Z
+date: 2022-03-01T06:48:24.200Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -54,20 +54,25 @@ Bon si vous avez ça, l’installation ne devrait vous poser de problèmes, je v
 
 ## Et il n'y a pas de services en lignes déjà disponibles ?
 
-Si, il va y en avoir, et ça déjà démarré avec TheForge et FoundryServer.
+Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus populaire à l'heure actuelle) et FoundryServer (https://www.foundryserver.com/ ).
 
 ## Y’a quoi comme jeu dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 20/05/2021, on recense 130+ « systems » : 
+Dans Foundry, les « jeux » sont appelés « systems ». Au 01/02/2022, on recense 180+ « systems » : 
 - 13th age,
-- Appel de Cthulhu, DeltGree
+- Appel de Cthulhu, DeltGreen
+- Cthlulhu Hack
+- Chroniques Oubliées
+- Aliens
 - D&D5,
+- Tales From The Loop
+- Anneau Unique
 - Fate, 
 - Pathfinder 1/2, 
-- Shadowrun 5, 
+- Shadowrun 5/6/Anarchy, 
 - Starfinder, 
 - Savage Worlds, 
-- Warhammer 4, etc ...
+- Warhammer 4
 - Degenesis,
 - Dungeon Crawl Classics,
 - Monster of the Week,
