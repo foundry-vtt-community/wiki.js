@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:33:28.949Z
+date: 2022-03-01T08:35:30.292Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -25,6 +25,8 @@ Chaque mois, l'équipe du Discord Fr de FoundryVTT et GeekPowa proposent une pet
 ## Systèmes en Français et Contenus disponibles
 Cette [section recense des informations courantes sur les systèmes de jeu traduits et certains modules de scénarios clés en mains.](/fr/pages/systemescontenus)
 
+## Ressources pour le jeu
+[Compilation et liens vers des ressources pour jouer en ligne](/fr/pages/ressourcesjeux) (tokens, art, images d'ambiance, musiques)
 ## Ressources officielles
 
 Une série de liens [de ressources officielles](/fr/pages/ressourcesoff)
@@ -39,14 +41,6 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 
 
  
-
-## Resources (map, musiques, etc)
-
- - [Cartes & Maps](/fr/resources/maps)
- - [Musiques](/fr/resources/musiques)
- - [Art/Ambiance](/fr/resources/artambiance)
- - [Tokens](/fr/resources/tokens)
-
 ## Démos publiques de Foundry
 Vous trouverez ci-dessous la démo officielle de la VTT Foundry, ainsi que les démos et systèmes maintenus par la communauté.
 
