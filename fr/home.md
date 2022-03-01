@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:29:26.061Z
+date: 2022-03-01T08:30:57.567Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -41,14 +41,7 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 [Scénarios recensés en VO et VF, par systèmes](/fr/scenarios/scenarios)
 
 
-## Par ou Commencer ...
-Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT ?
-- [Pour Commencer](/fr/pour-commencer/setup)
-- [Mes joueurs n'arrivent pas à se connecter](/fr/pour-commencer/pbcnx)
-- [Installation sous Windows](/fr/pour-commencer/win)
-- [L'Audio/Video sous Foundry VTT](/fr/pour-commencer/av)
-- [Installation sous Linux](/fr/pour-commencer/linux)
-- [Si vous avez des déconnexions régulières](/fr/pour-commencer/dcnx-upnp)
+
 
 ## Les différentes Versions de Foundry VTT
 - **Version Stable actuelle : v9.249 (version conseillée)
