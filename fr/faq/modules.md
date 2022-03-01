@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2022-03-01T00:34:48.884Z
+date: 2022-03-01T09:28:35.512Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -12,7 +12,7 @@ dateCreated: 2020-10-31T00:54:43.133Z
 
 **Disclaimer :**
 
-*c'est une liste 'statique' pour aiguiller les premières recherches, soumise aux aléas des versions et des màj 
+*C'est une liste 'statique' pour aiguiller les premières recherches, soumise aux aléas des versions et des màj 
 En cas de soucis sur un module, posez la question sur le discord, et signalez les màj necessaires sur cette liste !*
 
 **MAJ** 28/02/2022
@@ -22,13 +22,13 @@ En cas de soucis sur un module, posez la question sur le discord, et signalez le
 - *le discord FoundryVtt*
 
 
-**Comment rapidement se faire une idée d'un module ?**
+**Comment se faire rapidement une idée d'un module ?**
 
-Dans le menu "installer un module", chaque module à une courte description, mais surtout un lien vers son dépot qui portera (fréquemment) un descriptif, des vidéos etc pour expliquer le concept du module
+Dans le menu "installer un module", chaque module a une courte description, mais surtout un lien vers son dépôt qui portera (fréquemment) un descriptif, des vidéos etc pour expliquer le concept du module.
 
 **Compatibilités des modules**  
 
-Lors des gros changements de version, il peux se passer un certains temps (de quelques jours à plusieurs semaines) avant qu'un module soit mis à jour. Généralement une liste des modules à jours est disponible sur le Discord
+Lors des gros changements de version, il peux se passer un certain temps (de quelques jours à plusieurs semaines) avant qu'un module soit mis à jour. Généralement une liste des modules à jour est disponible sur le Discord
 
 Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs mises à jour par semaine. (Faites le avec précaution un jour de partie néanmoins)
 
@@ -54,8 +54,8 @@ Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs 
 
 
 ## Modules Génériques
-*Ces Modules ne sont pas indispensable, mais peuvent améliorer votre expérience de jeu selon vos désirs personnel*
-*Certains modules peuvent nécéssiter d'autres modules (dépendances)*
+*Ces Modules ne sont pas indispensables, mais peuvent améliorer votre expérience de jeu selon vos désirs personnels*
+*Certains modules peuvent nécessiter d'autres modules (dépendances)*
 
  - **Dice so Nice!** : Dés en 3d
  - **Dice Tray** : Interface graphique de lancer de dés
@@ -64,16 +64,16 @@ Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs 
  - **FX Master** : Ajoute des effets graphiques/météo à vos scènes (pluie, neige, nuage, oiseaux, etc)
  - **Hide GM Rolls** : Cache les jets de dés du MJ aux joueurs
  - **Tidy UI** ou **Module management+** : Simplifie l'affichage des options des modules. Module management ajoute les changelogs et dépendances en plus
- - **PnP - Pointer and Pings!** ou **Pings** : Permet de marquer un point sur la scène. PnP permet en plus d'afficher un marqueur mobile et d'attirer la vision des joueurs à un point précis de la scène.
-  - **PopOut!** : Ouvre la fenêtre dans un autre navigateur (pour avoir la fiche de personnage sur un 2e écran ou facilement accèssible sans avoir à chercher dans les menus, ou n'importe quelle autre fenêtre de Foundry)
- - **Smart Target** ou **Easy Target** : Aide au ciblage, Smart Target a plus d'option
+ - **PnP - Pointer and Pings!** ou **Pings** : Permet de marquer un point sur la scène. PnP permet en plus d'afficher un marqueur mobile et d'attirer la vision des joueurs sur un point précis de la scène.
+  - **PopOut!** : Ouvre la fenêtre dans un autre navigateur (pour avoir la fiche de personnage sur un 2e écran ou facilement accessible sans avoir à chercher dans les menus, ou n'importe quelle autre fenêtre de Foundry)
+ - **Smart Target** ou **Easy Target** : Aide au ciblage, Smart Target a plus d'options
  - **Simple Calendar** : Création de calendrier et gestion du temps (nécéssite la dépendance About Time)
- - **Token Action HUD** : Affiche une barre de raccourci regrouppant la majeure partie des capacités de votre personnage, évite d'avoir à ouvrir la feuille de personnage
+ - **Token Action HUD** : Affiche une barre de raccourci regroupant la majeure partie des capacités de votre personnage, évite d'avoir à ouvrir la feuille de personnage. Attention : il faut que le système soit supporté par le module, la liste complète est dans le Readme sur le dépôt https://github.com/Drental/fvtt-tokenactionhud
 - **Universal Battlemap Importer** : Permet d'importer en scène un fichier Universal VTT (conçu à partir de logiciels de création de carte de type Dungeondraft, DungeonFog, etc...)
 
 ## Modules Spécifiques Systèmes
-*Encore une fois ces modules ne sont pas indispensables, mais peuvent améliorer votre expérience de jeu selon vos désirs personnel.*
-*Certains modules peuvent nécéssiter d'autres modules (dépendances)*
+*Encore une fois ces modules ne sont pas indispensables, mais peuvent améliorer votre expérience de jeu selon vos désirs personnels.*
+*Certains modules peuvent nécessiter d'autres modules (dépendances)*
 
 
 ### Donjons et Dragons 5e et dérivés SRD
