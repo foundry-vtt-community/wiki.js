@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T06:55:44.876Z
+date: 2022-03-01T06:57:33.799Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -23,11 +23,11 @@ A ce jour (mars 2022), Foundry est en version 9, achetable en 1 fois pour la som
 
 ## Putain, 60$ ?
 
-C’est peut-être effectivement cher pour vous – et je peux le comprendre – mais pensez que ça correspond probablement à 3 ou 4 mois de votre abonnement de smartphone, et qu’une fois cette somme dépensée, le soft est à vous à vie. Comparez également avec un abonnement en ligne d’1 an chez Roll20 ou AstralTableTop. Enfin, pensez que vous allez pouvoir héberger tous vos jeux sur une seule licence, et que vous n’aurez que vos propres limites en matière de stockage de cartes, dessins, images, etc. Quand à ceux qui, par principe, cherchent à ne jamais dépenser quoi que ce soit, pour rien, et qui veulent toujours grappiller le moindre bout de machin – et ce sont ceux qui curieusement sont également les plus exigeants – , et bien vous pouvez arrêter de lire cette FAQ, l’outil n’est pas pour vous. Ce blog non plus, d’ailleurs, pendant que j’y pense 🙂 !
+C’est peut-être effectivement cher pour vous – et je peux le comprendre – mais pensez que ça correspond probablement à 3 ou 4 mois de votre abonnement de smartphone, et qu’une fois cette somme dépensée, le soft est à vous à vie. Comparez également avec un abonnement en ligne d’1 an chez Roll20 ou AstralTableTop. Enfin, pensez que vous allez pouvoir héberger tous vos jeux sur une seule licence, et que vous n’aurez que vos propres limites en matière de stockage de cartes, dessins, images, etc. Quand à ceux qui, par principe, cherchent à ne jamais dépenser quoi que ce soit, pour rien, et qui veulent toujours grappiller le moindre bout de machin – et ce sont ceux qui curieusement sont également les plus exigeants – , et bien vous pouvez arrêter de lire cette FAQ, l’outil n’est probablement pas pour vous :) !
 
 ## 60 $ ? Et les joueurs doivent payer aussi ?
 
-Bon malgré le fait que la réponse à cette question se trouve tout simplement en gros et gras à plusieurs d’endroits du site de Foundry, c’est la question qui revient quasiment le plus souvent. Bref, je dirais RTFM. Donc, non bien sûr les joueurs ne payent pas. Une seule licence permet de faire jouer autant de joueurs que vous voulez à votre table. La seule contrainte est qu’il ne peut y a voir qu’1 seul jeu actif à un moment donné.
+C’est une question qui revient très souvent : donc, non bien sûr les joueurs ne payent pas. Une seule licence permet de faire jouer autant de joueurs que vous voulez à votre table. La seule contrainte est qu’il ne peut y a voir qu’1 seul jeu actif à un moment donné.
 
 ## Admettons que je l’achète. Est-ce que je dois re-payer pour les mises à jour ?
 
