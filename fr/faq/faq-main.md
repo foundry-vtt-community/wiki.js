@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T07:02:08.214Z
+date: 2022-03-01T07:05:27.965Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -105,16 +105,16 @@ Tout n’est pas parfait, il faut parfois faire un « refresh » de son navigate
 
 ## Y'a plein de versions, j'y comprends rien.
 
-Foundry est basé sur des paliers et des canaux de "releases" : alpha, beta et release.
-Un palier, c'est la première partie des numéros de versions. Par exemple, dans 0.5.3, le palier c'est "0.5". Dans un palier donné, il y a un ensemble de nouvelles fonctionnalités qui sont implémentées.  Dans un même palier, les derniers numéros indiquent les versions au sein du palier. Par exemple 0.7.0 est la première version du palier "0.7", puis 0.7.1 la seconde, etc..
-Tant que le palier n'a pas atteint un niveau release (stable), les versions sont soient en alpha, soit en beta.
+Foundry est basé sur des paliers et des canaux de "releases" : stable, test, beta et prototype.
+Un palier, c'est la première partie des numéros de versions. Par exemple, dans 0.5.3, le palier c'est "0.5". Dans un palier donné, il y a un ensemble de nouvelles fonctionnalités qui sont implémentées.  Dans un même palier, les derniers numéros indiquent les versions au sein du palier. Par exemple 0.7.0 est la première version du palier "0.7", puis 0.7.1 la seconde, etc.. Actuellement, en mars 2022, nous sommes au palier 9.
 
-Au sein d'un même palier, les modules et systèmes indiquant le support du palier sont tous compatibles. Autrement dit, si votre système/module marche en 0.7.5, il marchera en 0.7.7.
+Tant que le palier n'a pas atteint un niveau stable, les versions sont des versions potentiellement instables : si vous n'êtes pas développeur, il n'est pas conseillé de les installer.
+
+Au sein d'un même palier, les modules et systèmes indiquant le support du palier sont tous compatibles. Autrement dit, si votre système/module marche en 9.239, il marchera en 9.245.
 
 **Règle 1** : Ne jamais mettre à jour juste avant une partie
-**Règle 2** : Si vous n'êtes pas développeur, n'installez pas les releases alpha ni les premières beta. Attendez les betas "tardives" ou les premières "releases".
+**Règle 2** : Si vous n'êtes pas développeur, n'installez pas les releases prototype, beta et test. Attendez les tests "tardives" ou les premières "stables".
 **Règle 3**  : Au sein d'un même palier, placez vous toujours sur la dernière version du palier.
-
 
 
 ## Mon JDR « Borglur of Daemon of Death Doomesque » est pas dispo ! Que faire ?
