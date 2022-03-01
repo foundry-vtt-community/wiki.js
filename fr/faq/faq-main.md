@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-03-01T06:59:39.520Z
+date: 2022-03-01T07:00:36.476Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -39,7 +39,7 @@ Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir de
 
 ## Je n'ai pas de serveur, je peux le mettre sur mon PC ?
 
-Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous avez un .EXE/.DMG qui va transformer votre PC/Mac en serveur Foundry. Vous aurez à ouvrir le port TCP 30000 (par défaut), et à l’autoriser dans votre firewall. Plus d’infos ici.
+Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous avez un .EXE/.DMG qui va transformer votre PC/Mac en serveur Foundry. Vous aurez à ouvrir le port TCP 30000 (par défaut), et à l’autoriser dans votre firewall. Plus d’infos ici https://foundryvtt.wiki/fr/pour-commencer/pbcnx.
 
 ## Et il faut de la bande passante ?
 
