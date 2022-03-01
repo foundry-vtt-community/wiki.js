@@ -2,7 +2,7 @@
 title: Tutos, FAQ et autres
 description: 
 published: true
-date: 2022-03-01T08:28:10.581Z
+date: 2022-03-01T08:31:29.245Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:22:48.100Z
@@ -20,6 +20,15 @@ La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
  - Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
  - Notes de Journaux et utilisation sur les scènes par Jonleb : [Journaux et Scenes](https://www.youtube.com/watch?v=BKRoX_F-fY0=)
  - Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
+
+# Guides et assistances
+Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT ?
+- [Pour Commencer](/fr/pour-commencer/setup)
+- [Mes joueurs n'arrivent pas à se connecter](/fr/pour-commencer/pbcnx)
+- [Installation sous Windows](/fr/pour-commencer/win)
+- [L'Audio/Video sous Foundry VTT](/fr/pour-commencer/av)
+- [Installation sous Linux](/fr/pour-commencer/linux)
+- [Si vous avez des déconnexions régulières](/fr/pour-commencer/dcnx-upnp)
 
 # Présentation de systèmes et modules
  - Système Rêve de Dragon par LeRatierBretonnien (la première partie est "générique" à Foundry) : [Foundry et système Rêve de Dragon](https://www.youtube.com/watch?v=98JkdIKtGfw) 
