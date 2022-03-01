@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2022-03-01T08:36:30.337Z
+date: 2022-03-01T08:37:24.759Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -28,6 +28,9 @@ Cette [section recense des informations courantes sur les systèmes de jeu tradu
 ## Ressources pour le jeu
 [Compilation et liens vers des ressources pour jouer en ligne](/fr/pages/ressourcesjeux) (tokens, art, images d'ambiance, musiques)
 
+## Démonstrations 
+Si vous voulez tester l'outil avant d'acheter, [ça se passe ici !](/fr/pages/demos)
+
 ## Ressources officielles
 
 Une série de liens [de ressources officielles](/fr/pages/ressourcesoff) pour FoundryVTT.
@@ -42,39 +45,3 @@ Pour toutes questions ne trouvant pas réponse dans ces pages, nous vous inviton
 
 
  
-## Démos publiques de Foundry
-Vous trouverez ci-dessous la démo officielle de la VTT Foundry, ainsi que les démos et systèmes maintenus par la communauté.
-
-### [Foundry VTT](https://foundryvtt.com/demo/join)
-
-Mot de passe : `foundry`
-
-Cette démonstration officielle présente la dernière version de FVTT et est disponible pour quiconque souhaite tester les fonctionnalités et l'interface du système
-
-### [The Forge](https://demo.forge-vtt.com/)
-
-Mot de passe : `forge`
-
-Cette démo de The Forge est hébergée par The Forge . Elle comprend un tutoriel pour les nouveaux utilisateurs et des ajustements supplémentaires à l'expérience VTT de Foundry pour la plateforme d'hébergement de la Forge.
-
-### [Incarnate Gaming LLC](https://www.demo.incarnategamingllc.com:30000/)
-
-Mot de passe : `incarnate`
-
-Cette démo d'Incarnate est hébergée par Incarnate Gaming LLC et comprend un module supplémentaire payant qui ne fait pas partie de la version officielle
-
-## Modules Collaboratifs
-Vous trouverez ci-dessous les modules collaboratifs au wiki de la communauté VTT de Foundry. Tout le monde peut partager son contenu avec le reste de la communauté via une demande d'extraction pour être fusionné dans une mise à jour du module.
-      
-<i class="fas fa-magic"></i> [Foundry Community Macros](https://github.com/foundry-vtt-community/macros)
-Manifest:
-```
-https://raw.githubusercontent.com/foundry-vtt-community/macros/master/module.json
-```
-
-<i class="fas fa-table"></i> [Foundry Community Tables](https://github.com/foundry-vtt-community/tables)
-
-Manifest:
-```
-https://raw.githubusercontent.com/foundry-vtt-community/tables/master/module.json
-```
