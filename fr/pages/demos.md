@@ -2,14 +2,16 @@
 title: Démos
 description: 
 published: true
-date: 2022-03-01T08:37:59.326Z
+date: 2022-03-01T08:39:23.632Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:37:59.326Z
 ---
 
 ## Démos publiques de Foundry
-Vous trouverez ci-dessous la démo officielle de la VTT Foundry, ainsi que les démos et systèmes maintenus par la communauté.
+Vous pouvez toujours demander des démonstrations de tel ou tel système de jeu via le canal #demandes-de-démo sur le Discord FR de Foundry !
+
+Mais il existe également des démos en ligne, listées ci-dessous.
 
 ### [Foundry VTT](https://foundryvtt.com/demo/join)
 
