@@ -2,7 +2,7 @@
 title: Legend of the Five Rings 5th
 description: 
 published: true
-date: 2021-07-19T19:25:39.799Z
+date: 2022-03-04T11:30:30.498Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-05T05:17:17.707Z
@@ -26,12 +26,38 @@ dateCreated: 2020-12-05T05:17:17.707Z
 Sous la validation du studio [Edge Entertainment](https://edge-studio.net/)
 
 ---
+## Présentation vidéo du système
+
+Pour découvrir le système rien de mieux qu'une vidéo de présentation :
+[[Vidéo de présentation du système sous FoundryVTT]](https://youtu.be/-_F0OcKCPn4)
+
+---
+
 
 ## Installer le système et sa traduction
-- Installer le système [L5R5E](https://foundryvtt.com/packages/l5r5e/) depuis a catégorie SYSTEME dans l'application FoundryVTT (il comprend le système et le compendium associé)
+- Installer le système [L5R5E](https://foundryvtt.com/packages/l5r5e/) depuis la catégorie SYSTEME dans l'application FoundryVTT (il comprend le système et le compendium associé)
 - Installer le module [L5R5e - Rokugan map for Legend of the Five Rings (5th edition)](https://foundryvtt.com/packages/l5r5e-map/) depuis la catégorie MODULE de l'application FoundryVTT. Celui-ci importera en 3 langues la carte de Rokugan fourni par Edge Studio.
 - Installer le module [Babele](https://foundryvtt.com/packages/babele/) depuis la catégorie MODULE de l'application FoundryVTT. Celui-ci prend en charge la traduction de l'Anglais au Français
-- Installer le module [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) depuis la catégorie MODULE de l'application FoundryVTT, si vous aimez jouer avec des dés 3D
+
+#### Modules fortement recommandés
+- [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/) : Pour avoir des dés en 3D lors des jets
+- Permission Viewer : Pour voir facilement les permissions accordés
+- Pings : Pour faire un ping sur la scène, permet aussi de déplacer tous les joueurs à ce point
+- Search Anywhere : Permet de rechercher dans tous les compendiums un texte, pour l'ovrir ou l'ajouter rapidement
+
+#### Modules optionnels
+- Chat Images : Permet de poser rapidement une image dans le chat en drag n drop
+- Compendium Folders : Pour avoir des dossiers dans les compendiums
+- FXMaster : Des effets pour la météo et co
+- Scene Clicker : Change le comportement des scènes, au clic cela l'affiche au lieu de mettre la config
+- Timer : Pour stresser un peu les Pjs et avoir soit un chrono, soit un décompte
+
+#### Dépendances (utilisé et installé par d'autres modules)
+- libWrapper
+- Settings Extender
+
+#### Si tu as DungeonDraft
+- Universal Battlemap Importer : Permet d'importer les cartes, murs et lumières facilement
 
 ## Activation des modules
 Suite à l'installation du système et des modules, n'oubliez pas de les activer après la création de votre World afin que les compendiums inclus dans le système soit convenablement traduit en Français.
