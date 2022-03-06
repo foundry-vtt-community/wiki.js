@@ -2,7 +2,7 @@
 title: Systèmes et Contenus
 description: 
 published: true
-date: 2022-03-01T08:33:53.747Z
+date: 2022-03-06T20:23:25.028Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:33:53.747Z
@@ -14,6 +14,7 @@ dateCreated: 2022-03-01T08:33:53.747Z
 # Les systèmes en français
 - [Aria - Game of Roles](https://foundryvtt.wiki/fr/systemes/aria)
 - [Appel de Cthulhu 7e](/fr/systemes/fr-adc)
+- Barbarians of Lemuria
 - [Brigandyne](https://foundryvtt.wiki/fr/systemes/brigandyne)
 - [Chroniques Oubliées Contemporain](https://foundryvtt.wiki/fr/systemes/Chroniques-Oubliées-Contemporain)
 - [Chroniques Oubliées Fantasy](/fr/systemes/fr-chrooubliees)
@@ -23,15 +24,15 @@ dateCreated: 2022-03-01T08:33:53.747Z
 - [Dungeons and Dragons 5e](https://foundryvtt.wiki/fr/systemes/DD5/fr-dd5-system)
     - [Héros & Dragons](/fr/systemes/fr-hnd) (Dépendance: nécessite DD5)
 - [Free League](https://foundryvtt.wiki/fr/systemes/free-league)
-- [Legende les Cinq Anneaux 5e](https://foundryvtt.wiki/fr/systemes/l5r)
+- [Legende des Cinq Anneaux 5e](https://foundryvtt.wiki/fr/systemes/l5r)
 - [Pathfinder 1re édition](/fr/systemes/Pathfinder_1re/PF1)
 - [Pathfinder Seconde édition](/fr/systemes/Pathfinder_2nd/PF2)
 - [Rêve de Dragon](/fr/systemes/rdd)
-- [SWADE - Savage Worlds](/fr/systemes/fr-swade)
-    - [Deadlands Reloaded](/fr/systemes/fr-deadlands) (Dépendance: nécessite SWADE)
+- Shadowrun
 - [Starfinder](/fr/systemes/starfinder)
 - [Starwars FFG](/fr/systemes/swffg)
+- [SWADE - Savage Worlds](/fr/systemes/fr-swade)
+    - [Deadlands Reloaded](/fr/systemes/fr-deadlands) (Dépendance: nécessite SWADE)
 - [Warhammer 4e](/fr/systemes/fr-wfrp4e)
 - [World of Darkness](https://foundryvtt.wiki/fr/systemes/wod)
-- barbarians of Lemuria
 - Yggdrasill
