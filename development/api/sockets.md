@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2021-11-17T15:33:27.671Z
+date: 2022-03-16T13:57:03.414Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T14:06:05.915Z
 
 # Sockets
 
-![Up to date as of v8](https://img.shields.io/static/v1?label=FoundryVTT&message=v8&color=informational)
+![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
 
 ## Overview
 
@@ -147,7 +147,7 @@ socket.on('module.my-module', handleSocketEvent);
 #### With the Acknowledgement Callback
 
 <details>
-  <summary>This does not appear to work in 0.8.x</summary>
+  <summary>This does not appear to work in v9</summary>
 
 The emitting client does not recieve a broadcast with the event it emits. As a result, it is recommended to use the Acknowledgement callback pattern described above to handle firing an event on the emitting client as well as all other clients.
 
