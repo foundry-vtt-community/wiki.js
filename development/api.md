@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2021-12-21T03:57:23.003Z
+date: 2022-03-16T05:00:13.396Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -53,6 +53,14 @@ Everything you need to know about using Flags to store arbitrary data on Documen
 - Flag Scopes and Data Structure
 - How to Set/Read/Unset a Flag
 - Gotchas with Objects
+
+
+### [Hooks](/en/development/api/hooks)
+Everying you need to know about working with and creating Hook events.
+
+#### Topics
+- Registering Hook Callbacks
+- Calling Hooks
 
 
 ### [Settings](/en/development/api/settings)
