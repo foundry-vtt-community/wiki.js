@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2022-03-15T14:35:36.691Z
+date: 2022-03-16T13:24:12.541Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -13,6 +13,9 @@ dateCreated: 2022-03-15T14:35:36.691Z
 ![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
 
 ## Overview
+
+> There is documentation about the various Hook Events in Core [in the official docs](https://foundryvtt.com/api/hookEvents.html). However, it is advised to set `CONFIG.debug.hooks = true` when looking for hooks as this will print them to the console as they happen. The [Developer Mode module](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode) can assist with this.
+{.is-info}
 
 Hooks are how Foundry Core exposes certain public API events modules and systems to interact with. It is always recommended to register a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) for an existing hook event instead of [monkey patching](https://www.audero.it/blog/2016/12/05/monkey-patching-javascript/) a core method.
 
@@ -32,7 +35,7 @@ Hook callbacks ignore returned values except in cases where the event is trigger
 
 ### Synchronous in nature
 
-Hooks do not `await` any registered callback that returns a promise before moving on.
+Hooks do not `await` any registered callback that returns a promise before moving on. It is however advisable to use a Promise as a hook callback when the callback you register does not need to block the main process.
 
 ### Local only
 Hooks callbacks only execute on the client triggering that hook. Any core hook that appears to fire on all clients is actually firing on each client individually in response to a socket broadcast from the server. Typically these are related to the [Document update cycle]().
