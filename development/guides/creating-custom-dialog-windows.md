@@ -2,13 +2,16 @@
 title: Creating Custom Dialog Windows
 description: A guide on how to create dialog windows with custom content, styling, and buttons.
 published: true
-date: 2021-08-12T16:04:30.909Z
+date: 2022-03-18T14:10:01.356Z
 tags: development, dialog, window
 editor: markdown
 dateCreated: 2021-06-01T15:03:28.882Z
 ---
 
 > This is known to be accurate as of Foundry Core 0.8.x
+{.is-info}
+
+> There is a API wiki Page dedicated to [Dialogs](https://foundryvtt.wiki/en/development/api/dialog)
 {.is-info}
 
 Custom dialog windows are a straightfoward way to interface with users to carry out specific actions or display certain information.
