@@ -2,11 +2,13 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2022-03-18T13:40:45.090Z
+date: 2022-03-18T13:41:36.601Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
 ---
+
+![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
 
 > ### What is this?
 > This is going to be our FAQ and "common hurdles to overcome" guide to help new package developers. It's going to be perpetually updating and changing.
@@ -16,9 +18,6 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > ### Pseudocode
 > None of the code within this document is guaranteed to work and should be tested before used in a world that you care about.
 {.is-warning}
-
-> This document is up to date as of v9
-{.is-info}
 
 # FAQs
 
