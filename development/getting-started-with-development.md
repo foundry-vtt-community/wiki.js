@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2022-03-18T13:42:25.385Z
+date: 2022-03-18T13:53:40.674Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -119,8 +119,9 @@ The convention among Foundry VTT Development community (and the official recomme
 
 ## How do I handle keyboard events?
 
-> Stub. There's a [KeyboardManager](https://foundryvtt.com/api/KeyboardManager.html) class that might be useful here.
-> There's also some library modules which allow keybind registration.
+> Stub. There's a [KeyboardManager](https://foundryvtt.com/api/KeyboardManager.html) class and a [ClientKeybindings](https://foundryvtt.com/api/ClientKeybindings.html) class that might be useful here.
+
+Registration of custom Keybindings is possible through the [ClientKeybindings.register](https://foundryvtt.com/api/ClientKeybindings.html#register) api.
 
 ## What is a flag and how do I use them?
 
