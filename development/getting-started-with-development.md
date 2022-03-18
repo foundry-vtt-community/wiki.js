@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2021-08-13T13:18:42.652Z
+date: 2022-03-18T13:40:45.090Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -17,13 +17,25 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > None of the code within this document is guaranteed to work and should be tested before used in a world that you care about.
 {.is-warning}
 
-> This document is up to date as of 0.8.8
+> This document is up to date as of v9
 {.is-info}
 
 # FAQs
 
+## What is a Document?
+
+*API article: [Documents](/en/development/api/document)*
+
+From the [official docs](https://foundryvtt.com/api/#documents-and-data):
+
+> Data in Foundry Virtual Tabletop is organized around the concept of Documents. Each document represents a single coherent piece of data which represents a specific object within the framework. The term Document refers to both the definition of a specific type of data (the Document class) as well as a uniquely identified instance of that data type (an instance of that class).
+
+
+
 ## Is there a list of hooks?
 *Main article: [Hooks Listening & Calling](/en/development/guides/Hooks_Listening_Calling)*
+
+*API article: [Hooks](/en/development/api/hooks)*
 
 [There is some official documentation about hooks as of 0.8.](https://foundryvtt.com/api/hookEvents.html)
 
@@ -40,10 +52,10 @@ With this enabled, you'll see every hook that fires as you interact with Foundry
 
 ## How do I delete a value?
 
-This is Foundry specific and will delete the `someKey` in the database entry for `someEntity`
+This is Foundry specific and will delete the `someKey` in the database entry for `someDocument`
 ```js
-someEntity.update({
-  -=someKey: null
+someDocument.update({
+  '-=someKey': null
 })
 ```
 
@@ -93,6 +105,8 @@ To pull this off first you have to find where the method or function is in the g
 
 ## How do I get started with sockets?
 
+*API article: [Sockets](/en/development/api/sockets)*
+
 The easiest way to use Sockets in a module is via [Socketlib](https://github.com/manuelVo/foundryvtt-socketlib). This library provides a useful abstraction layer on top of the core socket implementation.
 
 > [Stub](https://github.com/VanceCole/macros/blob/master/sockets.js)
@@ -113,21 +127,25 @@ The convention among Foundry VTT Development community (and the official recomme
 
 *Main article: [Handling Data: Flags, Settings, and Files](/en/development/guides/handling-data)*
 
-Flags are the safest way that modules can store arbitrary data on existing entities. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
+*API article: [Flags](/en/development/api/flags)*
+
+Flags are the safest way that modules can store arbitrary data on existing documents. If you are making a module which allows the user to set a data point which isn't supported normally in Foundry Core or a system's data structure, you should use a flag.
 
 
 ## How do I work with settings?
 
 *Main article: [Handling Data: Flags, Settings, and Files](/en/development/guides/handling-data)*
 
-Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific entity however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
+*API article: [Settings](/en/development/api/settings)*
+
+Settings, like flags, are a way for modules to store and persist data. Settings are not tied to a specific document however, unlike flags. Also unlike flags they are able to leverage the 'scope' field to keep a set of data specific to a user's localStorage (`scope: client`) or put that data in the database (`scope: world`).
 
 
 ## How do I get data based on a user-defined data path?
 
 For system independence, it's often a good idea to allow data paths to be defined by a setting (e.g. if you want to reference an attribute modifier in a dialog, then you could hard-code `modifier = actor.attributes.str.mod`, but that path is 5e specific - so allowing a user to define the path to the attribute modifier makes it easy to tweak your module for a specific system).
 
-This can be done with the [`getProperty(object, key)`](https://foundryvtt.com/api/module-helpers.html#.getProperty) function, e.g. `modifier = getProperty(actor, attributeKey)`.
+This can be done with the [`getProperty(object, key)`](https://foundryvtt.com/api/module-helpers.html#.getProperty) utility function, e.g. `modifier = getProperty(actor, attributeKey)`.
 
 
 # Common Hurdles and How to Overcome Them
