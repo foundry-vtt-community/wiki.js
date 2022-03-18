@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2021-08-19T11:50:03.052Z
+date: 2022-03-18T13:47:19.344Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z
@@ -12,6 +12,8 @@ dateCreated: 2021-08-13T11:35:11.211Z
 > This document is up to date as of 0.8.8
 {.is-info}
 
+> There is an API wiki Page dedicated to [Hooks](https://foundryvtt.wiki/en/development/api/hooks).
+{.is-info}
 
 The Foundry API provides it's own event system for developers to take advantage of in the form of Hooks.
 Most of the time, it's used to piggyback on a variety of runtime events, ranging from a simple `'hoverToken'` (the mouse entering/exiting a token area) to **any Document update** sent to the database, through **every rendering of any Application**.
