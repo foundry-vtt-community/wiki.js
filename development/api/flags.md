@@ -2,7 +2,7 @@
 title: Flags
 description: 
 published: true
-date: 2021-11-17T15:33:01.661Z
+date: 2022-03-18T13:31:55.907Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T14:27:34.646Z
 
 # Flag
 
-![Up to date as of v8](https://img.shields.io/static/v1?label=FoundryVTT&message=v8&color=informational)
+![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
 
 ## Overview
 
