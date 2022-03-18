@@ -2,14 +2,13 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2022-03-18T13:51:46.121Z
+date: 2022-03-18T13:54:44.963Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
 ---
 
-
-This article was last updated for Foundry VTT 0.8.7.
+![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
 
 ## Releases and Updates
 
