@@ -2,7 +2,7 @@
 title: Getting Started with Package Development
 description: Some common hurdles facing new Package Developers
 published: true
-date: 2022-03-18T13:41:36.601Z
+date: 2022-03-18T13:42:25.385Z
 tags: settings
 editor: markdown
 dateCreated: 2021-02-05T16:13:36.470Z
@@ -14,7 +14,7 @@ dateCreated: 2021-02-05T16:13:36.470Z
 > This is going to be our FAQ and "common hurdles to overcome" guide to help new package developers. It's going to be perpetually updating and changing.
 > If you know of some questions or common sticking points for new package developers, please edit this to include those things.
 > ### Have a question not answered here?
-> The [League of Foundry VTT Developers](https://discord.gg/cudQBu8HKT) is a helpful development-focused discord community which aims to help veterans and new developers alike. Please drop by and ask us your questions, the more questions we get the more likely this document is going to be updated with their answers.
+> The [League of Foundry VTT Developers](https://discord.gg/fvttdevleague) is a helpful development-focused discord community which aims to help veterans and new developers alike. Please drop by and ask us your questions, the more questions we get the more likely this document is going to be updated with their answers.
 > ### Pseudocode
 > None of the code within this document is guaranteed to work and should be tested before used in a world that you care about.
 {.is-warning}
