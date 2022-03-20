@@ -2,20 +2,17 @@
 title: Defunct Modules
 description: 
 published: true
-date: 2022-03-20T00:16:06.242Z
+date: 2022-03-20T00:18:51.991Z
 tags: modules
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
 ---
 
+# Unlisted Foundry VTT Modules
 Get Modules for Foundry VTT on the official site: [https://foundryvtt.com/packages/](https://foundryvtt.com/packages/)
 
-The list below is an unofficial and incomplete list of unlisted game modules.
-
-# Unlisted Foundry VTT Modules
-
 <details><summary>
-Foundry modules that work across all or most systems are noted here. These may include reskins, general improvement mods, and more.
+This list is an unofficial and incomplete list of unlisted game modules.
   
 > Many of the modules are incompatible with version 0.8.x and higher. Proceed with caution.
 {.is-danger}
