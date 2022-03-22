@@ -2,7 +2,7 @@
 title: Cartes & maps
 description: 
 published: true
-date: 2022-03-17T07:59:20.517Z
+date: 2022-03-22T14:02:29.401Z
 tags: 
 editor: markdown
 dateCreated: 2022-02-07T13:32:38.820Z
@@ -30,3 +30,5 @@ https://www.deviantart.com/savingthrower/gallery
 https://www.caeora.com/battlemaps
 https://www.patreon.com/tomcartos
 https://crossheadstudios.com/battlemaps/
+https://www.patreon.com/BeneosBattlemaps
+https://www.patreon.com/dww
