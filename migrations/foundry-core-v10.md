@@ -2,7 +2,7 @@
 title: Migration Summary for v10
 description: 
 published: true
-date: 2022-03-24T01:24:21.468Z
+date: 2022-03-24T01:27:25.217Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T23:44:16.293Z
@@ -61,7 +61,7 @@ someDocument.data.update({ 'some.path': 'new value' });
 someDocument.updateSource({ 'some.path': 'new value' });
 ```
 
-### Manifest deprecations
+## Manifest deprecations
 
 Sevral manifest changes have no reached the end of their deprecation periods. Consequently, it's recommended to check your server logs as part of the migration process to verify that your package is using the latest manifest fields.
 The issue on the GitLab for this is [#6666](https://gitlab.com/foundrynet/foundryvtt/-/issues/6666) 😈
