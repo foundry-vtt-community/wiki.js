@@ -2,17 +2,17 @@
 title: Cloudflare Proxying & Tunnel
 description: Use Cloudflare's protection for your public-facing FoundryVTT server.
 published: true
-date: 2022-03-25T02:38:49.920Z
+date: 2022-03-26T03:35:27.759Z
 tags: cloudflare, proxy, tunnel, tls, https
 editor: ckeditor
 dateCreated: 2022-03-25T02:38:49.920Z
 -->
 
-<p><mark class="pen-red">Note: This page is still a work in progress – I will be back to continue working on it - DM Ach</mark></p>
-<hr>
 <h1>Cloudflare Proxying &amp; Tunneling</h1>
 <h2>A. Objective</h2>
-<p>I've seen &amp; run into multiple issues with using Cloudflare to attempt to proxy public connections to foundry servers both for myself and a bunch of members in the community. This guide should help show you how I managed to get around all the dreaded 502, 523, 504, and slew of other Cloudflare error codes when trying to route through their services with an Apache2 or Nginx service running on your host machine.</p>
+<p>I've seen &amp; run into multiple issues with using Cloudflare to attempt to proxy public connections to foundry servers both for myself and a bunch of members in the community. This guide should help show you how I managed to get around all the dreaded 502, 523, 504, and slew of other Cloudflare error codes when trying to route through their proxy services with an Apache2 or Nginx service running on your host machine.</p>
+<p>&nbsp; &nbsp; &nbsp;Note: You will no longer need the reverse Apache2 or Nginx server installed or running after this is set up! Cloudflare will act as your reverse proxy.</p>
+<p>If you've tried something like this in the past and were furious because it wasn't working, I feel your pain. It took me 8 days (~6 hours each day) to figure this method out after countless other methods. Ultimately, the reason Cloudflare will fail if you use it with Apache2/Nginx running as your proxy on your Linux machine is that Cloudflare doesn't like redirects (if you're connecting via HTTP and have a redirect to HTTPS) and (<i>getting hand-wavy “these are not the droids you're looking for” right now to save space</i>) doesn't like having their HTTP/HTTPS traffic "being weird" – like it does with Foundry. I know. I wasted a week trying and testing all the configurations setups for both Apache2 and Nginx to literally no avail until I realized that. I knew then that I had to set up a “tunnel” from the Cloudflare proxy server to my origin server (where Foundry is hosted on my local network).</p>
 <p>At the end of this you will have:</p>
 <ul>
   <li>A Foundry server that is able to be connected to via a domain name (and not an IP!)</li>
@@ -29,32 +29,73 @@ dateCreated: 2022-03-25T02:38:49.920Z
 </ol>
 <p>For this example, I will be using a secondary computer running Ubuntu 20.04 on my local network with properly configured port forwarding and firewall rules enabled.</p>
 <h2>C. FoundryVTT Server with TLS/SSL Enabled (HTTPS)</h2>
+<p>The logical flow from start to finish is to generate your Cloudflare certificates; your private key, CSR, and Origin Server cert. After we have all those, we'll assign these to be used for your FoundryVTT server (sorry if you went through the entire process of getting your other self-signed certs or other certs, but we need to use Cloudflare's certs for this to work). Then, we'll set up a tunnel from the Cloudflare Proxy server to your Origin Server and test connectivity.</p>
+<h3>Part 1: Generating &amp; Installing your Cloudflare Certificates</h3>
 <p>1. To get started, log into your Cloudflare account and begin linking your domain through Cloudflare.</p>
 <figure class="image image_resized" style="width:66.9%;"><img src="/&quot;images/cloudflare-setup-photos/2.png">
   <figcaption>Enter your registered Domain name here</figcaption>
 </figure>
 <p>2. Head to the DNS section and begin switching your domain's nameservers to Cloudflare's nameservers (there is a guide on how to do that, <a href="https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/">here</a>).</p>
-<p><strong>Note: Wait at least 15 minutes before continuing. Sometimes you may have to wait up to 24 hours before the DNS settings are successfully changed.</strong></p>
+<p><strong><u>Note:</u> Wait at least 15 minutes before continuing. Sometimes you may have to wait up to 24 hours before the DNS settings are successfully changed. You will be notified when the nameservers are properly navigated to Cloudflare. Continue AFTER these have successfully been changed.</strong></p>
 <p>3. Head to the SSL/TLS section</p>
-<p>&nbsp; &nbsp; &nbsp;a. Under “Edge Certificates”, press the “place a certificate order” and chose the free, basic Universal SSL plan, and click next.</p>
-<p>&nbsp; &nbsp; &nbsp;b. Continue entering all the relevant information and setting the certificate expiration you'd like (personally, I set my certs to expire annually), and whatever else they ask for to continue. There should be at (at least) 2 hosts: yourdomain.com, and *.yourdomain.com on your certs. You will then be shown a screen that has your private key and the public key that is linked to your domains.&nbsp;</p>
-<p><strong>Note: Do NOT share these keys with ANYONE.</strong></p>
-<p><strong>&nbsp; &nbsp; &nbsp;</strong>c. On your linux host terminal, create a hidden directory &amp; certificate files.</p>
+<p>&nbsp; &nbsp; &nbsp;a. Under the SSL/TLS group there will be another section called “<a href="https://developers.cloudflare.com/ssl/origin-configuration/origin-ca/">Origin Server</a>". Click the name and then “Create Certificate” on the page that will be displayed.</p>
+<p>&nbsp; &nbsp; &nbsp;b. Choose “Generate private key and CSR with Cloudflare" and select “RSA-2048”. Ensure your root domain and first subdomain-as-wildcard are listed, e.g. "*.yourdomain.com" and "yourdomain.com".</p>
+<p>&nbsp; &nbsp; &nbsp;c. Chose your expiration (in years). This is up to you, but unless you plan on keeping this running for a very long time, I may suggest keeping your certs with a pretty short expiration. I keep my set to annual (1-year expiration) for overall security.</p>
+<p><strong><u>Note:</u> Do NOT share these keys with ANYONE. Once you leave that page, you will not be able to see your keys again so don't refresh or close the page.</strong><br><strong><u>Another Note:</u> Here's the bottom line, if you're unfamiliar with why this is important, anyone that has a copy of your private key can decrypt your HTTPS traffic. That means any passwords that are passed to your server will be able to be read in plain text, thwarting the entire reason for using SSL/TLS and leaving your server open to further attacks from outside entities.</strong></p>
+<p><strong>&nbsp; &nbsp; &nbsp;</strong>c. On your Linux host terminal, create a hidden directory &amp; certificate files.</p>
 <pre><code class="language-plaintext">$ sudo mkdir /etc/.cloudflare-certs
 $ sudo touch /etc/.cloudflare-certs/yourdomain.com.key
 $ sudo touch /etc/.cloudflare-certs/yourdomain.com.pem</code></pre>
 <p>&nbsp; &nbsp; &nbsp;d. Now, we're going to add the key text into those files:</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Enter <code>$ sudo vim /etc/.cloudflare-certs/yourdomain.com.key</code></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2. Press the “i” key on your keyboard to enter “insert” mode</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3. Copy the entire private key shown on the Cloudflare website ( <code>Ctrl + Shift + Insert</code> is your friend – press them all at the same time)</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.&nbsp;Press <code>esc</code> and then type <code>:wq</code></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5. Repeat the same process with the public key in the <code>yourdomain.com.pem</code>file.</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Note: You should use these certs in your foundry <code>options.conf</code> file</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6. Now, change the permission settings for these files by doing the following</p>
-<pre><code class="language-plaintext"># Set -RW permissions to the .cloudflare-certs directory and private key
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2. Press the “i” key on your keyboard to enter “insert” mode.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3. Copy the entire private key shown on the Cloudflare website ( <code>Ctrl + Shift + Insert</code> is your friend – press them all at the same time).</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4.&nbsp;Press <code>esc</code> and then type <code>:wq</code>.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5. Repeat the same process you just did with your Origin Certificate: <code>$ sudo vim /etc/.cloudflare-certs/yourdomain.com.pem</code>.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 6. If you need the other versions for other operating systems, copy them here. Just make sure you ensure they're safe and properly encrypted "at-rest" – not in use.<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<strong><u>Note:</u> PKCS#7 for Apache Tomcat &amp; Windows, DER as a replacement for PEM.</strong></p>
+<p>&nbsp; &nbsp; &nbsp; e. Now, change the permission settings for these files by doing the following (for security reasons).</p>
+<pre><code class="language-plaintext">### Set the permissions to the .cloudflare-certs directory, private key, and origin certificate
 $ sudo chmod 600 /etc/.cloudflare-certs
 $ sudo chmod 600 /etc/.cloudflare-certs/yourdomain.com.key
-# Set -RW-R--R- permission to the public key
 $ sudo chmod 644 /etc/.cloudflare-certs/yourdomain.com.pem</code></pre>
-<p>&nbsp;</p>
-<h2>D. FoundryVTT Server without TLS/SSL Enabled (HTTP)</h2>
+<p>&nbsp; &nbsp; &nbsp;f. Now, if you've used other self-signed certificates or certificates from <i>Let's Encrypt</i> we're going to swap out those for these Cloudflare certs. You may also disable the proxy setup for this type of installation.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Change the two lines <code>sslCert</code> and <code>sslKey</code> to your Origin Certificate and Private Key.</p>
+<pre><code class="language-plaintext">{
+	...
+	"sslCert": "/etc/.cloudflare-certs/yourdomain.com.pem"
+	"sslKey": "/etc/.cloudflare-certs/yourdomain.com.key"
+	...
+	"proxySSL": null,
+	"proxtPort": null,
+	...
+}	</code></pre>
+<h3>Part 2: Setting up the Cloudflare Tunnel</h3>
+<p>1. Add the <code>cloudflared</code> repository to your package manager.</p>
+<pre><code class="language-plaintext">$ echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/ focal main' |
+sudo tee /etc/apt/sources.list.d/cloudflare-main.list
+$ sudo curl https://pkg.cloudflare.com/cloudflare-main.gpg -o /usr/share/keyrings/cloudflare-main.gpg
+</code></pre>
+<p>2. Install the <code>cloudflared</code> service.</p>
+<pre><code class="language-plaintext">$ sudo apt-get update
+$ sudo apt-get install cloudflared -y</code></pre>
+<p>3. Navigate &amp; log into the Cloudflare Zero Trust dashboard, <a href="https://dash.teams.cloudflare.com/">here</a>.</p>
+<p>&nbsp; &nbsp; &nbsp;a. Under the “Access” tab, click on “Tunnel (Beta)”.</p>
+<p>&nbsp; &nbsp; &nbsp;b. Click on “Create Tunnel” at the top &amp; continue through the generator.&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Name the tunnel whatever you'd like, I named mine “FoundryVTT”.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2. On the Installer Screen, press the Debian environment build and chose whichever architecture your host is running.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3. Now copy and paste the string of characters listed in the “<i>If you already have cloudflared installed on your machine</i>” box on the website. It should look something like this:</p>
+<p><code>sudo cloudflared service install &lt;THIS IS A REALLY LONG STRING OF CHARACTERS THAT IS UNIQUE TO THIS TUNNEL YOU JUST CREATED - DON'T SHARE THIS&gt;</code></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4. Once you run this command, a tunnel connector will be established, it may not update on the website.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5. On the final screen, choose the “Public Hostname” option, enter your domain name (this is the same name that is in your Foundry <code>options.conf</code>file), set the path to *, set the protocol to “HTTPS" and enter your <strong><u>PUBLIC</u></strong> IP address followed by the semicolon and port of the FoundryVTT server.</p>
+<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Note: If you enter your private IP here, this will fail. Your private IP may look something like 192.168.XXX.XXX (usually something such as 192.168.0.XXX or 192.168.1.XXX). If you don't know what your public IP is, check it </strong><a href="https://www.whatismyip.com/"><strong>here</strong></a><strong>.</strong></p>
+<p>4. Login to the <code>cloudflared</code> service using the command: <code>sudo cloudflared login</code>.</p>
+<p>&nbsp; &nbsp; &nbsp;a. Your browser should open. If it doesn't, just copy and paste the URL and log in again like normal.</p>
+<p>&nbsp; &nbsp; &nbsp;b. Assign that login to your created tunnel, this will link certificates and other required information. Without this, you'll have to add another certificate to your PATH, which I don't recommend.</p>
+<p>5. Assuming everything went to plan, you should be able to refresh the webpage that has the named tunnel you just created and you should see a status of “Active”. If not, you may have to look up the docs, <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/">here</a> and see if there's something that may have gone wrong.</p>
+<h3>Part 3: Testing Connectivity</h3>
+<p>1. Ensure your foundry server is running (with sudo permissions, otherwise it will fail when trying to read your certificate files).</p>
+<p>2. Navigate to your foundry server using your webpage URL. If you get a certificate error, you may need to install Cloudflare's Root CA into your trusted certificate repository on your PC. Instructions on how to do that are <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/install-cloudflare-cert/">here</a>.</p>
+<p><strong>And that should be it! If you get any errors, please refer to any of the linked documentation from Cloudflare or search Google for your specific error.</strong></p>
+<hr>
+<h2><strong>D. (WIP) FoundryVTT Server without Tunneling</strong></h2>
+<p><mark class="pen-red">Note: This section is still a work in progress – I will be back <u>after</u> getting the motivation and testing to continue working on it - DM Ach</mark></p>
