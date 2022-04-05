@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2021-11-17T15:46:18.436Z
+date: 2022-04-05T15:33:00.392Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -362,7 +362,8 @@ The following can be given to the `filePicker` option to change the behavior of 
 - `'image'` - Displays image files only
 - `'video'` - Displays video files only
 - `'imagevideo'` - Displays images and video files
-- `'folder'` - No different than `true`
+- `'folder'` - Allows selection of a directory (beware, it does not enforce directory selection)
+- `'any'` - No different than `true`
 
 #### Directory Picker
 
