@@ -2,7 +2,7 @@
 title: Dialog
 description: 
 published: true
-date: 2021-12-15T22:10:19.749Z
+date: 2022-04-11T13:15:39.247Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-12-15T22:09:07.377Z
@@ -80,8 +80,8 @@ function informUser() {
 
 There are three ways to display a Dialog:
 - Providing `data` and `options` to the `Dialog` class constructor for fully custom Dialogs
-- Using the `Dialog.prompt` factory method for Yes/No prompts
-- Using the `Dialog.confirm` factory method for simple confirmations
+- Using the `Dialog.prompt` factory method for simple notifications
+- Using the `Dialog.confirm` factory method for Yes/No confirmations
 
 
 ### Dialog Constructor arguments
