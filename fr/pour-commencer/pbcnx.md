@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2022-04-16T07:33:10.984Z
+date: 2022-04-16T07:37:22.816Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -40,6 +40,14 @@ Vou pouvez aussi consulter la page https://foundryvtt.wiki/fr/pour-commencer/win
 ## Avez vous un VPN sur le PC ? 
 
 Si oui, vérifiez bien qu'une tache lui appartenant ne s'execute pas en fond. Si oui, assurez de bien le/les stopper avant de ré-essayer. 
+
+## Mon opérateur me dit que mes ports sont possibles que de ZZZZZ à UUUUUU
+
+Bon fichtre, c'est pas très grave. Si par exemple votre opérateur vous dit que vos ports valides sont de 42000 à 50000, choisissez un port dans cette plage. Prenons 42100 par exemple.
+
+Dans ce cas, votre port externe devient 42100, à mettre en port externe/WAN dans les réglages du NAT de la box, mais laissez 30000 partout ailleurs (ie port interne, port de Foundry, port du firewall du PC Foundry).
+
+Votre adresse IP publique sera donc http://xxx.zzz.www.uuu:42000/
 
 ## Ben ca marche toujours pas (v2) ?
 
