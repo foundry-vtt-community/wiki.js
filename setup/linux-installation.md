@@ -2,8 +2,8 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-02-24T03:24:50.168Z
-tags: 
+date: 2022-04-19T19:59:43.394Z
+tags: foundry, linux, installation, reverse proxy, https, foundryvtt, ssl, server
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
 ---
