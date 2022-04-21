@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T02:27:26.927Z
+date: 2022-04-21T02:57:09.156Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -72,13 +72,9 @@ Installer la dernière version de PuTTY puis lancer **PuTTYgen**
 
 - Vous pouvez aussi taper dans la barre de recherche le môt **instances**
 
-### Option 1 : Serveur Ampère (recommandé)
+### Option Recommandée : Serveur Ampère
 > Dans le niveau gratuit, un total de 4 OCPU et 24 Go sont disponibles, qui peuvent être répartis entre deux instances (le maximum) ou attribués à une seule. C'est-à-dire deux instances avec 2 OCPU et 12 Go chacune, ou une avec 4 OCPU et 24 Go.
 {.is-warning}
-
-> Lorsque vous choisissez l'option Forme, vous devez vous assurer de bien selectionner l'une des formes qui sera **Admissible à Toujours gratuit / Admissible à Toujours gratuit**, afin de nous assurer de toujours rester dans le niveau de gratuité d'Oracle gratuit.
-{.is-warning}
-
 
 **Pour un seul serveur :**
 - Processeur : ARM allant jusqu'à 4 coeurs OCPU
@@ -87,8 +83,37 @@ Installer la dernière version de PuTTY puis lancer **PuTTYgen**
 - Image : Canonical Ubuntu
 - Forme : Machine virtuelle - AMPERE - VM.Standard.A1.Flex
 
+<img src="https://puu.sh/IVXtQ/1935e76855.png">
+
+> Lorsque vous choisissez l'option Image & Forme, vous devez vous assurer de bien selectionner l'une des formes (Shape) qui sera **Admissible à Toujours gratuit / Admissible à Toujours gratuit**, afin de nous assurer de toujours rester dans le niveau de gratuité d'Oracle gratuit.
+{.is-warning}
+
 #### Image et Forme 
 <img src="https://puu.sh/IVXk9/1e31da8a36.png">
 
 #### Shape 
 <img src="https://puu.sh/IVXpA/dc85446c0c.png">
+
+### Ajouter des clés SSH
+- Cliquer sur **Télécharger les fichiers de clés publiques (pub)**
+- Dans la  case **clés publiques SSH**
+<img src="https://puu.sh/IVXwy/4d728c23b7.png">
+
+- Cliquer sur **Parcourir** et selectionner votre fichier **ma_cle_ssh.pub**
+<img src="https://puu.sh/IVXzi/f5f31f5fad.png">
+
+- Puis cliquer tout en bas à gauche sur **Créer**
+<img src="https://puu.sh/IVXA0/c381eb0a23.png">
+
+## Adresse IP du serveur et Paramétrage Réseau.
+Une fois que vous avez crée l'instance, vous allez vous retrouver sur une interface de ce genre
+<img src="https://puu.sh/IVXF2/4d3f0ad87c.png">
+
+### Accès à l'instance
+- Veuiller noter **l'Adresse IP Publique**, elle vous servira afin de vous connecter sur votre instance 
+<img src="https://puu.sh/IVXGM/30fe3b6030.png">
+
+### Certe d'interface réseau virtuelle principale
+- Afin de faire le paramétrage et l'ouverture des ports nécessaire, il vous faudra cliquer sur le lien en face de **Sous-réseau**
+<img src="https://puu.sh/IVXHK/1ff91a8c7c.png">
+
