@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T04:10:21.621Z
+date: 2022-04-21T04:56:50.391Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -214,3 +214,85 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 
 > sudo netfilter-persistent save
 {.is-success}
+
+#### Installation de Docker
+> Nous utilisons Docker pour installer et utiliser LiveKit
+{.is-info}
+
+> Faites des copier/coller des lignes suivantes en vous assurant de ne pas avoir d'erreurs
+{.is-warning}
+
+> curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+{.is-success}
+
+> sudo apt-get update
+{.is-success}
+
+> sudo apt-get install docker.io
+{.is-success}
+
+- **Afin de vérifier le fonctionnement de Docker**
+> sudo docker run hello-world
+{.is-success}
+
+- **Attendre le message indiquant le bon fonctionnement et le retour au prompt.**
+
+#### Installation de LiveKit
+> Nous utilisons un script afin de configurer LiveKit
+{.is-info}
+
+> Faites des copier/coller des lignes suivantes en vous assurant de ne pas avoir d'erreurs
+{.is-warning}
+
+- A partir d'une session via MobaXterm
+- Excécuter le script suivant afin de créer un script de configuration docker
+> sudo docker run --rm -it -v$PWD:/output livekit/generate
+{.is-success}
+
+- Renseigner les informations suivantes :
+1. Primary domain name (i.e. livekit.myhost.com): Indiquer ici le nom complet de votre sous-domaine
+2. TURN domain name (i.e. livekit-turn.myhost.com): Indiquer ici le nom complet de votre sous-domaine turn
+3. Version : Choisir **Lastet**
+4. **no - (we'll bundle Redis)**
+5. **Startup Shell Script**
+
+- Nous devons maintenant nous authentifier en **root** afin d'exécuter le script que nous avons crée
+> sudo -i
+{.is-success}
+
+- Nous devons nous placer dans le répertoire correspondant à notre nom de sous-domaine pour exécuter le script
+> cd /home/ubuntu/livekit.monnomdedomaine.xxx
+{.is-success}
+
+> bash init_script.sh
+{.is-success}
+
+> Démarrage long avant qu'il commence à exécuter une série de commandes. Une fois fait, le serveur LiveKit devrait être opérationnel.
+> Au retour au prompt :
+{.is-warning}
+
+> cat livekit.yaml
+{.is-success}
+
+<img src="https://puu.sh/IVYAf/92c851cd89.png">
+
+> Les informations que nous avons dans cette partie permet de configurer la partie cliente sous foundry. Il faudra se munir :
+> Du nom de domaine primaire exemple ici : livekit.myhost.com
+> De la Clé API. Copier/coller le code le plus court sans espace ni les deux points.
+> De la Clé Secrète. Copier/coller le code le plus long sans espace ni les deux points.
+{.is-warning}
+
+
+### Installation du Client LiveKit sur Foundry.
+
+- Exécuter FoundryVTT
+- Aller dans l'onglet module
+- Ouvrir l'explorer foundry 
+- Taper dans le champ de recherche **live**
+- Installer **LiveKit AVClient**
+<img src="https://puu.sh/IVYDL/84f2ad280e.png">
+
+- Via le git de l'auteur https://github.com/bekriebel/fvtt-module-avclient-livekit
+- You can install this module by using the following manifest URL: https://github.com/bekriebel/fvtt-module-avclient-livekit/releases/latest/download/module.json
+
+### Paramétrage du client LiveKit sur Foundry.
