@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T03:21:58.749Z
+date: 2022-04-21T03:46:44.438Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -143,4 +143,29 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 > Deux sous-domaines sont obligatoires lors de la création du serveur LiveKit afin de pouvoir utiliser l'Audio/vidéo.
 {.is-warning}
 
+> Le site [Duck DNS](https://www.duckdns.org) vous permettra de créer un nom de domaine gratuit, si vous ne possédez pas de nom de domaine.
+{.is-info}
+
+- Deux sous-domaines sont nécessaires pour le bon fonctionnement de LiveKit, **livekit** et **livekit-turn**
+- **Pour les utilisateurs de serveur dns de type duckdns, il faudra créer un sous-domaine :**
+1. Par exemple pour le premier sous-domaine : monserveurlivekit.duckdns.org
+2. Par exemple pour le deuxième sous-domaine : monserveurlivekit-turn.duckdns.org
+<img src="https://puu.sh/IVXWH/ec9ecc00a2.png">
+
+- **Pour les utilisateurs de serveur dns de type OVH, il faudra créer une entrée pour chaque sous-domaine :**
+1. Pour la première entrée de sous-domaine : livekit.monnomdedomaine.xxx
+2. Pour le deuxième entrée de sous-domaine : livekit-turn.monnomdedomaine.xxx
+
+- Pour créer un sous-domaine :
+1. Ajouter une entrée
+2. Champs de pointage : **A**
+<img src="https://puu.sh/IVY3Q/504f5325bc.png">
+
+3. Remplir le case pour le **sous-domaine**
+4. Remplir la case de la **Cible** par l'adresse IP de l'Instance du serveur Oracle Cloud.
+5. Valider et attendre la propagation DNS, qui peut prendre de quelques minutes à plus ou moins 24h.
+
+
+## Connexion à l'instance via SSH
+- Télécharger et installer MobaXterm ou Utiliser la version portable de ce dernier.
 
