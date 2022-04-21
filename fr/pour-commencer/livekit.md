@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T03:46:44.438Z
+date: 2022-04-21T04:10:21.621Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -168,4 +168,49 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 
 ## Connexion à l'instance via SSH
 - Télécharger et installer MobaXterm ou Utiliser la version portable de ce dernier.
+- Ouvrir MobaXterm, puis cliquer sur le premier icone **Session**
+<img src="https://puu.sh/IVY8E/c2b5bac74b.png">
 
+- Dans la case **Remote host**, mettre **ubuntu@<adresse_IP_de_mon_Instance>** (exemple: ubuntu@132.145.31.35) 
+- Cliquer sur l'onglet **Advanced SSH settings**
+- Cocher la case **Use private key**
+- Cliquer sur l'image du fichier dans le champ de la case **Use private key**
+- Selectionner le fichier **ma_cle_ssh.ppk**
+- Cliquer sur **OK** cela va vous connecter au serveur
+<img src="https://puu.sh/IVYbP/ffd9896a05.png">
+
+## Installation et configuration du serveur LiveKit
+> Tout se passe maintenant en ligne de commande en SSH via MobaXterm.
+{.is-info}
+
+> Faites des copier/coller des lignes suivantes en vous assurant de ne pas avoir d'erreurs
+{.is-warning}
+
+#### Mise à jour d'Ubuntu
+> sudo apt-get update
+{.is-success}
+
+> sudo apt-get upgrade -y
+{.is-success}
+
+> sudo apt-get dist-upgrade -y
+{.is-success}
+
+>sudo apt-get install ca-certificates curl gnupg lsb-release
+{.is-success}
+
+#### Accès aux ports requis
+> Permet au système d'accepter les connexions entrantes
+{.is-info}
+
+> Faites des copier/coller des lignes suivantes en vous assurant de ne pas avoir d'erreurs
+{.is-warning}
+
+> sudo iptables -I INPUT 6 -m state --state NEW -p tcp --match multiport --dports 80,443,7881 -j ACCEPT
+{.is-success}
+
+> sudo iptables -I INPUT 7 -m state --state NEW -p udp --match multiport --dports 443,50000:60000 -j ACCEPT
+{.is-success}
+
+> sudo netfilter-persistent save
+{.is-success}
