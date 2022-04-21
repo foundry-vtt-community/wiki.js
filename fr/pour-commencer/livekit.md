@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T04:56:50.391Z
+date: 2022-04-21T05:27:01.715Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -274,6 +274,12 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 > cat livekit.yaml
 {.is-success}
 
+> Si vous ne pointez plus sur le bon répertoire
+{.is-warning}
+
+> cat /home/ubuntu/livekit.monnomdedomaine.xxx/livekit.yaml
+{.is-success}
+
 <img src="https://puu.sh/IVYAf/92c851cd89.png">
 
 > Les informations que nous avons dans cette partie permet de configurer la partie cliente sous foundry. Il faudra se munir :
@@ -296,3 +302,39 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 - You can install this module by using the following manifest URL: https://github.com/bekriebel/fvtt-module-avclient-livekit/releases/latest/download/module.json
 
 ### Paramétrage du client LiveKit sur Foundry.
+- Ouvrir un **Monde** sous FoundryVTT
+- Aller dans le **Gestionnaire de modules**
+- Activer **LiveKit AVClient**
+- **Sauvegarder les paramètres de modules**
+<img src="https://puu.sh/IVYKx/43c8ec903e.png">
+
+- Aller dans **Configuration des options**
+- Dans l'onglet **Configuration générale**
+- Cliquer sur **Ouvrir la configuration des droits**
+- Cochet **Autoriser la diffusion Audio** & **Autoriser la diffusion Vidéo** pour le **Joueur (Player)**
+- **Sauvegarder**
+<img src="https://puu.sh/IVYNj/df4906c8e7.png">
+
+- Aller dans **Configuration des options**
+- Dans l'onglet **Configuration générale**
+- Cliquer sur **Configurer Audio/Vidéo**
+- Onglet **Général**, **Mode de conférence Audio/Vidéo**
+- Activer en fonction de vos besoins, **Audio et/ou Vidéo**
+- **Sauvegarder les modifications**
+<img src="https://puu.sh/IVYPb/1c8fcb7214.png">
+
+- Aller dans **Configuration des options**
+- Dans l'onglet **Configuration générale**
+- Cliquer sur **Configurer Audio/Vidéo**
+- Onglet **Serveur**, 
+- **LiveKit Server Address** : Renseigner l'url de votre serveur sans mettre de **http** ou **https**
+- **LiveKit API Key** : Renseigner le champ par votre clé API, clé courte sans espace ni deux points
+- **LiveKit Secret Key** : Renseigner le champ par votre clé Secrète, clé longue sans espace ni deux points
+- **Sauvegarder les modifications**
+<img src="https://puu.sh/IVYR9/ea561b5255.png">
+
+> N'oubliez pas de sauvegarder vos clés API et Secrète afin de pouvoir les réutiliser dans vos différents Mondes.
+{.is-warning}
+
+
+
