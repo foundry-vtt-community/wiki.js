@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T02:57:09.156Z
+date: 2022-04-21T03:21:58.749Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -116,4 +116,31 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 ### Certe d'interface réseau virtuelle principale
 - Afin de faire le paramétrage et l'ouverture des ports nécessaire, il vous faudra cliquer sur le lien en face de **Sous-réseau**
 <img src="https://puu.sh/IVXHK/1ff91a8c7c.png">
+
+- Dans **Subnet-xxxxxxxx-xxxx**
+- Puis **Listes de sécurité**
+- Cliquer sur **Default Security List for vcn-xxxxxxxx-xxxx**
+<img src="https://puu.sh/IVXIV/7a3431acdd.png">
+
+- Dans **Default Security List for vcn-xxxxxxxx-xxxx**
+- Puis dans **Règles Entrantes**
+- Cliquer sur **Ajouter des règles entrantes**
+<img src="https://puu.sh/IVXMf/5d4c243829.png">
+
+- Pour les ports en **TCP** il faudra créer une règle entrante 
+<img src="https://puu.sh/IVXPb/904b396ca1.png">
+<img src="https://puu.sh/IVXPT/69e2f8a9e3.png">
+<img src="https://puu.sh/IVXQp/cec9a67db6.png">
+
+- Pour les ports en **UDP** il faudra créer une règle entrante 
+<img src="https://puu.sh/IVXRi/451c59500f.png">
+<img src="https://puu.sh/IVXRH/c08ef0af10.png">
+
+- **Toutes les Règles Entrantes TCP/UDP**
+<img src="https://puu.sh/IVXSd/d819500f56.png">
+
+## Les Sous-domaines
+> Deux sous-domaines sont obligatoires lors de la création du serveur LiveKit afin de pouvoir utiliser l'Audio/vidéo.
+{.is-warning}
+
 
