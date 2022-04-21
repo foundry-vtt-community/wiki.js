@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T01:40:46.576Z
+date: 2022-04-21T02:27:26.927Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -13,11 +13,11 @@ dateCreated: 2022-04-21T01:40:46.576Z
 Cette procédure est faite sous un environnement Windows 10/11 64bits. 
 
 Pré-requis à télécharger
-- La dernière version 64bits pour windows de PuTTY : https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-- MobaXterm version Home : https://mobaxterm.mobatek.net 
+- *La dernière version 64bits pour windows de PuTTY :* https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+- *MobaXterm version Home :* https://mobaxterm.mobatek.net 
 
 
-> Dans la dernière version de PuTTY, les clés sont créées dans le nouveau format (v3) que MobXterm ne prend pas en charge. Il faudra, soit utiliser un autre client SSH, soit enregistrer la clé dans un ancien format (v2).
+> **Dans la dernière version de PuTTY, les clés sont créées dans le nouveau format (v3) que MobXterm ne prend pas en charge. Il faudra, soit utiliser un autre client SSH, soit enregistrer la clé dans un ancien format (v2).**
 {.is-warning}
 
 
@@ -45,4 +45,50 @@ Installer la dernière version de PuTTY puis lancer **PuTTYgen**
 <img src="https://puu.sh/IVX1s/7edda5d138.png">
 
 
+## Créer un compte Oracle Cloud
 
+- C'est dans Oracle Cloud que nous allons  créer et héberger l'instance correspondant à notre serveur.
+
+> **Lors de la création du compte, le service Oracle nous demandera une Carte de Crédit afin d'effectuer une transation. Cette transaction d'une valeur de 0.85€ sert à vérifier l'authenticité des informations. Rien ne vous sera facturé tant que vous restez sur des services gratuits.**
+{.is-warning}
+
+- Créer un compte de service sur le site d'Oracle Cloud : http://oraclecloud.com/
+
+> **Lorsque l'on vous demande l'emplacement des services, prenez en un qui possède tous les services, de préférence :**
+> ***France South (Marseille)***
+> ***Germany Central (Frankfurt)***
+> ***UK South (London)***
+{.is-warning}
+
+
+## Créer une Instance
+> Chaque location bénéficie des 3 000 premières heures d'OCPU et des 18 000 premières heures de Go gratuites par mois pour créer des instances Compute Ampere A1 à l'aide de la forme VM.Standard.A1.Flex (équivalente à 4 OCPU et 24 Go de mémoire). Chaque location dispose également de deux instances VM.Standard.E2.1.Micro gratuites.
+{.is-info}
+
+- Cliquer sur les trois traits en haut à gauche
+- puis cliquer sur **Compute** dans la colonne de gauche
+- puis **Instances** dans la colonne de droite
+<img src="https://puu.sh/IVXfT/bb4e55bf6f.png">
+
+- Vous pouvez aussi taper dans la barre de recherche le môt **instances**
+
+### Option 1 : Serveur Ampère (recommandé)
+> Dans le niveau gratuit, un total de 4 OCPU et 24 Go sont disponibles, qui peuvent être répartis entre deux instances (le maximum) ou attribués à une seule. C'est-à-dire deux instances avec 2 OCPU et 12 Go chacune, ou une avec 4 OCPU et 24 Go.
+{.is-warning}
+
+> Lorsque vous choisissez l'option Forme, vous devez vous assurer de bien selectionner l'une des formes qui sera **Admissible à Toujours gratuit / Admissible à Toujours gratuit**, afin de nous assurer de toujours rester dans le niveau de gratuité d'Oracle gratuit.
+{.is-warning}
+
+
+**Pour un seul serveur :**
+- Processeur : ARM allant jusqu'à 4 coeurs OCPU
+- RAM : 24Go
+- Bande passante : 4Gbps.
+- Image : Canonical Ubuntu
+- Forme : Machine virtuelle - AMPERE - VM.Standard.A1.Flex
+
+#### Image et Forme 
+<img src="https://puu.sh/IVXk9/1e31da8a36.png">
+
+#### Shape 
+<img src="https://puu.sh/IVXpA/dc85446c0c.png">
