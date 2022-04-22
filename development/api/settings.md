@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2022-04-22T20:58:37.432Z
+date: 2022-04-22T21:03:57.973Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -25,7 +25,8 @@ For the vast majority of use-cases, settings are intended to be modified by a UI
 ### Scope
 Also unlike flags they are able to leverage a 'scope' field to keep a piece of data specific to a user's localStorage (`scope: client`) or put that data in the world's database (`scope: world`).
 
-Only GM clients can edit settings in the `world` scope.
+### Permissions
+There is a separate permission dedicated to governing which users can edit World Scoped settings. This is something to watch out for when using settings as your data storage medium.
 
 ---
 
