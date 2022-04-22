@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-21T05:27:01.715Z
+date: 2022-04-22T14:43:12.716Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -37,8 +37,8 @@ Installer la dernière version de PuTTY puis lancer **PuTTYgen**
 - Sans fermer le logiciel, copier l'intégralité du texte se trouvant dans le cadre **Public key for pasting into Open SSH authorized_keys file** dans un fichier texte, sans faire d'espace avant ou après la copie de la clé.
 - Enregistrer le fichier en le nommant **ma_cle_ssh.txt**.
 - Renommer l'extension **.txt** en **.pub**, ignorer l'avertissement et cliquer sur **OK**. Désormais, votre fichier ressemble à **ma_cle_ssh.pub**
-- Cliquer sur **Save public key**
-<img src="https://puu.sh/IVWYu/c49952b0eb.png">
+- Cliquer sur **Save private key**
+<img src="https://puu.sh/IWes9/5535db67e7.png">
 
 - Ignorer le message d'avertissement et sauvegarder cette clé en **ma_cle_ssh.ppk**.
 - Vous devez disposer maintenant de deux clés comme ci-dessous, **ma_cle_ssh.pub** & **ma_cle_ssh.ppk**
