@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2022-04-23T14:08:38.902Z
+date: 2022-04-23T14:08:56.370Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -18,7 +18,7 @@ Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieu
 
 ## De quoi j'ai besoin ?
 
-- D'une box Fibre (ou ADSL, mais attention au débit montant, souvent insuffisant). **Si vous avez un modem 4G/5G (ou équivalent) cela ne pourra jamais fonctionner, à cause de l'opérateur**
+- D'une box Fibre (ou ADSL, mais attention au débit montant, souvent insuffisant). **Si vous avez un modem 4G/5G (ou une connexion 4G/5G) cela ne pourra jamais fonctionner, à cause de l'opérateur**
 - De l'adresse IP local de votre PC/Mac qui fait fonctionner Foundry. En général, c'est une adresse en 192.168.1.X ou 192.168.0.X.
 - De vos mots login/mot de passe de configuration de votre box (vous devez les avoir quelque part)
 
