@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-04-19T19:59:43.394Z
+date: 2022-04-25T11:23:13.511Z
 tags: foundry, linux, installation, reverse proxy, https, foundryvtt, ssl, server
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -176,8 +176,8 @@ curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
   
 ```
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key add -
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee -a /etc/apt/sources.list.d/caddy-stable.list
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo tee /etc/apt/trusted.gpg.d/caddy-stable.asc
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 ```
 </details>
 
@@ -261,7 +261,7 @@ mkdir -p ~/foundryuserdata
 <a id="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command. Replace the `<user>` portion with the name of the user currently being used.
 ```
 cd ~
-node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
+node foundry/resources/app/main.js --dataPath=/home/foundry/foundryuserdata
 ```
 
 <a id="C7" href="#C7">C7.</a>	You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
@@ -280,7 +280,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 <a id="C10" href="#C10">C10.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command. Be sure to replace `<user>` with the name of the actual user. There are two replacements:
 ```
-pm2 start "node /home/<user>/foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
+pm2 start "node /home/foundry/foundry/resources/app/main.js --dataPath=/home/foundry/foundryuserdata" --name foundry
 ```
 <a id="C11" href="#C11">C11.</a>	Double check pm2 has launched Foundry correctly:
 ```
