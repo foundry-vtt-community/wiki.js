@@ -2,7 +2,7 @@
 title: 2.0. Installation sous Linux
 description: 
 published: true
-date: 2021-04-24T21:01:06.800Z
+date: 2022-04-26T16:58:56.180Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z
@@ -22,7 +22,7 @@ Je vous conseille tout de même de faire tourner FoundryVTT avec [PM2](https://p
 - [Installation sous LINUX](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM)
 Nous utilisons ici l'installation de foundryVTT sur la distribution UBUNTU et ses dérivés.
 Nous utiliserons ici le logiciel [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/) permettant de contrôler finement le démarrage/arrêt du service.
-> En ce qui concerne la partie [Optional Step: Use SSL Encryption](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM#optional-step-use-ssl-encryption), nous vous conseillons de vous servir directement de la procédure d'installation que vous trouverez sur le site de [Cerbot](https://certbot.eff.org/lets-encrypt/ubuntufocal-nginx) et de ne pas tenir compte de cette partie dans le tutoriel linux.
+> En ce qui concerne la partie [Optional Step: Use SSL Encryption](https://foundryvtt.wiki/en/setup/hosting/Ubuntu-VM#optional-step-use-ssl-encryption), nous vous conseillons de vous servir directement de la procédure d'installation que vous trouverez sur le site de [Certbot](https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal) et de ne pas tenir compte de cette partie dans le tutoriel linux.
 {.is-warning}
 
 
