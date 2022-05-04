@@ -2,7 +2,7 @@
 title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2022-05-04T18:04:02.491Z
+date: 2022-05-04T18:14:55.808Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -77,7 +77,13 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 	- `rediriger le port externe 80 vers le port de destination 30000 en TCP.`
 
 ### Générer un Certificat SSL
-Pour générer un Certificat SSL, nous allons utiliser le Logiciel [Crypt-LE](https://github.com/do-know/Crypt-LE/releases) dans sa version 64bits.
+Il existe deux procédures pour générer un certificat SSL.
+1. Vous pouvez générer un Certificat SSL, pour le biais du Logiciel [Certbot](https://certbot.eff.org/instructions?ws=webproduct&os=windows). Par contre elle nécessite une compréhension de l'anglais et une maitrise minimale de l'informatique. 
+> Personnellement je vous recommanderez d'utiliser la procédure via **Certbot**, plus efficace à long terme, avec une option de renouvellement automatique.
+{.is-warning}
+
+
+2. Vous pouvez générer un Certificat SSL, pour le biais du Logiciel [Crypt-LE](https://github.com/do-know/Crypt-LE/releases) dans sa version 64bits.
 - Le logiciel Crypt-Le qui va gérer les interactions avec la plateforme [Let's Encrypt](https://letsencrypt.org/fr/). 
 - Let's Encrypt est une autorité de certification à but non lucratif fournissant leurs certificats TLS à plusieurs millions de sites Web. Let's Encrypt permet d'avoir une certification valide qu'il faudra renouveler tous les 3 mois. Vous serez prévenu par mail quelques jours avant la fin de l'échéance afin de pouvoir faire votre renouvellement.
 
