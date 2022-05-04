@@ -2,7 +2,7 @@
 title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2021-04-21T16:37:06.397Z
+date: 2022-05-04T18:04:02.491Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -137,19 +137,14 @@ Maintenant que le plus gros du travail est fait, nous allons activer l'Audio/Vid
 - Dans tous les cas et même si vos joueurs ne veulent pas que l'on voit leur tête, il faudra une Webcam pour que le navigateur vous propose l'utilisation de l'Audio/Vidéo.
 
 Dans Foundry VTT, il vous faudra :
-1. Télécharger le module ***'jitsi WebRTC client'***
-Ce module améliore considérablement les performances l'audio/vidéo ainsi que la consommation réseau. Par contre à terme, il vous faudra sans doute créer votre propre serveur jitsi.
+1. Télécharger le module ***'LiveKit AVClient'***
+Ce module améliore considérablement les performances l'audio/vidéo ainsi que la consommation réseau. Par contre il vous faudra créer un serveur par vous-même et pour cela je vous invite à consulter la procédure [LiveKit server chez Oracle Cloud](/fr/pour-commencer/livekit).
 
 2. Ouvrir une partie :
 - Cliquez sur les engrenages en haut à droite, dernier Onglet, puis **'Gestion des modules'**
-	- Cocher Jitsi ***'WebRTC client'***
+	- Cocher ***'LiveKit AVClient'***
   - Cliquer sur ***'Sauvegarder les paramètres de modules'***
-- Cliquez sur les engrenages en haut à droite, dernier Onglet, puis **'Configuration des Options'**
-- Dans la fenêtre **'Configuration générale'**, cliquez sur ***'Ouvrir la Configuration des droits'***
-	- Cocher pour Joueur (Player) :
-  	1.Autoriser la diffusion Audio
-    2.Autoriser la diffusion Vidéo
-    3.Sauvegarder
+- En ce qui concerne la configuration **'Serveur'** je vous invite à suivre la procédure [LiveKit server chez Oracle Cloud](/fr/pour-commencer/livekit#param%C3%A9trage-du-client-livekit-sur-foundry)
 - Dans la fenêtre **'Configuration générale'**, cliquez sur ***'Configurer Audio/Vidéo'***
 	- Dans l'onglet **'Général'**
   **'Mode de Conférence audio/vidéo'**, activer ***'Audio/Video Enabled'***
