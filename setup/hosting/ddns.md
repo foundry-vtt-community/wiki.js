@@ -2,11 +2,14 @@
 title: Using Dynamic DNS
 description: 
 published: true
-date: 2021-04-21T16:42:05.369Z
+date: 2022-05-09T04:39:37.108Z
 tags: hosting, dns, ddns, networking
 editor: markdown
 dateCreated: 2021-01-22T03:18:50.280Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 Dynamic DNS provides a fantastic way to circumvent the static-IP address restrictions that come from using a residential IP address configuration. Below are some steps for differing hosting providers that can be used to provide simple configurable subdomain urls.
 
