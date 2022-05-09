@@ -2,11 +2,14 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2021-04-21T16:31:23.875Z
+date: 2022-05-09T04:41:24.187Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 Foundry VTT is a nice piece of software, but today I want to provide ways to have consistently running instance
 that is reachable by a (sub)domain name instead of a clunky port number: "http://foundry.myhost.com" is in my opinion a bit nicer than "http://myhost.com:8080". We are leveraging the power of a node process manager to keep the instance running and to provide detailed statistics about the foundry instance, including easy to use start/stop/restart commands and an automatic start when the server boots up.
