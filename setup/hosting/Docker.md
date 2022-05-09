@@ -2,11 +2,14 @@
 title: Docker
 description: 
 published: true
-date: 2021-10-01T22:43:54.777Z
+date: 2022-05-09T04:36:08.790Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
 ---
+
+>Docker is not an officially supported installation method. If you need support while using a docker container you will need to contact the container author.
+{.is-warning}
 
 You can use Docker to run Foundry VTT. You may use several different approaches.
 
@@ -82,6 +85,11 @@ docker run \
 ```
 
 For more information about the available configuration options please see the [project README](https://github.com/felddy/foundryvtt-docker#readme).  If you have any questions please feel free to contact me on the FoundryVTT discord: `@felddy`
+
+### Installation Guide for a Synology NAS ###
+
+We wrote a [full guide for setting up this Docker image on a Synology NAS](/setup/hosting/Synology). The guide also covers HTTPS configuration.
+
 
 ---
 
