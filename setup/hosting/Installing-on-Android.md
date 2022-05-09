@@ -2,11 +2,14 @@
 title: How to Install Foundry on an Android Phone
 description: A guide for installing Foundry on Android.
 published: true
-date: 2021-04-21T16:47:20.889Z
+date: 2022-05-09T04:37:57.820Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-21T22:25:01.724Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 # How to Install Foundry on an Android Phone
 ## Part 1: Installing Termux
