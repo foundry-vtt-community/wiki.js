@@ -2,11 +2,14 @@
 title: Windows
 description: 
 published: true
-date: 2021-04-21T16:29:41.399Z
+date: 2022-05-09T04:40:44.000Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:33:50.041Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 # Basic Setup
 1. Download the latest Windows setup file from [Patreon](https://patreon.com/foundryvtt/posts)
