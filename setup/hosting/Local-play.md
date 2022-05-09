@@ -2,11 +2,14 @@
 title: Local play
 description: 
 published: true
-date: 2021-04-21T16:30:57.898Z
+date: 2022-05-09T04:38:29.403Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:46.297Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 ## Solution 1 : Dual computers
 
