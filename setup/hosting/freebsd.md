@@ -2,11 +2,14 @@
 title: FreeBSD
 description: 
 published: true
-date: 2021-04-21T16:31:34.869Z
+date: 2022-05-09T04:37:40.313Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:57.469Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 # Base install directly on FreeBSD, not for NAS
 
