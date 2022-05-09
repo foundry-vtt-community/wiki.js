@@ -2,7 +2,7 @@
 title: Compendia
 description: 
 published: true
-date: 2022-05-09T22:38:08.536Z
+date: 2022-05-09T22:47:13.037Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
@@ -15,7 +15,7 @@ Compendiums can be add in several ways. They may come with a game system directl
 
 **Note:** Any compendiums provided by a game system or module should not be used to store any user created/edited entities. When the system or module that provided the compendium is update, they will be overwritten, resulting in data loss of any user added entities. These compendiums are normally locked by default and should remain that way. 
 
-Each Compendium can only contain one type of document: Actors, Items, Journal Entries, Macro Commands, Playlists, Rollable Tables or Scenes. Data contained in compendium packs are not loaded until needed, reducing the amount of data that a particular user must load when first joining a game.
+Each Compendium can only contain one type of document: Actors, Cards, Items, Journal Entries, Macro Commands, Playlists, Rollable Tables, or Scenes. Data contained in compendium packs are not loaded until needed, reducing the amount of data that a particular user must load when first joining a game.
 
 ## Creating and Using Compendium Pack
 
@@ -58,6 +58,15 @@ Storing unused Entities in a Compendium **greatly** reduces the time it takes to
 
 ## Sharing compendia between worlds
 
-You can use a tiny module to share content between worlds. This site will help you create a shared compendium. 
+You can use a tiny module to share content between worlds. This site will help you create a shared compendium in just a few clicks. 
 
-[How to create a tiny module for shared content between worlds](https://fgen-mxzf-prod.herokuapp.com/module/create)
+[Site to create a tiny module for shared content between worlds](https://fgen-mxzf-prod.herokuapp.com/module/create)
+
+Steps to use:
+1. Fill in the Module Name field and optionally the Actor/Description fields.
+2. Add whatever packs you want to have present in the module, filling in the name and type and adding more packs with the button as-needed.
+3. Click Generate Module, which will show the manifest URL below and copy the URL to your clipboard.
+4. Open up the module installation dialog in Foundry, paste the manifest into the Manifest URL field, and click Install.
+5. Open your world and activate the module in that world.  Module-based compendiums will be locked by default, so you will need to unlock them to add your content to them.
+
+For more info on shared compendiums, and how to make one yourself from scratch, you can watch the video from discord user unsoluble [here](https://www.youtube.com/watch?v=Q23cJJ36kX8).
