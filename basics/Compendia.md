@@ -2,12 +2,11 @@
 title: Compendia
 description: 
 published: true
-date: 2021-07-12T14:19:26.246Z
+date: 2022-05-09T22:38:08.536Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
 ---
-
 
 # Overview
 Compendium Packs exist to reduce the strain on worlds that have been running for a long period of time. This includes situations where a world has accrued a large number of actors, items or scenes that, while not active, should not be deleted. Compendium Packs should be used to help you keep your world organized and reduce clutter.
@@ -59,6 +58,6 @@ Storing unused Entities in a Compendium **greatly** reduces the time it takes to
 
 ## Sharing compendia between worlds
 
-You can use a tiny module to share content between worlds. This reddit post by reddit user u/solfolango describes the process:
+You can use a tiny module to share content between worlds. This site will help you create a shared compendium. 
 
-[How to create a tiny module for shared content between worlds](https://www.reddit.com/r/FoundryVTT/comments/fvw3c7/how_to_create_a_tiny_module_for_shared_content/)
+[How to create a tiny module for shared content between worlds](https://fgen-mxzf-prod.herokuapp.com/module/create)
