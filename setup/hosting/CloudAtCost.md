@@ -2,11 +2,14 @@
 title: CloudAtCost
 description: A Canadian virtual server provider, where you buy the resources permanently, and can build as much or as beefy as you like.
 published: true
-date: 2021-04-21T16:45:47.131Z
+date: 2022-05-09T04:35:16.907Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-12T06:10:46.995Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 # CloudAtCost
 
