@@ -2,11 +2,14 @@
 title: Archlinux
 description: Foundry VTT setup in Archlinux
 published: true
-date: 2021-04-21T16:47:06.016Z
+date: 2022-05-09T04:34:30.027Z
 tags: tutorial, hosting, setup, linux, self-hosting
 editor: markdown
 dateCreated: 2021-02-28T01:56:56.967Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 These instructions show one of the possible ways to install Foundry VTT in an Archlinux system. At the end of the process, the service should be accessible from a browser using [a secure connection](https://wiki.archlinux.org/index.php/SSL).
 
