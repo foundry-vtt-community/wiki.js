@@ -2,11 +2,14 @@
 title: Apache Reverse-Proxy-Configuration
 description: 
 published: true
-date: 2021-04-21T16:30:17.697Z
+date: 2022-05-09T04:34:07.774Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:21.190Z
 ---
+
+>This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+{.is-warning}
 
 These example configurations are for setting up Apache2 as a reverse proxy for Foundry, and apply to Foundry versions 0.5.6 or later. Compatibility with 0.5.5 and below is not guaranteed, although the RewriteRule method is reported to work.
 
