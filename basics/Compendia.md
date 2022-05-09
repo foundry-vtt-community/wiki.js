@@ -2,7 +2,7 @@
 title: Compendia
 description: 
 published: true
-date: 2022-05-09T22:47:44.840Z
+date: 2022-05-09T22:51:11.448Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
@@ -26,7 +26,8 @@ Compendium Packs and their contents are automatically sorted alphabetically.
 You can also export whole folders to compendiums by right clicking the folder and clicking the `Export to Compendium` option. This then gives you the ability to choose the destination pack (the compendium you want to export the folder's entities to), and if you want to overwrite existing entries with the same names. If the `Merge by name?` option is toggled off, then new copies of similar entities will be added. This is useful for storing multiple versions of the same document in a compendium.
 
 ## Locking Compendiums
-You can toggle a lock on a compendium by navigating to the Compendium Packs tab, right clicking on name of the compendium and choosing `Toggle Edit Lock`. This can help prevent making any unwanted changes.  
+You can toggle a lock on a compendium by navigating to the Compendium Packs tab, right clicking on name of the compendium and choosing `Toggle Edit Lock`. This can help prevent making any unwanted changes. 
+
 
 **Entities in compendiums can now be edited directly!**
 This means you no longer have to import an entity in order to make any changes to it.
@@ -69,4 +70,4 @@ Steps to use:
 4. Open up the module installation dialog in Foundry, paste the manifest into the Manifest URL field, and click Install.
 5. Open your world and activate the module in that world.  Module-based compendiums will be locked by default, so you will need to unlock them to add your content to them.
 
-For more info on shared compendiums, and how to make one yourself from scratch, you can watch the video from discord user unsoluble [here](https://www.youtube.com/watch?v=Q23cJJ36kX8).
+For more information on shared compendiums, and how to make one yourself from scratch, you can watch the video from discord user unsoluble [here](https://www.youtube.com/watch?v=Q23cJJ36kX8).
