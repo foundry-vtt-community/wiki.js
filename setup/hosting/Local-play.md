@@ -2,21 +2,54 @@
 title: Local play
 description: 
 published: true
-date: 2022-05-09T04:38:29.403Z
+date: 2022-05-10T03:15:01.269Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:46.297Z
 ---
 
->This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
+## Dual screens
+
+<small>Original source (French): http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle</small>
+
+Open your gamemaster account in your browser normally and then launch an Incognito/private window for your players to log in. Move the private window on to a screen facing the players and press F11 for fullscreen!
+
+You can use the "Hot Seat Observer" module to allow all tokens to be controlled by that single player account. See the instructions below to add a second cursor and/or keyboard for this account.
+
+## Dual computers
+
+Another option for local play is to have multiple computers, possibly even one per player.
+
+If you only have two computers, one of them will be dedicated to the GM, and the other will be to show the scenes to the players. To do this, create a new player account with the "Observer" ownership over all player character actors.
+
+## Multiple pointers/keyboards (Windows/Linux)
+
+<small>Original source (French): http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle</small>
+
+You can use this to give them control over an independant pointer (or even keyboard) to control a common player account.
+
+### Linux
+
+<small>Source: https://wiki.archlinux.org/index.php/Multi-pointer_X</small>
+
+* Create a second pointer with `xinput create-master aux`. This will create a new mouse pointer called "aux".
+* Connect a second mouse (USB preferably) to your computer. You may also connect a second keyboard.
+* List the available input devices with `xinput list`
+* Find the ID of the new mouse/keyboard, and the ID of the "aux" pointer/keyboard
+* Enter the command `xinput reattach <mouse-id> <aux-pointer-id>` to attach the pointer and `xinput reattach <keyboard-id> <aux-keyboard-id>` to attach the keyboard.
+* Give the second mouse/keyboard to your players
+
+## Windows
+
+Install [MouseMux](https://mousemux.com/) to manage multiple cursors on the same Windows computer,
+
+## Using a VM
+
+<small>Original source (French): http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle</small>
+
+> This section is deprecated! Use the solutions above instead.
 {.is-warning}
 
-## Solution 1 : Dual computers
-
-Of course, local play can be achieved with 2 (or more computers). In the 2 computers settings, 1 computer is dedicated to the GM, and the other one to show the scene/maps/etc. to the players.
-To do this, create a specific 'IRL' player with the 'Observer' role for all the PCs.
-
-## Solution 2 : Single laptop ( VM solution)
 
 This solution is using a VM (Virtual Machine) to handle the player session, hence it works with Linux, Windows and probably Mac.
 
@@ -35,30 +68,5 @@ Running :
 
 * Launch Foundry and connect to it with your browser (laptop GM side)
 * Launch the guest OS in the VM
-* In the guest OS, launch Chrome and connect to FOundry using the observer player created previously
+* In the guest OS, launch Chrome and connect to Foundry using the observer player created previously
 * Setup fullscreen and provide the VM attached mouse to the players 
-* Play !
-
-Main source (in French)  : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/
-
-## Solution 3 : Single laptop, dual mouse pointers (Linux only)
-
-If you are using Linux, another solution exists, without the need of a VM, by creating 2 independant mouse pointers (and even keyboards if you want).
-
-The hardware setup is the same than oin solution 2 above.
-
-The software setup is a bit different : 
-
-* Connect as root
-* Create a second pointer with : `xinput create-master aux`
-* Connect a second mouse (USB preferably) to your computer
-* List the available input devices with : `xinput list`
-* From this list, get the id of the new mouse, and the id of the 'aux' pointer
-* Enter the command : `xinput reattach <mouse-id> <aux-id>`
-* You now have 2 pointers, moving indepently !
-* Then launch your GM session in a Chrome instance
-* And the players session in a second Chrome instance, launched in "privacy" mode.
-* Moves the Chrome windows to the relevant screens
-* Play !
-
-Main source (in French)  : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/
