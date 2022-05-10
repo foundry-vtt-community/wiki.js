@@ -2,7 +2,7 @@
 title: System Development-Part-4-Bureaucracy
 description: 
 published: true
-date: 2022-05-10T21:09:14.764Z
+date: 2022-05-10T21:11:00.260Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:37:12.429Z
@@ -85,4 +85,5 @@ Start pumping out those character stats, friend.
 
   
 
-4c. Really, just keep making entries here until you run out of things on your character sheet you need to record and store data for. When you think you’re done, save your template.json and we can move on to creating that sheet.
+## 4c. Add remaining attributes
+Really, just keep making entries here until you run out of things on your character sheet you need to record and store data for. When you think you’re done, save your template.json and we can move on to creating that sheet.
