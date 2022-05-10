@@ -2,7 +2,7 @@
 title: System Development-Part-2-Whirlwind-Tour
 description: 
 published: true
-date: 2021-04-21T16:33:45.780Z
+date: 2022-05-10T17:16:53.101Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:55.708Z
@@ -38,7 +38,7 @@ Whenever Foundry creates a character for our system, it uses this page. This is 
 
   
 
-**./modules/actor-sheet.js**
+**./module/actor-sheet.js**
 
 The JavaScript “ActorSheet” class for our system. Big and scary. We won’t be spending a lot of time with it.
 
@@ -48,6 +48,6 @@ The JavaScript “ActorSheet” class for our system. Big and scary. We won’t 
 
 The same as actor-sheet.html but for items. We won’t be editing this in this guide.
 
-**./modules/item-sheet.js**
+**./module/item-sheet.js**
 
 The same as actor-sheet.js… but for items. You get the picture.
