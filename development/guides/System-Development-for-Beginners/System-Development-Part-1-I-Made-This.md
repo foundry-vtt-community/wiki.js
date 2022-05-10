@@ -2,7 +2,7 @@
 title: System Development-Part-1-I-Made-This
 description: 
 published: true
-date: 2021-04-21T16:33:39.853Z
+date: 2022-05-10T17:10:22.554Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:49.857Z
@@ -37,14 +37,14 @@ So first we need to create a system and have Foundry recognize that it’s a new
 
 1d. Open the system.json file and change the values to suit your needs. We’ll want to make sure that:
 
--   “name”: “yoursystemname” - matches the folder name of your new system exactly
+-   `"name": "yoursystemname"` - matches the folder name of your new system exactly
     
 -   All other relevant data is completed in this list
     
 -   We credit Atropos in our description. We are stealing his code after all.
     
 
--   “description”: “A rudimentary implementation of <yoursystemhere> for Foundry VTT, based entirely on the Simple Worldbuilding System for Foundry designed by Atropos.”
+-   `"description": "A rudimentary implementation of <yoursystemhere> for Foundry VTT, based entirely on the Simple Worldbuilding System for Foundry designed by Atropos."`
     
 
 -   Note: if you aren’t intending to distribute this system (or at least not yet) you can leave url, manifest, and download as a ‘blank string’ (empty quotations).
