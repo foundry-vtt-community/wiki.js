@@ -2,7 +2,7 @@
 title: System Development-Part-4-Bureaucracy
 description: 
 published: true
-date: 2021-04-21T16:34:04.610Z
+date: 2022-05-10T21:09:14.764Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:37:12.429Z
@@ -28,32 +28,32 @@ What follows is the monotonous part where we enter data into our template.json f
 
 Remember back in part 3c when I had you delete the line from your template.json that read: 
 
-    ,
-    
-    "attributes": {}
-    
-    }
-
-  
+```json
+"attributes": {}
+```
 
 Well. We didn’t actually have to do that- so let’s put it back, and while we’re at it, let’s add some skills:
 
-  
-  
-
 Before
 
-![](https://lh6.googleusercontent.com/KJCYcNfvl859zAsV93ds5Ss3sDDdFh8i8e7YwCqJGjsqUUzrVmqTd1qPyStHEKevP2n__mIzJmnA2hA3QR5ocmAcDISx1HNPXblr6pRQdC1hsXQCRnuoUhy_hpcrtXquILxStd_H)
-
-  
-  
-  
-  
-  
+```json
+"character": {
+  "biography": "",
+  "health": {...},
+  "power": {...}
+}
+```
 
 After
 
-![](https://lh3.googleusercontent.com/i3sGXerU1cMTA2LFkxmhxzsMYiO1079rPUOxk0k_PtG7JbslE5dJmZLK-mawdZQeSXaGEDNki3BneWFRYP0dyhfP4FKbLTwhe8DGFJfJMnn7PC197pvsPbSYIRgQSSakTwK0Kgjd)  
+```json
+"character": {
+  "biography": "",
+  "health": {...},
+  "power": {...},
+  "attributes": {}
+}
+```
 
 Here’s where we get to really start padding out those JSON lines.
 
@@ -63,25 +63,18 @@ Here’s where we get to really start padding out those JSON lines.
 
 A suggested format for new attributes and skills, you can change any name here, even attributes or skills:
 
-    "attributes": {
-    
-    "strength": {
-    
+```json
+"attributes": {
+  "strength": {
     "value": 0,
-    
     "label": "Strength",
-    
     "modifier": []
-    
-    }
-    
-    },  
-    "skills": {
-    
-    ...
-    
-    }
-    
+  }
+},  
+"skills": {
+  ...
+}
+```
       
 
 The “modifier”: [] entry is WHOLLY optional, but can be used later to add modifiers to those attributes and skills if you get clever with javascript. There really isn’t a downside to including it here.
