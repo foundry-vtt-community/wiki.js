@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2021-04-21T16:41:42.407Z
+date: 2022-05-10T22:06:41.011Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -109,7 +109,7 @@ Hooks.on("preCreateActor", (actorData, options, userId) => {
 });
 ```
 
-### Adding an additional custom damage type (D&D 5e)
+### Adding an additional custom damage type (DnD5e)
 ```js
 // Adds a new "plasma" damage type that will be selectable as a new type of damage for weapons
 // and a new type of resistance for actors.
@@ -117,5 +117,14 @@ Hooks.on("preCreateActor", (actorData, options, userId) => {
 Hooks.on("setup", () => {
   CONFIG.DND5E.damageTypes.plasma = "Plasma";
   CONFIG.DND5E.damageResistanceTypes.plasma = "Plasma";
+});
+```
+
+### Changing the Max Level Cap (DnD5E)
+```js
+/// Modifies the highest level available to a Player Character
+Hooks.on("setup", () => {
+  console.log("------ CHANGING MAX LEVEL -------");
+  CONFIG.DND5E.maxLevel = 30;
 });
 ```
