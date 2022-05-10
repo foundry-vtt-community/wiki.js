@@ -2,7 +2,7 @@
 title: System Development-Part-1-I-Made-This
 description: 
 published: true
-date: 2022-05-10T17:10:22.554Z
+date: 2022-05-10T17:15:00.365Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:49.857Z
@@ -38,6 +38,8 @@ So first we need to create a system and have Foundry recognize that it’s a new
 1d. Open the system.json file and change the values to suit your needs. We’ll want to make sure that:
 
 -   `"name": "yoursystemname"` - matches the folder name of your new system exactly
+
+-   `"title": "Your System Name"` - replace it with a human-readable name for your system
     
 -   All other relevant data is completed in this list
     
