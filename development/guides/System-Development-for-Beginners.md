@@ -2,7 +2,7 @@
 title: System Development-for-Beginners
 description: 
 published: true
-date: 2021-04-21T16:33:53.617Z
+date: 2022-05-10T20:46:38.138Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:37:42.801Z
@@ -12,18 +12,16 @@ dateCreated: 2020-09-23T00:37:42.801Z
 
   
 
-This guide is a highly condensed form of a much bigger and more detailed guide still being written. Until it’s done, however, this will serve to:
+This guide is a highly condensed form of a much bigger and more detailed guide still being written. Until it’s done, however, this will serve to: 
 
-  
+1. Illustrate the fundamentals of how a Foundry system uses its data    
+2. Explain the template.json and the ‘handlebars’ functions Foundry uses for its data
+3. Teach extremely basic JavaScript for the purposes of deriving values (such as a calculated defensive attribute)
+4. Get you to a point where you can use HTML and CSS skills to make your sheet look how you want
 
-1.  Illustrate the fundamentals of how a Foundry system uses its data
-    
-2.  Explain the template.json and the ‘handlebars’ functions Foundry uses for its data
-    
-3.  Teach extremely basic JavaScript for the purposes of deriving values (such as a calculated defensive attribute)
-    
-4.  Get you to a point where you can use HTML and CSS skills to make your sheet look how you want
-    
+**Note:** This guide was last updated using the following versions:
+![Up to date as of Foundry v9](https://img.shields.io/static/v1?label=Foundry&message=v9&color=informational)
+![Up to date as of Simple World-Building v0.6.4](https://img.shields.io/static/v1?label=Simple%20World-Building&message=v0.6.4&color=informational)
 
 ### Chapters
 * [Part 1: I Made This](/development/guides/System-Development-for-Beginners/System-Development-Part-1-I-Made-This)
