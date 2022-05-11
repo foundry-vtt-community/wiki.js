@@ -2,14 +2,15 @@
 title: Local play
 description: 
 published: true
-date: 2022-05-10T03:19:41.787Z
+date: 2022-05-11T00:34:59.982Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:46.297Z
 ---
 
 # Local Play
-![Up to date as of 09/05/2022](https://img.shields.io/static/v1?label=Last%20Updated&message=09/05/2022&color=informational)
+
+![Confirmed working on 10/05/2022](https://img.shields.io/static/v1?label=Last%20Updated&message=10/05/2022&color=informational)
 
 ## Dual screens
 
