@@ -2,7 +2,7 @@
 title: Systèmes et Contenus
 description: 
 published: true
-date: 2022-03-06T20:23:25.028Z
+date: 2022-05-14T16:12:40.663Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:33:53.747Z
@@ -33,6 +33,8 @@ dateCreated: 2022-03-01T08:33:53.747Z
 - [Starwars FFG](/fr/systemes/swffg)
 - [SWADE - Savage Worlds](/fr/systemes/fr-swade)
     - [Deadlands Reloaded](/fr/systemes/fr-deadlands) (Dépendance: nécessite SWADE)
+- Torg eternity
 - [Warhammer 4e](/fr/systemes/fr-wfrp4e)
 - [World of Darkness](https://foundryvtt.wiki/fr/systemes/wod)
 - Yggdrasill
+
