@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2022-05-18T18:08:47.364Z
+date: 2022-05-18T18:17:38.215Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -24,4 +24,4 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 8](https://youtu.be/mVJmaBIEWnc) avec **SecretFire de FoundryVTT** pour les new, et Vonv et Vétérini pour **l'Appel de Cthulhu**
  - Les Chroniques de la [Fonderie, Episode 9](https://www.youtube.com/watch?v=Ljjfd6nXuJM) avec Cyril Gronyon et Chris Torone CB. Sujet : **Savage Worlds**
   
- - A venir : épisode 9 le 15/05 à 18h (si, si) dédié à Savage Worlds ici : https://youtu.be/Ljjfd6nXuJM !
+ - A venir : épisode 10 le ??? avec pour thème ????? !
