@@ -1,8 +1,8 @@
 ---
-title: ５．BCDiceの使い方
+title: 5．BCDiceの使い方
 description: BCDiceの使い方
 published: true
-date: 2021-06-22T11:44:36.945Z
+date: 2022-05-28T01:00:11.556Z
 tags: 
 editor: markdown
 dateCreated: 2021-03-04T05:53:50.607Z
