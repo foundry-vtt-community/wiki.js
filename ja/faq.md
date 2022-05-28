@@ -1,8 +1,8 @@
 ---
-title: ４．よくある質問
+title: 4．よくある質問
 description: よくある質問
 published: true
-date: 2021-08-19T09:48:11.930Z
+date: 2022-05-28T01:10:31.232Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T10:43:54.439Z
