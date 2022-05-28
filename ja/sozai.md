@@ -1,8 +1,8 @@
 ---
-title: ６．素材集
+title: 6．素材集
 description: 素材集
 published: true
-date: 2021-08-17T11:45:34.872Z
+date: 2022-05-28T01:06:46.414Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T11:02:35.590Z
