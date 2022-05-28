@@ -1,8 +1,8 @@
 ---
-title: ２．PL基本操作
+title: 2．PL基本操作
 description: 基本操作
 published: true
-date: 2021-04-21T16:43:10.237Z
+date: 2022-05-28T01:00:43.800Z
 tags: 基本操作
 editor: markdown
 dateCreated: 2021-02-06T10:38:11.852Z
