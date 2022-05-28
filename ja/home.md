@@ -1,8 +1,8 @@
 ---
-title: １．はじめに
+title: 1．はじめに
 description: 
 published: true
-date: 2022-01-26T07:20:14.923Z
+date: 2022-05-28T01:01:08.842Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
