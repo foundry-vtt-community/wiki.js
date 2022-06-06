@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-05-23T04:45:40.889Z
+date: 2022-06-06T23:52:56.875Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -384,7 +384,7 @@ nano ~/foundryuserdata/Config/options.json
 "hostname": "<your.domain.name>",
 ...
 ```
->Make sure to not delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
+>Make sure your hostname is in **quotes** as above, and be sure not to delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
 
 <a id="C20" href="#C20">C20.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
