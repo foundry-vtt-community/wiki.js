@@ -2,7 +2,7 @@
 title: 8．小ネタなど
 description: FVTTを扱う上での軽い情報や、MODほどではない改造の仕方など
 published: true
-date: 2022-05-28T01:06:13.312Z
+date: 2022-06-09T13:12:58.129Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-04-06T15:00:36.087Z
@@ -14,6 +14,7 @@ dateCreated: 2021-04-06T15:00:36.087Z
 <p>情報が集まって大きくなれば、カテゴリを分けて掲載する事もあります。</p>
 <p>わざわざ記事を作る程じゃない…といった情報があれば、こちらに上げさせていただきます。</p>
 <p>&nbsp;</p>
+<p>2022/6/9 <mark class="pen-red">New!</mark></p>
 <p>&nbsp;</p>
 <h2>共有辞典</h2>
 <p><a href="https://www.reddit.com/r/FoundryVTT/comments/fvw3c7/how_to_create_a_tiny_module_for_shared_content/">世界間で共有コンテンツ用の小さなモジュールを作成する方法</a></p>
@@ -80,4 +81,64 @@ dateCreated: 2021-04-06T15:00:36.087Z
 <p>ワールドのディレクトリ配下にworldscript.jsを配置することで、設定画面にない要素を変更できる。例えば呪文テンプレートの円錐の角度を64°（個人的にちょうどいい角度）にしたいなら、以下のように記述する。</p>
 <p>&nbsp;</p>
 <pre><code class="language-plaintext">Hooks.on("setup", () =&gt; CONFIG.MeasuredTemplate.defaults.angle = 64);</code></pre>
+<p>&nbsp;</p>
+<h2>フォルダ内のapngを全てwebmに変換する方法（透過情報を保ちます）</h2>
+<p>&nbsp;➊：ffmpeg(ffmpeg-master-latest-win64-gpl-shared.zip)（<a href="https://ffmpeg.org/">https://ffmpeg.org/</a> ）をwindowsにインストールしPATHを通す（参考：<a href="https://jp.videoproc.com/edit-convert/how-to-download-and-install-ffmpeg.htm">https://jp.videoproc.com/edit-convert/how-to-download-and-install-ffmpeg.htm</a> ）</p>
+<p>&nbsp;➋：下のzipファイルを解凍し、出てきた<code>apngs2webms.bat</code> を変換したいapngファイルがあるフォルダに入れる(ファイルの拡張子がpngでもアニメーションがあるのであれば問題なく動作する)</p>
+<p>&nbsp;❸：<code>apngs2webms.bat</code>をダブルクリックして実行する（コマンドプロンプトが起動して、出力用の『OutPut』フォルダが作成され、変換が開始される）&nbsp;</p>
+<p>❹：「アクセスが拒否されました」等出る場合には、フォルダごとデスクトップとかに移動するか、<code>apngs2webms.bat</code>をダブルクリックではなく「右クリック⇒管理者として実行」で実行する&nbsp;</p>
+<p><span class="text-big"><mark class="pen-red"><strong>【備考】</strong></mark></span><strong>batファイルはPCに対して強力なコマンドを実行可能なので、</strong><span class="text-big"><mark class="pen-red"><strong>内容の改変や再配布された同名ファイルの実行を気軽にしないように！！&nbsp;</strong></mark></span></p>
+<p>&nbsp;</p>
+<p>以下、<code>apngs2webms.bat</code>のソースコード&nbsp;</p>
+<pre><code class="language-plaintext">chcp 65001
+@echo off
+rem CMDの表示をutf-8に指定
+
+rem 現在のフォルダをインプットフォルダに設定
+set INPUT_FOLDER=%CD%
+
+If not exist %INPUT_FOLDER%\Output (
+    mkdir OutPut
+    echo 出力用フォルダが存在しないので『OutPut』フォルダを作成しました
+    echo.
+)
+
+set FOLDER_NAME=OutPut
+
+set OUTPUT_FOLDER=%CD%\%FOLDER_NAME%\
+
+rem 遅延環境変数を使用することを宣言
+setlocal enabledelayedexpansion
+
+echo 変換作業を開始します
+
+for /f "usebackq" %%i IN (`dir *.png *.apng /B`) DO (
+    echo.
+    echo.
+    for /f "usebackq tokens=1 delims=." %%j IN (`echo %%i`) DO (
+        echo ffmpeg -i %%i -c:v libvpx-vp9 -quality realtime -cpu-used 0 -pix_fmt yuva420p -movflags faststart %OUTPUT_FOLDER%%%j.webm
+        echo.
+        ffmpeg -i %%i -c:v libvpx-vp9 -quality realtime -cpu-used 0 -pix_fmt yuva420p -movflags faststart %OUTPUT_FOLDER%%%j.webm
+        echo %%iの変換が終了しました（!date! !time!）
+        echo --------------------------------------------
+    )
+)
+
+endlocal
+
+echo.
+echo 全てのファイルが変換されました
+echo 何かキーを押すと終了します
+
+call :setting
+pause &gt;nul
+:setting
+    set INPUT_FOLDER=
+    set INPUT_FILE=
+    set OUTPUT_FOLDER=
+    set OutPut=
+exit /b</code></pre>
+<p><a href="https://cdn.discordapp.com/attachments/659040967239925780/984117977899237446/apngs2webms.zip">apngs2webms.zip</a></p>
+<p>FFmpegダウンロードとインストール手順はこちらの記事から：</p>
+<p><a href="https://jp.videoproc.com/edit-convert/how-to-download-and-install-ffmpeg.htm"><strong>【初心者】FFmpegのダウンロードとインストール手順～Windows/Mac/Linux</strong></a></p>
 <p>&nbsp;</p>
