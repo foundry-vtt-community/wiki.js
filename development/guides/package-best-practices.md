@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2022-06-16T19:51:44.010Z
+date: 2022-06-16T19:52:23.176Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -101,7 +101,7 @@ By default, this will make all buttons in the header squish down to hide their t
 }
 ```
 
-### Adventure Import configuration options
+### Adventure Importer configuration options
 
 When adding configuration options to the Adventure Import sheet, put them in a column to the right of the "Contents" section:
 
