@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-06-20T12:18:30.601Z
+date: 2022-06-20T18:07:56.213Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
