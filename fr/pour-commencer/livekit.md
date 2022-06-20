@@ -2,7 +2,7 @@
 title: 3.1 LiveKit server chez Oracle Cloud
 description: Création d'un serveur LiveKit chez Oracle Cloud
 published: true
-date: 2022-04-22T14:43:12.716Z
+date: 2022-06-20T12:18:30.601Z
 tags: vm, ubuntu, server, livekit, serveur
 editor: markdown
 dateCreated: 2022-04-21T01:40:46.576Z
@@ -73,13 +73,13 @@ Installer la dernière version de PuTTY puis lancer **PuTTYgen**
 - Vous pouvez aussi taper dans la barre de recherche le môt **instances**
 
 ### Option Recommandée : Serveur Ampère
-> Dans le niveau gratuit, un total de 4 OCPU et 24 Go sont disponibles, qui peuvent être répartis entre deux instances (le maximum) ou attribués à une seule. C'est-à-dire deux instances avec 2 OCPU et 12 Go chacune, ou une avec 4 OCPU et 24 Go.
+> Dans le niveau gratuit, un total de 3 OCPU et 18 Go sont disponibles, qui peuvent être répartis entre deux instances (le maximum) ou attribués à une seule. ***Il semblerait que la version 4 OCPU / 24Go / 4Gbps ne soit plus disponible à la version gratuite.***
 {.is-warning}
 
 **Pour un seul serveur :**
-- Processeur : ARM allant jusqu'à 4 coeurs OCPU
-- RAM : 24Go
-- Bande passante : 4Gbps.
+- Processeur : ARM allant jusqu'à 3 coeurs OCPU
+- RAM : 18Go
+- Bande passante : 3Gbps.
 - Image : Canonical Ubuntu
 - Forme : Machine virtuelle - AMPERE - VM.Standard.A1.Flex
 
@@ -89,6 +89,9 @@ Installer la dernière version de PuTTY puis lancer **PuTTYgen**
 {.is-warning}
 
 #### Image et Forme 
+> Suite à la sortie de la version 22.04 d'Ubuntu est après quelques tests d'installation infrustueuse, il est **FORTEMENT** conseillé de faire l'installation sur la ***version 20.04 d'Ubuntu***
+{.is-warning}
+
 <img src="https://puu.sh/IVXk9/1e31da8a36.png">
 
 #### Shape 
@@ -196,7 +199,7 @@ Une fois que vous avez crée l'instance, vous allez vous retrouver sur une inter
 > sudo apt-get dist-upgrade -y
 {.is-success}
 
->sudo apt-get install ca-certificates curl gnupg lsb-release
+> sudo apt-get install ca-certificates curl gnupg lsb-release
 {.is-success}
 
 #### Accès aux ports requis
