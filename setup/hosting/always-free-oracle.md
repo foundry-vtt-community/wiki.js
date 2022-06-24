@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-06-24T17:27:16.401Z
+date: 2022-06-24T17:30:54.572Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -177,7 +177,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <a id="C20" href="#C20">C20.</a>  From the pop-out list, :ballot_box_with_check:`check` **Canonical Ubuntu**. Ensure that the OS Version is **22.04**.
 
-![Select non-Minimal Ubuntu 20.04](/images/oracle/ubuntu-2204.webp)
+![Choose Ubuntu 22.04](/images/oracle/ubuntu-2204.webp)
 
 <a id="C21" href="#C21">C21.</a>  Click **Select Image**.
 
