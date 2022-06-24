@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-06-06T18:28:13.769Z
+date: 2022-06-24T17:16:20.019Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -286,6 +286,9 @@ ssh -i foundry.key ubuntu@<public ip address>
 sudo apt-get update
 sudo apt-get upgrade -y
 ```
+
+>You may be prompted for choices during the `upgrade` command above. Simply hit <kbd>enter</kbd> to accept the defaults and continue. {.is-info}
+
 <a id="D6" href="#D6">D6.</a> Once complete, the instance is ready to continue. 
 
 > All further commands in this section should continue to be entered into this terminal in the order written. Do not close the terminal until the end of the guide. {.is-info}
@@ -458,6 +461,14 @@ nano /home/ubuntu/foundryuserdata/Config/options.json
 <a id="D38" href="#D38">D38.</a>  Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 >Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
+
+<a id="D39" href="#D39">D39.</a> Optionally: Restart the instance in order to apply any potentialy pending updates that require a restart and to test `pm2`'s ability to restart Foundry correctly. 
+
+```
+sudo shutdown -r now
+```
+
+Give the instance a few minutes to restart. You should be able to connect to Foundry without issue once it is fully restarted. You should also be able to `ssh` into Foundry as in [D2](#D2). If Foundry has not started up after a good 10 minutes, please check your `pm2` startup command as in [D13](#D13) as well as the `pm2` commands in [D26](#D26) to [D28](#D28).
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
