@@ -2,7 +2,7 @@
 title: Kubernetes
 description: 
 published: true
-date: 2022-05-09T04:38:13.667Z
+date: 2022-06-25T06:52:03.618Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:40.922Z
@@ -34,6 +34,14 @@ Requirements:
 * Kubernetes Cluster (EKS/GKE/AKS/K3S/K8S)
 * Container built with [Felddy's Easy Container](https://github.com/felddy/foundryvtt-docker.git)
 
+You can install dirctly from the Helm repo
+```shell
+helm repo add foundry-vtt https://hugoprudente.github.io/helm-charts/incubator/
+helm install my-foundry-vtt foundry-vtt/foundry-vtt --version 0.2.14
+```
+
+Or clone the repository and do some tweeks.
+
 ```shell
 git clone https://github.com/hugoprudente/charts/
 ```
@@ -47,4 +55,6 @@ or
 ```shell
 helm3 install foundry ./incubator/foundry-vtt
 ```
+
+For support ping @hugoprudente on twitter.
 
