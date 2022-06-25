@@ -2,7 +2,7 @@
 title: How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-25T22:23:47.608Z
+date: 2022-06-25T22:25:59.498Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
@@ -10,7 +10,7 @@ dateCreated: 2022-06-25T22:23:47.608Z
 
 # How Foundry VTT works
 
-##EN
+## EN
 
 Well the first step for programming for foundry is to realize what one needs to learn. This on the other hand is dependant on understanding how foundry works and how the different components interact with each other.
 
@@ -77,3 +77,6 @@ So HTML is static but Javascript is the programming language whith which you can
 With Javascript you can change the layout, "skinning" and the data of your HTML DOM and do some more. You will need Javascript and the foundry object model to implement your game rules, to calculate things and everything else that is to dynamic to do it with HTML elements alone.
 
 ## Links
+[System-Development-Part-1-I-Made-This](/en/development/guides/System-Development-for-Beginners/System-Development-Part-1-I-Made-This)
+
+[SD01-Getting-started](/en/development/guides/SD-tutorial/SD01-Getting-started)
