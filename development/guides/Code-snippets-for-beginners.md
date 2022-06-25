@@ -2,7 +2,7 @@
 title: Code snippets for beginners
 description: 
 published: true
-date: 2022-06-25T11:13:02.684Z
+date: 2022-06-25T11:13:33.791Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-25T11:12:15.251Z
@@ -21,7 +21,7 @@ So this is the experiment to collect code snippets and describe them detailed en
 
 If an experienced programmer sees fit to correct me or my descriptions feel free to do so.
 
-## DE
+## DE Einführung
 Also was ist der Grund für diese Seite?
 
 Obwohl Foundry bereits jetzt eine lebendige Community und einen wirklich tollen discord channel hat (schaut mal vorbei!) ist die api Dokumentation eher an erfahrene Programmierer gerichtet (aus meiner Sicht!).
