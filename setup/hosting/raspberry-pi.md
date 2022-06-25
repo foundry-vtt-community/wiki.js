@@ -2,14 +2,11 @@
 title: Raspberry Pi
 description: how to install Foundry VTT on a Raspberry PI
 published: true
-date: 2022-05-09T04:38:45.203Z
+date: 2022-06-25T06:48:18.849Z
 tags: hosting, self-hosting, raspberry pi
 editor: markdown
 dateCreated: 2021-04-18T20:02:58.536Z
 ---
-
->This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
-{.is-warning}
 
 Raspberry Pi OS (previous called Raspbian) it's a Debian-based image for Raspberry Pi.
 
@@ -106,6 +103,8 @@ WantedBy=multi-user.target
 ```
 
 > Remember to change the `<USER>` for the user that Raspberry PI user.
+
+> If you are using HTTPS with lower ports (below 1000), as the default 443, please set the <USER> as `root` to prevent the following error `Unable to start Express server: listen EACCES: permission denied 0.0.0.0:443` {.is-warning}
 
 Now we can manage our Foundry VTT with system manager commands. The system is also added to the boot, so when the PI starts it will start Foundry VTT with it.
 
