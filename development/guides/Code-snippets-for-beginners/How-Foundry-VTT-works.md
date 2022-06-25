@@ -2,7 +2,7 @@
 title: How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-25T22:25:59.498Z
+date: 2022-06-25T22:28:27.628Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
@@ -77,6 +77,8 @@ So HTML is static but Javascript is the programming language whith which you can
 With Javascript you can change the layout, "skinning" and the data of your HTML DOM and do some more. You will need Javascript and the foundry object model to implement your game rules, to calculate things and everything else that is to dynamic to do it with HTML elements alone.
 
 ## Links
+https://foundryvtt.com/article/system-development/
+
 [System-Development-Part-1-I-Made-This](/en/development/guides/System-Development-for-Beginners/System-Development-Part-1-I-Made-This)
 
 [SD01-Getting-started](/en/development/guides/SD-tutorial/SD01-Getting-started)
