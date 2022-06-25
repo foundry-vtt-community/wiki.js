@@ -2,14 +2,11 @@
 title: Kubernetes
 description: 
 published: true
-date: 2022-06-25T06:52:03.618Z
+date: 2022-06-25T06:52:47.285Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:40.922Z
 ---
-
->This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
-{.is-warning}
 
 # Kubernetes
 
