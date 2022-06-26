@@ -2,7 +2,7 @@
 title: EN01A How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T09:49:50.639Z
+date: 2022-06-26T09:50:57.547Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
@@ -33,7 +33,7 @@ The main component is the "web page" or in this case the HTML (DOM) Object. To u
 
 A simple web page ist just a structured list of HTML elements.
 
-The HTML DOM object on the other hand includes different kind ob elements = Objects.
+The HTML DOM object on the other hand includes several different kinds of elements = Objects.
 
 HTML DOM = Document Object Model. 
 
