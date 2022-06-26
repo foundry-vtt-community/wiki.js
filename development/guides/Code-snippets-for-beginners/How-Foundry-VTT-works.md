@@ -2,7 +2,7 @@
 title: EN01A How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T09:56:15.948Z
+date: 2022-06-26T09:57:55.906Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
@@ -70,6 +70,8 @@ What you CAN do is change the html definition and render and display it again!
 The problem is that html is static. It has no loops, variables or decision making constructs to change the html structure before it is rendered again.
 That's where Handlebars comes into play. You can define loops and Foundry has helpers included which can make decisions.
 So you are able to change the used html elements and thus the html code according to a condition. You can loop trough a skill list and output each skill as an html element without needing to know beforehand how many skills there are.
+
+But basically a completly new html page is build.
 
 So handlebars is also one way how you access your data which you definded in your JSON file and which you want to output.
 
