@@ -2,13 +2,13 @@
 title: How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T08:50:18.438Z
+date: 2022-06-26T09:24:21.121Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
 ---
 
-# How Foundry VTT works
+# 01A How Foundry VTT works
 
 ## EN
 
