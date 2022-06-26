@@ -2,7 +2,7 @@
 title: EN01A How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T09:52:54.623Z
+date: 2022-06-26T09:54:26.464Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
@@ -44,7 +44,7 @@ This **HTML DOM** document can now be divided into 4  components:
 1. The HTML elements which are responsible for the general structur or layout of your DISPLAYED document. An analogy would be bones which make up the skeleton of a human.
 1. The CSS (cascading style sheets) which defines the look. An analogy would be that it defines hair color, eye color or even muscle proportions for a human. So if I "skin" my HTML bone skeleton differently I can get a male or female looking human. Those humans can look differently also (eycolor, hair etc.).
 1. The data defined by the JSON. This (ariable) data is included but not necessarily seen or shown. So to keep the analogy the data would be intelligence or strenght for a human.
-1. Javascript which allow us to define what HTML DOM data is shown or how data interacts. Data in this context is a wide term and spans the whole HTML DOM Object. This means it also includes HTML elements.
+1. Javascript which allow us to define what HTML DOM data is shown or how data interacts. Data in this context is a wide term and spans the whole HTML DOM Object. This means it also includes HTML elements. An analogy could be the inner organs and workings of a body which keep it alive and moving.
 
 ### HTML (CSS)
 CSS is a mighty powerfull tool to "skin" your web page. Over the years it acquired even quite some interactive elements.
