@@ -2,7 +2,7 @@
 title: DE00 Einführung Code Schnippsel für Anfaenger
 description: General introduction 
 published: true
-date: 2022-06-26T09:40:55.174Z
+date: 2022-06-26T09:47:56.574Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-26T09:36:15.821Z
@@ -22,3 +22,8 @@ Dies wird also ein Experiment darin Code Blöcke zu sammeln und ausreichend gena
 Sofern ein erfahrener Programmierer Korrekturen anbringen möchte weil ich unsinn verzapfe ist er herzlich eingeladen dies zu tun.
 
 Auch andere Code Schnippsel werden gerne genommen.
+
+## Was man wissen/können sollte
+### Wie man sein HTML (DOM) Dokument untersucht
+### Logging
+### Data Struktur für verwendete Beispiele
