@@ -1,8 +1,8 @@
 ---
-title: Introduction code snippets for beginners
+title: EN00 Introduction code snippets for beginners
 description: 
 published: true
-date: 2022-06-25T11:24:45.659Z
+date: 2022-06-26T09:27:42.199Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-25T11:24:45.659Z
