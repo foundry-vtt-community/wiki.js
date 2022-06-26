@@ -2,15 +2,13 @@
 title: EN01A How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T09:28:09.697Z
+date: 2022-06-26T09:49:50.639Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
 ---
 
 # How Foundry VTT works (general)
-
-## EN
 
 Well the first step for programming for foundry is to realize what one needs to learn. This on the other hand is dependant on understanding how foundry works and how the different components interact with each other.
 
