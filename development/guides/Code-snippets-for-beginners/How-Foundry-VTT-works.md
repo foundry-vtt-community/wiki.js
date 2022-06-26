@@ -2,7 +2,7 @@
 title: EN01A How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T09:57:55.906Z
+date: 2022-06-26T09:58:16.738Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z
@@ -73,7 +73,7 @@ So you are able to change the used html elements and thus the html code accordin
 
 But basically a completly new html page is build.
 
-So handlebars is also one way how you access your data which you definded in your JSON file and which you want to output.
+Also handlebars is also one way how you access your data which you definded in your JSON file and which you want to output.
 
 You also are able to write Javascipt code which will extend the list of handlebar helpers which is a function which is called when your html page is put together.
 
