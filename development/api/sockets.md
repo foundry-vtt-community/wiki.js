@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2022-03-16T13:57:03.414Z
+date: 2022-07-04T17:26:06.271Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -207,7 +207,7 @@ function handleEvent(arg) {
     .filter(user => user.isGM && user.isActive)
     .some(other => other.data._id < game.user.data._id);
 
-  if (!isRepsponsibleGM) return;
+  if (!isResponsibleGM) return;
 
   // do something
   console.log(arg);
