@@ -2,7 +2,7 @@
 title: Tutos, FAQ et autres
 description: 
 published: true
-date: 2022-03-28T09:47:15.174Z
+date: 2022-07-07T21:24:06.155Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:22:48.100Z
@@ -20,6 +20,7 @@ La FAQ : [FAQ France](https://foundryvtt.wiki/fr/faq/faq-main)
  - Appréhender l'interface, comprendre les possibilités côté MJ par Fletch (pour versions 0.5.X) : [découvrir Foundry VTT](https://youtu.be/SQw0HbySjmo) 
  - Notes de Journaux et utilisation sur les scènes par Jonleb : [Journaux et Scenes](https://www.youtube.com/watch?v=BKRoX_F-fY0=)
  - Aperçu général de la mise en place de campagne par Ceizy : [Campagne sous Foundry](https://www.youtube.com/watch?v=98JkdIKtGfw)
+ - Une émission de RolisteTV consacrée à Foundry, avec SecretFire, Florfa et Cimeryl : [RolisteTV - Foundry](https://www.youtube.com/watch?v=cdyO9xgmLb4)
 
 # Guides et assistances
 Peut-être par une série de guides pouvant aider à prendre en main Foundry VTT ?
