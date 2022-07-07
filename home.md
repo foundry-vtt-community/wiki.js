@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-07-07T06:27:53.252Z
+date: 2022-07-07T06:29:03.401Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -26,7 +26,7 @@ dateCreated: 2021-05-14T17:58:11.311Z
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
-<i class="fab fa-github"></i> [GitHub](https://github.com/foundryvtt/foundryvtt)
+<i class="fab fa-github"></i> [GitHub](https://github.com/foundryvtt/foundryvtt/issues)
 
 ## Communities
 <i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/fvttdevleague) – Unofficial community for module and system developers.
