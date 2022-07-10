@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox Systems a été crée par Seregras : https://gitlab.com/rolnl/sandbox-system-builder 
 published: true
-date: 2022-07-10T12:01:16.465Z
+date: 2022-07-10T12:05:42.752Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-10T10:37:51.352Z
@@ -24,7 +24,10 @@ Seregras dispose aussi d'une chaine YouTube on l'on peut retrouver pas mal de Tu
 > 3. - Cliquer sur "Install System" et chercher "sandbox system" par Seregras
 > 1. - Cliquer sur "Install", Sandbox System s'installe.
 
-> CONSEILS : 2 Modules presque indispensable pour creer une fiche de personnage sous Sandbox
-Sandbox Extension
+>** CONSEILS **
+2 Modules presque indispensable pour creer une fiche de personnage sous Sandbox
+Sandbox Extensions
 Sandbox Explorer 
 {.is-success} 
+# 
+### Fiche de Personnage : MagisterPhamtom
