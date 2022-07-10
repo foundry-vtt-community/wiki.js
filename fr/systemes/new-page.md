@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox Systems a été crée par Seregras : https://gitlab.com/rolnl/sandbox-system-builder 
 published: true
-date: 2022-07-10T10:55:53.245Z
+date: 2022-07-10T11:19:12.551Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-10T10:37:51.352Z
@@ -15,3 +15,6 @@ Seregras dispose aussi d'un Patreon afin de le soutenir dans sa démarche de dev
 Seregras dispose aussi d'une chaine YouTube on l'on peut retrouver pas mal de Tutoriels sur son system : https://www.youtube.com/c/RolNL
 > Si vous avez des questions sur le system il existe un Discord : https://discord.gg/NQTq7uYh
 {.is-info}
+
+#
+### FICHE DE PERSONNAGES : MagisterPhamtom
