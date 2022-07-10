@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox Systems a été crée par Seregras : https://gitlab.com/rolnl/sandbox-system-builder 
 published: true
-date: 2022-07-10T11:33:12.576Z
+date: 2022-07-10T12:01:16.465Z
 tags: 
 editor: markdown
 dateCreated: 2022-07-10T10:37:51.352Z
@@ -17,4 +17,14 @@ Seregras dispose aussi d'une chaine YouTube on l'on peut retrouver pas mal de Tu
 {.is-info}
 
 #
-### FICHE DE PERSONNAGES : MagisterPhamtom
+### Installer Sandbox System
+
+> 1. - Aller dans la page d'accueil de Foundry VTT.
+> 2. - Cliquer sur Game Systems.
+> 3. - Cliquer sur "Install System" et chercher "sandbox system" par Seregras
+> 1. - Cliquer sur "Install", Sandbox System s'installe.
+
+> CONSEILS : 2 Modules presque indispensable pour creer une fiche de personnage sous Sandbox
+Sandbox Extension
+Sandbox Explorer 
+{.is-success} 
