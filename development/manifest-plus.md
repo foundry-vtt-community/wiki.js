@@ -2,7 +2,7 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2021-05-12T04:19:35.074Z
+date: 2022-07-12T00:26:07.539Z
 tags: manifest, manifest+
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
@@ -31,16 +31,11 @@ the core attributes at all except the `authors` field.
 <a name="package-manifest-standard-fields-authors"></a>
 ### Authors
 
-The core Foundry VTT manifest specification has two ways of defining the package author; either through the `author` 
-field which expects a simple string or the more complex `authors` field. We *highly* recommend including the `authors` 
-field in your package as it provides much more flexibility.
+> The core manifest specification previously allowed defining the package author through the `author` field which expects a simple string. This is deprecated in v10 (see the core [manifest migration guide](https://foundryvtt.com/article/manifest-migration-guide/)) and shouldn't be used going forward, but may still be included if you want to support versions older than v9. 
+{.is-warning}
 
-> Currently, while `authors` is a part of the standard manifest Foundry VTT does not actually utilize this field, so you 
-> should also include the `author` field until such a time as that changes. {.is-info}
 
-The `authors` field is an array of objects with each object providing information about one of the authors of the 
-package. This could be one author or many. The standard version includes `name`, `url`, and `email` fields. Only `name` 
-is required.
+The `authors` field is an array of objects with each object providing information about one of the authors of the package. This could be one author or many. The core version includes `name`, `url`, and `email` fields. Only `name` is required, but `url` will also be used to add a link on the Setup screen and in the Module Management window, if included.
 
 For Manifest+ we want to recognize that a personal website and email address are not necessarily the best or only 
 ways to contact the author. To that end, we introduce `discord`, `ko-fi`, `patreon`, `reddit`, and `twitter` fields as 
