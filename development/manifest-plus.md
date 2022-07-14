@@ -2,31 +2,24 @@
 title: Package Manifest+
 description: An expanded manifest format.
 published: true
-date: 2022-07-12T00:26:07.539Z
+date: 2022-07-14T00:33:29.349Z
 tags: manifest, manifest+
 editor: markdown
 dateCreated: 2020-12-02T04:47:58.438Z
 ---
 
-The Manifest+ specification is an unofficial community developed extension to the official Foundry VTT manifest 
-specification for module and system development intended to add additional data which can be used by packages within 
-Foundry VTT and by external applications.
+The Manifest+ specification is an unofficial community developed extension to the official Foundry VTT manifest specification for module and system development intended to add additional data which can be used by packages within Foundry VTT and by external applications.
 
-This specification is developed by The League of Extraordinary Foundry Developers. The core Foundry VTT software 
-simply ignores these additional manifest fields. A number of external applications including [The Bazaar](https://forge-vtt.com/bazaar) package browser on 
-The Forge and [Foundry Hub](https://www.foundryvtt-hub.com/packages/) use this extended data to give the general public a rich experience by adding cover images, icons, 
-enhanced contact details, and more.
+This specification is developed by The League of Extraordinary Foundry Developers. The core Foundry VTT software simply ignores these additional manifest fields. A number of external applications including [The Bazaar](https://forge-vtt.com/bazaar) package browser on The Forge and [Foundry Hub](https://www.foundryvtt-hub.com/packages/) use this extended data to give the general public a rich experience by adding cover images, icons, enhanced contact details, and more.
 
 <a name="package-manifest-standard-fields"></a>
 ## Package Manifest Standard Fields
-The Foundry VTT manifest contains a number of required and optional fields which act as metadata for your package. The 
-official fields are documented in the core documentation for modules and systems respectively:
+The Foundry VTT manifest contains a number of required and optional fields which act as metadata for your package. The official fields are documented in the core documentation for modules and systems respectively:
 
 - [Introduction to Module Development](https://foundryvtt.com/article/module-development/)
 - [Introduction to System Development](https://foundryvtt.com/article/system-development/)
 
-Manifest+ does not replace the standard manifest, but enhances it. Most of the fields added do not touch any of 
-the core attributes at all except the `authors` field.
+Manifest+ does not replace the standard manifest, but enhances it. Most of the fields added do not touch any of the core attributes at all except the `authors` field.
 
 <a name="package-manifest-standard-fields-authors"></a>
 ### Authors
@@ -34,12 +27,9 @@ the core attributes at all except the `authors` field.
 > The core manifest specification previously allowed defining the package author through the `author` field which expects a simple string. This is deprecated in v10 (see the core [manifest migration guide](https://foundryvtt.com/article/manifest-migration-guide/)) and shouldn't be used going forward, but may still be included if you want to support versions older than v9. 
 {.is-warning}
 
-
 The `authors` field is an array of objects with each object providing information about one of the authors of the package. This could be one author or many. The core version includes `name`, `url`, and `email` fields. Only `name` is required, but `url` will also be used to add a link on the Setup screen and in the Module Management window, if included.
 
-For Manifest+ we want to recognize that a personal website and email address are not necessarily the best or only 
-ways to contact the author. To that end, we introduce `discord`, `ko-fi`, `patreon`, `reddit`, and `twitter` fields as 
-well.
+For Manifest+ we want to recognize that a personal website and email address are not necessarily the best or only ways to contact the author. To that end, we introduce `discord`, `ko-fi`, `patreon`, `reddit`, and `twitter` fields as well.
 
 ```json
 "author": "Name of the author",
@@ -56,35 +46,27 @@ well.
   }
 ]
 ```
-Each of these additional fields follow the naming convention of the platform. For example with Twitter handles the 
-`@TwitterHandle` format is used.
+Each of these additional fields follow the naming convention of the platform. For example with Twitter handles the `@TwitterHandle` format is used.
 
 
 <a name="manifest"></a>
 ## Manifest+
 
-All Manifest+ fields are *optional*, but they are all useful. We recommend including as many of these fields as 
-reasonable in order to provide enriched metadata for your package.
+All Manifest+ fields are *optional*, but they are all useful. We recommend including as many of these fields as reasonable in order to provide enriched metadata for your package.
 
 <a name="manifest-version"></a>
 ### Version
 Document Version: 1.2.0
 
-It is recommended to include a `manifestPlusVersion` field in your manifest to denote which version of Manifest+ you 
-have implemented. Breaking changes are not intended for this specification, but if they do occur the major version 
-will be incremented in accordance with [semantic versioning](https://semver.org/).
+It is recommended to include a `manifestPlusVersion` field in your manifest to denote which version of Manifest+ you have implemented. Breaking changes are not intended for this specification, but if they do occur the major version will be incremented in accordance with [semantic versioning](https://semver.org/).
 
 ```json
 "manifestPlusVersion": "1.2.0"
 ```
 
-
 <a name="manifest-media"></a>
 ### Media
-One of the largest additions, the `media` field, is an array of objects that each provide data for a single 
-multimedia item. This data includes a `type` field which indicates what kind of media is being provided as 
-well as an `url` field which provides the address of the media resource. An optional `caption` field is available
-to describe your multimedia item. 
+One of the largest additions, the `media` field, is an array of objects that each provide data for a single multimedia item. This data includes a `type` field which indicates what kind of media is being provided as well as an `url` field which provides the address of the media resource. An optional `caption` field is available to describe your multimedia item. 
 
 ```json
 "media": [
@@ -115,20 +97,16 @@ The following type of media are defined by the Manifest+ specification:
 - `icon` - A small image icon such as a logo or author avatar.
 - `screenshot` - An image of the package in action.
 - `video` - A video file which can be played, or the URL of an embeddable video (such as Youtube or Vimeo)
-    - `loop` - Optional field specific to video media. If loop is set to true, the video is expected to be treated as 
-      an animated image, like a GIF (i.e. muted and looped).
-    - `thumbnail` - Optional URL to provide a video thumbnail.
+	- `loop` - Optional field specific to video media. If loop is set to true, the video is expected to be treated as an animated image, like a GIF (i.e. muted and looped).
+	- `thumbnail` - Optional URL to provide a video thumbnail.
 
 <a name="manifest-media-media-recommendations"></a>
 #### Media Recommendations
-There is no guarantee how the media files will be used, but these are the recommended dimensions and known existing 
-usages.
+There is no guarantee how the media files will be used, but these are the recommended dimensions and known existing usages.
 
 <a name="manifest-media-caption"></a>
 #### Caption
-Every media type accepts an optional caption field that can be used to describe what the media shows. It is up to the 
-consumer of the Manifest+ specification to determine how it is used. The caption could be used as an alt image tag or as
-an actual caption below the media type itself.
+Every media type accepts an optional caption field that can be used to describe what the media shows. It is up to the consumer of the Manifest+ specification to determine how it is used. The caption could be used as an `alt` image attribute or as an actual caption below the media type itself.
 
 <a name="manifest-media-caption-cover"></a>
 ##### Cover
@@ -156,9 +134,7 @@ the longer it will take to load.
 ##### Video
 Anything that should go into an `<video>` HTML element: `.mp4`, `.webm`.
 
-Additionally, some Manifest+ consumers may supported embedding video from common providers like YouTube and Vimeo. 
-The address of the video can be provided in the `url` field. Consumers should take care to parse this field 
-appropriately to avoid loading a YouTube video in a `<video>` element or an `.mp4` in a YouTube embed.
+Additionally, some Manifest+ consumers may supported embedding video from common providers like YouTube and Vimeo. The address of the video can be provided in the `url` field. Consumers should take care to parse this field appropriately to avoid loading a YouTube video in a `<video>` element or an `.mp4` in a YouTube embed.
 
 <a name="manifest-media-caption-video-thumbnail"></a>
 ##### Video Thumbnail
@@ -166,31 +142,9 @@ Should be a static image.
 
 - Dimensions: 1280px by 720px
 
-
-<a name="manifest-library"></a>
-### Library
-The `library` field is a boolean that indicates whether the package is a library intended for other packages to 
-depend on and consume. This field should be `true` if your package does not present any user-facing features, but 
-rather provides functionality for other packages to utilize and rely upon. Packages with this field set to `true` 
-may be hidden from third party package lists to avoid confusing users.
-
-```json
-	"library": true,
-```
-
-When omitted the default value of this field is `false`. It is not necessary to explicitly set this value unless 
-it needs to be `true`.
-
-> The `library` key might be coming to Foundry Core in 0.8.x. 
-> [Issue on Gitlab.](https://gitlab.com/foundrynet/foundryvtt/-/issues/4129) {.is-info}
-
-
 <a name="manifest-includes"></a>
 ### Includes
-This field is intended to allow developers to create improved deployment tools. The `includes` field is an array 
-of strings where each string is a relative file path that should be included in the package zip archive. Special CI / 
-CD tools can use this field along with the official fields for scripts, languages, and styles to generate the archive 
-with only the desired files without needing to create an additional configuration file.
+This field is intended to allow developers to create improved deployment tools. The `includes` field is an array of strings where each string is a relative file path that should be included in the package zip archive. Special CI / CD tools can use this field along with the official fields for scripts, languages, and styles to generate the archive with only the desired files without needing to create an additional configuration file.
 
 ```json
 "includes": [
@@ -200,26 +154,19 @@ with only the desired files without needing to create an additional configuratio
 ]
 ```
 
-
 <a name="manifest-deprecated"></a>
 ### Deprecated
-This field is intended to be added to the manifest of a package that is no longer being maintained and / or is no 
-longer functional / useful. This may be because the author created a new better alternative, or the features are 
-integrated into the Foundry VTT core software, or an associated system assumes the same functionality. Perhaps you as 
-the author have abandoned the package and no longer intend to keep it up to date.
+This field is intended to be added to the manifest of a package that is no longer being maintained and / or is no longer functional / useful. This may be because the author created a new better alternative, or the features are integrated into the Foundry VTT core software, or an associated system assumes the same functionality. Perhaps you as the author have abandoned the package and no longer intend to keep it up to date.
 
 The `deprecated` field is an object which contains a number of fields explaining the nature of the deprecation status.
 
 <a name="manifest-deprecated-fields"></a>
 #### Fields
-- `coreVersion` - If set the package is assumed to be a module that has been deprecated by a Foundry VTT core update. 
-  This field is the core version number as a string.
+- `coreVersion` - If set the package is assumed to be a module that has been deprecated by a Foundry VTT core update. This field is the core version number as a string.
 - `reason` - A human-readable string explaining why the package was deprecated.
-- `alternatives` - An array of objects each providing data about another package which could act as a replacement for 
-  deprecated package.
-    - `alternatives.name` - The `name` of the alternative package.
-    - `alternatives.manifest` - The URL of the manifest file for the alternative package from which it can be 
-      downloaded.
+- `alternatives` - An array of objects each providing data about another package which could act as a replacement for deprecated package.
+	- `alternatives.name` - The `name` of the alternative package.
+	- `alternatives.manifest` - The URL of the manifest file for the alternative package from which it can be downloaded.
 
 ```json
 "deprecated": {
@@ -234,15 +181,9 @@ The `deprecated` field is an object which contains a number of fields explaining
 }
 ```
 
-
 <a name="manifest-conflicts"></a>
 ### Conflicts
-The `conflicts` field is similar to the `dependencies` field in the core Foundry VTT manifest specification, but 
-provides a mapping of packages which can not interoperate with the given package. It is an array of objects which define 
-one or more packages that may pose conflicts. Each conflict object has a `name` field which matches the name of the 
-other package, and a `type` which is the type of the other package. Additionally, the optional `versionMin` and 
-`versionMax` fields can be used to define a range of version numbers for the other package within which the 
-conflict occurs.
+The `conflicts` field is similar to the `dependencies` field in the core Foundry VTT manifest specification, but provides a mapping of packages which can not interoperate with the given package. It is an array of objects which define one or more packages that may pose conflicts. Each conflict object has a `name` field which matches the name of the other package, and a `type` which is the type of the other package. Additionally, the optional `versionMin` and `versionMax` fields can be used to define a range of version numbers for the other package within which the conflict occurs.
 
 ```json
 "conflicts": [
@@ -254,8 +195,6 @@ conflict occurs.
   }
 ]
 ```
-
-
 
 ## Changelog
 #### version: 1.1.0
