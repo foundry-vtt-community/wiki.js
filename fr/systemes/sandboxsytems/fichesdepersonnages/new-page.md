@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-14T15:12:43.594Z
+date: 2022-07-14T15:17:37.476Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -13,13 +13,13 @@ dateCreated: 2022-07-13T10:34:42.796Z
 > En Cours de construction
 {.is-warning}
 
-Sandbox System a été crée par Seregras.
-On peut retrouver les informations sur son system ici : https://gitlab.com/rolnl/sandbox-system-builder
-Seregras dispose aussi d'un Patreon afin de le soutenir dans sa démarche de devellopeur : https://www.patreon.com/seregras/posts
-Seregras dispose aussi d'une chaine YouTube on l'on peut retrouver pas mal de Tutoriels sur son system : https://www.youtube.com/c/RolNL
-Recensement des Fiches de Personnages : https://docs.google.com/spreadsheets/d/1beMbRpbYYCYFqoqZ_fl3vPix6S6ThzILr31G1b1ZOJQ/edit#gid=0
+**Sandbox System a été crée par Seregras.**
+**On peut retrouver les informations sur son system ici :** https://gitlab.com/rolnl/sandbox-system-builder
+**Seregras dispose aussi d'un Patreon afin de le soutenir dans sa démarche de devellopeur :** https://www.patreon.com/seregras/posts
+**Seregras dispose aussi d'une chaine YouTube on l'on peut retrouver pas mal de Tutoriels sur son system :** https://www.youtube.com/c/RolNL
+**Recensement des Fiches de Personnages :** https://docs.google.com/spreadsheets/d/1beMbRpbYYCYFqoqZ_fl3vPix6S6ThzILr31G1b1ZOJQ/edit#gid=0
 
-> Si vous avez des questions sur le system il existe un Discord : https://discord.gg/NQTq7uYh
+> **Si vous avez des questions sur le system il existe un Discord :** https://discord.gg/NQTq7uYh
 {.is-info}
 
 #
@@ -66,3 +66,5 @@ Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF7M_u99
 ![2022-07-13_(10).png](/sandbox/2022-07-13_(10).png)
 ![2022-07-13_(11).png](/sandbox/2022-07-13_(11).png)![2022-07-13_(12).png](/sandbox/2022-07-13_(12).png)
 ![2022-07-13_(13).png](/sandbox/2022-07-13_(13).png)
+
+
