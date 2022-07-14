@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-14T14:15:00.836Z
+date: 2022-07-14T14:16:30.796Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -23,7 +23,7 @@ Recensement des Fiches de Personnages : https://docs.google.com/spreadsheets/d/1
 {.is-info}
 
 #
-### Installer Sandbox System
+# Installer Sandbox System
 
 > 1. - Aller dans la page d'accueil de Foundry VTT.
 > 2. - Cliquer sur Game Systems.
