@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-14T14:01:57.620Z
+date: 2022-07-14T14:15:00.836Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -50,5 +50,8 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/abstract-donjon
 Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF5uXDc315oegriirJW5I4BY
 > Aucune Automatisation sur cette fiche
 {.is-info}
+
+![2022-07-13_(4).png](/sandbox/2022-07-13_(4).png)![2022-07-13_(3).png](/sandbox/2022-07-13_(3).png)
+
 
 
