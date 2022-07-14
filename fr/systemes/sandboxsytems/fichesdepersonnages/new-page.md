@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-14T14:32:51.501Z
+date: 2022-07-14T15:12:43.594Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -47,13 +47,22 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/green-dawn-mall
  
 ## Abstract Donjons
 Quel est-ce jeu ? : https://www.legrog.org/jeux/abstract-donjon
-Création de la Fiche : https://www.youtube.com/watch?v=DVIh7zu46LM&list=PLWGjc0SHGgF4QdjDru8Efy5HAz3wE-4Z-&index=1&t=6687s
+Création de la Fiche : https://www.youtube.com/watch?v=DVIh7zu46LM&list=PLWGjc0SHGgF4QdjDru8Efy5HAz3wE-4Z-&index=1&t=6687s![2022-07-
 Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF5uXDc315oegriirJW5I4BY
 > Aucune Automatisation sur cette fiche
 {.is-info}
 
 ![2022-07-13_(4).png](/sandbox/2022-07-13_(4).png)![2022-07-13_(3).png](/sandbox/2022-07-13_(3).png)
 
-## Dieux Ennemis
-Quel est-ce jeu ? : https://www.legrog.org/jeux/abstract-donjon
 
+## Dieux Ennemis
+Quel est-ce jeu ? : https://www.legrog.org/jeux/dieux-ennemis
+Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF7M_u99BrAhpy9XxiOphWcA
+> Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-13_(8).png](/sandbox/2022-07-13_(8).png)
+![2022-07-13_(9).png](/sandbox/2022-07-13_(9).png)
+![2022-07-13_(10).png](/sandbox/2022-07-13_(10).png)
+![2022-07-13_(11).png](/sandbox/2022-07-13_(11).png)![2022-07-13_(12).png](/sandbox/2022-07-13_(12).png)
+![2022-07-13_(13).png](/sandbox/2022-07-13_(13).png)
