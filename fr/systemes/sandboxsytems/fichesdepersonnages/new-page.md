@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-14T20:40:43.596Z
+date: 2022-07-15T12:39:42.660Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -73,5 +73,8 @@ Création de la Fiche : https://youtu.be/wG7j3CwkyHg
 Explication de la Fiche : https://youtu.be/pzE-Z6-1-_w
 > Automatisation sur cette fiche
 {.is-info}
+
+![2022-07-13_(30).png](/sandbox/2022-07-13_(30).png)![2022-07-13_(31).png](/sandbox/2022-07-13_(31).png)
+![2022-07-13_(32).png](/sandbox/2022-07-13_(32).png)![2022-07-13_(33).png](/sandbox/2022-07-13_(33).png)
 
 
