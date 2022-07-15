@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-15T16:23:43.178Z
+date: 2022-07-15T16:43:33.965Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -99,3 +99,32 @@ Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF64_Yv4
 ![2022-07-13_(18).png](/sandbox/2022-07-13_(18).png)
 ![2022-07-13_(19).png](/sandbox/2022-07-13_(19).png)
 ![2022-07-13_(20).png](/sandbox/2022-07-13_(20).png)
+
+## Macadabre
+Quel est-ce jeu ? : https://www.legrog.org/jeux/macadabre/macadabre-fr
+Explication de la Fiche : https://youtu.be/vtYM-Om0N04
+>Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-13_(21).png](/sandbox/2022-07-13_(21).png)
+![2022-07-13_(22).png](/sandbox/2022-07-13_(22).png)![2022-07-13_(23).png](/sandbox/2022-07-13_(23).png)
+
+## Nibiru
+Quel est-ce jeu ? : https://www.legrog.org/jeux/nibiru
+
+>Aucune Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-13_(24).png](/sandbox/2022-07-13_(24).png)
+![2022-07-13_(25).png](/sandbox/2022-07-13_(25).png)
+
+## NOC
+Quel est-ce jeu ? : https://www.legrog.org/jeux/noc
+Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF77HGwPIhPzYaS5jhHwPlZj
+
+
+>Aucune Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-13_(26).png](/sandbox/2022-07-13_(26).png)![2022-07-13_(27).png](/sandbox/2022-07-13_(27).png)![2022-07-13_(28).png](/sandbox/2022-07-13_(28).png)![2022-07-13_(29).png](/sandbox/2022-07-13_(29).png)
+
