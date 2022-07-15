@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-15T16:43:54.662Z
+date: 2022-07-15T16:58:56.675Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -123,7 +123,7 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/noc
 Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF77HGwPIhPzYaS5jhHwPlZj
 
 
->Aucune Automatisation sur cette fiche
+>Automatisation sur cette fiche
 {.is-info}
 
 ![2022-07-13_(26).png](/sandbox/2022-07-13_(26).png)![2022-07-13_(27).png](/sandbox/2022-07-13_(27).png)![2022-07-13_(28).png](/sandbox/2022-07-13_(28).png)![2022-07-13_(29).png](/sandbox/2022-07-13_(29).png)
