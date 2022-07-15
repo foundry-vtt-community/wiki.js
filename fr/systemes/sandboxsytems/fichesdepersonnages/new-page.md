@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-15T13:27:16.687Z
+date: 2022-07-15T16:23:43.178Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -78,3 +78,24 @@ Explication de la Fiche : https://youtu.be/pzE-Z6-1-_w
 ![2022-07-13_(32).png](/sandbox/2022-07-13_(32).png)![2022-07-13_(33).png](/sandbox/2022-07-13_(33).png)
 
 
+## Awaken
+Quel est-ce jeu ? : https://www.legrog.org/jeux/awaken
+Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF4oB0IxwpbEPZc6qq7l3z1k
+> Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-13_(5).png](/sandbox/2022-07-13_(5).png)![2022-07-13_(6).png](/sandbox/2022-07-13_(6).png)![2022-07-13_(7).png](/sandbox/2022-07-13_(7).png)
+
+## Le Cabinet des Murmures
+Quel est-ce jeu ? : https://www.legrog.org/jeux/cabinet-des-murmures
+Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF64_Yv4LBnCvw9MNTt1yFjr
+>Aucune Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-13_(14).png](/sandbox/2022-07-13_(14).png)
+![2022-07-13_(15).png](/sandbox/2022-07-13_(15).png)
+![2022-07-13_(16).png](/sandbox/2022-07-13_(16).png)
+![2022-07-13_(17).png](/sandbox/2022-07-13_(17).png)
+![2022-07-13_(18).png](/sandbox/2022-07-13_(18).png)
+![2022-07-13_(19).png](/sandbox/2022-07-13_(19).png)
+![2022-07-13_(20).png](/sandbox/2022-07-13_(20).png)
