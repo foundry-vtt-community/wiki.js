@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-15T19:39:58.720Z
+date: 2022-07-16T10:21:42.693Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -34,6 +34,7 @@ dateCreated: 2022-07-13T10:34:42.796Z
 2 Modules presque indispensable pour creer une fiche de personnage sous Sandbox
 Sandbox Extensions
 Sandbox Explorer 
+Custom CSS (si vous voulez modifier en profondeur votre mise en page)
 {.is-success} 
 
 # Fiches de Personnages 
@@ -127,4 +128,16 @@ Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF77HGwPIhPz
 {.is-info}
 
 ![2022-07-13_(26).png](/sandbox/2022-07-13_(26).png)![2022-07-13_(27).png](/sandbox/2022-07-13_(27).png)![2022-07-13_(28).png](/sandbox/2022-07-13_(28).png)![2022-07-13_(29).png](/sandbox/2022-07-13_(29).png)
+
+## MIR/MNP
+Quel est-ce jeu ? : https://www.legrog.org/jeux/mir
+Exemple de partie : https://youtu.be/St9o22drFZ0?t=3531
+
+
+>Automatisation sur cette fiche
+>Compendium modifiable disponible
+>Fichier d'explication dans la fiche du token "information"
+{.is-info}
+
+![mirsplash.png](/sandbox/mirsplash.png)![mirintro.png](/sandbox/mirintro.png)![mirexemple1.png](/sandbox/mirexemple1.png)![mirexemple2.png](/sandbox/mirexemple2.png)
 
