@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-16T10:21:42.693Z
+date: 2022-07-16T10:26:08.338Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -137,6 +137,10 @@ Exemple de partie : https://youtu.be/St9o22drFZ0?t=3531
 >Automatisation sur cette fiche
 >Compendium modifiable disponible
 >Fichier d'explication dans la fiche du token "information"
+{.is-info}
+
+> manifest du systeme: https://raw.githubusercontent.com/kenosama/MirJDR/main/world.json
+-github du projet: https://github.com/kenosama/MirJDR
 {.is-info}
 
 ![mirsplash.png](/sandbox/mirsplash.png)![mirintro.png](/sandbox/mirintro.png)![mirexemple1.png](/sandbox/mirexemple1.png)![mirexemple2.png](/sandbox/mirexemple2.png)
