@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2022-06-16T19:52:23.176Z
+date: 2022-07-19T21:47:37.760Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -19,7 +19,7 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 - Use [Semantic Versioning](https://semver.org/), but keep in mind that the additional labels for pre-release and build metadata are not supported by Foundry VTT's [`isNewerVersion`](https://foundryvtt.com/api/module-helpers.html#.isNewerVersion) helper so they should be avoided.
 - Every change, even something that only changes the manifest and does not change the package contents, should increment something in the version number.
 
-> You should never have two different versions of your package with the exact same version number. This will cause problems especially for users of the Forge, but more generallys makes troubleshooting harder: "Do you have the first v1.2.3, or the second v1.2.3?"
+> You should never have two different versions of your package with the exact same version number. This will cause problems especially for users of the Forge, but more generally makes troubleshooting harder: "Do you have the first v1.2.3, or the second v1.2.3?"
 {.is-danger}
 
 ### `manifest`
