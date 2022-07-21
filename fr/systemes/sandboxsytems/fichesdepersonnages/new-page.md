@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-16T10:26:08.338Z
+date: 2022-07-21T14:22:36.575Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -145,3 +145,19 @@ Exemple de partie : https://youtu.be/St9o22drFZ0?t=3531
 
 ![mirsplash.png](/sandbox/mirsplash.png)![mirintro.png](/sandbox/mirintro.png)![mirexemple1.png](/sandbox/mirexemple1.png)![mirexemple2.png](/sandbox/mirexemple2.png)
 
+## Bloodlust Métal
+Quel est-ce jeu ? : https://www.legrog.org/jeux/bloodlust/bloodlust-metal/bloodlust-metal-fr
+Explication de la FIche : 
+> En Cours de construction
+{.is-warning} 
+
+>Automatisation sur cette fiche
+{.is-info}
+
+![2022-07-20_(10).png](/sandbox/2022-07-20_(10).png)
+#
+### Modele PJ
+![2022-07-15_(2)_copie.jpg](/sandbox/2022-07-15_(2)_copie.jpg)![2022-07-15_(4).png](/sandbox/2022-07-15_(4).png)
+![2022-07-20_(5).png](/sandbox/2022-07-20_(5).png)![2022-07-21_(1).png](/sandbox/2022-07-21_(1).png)
+#
+### Modele Armes Dieux
