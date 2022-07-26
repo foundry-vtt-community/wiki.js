@@ -2,7 +2,7 @@
 title: Migration Summary for v10
 description: 
 published: true
-date: 2022-07-26T02:42:28.834Z
+date: 2022-07-26T02:53:49.884Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T23:44:16.293Z
@@ -66,7 +66,7 @@ someDocument.updateSource({ 'some.path': 'new value' });
 
 ## Manifest deprecations
 
-Sevral manifest changes have no reached the end of their deprecation periods. Consequently, it's recommended to check your server logs as part of the migration process to verify that your package is using the latest manifest fields.
+Several manifest changes have now reached the end of their deprecation periods. Consequently, it's recommended to check your server/console logs as part of the migration process to verify that your package is using the latest manifest fields.
 The issue on GitHub for this is [#6666](https://github.com/foundryvtt/foundryvtt/issues/6666) 😈
 In addition to the changes mentioned in that issue, it seems that using this formulation in your `languages` path field will now throw an error: `modules/myModule/lang/en.json`.
 This seems to be a common pattern despite it being against the [documentation](https://foundryvtt.com/article/localization/) (which is not new):
