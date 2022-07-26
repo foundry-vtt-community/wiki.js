@@ -2,7 +2,7 @@
 title: Migration Summary for v10
 description: 
 published: true
-date: 2022-07-26T02:31:50.250Z
+date: 2022-07-26T02:37:30.301Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-23T23:44:16.293Z
@@ -13,6 +13,8 @@ dateCreated: 2022-03-23T23:44:16.293Z
 {.is-info}
 ## API Docs
 [API Docs](https://foundryvtt.com/api/v10/)
+[Migration Docs](https://foundryvtt.com/article/migration/)
+
 ## Documents
 
 ![migration-v10.png](/migrations/foundry-core-v10/migration-v10.png)
