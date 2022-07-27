@@ -2,7 +2,7 @@
 title: EN00 Introduction code snippets for beginners
 description: 
 published: true
-date: 2022-06-26T09:48:00.384Z
+date: 2022-06-26T09:48:01.803Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-25T11:24:45.659Z

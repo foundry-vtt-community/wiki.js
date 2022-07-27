@@ -2,7 +2,7 @@
 title: 3. Extending Dialog with Tabs
 description: Create a tabbed version of the Dialog class using Handlebars and a template. 
 published: true
-date: 2021-06-19T17:08:52.350Z
+date: 2022-05-19T13:26:25.655Z
 tags: template, dialog, handlebars, html
 editor: markdown
 dateCreated: 2021-06-19T17:08:52.350Z

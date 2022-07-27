@@ -2,7 +2,7 @@
 title: 5. アクター（キャラの駒）
 description: アクター（キャラの駒）
 published: true
-date: 2021-04-21T16:42:34.886Z
+date: 2022-05-19T13:23:16.603Z
 tags: 基本操作
 editor: markdown
 dateCreated: 2021-02-05T15:17:23.393Z

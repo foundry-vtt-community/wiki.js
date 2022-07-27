@@ -2,7 +2,7 @@
 title: DE00 Einführung Code Schnippsel für Anfaenger
 description: General introduction 
 published: true
-date: 2022-06-26T09:47:56.574Z
+date: 2022-06-26T09:47:58.315Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-26T09:36:15.821Z

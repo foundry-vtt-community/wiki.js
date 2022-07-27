@@ -1,21 +1,18 @@
 ---
-title: Unlisted Modules
+title: Defunct Modules
 description: 
 published: true
-date: 2021-12-12T22:14:15.776Z
+date: 2022-05-19T13:20:26.592Z
 tags: modules
 editor: markdown
 dateCreated: 2020-09-25T02:02:48.214Z
 ---
 
+# Unlisted Foundry VTT Modules
 Get Modules for Foundry VTT on the official site: [https://foundryvtt.com/packages/](https://foundryvtt.com/packages/)
 
-The list below is an unofficial and incomplete list of unlisted game modules.
-
-# Unlisted Foundry VTT Modules
-
 <details><summary>
-Foundry modules that work across all or most systems are noted here. These may include reskins, general improvement mods, and more.
+This list is an unofficial and incomplete list of unlisted game modules.
   
 > Many of the modules are incompatible with version 0.8.x and higher. Proceed with caution.
 {.is-danger}
@@ -316,6 +313,11 @@ These are modules which have had their functionality merged into core.
 
 - [Button Overflow](https://github.com/ardittristan/VTTButtonOverflow)
 - [Macro Folders](https://github.com/earlSt1/vtt-macro-folders)
+- [T is for Target](https://foundryvtt.com/packages/t-is-for-target)
+- [FPS meter](https://foundryvtt.com/packages/fpsmeter)
+- [Library: DF Hotkeys](https://foundryvtt.com/packages/lib-df-hotkeys)
+- [Keybind Lib](https://foundryvtt.com/packages/keybind-lib)
+- [Playlist Drag and Drop](https://foundryvtt.com/packages/playlist-drag-and-drop)
 
 
 ### Integrated into Core DND5E System

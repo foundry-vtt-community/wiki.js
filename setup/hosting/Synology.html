@@ -2,14 +2,44 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2021-11-27T14:24:02.598Z
+date: 2022-05-19T13:21:28.720Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
 -->
 
-<p>Setting up Foundry on Synology is similar in execution as a base linux operation with some slight changes in the steps. Some things such as directory locations can be adjusted based on your own setup. If anyone has suggestions for other ways to execute the server instance please, by all means, share. &nbsp;</p>
-<h1>Basic Setup</h1>
+<h1>Introduction</h1>
+<p>Your Synology NAS is a great place to host Foundry VTT. It is also quite easy to setup HTTPS thanks to the great integration of Let's Encrypt, the free certificate provider.</p>
+<h2>Setting up Foundry VTT on your NAS</h2>
+<h4>Prerequisites</h4>
+<ul>
+  <li>Have a Foundry VTT license</li>
+  <li>Have an up to date Synology NAS</li>
+</ul>
+<h4>Two ways for setting up Foundry VTT on Synology</h4>
+<ul>
+  <li>Self-hosting as a base Linux, with some slight changes in the steps. This requires to install NodeJS and run the provided command lines.</li>
+  <li>Run a Docker image and set it up to download your licensed version of Foundry VTT. It can run permanently and be toggled on or off in Docker&nbsp;</li>
+</ul>
+<p>Both allows to run it permanently. The Docker way involves no command line and can be performed by non too technical people.</p>
+<h2>Configuring HTTPS (SSL) on your Foundry VTT web site</h2>
+<p>This assumes your NAS is already visible to the internet. If not, we encourage you to consider this matter first and follow guides on how to “open” the connectivity to your NAS while being protected.</p>
+<p>Configuring HTTPS (SSL) for your hosted Foundry VTT is good because:</p>
+<ul>
+  <li>The transiting data is secured and your are less subject to attacks</li>
+  <li>You can then easily activate Audio/Video integration which relies on a secured communication</li>
+</ul>
+<h4>Prerequisites for setting up HTTPS</h4>
+<ul>
+  <li>NAS is already visible from the internet on port 443 (port fowarding is configured for HTTPS)</li>
+  <li>Have a domain name for your Foundry VTT<ul>
+      <li>If you're in a hurry the longest step is by far waiting for the public DNS servers to propagate your domain entry that points to your NAS. Consider doing this first.</li>
+    </ul>
+  </li>
+</ul>
+<h1>Setting up the Linux way</h1>
+<p>This is close to the official guide for running on Linux. Some things such as directory locations can be adjusted based on your own setup.</p>
+<h2>Basic Setup</h2>
 <ol>
   <li>Enable admin user in DSM</li>
 </ol>
@@ -28,7 +58,7 @@ dateCreated: 2020-11-10T02:09:22.459Z
 </figure>
 <p>5. Download your node.js Foundry instance, this is located in your account page under purchased licenses. Download this file with DSM and extract the contents of the zip file into your foundryvtt (or whatever you chose) folder. &nbsp;It should look like below.</p>
 <figure class="image image_resized" style="width:59.2%;"><img src="/images/screen_shot_2020-11-09_at_8.58.20_pm.jpg"></figure>
-<h1>Running a One-Time FoundryVTT instance</h1>
+<h2>Running a One-Time FoundryVTT instance</h2>
 <p><strong>SSH into your synology NAS, this is using your SSH client of choice. I use MacOS and utilize the built in terminal option. &nbsp;Once you open your terminal/SSH client you'll connect to it:</strong></p>
 <blockquote>
   <p>'yourusername@yourcomputername ~ % ssh admin@&lt;insert NAS IP&gt;</p>
@@ -42,7 +72,7 @@ dateCreated: 2020-11-10T02:09:22.459Z
   <p>cd /volume1/homes/&lt;hostname&gt;/Drive/FoundryVTT<br>node foundryvtt/resources/app/main.js --dataPath=foundrydata</p>
 </blockquote>
 <p>Once you close the SSH window this instance will stop working, it is a one time launch option.</p>
-<h1>Running your FoundryVTT server continuously</h1>
+<h2>Running your FoundryVTT server continuously</h2>
 <p>If you would like to use your foundry VTT server AFTER closing the SSH client window then you'll need to use Forever. &nbsp;To install and operate forever on your system run the following commands:</p>
 <blockquote>
   <p>npm&nbsp;install&nbsp;forever&nbsp;-g</p>
@@ -62,27 +92,15 @@ dateCreated: 2020-11-10T02:09:22.459Z
   <li>To properly shutdown your foundry instance, ctrl-c (or similar hotkey in your client) shuts down the instance properly (note using Forever you need to use a different shutdown process).</li>
   <li>I am a novice at these processes so I am open to automation suggestions or similar! - Diabolicbutterfly</li>
 </ul>
-<h1>Alternate way for hosting Foundry VTT on a Synology NAS using Docker</h1>
-<p>This is a different way for hosting Foundry VTT using Docker. This is quite simple recipe, maybe the simplest <strong>for non technical people</strong>, with a specific combination of services that make life easier.&nbsp;</p>
-<p>The goal of this tutorial is to :</p>
-<ul>
-  <li>Host VTT Foundry on your Synology NAS</li>
-  <li>Set up HTTPS provided that you have a domain name somewhere</li>
-  <li>Make it run permanently (you can actually toggle it on or off)</li>
-</ul>
-<h3>Prerequisites</h3>
-<ul>
-  <li>Have a Foundry VTT license</li>
-  <li>Have a domain name</li>
-  <li>Have an up to date Synology NAS (this is based on DSM 6.2.4)</li>
-</ul>
-<h3>Have your domain or subdomain point to your NAS public IP</h3>
-<p>I'm already using a synology adress such as myquickconnectid<strong>.synology.me</strong> in order to connect to my NAS. It supports HTTPS (port 443). Since this adress is already used, I need another one for Foundry VTT. &nbsp;Make your to make it point to your NAS public IP. This kind of DNS configuration can take several hours or a couple of days.</p>
-<h3>Install Docker your NAS</h3>
-<p>In the package manager, install “Docker”</p>
+<h1>Setting up with Docker (no command line)</h1>
+<p>This guide was made with DSM 6.2.4</p>
+<h3>Install Docker on your NAS</h3>
+<p>In the <strong>Package Center</strong>, install “Docker”</p>
 <h3>Prepare the <a href="https://github.com/felddy">felddy</a>/<a href="https://github.com/felddy/foundryvtt-docker"><strong>foundryvtt-docker</strong></a> image</h3>
-<p>In Docker, go to Registry and look for “felddy”. Download the felddy/foundryvtt-docker image, when prompted choose the “release” tag.</p>
-<p>Now, in the Image section of Docker, Launch this image (this creates a “Container”, that is an instance of this image), you will be prompted for configuration, go directly to <strong>advanced settings</strong>:</p>
+<p>IMHO it is the simplest docker image for running Foundry VTT, yet quite configurable.</p>
+<p>In <strong>Docker</strong>, go to <strong>Registry </strong>and search for “felddy”. Download the "felddy/foundryvtt-docker" image, when prompted choose the “<strong>release</strong>” tag.</p>
+<figure class="image"><img src="/setup/hosting/synology/registry.png"></figure>
+<p>Now, in the <strong>Image</strong> pane of Docker, <strong>Launch </strong>this image (this creates a “Container”, that is an instance of this image), you will be prompted for configuration, go directly to <strong>advanced settings</strong>:</p>
 <ul>
   <li>Enable auto-restart: checked</li>
   <li>Declare a folder for Foundry VTT to store its files. <strong>Volume → Add Folder</strong>:<ul>
@@ -91,9 +109,13 @@ dateCreated: 2020-11-10T02:09:22.459Z
       <li>It is useful to access such files directly, otherwise they are embedded in the container</li>
     </ul>
   </li>
+</ul>
+<figure class="image"><img src="/setup/hosting/synology/data.png"></figure>
+<ul>
   <li>Leave default port settings</li>
   <li>In the Environment tab, add the CONTAINER_PRESERVE_CONFIG variable and set it to <strong>true</strong></li>
 </ul>
+<figure class="image"><img src="/setup/hosting/synology/preserve.png"></figure>
 <p><strong>Apply these settings without running the container yet (uncheck “Run this container…”)</strong></p>
 <p>Now go the <strong>Container </strong>section in Docker and <strong>Edit</strong> the details of your container, go to the <strong>Environment</strong> tab, and add a <strong>FOUNDRY_RELEASE_URL</strong> variable, leave it empty for now.</p>
 <h3>Get a temporary Foundry VTT Linux/NodeJS download URL</h3>
@@ -101,13 +123,45 @@ dateCreated: 2020-11-10T02:09:22.459Z
 <p>Go to your account page, and click Purchased Licences button.</p>
 <p><strong>Make sure you select the Linux/NodeJS operating system selected </strong>and click the <strong>Timed URL </strong>button.</p>
 <p>You now have 5 minutes to paste this link into the value of the FOUNDRY_RELEASE_URL variable of your container.</p>
+<figure class="image"><img src="/setup/hosting/synology/release_url.png"></figure>
 <p>Apply your change and <strong>Start</strong> the container, you can use the toggle on the right for starting or stopping the container.</p>
+<figure class="image"><img src="/setup/hosting/synology/start.png"></figure>
 <h3>Test that Foundry VTT runs locally in HTTP</h3>
 <p>Assuming your are on your local network with the NAS, use a web browser connect to your NAS on port 30000. Ex: http://mynasnameorip:30000/</p>
-<p>Virtual VTT should run there.</p>
+<p><strong>Virtual VTT should run there.</strong></p>
 <p>If not you can go the Container <strong>Details</strong>, in the <strong>Log</strong> tab. This gives you the execution details on what's going on in the Container.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<p>Remember that you can <strong>turn the web site on and off </strong>simply by turning the container on and off.</p>
+<h1>Configurating HTTPS for your Foundry VTT web site</h1>
+<p>The goal here is to support the standard HTTPS port 443. You may already have a domain associated to your DSM on that port, that is why we need a dedicated domain for Foundry VTT.</p>
+<p>For example, I'm already using a synology domain such as myquickconnectid<strong>.synology.me</strong> in order to connect to my NAS. It supports HTTPS (port 443). Since this domain is already used, I need another one for Foundry VTT. &nbsp;Make your to make it point to your NAS public IP. This kind of DNS configuration can take several hours or a couple of days.</p>
+<h3>Configure the Reverse Proxy</h3>
+<p>In your NAS Control Panel, go to <strong>Application Portal → Reverse Proxy → Create</strong>.</p>
+<p>Configure like the following, transposing:</p>
+<ul>
+  <li>Your domain name</li>
+  <li>Your NAS internal IP Adress</li>
+</ul>
+<figure class="image"><img src="/setup/hosting/synology/reverse.png"></figure>
+<p>This will redirect the external trafic coming in HTTPS on your domain name to the internal HTTP web server on port 30000 in the Container.</p>
+<p>You must go to the <strong>Custom Header </strong>pane → <strong>Create → WebSocket</strong></p>
+<p>This will create the following declarations, and will make the WebSockets work (if not working, Foundry VTT user interface will not work).</p>
+<figure class="image"><img src="/setup/hosting/synology/websocket.png"></figure>
+<h3>Get a Certificate for your domain name</h3>
+<p>In your NAS Control Panel, go to <strong>Security → Certificate → Add</strong></p>
+<p>Choose <strong>Add a new Certificate</strong>, then <strong>Get a Certificate from Let's Encrypt</strong></p>
+<p>Input your domain name, and your email adress.</p>
+<p>The certificate will have to be renewed regularly, but this is well assisted by the Synology UI.</p>
+<p>Finally, click on <strong>Configure</strong>, and <strong>associate your new certificate with your&nbsp;reverse proxy entry</strong>, so that it is used for your Foundry VTT incoming trafic.</p>
+<h3>Do some VTT Foundry configuration</h3>
+<p>Open the Config/options.json in your Foundry VTT folder (remember the volume you mounted in the Docker container, or your Foundry data path)</p>
+<p>Make sure you have following values set up:</p>
+<pre><code class="language-plaintext"> "port": 30000,
+ "proxySSL": true,
+ "proxyPort": 443, </code></pre>
+<p><strong>Now you should be able to browse your VTT Foundry domain name, on your self hosted instance!</strong></p>
+<p>You may also use the Audio/Video integration which requires HTTPS.</p>
+<h1>Updating Foundry VTT</h1>
+<p>TBD</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>

@@ -2,7 +2,7 @@
 title: EN01A How Foundry VTT works
 description: A short explanation concerning the foundry technology
 published: true
-date: 2022-06-26T09:58:16.738Z
+date: 2022-06-26T09:58:18.262Z
 tags: javascript, code, css, handlebars, html, data, technology
 editor: markdown
 dateCreated: 2022-06-25T22:23:47.608Z

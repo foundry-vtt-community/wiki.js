@@ -2,7 +2,7 @@
 title: 2. Extending FormApplication with Tabbed Template
 description: Guide to extending FormApplication to use a tabbed template
 published: true
-date: 2021-06-19T22:02:02.682Z
+date: 2022-05-19T13:26:23.931Z
 tags: template, html, formapplication, tabs
 editor: markdown
 dateCreated: 2021-06-19T16:53:47.366Z

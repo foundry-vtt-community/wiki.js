@@ -2,7 +2,7 @@
 title: Creating Custom Dialog Windows
 description: A guide on how to create dialog windows with custom content, styling, and buttons.
 published: true
-date: 2022-03-18T14:10:01.356Z
+date: 2022-05-19T13:26:10.839Z
 tags: development, dialog, window
 editor: markdown
 dateCreated: 2021-06-01T15:03:28.882Z

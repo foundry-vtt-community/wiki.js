@@ -2,7 +2,7 @@
 title: 4.1 Créer plusieurs parties à partir d'une seule et même préparation.
 description: 
 published: true
-date: 2021-11-19T14:49:11.912Z
+date: 2022-05-19T13:25:24.594Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-12T11:07:10.096Z

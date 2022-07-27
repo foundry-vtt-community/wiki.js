@@ -2,7 +2,7 @@
 title: Hooks  Listening & Calling
 description: a guide on how to piggyback on Foundry's API
 published: true
-date: 2022-03-18T13:47:19.344Z
+date: 2022-05-19T13:26:32.893Z
 tags: 
 editor: markdown
 dateCreated: 2021-08-13T11:35:11.211Z

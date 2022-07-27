@@ -2,7 +2,7 @@
 title: 3．サーバの立て方
 description: サーバの立て方（サーバー・セルフホスト）
 published: true
-date: 2022-05-28T01:06:32.642Z
+date: 2022-05-28T01:06:34.109Z
 tags: ポート開放
 editor: markdown
 dateCreated: 2021-02-05T15:52:48.023Z

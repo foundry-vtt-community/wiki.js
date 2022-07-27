@@ -2,7 +2,7 @@
 title: Using Permissions in Foundry
 description: A guide on who can do what where, and how that affects your UI
 published: true
-date: 2021-06-15T20:17:26.119Z
+date: 2022-05-19T13:26:13.512Z
 tags: 
 editor: markdown
 dateCreated: 2021-06-11T18:51:47.310Z

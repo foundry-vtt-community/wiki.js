@@ -2,7 +2,7 @@
 title: System Development-Part-6-(optional)-Derivation-is-not-a-5e-Magic-School
 description: 
 published: true
-date: 2021-04-21T16:34:14.307Z
+date: 2022-05-19T13:20:08.770Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:37:28.625Z

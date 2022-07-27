@@ -2,7 +2,7 @@
 title: 語言
 description: 可用於Fvtt的翻譯.
 published: true
-date: 2021-05-07T01:53:40.792Z
+date: 2022-05-19T13:25:38.265Z
 tags: 翻譯, 語言, 本地化
 editor: markdown
 dateCreated: 2021-04-21T14:44:20.433Z

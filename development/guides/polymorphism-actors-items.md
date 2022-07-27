@@ -2,7 +2,7 @@
 title: Using Polymorphism with Actors and Items in Foundry
 description: You cannot use polymorphism for Actors and Items in Foundry. Except you can.
 published: true
-date: 2021-09-14T01:59:43.308Z
+date: 2022-05-19T13:26:35.660Z
 tags: development
 editor: markdown
 dateCreated: 2021-08-14T19:09:54.861Z

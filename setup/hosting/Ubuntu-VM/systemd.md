@@ -2,7 +2,7 @@
 title: systemd
 description: Alternative instructions for using systemd within an unbuntu install
 published: true
-date: 2021-09-29T14:10:18.675Z
+date: 2022-05-19T13:26:44.372Z
 tags: hosting, ubuntu, systemd
 editor: markdown
 dateCreated: 2021-09-29T13:59:30.180Z

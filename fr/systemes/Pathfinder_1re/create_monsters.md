@@ -2,7 +2,7 @@
 title: 2.0. Création de Monstres
 description: 
 published: true
-date: 2021-04-21T16:46:44.537Z
+date: 2022-05-19T13:24:22.859Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-27T10:42:21.279Z

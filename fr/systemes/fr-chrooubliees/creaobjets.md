@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2021-04-21T16:40:50.136Z
+date: 2022-05-19T13:22:39.032Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z

@@ -2,7 +2,7 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2021-06-19T14:10:02.550Z
+date: 2022-05-19T13:19:27.775Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z

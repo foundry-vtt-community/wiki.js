@@ -2,7 +2,7 @@
 title: 1. Template Basics
 description: Basic guide to using HTML templates in FoundryVTT. 
 published: true
-date: 2021-09-01T02:41:35.137Z
+date: 2022-05-19T13:26:21.879Z
 tags: template, handlebars, html, formapplication
 editor: markdown
 dateCreated: 2021-06-19T16:20:49.323Z

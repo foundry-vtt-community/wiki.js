@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2021-10-28T18:00:24.366Z
+date: 2022-05-19T13:22:34.658Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z

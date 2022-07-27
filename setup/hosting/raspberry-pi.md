@@ -2,7 +2,7 @@
 title: Raspberry Pi
 description: how to install Foundry VTT on a Raspberry PI
 published: true
-date: 2022-06-25T06:49:16.126Z
+date: 2022-06-25T06:49:17.553Z
 tags: hosting, self-hosting, raspberry pi
 editor: markdown
 dateCreated: 2021-04-18T20:02:58.536Z

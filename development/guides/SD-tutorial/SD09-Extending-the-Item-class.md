@@ -2,7 +2,7 @@
 title: SD09 Extending-the-Item-class
 description: 
 published: true
-date: 2021-06-21T13:16:46.272Z
+date: 2022-05-19T13:19:36.326Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:12.667Z

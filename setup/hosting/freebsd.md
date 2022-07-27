@@ -2,7 +2,7 @@
 title: FreeBSD
 description: 
 published: true
-date: 2022-05-09T04:37:40.313Z
+date: 2022-05-19T13:18:30.371Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:57.469Z

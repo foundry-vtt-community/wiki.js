@@ -2,7 +2,7 @@
 title: Appel de Cthulhu 7e
 description: Support pour l'Appel de Cthulhu
 published: true
-date: 2021-11-21T14:37:45.342Z
+date: 2022-05-19T13:20:38.071Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T19:08:28.749Z
@@ -28,10 +28,14 @@ Le système CoC7 propose aussi une implémentation succincte des règles de Pulp
 - Dans l'onglet Game System de l'application foundry chercher et installer "[Call of Cthulhu 7th edition](https://foundryvtt.com/packages/CoC7/)"
 
 ## Module recommandé
+- [[Call of Cthulhu 7th French (Unofficial)]](https://foundryvtt.com/packages/coc7-module-fr-toc) : Integre la traduction française du système ADC ainsi que tous les éléments utiles (fiches, compétences, sortilèges, créatures...) SANS description.     
 - [Dice so Nice](https://foundryvtt.com/packages/dice-so-nice/): Ajoute des dés en 3D.
 
 ## Tutoriel sur Youtube
 - [Tutoriel AdC sur Foundry VTT (Kyl Game)](https://youtu.be/XkpVSr75A8k)
+
+## Scénario clé en main
+- [[Panique à San Francisco]](https://www.tentacules.net/index.php?id=5146) (issu d'un vieux Casus Belli; synopsis: Jean Christophe Carbonel; adaptation: J. Demesse; adaptation FoundryVTT : Carter)
 
 ## FAQ
 **Pourquoi je n'ai qu'un contenu limité et en anglais livré avec le système ?**

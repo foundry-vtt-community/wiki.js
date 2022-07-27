@@ -2,7 +2,7 @@
 title: D＆D第5版の判定自動化方法
 description: D＆D第5版の判定自動化方法
 published: true
-date: 2021-04-21T16:42:52.509Z
+date: 2022-05-19T13:23:27.349Z
 tags: 5版
 editor: markdown
 dateCreated: 2021-02-05T16:03:29.539Z

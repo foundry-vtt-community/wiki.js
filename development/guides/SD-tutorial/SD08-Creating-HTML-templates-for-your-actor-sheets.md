@@ -2,7 +2,7 @@
 title: SD08 Creating-HTML-templates-for-your-actor-sheets
 description: 
 published: true
-date: 2021-06-21T13:16:24.422Z
+date: 2022-05-19T13:19:33.658Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z

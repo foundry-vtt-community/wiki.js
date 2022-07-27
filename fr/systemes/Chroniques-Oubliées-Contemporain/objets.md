@@ -2,7 +2,7 @@
 title: CoC : Création d'Objets
 description: Bienvenue au Supermarché où l'on fait tout soit même
 published: true
-date: 2021-04-21T16:41:18.994Z
+date: 2022-05-19T13:22:49.781Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T20:38:04.151Z

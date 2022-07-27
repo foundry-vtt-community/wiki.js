@@ -2,7 +2,7 @@
 title: Code snippets for beginners
 description: 
 published: true
-date: 2022-06-25T11:13:33.791Z
+date: 2022-06-25T11:13:35.170Z
 tags: 
 editor: markdown
 dateCreated: 2022-06-25T11:12:15.251Z

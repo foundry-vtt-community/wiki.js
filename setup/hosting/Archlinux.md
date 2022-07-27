@@ -2,7 +2,7 @@
 title: Archlinux
 description: Foundry VTT setup in Archlinux
 published: true
-date: 2022-05-09T04:34:30.027Z
+date: 2022-05-19T13:24:32.852Z
 tags: tutorial, hosting, setup, linux, self-hosting
 editor: markdown
 dateCreated: 2021-02-28T01:56:56.967Z

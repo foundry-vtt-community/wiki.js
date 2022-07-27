@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2022-01-03T14:13:56.454Z
+date: 2022-05-19T13:24:51.422Z
 tags: settings, flags, data
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z

@@ -2,7 +2,7 @@
 title: API Snippets
 description: 
 published: false
-date: 2021-05-05T13:30:14.961Z
+date: 2022-05-19T13:18:24.745Z
 tags: dnd5e, javascript, api, code
 editor: markdown
 dateCreated: 2020-09-23T00:25:21.757Z

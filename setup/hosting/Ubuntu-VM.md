@@ -2,7 +2,7 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2022-05-09T04:41:24.187Z
+date: 2022-05-19T13:18:41.726Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z

@@ -2,7 +2,7 @@
 title: League of FoundryVTT Developers
 description: 
 published: true
-date: 2021-04-21T16:26:25.827Z
+date: 2022-05-19T13:17:41.001Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-21T20:52:48.566Z
