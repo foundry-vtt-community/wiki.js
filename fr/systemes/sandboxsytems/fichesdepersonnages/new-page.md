@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-26T20:34:35.326Z
+date: 2022-07-30T11:40:21.881Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -150,7 +150,7 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/bloodlust/bloodlust-metal/bloodl
 Explication de la FIche : https://youtu.be/CM_N4uqPu1o 
 
 
->Automatisation sur cette fiche
+>Automatisation sur cette fiche & Amélioration de l'automatisation par Lightbringer
 {.is-info}
 
 ![2022-07-20_(10).png](/sandbox/2022-07-20_(10).png)
