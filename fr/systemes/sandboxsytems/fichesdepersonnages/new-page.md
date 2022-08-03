@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-07-30T11:40:21.881Z
+date: 2022-08-03T16:51:00.307Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -18,6 +18,7 @@ dateCreated: 2022-07-13T10:34:42.796Z
 **Seregras dispose aussi d'un Patreon afin de le soutenir dans sa démarche de devellopeur :** https://www.patreon.com/seregras/posts
 **Seregras dispose aussi d'une chaine YouTube on l'on peut retrouver pas mal de Tutoriels sur son system :** https://www.youtube.com/c/RolNL
 **Recensement des Fiches de Personnages :** https://docs.google.com/spreadsheets/d/1beMbRpbYYCYFqoqZ_fl3vPix6S6ThzILr31G1b1ZOJQ/edit#gid=0
+**Explication Installation World pour la Fiche :** https://www.youtube.com/watch?v=vbPNGEPxatI
 
 > **Si vous avez des questions sur le system il existe un Discord :** https://discord.gg/NQTq7uYh
 {.is-info}
