@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-08-03T16:52:59.142Z
+date: 2022-08-04T09:13:49.325Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -165,3 +165,10 @@ Explication de la FIche : https://youtu.be/CM_N4uqPu1o
 ![2022-07-20_(9).png](/sandbox/2022-07-20_(9).png)
 
 ## Vermine 2047
+Quel est-ce jeu ? : https://www.legrog.org/jeux/vermine#Actualit%C3%A9+de+la+gamme
+Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF62uEKNgvhWoxqPBOUEv383
+Explication de la FIche :
+>Automatisation sur cette fiche 
+{.is-info}
+
+![2022-08-03.png](/sandbox/2022-08-03.png)![2022-08-03_1.png](/sandbox/2022-08-03_1.png)![2022-08-03_2.png](/sandbox/2022-08-03_2.png)![2022-08-03_3.png](/sandbox/2022-08-03_3.png)![2022-08-03_4.png](/sandbox/2022-08-03_4.png)
