@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-02T14:15:18.578Z
+date: 2022-08-09T16:48:34.012Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -259,7 +259,8 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 At the end of this section you will have a functional installation of Foundry using HTTPS and Caddy as a reverse proxy. Foundry will be set to restart any time the Compute VM is restarted, managed by pm2.
 
 ## Connect to Compute VM Instance and Update
->In this section, terminal is used to refer to whichever command line interface you may be using, either Windows Powershell or Linux/MacOS terminal. On Windows cmd will not work, it must be Powershell. {.is-info}
+>In this section, terminal is used to refer to whichever command line interface you may be using, either Windows Powershell or Linux/MacOS terminal. On Windows cmd will not work, it must be Powershell. 
+In many terminals, you can paste text with <kbd>right-click</kbd> or <kbd>shift</kbd>+<kbd>insert</kbd>.{.is-info}
 
 <a id="D1" href="#D1">D1.</a> In your terminal, navigate to the folder where you saved `foundry.key`.
 
