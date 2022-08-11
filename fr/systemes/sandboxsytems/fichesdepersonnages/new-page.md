@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2022-08-11T09:33:17.704Z
+date: 2022-08-11T09:47:06.757Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -175,11 +175,18 @@ Explication de la Fiche :
 >Automatisation sur cette fiche 
 {.is-info}
 
+> MAJ de la fiche : MagisterPhamtom
+{.is-success}
+
 ![2022-08-03.png](/sandbox/2022-08-03.png)![2022-08-03_1.png](/sandbox/2022-08-03_1.png)![2022-08-03_2.png](/sandbox/2022-08-03_2.png)![2022-08-03_3.png](/sandbox/2022-08-03_3.png)![2022-08-03_4.png](/sandbox/2022-08-03_4.png)
 
 ## Hellywood
-Quel est-ce jeu ? : https://www.legrog.org/jeux/vermine#Actualit%C3%A9+de+la+gamme
-Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF62uEKNgvhWoxqPBOUEv383
+Quel est-ce jeu ? : https://www.legrog.org/jeux/hellywood
 Explication de la Fiche :
 >Automatisation sur cette fiche 
 {.is-info}
+
+> MAJ de la fiche : MagisterPhamtom
+{.is-success}
+
+![2022-08-11.png](/sandbox/2022-08-11.png)
