@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-12T16:08:33.303Z
+date: 2022-08-12T16:18:19.305Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -544,6 +544,8 @@ At the end of this section you will have a policy that automatically retains 5 r
 > You can terminate the existing instance before step [E17](#E17) to continue in this case. Be **absolutely sure that you have a working backup** if you choose to terminate the instance in advance. You risk losing all data if you terminate the instance and boot volume without a working backup. 
 >
 > Instructions for terminating the instance start at [E24](#E24). {.is-danger}
+
+> Some regions have limited availability for the `VM.Standard.A1.Flex` shapes. If your region does not have A1 availability, you will not be able to create a new instance as in step [E19](#E19). Check back periodicially for more resources to become available. It may take a few days. {.is-info}
 
 <a id="E15" href="#E15">E15.</a> From the Oracle Menu, click **Storage** then **Block Storage**. 
 
