@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-09T17:23:30.039Z
+date: 2022-08-12T16:06:32.258Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -490,7 +490,7 @@ sudo apt update && apt upgrade -y
 
 # E. Optional: Backup Policy Setup
 ## Objective
-At the end of this section you will have a policy that automatically retains 5 rotating backups, allowing you to seamlessly restore from backup should something ever go wrong.  
+At the end of this section you will have a policy that automatically retains 5 rotating backups, allowing you to seamlessly restore from backup should something ever go wrong and know how to restore from backup when needed. 
 
 ## Set Backup Policy and Attach to Volume
 
@@ -517,7 +517,7 @@ At the end of this section you will have a policy that automatically retains 5 r
 * Backup Type: `Incremental`
 * Timezone: `Regional Data Center Time`
 
-![Add Schedule](/images/oracle/image27.webp)
+<!-- ![Add Schedule](/images/oracle/image27.webp) -->
 
 > This schedule will set a rotating backup of 5 weeks, with the oldest week being deleted as a new one is created after 5 weeks. You are able to set your own schedule as desired, however the Always Free Tier only includes 5 backups. If you exceed 5 backups, the oldest will be deleted regardless of the retention period. {.is-info}
 
@@ -537,7 +537,49 @@ At the end of this section you will have a policy that automatically retains 5 r
 
 <a id="E14" href="#E14">E14.</a>  You have now given your instance a backup policy that will run automatically. 
 
-> Restoring from backup is beyond the scope of this guide. More information can be found in the [Oracle Docs](https://docs.oracle.com/en-us/iaas/Content/Block/Tasks/restoringavolumefromabackup.htm) should you need to restore from backup. {.is-info} 
+## Restoring From Backup
+
+>Note: Following the steps below in order requires that you have enough Always Free Tier resources available to have two instances and two boot volumes active at the same time. If you followed the guide exactly as above, this will be the case. If you have increased the CPU/RAM or Volume size above 2CPUs/12GBs or 100GB then you may be prevented from creating a new instance or boot volume or be charged a small amount for the time they are both active. 
+>
+> You can terminate the existing instance before step [E17](#E17) to continue in this case. Be **absolutely sure that you have a working backup** if you choose to terminate the instance in advance. You risk losing all data if you terminate the instance and boot volume without a working backup. 
+>
+> Instructions for terminating the instance start at [E24](#E24). {.is-danger}
+
+<a id="E15" href="#E15">E15.</a> From the Oracle Menu, click **Storage** then **Block Storage**. 
+
+<a id="E16" href="#E16">E16.</a> From the side menu, click **Boot Volume Backups**.
+
+<a id="E17" href="#E17">E17.</a> Find the backup you want to restore. Most recent backups should be at the top of the list. Click the three-dot menu on that backup and click **Restore Boot Volume**. 
+
+<a id="E18" href="#E18">E18.</a> In the popup window, enter a **Name** for the boot volume and then select a **Backup Policy** to ensure this new boot volume will continue to be backed up. Leave all other options as default. 
+
+> If you do not have enough Always Free Tier resources for the above step (ie: existing boot volume above 100GB) you may be prevented from completing [E17](#E17)-[E18](#E18) entirely, or may be charged money while both boot volumes are active. {.is-warning}
+
+<a id="E19" href="#E19">E19.</a> In the new Boot Volume Details window, wait for the boot volume to become <span style="color:green">**available**</span> and then click `Create instance`.
+
+<a id="E20" href="#E20">E20.</a> Give the instance a name, such as `Foundry`. Scroll down to verify the **Shape** indicates `VM.Standard.A1.Flex` with 1 core OCPU and 6 GB memory. The **Image** should be the `Boot Volume Name`.
+
+>Do **not modify the image**. {.is-info}
+
+<a id="E21" href="#E21">E21.</a> Scroll down to **Add SSH Keys** and click `Save Private Key`. Save this key in a safe location, preferrably the same location as you previously saved the SSH key. You will need this key if you ever want to connect to your instance via SSH in the future. 
+
+<a id="E22" href="#E22">E22.</a> Click `Create`. You now have a new `Always Free` A1 instance running that should not be disabled again. 
+
+> If you do not have enough Always Free Tier resources for the above step (ie: existing boot volume above 100GB) you may be prevented from completing [E19](#E19)-[E22](#E22) entirely, or may be charged money while both boot volumes are active. {.is-warning}
+
+<a id="E23" href="#E23">E23.</a> If you set up a domain name, you will need to point the domain's A record to the instances `<Public IP address>`. If you did not set up a domain name, you can now connect to Foundry directly, using a link like this: `http://<Public IP Address>:30000`
+
+<a id="E24" href="#E24">E24.</a> Once you have verified the new instance works correctly and contains the restored data, use the Oracle Menu to navigate to **Compute** -> **Instances**. 
+
+<a id="E25" href="#E25">E25.</a> On the old instance that is no longer needed, click the three-dot menu and click **Terminate**. 
+
+<a id="E26" href="#E26">E26.</a> In the window that pops up, make sure that **Permanently delete the attached boot volume** is :ballot_box_with_check:`checked`. Click **Terminate Instance**.
+
+> Be **absolutely sure** that this is the old instance and that your restored backup is functioning correctly before terminating. **Terminating the instance will permanently delete it and all the data contained**. {.is-warning}
+
+> You should now have a working restored backup. {.is-info}
+
+
 
 # F. Optional: Accessing Userdata Files
 ## Objective
