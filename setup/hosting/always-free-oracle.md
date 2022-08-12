@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-12T16:06:32.258Z
+date: 2022-08-12T16:08:33.303Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -551,13 +551,13 @@ At the end of this section you will have a policy that automatically retains 5 r
 
 <a id="E17" href="#E17">E17.</a> Find the backup you want to restore. Most recent backups should be at the top of the list. Click the three-dot menu on that backup and click **Restore Boot Volume**. 
 
-<a id="E18" href="#E18">E18.</a> In the popup window, enter a **Name** for the boot volume and then select a **Backup Policy** to ensure this new boot volume will continue to be backed up. Leave all other options as default. 
+<a id="E18" href="#E18">E18.</a> In the popup window, enter a **Name** such as `Foundry-restored` for the boot volume and then select the same **Backup Policy** to ensure this new boot volume will continue to be backed up. Leave all other options as default. 
 
 > If you do not have enough Always Free Tier resources for the above step (ie: existing boot volume above 100GB) you may be prevented from completing [E17](#E17)-[E18](#E18) entirely, or may be charged money while both boot volumes are active. {.is-warning}
 
 <a id="E19" href="#E19">E19.</a> In the new Boot Volume Details window, wait for the boot volume to become <span style="color:green">**available**</span> and then click `Create instance`.
 
-<a id="E20" href="#E20">E20.</a> Give the instance a name, such as `Foundry`. Scroll down to verify the **Shape** indicates `VM.Standard.A1.Flex` with 1 core OCPU and 6 GB memory. The **Image** should be the `Boot Volume Name`.
+<a id="E20" href="#E20">E20.</a> Give the instance a name, such as `Foundry-restored`. Scroll down to verify the **Shape** indicates `VM.Standard.A1.Flex` with 1 core OCPU and 6 GB memory. The **Image** should be the `Boot Volume Name` set in step [E18](#E18).
 
 >Do **not modify the image**. {.is-info}
 
