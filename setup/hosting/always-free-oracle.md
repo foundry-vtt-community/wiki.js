@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-12T16:27:02.089Z
+date: 2022-08-12T17:36:18.661Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -588,7 +588,7 @@ At the end of this section you will have a policy that automatically retains 5 r
 
 # F. Optional: Accessing Userdata Files
 ## Objective
-If you would like to access the files in your userdata directory directly to move, delete, manage, or bulk upload, then we will need to set up Cyberduck to do so. 
+If you would like to access the files in your userdata directory directly to move, delete, manage, or bulk upload, then we will need to set up Cyberduck, Nemo, Nautilus or VSCode to do so. 
 
 ## Install and Setup Cyberduck
 
@@ -657,6 +657,40 @@ Go to "Other Locations" and enter `ssh://foundry` in the the text field on the b
 ### Nemo
 Go to **File -> Connect to Server...** and then enter `foundry` where it says `server`:
 ![nemo.webp](/images/oracle/nemo.webp)
+
+## Install and Setup VSCode
+
+Visual Studio Code is a full featured, free IDE from Microsoft. With the support of the remote coding extension (also from Microsoft), you gain a full remote editor and file transfer platform. This allows you to remotely edit files and is a more complete service for power-users who may also be developing modules or wish to run services in addition to Foundry on the server.
+
+<a id="F13" href="#F13">F13.</a> Download and install VSCode for your platform from the [Microsoft VSCode website](https://code.visualstudio.com/download).
+> **If on Windows you will also need to install the OpenSSH Client:**
+> Open <kbd>Settings</kbd>, select <kbd>Apps</kbd>, then select <kbd>Optional Features</kbd>
+> At the top of the page select <kbd>Add a feature</kbd>, then find `OpenSSH Client`, and select <kbd>Install</kbd> {.is-info}
+
+<a id="F14" href="#F14">F14.</a> Install the free "Remote - SSH" extension from the [VSCode Marketpace Page](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh), ensuring you click the blue <kbd>Install</kbd> button.
+
+![image.png](/setup/always-free-oracle/image.png)
+
+<a id="F15" href="#F15">F15.</a> Press Ctrl + Shift + P to open the command palette and search for `Open SSH Configuration File`, selecting the one for your user account.
+
+![sshconfig1.png](/setup/always-free-oracle/sshconfig1.png)
+
+<a id="F16" href="#F16">F16.</a> Fill in the config file with a name for your Server (Host), the public IP address of your server (HostName), your username (Ubuntu by default). Add a new line with an `IdentityFile` followed by the path to your ssh key file. 
+> Make sure to save the config file either with Ctrl + S or through a menu. {.is-warning}
+
+![sshconfig2.png](/setup/always-free-oracle/sshconfig2.png)
+
+<a id="F17" href="#F17">F17.</a> For convenience we will store the key in the same folder as the configuration file, get there by right clicking on the config file name and selecting "Reveal in File Explorer" / "Reveal in Finder".
+
+![sshkey.png](/setup/always-free-oracle/sshkey.png)
+
+<a id="F18" href="#F18">F18.</a> Now that the connection is setup, go to the <kbd>Remote Explorer tab</kbd> in the sidebar and click the folder icon next to your server. If you get a popup asking you to chose the Operating system of the server choose <kbd>Linux</kbd>.
+
+![connect.png](/setup/always-free-oracle/connect.png)
+
+![osselect.png](/setup/always-free-oracle/osselect.png)
+
+<a id="F19" href="#F19">F19.</a> A new window will open with the name of your server in the bottom left hand corner. Use the <kbd>Open Folder</kbd> button to open your `foundrydata` folder. Congratulations, you now have access to a file editor, a file tree you can drag and drop files into and out of, and a terminal connected to your server.
 
 # G. Optional: Budget and Cost Analysis
 ## Objective
