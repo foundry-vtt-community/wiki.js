@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-12T16:18:19.305Z
+date: 2022-08-12T16:27:02.089Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -68,7 +68,10 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
 <a id="B2" href="#B2">B2.</a> Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
 
->When choosing your home region, pay special attention to any notices regarding availability of `Arm Ampere A1 Compute` capacity. Be very sure to choose a region with availability otherwise you will not be able to create the instance mentioned in this guide and access the Always Free services. {.is-warning}
+>**READ THIS WARNING**: When choosing your home region, pay very special attention to any messages about Arm Ampere A1 Compute capacity. See example below. **Do not choose regions listed in the warning message** as you will not be able to continue with this guide until the A1 instances become available, which may take **several days**. Choose the next closest geographical region to you and your players and continue. 
+> ![a1.availability-warning.webp](/images/oracle/a1.availability-warning.webp)
+> (Image for example only, check your warning very closely for the regions listed) {.is-danger}
+
 
 <details><summary>What if I can't choose a region that has Arm Ampere A1 availability? ▼</summary>
 	
