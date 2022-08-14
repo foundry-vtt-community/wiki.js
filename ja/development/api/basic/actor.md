@@ -1,8 +1,8 @@
 ---
-title: Actor
+title: キャラクター / Actor
 description: 
 published: true
-date: 2022-08-14T01:26:07.273Z
+date: 2022-08-14T01:26:45.335Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-14T00:55:10.787Z
