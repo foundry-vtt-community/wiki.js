@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2022-05-19T13:22:39.032Z
+date: 2022-08-14T14:59:13.079Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -21,6 +21,7 @@ Armure - Arme de Contact - Arme à distance - Bouclier - Sort - Bijou - Munition
 Dans "**Type**" : Item
 
 ![créa_objet1.png](/images/chroniquesoubliees/customisation/créa_objet1.png)
+![créa_objet_type_3.webp](/images/chroniquesoubliees/créa_objet_type_3.webp)
 
 > La création d'objet étant infinie, nous allons voir ici les différents **traits** accessibles.
 {.is-warning}
