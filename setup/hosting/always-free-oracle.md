@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-08-12T17:36:18.661Z
+date: 2022-08-14T15:39:38.937Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -477,7 +477,7 @@ nano /home/ubuntu/foundryuserdata/Config/options.json
 sudo shutdown -r now
 ```
 
->Give the instance a few minutes to restart. You should be able to connect to Foundry without issue once it is fully restarted. You should also be able to `ssh` into Foundry as in [D2](#D2). If Foundry has not started up after a good 10 minutes, please check your `pm2` startup command as in [D13](#D13) as well as the `pm2` commands in [D26](#D26) to [D28](#D28). {.is-info}
+>Give the instance a few minutes to restart. You should be able to connect to Foundry without issue once it is fully restarted. You should also be able to `ssh` into instance as in [D2](#D2). If Foundry has not started up after a good 10 minutes, please check your `pm2` startup command as in [D13](#D13) as well as the `pm2` commands in [D26](#D26) to [D28](#D28). {.is-info}
 
 <a id="D40" href="#D40">D40.</a> It is good practice to keep your new instance up to date with security patches. To do so, log in to the instance periodically with ssh as in [D2](#D2) and run the following command: 
 
