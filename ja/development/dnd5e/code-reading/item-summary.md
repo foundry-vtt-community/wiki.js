@@ -2,11 +2,13 @@
 title: Item Summary の開閉
 description: 
 published: true
-date: 2022-08-14T03:22:52.432Z
+date: 2022-08-14T03:24:25.272Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-14T03:22:52.432Z
 ---
+
+![Up to date as of 1.6.3](https://img.shields.io/static/v1?label=dnd5e&message=1.6.3&color=informational)
 
 # Item Summary の開閉
 
