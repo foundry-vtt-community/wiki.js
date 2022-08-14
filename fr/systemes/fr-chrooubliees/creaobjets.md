@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2022-08-14T15:00:28.562Z
+date: 2022-08-14T15:01:37.246Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -33,7 +33,6 @@ Dans "**Type**" : Item
 C'est dans l'onglet "Détail" que vous pourrez choisir le type d'Objet que vous aller créer.
 Il suffit de choisir dans la liste de la **"Sous-Catégorie**"
 
-![créa_objet_type.png](/images/chroniquesoubliees/customisation/créa_objet_type.png)
 ![créa_objet_type_3.webp](/images/chroniquesoubliees/créa_objet_type_3.webp)
 
 Je choisis ensuite un ou plusieurs traits pour mon Objet.
