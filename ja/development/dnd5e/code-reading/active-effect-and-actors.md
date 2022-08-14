@@ -2,11 +2,13 @@
 title: ActiveEffect と Actor
 description: 
 published: true
-date: 2022-08-14T02:05:35.247Z
+date: 2022-08-14T06:38:09.326Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-14T02:05:35.247Z
 ---
+
+![Up to date as of 1.6.3](https://img.shields.io/static/v1?label=dnd5e&message=1.6.3&color=informational)
 
 # Resources
 
@@ -45,8 +47,8 @@ ActiveEffect の個々の要素は、3つのパラメータを持っています
 
 D&D 5e System Module 1.6.3 の `ActiveEffect5e` のコードを読んでみると、Foundry VTT に定義されている ActiveEffect の変更用シートを呼び出しているようです。つまり、`mode` (ChangeMode) の値について、System Module 側は意識する必要はないということのようです。
 
-> 個人的な感想ですが、Foundry VTT の ActiveEffect Sheet を直接呼び出す場合、ユーザーが `key` (Attribute Key) を操作できてしまうので、あまりいい方法とは言えないんじゃないかと思います。
+> 個人的な感想ですが、Foundry VTT の ActiveEffect Sheet を直接呼び出す場合、ユーザーが `key` (Attribute Key) を操作できてしまうので、バグの元になりそうです。
 
-ActiveEffect を Actor に適用する処理は、Foundry VTT が行ってくれます。`createEmbeddedDocuments("ActiveEffect", ...` を使いましょう。
+ActiveEffect を Actor に適用する処理は、Foundry VTT が行ってくれます。ActiveEffect の作成には `createEmbeddedDocuments("ActiveEffect", ...` を使うようです。
 
 - https://foundryvtt.com/api/Actor.html#createEmbeddedDocuments
