@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2022-07-19T21:47:41.053Z
+date: 2022-08-17T16:23:27.426Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -103,28 +103,10 @@ By default, this will make all buttons in the header squish down to hide their t
 
 ### Adventure Importer configuration options
 
-When adding configuration options to the Adventure Import sheet, put them in a column to the right of the "Contents" section:
-
-```html
-<section class="adventure-options">
-  <h2>Options</h2>
-  <div class="form-group">
-    <label>Tier</label>
-    <div class="form-fields">
-      <select>
-        <option title="Level 1 to 4">1</option>
-        <option title="Level 5 to 10">2</option>
-        <option title="Level 11 to 16">3</option>
-        <option title="Level 17 to 20">4</option>
-      </select>
-    </div>
-    <p class="notes">Suitable for player characters between levels <strong>1</strong> and <strong>4</strong></p>
-  </div>
-</section>
-```
+When adding configuration options to the Adventure Import sheet, put them in a column to the right of the "Contents" section. See [this issue](https://github.com/foundryvtt/foundryvtt/issues/7069) for example code and more info.
 
 <details>
-  <summary>See examples</summary>
+  <summary>Implementation example screenshots</summary>
   <img alt="adventure-importer-example.png" src="/development/guides/package-best-practices/adventure-importer-example.png">
   <img alt="adventure-importer-core.png" src="/development/guides/package-best-practices/adventure-importer-core.png">
 </details>
