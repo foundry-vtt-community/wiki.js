@@ -2,7 +2,7 @@
 title: 1．はじめに
 description: 
 published: true
-date: 2022-05-28T01:01:10.354Z
+date: 2022-08-21T09:45:58.052Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-01T14:32:37.818Z
@@ -49,4 +49,4 @@ dateCreated: 2020-12-01T14:32:37.818Z
   
   ## 支援
   <i class="fab fa-patreon"></i> [オンセ工房支援Patreon](https://www.patreon.com/onsekobo)より月額で日本語コミュニティを支援できます。ここで支援いただくお金は特定の個人ではなく、全員が便利に使えるModやお試しサーバの維持費として使用されます。現在立ち絵Mod（Theatre Inserts）とBCDice Modはこの支援より実現されています。
-  支援者が増えると同意に開発できるものが増えていきますので、皆さんの支援をお待ちしております。
+  支援者が増えると同時に開発できるものが増えていきますので、皆さんの支援をお待ちしております。
