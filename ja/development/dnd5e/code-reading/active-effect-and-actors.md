@@ -2,7 +2,7 @@
 title: ActiveEffect と Actor
 description: 
 published: true
-date: 2022-08-14T06:38:09.326Z
+date: 2022-08-14T06:38:10.848Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-14T02:05:35.247Z

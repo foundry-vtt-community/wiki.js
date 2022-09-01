@@ -2,7 +2,7 @@
 title: 2.0. Installation sous Linux
 description: 
 published: true
-date: 2022-05-19T13:21:23.444Z
+date: 2022-08-29T21:50:54.706Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-25T19:02:17.055Z

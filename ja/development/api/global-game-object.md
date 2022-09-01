@@ -2,7 +2,7 @@
 title: グローバル Game オブジェクト
 description: Foundry VTT における Game クラスおよび game オブジェクトについて
 published: true
-date: 2022-08-14T02:08:25.215Z
+date: 2022-08-14T02:08:26.609Z
 tags: 
 editor: markdown
 dateCreated: 2022-08-14T01:33:57.604Z
