@@ -2,7 +2,7 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2022-05-19T13:25:51.295Z
+date: 2022-09-02T17:08:05.427Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
@@ -28,7 +28,8 @@ Based on the two excellent tutorials on this wiki: [Self-Hosting-on-AWS](/en/set
   - AdminIPs (this will be used to only allow your API getting called from these adresses)
   
  If you know how and where to get these skip to the deployment step.
- Here is the script: [template.yml](/development/template.yml)
+ Here is the script: [template.yml](https://github.com/dirkvandooren/AWS_FoundryVTT/blob/master/template.yml)
+ 
 
 ## AMI and Instancetype
 
