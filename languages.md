@@ -2,13 +2,13 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2022-05-28T00:52:32.286Z
+date: 2022-09-07T18:36:22.394Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
 ---
 
-Foundry Virtual Tabletop has a broad international community and the core software (as of version 0.7.9) is available in 14 languages. All translations are community created by real people and few contain machine translations. The game is in American English by default.
+Foundry Virtual Tabletop has a broad international community and the core software (as of version 0.7.9) is available in 14 languages. All translations are community created by real people but few contain machine translations. The game is in American English by default.
 
 For additional translations (including ones for game systems) see the [list of translation modules](https://foundryvtt.com/packages/tag/translation) on the Foundry VTT website (always up to date) or the [Translations](https://foundryvtt.wiki/en/community/Community-Translations) page here in the wiki (may not be up to date).
 
@@ -82,7 +82,7 @@ You must be the Gamemaster or have the "Modify Configuration Settings" permissio
 1. This world and the setup menu are now in your chosen language.
 
 ## Contributing
-If you would like to help with translating Foundry VTT, it's modules, or game systems, the best way is to join your local Discord community listed in the table above and ask for more information there. If your language is not listed in the table, your best bet is to ask for advice on the `#translations` channel on <i class="fab fa-discord"></i> [the official Foundry VTT Discord server](https://discordapp.com/invite/DDBZUDf) and look into the [localization guides](https://foundryvtt.wiki/en/development/guides/localization).
+If you would like to help with translating Foundry VTT, it's modules, or game systems, the best way is to join your local Discord community listed in the table above and ask for more information there. You can also translated selected packages using an online interface in the [Foundry Hub Weblate](https://weblate.foundryvtt-hub.com/) service. If your language is not listed in the table of supported translations, your best bet is to ask for advice on the `#translations` channel on <i class="fab fa-discord"></i> [the official Foundry VTT Discord server](https://discordapp.com/invite/DDBZUDf) and look into the [localization guides](https://foundryvtt.wiki/en/development/guides/localization).
 
 For more information about the community translation teams, their tools, and code repositories see the [Translations](https://foundryvtt.wiki/en/community/Community-Translations#localization-teams-tools) page.
 
