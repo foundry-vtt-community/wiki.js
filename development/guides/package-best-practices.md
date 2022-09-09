@@ -2,7 +2,7 @@
 title: Package Development Best Practices Checklist
 description: A short checklist for module developers with best practices as discovered by the community.
 published: true
-date: 2022-08-17T16:23:30.663Z
+date: 2022-09-09T06:37:10.838Z
 tags: localization, development, guide, manifest, code, files, paths
 editor: markdown
 dateCreated: 2020-11-12T14:02:50.522Z
@@ -65,7 +65,7 @@ For more details about how Foundry VTT installs and updates packages, see the fu
 ## Module APIs and Dependencies
 - Expose module-specific APIs on the module's moduleData located at `game.modules.get('my-module-name')?.api`.
 - Leverage custom hooks to provide a reliable way for other packages to react to events caused by your module.
-- Depend on every module in the dependency tree for your package, Foundry does not handle dependency-trees with 2+ levels during install or activation. [#6274](https://gitlab.com/foundrynet/foundryvtt/-/issues/6274)
+- Depend on every module in the dependency tree for your package, Foundry does not handle dependency-trees with 2+ levels during install or activation. [#6274](https://github.com/foundryvtt/foundryvtt/issues/6274)
 
 ## Code Practices
 - The [`libWrapper` library module](https://github.com/ruipin/fvtt-lib-wrapper) is an excellent dependency to aid in the "patching" of core functions.
