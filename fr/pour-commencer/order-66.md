@@ -1,14 +1,14 @@
 ---
-title: ! Mise à jour v9
+title: ! Mise à jour v10
 description: Procédure de mise à jour vers la v9
 published: true
-date: 2022-05-19T13:27:29.803Z
+date: 2022-09-15T22:36:24.406Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T12:19:28.031Z
 ---
 
-*Lors de la livraison d'une nouvelle version dite "Majeure" de Foundry VTT, tel que le passage de la v7 à la v8, et maintenant à la v9, nous recommandons fortement, et à chaque fois d'ailleurs, de ne pas se precipiter vers la nouvelle version, même si nous comprenons qu'elle devient à sa publication, le nouveau standard pour la VTT.
+*Lors de la livraison d'une nouvelle version dite "Majeure" de Foundry VTT, tel que le passage de la v8 à la v9, et maintenant à la v10, nous recommandons fortement, et à chaque fois d'ailleurs, de ne pas se precipiter vers la nouvelle version, même si nous comprenons qu'elle devient à sa publication, le nouveau standard pour la VTT.
 Nous conseillons plus d'attendre quelques jours, histoire que tous les modules et systèmes gagnent en stabilité d'une part, mais aussi afin d'éviter aux moins experts en Informatique d'entre nous, de ne pas se retrouver plonger dans les méandres d'une VTT dysfonctionnelle.
 Pour les fous, les inconscients, les courageux ou les plus téméraires d'entre vous, nous avons décidé de faire une petite procédure, qui nous l'espérons, pourra vous aider, avant que l'irréparable soit commis et que nous devions éponger tous les cris, les S.O.S.*
 
@@ -18,7 +18,7 @@ Cette procédure permet de faire le passage, avec un risque minimal, d'une versi
 
 > Cette procédure est faite sur un environnement spécifique d'installation sous Windows 10/11 mais s'applique parfait dans un environnement classique d'installation tel que vous pouvez retrouver dans la [Procédure d'installation Windows](https://foundryvtt.wiki/fr/pour-commencer/win). 
 > La partie **Sauvegarde** peut s'appliquer à tous les systèmes d'exploitation.
-> Avant de vous lancer dans la migration de votre VTT, il est fort conseillé de vérifier que les mises à jour de vos modules et systèmes soient disponibles pour vos différents Mondes. Vous pouvez trouver ces informations sur le site officiel de [Foundry VTT > System & Modules](https://foundryvtt.com/packages/) ou via le [Discord de la communauté francophone](https://discord.gg/pPSDNJk) ou encore via cette [Documentation](https://docs.google.com/spreadsheets/d/e/2PACX-1vQB3hKXseLn1ROUxepiw09GYQPG8ikwZjY_Nkde9KnC9PUJA0gNWBuMIJ66iU0qokAbERQ8jF-Bwwrh/pubhtml?gid=0&single=true) {.is-warning} 
+> Avant de vous lancer dans la migration de votre VTT, il est fort conseillé de vérifier que les mises à jour de vos modules et systèmes soient disponibles pour vos différents Mondes. Vous pouvez trouver ces informations sur le site officiel de [Foundry VTT > System & Modules](https://foundryvtt.com/packages/) ou via le [Discord de la communauté francophone](https://discord.gg/pPSDNJk) ou encore via cette [Documentation](https://docs.google.com/spreadsheets/u/2/d/e/2PACX-1vRrcQL-r09Bi4MsbHUXlmOVx6DP4Ju143zRmk3HiUK2qU6gA3naxuSUcyv3EVhjMThXzJ_455jnyWfK/pubhtml?gid=0&single=true) {.is-warning} 
 
 
 
@@ -29,7 +29,7 @@ En premier lieu, nous allons devoir télécharger les différents exécutables n
 Vous trouverez sur le site [Foundry VTT](https://foundryvtt.com/), dans la Rubrique **"Pourchased Licenses"** de votre profil utilisateur, les différentes sources.
 
 > - Télécharger la version dans laquelle votre VTT est : **Actuellement en version 0.8.9 (build255)**,
-> - Télécharger la version cible : **Actuellement en v9 (buildXXX)**
+> - Télécharger la version cible : **Actuellement en v10 (buildXXX)**
 
 ![1.software.png](/setup/winstall/1.software.png)
 
