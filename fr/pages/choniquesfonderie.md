@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2022-05-19T13:27:49.433Z
+date: 2022-09-16T06:55:08.393Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -23,5 +23,7 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 7](https://www.youtube.com/watch?v=DnbxYBE3XCs) avec Kyllian pour **Warhammer**
  - Les Chroniques de la [Fonderie, Episode 8](https://youtu.be/mVJmaBIEWnc) avec **SecretFire de FoundryVTT** pour les new, et Vonv et Vétérini pour **l'Appel de Cthulhu**
  - Les Chroniques de la [Fonderie, Episode 9](https://www.youtube.com/watch?v=Ljjfd6nXuJM) avec Cyril Gronyon et Chris Torone CB. Sujet : **Savage Worlds**
-  
+ - Les Chroniques de la [Fonderie, Episode 10](https://www.youtube.com/watch?v=WSL3cAxI_D4) spécial **Cthulhu Hack/Les Encagés** avec Carte, Kristov et Jerome (XII Singes)
+
+   
  - A venir : épisode 10 le ??? avec pour thème ????? !
