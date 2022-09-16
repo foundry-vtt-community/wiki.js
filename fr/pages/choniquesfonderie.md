@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2022-09-16T06:55:08.393Z
+date: 2022-09-16T06:55:17.495Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -26,4 +26,4 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 10](https://www.youtube.com/watch?v=WSL3cAxI_D4) spécial **Cthulhu Hack/Les Encagés** avec Carte, Kristov et Jerome (XII Singes)
 
    
- - A venir : épisode 10 le ??? avec pour thème ????? !
+ - A venir : épisode 11 le ??? avec pour thème ????? !
