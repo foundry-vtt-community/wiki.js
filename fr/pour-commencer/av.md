@@ -2,7 +2,7 @@
 title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2022-09-20T16:32:11.924Z
+date: 2022-09-20T16:32:43.683Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -131,9 +131,9 @@ Maintenant que le plus gros du travail est fait, nous allons activer l'Audio/Vid
 
 **LIVEKIT est une option - Foundry permet de base l'audio/video sans passer par LiveKit
 Une fois les étapes ci-dessus réalisées, vous pouvez déja tester l'audio/video intégré
-Livekit n'est utile que si vous avez des soucis avec l'audio/video de Foundry ** 
+Livekit n'est utile que si vous avez des soucis avec l'audio/video de Foundry** 
 
-Dans Foundry VTT, il vous faudra :
+Donc si vous souhaitez tout de même LiveKit dans Foundry VTT, il vous faudra :
 1. Télécharger le module ***'LiveKit AVClient'***
 Ce module améliore considérablement les performances l'audio/vidéo ainsi que la consommation réseau. Par contre il vous faudra créer un serveur par vous-même et pour cela je vous invite à consulter la procédure [LiveKit server chez Oracle Cloud](/fr/pour-commencer/livekit).
 
