@@ -2,7 +2,7 @@
 title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2022-05-22T17:19:15.657Z
+date: 2022-09-20T16:32:11.924Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -128,6 +128,10 @@ Maintenant nous allons devoir activer le SSL dans la VTT.
 Maintenant que le plus gros du travail est fait, nous allons activer l'Audio/Video pour les joueurs.
 - Pour que l'Audio/Video fonctionne à travers votre navigateur, vos joueurs devront ***OBLIGATOIREMENT*** posséder une Webcam. Si ce n'est pas le cas, il est toujours possible de se servir de votre smartphone comme Webcam pour le biais d'application telle que [IVCam](https://www.e2esoft.com/ivcam/) ou [Iriun Webcam](https://iriun.com/).
 - Dans tous les cas et même si vos joueurs ne veulent pas que l'on voit leur tête, il faudra une Webcam pour que le navigateur vous propose l'utilisation de l'Audio/Vidéo.
+
+**LIVEKIT est une option - Foundry permet de base l'audio/video sans passer par LiveKit
+Une fois les étapes ci-dessus réalisées, vous pouvez déja tester l'audio/video intégré
+Livekit n'est utile que si vous avez des soucis avec l'audio/video de Foundry ** 
 
 Dans Foundry VTT, il vous faudra :
 1. Télécharger le module ***'LiveKit AVClient'***
