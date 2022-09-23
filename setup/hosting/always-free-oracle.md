@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-09-23T17:11:40.379Z
+date: 2022-09-23T18:02:06.708Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -307,7 +307,6 @@ sudo apt-get upgrade -y
 <a id="D7" href="#D7">D7.</a> We need to use iptables to open the ports within Ubuntu to allow network traffic on the needed ports. We can do that by:
 ```
 sudo iptables -I INPUT 6 -m state --state NEW -p tcp --match multiport --dports 80,443,30000 -j ACCEPT
-sudo iptables -I INPUT 7 -p udp --dport https -j ACCEPT
 sudo netfilter-persistent save
 ```
 
