@@ -2,11 +2,17 @@
 title: 07. Extending the ActorSheet class
 description: 
 published: true
-date: 2022-05-19T13:19:30.623Z
+date: 2022-10-12T21:40:17.625Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
 ---
+
+> **Not Updated for Foundry v10**
+>
+> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
 
 The ActorSheet class is the class associated with our actor's character sheets. Let's take a look at what Boilerplate System does:
 
