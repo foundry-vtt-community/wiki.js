@@ -2,11 +2,17 @@
 title: 04. template.json
 description: 
 published: true
-date: 2022-05-19T13:19:22.334Z
+date: 2022-10-12T21:39:32.187Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z
 ---
+
+> **Not Updated for Foundry v10**
+>
+> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
 
 Your system's data model for character and item sheets is defined in `template.json`. Any changes you make to this file will require you to return to Foundry's setup screen and relaunch your world. The template.json for the Boilerplate System looks like this.
 
