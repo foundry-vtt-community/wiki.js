@@ -2,11 +2,17 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2022-05-19T13:19:27.775Z
+date: 2022-10-12T21:40:02.834Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
 ---
+
+> **Not Updated for Foundry v10**
+>
+> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
+> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
+{.is-warning}
 
 Let's start by taking a look a the BoilerplateActor class in `/module/documents/actor.js`. As with previous examples, you'll want to rename `BoilerplateActor` to whatever your system's name is, such as `MySystemNameActor`. Whenever you have calculations to your actor's data, you'll typically want to place them in the actor class itself like in the examples below, rather than in the actor sheet class (which we'll review in the next page of the tutorial). This file is a large one, so we'll review each section in detail.
 
