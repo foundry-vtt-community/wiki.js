@@ -2,7 +2,7 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2022-05-19T13:19:10.911Z
+date: 2022-10-12T21:37:04.879Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
@@ -20,6 +20,10 @@ When building a new system, you have several options to choose from. You can cop
 6. If the replace instructions from step 4 also included updating your description in system.json, you should edit that to be more readable now, such as "My System Name".
 
 ## Option 2:  Generate with npm
+
+> The **generator-foundry** package has not yet been updated for Foundry v10. For now, it's advised to instead use the Boilerplate system or League TypeScript Template instead.
+{.is-warning}
+
 
 You'll need to be comfortable with your terminal/command line and have npm installed. If you are, run the following two commands to install the CLI generator version of Boilerplate (https://www.npmjs.com/package/generator-foundry):
 
