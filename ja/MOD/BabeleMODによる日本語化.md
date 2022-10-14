@@ -2,7 +2,7 @@
 title: Babele MODによる日本語化
 description: Babele MODを使用した辞典の日本語化の解説です。
 published: false
-date: 2022-10-14T15:03:47.104Z
+date: 2022-10-14T15:07:47.880Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-14T15:03:47.104Z
@@ -10,7 +10,7 @@ dateCreated: 2022-10-14T15:03:47.104Z
 
 # Babele MODによる日本語化
 
-最終更新：2022/10/14
+最終更新：2022/10/15
 
 このページでは [Babele](https://gitlab.com/riccisi/foundryvtt-babele) MOD（以下Babele）を使用した辞典の日本語化について解説します。
 Babeleを使用するとことで辞典を日本語化するための翻訳ファイルの生成と日本語に書き換えた翻訳ファイルを辞典へ反映させることができます。
