@@ -2,7 +2,7 @@
 title: Babele MODによる日本語化
 description: Babele MODを使用した辞典の日本語化の解説です。
 published: false
-date: 2022-10-14T15:07:47.880Z
+date: 2022-10-14T15:08:08.910Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-14T15:03:47.104Z
