@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2022-09-16T06:55:17.495Z
+date: 2022-10-25T16:18:25.550Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -23,7 +23,8 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 7](https://www.youtube.com/watch?v=DnbxYBE3XCs) avec Kyllian pour **Warhammer**
  - Les Chroniques de la [Fonderie, Episode 8](https://youtu.be/mVJmaBIEWnc) avec **SecretFire de FoundryVTT** pour les new, et Vonv et Vétérini pour **l'Appel de Cthulhu**
  - Les Chroniques de la [Fonderie, Episode 9](https://www.youtube.com/watch?v=Ljjfd6nXuJM) avec Cyril Gronyon et Chris Torone CB. Sujet : **Savage Worlds**
- - Les Chroniques de la [Fonderie, Episode 10](https://www.youtube.com/watch?v=WSL3cAxI_D4) spécial **Cthulhu Hack/Les Encagés** avec Carte, Kristov et Jerome (XII Singes)
+ - Les Chroniques de la [Fonderie, Episode 10](https://www.youtube.com/watch?v=WSL3cAxI_D4) spécial **Cthulhu Hack/Les Encagés** avec Carter, Kristov et Jerome (XII Singes)
+ - Les Chroniques de la [Fonderie, Episode 11](https://www.youtube.com/watch?v=9BGlfo9xKqY) spécial **Custom System Builder (alias CSB)**, pour faire des systèmes de jeu sans développer avec LinkedFluuuhed, le créateur de CSB
 
    
- - A venir : épisode 11 le ??? avec pour thème ????? !
+ - A venir : épisode 12 le ??? avec pour thème ????? !
