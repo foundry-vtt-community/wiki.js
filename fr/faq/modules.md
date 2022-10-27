@@ -2,7 +2,7 @@
 title: Modules à connaitre
 description: une petite sélection de modules
 published: true
-date: 2022-05-19T13:21:26.155Z
+date: 2022-10-27T14:43:06.501Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-31T00:54:43.133Z
@@ -107,7 +107,6 @@ Pensez à mettre régulièrement vos modules à jour, il peut y avoir plusieurs 
 - **Let Me Roll That For You** ou **Monk's Token Bar** : (1) Permet de demander des jets à vos joueurs directement ou (3) être intrégrés à l'automatisation des combats (demande de sauvegarde automatique, etc)
 - **Minimal Rolling Enhancement for D&D5e (MRE)** : (1) Modification de l'affichage du chat pour le clarifier
 - **Mars 5e - Moerills alternative rolling style** : (1) Automatisation basique des combats
-- **Better Rolls** (2) Automatise certaines parties du combat (incompatible avec Midi qol)
 - **Midi qol** : (3) Permet d'automatiser complètement les combats et ajoute des options sur les effets (incompatible avec Better Rolls)
 - **Dynamic Active Effect using Active Effect** : (2) Simplifie la création d'effet avec des listes déroulantes et certaines commandes spécifiques
 - **Item Macro** : (3) Permet d'ajouter des macros à des sorts ou des objets
