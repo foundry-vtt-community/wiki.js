@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-10-17T04:34:43.321Z
+date: 2022-11-02T17:23:38.651Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -236,7 +236,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 >Due to security restrictions, in Windows it is recommended to save the foundry.key file in the Documents folder or similar user-specific folder. 
 >
->In Linux, you may need to `chmod 600` the keyfile if ssh reports an error due to the keyfile being too open.
+>In Linux or MacOS, you may need to `chmod 600` the keyfile if ssh reports an error due to the keyfile being too open.
 {.is-info}
 
 > You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
@@ -277,7 +277,9 @@ In many terminals, you can paste text with <kbd>right-click</kbd> or <kbd>shift<
 ssh -i foundry.key ubuntu@<public ip address>
 ```
 
->If you receive a `connection refused` error, the instance is probably still starting up and needs another minute or two before it can accept connections. Wait two minutes and try again. {.is-info}
+>If you receive a `connection refused` error, the instance is probably still starting up and needs another minute or two before it can accept connections. Wait two minutes and try again.
+>
+>If you receive an error about the keyfile being too open, see the info at step [C30](#C30). {.is-info}
 
 <a id="D3" href="#D3">D3.</a> You will likely be prompted to accept the ECDSA key. Type `yes` and hit <kbd>enter</kbd> to accept and continue.
 
