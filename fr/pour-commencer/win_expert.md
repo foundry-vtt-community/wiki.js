@@ -2,7 +2,7 @@
 title: 1.1. Windows (mode serveur)
 description: 
 published: true
-date: 2022-05-19T13:27:13.246Z
+date: 2022-11-07T14:43:11.029Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z
@@ -97,7 +97,7 @@ on aura un résultat ressemblant à ceci :
 
 - Pour redémarrer un processus, on indique pm2 restart :
 
->pm2 restart 0
+>pm2 restart 0 pm2 --update-env
 
 - Pour lancer le moniteur de processus de PM2 :
 
