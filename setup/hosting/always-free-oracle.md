@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-11-02T17:25:39.225Z
+date: 2022-11-14T23:24:23.683Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -603,7 +603,7 @@ If you would like to access the files in your userdata directory directly to mov
 
 ![Cyberduck - Open Connection](/images/generic-linux/cyberduck1.webp)
 
-<a id="D3" href="#D3">D3.</a> In the Open Connection window, click the dropdown menu and select **SFTP (SSH File Transfer Protocol)**
+<a id="F3" href="#F3">F3.</a> In the Open Connection window, click the dropdown menu and select **SFTP (SSH File Transfer Protocol)**
 
 ![Cyberduck - Choose SFTP](/images/generic-linux/cyberduck2.webp)
 
