@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-17T14:54:54.107Z
+date: 2022-11-17T15:12:11.436Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -77,6 +77,9 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 * Si le personnage monte de niveau, une fenêtre s'ouvre pour lui indiquer les changements à faire.
 ![9.jpg](/naheulbeuk/9.jpg)
 * La valeur de **Charge** se met à jour automatiquement en fonction de l'inventaire.
+* En cliquant sur **Protection** on peut voir la répartition de l'armure physique
+![15.jpg](/naheulbeuk/15.jpg)
+* Un calcul basique des déplacements en fonction des PR est disponible à droite de **Protection**. La première valeur est le déplacement possible depuis l'arrêt, la deuxième valeur est le déplacement possible lorsqu'on est lancé.
 
 ### Onglet Description
 
@@ -108,6 +111,36 @@ Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me
 Bref vous n'êtes pas du tout obligé d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
 
 ![12.jpg](/naheulbeuk/12.jpg)
+
+### Onglet Coups spéciaux
+
+Cet onglet n'est visible que si on a drag and drop un coup spécial sur le personnage.
+
+Il y a 2 types de coups spéciaux.
+
+Les coups de type Bourre Pif (BP) et les autres (GEN = généraliste, MEN = ménestrel, NIN = ninja).
+L'utilisation est identique pour les 2 types (toujours les d6 et d20 si existant) mais la fiche de description du coup est légèrement différente.
+
+Si un lancé de est possible ils sont donc présents.
+*Par exemple un coup de boule destabilisant qui demande la moyenne de la force et de l'adresse)*
+Sinon, l'épreuve est indiqué.
+*Par exemple un barrage d'acier demande une épreuve d'attaque classique, avec l'arme souhaitée*
+
+**Remarque :** ne soyez pas surpis de voir des "@fo" pour la force ou "@bonusfo" pour le bonus de force > 12. C'est la convention des raccourcis du système.
+J'en reparlerai dans le chapitre avancé sur les macros.
+
+![13.jpg](/naheulbeuk/13.jpg)
+
+### Onglet APE
+
+Cet onglet n'est visible que si on a drag and drop une Aptitude Parfois Etrange sur le personnage.
+
+Les APE sont tellement WTF qu'il est impossible d'automatiser les bonus associés. C'est donc à vous et à vos joueurs de vous rappeler de ces bonus, ou de faire un nouvel "Etat" pour s'en rappeler.
+
+Ceci étant dit, rien de particulier à rajouter.
+Simplement si vos joueurs gagnent une APE existante, il ne faut pas la drag and drop mais éditer celle qui existe pour changer le niveau et le bonus.
+
+![14.jpg](/naheulbeuk/14.jpg)
 
 ## Les PNJ
 
