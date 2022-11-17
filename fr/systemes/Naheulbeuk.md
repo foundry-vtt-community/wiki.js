@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-17T14:08:56.016Z
+date: 2022-11-17T14:35:56.301Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -25,6 +25,8 @@ Avabt de rentrer dans le détails, voici ce qui n'est pas dans le système actue
 
 ## Création d'un personnage
 
+### Onglet Caractéristiques
+
 Créez un nouveau personnage de type "character"
 
 ![1.jpg](/naheulbeuk/1.jpg)
@@ -33,23 +35,48 @@ Cliquez sur le portrait pour choisir une image associée à votre personnage.
 
 **Remarque :** 
 Un certain nombre de tokens sont inclus dans le système. Ils sont disponibles en allant à l'emplacement suivant : systems/naheulbeuk/assets/from-2minutetabletop.com-token
+Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor/
 
 ![2.jpg](/naheulbeuk/2.jpg)
 
 Pensez bien ensuite à cliquer sur **Prototype token** en haut à droite, puis cochez **Link Actor Data** dans l'onglet **Identity**.
 
+Puis commencez par cliquer sur **Caractéristiques** pour faire un lancer de dés de **1d6+7** et rentrez cette valeur dans la colonne **Base** du **Courage**.
+Répetez cette opération pour l'intelligence, le charisme, l'adresse et la force.
+Vous pouvez bien sûr modifier ces valeurs suivant votre façon de créer un personnage ;)
+Vous pouvez déjà remarquer que la résistance magique et l'esquive ont été mis à jour à partir de ces valeurs.
+
+En fonction de ces résultats, vous pouvez choisir une origine et un métier.
+
 Cliquez sur **Origine**, puis faites un drag and drop de l'origine souhaitée sur la feuille de personnage.
 
 Cliquez sur **Métier**, puis faites un drag and drop du métier souhaité sur la feuille de personnage.
 
-Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage. Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (Energie vitale, Energie Astrale et charge maximum).
+Si vous choisissez un mage, un prêtre ou un paladin, vous voyez apparaitre de nouvelles statistiques : l'énergie astrale, la magie physique et la magie psychique.
+Un onglet **Magie** apparait également, mais on en reparlera plus tard !
 
-Au passage, vous pouvez drag and drop les compétences héritées, et le nombre de compétences choisies correspondant au niveau de votre personnage.
+Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage. Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (énergie vitale, énergie Astrale, charge maximum, attaque, parade...).
 
-![3.jpg](/naheulbeuk/3.jpg)
+Au passage, vous pouvez drag and drop les **Compétences héritées**, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
+
+![4.jpg](/naheulbeuk/4.jpg)
 
 Vous pouvez maintenant renseigner le **Sexe** et les **Signes particuliers** de votre personnage.
 
+Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur initiale. 
+
+**Remarques :**
+* Lorsqu'il y a un **d20**, on peut cliquer dessus pour faire un lancer de dés. Par exemple si je clique sur le d20 de l'intelligence, j'obtiens :
+![5.jpg](/naheulbeuk/5.jpg)
+* Lorsqu'il y a un **d6**, on peut cliquer dessus pour ouvrir une interface permettant de modifier les caractéristiques du lancer :
+![6.jpg](/naheulbeuk/6.jpg)
+* L'oeil à droite de **Caractéristiques** permet de voir les objets équipés qui impactent mon personnage.
+![7.jpg](/naheulbeuk/7.jpg)
+* Si l'adresse du personnage passe au dessus de 12 au en dessous de 9, une fenêtre s'ouvre pour permettre de donner le bonus/malus.
+![8.jpg](/naheulbeuk/8.jpg)
+* Si le personnage monte de niveau, une fenêtre s'ouvre pour lui indiquer les changements à faire.
+![9.jpg](/naheulbeuk/9.jpg)
+* La valeur de **Charge** se met à jour automatiquement en fonction de l'inventaire.
 ## Les PNJ
 
 ## L'extension soldat
