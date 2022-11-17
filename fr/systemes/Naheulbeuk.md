@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-17T15:27:24.745Z
+date: 2022-11-17T15:28:17.192Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -16,7 +16,7 @@ Le système est fait pour la version 10 de Foundry.
 
 En cas de problème ou de question, vous pouvez demander de l'aide sur le Discord **La Fonderie** canal naheulbeuk.
 
-Avabt de rentrer dans le détails, voici ce qui n'est pas dans le système actuellement :
+Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actuellement :
  * Les sorts niveau 5 et plus
  * Les montures
  * Les objets des extensions Fernol, Confins, Jungle
