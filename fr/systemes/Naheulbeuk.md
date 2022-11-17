@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-17T15:12:11.436Z
+date: 2022-11-17T15:27:24.745Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -141,6 +141,28 @@ Ceci étant dit, rien de particulier à rajouter.
 Simplement si vos joueurs gagnent une APE existante, il ne faut pas la drag and drop mais éditer celle qui existe pour changer le niveau et le bonus.
 
 ![14.jpg](/naheulbeuk/14.jpg)
+
+### Onglet Magie
+
+Cet onglet n'est visible que si le personnage est un mage, un prêtre ou un paladin.
+
+Il contient un sous onglet **Capacités magiques** qui permet de sélectionner le type de magie du personnage, puis de nouveaux onglets en fonction des types sélectionnés.
+
+![16.jpg](/naheulbeuk/16.jpg)
+
+Comme pour le reste, il faut ensuite drag and drop les sorts à partir du compendium adapté.
+*Par exemple pour la magie du feu, je vais dans le compendium **Magie : feu** et je drag and drop les sorts niveau 1*
+
+![17.jpg](/naheulbeuk/17.jpg)
+
+**Remarques :**
+* Comme pour les coups spéciaux, on retrouve les raccourcis du système : "@mphy" pour la magie physique, "@bonusint" pour le bonus d'intelligence > 12 ...
+* L'incantation, la durée, la portée ET LE COÛT ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte les valeurs
+* En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. **C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**.
+* Si un sort a uniquement un **d6** pour son épreuve/dégât, c'est qu'il nécessite un peu plus qu'un simple lancer de dés. En cliquant dessus on ouvre une fenêtre avec plusieurs actions à faire.
+![18.jpg](/naheulbeuk/18.jpg)
+* En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sort !
+* Comme indiqué en introduction, seuls les sorts niveau 1-4 sont présents. A plus haut niveau il faut donc faire vos propres sorts, en s'inspirant des sorts existants.
 
 ## Les PNJ
 
