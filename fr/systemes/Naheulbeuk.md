@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-17T14:35:56.301Z
+date: 2022-11-17T14:54:54.107Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -72,11 +72,43 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 ![6.jpg](/naheulbeuk/6.jpg)
 * L'oeil à droite de **Caractéristiques** permet de voir les objets équipés qui impactent mon personnage.
 ![7.jpg](/naheulbeuk/7.jpg)
-* Si l'adresse du personnage passe au dessus de 12 au en dessous de 9, une fenêtre s'ouvre pour permettre de donner le bonus/malus.
+* Si l'adresse du personnage passe au dessus de 12 ou en dessous de 9, une fenêtre s'ouvre pour permettre de donner le bonus/malus.
 ![8.jpg](/naheulbeuk/8.jpg)
 * Si le personnage monte de niveau, une fenêtre s'ouvre pour lui indiquer les changements à faire.
 ![9.jpg](/naheulbeuk/9.jpg)
 * La valeur de **Charge** se met à jour automatiquement en fonction de l'inventaire.
+
+### Onglet Description
+
+Vous pouvez rentrer ici tout ce qui est important à savoir sur le personnage. 
+Un template de base est présent pour vous donner des idées.
+
+![10.jpg](/naheulbeuk/10.jpg)
+
+### Onglet Compétences
+
+On retrouve ici les compétences héritées et choisies drag and drop précédemment.
+Comme pour l'onglet **Caractéristiques** vous trouverez des d20 et d6 en fonction de si la compétence demande un jet de dés ou non.
+*Par exemple Erudition à des dés pour permettre un test d'intelligence en cas de lecture du langue inhabituelle*
+
+Si mon personnage joueur gagne une compétence, je peux chercher la compétence en question dans le compendium des compétences choisies ou héritées et la drag and drop. Puis je l'édite pour cocher **Compétence de base** et indiquer comment j'ai gagné la compétence.
+
+![11.jpg](/naheulbeuk/11.jpg)
+
+**/!\ Ajout personnel**
+J'aime bien demander à mes joueurs de faire un test sur une compétence, plutôt que sur une caractéristique. 
+Et je trouve ça dommage de limiter les actions si un personnage ne possède pas certaines compétences.
+*Par exemple, si mon personnage veut escalader un mur mais n'a pas la compétence, je trouve ça dommage de lui dire non.*
+
+J'ai donc rajouté la notion de **Compétences de base**.
+Une compétence de base c'est quoi ? 
+Une compétence que tout le monde peut avoir (nager, escalader, tenter de voler quelqu'un, se déplacer silencieusement...), mais une compétence qui est beaucoup plus dur à réaliser que la même compétence choisie ou héritée.
+Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me permet d'éviter de demander un jet de caractéristiques (courir/sauter, perceptionner ref Game of roles :D)
+
+Bref vous n'êtes pas du tout obligé d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
+
+![12.jpg](/naheulbeuk/12.jpg)
+
 ## Les PNJ
 
 ## L'extension soldat
