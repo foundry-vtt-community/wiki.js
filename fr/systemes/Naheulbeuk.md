@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-17T15:28:17.192Z
+date: 2022-11-18T14:48:38.943Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -157,12 +157,22 @@ Comme pour le reste, il faut ensuite drag and drop les sorts à partir du compen
 
 **Remarques :**
 * Comme pour les coups spéciaux, on retrouve les raccourcis du système : "@mphy" pour la magie physique, "@bonusint" pour le bonus d'intelligence > 12 ...
+Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles signifient que le PNJ cible doit faire un jet de dés (ici de résistance magique). Dans ces cas là, soit le MJ fait le jet de RM pour la cible, soit le joueur doit cibler le PNJ avant de faire le jet.
 * L'incantation, la durée, la portée ET LE COÛT ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte les valeurs
 * En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. **C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**.
 * Si un sort a uniquement un **d6** pour son épreuve/dégât, c'est qu'il nécessite un peu plus qu'un simple lancer de dés. En cliquant dessus on ouvre une fenêtre avec plusieurs actions à faire.
 ![18.jpg](/naheulbeuk/18.jpg)
 * En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sort !
 * Comme indiqué en introduction, seuls les sorts niveau 1-4 sont présents. A plus haut niveau il faut donc faire vos propres sorts, en s'inspirant des sorts existants.
+* Les sorts peuvent être drag an drop dans la barre de macro.
+![19.jpg](/naheulbeuk/19.jpg)
+
+### Onglet Inventaire
+
+L'inventaire contient 3 catégories.
+* **Armement et baston - objets en mains** : cette catégorie contient tous les objets tenus en main et qui sont équipés. Ce sont principalement les armes et munitions, mais on peut y retrouver d'autres objets (des instruments, des bannières...)
+* **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
+* **Equipement et Trucs** : cette catégorie contient l'ensemble des objets avant qu'ils ne soit équipés. On retrouve donc du matériel, des richesses, des livres des potions... 
 
 ## Les PNJ
 
