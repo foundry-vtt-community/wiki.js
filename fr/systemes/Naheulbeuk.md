@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T12:58:04.957Z
+date: 2022-11-19T12:58:43.143Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -69,11 +69,11 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 * Lorsqu'il y a un **d20**, on peut cliquer dessus pour faire un lancer de dés. Par exemple si je clique sur le d20 de l'intelligence, j'obtiens :
 ![5.jpg](/naheulbeuk/5.jpg =200x)
 * Lorsqu'il y a un **d6**, on peut cliquer dessus pour ouvrir une interface permettant de modifier les caractéristiques du lancer :
-![6.jpg](/naheulbeuk/6.jpg =350x)
+![6.jpg](/naheulbeuk/6.jpg =400x)
 * L'oeil à droite de **Caractéristiques** permet de voir les objets équipés qui impactent mon personnage.
 ![7.jpg](/naheulbeuk/7.jpg =400x)
 * Si l'adresse du personnage passe au dessus de 12 ou en dessous de 9, une fenêtre s'ouvre pour permettre de donner le bonus/malus.
-![8.jpg](/naheulbeuk/8.jpg = 400x)
+![8.jpg](/naheulbeuk/8.jpg =400x)
 * Si le personnage monte de niveau, une fenêtre s'ouvre pour lui indiquer les changements à faire.
 ![9.jpg](/naheulbeuk/9.jpg =400x)
 * La valeur de **Charge** se met à jour automatiquement en fonction de l'inventaire.
