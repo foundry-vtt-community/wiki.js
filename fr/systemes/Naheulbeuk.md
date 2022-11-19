@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:42:51.699Z
+date: 2022-11-19T20:21:38.565Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -87,6 +87,9 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 ![5.jpg](/naheulbeuk/5.jpg =200x)
 * Lorsqu'il y a un **d6**, on peut cliquer dessus pour ouvrir une interface permettant de modifier les caractéristiques du lancer :
 ![6.jpg](/naheulbeuk/6.jpg =400x)
+* Si un état (bonus, malédiction, blessure, folie...) est drag and drop sur le personnage, il apparait sur cet onglet. Cet état n'est pas appliqué tant que la case blanche n'est pas cochée.
+*Par exemple, mon personnage attrape le rhume des pierres. Je drag and drop cet état depuis le compendium des maladies. Au bout de 4h, les symptomes apparaissent. Je clique donc sur le carré blanc pour activer la prise en compte des malus.*
+![25.jpg](/naheulbeuk/25.jpg =400x)
 * L'oeil à droite de **Caractéristiques** permet de voir les objets équipés qui impactent mon personnage.
 ![7.jpg](/naheulbeuk/7.jpg =400x)
 * Si l'adresse du personnage passe au dessus de 12 ou en dessous de 9, une fenêtre s'ouvre pour permettre de donner le bonus/malus.
@@ -212,7 +215,7 @@ Il est divisé en 3 sous catégories :
 
 ## Les PNJ {#titre2}
 Dans ce chapitre, nous n'allons pas voir comment créer un nouveau PNJ, mais plutôt regarder le fonctionnement de ceux déjà créés.
-En effet de manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
+De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
 
 Avant de commencer, presque tous les objets précédents s’utilisent sur les rencontres (les états, les coups spéciaux, les sorts…). Seul l’équipement est différent puisque pour une rencontre il ne sert qu’à remplir l’inventaire. Les attaques passent par un nouveau type d’objet.
 J’ai donc rajouté 3 types d’objets en plus pour les rencontres : 
