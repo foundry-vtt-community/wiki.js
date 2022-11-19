@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T10:14:28.147Z
+date: 2022-11-19T10:40:36.686Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -176,8 +176,14 @@ C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la par
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
 ![21.jpg](/naheulbeuk/21.jpg)
-* **Equipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés. Il est divisé en 3 sous catégories :
+* **Equipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés.
+Certains objets peuvent être équipés, d'autres utilisés, d'autres encore avoir des jets de dés.
+Il est divisé en 3 sous catégories :
   * **Les objets dans le sac :** c'est la que seront la grosse majorité des objets du personnage. Pour mieux les retrouver, ils sont placés dans un troisième niveau de catégories qui s'affichent uniquement si elles contiennent des objets. Ce sont les objets divers, les livres, les ingrédients, les potions, les armes, les armures, la nourriture, les richesses, les montures, les objets personnels...
+  ![22.jpg](/naheulbeuk/22.jpg)
+  A noter que la charge max du sac se met à jour lorsqu'un ou plusieurs sacs sont équipés.
+  ![23.jpg](/naheulbeuk/23.jpg)
+  A noter également que les boutons tout à droite permetttent de changer un objet de catégorie d'inventaire : la grosse valise met l'objet dans le sac,la petite valise met l'objet dans la bourse et la croix place l'objet en dehors du sac. 
   * **Les objets dans la bourse** : on retrouve ici les objets qui sont dans la bourse, donc elle est utilisée principalements pour les pièces.
   * **Les objets en dehors du sac** : tout ce qui n'est pas dans le sac ou dans la bourse devrait être rangé ici : une guitare en bandoulière, une épée à la ceinture, un sac sur le dos...
   
