@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:17:52.098Z
+date: 2022-11-19T13:30:05.361Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -22,8 +22,17 @@ Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actue
  * Les objets des extensions Fernol, Confins, Jungle
  * Les frappes localisées
  * Surement quelques autres petits trucs que j'ai zappé :D
- 
+
+## Sommaire
 [Création d'un personnage](#titre1)
+[Les PNJ](#titre2)
+[L'extension soldat](#titre3)
+[L'extension ingénieur](#titre4)
+[Les objets](#titre5)
+[Les tableaux](#titre7)
+[Les macros](#titre8)
+
+## Création d'un personnage {#titre1}
 * [Onglet Caractéristiques](#titre11)
 * [Onglet Description](#titre12)
 * [Onglet Compétences](#titre13)
@@ -31,8 +40,7 @@ Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actue
 * [Onglet APE](#titre15)
 * [Onglet Magie](#titre16)
 * [Onglet Inventaire](#titre17)
-
-## Création d'un personnage {#titre1}
+<br>
 
 ### Onglet Caractéristiques {#titre11}
 
@@ -204,60 +212,84 @@ Il est divisé en 3 sous catégories :
 
 ## Les PNJ {#titre2}
 
-## L'extension soldat
+## L'extension soldat {#titre3}
 
-## L'extension ingénieur
+## L'extension ingénieur {#titre4}
 
-## Les "objets" 
+## Les objets {#titre5}
+* [Les trucs](#titre51)
+* [Les armures et autres objets portés](#titre52)
+* [Les armes et autres objets en mains](#titre53)
+* [Les sacs](#titre54)
+* [Les reliques](#titre55)
+* [Les instruments de musique](#titre56)
+* [Les armes à poudre](#titre57)
+* [Les états](#titre58)
+* [Les sorts](#titre59)
+* [Les compétences](#titre60)
+* [Les métiers et origines](#titre61)
+* [Les APE](#titre62)
+* [Les coups spéciaux](#titre63)
+* [Les gemmes](#titre64)
+* [Les pièges](#titre65)
+* [Les régions](#titre66)
+* [Les traits](#titre67)
 
-### Les trucs
+### Les trucs {#titre51}
 
-### Les armures et autres objets portés
+### Les armures et autres objets portés {#titre52}
 
-### Les armes et autres objets en mains
+### Les armes et autres objets en mains {#titre53}
 
-### Les sacs
+### Les sacs {#titre54}
 
-### Les reliques
+### Les reliques {#titre55}
 
-### Les instruments de musique
+### Les instruments de musique {#titre56}
 
-### Les armes à poudre
+### Les armes à poudre {#titre57}
 
-### Les états
+### Les états {#titre58}
 
-### Les sorts
+### Les sorts {#titre59}
 
-### Les compétences
+### Les compétences {#titre60}
 
-### Les métiers et origines
+### Les métiers et origines {#titre61}
 
-### Les APE
+### Les APE {#titre62}
 
-### Les coups spéciaux
+### Les coups spéciaux {#titre63}
 
-### Les gemmes
+### Les gemmes {#titre64}
 
-### Les pièges
+### Les pièges {#titre65}
 
-### Les régions
+### Les régions {#titre66}
 
-### Les traits
+### Les traits {#titre67}
 
-## Les tableaux
+## Les tableaux {#titre7}
 
-## Les macros
+## Les macros {#titre8}
+* [Chercher un objet et générer un magasin](#titre81)
+* [Combat rapide](#titre82)
+* [Lancer Custom](#titre83)
+* [Rechercher un compendium](#titre84)
+* [Rencontres : liste et "générateur"](#titre85)
+* [Tirer un élément aléatoire d'un compendium](#titre86)
+* [Avancé](#titre87)
 
-### Chercher un objet et générer un magasin
+### Chercher un objet et générer un magasin {#titre81}
 
-### Combat rapide
+### Combat rapide {#titre82}
 
-### Lancer Custom
+### Lancer Custom {#titre83}
 
-### Rechercher un compendium
+### Rechercher un compendium {#titre84}
 
-### Rencontres : liste et "générateur"
+### Rencontres : liste et "générateur" {#titre85}
 
-### Tirer un élément aléatoire d'un compendium
+### Tirer un élément aléatoire d'un compendium {#titre86}
 
-### Avancé
+### Avancé {#titre87}
