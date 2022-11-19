@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:02:00.266Z
+date: 2022-11-19T13:03:12.894Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -161,7 +161,7 @@ Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles s
 * L'incantation, la durée, la portée ET LE COÛT ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte les valeurs
 * En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. **C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**.
 * Si un sort a uniquement un **d6** pour son épreuve/dégât, c'est qu'il nécessite un peu plus qu'un simple lancer de dés. En cliquant dessus on ouvre une fenêtre avec plusieurs actions à faire.
-![18.jpg](/naheulbeuk/18.jpg =500x)
+![18.jpg](/naheulbeuk/18.jpg =700x)
 * En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sort !
 * Comme indiqué en introduction, seuls les sorts niveau 1-4 sont présents. A plus haut niveau il faut donc faire vos propres sorts, en s'inspirant des sorts existants.
 * Les sorts peuvent être drag an drop dans la barre de macro.
