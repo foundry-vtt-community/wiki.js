@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T12:53:36.226Z
+date: 2022-11-19T12:54:57.158Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -29,7 +29,7 @@ Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actue
 
 Créez un nouveau personnage de type "character"
 
-![1.jpg](/naheulbeuk/1.jpg)
+![1.jpg](/naheulbeuk/1.jpg =250x)
 
 Cliquez sur le portrait pour choisir une image associée à votre personnage.
 
