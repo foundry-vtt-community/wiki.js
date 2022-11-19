@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T10:42:02.486Z
+date: 2022-11-19T10:47:26.262Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -181,11 +181,14 @@ Certains objets peuvent être équipés, d'autres utilisés, d'autres encore avo
 Il est divisé en 3 sous catégories :
   * **Les objets dans le sac :** c'est la que seront la grosse majorité des objets du personnage. Pour mieux les retrouver, ils sont placés dans un troisième niveau de catégories qui s'affichent uniquement si elles contiennent des objets. Ce sont les objets divers, les livres, les ingrédients, les potions, les armes, les armures, la nourriture, les richesses, les montures, les objets personnels...
   ![22.jpg](/naheulbeuk/22.jpg)
-  A noter que la charge max du sac se met à jour lorsqu'un ou plusieurs sacs sont équipés.
-  ![23.jpg](/naheulbeuk/23.jpg)
-  A noter également que les boutons tout à droite permetttent de changer un objet de catégorie d'inventaire : la grosse valise met l'objet dans le sac,la petite valise met l'objet dans la bourse et la croix place l'objet en dehors du sac. 
   * **Les objets dans la bourse** : on retrouve ici les objets qui sont dans la bourse, donc elle est utilisée principalements pour les pièces.
   * **Les objets en dehors du sac** : tout ce qui n'est pas dans le sac ou dans la bourse devrait être rangé ici : une guitare en bandoulière, une épée à la ceinture, un sac sur le dos...
+  
+**Remarques :**
+* La charge max du sac et de la bourse se mettent à jour lorsqu'un ou plusieurs sacs/bourses sont équipés.
+  ![23.jpg](/naheulbeuk/23.jpg)
+* Les boutons tout à droite des objets permetttent de changer un objet de catégorie d'inventaire : la grosse valise met l'objet dans le sac,la petite valise met l'objet dans la bourse et la croix place l'objet en dehors du sac. 
+* Tous les objets peuvent être drag and drop dans la barre de macro. Si c'est une arme, on pourra faire les différents jet de dés à partir d'ici.
   
 
 ## Les PNJ
