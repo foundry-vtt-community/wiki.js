@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:03:58.830Z
+date: 2022-11-19T13:04:45.212Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -165,7 +165,7 @@ Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles s
 * En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sort !
 * Comme indiqué en introduction, seuls les sorts niveau 1-4 sont présents. A plus haut niveau il faut donc faire vos propres sorts, en s'inspirant des sorts existants.
 * Les sorts peuvent être drag an drop dans la barre de macro.
-![19.jpg](/naheulbeuk/19.jpg =500x)
+![19.jpg](/naheulbeuk/19.jpg =700x)
 <br/>
 ### Onglet Inventaire
 
