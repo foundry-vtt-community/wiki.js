@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:37:25.004Z
+date: 2022-11-19T13:39:54.771Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -211,10 +211,90 @@ Il est divisé en 3 sous catégories :
 
 
 ## Les PNJ {#titre2}
+Avant de commencer, presque tous les objets précédents s’utilisent sur les rencontres (les états, les coups spéciaux, les sorts…). Seul l’équipement est différent puisque pour une rencontre il ne sert qu’à remplir l’inventaire. Les attaques passent par un nouveau type d’objet.
+J’ai donc rajouté 3 types d’objets en plus pour les rencontres : 
+•	Les attaques (une rencontre n’utilise pas les armes classiques comme je l’ai dit plus haut)
+•	Les traits (pour ceux qui ont le bestiaire papier c’est un truc sympa pour améliorer le gameplay)
+•	Les régions (pour dire d’où vient une rencontre)
+Maintenant pour la feuille de rencontre, on commence par choisir une catégorie, puis on drag and drop les traits et les régions depuis le compendium Système : bestiaire données. Ensuite on rentre les caractéristiques du monstre.
+ 
+En cliquant sur le + à droite de Carac, on a accès à quelques stats supplémentaires, utiles notamment pour les mages :
+  
+En dessous on retrouve les états (cf la première capture) puis la description.
+Ensuite, le deuxième onglet est dédié au combat.
+On y retrouve les attaques, les sors, les coups spéciaux et la description des infos utiles.
+ 
+N’oublie pas que tu peux créer des états (par exemple un empoisonnement par dague empoisonnée), ou en prendre un existant, et le drag and drop dans la description du monstre pour pouvoir le retrouver facilement 😊
+Enfin l’onglet inventaire permet de gagner du temps si les aventuriers veulent loot cette rencontre !
+ 
+
+Comme d’habitude, je te conseille de regarder ce qui existe dans le bestiaire pour t’en inspirer avant de créer ta propre rencontre ! Tu verras que contrairement aux PJ, c’est vraiment très simple.
+ 
 
 ## L'extension soldat {#titre3}
+Pour l’extension soldat, j’ai regroupé toutes les informations utiles dans la fiche de métier.
+Tu as donc uniquement besoin d’aller dans le compendium Divers : métiers et de cliquer sur le métier souhaité :
+ 
+Au passage, le volontaire reste un aventurier, donc pour lui, à toi de voir comment le gérer. Il faudra que tu ailles consulter le pdf pour connaitre sa solde 😉
+Lorsque j’ouvre un métier, je retrouve les informations suivantes :
+•	La description
+•	Les prérequis
+•	La carrière en fonction du niveau, avec la solde
+•	Les compétences
+•	Les coups spéciaux
+•	Un lien vers tout l’équipement
+•	Un lien vers les tableaux de récompenses et de punitions
+ 
+
+Tout ce contenu est standard, donc je vais uniquement parler de l’équipement car j’ai utilisé une nouvelle façon de centraliser les données.
+Je clique donc sur Extension soldat : équipement
+Le document qui s’ouvre est de type « Note ».
+J’ai repris le contenu des PDF en remplaçant les objets par leur lien vers un compendium.
+Ils peuvent donc être ouvert ou drag and drop à partir de cette Note.
+ 
+
+Dernière remarque, je n’ai pas encore ajouté les montures au système, mais j’ai quand même bricolé un truc pour cette extension. Ce sont donc des objets à drag and drop sur la fiche de héros.
+Il y a maintenant une catégorie « Monture » dans l’inventaire, et à partir d’ici on peut cliquer sur Equiper/Appliquer pour symboliser le fait de monter sur la monture puis faire un jet d’attaque si applicable.
+A toi de rajouter un token si tu veux 😉 Personnellement je n’en rajoute pas, je trouve ça trop pénible pour mes joueurs de devoir bouger ce token en permanence, c’est pour ça que c’est un objet et pas un acteur. Mais le fonctionnement évoluera probablement quand j’attaquerai les montures car pour l’instant c’est très basique.
 
 ## L'extension ingénieur {#titre4}
+Pas mal de petites nouveautés pour ce supplément.
+Déjà j’ai rajouté des fiches métiers pour toutes les spécialisations de l’ingénieur :
+ 
+
+Chaque fiche contient le détail de la spécialisation avec les objets qui peuvent être drag and drop :
+ 
+Il y a aussi la liste des plans et recettes et les matériaux et outils des ingénieurs. Si tu ne veux pas que tes joueurs connaissent cette info, n’hésite pas à la passer en secret via l’éditeur 😊
+La liste des plans contient tous les plans classés par catégorie d’ingénieur :
+ 
+La liste des matériaux et outils contient… les matériaux et les outils de l’ingénieur, logique :D
+ 
+Petite remarque, les plans ont des matériaux qui ne sont pas listés ici : soit parce qu’ils existaient déjà ailleurs, soit parce qu’ils sont exotiques (c’est pas moi qui ai décidé ça, je ne fais que réécrire les PDF dans le système ^^ )
+Les plans sont un nouveau type d’objet. Ils peuvent être drag and drop sur les feuilles de personnage.
+Ils vont dans la catégorie Ingrédients (ce qui se rapproche le plus de l’artisanat) et ont de nouveau lancer de dés.
+
+ 
+
+Lorsqu’on clique dessus, on peut faire un jet de confection de spécialiste (on maitrise la spécialité d’ingénieur nécessaire) ou de non spécialiste. Les calculs avec l’ingéniosité sont complètement automatique 😊
+
+ 
+
+Si j’ouvre un plan, je retrouve :
+•	la spécialité
+•	le niveau nécessaire pour fabriquer l’objet
+•	la catégorie (pour le classement dans l’inventaire)
+•	les matériaux nécessaires
+•	les outils nécessaires
+•	le temps de confection
+•	la difficulté (utilisée pour les calculs d’ingéniosité)
+•	l’XP en cas de réussite
+•	Le malus pour le non-spécialiste (utilisé pour les calculs d’ingéniosité)
+•	Le prix
+•	Le détail de la confection, avec le lien vers l’objet créé (si approprié) qui peut être drag and drop dans l’inventaire.
+ 
+Pour finir, si tu cherches un matériau ou un outil, comme je disais précédemment ils ne sont pas tous dans la liste issue du PDF. Donc je te conseille d’utiliser plutôt l’outil de recherche dispo dans le compendium des macros ! En plus tu pourras directement l’ajouter à un magasin.
+ 
+ 
 
 ## Les objets {#titre5}
 * [Les trucs](#titre51)
