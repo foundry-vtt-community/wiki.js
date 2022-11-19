@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-18T14:48:38.943Z
+date: 2022-11-19T10:14:28.147Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -18,7 +18,7 @@ En cas de problème ou de question, vous pouvez demander de l'aide sur le Discor
 
 Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actuellement :
  * Les sorts niveau 5 et plus
- * Les montures
+ * Les montures (il y a quand même quelques exemples avec l'extension soldat)
  * Les objets des extensions Fernol, Confins, Jungle
  * Les frappes localisées
  * Surement quelques autres petits trucs que j'ai zappé :D
@@ -170,9 +170,17 @@ Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles s
 ### Onglet Inventaire
 
 L'inventaire contient 3 catégories.
-* **Armement et baston - objets en mains** : cette catégorie contient tous les objets tenus en main et qui sont équipés. Ce sont principalement les armes et munitions, mais on peut y retrouver d'autres objets (des instruments, des bannières...)
+* **Armement et baston - objets en mains** : cette catégorie contient tous les objets tenus en main et qui sont équipés. Ce sont principalement les armes, les boucliers et les munitions, mais on peut y retrouver d'autres objets (des instruments, des bannières...).
+C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la parade, et la rupture.
+![20.jpg](/naheulbeuk/20.jpg)
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
-* **Equipement et Trucs** : cette catégorie contient l'ensemble des objets avant qu'ils ne soit équipés. On retrouve donc du matériel, des richesses, des livres des potions... 
+On peut faire ici les tests de rupture.
+![21.jpg](/naheulbeuk/21.jpg)
+* **Equipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés. Il est divisé en 3 sous catégories :
+  * **Les objets dans le sac :** c'est la que seront la grosse majorité des objets du personnage. Pour mieux les retrouver, ils sont placés dans un troisième niveau de catégories qui s'affichent uniquement si elles contiennent des objets. Ce sont les objets divers, les livres, les ingrédients, les potions, les armes, les armures, la nourriture, les richesses, les montures, les objets personnels...
+  * **Les objets dans la bourse** : on retrouve ici les objets qui sont dans la bourse, donc elle est utilisée principalements pour les pièces.
+  * **Les objets en dehors du sac** : tout ce qui n'est pas dans le sac ou dans la bourse devrait être rangé ici : une guitare en bandoulière, une épée à la ceinture, un sac sur le dos...
+  
 
 ## Les PNJ
 
