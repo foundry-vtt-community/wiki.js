@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:06:00.356Z
+date: 2022-11-19T13:17:52.098Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -22,10 +22,19 @@ Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actue
  * Les objets des extensions Fernol, Confins, Jungle
  * Les frappes localisées
  * Surement quelques autres petits trucs que j'ai zappé :D
+ 
+[Création d'un personnage](#titre1)
+* [Onglet Caractéristiques](#titre11)
+* [Onglet Description](#titre12)
+* [Onglet Compétences](#titre13)
+* [Onglet Coups spéciaux](#titre14)
+* [Onglet APE](#titre15)
+* [Onglet Magie](#titre16)
+* [Onglet Inventaire](#titre17)
 
-## Création d'un personnage
+## Création d'un personnage {#titre1}
 
-### Onglet Caractéristiques
+### Onglet Caractéristiques {#titre11}
 
 Créez un nouveau personnage de type "character"
 
@@ -81,14 +90,14 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 ![15.jpg](/naheulbeuk/15.jpg =400x)
 * Un calcul basique des déplacements en fonction des PR est disponible à droite de **Protection**. La première valeur est le déplacement possible depuis l'arrêt, la deuxième valeur est le déplacement possible lorsqu'on est lancé.
 <br/>
-### Onglet Description
+### Onglet Description {#titre12}
 
 Vous pouvez rentrer ici tout ce qui est important à savoir sur le personnage. 
 Un template de base est présent pour vous donner des idées.
 
 ![10.jpg](/naheulbeuk/10.jpg =500x)
 <br/>
-### Onglet Compétences
+### Onglet Compétences {#titre13}
 
 On retrouve ici les compétences héritées et choisies drag and drop précédemment.
 Comme pour l'onglet **Caractéristiques** vous trouverez des d20 et d6 en fonction de si la compétence demande un jet de dés ou non.
@@ -112,7 +121,7 @@ Bref vous n'êtes pas du tout obligé d'utiliser ça, mais si vous le souhaitez 
 
 ![12.jpg](/naheulbeuk/12.jpg =700x)
 <br/>
-### Onglet Coups spéciaux
+### Onglet Coups spéciaux {#titre14}
 
 Cet onglet n'est visible que si on a drag and drop un coup spécial sur le personnage.
 
@@ -131,7 +140,7 @@ J'en reparlerai dans le chapitre avancé sur les macros.
 
 ![13.jpg](/naheulbeuk/13.jpg =500x)
 <br/>
-### Onglet APE
+### Onglet APE {#titre15}
 
 Cet onglet n'est visible que si on a drag and drop une Aptitude Parfois Etrange sur le personnage.
 
@@ -142,7 +151,7 @@ Simplement si vos joueurs gagnent une APE existante, il ne faut pas la drag and 
 
 ![14.jpg](/naheulbeuk/14.jpg =500x)
 <br/>
-### Onglet Magie
+### Onglet Magie {#titre16}
 
 Cet onglet n'est visible que si le personnage est un mage, un prêtre ou un paladin.
 
@@ -167,7 +176,7 @@ Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles s
 * Les sorts peuvent être drag an drop dans la barre de macro.
 ![19.jpg](/naheulbeuk/19.jpg =700x)
 <br/>
-### Onglet Inventaire
+### Onglet Inventaire {#titre17}
 
 L'inventaire contient 3 catégories.
 * **Armement et baston - objets en mains** : cette catégorie contient tous les objets tenus en main et qui sont équipés. Ce sont principalement les armes, les boucliers et les munitions, mais on peut y retrouver d'autres objets (des instruments, des bannières...).
@@ -193,7 +202,7 @@ Il est divisé en 3 sous catégories :
 * Un objet équipé peut être consulté, mais pas modifié.
 
 
-## Les PNJ
+## Les PNJ {#titre2}
 
 ## L'extension soldat
 
