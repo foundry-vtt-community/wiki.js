@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:39:54.771Z
+date: 2022-11-19T13:41:07.270Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -211,6 +211,7 @@ Il est divisé en 3 sous catégories :
 
 
 ## Les PNJ {#titre2}
+Dans ce chapitre, nous 
 Avant de commencer, presque tous les objets précédents s’utilisent sur les rencontres (les états, les coups spéciaux, les sorts…). Seul l’équipement est différent puisque pour une rencontre il ne sert qu’à remplir l’inventaire. Les attaques passent par un nouveau type d’objet.
 J’ai donc rajouté 3 types d’objets en plus pour les rencontres : 
 •	Les attaques (une rencontre n’utilise pas les armes classiques comme je l’ai dit plus haut)
