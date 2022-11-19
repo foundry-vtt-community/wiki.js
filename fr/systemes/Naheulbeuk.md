@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T13:41:07.270Z
+date: 2022-11-19T13:42:51.699Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -211,7 +211,9 @@ Il est divisé en 3 sous catégories :
 
 
 ## Les PNJ {#titre2}
-Dans ce chapitre, nous 
+Dans ce chapitre, nous n'allons pas voir comment créer un nouveau PNJ, mais plutôt regarder le fonctionnement de ceux déjà créés.
+En effet de manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
+
 Avant de commencer, presque tous les objets précédents s’utilisent sur les rencontres (les états, les coups spéciaux, les sorts…). Seul l’équipement est différent puisque pour une rencontre il ne sert qu’à remplir l’inventaire. Les attaques passent par un nouveau type d’objet.
 J’ai donc rajouté 3 types d’objets en plus pour les rencontres : 
 •	Les attaques (une rencontre n’utilise pas les armes classiques comme je l’ai dit plus haut)
