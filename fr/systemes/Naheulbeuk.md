@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T20:36:31.841Z
+date: 2022-11-19T20:37:06.762Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -50,7 +50,6 @@ Créez un nouveau personnage de type "character"
 
 Cliquez sur le portrait pour choisir une image associée à votre personnage.
 
-**Remarque :** 
 Un certain nombre de tokens sont inclus dans le système. Ils sont disponibles en allant à l'emplacement suivant : systems/naheulbeuk/assets/from-2minutetabletop.com-token
 Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor/
 
