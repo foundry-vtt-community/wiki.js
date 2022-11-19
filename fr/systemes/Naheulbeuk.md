@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T10:47:26.262Z
+date: 2022-11-19T10:49:52.511Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -189,7 +189,7 @@ Il est divisé en 3 sous catégories :
   ![23.jpg](/naheulbeuk/23.jpg)
 * Les boutons tout à droite des objets permetttent de changer un objet de catégorie d'inventaire : la grosse valise met l'objet dans le sac,la petite valise met l'objet dans la bourse et la croix place l'objet en dehors du sac. 
 * Tous les objets peuvent être drag and drop dans la barre de macro. Si c'est une arme, on pourra faire les différents jet de dés à partir d'ici.
-  
+  ![24.jpg](/naheulbeuk/24.jpg)
 
 ## Les PNJ
 
