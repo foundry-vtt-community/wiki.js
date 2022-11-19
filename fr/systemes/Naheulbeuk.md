@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T12:57:27.755Z
+date: 2022-11-19T12:58:04.957Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -59,7 +59,7 @@ Les origines et les métiers ne mettent pas à jour automatiquement la fiche du 
 
 Au passage, vous pouvez drag and drop les **Compétences héritées**, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
 
-![4.jpg](/naheulbeuk/4.jpg =500x)
+![4.jpg](/naheulbeuk/4.jpg =700x)
 
 Vous pouvez maintenant renseigner le **Sexe** et les **Signes particuliers** de votre personnage.
 
