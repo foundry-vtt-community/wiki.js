@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T12:55:13.963Z
+date: 2022-11-19T12:55:40.700Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -37,7 +37,7 @@ Cliquez sur le portrait pour choisir une image associée à votre personnage.
 Un certain nombre de tokens sont inclus dans le système. Ils sont disponibles en allant à l'emplacement suivant : systems/naheulbeuk/assets/from-2minutetabletop.com-token
 Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor/
 
-![2.jpg](/naheulbeuk/2.jpg)
+![2.jpg](/naheulbeuk/2.jpg =250x)
 
 Pensez bien ensuite à cliquer sur **Prototype token** en haut à droite, puis cochez **Link Actor Data** dans l'onglet **Identity**.
 
