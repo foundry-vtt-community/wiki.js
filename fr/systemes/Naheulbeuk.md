@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-19T20:37:06.762Z
+date: 2022-11-20T08:25:21.000Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -71,7 +71,7 @@ Cliquez sur **Métier**, puis faites un drag and drop du métier souhaité sur l
 Si vous choisissez un mage, un prêtre ou un paladin, vous voyez apparaitre de nouvelles statistiques : l'énergie astrale, la magie physique et la magie psychique.
 Un onglet **Magie** apparait également, mais on en reparlera plus tard !
 
-Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage. Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (énergie vitale, énergie Astrale, charge maximum, attaque, parade...).
+<u>Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage.</u> Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (énergie vitale, énergie astrale, charge maximum, attaque, parade...).
 
 Au passage, vous pouvez drag and drop les **Compétences héritées**, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
 
