@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T10:34:20.781Z
+date: 2022-11-20T10:36:29.647Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -258,6 +258,7 @@ Théoriquement tous les états fonctionnent avec les PNJ, mais étant donné que
 **L'onglet Combat contient :**
 * Les armes/attaques avec leur valeurs
 Comme pour le reste, un **d20** permet un jet de dés directement, un **d6** permet un jet de dés customisé et un **d6 seul** permet un jet de dés spécial.
+![36.jpg](/naheulbeuk/36.jpg =500x)
 <u>A noter :</u> sur Naheulbeuk, les PNJ n'utilisent pas les armes des PJ. Ils ont des attaques qui intègrent directement l'épreuve et les dégâts. C'est donc un objet Foundry différent qui est utilisé.
 ![35.jpg](/naheulbeuk/35.jpg =500x)
 * Les coups spéciaux ou les sorts qui ont été drag and drop
