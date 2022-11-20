@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:22:01.222Z
+date: 2022-11-20T13:23:45.621Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -126,9 +126,9 @@ Et je trouve ça dommage de limiter les actions si un personnage ne possède pas
 J'ai donc rajouté la notion de **Compétences de base**.
 Une compétence de base c'est quoi ? 
 Une compétence que tout le monde peut avoir (nager, escalader, tenter de voler quelqu'un, se déplacer silencieusement...), mais une compétence qui est beaucoup plus dur à réussir que la même compétence choisie ou héritée.
-Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me permet d'éviter de demander un jet de caractéristiques (courir/sauter, perceptionner ref Game of roles :D)
+Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me permet d'éviter de demander un jet de caractéristique (courir/sauter, perceptionner ref Game of roles :D)
 
-Bref vous n'êtes pas du tout obligé d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
+Bref vous n'êtes pas du tout obligés d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
 Vous pouvez aussi les utiliser et modifier les malus que j'ai fixé. 
 Personnelement j'aime bien rajouter "@malus-mvt-pr" pour prendre en compte l'armure physique de mon personage. 
 *Par exemple déplacement silencieux donnerait : @ad -2 -@malus-mvt-pr*
