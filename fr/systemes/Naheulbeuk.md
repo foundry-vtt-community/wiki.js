@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T09:19:36.037Z
+date: 2022-11-20T09:58:34.690Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -226,24 +226,23 @@ Dans ce chapitre, nous n'allons pas voir comment créer un nouveau PNJ, mais plu
 De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
 
 Le système contient des PNJ dans le compendium **Bestiaire**.
-Avant de commencer, presque tous les objets précédents s’utilisent sur les rencontres (les états, les coups spéciaux, les sorts…). Seul l’équipement est différent puisque pour une rencontre il ne sert qu’à remplir l’inventaire. Les attaques passent par un nouveau type d’objet.
-J’ai donc rajouté 3 types d’objets en plus pour les rencontres : 
-•	Les attaques (une rencontre n’utilise pas les armes classiques comme je l’ai dit plus haut)
-•	Les traits (pour ceux qui ont le bestiaire papier c’est un truc sympa pour améliorer le gameplay)
-•	Les régions (pour dire d’où vient une rencontre)
-Maintenant pour la feuille de rencontre, on commence par choisir une catégorie, puis on drag and drop les traits et les régions depuis le compendium Système : bestiaire données. Ensuite on rentre les caractéristiques du monstre.
- 
-En cliquant sur le + à droite de Carac, on a accès à quelques stats supplémentaires, utiles notamment pour les mages :
-  
-En dessous on retrouve les états (cf la première capture) puis la description.
-Ensuite, le deuxième onglet est dédié au combat.
-On y retrouve les attaques, les sors, les coups spéciaux et la description des infos utiles.
- 
-N’oublie pas que tu peux créer des états (par exemple un empoisonnement par dague empoisonnée), ou en prendre un existant, et le drag and drop dans la description du monstre pour pouvoir le retrouver facilement 😊
-Enfin l’onglet inventaire permet de gagner du temps si les aventuriers veulent loot cette rencontre !
- 
+Je vais prendre comme exemple un Gobelin ingénieur.
 
-Comme d’habitude, je te conseille de regarder ce qui existe dans le bestiaire pour t’en inspirer avant de créer ta propre rencontre ! Tu verras que contrairement aux PJ, c’est vraiment très simple.
+Sa fiche est divisée en 4 parties.
+
+![27.jpg](/naheulbeuk/27.jpg =700x)
+
+**L'entête contient :**
+* Le nom
+* L'image
+* La catégorie : Fanghien, humanoïde, animaux, végétaux...
+* Les traits
+Pour rajouter un nouveau trait, il faut aller le chercher depuis le compendium **Système : bestaire données** puis le drag and drop.
+Ils peuvent être ouverts en cliquant dessus.
+![28.jpg](/naheulbeuk/28.jpg =400x)
+
+* La répartition géographique
+
  
 
 ## L'extension soldat {#titre3}
