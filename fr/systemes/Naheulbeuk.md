@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:36:24.425Z
+date: 2022-11-20T13:38:42.066Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -228,6 +228,7 @@ De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il f
 Le système contient des PNJ dans le compendium **Bestiaire**.
 
 ![47.jpg](/naheulbeuk/47.jpg =300x)
+
 Je vais prendre comme exemple un Gobelin ingénieur.
 
 ![27.jpg](/naheulbeuk/27.jpg =500x)
@@ -274,7 +275,9 @@ Comme pour le reste, un **d20** permet un jet de dés directement, un **d6** per
 ## L'extension soldat {#titre3}
 
 Toutes les informations utiles pour cette extension sont regroupées dans les fiches de métier des soldats.
+
 ![37.jpg](/naheulbeuk/37.jpg =300x)
+
 La seule information manquante conscerne les volontaires, qui sont des aventuriers normaux. Donc pour eux il reste indispensable de consulter les pdf pour connaître le fonctionnement (notamment la solde).
 
 Dans la fiche métier, on retrouve les informations suivantes :
