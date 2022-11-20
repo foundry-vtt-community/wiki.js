@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:34:32.613Z
+date: 2022-11-20T13:36:24.425Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -248,6 +248,7 @@ Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendi
 
 **L'onglet Caractéristiques contient :**
 * Toutes les statistiques de base d'un PNJ
+![48.jpg](/naheulbeuk/48.jpg =500x)
 * Des statistiques supplémentaires parfois utiles (visibles en cliquant sur **Caractéristiques +**)
 ![30.jpg](/naheulbeuk/30.jpg =500x)
 * Les états éventuels qui ont été drag and drop. 
