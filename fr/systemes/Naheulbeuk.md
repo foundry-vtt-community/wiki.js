@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T10:36:29.647Z
+date: 2022-11-20T12:44:28.503Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -271,19 +271,21 @@ Comme pour le reste, un **d20** permet un jet de dés directement, un **d6** per
 ![34.jpg](/naheulbeuk/34.jpg =500x)
 
 ## L'extension soldat {#titre3}
-Pour l’extension soldat, j’ai regroupé toutes les informations utiles dans la fiche de métier.
-Tu as donc uniquement besoin d’aller dans le compendium Divers : métiers et de cliquer sur le métier souhaité :
- 
-Au passage, le volontaire reste un aventurier, donc pour lui, à toi de voir comment le gérer. Il faudra que tu ailles consulter le pdf pour connaitre sa solde 😉
-Lorsque j’ouvre un métier, je retrouve les informations suivantes :
-•	La description
-•	Les prérequis
-•	La carrière en fonction du niveau, avec la solde
-•	Les compétences
-•	Les coups spéciaux
-•	Un lien vers tout l’équipement
-•	Un lien vers les tableaux de récompenses et de punitions
- 
+
+Toutes les informations utiles pour cette extension sont regroupées dans les fiches de métier des soldats.
+![37.jpg](/naheulbeuk/37.jpg =300x)
+La seule information manquante conscerne les volontaires, qui sont des aventuriers normaux. Donc pour eux il reste indispensable de consulter les pdf pour connaître le fonctionnement (notamment la solde).
+
+Dans la fiche métier, on retrouve les informations suivantes :
+* La description
+* Les prérequis
+* La carrière en fonction du niveau, avec la solde
+* Les compétences
+* Les coups spéciaux
+* Un lien vers tout l’équipement
+* Un lien vers les tableaux de récompenses et de punitions
+
+![38.jpg](/naheulbeuk/38.jpg =700x) 
 
 Tout ce contenu est standard, donc je vais uniquement parler de l’équipement car j’ai utilisé une nouvelle façon de centraliser les données.
 Je clique donc sur Extension soldat : équipement
