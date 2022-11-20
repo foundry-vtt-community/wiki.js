@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T09:59:00.560Z
+date: 2022-11-20T10:05:50.487Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -242,7 +242,15 @@ Ils peuvent être ouverts en cliquant dessus.
 ![28.jpg](/naheulbeuk/28.jpg =400x)
 
 * La répartition géographique
+Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendium **Système : bestaire données** puis la drag and drop.
+Elles peuvent être ouvertes en cliquant dessus.
+![29.jpg](/naheulbeuk/29.jpg =400x)
 
+**L'onglet Caractéristiques contient :**
+* Toutes les statistiques de base d'un PNJ
+* Des statistiques supplémentaires parfois utiles (visibles en cliquant sur **Caractéristiques +**)
+![30.jpg](/naheulbeuk/30.jpg =400x)
+* La description du PNJ
  
 
 ## L'extension soldat {#titre3}
