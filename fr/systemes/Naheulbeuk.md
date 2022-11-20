@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:20:35.639Z
+date: 2022-11-20T13:22:01.222Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -334,6 +334,7 @@ On retrouve un **d6** à côté du nom, permettant de faire un jet de fabricatio
 * [Les APE](#titre62)
 * [Les coups spéciaux](#titre63)
 * [Les gemmes](#titre64)
+* [Les conteneurs](#titre641)
 * [Les pièges](#titre65)
 * [Les régions](#titre66)
 * [Les traits](#titre67)
@@ -365,6 +366,8 @@ On retrouve un **d6** à côté du nom, permettant de faire un jet de fabricatio
 ### Les coups spéciaux {#titre63}
 
 ### Les gemmes {#titre64}
+
+### Les conteneurs {#titre641}
 
 ### Les pièges {#titre65}
 
