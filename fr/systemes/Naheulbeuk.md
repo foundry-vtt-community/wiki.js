@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T10:25:56.872Z
+date: 2022-11-20T10:28:23.154Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -250,10 +250,10 @@ Elles peuvent être ouvertes en cliquant dessus.
 * Toutes les statistiques de base d'un PNJ
 * Des statistiques supplémentaires parfois utiles (visibles en cliquant sur **Caractéristiques +**)
 ![30.jpg](/naheulbeuk/30.jpg =500x)
-* La description du PNJ
 * Les états éventuels qui ont été drag and drop. 
 Théoriquement tous les états fonctionnent avec les PNJ, mais étant donné que les stats des PNJ et des PJ ne sont pas tout à fait identiques sur Naheulbeuk, attention quand même !
-
+![33.jpg](/naheulbeuk/33.jpg =500x)
+* La description du PNJ
 
 **L'onglet Combat contient :**
 * Les armes/attaques avec leur valeurs
