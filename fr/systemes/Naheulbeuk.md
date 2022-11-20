@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:33:19.161Z
+date: 2022-11-20T13:34:32.613Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -239,13 +239,11 @@ Sa fiche est divisée en 4 parties.
 * L'image
 * La catégorie : Fanghien, humanoïde, animaux, végétaux...
 * Les traits
-Pour rajouter un nouveau trait, il faut aller le chercher depuis le compendium **Système : bestaire données** puis le drag and drop.
-Ils peuvent être ouverts en cliquant dessus.
+Pour rajouter un nouveau trait, il faut aller le chercher depuis le compendium **Système : bestaire données** puis le drag and drop. Il peut être ouvert en cliquant dessus.
 ![28.jpg](/naheulbeuk/28.jpg =400x)
 
 * La répartition géographique
-Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendium **Système : bestaire données** puis la drag and drop.
-Elles peuvent être ouvertes en cliquant dessus.
+Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendium **Système : bestaire données** puis la drag and drop. Elle peut être ouverte en cliquant dessus.
 ![29.jpg](/naheulbeuk/29.jpg =400x)
 
 **L'onglet Caractéristiques contient :**
