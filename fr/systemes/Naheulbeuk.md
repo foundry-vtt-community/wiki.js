@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T12:55:51.662Z
+date: 2022-11-20T13:19:09.747Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -294,50 +294,30 @@ En cliquant dessus, un document de type journal s'ouvre. Il contient la liste de
 * Les tableaux de **Récompenses** et **Punitions**
 Ce sont des tableaux qui permettent de tirer au hasard une récompense ou une punition.
 ![40.jpg](/naheulbeuk/40.jpg =500x)
- 
-
-Dernière remarque, je n’ai pas encore ajouté les montures au système, mais j’ai quand même bricolé un truc pour cette extension. Ce sont donc des objets à drag and drop sur la fiche de héros.
-Il y a maintenant une catégorie « Monture » dans l’inventaire, et à partir d’ici on peut cliquer sur Equiper/Appliquer pour symboliser le fait de monter sur la monture puis faire un jet d’attaque si applicable.
-A toi de rajouter un token si tu veux 😉 Personnellement je n’en rajoute pas, je trouve ça trop pénible pour mes joueurs de devoir bouger ce token en permanence, c’est pour ça que c’est un objet et pas un acteur. Mais le fonctionnement évoluera probablement quand j’attaquerai les montures car pour l’instant c’est très basique.
 
 ## L'extension ingénieur {#titre4}
-Pas mal de petites nouveautés pour ce supplément.
-Déjà j’ai rajouté des fiches métiers pour toutes les spécialisations de l’ingénieur :
- 
+Cette extension apporte plusieurs nouveautés.
+* Les fiches de métiers des différents ingénieurs.
+![41.jpg](/naheulbeuk/41.jpg =300x)
+Chaque fiche contient le détail de la spécialisation avec les objets qui peuvent être drag and drop.
+![42.jpg](/naheulbeuk/42.jpg =500x)
+* La liste des plans et recettes classés par catégorie d’ingénieur : **Extension ingénieur : plan**
+![43.jpg](/naheulbeuk/43.jpg =500x)
+* La liste des matériaux et outils des ingénieurs : **Extension ingénieur : matériaux**
+![44.jpg](/naheulbeuk/44.jpg =500x)
 
-Chaque fiche contient le détail de la spécialisation avec les objets qui peuvent être drag and drop :
- 
-Il y a aussi la liste des plans et recettes et les matériaux et outils des ingénieurs. Si tu ne veux pas que tes joueurs connaissent cette info, n’hésite pas à la passer en secret via l’éditeur 😊
-La liste des plans contient tous les plans classés par catégorie d’ingénieur :
- 
-La liste des matériaux et outils contient… les matériaux et les outils de l’ingénieur, logique :D
- 
-Petite remarque, les plans ont des matériaux qui ne sont pas listés ici : soit parce qu’ils existaient déjà ailleurs, soit parce qu’ils sont exotiques (c’est pas moi qui ai décidé ça, je ne fais que réécrire les PDF dans le système ^^ )
-Les plans sont un nouveau type d’objet. Ils peuvent être drag and drop sur les feuilles de personnage.
-Ils vont dans la catégorie Ingrédients (ce qui se rapproche le plus de l’artisanat) et ont de nouveau lancer de dés.
 
  
+**Remarque :** 
+* Les plans listent parfois des matériaux qui ne sont pas dans le document précédent, soit parce qu’ils existaient déjà ailleurs, soit parce qu’ils sont spéciaux (c’est comme ça dans le pdf).
+J'ai quand même créé ces matériaux, et ils peuvent être trouvés en parcourant les compendiums ou en utilisant l'outil de recherche dont on reparlera dans le chapitre sur les macros.
+* En ouvrant un plan, on peut voir et drag and drop l'objet qu'il permet de fabriquer.
+![45.jpg](/naheulbeuk/45.jpg =500x)
 
-Lorsqu’on clique dessus, on peut faire un jet de confection de spécialiste (on maitrise la spécialité d’ingénieur nécessaire) ou de non spécialiste. Les calculs avec l’ingéniosité sont complètement automatique 😊
-
- 
-
-Si j’ouvre un plan, je retrouve :
-•	la spécialité
-•	le niveau nécessaire pour fabriquer l’objet
-•	la catégorie (pour le classement dans l’inventaire)
-•	les matériaux nécessaires
-•	les outils nécessaires
-•	le temps de confection
-•	la difficulté (utilisée pour les calculs d’ingéniosité)
-•	l’XP en cas de réussite
-•	Le malus pour le non-spécialiste (utilisé pour les calculs d’ingéniosité)
-•	Le prix
-•	Le détail de la confection, avec le lien vers l’objet créé (si approprié) qui peut être drag and drop dans l’inventaire.
- 
-Pour finir, si tu cherches un matériau ou un outil, comme je disais précédemment ils ne sont pas tous dans la liste issue du PDF. Donc je te conseille d’utiliser plutôt l’outil de recherche dispo dans le compendium des macros ! En plus tu pourras directement l’ajouter à un magasin.
- 
- 
+Lorsqu'on drag and drop un plan sur un personnage, il se retrouve dans la catégorie **Ingrédients**.
+On retrouve un **d6** à côté du nom, permettant de faire un jet de fabrication en tant que spécialiste ou non spécialiste
+*Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.*
+![46.jpg](/naheulbeuk/46.jpg =500x)
 
 ## Les objets {#titre5}
 * [Les trucs](#titre51)
