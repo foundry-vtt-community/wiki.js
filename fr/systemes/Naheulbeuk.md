@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T08:27:40.985Z
+date: 2022-11-20T08:28:50.896Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -84,7 +84,7 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 **Remarques :**
 * Lorsqu'il y a un **d20**, on peut cliquer dessus pour faire un lancer de dés. Par exemple si je clique sur le d20 de l'intelligence, j'obtiens :
 ![5.jpg](/naheulbeuk/5.jpg =200x)
-* Lorsqu'il y a un **d6**, on peut cliquer dessus pour ouvrir une interface permettant de modifier les caractéristiques du lancer :
+* Lorsqu'il y a un **d6**, on peut cliquer dessus pour ouvrir une interface permettant de modifier les valeurs du lancer :
 ![6.jpg](/naheulbeuk/6.jpg =400x)
 * Si un état (bonus, malédiction, blessure, folie...) est drag and drop sur le personnage, il apparait sur cet onglet. Cet état n'est pas appliqué tant que la case blanche n'est pas cochée.
 *Par exemple, mon personnage attrape le rhume des pierres. Je drag and drop cet état depuis le compendium des maladies. Au bout de 4h, les symptomes apparaissent. Je clique donc sur le carré blanc pour activer la prise en compte des malus.*
