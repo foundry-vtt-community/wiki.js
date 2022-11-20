@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T08:25:21.000Z
+date: 2022-11-20T08:26:34.085Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -73,7 +73,7 @@ Un onglet **Magie** apparait également, mais on en reparlera plus tard !
 
 <u>Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage.</u> Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (énergie vitale, énergie astrale, charge maximum, attaque, parade...).
 
-Au passage, vous pouvez drag and drop les **Compétences héritées**, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
+Au passage, vous pouvez drag and drop les **Compétences héritées** que contiennent les métiers et origines, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
 
 ![4.jpg](/naheulbeuk/4.jpg =700x)
 
