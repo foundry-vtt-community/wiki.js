@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T10:05:50.487Z
+date: 2022-11-20T10:11:20.156Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -249,9 +249,14 @@ Elles peuvent être ouvertes en cliquant dessus.
 **L'onglet Caractéristiques contient :**
 * Toutes les statistiques de base d'un PNJ
 * Des statistiques supplémentaires parfois utiles (visibles en cliquant sur **Caractéristiques +**)
-![30.jpg](/naheulbeuk/30.jpg =400x)
+![30.jpg](/naheulbeuk/30.jpg =500x)
 * La description du PNJ
- 
+
+**L'onglet Combat contient :**
+* Les armes/attaques avec leur valeurs
+Comme pour le reste, un **d20** permet un jet de dés directement, un **d6** permet un jet de dés customisé et un **d6 seul** permet un jet de dés spécial.
+* Les informations à connaitre pour le combat du PNJ
+![31.jpg](/naheulbeuk/31.jpg =500x)
 
 ## L'extension soldat {#titre3}
 Pour l’extension soldat, j’ai regroupé toutes les informations utiles dans la fiche de métier.
