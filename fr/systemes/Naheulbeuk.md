@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T09:58:34.690Z
+date: 2022-11-20T09:59:00.560Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -230,7 +230,7 @@ Je vais prendre comme exemple un Gobelin ingénieur.
 
 Sa fiche est divisée en 4 parties.
 
-![27.jpg](/naheulbeuk/27.jpg =700x)
+![27.jpg](/naheulbeuk/27.jpg =500x)
 
 **L'entête contient :**
 * Le nom
