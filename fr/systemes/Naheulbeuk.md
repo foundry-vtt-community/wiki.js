@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T08:51:14.994Z
+date: 2022-11-20T08:51:28.445Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -198,11 +198,10 @@ L'inventaire contient 3 catégories.
 * **Armement et baston - objets en mains** : cette catégorie contient tous les objets tenus en main et qui sont équipés. Ce sont principalement les armes, les boucliers et les munitions, mais on peut y retrouver d'autres objets (des instruments, des bannières...).
 C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la parade, et la rupture.
 ![20.jpg](/naheulbeuk/20.jpg =500x)
+Comme pour les sorts, un d6 tout seul signifie un jet un peu particulier, c'est le cas notamment des armes à poudre.
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
 ![21.jpg](/naheulbeuk/21.jpg =500x)
-
-Comme pour les sorts, un d6 tout seul signifie un jet un peu particulier, c'est le cas notamment des armes à poudre.
 * **Equipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés.
 Certains objets peuvent être équipés, d'autres utilisés, d'autres encore avoir des jets de dés.
 Il est divisé en 3 sous catégories :
