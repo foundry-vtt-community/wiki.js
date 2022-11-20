@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T08:28:50.896Z
+date: 2022-11-20T08:31:00.922Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -109,7 +109,7 @@ Un template de base est présent pour vous donner des idées.
 <br/>
 ### Onglet Compétences {#titre13}
 
-On retrouve ici les compétences héritées et choisies drag and drop précédemment.
+On retrouve ici les compétences héritées et choisies, drag and drop précédemment.
 Comme pour l'onglet **Caractéristiques** vous trouverez des d20 et d6 en fonction de si la compétence demande un jet de dés ou non.
 *Par exemple Erudition à des dés pour permettre un test d'intelligence en cas de lecture du langue inhabituelle*
 
