@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:30:41.681Z
+date: 2022-11-20T13:31:16.192Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -222,7 +222,7 @@ Le sac simple envoie les objets dans le sac, le sac avec le dollar envoie dans l
 
 
 ## Les PNJ {#titre2}
-Dans ce chapitre, nous n'allons pas voir comment créer un nouveau PNJ, mais plutôt regarder le fonctionnement de ceux déjà créés.
+Dans ce chapitre, nous n'allons pas voir comment faire un nouveau PNJ, mais plutôt regarder le fonctionnement de ceux déjà créés.
 De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
 
 Le système contient des PNJ dans le compendium **Bestiaire**.
