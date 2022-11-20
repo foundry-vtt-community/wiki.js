@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:32:02.268Z
+date: 2022-11-20T13:32:39.273Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -228,9 +228,7 @@ De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il f
 Le système contient des PNJ dans le compendium **Bestiaire**.
 
 ![47.jpg](/naheulbeuk/47.jpg =300x)
-Je vais prendre comme exemple un Gobelin ingénieur.
-
-Sa fiche est divisée en 4 parties.
+Je vais prendre comme exemple un Gobelin ingénieur : sa fiche est divisée en 4 parties.
 
 ![27.jpg](/naheulbeuk/27.jpg =500x)
 
