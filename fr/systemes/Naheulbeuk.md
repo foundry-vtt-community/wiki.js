@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T12:44:28.503Z
+date: 2022-11-20T12:55:51.662Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -287,11 +287,13 @@ Dans la fiche métier, on retrouve les informations suivantes :
 
 ![38.jpg](/naheulbeuk/38.jpg =700x) 
 
-Tout ce contenu est standard, donc je vais uniquement parler de l’équipement car j’ai utilisé une nouvelle façon de centraliser les données.
-Je clique donc sur Extension soldat : équipement
-Le document qui s’ouvre est de type « Note ».
-J’ai repris le contenu des PDF en remplaçant les objets par leur lien vers un compendium.
-Ils peuvent donc être ouvert ou drag and drop à partir de cette Note.
+Le fonctionnement est identique celui d'un métier classique avec deux informations supplémentaires :
+* La liste de l'équipement via **Extension soldat : équipement**
+En cliquant dessus, un document de type journal s'ouvre. Il contient la liste de tous les objets des soldats qui peuvent être drag and drop sur la feuille du personnage.
+![39.jpg](/naheulbeuk/39.jpg =500x)
+* Les tableaux de **Récompenses** et **Punitions**
+Ce sont des tableaux qui permettent de tirer au hasard une récompense ou une punition.
+![40.jpg](/naheulbeuk/40.jpg =500x)
  
 
 Dernière remarque, je n’ai pas encore ajouté les montures au système, mais j’ai quand même bricolé un truc pour cette extension. Ce sont donc des objets à drag and drop sur la fiche de héros.
