@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T08:31:00.922Z
+date: 2022-11-20T08:51:14.994Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -110,24 +110,29 @@ Un template de base est présent pour vous donner des idées.
 ### Onglet Compétences {#titre13}
 
 On retrouve ici les compétences héritées et choisies, drag and drop précédemment.
-Comme pour l'onglet **Caractéristiques** vous trouverez des d20 et d6 en fonction de si la compétence demande un jet de dés ou non.
-*Par exemple Erudition à des dés pour permettre un test d'intelligence en cas de lecture du langue inhabituelle*
+Comme pour l'onglet **Caractéristiques** vous trouverez des **d20** et **d6** en fonction de si la compétence demande un jet de dés ou non.
+*Par exemple Erudition a des dés pour permettre un test d'intelligence en cas de lecture d'une langue inhabituelle*
 
-Si mon personnage joueur gagne une compétence, je peux chercher la compétence en question dans le compendium des compétences choisies ou héritées et la drag and drop. Puis je l'édite pour cocher **Compétence de base** et indiquer comment j'ai gagné la compétence.
+Si mon personnage joueur gagne une compétence, je peux chercher la compétence en question dans le compendium des compétences choisies ou héritées et la drag and drop. Puis je l'édite pour cocher **Compétence de base** et indiquer comment j'ai gagné cette compétence.
 
 ![11.jpg](/naheulbeuk/11.jpg =500x)
 
 **/!\ Ajout personnel**
-J'aime bien demander à mes joueurs de faire un test sur une compétence, plutôt que sur une caractéristique. 
+J'aime bien demander à mes joueurs de faire un test sur une compétence, plutôt que sur une caractéristique.
+*Par exemple, si mon personnage pousuit un PNJ, je préfère lui demander un test de courir/sauter plutôt que d'adresse.*
 Et je trouve ça dommage de limiter les actions si un personnage ne possède pas certaines compétences.
 *Par exemple, si mon personnage veut escalader un mur mais n'a pas la compétence, je trouve ça dommage de lui dire non.*
 
 J'ai donc rajouté la notion de **Compétences de base**.
 Une compétence de base c'est quoi ? 
-Une compétence que tout le monde peut avoir (nager, escalader, tenter de voler quelqu'un, se déplacer silencieusement...), mais une compétence qui est beaucoup plus dur à réaliser que la même compétence choisie ou héritée.
+Une compétence que tout le monde peut avoir (nager, escalader, tenter de voler quelqu'un, se déplacer silencieusement...), mais une compétence qui est beaucoup plus dur à réussir que la même compétence choisie ou héritée.
 Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me permet d'éviter de demander un jet de caractéristiques (courir/sauter, perceptionner ref Game of roles :D)
 
 Bref vous n'êtes pas du tout obligé d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
+Vous pouvez aussi les utiliser et modifier les malus que j'ai fixé. 
+Personnelement j'aime bien rajouter "@malus-mvt-pr" pour prendre en compte l'armure physique de mon personage. 
+*Par exemple déplacement silencieux donnerait : @ad -2 -@malus-mvt-pr*
+Au passage "@ad" ou "@int"... est la convention des raccourcis du système.
 
 ![12.jpg](/naheulbeuk/12.jpg =700x)
 <br/>
@@ -137,13 +142,13 @@ Cet onglet n'est visible que si on a drag and drop un coup spécial sur le perso
 
 Il y a 2 types de coups spéciaux.
 
-Les coups de type Bourre Pif (BP) et les autres (GEN = généraliste, MEN = ménestrel, NIN = ninja).
+Les coups de type Bourre Pif (BP) et les autres (GEN = généraliste, MEN = ménestrel, NIN = ninja, CS = soldat).
 L'utilisation est identique pour les 2 types (toujours les d6 et d20 si existant) mais la fiche de description du coup est légèrement différente.
 
-Si un lancé de est possible ils sont donc présents.
-*Par exemple un coup de boule destabilisant qui demande la moyenne de la force et de l'adresse)*
-Sinon, l'épreuve est indiqué.
-*Par exemple un barrage d'acier demande une épreuve d'attaque classique, avec l'arme souhaitée*
+Si un lancé de dés est possible ils sont donc présents.
+*Par exemple pour un coup de boule déstabilisant qui demande la moyenne de la force et de l'adresse*
+Sinon, l'épreuve est indiquée mais il n'y a pas de dés.
+*Par exemple pour un barrage d'acier qui demande une épreuve d'attaque classique, avec l'arme souhaitée*
 
 **Remarque :** ne soyez pas surpis de voir des "@fo" pour la force ou "@bonusfo" pour le bonus de force > 12. C'est la convention des raccourcis du système.
 J'en reparlerai dans le chapitre avancé sur les macros.
@@ -152,12 +157,12 @@ J'en reparlerai dans le chapitre avancé sur les macros.
 <br/>
 ### Onglet APE {#titre15}
 
-Cet onglet n'est visible que si on a drag and drop une Aptitude Parfois Etrange sur le personnage.
+Cet onglet n'est visible que si on a drag and drop une **A**ptitude **P**arfois **E**trange sur le personnage.
 
 Les APE sont tellement WTF qu'il est impossible d'automatiser les bonus associés. C'est donc à vous et à vos joueurs de vous rappeler de ces bonus, ou de faire un nouvel "Etat" pour s'en rappeler.
 
 Ceci étant dit, rien de particulier à rajouter.
-Simplement si vos joueurs gagnent une APE existante, il ne faut pas la drag and drop mais éditer celle qui existe pour changer le niveau et le bonus.
+Simplement si vos joueurs gagnent une APE déjà existante, il ne faut pas la drag and drop mais éditer celle qui existe pour changer le niveau et le bonus.
 
 ![14.jpg](/naheulbeuk/14.jpg =500x)
 <br/>
@@ -165,7 +170,7 @@ Simplement si vos joueurs gagnent une APE existante, il ne faut pas la drag and 
 
 Cet onglet n'est visible que si le personnage est un mage, un prêtre ou un paladin.
 
-Il contient un sous onglet **Capacités magiques** qui permet de sélectionner le type de magie du personnage, puis de nouveaux onglets en fonction des types sélectionnés.
+Il contient un sous onglet **Capacités magiques** qui permet de sélectionner les types de magie que le personnage connait. Quand c'est fait, de nouveaux onglets apparaissent en fonction des types sélectionnés.
 
 ![16.jpg](/naheulbeuk/16.jpg =500x)
 
@@ -175,13 +180,14 @@ Comme pour le reste, il faut ensuite drag and drop les sorts à partir du compen
 ![17.jpg](/naheulbeuk/17.jpg =500x)
 
 **Remarques :**
+* On retrouve les **d20** et **d6** habituels.
 * Comme pour les coups spéciaux, on retrouve les raccourcis du système : "@mphy" pour la magie physique, "@bonusint" pour le bonus d'intelligence > 12 ...
 Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles signifient que le PNJ cible doit faire un jet de dés (ici de résistance magique). Dans ces cas là, soit le MJ fait le jet de RM pour la cible, soit le joueur doit cibler le PNJ avant de faire le jet.
-* L'incantation, la durée, la portée ET LE COÛT ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte les valeurs
-* En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. **C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**.
-* Si un sort a uniquement un **d6** pour son épreuve/dégât, c'est qu'il nécessite un peu plus qu'un simple lancer de dés. En cliquant dessus on ouvre une fenêtre avec plusieurs actions à faire.
+* L'incantation, la durée, la portée <u>ET LE COÛT</u> ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte ces valeurs.
+* En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. <u>**C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**</u>.
+* Si un sort a uniquement un **d6** pour son épreuve ou ses dégât, c'est qu'il nécessite un peu plus qu'un simple lancer de dés. En cliquant dessus on ouvre une fenêtre avec plusieurs actions à faire.
 ![18.jpg](/naheulbeuk/18.jpg =700x)
-* En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sort !
+* En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sorts !
 * Comme indiqué en introduction, seuls les sorts niveau 1-4 sont présents. A plus haut niveau il faut donc faire vos propres sorts, en s'inspirant des sorts existants.
 * Les sorts peuvent être drag an drop dans la barre de macro.
 ![19.jpg](/naheulbeuk/19.jpg =700x)
@@ -195,6 +201,8 @@ C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la par
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
 ![21.jpg](/naheulbeuk/21.jpg =500x)
+
+Comme pour les sorts, un d6 tout seul signifie un jet un peu particulier, c'est le cas notamment des armes à poudre.
 * **Equipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés.
 Certains objets peuvent être équipés, d'autres utilisés, d'autres encore avoir des jets de dés.
 Il est divisé en 3 sous catégories :
