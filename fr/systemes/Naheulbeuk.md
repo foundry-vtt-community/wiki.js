@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T10:37:58.210Z
+date: 2022-11-21T10:38:19.058Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -357,7 +357,7 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 * [Les pièges](#titre65)
 * [Les régions](#titre66)
 * [Les traits](#titre67)
-
+<br/>
 ### Les trucs {#titre51}
 
 **Nom dans Foundry** : truc
