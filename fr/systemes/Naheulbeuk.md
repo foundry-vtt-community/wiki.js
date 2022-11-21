@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:31:11.120Z
+date: 2022-11-21T13:37:19.573Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -460,8 +460,17 @@ Voici les différences :
 <br/>
 ### Les sacs {#titre54}
 
-**Nom dans Foundry** : truc
-**Type d'objets** : 
+**Nom dans Foundry** : sac
+
+**Type d'objets** : les sacs à dos et les bourses
+
+Le fonctionnement est quasiment identique aux objets de type **truc**.
+Voici les différences :
+* L'entête permet de définir le type de sac : **Sac à dos** ou **Bourse**
+![65.jpg](/naheulbeuk/65.jpg =500x)
+* Il n'y a pas de jets complexes possibles (**Jet de dés +**)
+* L'objet une fois équipé est déplacé dans la catégorie **En dehors du sac**
+* On ne peut pas les changer de catégorie d'inventaire
 <br/>
 ### Les reliques {#titre55}
 
