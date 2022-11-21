@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T08:45:56.934Z
+date: 2022-11-21T08:46:24.377Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -23,7 +23,7 @@ Avant de rentrer dans le détail, voici ce qui n'est pas dans le système actuel
  * Les frappes localisées
  * Surement quelques autres petits trucs que j'ai zappé :D
  
-Dernière précision, on va parler régulièrement d'objets et de compendium, ils faut aller les chercher dans la liste des compendiums du système.
+Dernière précision, on va parler régulièrement d'objets et de compendiums, ils faut aller les chercher dans la liste des compendiums du système.
 
 ![49.jpg](/naheulbeuk/49.jpg =300x)
 
