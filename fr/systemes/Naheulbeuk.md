@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:37:19.573Z
+date: 2022-11-21T13:40:15.414Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -450,6 +450,8 @@ Voici les différences :
 ![62.jpg](/naheulbeuk/62.jpg =500x)
 * Pour une arme de jet (hache, lance...) équipée, il y a deux lignes de jet de dés. La première conscerne l'attaque au contact, la deuxième l'attaque à distance.
 ![63.jpg](/naheulbeuk/63.jpg =500x)
+* Les armes à poudre sont toujours un peu complexe (dégâts en fonction de la distance, chance de fonctionnement...). Elles ont donc automatiquement des jet de dés complexes.
+![66.jpg](/naheulbeuk/66.jpg =700x)
 * Ces objets seront activables dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armement et Baston - objets en mains**.
   * Une seule arme à distance peut être équipée et sans arme de contact équipée
   * Deux armes de contact maximum peuvent être équipées
