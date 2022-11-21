@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T10:39:38.772Z
+date: 2022-11-21T10:39:58.249Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -402,7 +402,8 @@ Un objet avec des bonus / malus sera activable dans l'inventaire.
 ![54.jpg](/naheulbeuk/54.jpg =500x)
   * La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charime sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charime est entièrement ignoré.
   * La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.
-* Un champ **Autre** pour noter les remarques éventuelles liées à l'activation. Un objet avec un champ autre complété sera activable dans l'inventaire
+* Un champ **Autre** pour noter les remarques éventuelles liées à l'activation. 
+Un objet avec un champ autre complété sera activable dans l'inventaire
 
 **Remarques :**
 * Si l'objet contient des bonus / malus il est donc activable. Une fois activé, il apparait lorsqu'on clique sur l'oeil à droite de **Caractéristiques** dans l'onglet **Caractéristiques** d'un personnage.
