@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:40:15.414Z
+date: 2022-11-21T13:44:36.203Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -474,21 +474,7 @@ Voici les différences :
 * L'objet une fois équipé est déplacé dans la catégorie **En dehors du sac**
 * On ne peut pas les changer de catégorie d'inventaire
 <br/>
-### Les reliques {#titre55}
 
-**Nom dans Foundry** : truc
-**Type d'objets** : 
-<br/>
-### Les instruments de musique {#titre56}
-
-**Nom dans Foundry** : truc
-**Type d'objets** : 
-<br/>
-### Les armes à poudre {#titre57}
-
-**Nom dans Foundry** : truc
-**Type d'objets** : 
-<br/>
 ### Les états {#titre58}
 
 **Nom dans Foundry** : truc
