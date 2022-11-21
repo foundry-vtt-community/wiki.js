@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T14:11:17.980Z
+date: 2022-11-21T14:22:11.201Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -28,7 +28,7 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 ![49.jpg](/naheulbeuk/49.jpg =300x)
 
 ## Sommaire
-* [Création d'un personnage](#titre1)
+* [Création d'un PJ](#titre1)
 * [Les PNJ](#titre2)
 * [L'extension soldat](#titre3)
 * [L'extension ingénieur](#titre4)
@@ -36,7 +36,7 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 * [Les tableaux](#titre7)
 * [Les macros](#titre8)
 
-## Création d'un personnage {#titre1}
+## Création d'un PJ {#titre1}
 * [Onglet Caractéristiques](#titre11)
 * [Onglet Description](#titre12)
 * [Onglet Compétences](#titre13)
@@ -45,7 +45,6 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 * [Onglet Magie](#titre16)
 * [Onglet Inventaire](#titre17)
 <br>
-
 ### Onglet Caractéristiques {#titre11}
 
 Créez un nouveau personnage de type "character"
@@ -503,19 +502,38 @@ Le résumé qui sera affiché après le drag and drop ne comprend que quelques i
 
 ![71.jpg](/naheulbeuk/71.jpg =500x)
 
-Les éléments affichés après le drag and drop sont présentés dans l'onglet **Détails**. Ici tout les élements seront uniquement documentaires sauf :
-* L'épreuve, qui peut être de type jet complexe en cliquant sur le **+**
-* Les dégâts.
-Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajouter **+@bonusint**.
+Les éléments affichés après le drag and drop sont présentés dans l'onglet **Détails**. 
 
 ![70.jpg](/naheulbeuk/70.jpg =500x)
+
+Ici tout les élements seront uniquement documentaires (non automatisé, par exemple l'énergie astrale ne baissera pas) sauf :
+* Le niveau pour le classement du sort
+* L'épreuve, pour afficher les dés correspondants. 
+Elle peut être de type jet complexe en cliquant sur le **+**
+* Les dégâts, pour afficher les dés correspondants.
+Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajouter **+@bonusint**.
 
 **Remarque :** si un sort applique un bonus / malus au personnage (un état) alors il sera présent dans la description et pourra être drag and drop sur le personnage.
 <br/>
 ### Les compétences {#titre60}
 
 **Nom dans Foundry** : competence
-**Type d'objets** : 
+
+**Type d'objets** : les compétences héritées d'une origine ou d'un métier, les compétences choisies à partir d'une origine ou d'un métier, les compétences gagnées, et les compétences de base.
+
+En entête, on retrouve le type de compétence. Si rien n'est sélectionné, c'est une compétence héritée. Sinon on peut indiquer d'où vient la compétence.
+Pour une **compétence gagnée**, on doit préciser comment on a gagné la compétence.
+Pour l'explication sur les **compétences de base**, je vous invite à aller voir l'onglet **Compétences** du chapitre **Création d'un PJ**.
+
+![72.jpg](/naheulbeuk/72.jpg =500x)
+
+Ensuite on retrouve un onglet description
+
+![73.jpg](/naheulbeuk/73.jpg =500x)
+
+Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait un jet de dés spécifique (**jet de dés** et **difficulté**)
+
+![74.jpg](/naheulbeuk/74.jpg =500x)
 <br/>
 ### Les coups spéciaux {#titre56}
 
