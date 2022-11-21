@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T08:55:10.653Z
+date: 2022-11-21T09:03:51.055Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -359,6 +359,18 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 * [Les traits](#titre67)
 
 ### Les trucs {#titre51}
+
+**Nom dans Foundry** : truc
+**Type d'objets :** tout les objets qui ne rentrent pas dans les autres catégories d'objets.
+ * Le matériel
+ * Les livres
+ * Les ingrédients
+ * Les potions
+ * Les pièces
+ * La nourriture
+ * Les stages
+ * Les services
+ * ...
 
 ### Les armures et autres objets portés {#titre52}
 
