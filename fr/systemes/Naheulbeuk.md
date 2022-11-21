@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T09:03:51.055Z
+date: 2022-11-21T10:06:58.864Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -361,7 +361,8 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 ### Les trucs {#titre51}
 
 **Nom dans Foundry** : truc
-**Type d'objets :** tout les objets qui ne rentrent pas dans les autres catégories d'objets.
+
+**Type d'objets** : tout les objets qui ne rentrent pas dans les autres catégories d'objets.
  * Le matériel
  * Les livres
  * Les ingrédients
@@ -371,42 +372,103 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
  * Les stages
  * Les services
  * ...
+ 
+**L'entête contient :**
+* Le nom de l'objet
+* L'image de l'objet
+
+
+ 
 
 ### Les armures et autres objets portés {#titre52}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les armes et autres objets en mains {#titre53}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les sacs {#titre54}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les reliques {#titre55}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les instruments de musique {#titre56}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les armes à poudre {#titre57}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les états {#titre58}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les sorts {#titre59}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les compétences {#titre60}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les métiers et origines {#titre61}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les APE {#titre62}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les coups spéciaux {#titre63}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les gemmes {#titre64}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les conteneurs {#titre641}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les pièges {#titre65}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ### Les régions {#titre66}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ### Les traits {#titre67}
 
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+
 ## Les tableaux {#titre7}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
 
 ## Les macros {#titre8}
 * [Chercher un objet et générer un magasin](#titre81)
