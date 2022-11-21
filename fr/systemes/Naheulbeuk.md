@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:44:36.203Z
+date: 2022-11-21T13:49:17.816Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -344,18 +344,18 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 * [Les armures et autres objets portés](#titre52)
 * [Les armes et autres objets en mains](#titre53)
 * [Les sacs](#titre54)
-* [Les reliques](#titre55)
-* [Les instruments de musique](#titre56)
-* [Les armes à poudre](#titre57)
 * [Les états](#titre58)
 * [Les sorts](#titre59)
 * [Les compétences](#titre60)
-* [Les métiers et origines](#titre61)
+* [Les coups spéciaux](#titre56)
+* [Les métiers](#titre61)
+* [Les origines](#titre57)
 * [Les APE](#titre62)
 * [Les coups spéciaux](#titre63)
 * [Les gemmes](#titre64)
 * [Les conteneurs](#titre641)
 * [Les pièges](#titre65)
+* [Les attaques](#titre55)
 * [Les régions](#titre66)
 * [Les traits](#titre67)
 <br/>
@@ -490,7 +490,17 @@ Voici les différences :
 **Nom dans Foundry** : truc
 **Type d'objets** : 
 <br/>
-### Les métiers et origines {#titre61}
+### Les coups spéciaux {#titre56}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+<br/>
+### Les métiers {#titre61}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+<br/>
+### Les origines {#titre57}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
@@ -516,6 +526,11 @@ Voici les différences :
 **Type d'objets** : 
 <br/>
 ### Les pièges {#titre65}
+
+**Nom dans Foundry** : truc
+**Type d'objets** : 
+<br/>
+### Les attaques {#titre55}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
