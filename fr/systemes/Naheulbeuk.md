@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T10:38:37.968Z
+date: 2022-11-21T10:39:38.772Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -397,7 +397,8 @@ Un objet avec une formule aura un **d20** et un **d6** lorsqu'il sera drag and d
 ![54.jpg](/naheulbeuk/54.jpg =500x)
 En cliquant sur le **+** à droite de **Jet de dés**, on fait appraitre une interface pour faire des lancers de dés plus complexes. Dans ce cas là l'objet aura uniquement un **d6** lorsqu'il sera drag and drop dans l'inventaire.
 ![55.jpg](/naheulbeuk/55.jpg =500x)
-* Les bonus / malus pour le personnage sur lequel on activera l'objet. Un objet avec des bonus / malus sera activable dans l'inventaire.
+* Les bonus / malus pour le personnage sur lequel on activera l'objet. 
+Un objet avec des bonus / malus sera activable dans l'inventaire.
 ![54.jpg](/naheulbeuk/54.jpg =500x)
   * La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charime sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charime est entièrement ignoré.
   * La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.
