@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:49:17.816Z
+date: 2022-11-21T13:54:10.401Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -351,13 +351,13 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 * [Les métiers](#titre61)
 * [Les origines](#titre57)
 * [Les APE](#titre62)
-* [Les coups spéciaux](#titre63)
 * [Les gemmes](#titre64)
+* [Les recettes](#titre61)
 * [Les conteneurs](#titre641)
 * [Les pièges](#titre65)
-* [Les attaques](#titre55)
-* [Les régions](#titre66)
-* [Les traits](#titre67)
+* [Les attaques (pour PNJ)](#titre55)
+* [Les régions (pour PNJ)](#titre66)
+* [Les traits (pour PNJ)](#titre67)
 <br/>
 ### Les trucs {#titre51}
 
@@ -477,79 +477,76 @@ Voici les différences :
 
 ### Les états {#titre58}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : etat
 **Type d'objets** : 
 <br/>
 ### Les sorts {#titre59}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : sort
 **Type d'objets** : 
 <br/>
 ### Les compétences {#titre60}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : competence
 **Type d'objets** : 
 <br/>
 ### Les coups spéciaux {#titre56}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : coup
 **Type d'objets** : 
 <br/>
 ### Les métiers {#titre61}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : metier
 **Type d'objets** : 
 <br/>
 ### Les origines {#titre57}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : origine
 **Type d'objets** : 
 <br/>
 ### Les APE {#titre62}
 
-**Nom dans Foundry** : truc
-**Type d'objets** : 
-<br/>
-### Les coups spéciaux {#titre63}
-
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : ape
 **Type d'objets** : 
 <br/>
 ### Les gemmes {#titre64}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : gemme
+**Type d'objets** : 
+<br/>
+### Les recettes {#titre61}
+
+**Nom dans Foundry** : recette
 **Type d'objets** : 
 <br/>
 ### Les conteneurs {#titre641}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : conteneur
 **Type d'objets** : 
 <br/>
 ### Les pièges {#titre65}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : piege
 **Type d'objets** : 
 <br/>
-### Les attaques {#titre55}
+### Les attaques (pour PNJ){#titre55}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : attaque
 **Type d'objets** : 
 <br/>
-### Les régions {#titre66}
+### Les régions (pour PNJ){#titre66}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : region
 **Type d'objets** : 
 <br/>
-### Les traits {#titre67}
+### Les traits (pour PNJ){#titre67}
 
-**Nom dans Foundry** : truc
+**Nom dans Foundry** : trait
 **Type d'objets** : 
 <br/>
 ## Les tableaux {#titre7}
 
-**Nom dans Foundry** : truc
-**Type d'objets** : 
-<br/>
 ## Les macros {#titre8}
 * [Chercher un objet et générer un magasin](#titre81)
 * [Combat rapide](#titre82)
