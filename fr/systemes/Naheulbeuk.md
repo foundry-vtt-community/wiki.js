@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:59:08.882Z
+date: 2022-11-21T13:59:26.183Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -483,6 +483,7 @@ Voici les différences :
 Par exemple les bonus/malus des sorts, les maladies, les blessures, les folies, les mutations, les empoisonnements...
 
 Ces objets fonctionnent comme ceux de type **truc** mise à part qu'ils n'ont pas de prix ou de poids et qu'ils sont actibables depuis l'onglet **Caractéristiques** du personnage.
+
 ![67.jpg](/naheulbeuk/67.jpg =700x)
 <br/>
 ### Les sorts {#titre59}
