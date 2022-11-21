@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T10:40:42.523Z
+date: 2022-11-21T10:41:09.148Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -408,7 +408,7 @@ Un objet avec un champ autre complété sera activable dans l'inventaire
 **Remarques :**
 * Si l'objet contient des bonus / malus il est donc activable. Une fois activé, il apparait lorsqu'on clique sur l'oeil à droite de **Caractéristiques** dans l'onglet **Caractéristiques** d'un personnage.
 ![56.jpg](/naheulbeuk/56.jpg =500x)
-* En cliquant sur l'oeil en haut à droite d'un objet, on masque toutes les informations importantes et on peut définir un nouveau nom et une nouvelle description. Cette fonctionnalité existe pour permettre de ne pas révéler le détail d'un objet looté.
+* En cliquant sur l'oeil en haut à droite d'un objet, on masque toutes les informations importantes et on peut définir un nouveau nom et une nouvelle description. Cette fonctionnalité existe pour permettre de ne pas révéler le détail d'un objet looté et ne fonctionne que si c'est le MJ qui clique sur l'oeil.
 ![57.jpg](/naheulbeuk/57.jpg =500x)
 <br/>
 ### Les armures et autres objets portés {#titre52}
