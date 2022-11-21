@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T10:41:09.148Z
+date: 2022-11-21T13:31:11.120Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -203,6 +203,7 @@ L'inventaire contient 3 catégories.
 C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la parade, et la rupture.
 ![20.jpg](/naheulbeuk/20.jpg =500x)
 Comme pour les sorts, un **d6** tout seul signifie un jet un peu particulier, c'est le cas notamment des armes à poudre.
+*Le bonus de force > 12 ou < 9, et la compétence **Tirer correctement** sont déjà pris en compte dans le système.*
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
 ![21.jpg](/naheulbeuk/21.jpg =500x)
@@ -362,7 +363,7 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 
 **Nom dans Foundry** : truc
 
-**Type d'objets** : tout les objets qui ne rentrent pas dans les autres catégories d'objets.
+**Type d'objets** : tous les objets qui ne rentrent pas dans les autres catégories d'objets.
  * Le matériel
  * Les livres
  * Les ingrédients
@@ -398,12 +399,12 @@ Un objet avec une formule aura un **d20** et un **d6** lorsqu'il sera drag and d
 En cliquant sur le **+** à droite de **Jet de dés**, on fait appraitre une interface pour faire des lancers de dés plus complexes. Dans ce cas là l'objet aura uniquement un **d6** lorsqu'il sera drag and drop dans l'inventaire.
 ![55.jpg](/naheulbeuk/55.jpg =500x)
 * Les bonus / malus pour le personnage sur lequel on activera l'objet. 
-Un objet avec des bonus / malus sera activable dans l'inventaire.
+Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) mais restera dans le sac.
 ![54.jpg](/naheulbeuk/54.jpg =500x)
   * La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charime sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charime est entièrement ignoré.
   * La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.
 * Un champ **Autre** pour noter les remarques éventuelles liées à l'activation. 
-Un objet avec un champ autre complété sera activable dans l'inventaire
+Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) mais restera dans le sac.
 
 **Remarques :**
 * Si l'objet contient des bonus / malus il est donc activable. Une fois activé, il apparait lorsqu'on clique sur l'oeil à droite de **Caractéristiques** dans l'onglet **Caractéristiques** d'un personnage.
@@ -413,94 +414,130 @@ Un objet avec un champ autre complété sera activable dans l'inventaire
 <br/>
 ### Les armures et autres objets portés {#titre52}
 
-**Nom dans Foundry** : truc
-**Type d'objets** : 
+**Nom dans Foundry** : armure
 
+**Type d'objets** : tous les objets portés comme les armures, les bijoux ou les vêtements...
+
+Le fonctionnement est quasiment identique aux objets de type **truc**.
+Voici les différences :
+* L'entête permet de définir si l'objet est enchanté ou une relique
+* L'entête permet de définir l'emplacement de l'objet
+* L'entête permet de définir les origines compatibles
+![58.jpg](/naheulbeuk/58.jpg =500x)
+* La catégorie d'inventaire est **Protections et objets portés** mais peut quand même être modifiée en double cliquant sur **Détails**
+![60.jpg](/naheulbeuk/60.jpg =500x)
+* Il n'y a pas de jets complexes possibles (**Jet de dés +**)
+* L'objet a une valeur de rupture
+![59.jpg](/naheulbeuk/59.jpg =500x)
+* Ces objets seront activables dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armures et Protections - objets portés**.
+<br/>
 ### Les armes et autres objets en mains {#titre53}
 
-**Nom dans Foundry** : truc
-**Type d'objets** : 
+**Nom dans Foundry** : arme
 
+**Type d'objets** : tous les objets pris en mains comme les armes, les boucliers, les munitions, les instruments...
+
+Le fonctionnement est quasiment identique aux objets de type **truc**.
+Voici les différences :
+* L'entête permet de définir si l'objet est enchanté ou une relique
+* L'entête permet de définir le type de l'objet
+* L'entête permet de définir les origines compatibles
+![61.jpg](/naheulbeuk/61.jpg =500x)
+* La catégorie d'inventaire est **Armes et objets en mains** mais peut quand même être modifiée en double cliquant sur **Détails**
+![64.jpg](/naheulbeuk/64.jpg =500x)
+* L'objet n'a pas de jet de dés, mais un jet de **Dégâts**
+* L'objet a une valeur de rupture
+![62.jpg](/naheulbeuk/62.jpg =500x)
+* Pour une arme de jet (hache, lance...) équipée, il y a deux lignes de jet de dés. La première conscerne l'attaque au contact, la deuxième l'attaque à distance.
+![63.jpg](/naheulbeuk/63.jpg =500x)
+* Ces objets seront activables dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armement et Baston - objets en mains**.
+  * Une seule arme à distance peut être équipée et sans arme de contact équipée
+  * Deux armes de contact maximum peuvent être équipées
+  * Un seul bouclier peut être équipé
+  * Une seule arme de contact peut être équipée avec un bouclier
+  * Plusieurs munitions peuvent être équipées
+  * Les armes de jet (hache, lance) compte comme des armes de contact dans les règles précédentes.
+<br/>
 ### Les sacs {#titre54}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les reliques {#titre55}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les instruments de musique {#titre56}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les armes à poudre {#titre57}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les états {#titre58}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les sorts {#titre59}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les compétences {#titre60}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les métiers et origines {#titre61}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les APE {#titre62}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les coups spéciaux {#titre63}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les gemmes {#titre64}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les conteneurs {#titre641}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les pièges {#titre65}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les régions {#titre66}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ### Les traits {#titre67}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ## Les tableaux {#titre7}
 
 **Nom dans Foundry** : truc
 **Type d'objets** : 
-
+<br/>
 ## Les macros {#titre8}
 * [Chercher un objet et générer un magasin](#titre81)
 * [Combat rapide](#titre82)
