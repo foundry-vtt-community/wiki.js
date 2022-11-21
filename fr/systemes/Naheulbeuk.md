@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T08:46:24.377Z
+date: 2022-11-21T08:54:23.318Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -226,6 +226,12 @@ Le sac simple envoie les objets dans le sac, le sac avec le dollar envoie dans l
 
 
 ## Les PNJ {#titre2}
+
+* [Entête](#titre2.1)
+* [Onglet Caractéristiques](#titre2.2)
+* [Onglet Combat](#titre2.3)
+* [Onglet Inventaire](#titre2.4)
+
 Dans ce chapitre, nous n'allons pas voir comment faire un nouveau PNJ, mais plutôt regarder le fonctionnement de ceux déjà créés.
 De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
 
@@ -238,8 +244,10 @@ Je vais prendre comme exemple un Gobelin ingénieur.
 ![27.jpg](/naheulbeuk/27.jpg =500x)
 
 Sa fiche est divisée en 4 parties.
+<br/>
+### Entête {#titre2.1}
 
-**L'entête contient :**
+L'entête contient :
 * Le nom
 * L'image
 * La catégorie : Fanghien, humanoïde, animaux, végétaux...
@@ -250,8 +258,10 @@ Pour rajouter un nouveau trait, il faut aller le chercher depuis le compendium *
 * La répartition géographique
 Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendium **Système : bestaire données** puis la drag and drop. Elle peut être ouverte en cliquant dessus.
 ![29.jpg](/naheulbeuk/29.jpg =400x)
+<br/>
+### Onglet Caractéristiques {#titre2.2}
 
-**L'onglet Caractéristiques contient :**
+L'onglet Caractéristiques contient :
 * Toutes les statistiques de base d'un PNJ
 ![48.jpg](/naheulbeuk/48.jpg =500x)
 * Des statistiques supplémentaires parfois utiles (visibles en cliquant sur **Caractéristiques +**)
@@ -260,8 +270,9 @@ Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendi
 Théoriquement tous les états fonctionnent avec les PNJ, mais étant donné que les stats des PNJ et des PJ ne sont pas tout à fait identiques sur Naheulbeuk, attention quand même !
 ![33.jpg](/naheulbeuk/33.jpg =500x)
 * La description du PNJ
-
-**L'onglet Combat contient :**
+<br/>
+### Onglet Combat {#titre2.3}
+L'onglet Combat contient :
 * Les armes/attaques avec leur valeurs
 Comme pour le reste, un **d20** permet un jet de dés directement, un **d6** permet un jet de dés customisé et un **d6 seul** permet un jet de dés spécial.
 ![36.jpg](/naheulbeuk/36.jpg =500x)
@@ -271,8 +282,9 @@ Comme pour le reste, un **d20** permet un jet de dés directement, un **d6** per
 ![32.jpg](/naheulbeuk/32.jpg =500x)
 * Les informations à connaitre pour le combat du PNJ
 ![31.jpg](/naheulbeuk/31.jpg =500x)
-
-**L'onglet Inventaire contient :**
+<br/>
+### Onglet Inventaire {#titre2.4}
+L'onglet Inventaire contient :
 * Tous les objets drag and drop sur le personnage.
 ![34.jpg](/naheulbeuk/34.jpg =500x)
 
@@ -295,7 +307,7 @@ Dans la fiche métier, on retrouve les informations suivantes :
 
 ![38.jpg](/naheulbeuk/38.jpg =700x) 
 
-Le fonctionnement est identique celui d'un métier classique avec deux informations supplémentaires :
+Le fonctionnement est identique à celui d'un métier classique avec deux informations supplémentaires :
 * La liste de l'équipement via **Extension soldat : équipement**
 En cliquant dessus, un document de type journal s'ouvre. Il contient la liste de tous les objets des soldats qui peuvent être drag and drop sur la feuille du personnage.
 ![39.jpg](/naheulbeuk/39.jpg =500x)
@@ -309,12 +321,10 @@ Cette extension apporte plusieurs nouveautés.
 ![41.jpg](/naheulbeuk/41.jpg =300x)
 Chaque fiche contient le détail de la spécialisation avec les objets qui peuvent être drag and drop.
 ![42.jpg](/naheulbeuk/42.jpg =500x)
-* La liste des plans et recettes classés par catégorie d’ingénieur : **Extension ingénieur : plan**
+* La liste des plans et recettes classés par catégorie d’ingénieur accessible via **Extension ingénieur : plan**
 ![43.jpg](/naheulbeuk/43.jpg =500x)
-* La liste des matériaux et outils des ingénieurs : **Extension ingénieur : matériaux**
+* La liste des matériaux et outils des ingénieurs accessible via **Extension ingénieur : matériaux**
 ![44.jpg](/naheulbeuk/44.jpg =500x)
-
-
  
 **Remarque :** 
 * Les plans listent parfois des matériaux qui ne sont pas dans le document précédent, soit parce qu’ils existaient déjà ailleurs, soit parce qu’ils sont spéciaux (c’est comme ça dans le pdf).
@@ -324,7 +334,8 @@ J'ai quand même créé ces matériaux, et ils peuvent être trouvés en parcour
 
 * Lorsqu'on drag and drop un plan sur un personnage, il se retrouve dans la catégorie **Ingrédients**.
 On retrouve un **d6** à côté du nom, permettant de faire un jet de fabrication en tant que spécialiste ou non spécialiste
-*Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.*
+![50.jpg](/naheulbeuk/50.jpg =500x)
+Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 ![46.jpg](/naheulbeuk/46.jpg =500x)
 
 ## Les objets {#titre5}
