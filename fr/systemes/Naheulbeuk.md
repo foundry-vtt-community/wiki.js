@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T08:54:23.318Z
+date: 2022-11-21T08:55:10.653Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -333,7 +333,7 @@ J'ai quand même créé ces matériaux, et ils peuvent être trouvés en parcour
 ![45.jpg](/naheulbeuk/45.jpg =500x)
 
 * Lorsqu'on drag and drop un plan sur un personnage, il se retrouve dans la catégorie **Ingrédients**.
-On retrouve un **d6** à côté du nom, permettant de faire un jet de fabrication en tant que spécialiste ou non spécialiste
+On retrouve un **d6** à côté du nom, permettant de faire un jet de confection en tant que spécialiste ou non spécialiste
 ![50.jpg](/naheulbeuk/50.jpg =500x)
 Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 ![46.jpg](/naheulbeuk/46.jpg =500x)
