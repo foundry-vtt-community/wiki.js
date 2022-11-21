@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:59:26.183Z
+date: 2022-11-21T14:11:17.980Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -489,7 +489,28 @@ Ces objets fonctionnent comme ceux de type **truc** mise à part qu'ils n'ont pa
 ### Les sorts {#titre59}
 
 **Nom dans Foundry** : sort
-**Type d'objets** : 
+
+**Type d'objets** : tous les sorts des mages, prêtres ou paladins
+
+Un sort a dans l'entête le nom et l'icône, mais également un type correspondant à l'école de magie associée (magie du jeu, prêtre de Niourgl...)
+
+![68.jpg](/naheulbeuk/68.jpg =500x)
+
+Cet objet a également une description qu'il est très important de consulter quand l'objet a été drag and drop, car elle contient toutes les informations utiles. 
+Le résumé qui sera affiché après le drag and drop ne comprend que quelques informations importantes.
+
+![69.jpg](/naheulbeuk/69.jpg =500x)
+
+![71.jpg](/naheulbeuk/71.jpg =500x)
+
+Les éléments affichés après le drag and drop sont présentés dans l'onglet **Détails**. Ici tout les élements seront uniquement documentaires sauf :
+* L'épreuve, qui peut être de type jet complexe en cliquant sur le **+**
+* Les dégâts.
+Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajouter **+@bonusint**.
+
+![70.jpg](/naheulbeuk/70.jpg =500x)
+
+**Remarque :** si un sort applique un bonus / malus au personnage (un état) alors il sera présent dans la description et pourra être drag and drop sur le personnage.
 <br/>
 ### Les compétences {#titre60}
 
