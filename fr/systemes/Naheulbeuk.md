@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-20T13:38:42.066Z
+date: 2022-11-21T08:45:34.242Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -16,12 +16,15 @@ Le système est fait pour la version 10 de Foundry.
 
 En cas de problème ou de question, vous pouvez demander de l'aide sur le Discord **La Fonderie** canal naheulbeuk.
 
-Avant de rentrer dans le détails, voici ce qui n'est pas dans le système actuellement :
+Avant de rentrer dans le détail, voici ce qui n'est pas dans le système actuellement :
  * Les sorts niveau 5 et plus
  * Les montures (il y a quand même quelques exemples avec l'extension soldat)
  * Les objets des extensions Fernol, Confins, Jungle
  * Les frappes localisées
  * Surement quelques autres petits trucs que j'ai zappé :D
+ 
+Dernière précision, on va parler régulièrement d'objets et de compendium, ils faut aller les chercher dans la liste des compendiums du système.
+![49.jpg](/naheulbeuk/49.jpg =300x)
 
 ## Sommaire
 * [Création d'un personnage](#titre1)
@@ -57,7 +60,7 @@ Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor
 
 Pensez bien ensuite à cliquer sur **Prototype token** en haut à droite, puis cochez **Link Actor Data** dans l'onglet **Identity**.
 
-Puis commencez par cliquer sur **Caractéristiques** pour faire un lancer de dés de **1d6+7** et rentrez cette valeur dans la colonne **Base** du **Courage**.
+Puis commencez par cliquer sur **Caractéristiques** pour faire un lancer de **1d6+7** et rentrez cette valeur dans la colonne **Base** du courage.
 Répetez cette opération pour l'intelligence, le charisme, l'adresse et la force.
 Vous pouvez bien sûr modifier ces valeurs suivant votre façon de créer un personnage ;)
 Vous pouvez déjà remarquer que la résistance magique et l'esquive ont été mis à jour à partir de ces valeurs.
@@ -143,12 +146,12 @@ Cet onglet n'est visible que si on a drag and drop un coup spécial sur le perso
 Il y a 2 types de coups spéciaux.
 
 Les coups de type Bourre Pif (BP) et les autres (GEN = généraliste, MEN = ménestrel, NIN = ninja, CS = soldat).
-L'utilisation est identique pour les 2 types (toujours les d6 et d20 si existant) mais la fiche de description du coup est légèrement différente.
+L'utilisation est identique pour les 2 types (toujours les d6 et d20 si existant) mais leur fiche de description est légèrement différente.
 
-Si un lancé de dés est possible ils sont donc présents.
-*Par exemple pour un coup de boule déstabilisant qui demande la moyenne de la force et de l'adresse*
+Si un lancé de dés est possible ces dés sont donc présents.
+*Par exemple pour un coup de boule déstabilisant qui demande la moyenne de la force et de l'adresse on retrouve les dés*
 Sinon, l'épreuve est indiquée mais il n'y a pas de dés.
-*Par exemple pour un barrage d'acier qui demande une épreuve d'attaque classique, avec l'arme souhaitée*
+*Par exemple pour un barrage d'acier qui demande une épreuve d'attaque classique, avec l'arme souhaitée il n'y a pas de dés*
 
 **Remarque :** ne soyez pas surpis de voir des "@fo" pour la force ou "@bonusfo" pour le bonus de force > 12. C'est la convention des raccourcis du système.
 J'en reparlerai dans le chapitre avancé sur les macros.
