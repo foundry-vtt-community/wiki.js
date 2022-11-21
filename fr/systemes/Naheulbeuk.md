@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T13:58:53.012Z
+date: 2022-11-21T13:59:08.882Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -478,6 +478,7 @@ Voici les différences :
 ### Les états {#titre58}
 
 **Nom dans Foundry** : etat
+
 **Type d'objets** : tous les éléments qui altèrent un personnage sans être un véritable objet. 
 Par exemple les bonus/malus des sorts, les maladies, les blessures, les folies, les mutations, les empoisonnements...
 
