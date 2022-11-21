@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T10:06:58.864Z
+date: 2022-11-21T10:37:58.210Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -374,10 +374,40 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
  * ...
  
 **L'entête contient :**
+
+![51.jpg](/naheulbeuk/51.jpg =500x)
 * Le nom de l'objet
 * L'image de l'objet
+* La quantité 
+* Le poids
+* Le prix
+* La catégorie (pour savoir où il sera rangé dans le sac)
 
+**L'onglet Description contient :**
 
+![52.jpg](/naheulbeuk/52.jpg =500x)
+* La description de l'objet
+
+**L'onglet Détail contient :**
+
+![53.jpg](/naheulbeuk/53.jpg =500x)
+* La formule de jet de dés
+Un objet avec une formule aura un **d20** et un **d6** lorsqu'il sera drag and drop dans l'inventaire
+*Par exemple si je veux faire une torche qui brûle 1d20 min, j'écris ici d20*
+![54.jpg](/naheulbeuk/54.jpg =500x)
+En cliquant sur le **+** à droite de **Jet de dés**, on fait appraitre une interface pour faire des lancers de dés plus complexes. Dans ce cas là l'objet aura uniquement un **d6** lorsqu'il sera drag and drop dans l'inventaire.
+![55.jpg](/naheulbeuk/55.jpg =500x)
+* Les bonus / malus pour le personnage sur lequel on activera l'objet. Un objet avec des bonus / malus sera activable dans l'inventaire.
+![54.jpg](/naheulbeuk/54.jpg =500x)
+  * La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charime sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charime est entièrement ignoré.
+  * La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.
+* Un champ **Autre** pour noter les remarques éventuelles liées à l'activation. Un objet avec un champ autre complété sera activable dans l'inventaire
+
+**Remarques :**
+* Si l'objet contient des bonus / malus il est donc activable. Une fois activé, il apparait lorsqu'on clique sur l'oeil à droite de **Caractéristiques** dans l'onglet **Caractéristiques** d'un personnage.
+![56.jpg](/naheulbeuk/56.jpg =500x)
+* En cliquand sur l'oeil en haut à droite d'un objet, on masque toutes les informations importantes et on peut définir un nouveau nom et une nouvelle description. Cette fonctionnalité existe pour permettre de ne pas révéler le détail d'un objet looté.
+![57.jpg](/naheulbeuk/57.jpg =500x)
  
 
 ### Les armures et autres objets portés {#titre52}
