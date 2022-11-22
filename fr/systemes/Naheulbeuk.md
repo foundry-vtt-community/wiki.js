@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:28:11.838Z
+date: 2022-11-22T15:36:26.758Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -544,6 +544,8 @@ Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait u
 
 **Les coups de type Bourre-Pif :**
 
+![81.jpg](/naheulbeuk/81.jpg =500x)
+
 ![75.jpg](/naheulbeuk/75.jpg =500x)
 
 * **Epreuve d'attaque :** le jet de dés à faire pour réussir le coup
@@ -551,12 +553,17 @@ Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait u
 * **Effet spécial :** une description pour le cas où le coup aurait des conséquences spécifiques
 * **Epreuve effet spécial** : un jet de dés supplémentaire pour l'effet spécial, si nécessaire.
 
-![80.jpg](/naheulbeuk/80.jpg)
-
-Comme pour le reste, la description des jets de dés utilise la convention de raccourcis du système : [@att](#titre87), [@bonusfo]](#titre87)...
+Comme pour le reste, la description des jets de dés utilise la convention de raccourcis du système : [@att](#titre87), [@bonusfo](#titre87)...
 
 **Les autres coups spéciaux :**
 
+![82.jpg](/naheulbeuk/82.jpg =500x)
+
+![83.jpg](/naheulbeuk/83.jpg =500x)
+
+* Les champs **Épreuve** et **Dégâts** s'ils sont complétés, permettre de faire apparaître le **d20** et le **d6** une fois le coup drag and drop sur la feuille de personnage.
+* Pour ces deux champs, s'ils commencent par * alors le contenu ne sera pas interprété comme une formule, mais comme une description.
+* Il n'y a pas d'autres d'automatisations (pas de gain d'xp automatique en cas de coup réussi par exemple)
 <br/>
 ### Les métiers {#titre61}
 
