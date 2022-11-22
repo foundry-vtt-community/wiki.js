@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T10:59:32.830Z
+date: 2022-11-22T14:04:12.890Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -555,6 +555,7 @@ Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait u
 Comme pour le reste, la description des jets de dés utilise la convention de raccourcis du système : "@att", "@bonusfo"...
 
 **Les autres coups spéciaux :**
+
 <br/>
 ### Les métiers {#titre61}
 
