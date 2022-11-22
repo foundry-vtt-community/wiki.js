@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-21T14:22:11.201Z
+date: 2022-11-22T10:59:32.830Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -509,7 +509,7 @@ Les éléments affichés après le drag and drop sont présentés dans l'onglet 
 Ici tout les élements seront uniquement documentaires (non automatisé, par exemple l'énergie astrale ne baissera pas) sauf :
 * Le niveau pour le classement du sort
 * L'épreuve, pour afficher les dés correspondants. 
-Elle peut être de type jet complexe en cliquant sur le **+**
+Elle peut être de type jet de dés complexe en cliquant sur le **+**. Si c'est le cas, il n'y aura qu'un unique **d6** après le drag and drop sur la feuille de personnage.
 * Les dégâts, pour afficher les dés correspondants.
 Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajouter **+@bonusint**.
 
@@ -538,7 +538,23 @@ Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait u
 ### Les coups spéciaux {#titre56}
 
 **Nom dans Foundry** : coup
-**Type d'objets** : 
+
+**Type d'objets** : les coups de Bourre-Pif, les coups spéciaux génériques, de ménestrel, des ninjas, des soldats...
+
+**Les coups de type Bourre-Pif :**
+
+![75.jpg](/naheulbeuk/75.jpg =500x)
+
+* **Epreuve d'attaque :** le jet de dés à faire pour réussir le coup
+* **Dégâts en PI :** les dégâts infligés si le coup touche
+* **Effet spécial :** une description pour le cas où le coup aurait des conséquences spécifiques
+* **Epreuve effet spécial** : un jet de dés supplémentaire pour l'effet spécial, si nécessaire.
+
+![76.jpg](/naheulbeuk/76.jpg =500x)
+
+Comme pour le reste, la description des jets de dés utilise la convention de raccourcis du système : "@att", "@bonusfo"...
+
+**Les autres coups spéciaux :**
 <br/>
 ### Les métiers {#titre61}
 
