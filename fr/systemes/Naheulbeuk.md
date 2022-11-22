@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:14:50.882Z
+date: 2022-11-22T15:22:01.384Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -176,14 +176,14 @@ Il contient un sous onglet **Capacités magiques** qui permet de sélectionner l
 
 ![16.jpg](/naheulbeuk/16.jpg =500x)
 
-Comme pour le reste, il faut ensuite drag and drop les sorts à partir du compendium adapté.
+Comme pour le reste, il faut ensuite drag and drop [les sorts](#titre59) à partir du compendium adapté.
 *Par exemple pour la magie du feu, je vais dans le compendium **Magie : feu** et je drag and drop les sorts niveau 1*
 
 ![17.jpg](/naheulbeuk/17.jpg =500x)
 
 **Remarques :**
 * On retrouve les **d20** et **d6** habituels.
-* Comme pour les coups spéciaux, on retrouve les raccourcis du système : [@mphy](#titre87) pour la magie physique, [@bonusint](#titre87) pour le bonus d'intelligence > 12 ...
+* Comme pour les coups spéciaux, on retrouve les raccourcis du système dans la fiche du sort : [@mphy](#titre87) pour la magie physique, [@bonusint](#titre87) pour le bonus d'intelligence > 12 ...
 Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles signifient que le PNJ cible doit faire un jet de dés (ici de résistance magique). Dans ces cas là, soit le MJ fait le jet de RM pour la cible, soit le joueur doit cibler le PNJ avant de faire le jet.
 * L'incantation, la durée, la portée <u>ET LE COÛT</u> ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte ces valeurs.
 * En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. <u>**C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**</u>.
@@ -205,12 +205,12 @@ Comme pour les sorts, un **d6** tout seul signifie un jet un peu particulier, c'
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
 ![21.jpg](/naheulbeuk/21.jpg =500x)
-* **Equipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés.
+* **Équipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés.
 Certains objets peuvent être équipés, d'autres utilisés, d'autres encore avoir des jets de dés.
 Ils sont divisés en 3 sous catégories :
   * **Les objets dans le sac :** c'est la que seront la grosse majorité des objets du personnage. Pour mieux les retrouver, ils sont placés dans un troisième niveau de catégories qui s'affichent uniquement si elles contiennent des objets. Ce sont les objets divers, les livres, les ingrédients, les potions, les armes, les armures, la nourriture, les richesses, les montures, les objets personnels...
   ![22.jpg](/naheulbeuk/22.jpg =500x)
-  * **Les objets dans la bourse** : on retrouve ici les objets qui sont dans la bourse, donc cette partie est utilisée principalements pour les pièces.
+  * **Les objets dans la bourse** : on retrouve ici les objets qui sont dans la bourse, donc cette partie est utilisée principalement pour les pièces.
   * **Les objets en dehors du sac** : tout ce qui n'est pas dans le sac ou dans la bourse devrait être rangé ici : une guitare en bandoulière, une épée à la ceinture, un sac sur le dos...
   
 **Remarques :**
@@ -251,11 +251,11 @@ L'entête contient :
 * L'image
 * La catégorie : Fanghien, humanoïde, animaux, végétaux...
 * Les traits
-Pour rajouter un nouveau trait, il faut aller le chercher depuis le compendium **Système : bestaire données** puis le drag and drop. Il peut être ouvert en cliquant dessus.
+Pour rajouter un nouveau trait, il faut aller le chercher depuis le compendium **Système : bestiaire données** puis le drag and drop. Il peut être ouvert en cliquant dessus.
 ![28.jpg](/naheulbeuk/28.jpg =400x)
 
 * La répartition géographique
-Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendium **Système : bestaire données** puis la drag and drop. Elle peut être ouverte en cliquant dessus.
+Pour rajouter une nouvelle région, il faut aller la chercher depuis le compendium **Système : bestiaire données** puis la drag and drop. Elle peut être ouverte en cliquant dessus.
 ![29.jpg](/naheulbeuk/29.jpg =400x)
 <br/>
 ### Onglet Caractéristiques {#titre2.2}
@@ -293,7 +293,7 @@ Toutes les informations utiles pour cette extension sont regroupées dans les fi
 
 ![37.jpg](/naheulbeuk/37.jpg =300x)
 
-La seule information manquante conscerne les volontaires, qui sont des aventuriers normaux. Donc pour eux il reste indispensable de consulter les pdf pour connaître le fonctionnement (notamment la solde).
+La seule information manquante concerne les volontaires, qui sont des aventuriers normaux. Donc pour eux il reste indispensable de consulter les pdf pour connaître le fonctionnement (notamment la solde).
 
 Dans la fiche métier, on retrouve les informations suivantes :
 * La description
@@ -394,13 +394,13 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 Un objet avec une formule aura un **d20** et un **d6** lorsqu'il sera drag and drop dans l'inventaire
 *Par exemple si je veux faire une torche qui brûle 1d20 min, j'écris ici d20*
 ![54.jpg](/naheulbeuk/54.jpg =500x)
-En cliquant sur le **+** à droite de **Jet de dés**, on fait appraitre une interface pour faire des lancers de dés plus complexes. Dans ce cas là l'objet aura uniquement un **d6** lorsqu'il sera drag and drop dans l'inventaire.
+En cliquant sur le **+** à droite de **Jet de dés**, on fait apparaitre  une interface pour faire des lancers de dés plus complexes. Dans ce cas là l'objet aura uniquement un **d6** lorsqu'il sera drag and drop dans l'inventaire.
 ![55.jpg](/naheulbeuk/55.jpg =500x)
 * Les bonus / malus pour le personnage sur lequel on activera l'objet. 
 Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) mais restera dans le sac.
 ![54.jpg](/naheulbeuk/54.jpg =500x)
-  * La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charime sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charime est entièrement ignoré.
-  * La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.
+  * *La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charisme sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charisme est entièrement ignoré.*
+  * *La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.*
 * Un champ **Autre** pour noter les remarques éventuelles liées à l'activation. 
 Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) mais restera dans le sac.
 
