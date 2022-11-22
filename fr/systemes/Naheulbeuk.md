@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:49:55.768Z
+date: 2022-11-22T16:02:44.165Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -524,7 +524,7 @@ Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajoute
 
 En entête, on retrouve le type de compétence. Si rien n'est sélectionné, c'est une compétence héritée. Sinon on peut indiquer d'où vient la compétence.
 Pour une **compétence gagnée**, on doit préciser comment on a gagné la compétence.
-Pour l'explication sur les **compétences de base**, je vous invite à aller voir l'onglet **Compétences** du chapitre **Création d'un PJ**.
+Pour l'explication sur les **compétences de base**, je vous invite à aller voir l'onglet **Compétences** du chapitre [Création d'un PJ](#titre13).
 
 ![72.jpg](/naheulbeuk/72.jpg =500x)
 
@@ -589,12 +589,33 @@ Un fiche origine contient uniquement une description dans laquelle on va la déc
 
 **Nom dans Foundry** : ape
 
-**Type d'objets** : 
+**Type d'objets** : les aptitudes parfois étranges
+
+Une APE contient une description de l'aptitude, l'effet correspondant et le niveau.
+Comme indiqué dans la [création de personnage](#titre15), le traitement de ces APE n'est pas automatisé.
+
+![86.jpg](/naheulbeuk/86.jpg =500x)
 <br/>
 ### Les gemmes {#titre64}
 
 **Nom dans Foundry** : gemme
-**Type d'objets** : 
+
+**Type d'objets** : les pierres précieuses
+
+La fiche d'une pierre précieuse contient :
+* La quantité
+* Le poids (calculé automatiquement à partir des UG)
+* Le prix
+* La catégorie d'inventaire
+* Le type de taille
+* Le nombre d'UG
+* La description de la pierre
+
+![87.jpg](/naheulbeuk/87.jpg =500x)
+
+L'onglet description donne tout le détail de l'évaluation du type et du prix d'une gemme.
+
+![88.jpg](/naheulbeuk/88.jpg =500x)
 <br/>
 ### Les recettes {#titre61}
 
