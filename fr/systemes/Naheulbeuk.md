@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:36:26.758Z
+date: 2022-11-22T15:49:55.768Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -568,16 +568,27 @@ Comme pour le reste, la description des jets de dés utilise la convention de ra
 ### Les métiers {#titre61}
 
 **Nom dans Foundry** : metier
-**Type d'objets** : 
+
+**Type d'objets** : les métiers des personnages, les différents type de soldats, les différentes spécialisations d'ingénieurs
+
+Un fiche métier contient une case pour indiquer s'il est lié à la magie, et une description dans laquelle on va le décrire, et drag and drop les compétences ou les objets nécessaires.
+
+![84.jpg](/naheulbeuk/84.jpg =500x)
 <br/>
 ### Les origines {#titre57}
 
 **Nom dans Foundry** : origine
-**Type d'objets** : 
+
+**Type d'objets** : les origines des personnages
+
+Un fiche origine contient uniquement une description dans laquelle on va la décrire, et drag and drop les compétences ou les objets nécessaires.
+
+![85.jpg](/naheulbeuk/85.jpg =500x)
 <br/>
 ### Les APE {#titre62}
 
 **Nom dans Foundry** : ape
+
 **Type d'objets** : 
 <br/>
 ### Les gemmes {#titre64}
