@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:22:01.384Z
+date: 2022-11-22T15:28:11.838Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -482,7 +482,7 @@ Voici les différences :
 **Type d'objets** : tous les éléments qui altèrent un personnage sans être un véritable objet. 
 Par exemple les bonus/malus des sorts, les maladies, les blessures, les folies, les mutations, les empoisonnements...
 
-Ces objets fonctionnent comme ceux de type **truc** mise à part qu'ils n'ont pas de prix ou de poids et qu'ils sont actibables depuis l'onglet **Caractéristiques** du personnage.
+Ces objets fonctionnent comme ceux de type **truc** mise à part qu'ils n'ont pas de prix ou de poids et qu'ils sont activables depuis l'onglet **Caractéristiques** du personnage.
 
 ![67.jpg](/naheulbeuk/67.jpg =700x)
 <br/>
@@ -507,12 +507,12 @@ Les éléments affichés après le drag and drop sont présentés dans l'onglet 
 
 ![70.jpg](/naheulbeuk/70.jpg =500x)
 
-Ici tout les élements seront uniquement documentaires (non automatisé, par exemple l'énergie astrale ne baissera pas) sauf :
+Ici tout les éléments seront uniquement documentaires (non automatisés, par exemple l'énergie astrale ne baissera pas) sauf :
 * Le niveau pour le classement du sort
 * L'épreuve, pour afficher les dés correspondants. 
 Elle peut être de type jet de dés complexe en cliquant sur le **+**. Si c'est le cas, il n'y aura qu'un unique **d6** après le drag and drop sur la feuille de personnage.
 * Les dégâts, pour afficher les dés correspondants.
-Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajouter **+@bonusint**.
+Si les dégâts prennent en compte le bonus d'intelligence > 12, il faut rajouter **+[@bonusint](#titre87)**.
 
 **Remarque :** si un sort applique un bonus / malus au personnage (un état) alors il sera présent dans la description et pourra être drag and drop sur le personnage.
 <br/>
@@ -532,7 +532,7 @@ Ensuite on retrouve un onglet description
 
 ![73.jpg](/naheulbeuk/73.jpg =500x)
 
-Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait un jet de dés spécifique (**jet de dés** et **difficulté**)
+Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait un jet de dés spécifique (**jet de dés** et **[difficulté](#titre87)**)
 
 ![74.jpg](/naheulbeuk/74.jpg =500x)
 <br/>
@@ -551,9 +551,9 @@ Enfin il y a un onglet **Détails** pour le cas où la compétence demanderait u
 * **Effet spécial :** une description pour le cas où le coup aurait des conséquences spécifiques
 * **Epreuve effet spécial** : un jet de dés supplémentaire pour l'effet spécial, si nécessaire.
 
-![76.jpg](/naheulbeuk/76.jpg =500x)
+![80.jpg](/naheulbeuk/80.jpg)
 
-Comme pour le reste, la description des jets de dés utilise la convention de raccourcis du système : "@att", "@bonusfo"...
+Comme pour le reste, la description des jets de dés utilise la convention de raccourcis du système : [@att](#titre87), [@bonusfo]](#titre87)...
 
 **Les autres coups spéciaux :**
 
