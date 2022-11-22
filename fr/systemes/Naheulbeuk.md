@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:03:48.347Z
+date: 2022-11-22T15:14:50.882Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -53,7 +53,7 @@ Créez un nouveau personnage de type "character"
 
 Cliquez sur le portrait pour choisir une image associée à votre personnage.
 
-Un certain nombre de tokens sont inclus dans le système. Ils sont disponibles en allant à l'emplacement suivant : systems/naheulbeuk/assets/from-2minutetabletop.com-token
+Un certain nombre de tokens sont inclus dans le système. Ils sont disponibles en allant à l'emplacement suivant : **systems/naheulbeuk/assets/from-2minutetabletop.com-token**
 Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor/
 
 ![2.jpg](/naheulbeuk/2.jpg =250x)
@@ -61,7 +61,7 @@ Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor
 Pensez bien ensuite à cliquer sur **Prototype token** en haut à droite, puis cochez **Link Actor Data** dans l'onglet **Identity**.
 
 Puis commencez par cliquer sur **Caractéristiques** pour faire un lancer de **1d6+7** et rentrez cette valeur dans la colonne **Base** du courage.
-Répetez cette opération pour l'intelligence, le charisme, l'adresse et la force.
+Répétez cette opération pour l'intelligence, le charisme, l'adresse et la force.
 Vous pouvez bien sûr modifier ces valeurs suivant votre façon de créer un personnage ;)
 Vous pouvez déjà remarquer que la résistance magique et l'esquive ont été mis à jour à partir de ces valeurs.
 
@@ -89,8 +89,8 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 ![5.jpg](/naheulbeuk/5.jpg =200x)
 * Lorsqu'il y a un **d6**, on peut cliquer dessus pour ouvrir une interface permettant de modifier les valeurs du lancer :
 ![6.jpg](/naheulbeuk/6.jpg =400x)
-* Si un état (bonus, malédiction, blessure, folie...) est drag and drop sur le personnage, il apparait sur cet onglet. Cet état n'est pas appliqué tant que la case blanche n'est pas cochée.
-*Par exemple, mon personnage attrape le rhume des pierres. Je drag and drop cet état depuis le compendium des maladies. Au bout de 4h, les symptomes apparaissent. Je clique donc sur le carré blanc pour activer la prise en compte des malus.*
+* Si un [état](#titre58) (bonus, malédiction, blessure, folie...) est drag and drop sur le personnage, il apparait sur cet onglet. Cet état n'est pas appliqué tant que la case blanche n'est pas cochée.
+*Par exemple, mon personnage attrape le rhume des pierres. Je drag and drop cet état depuis le compendium des maladies. Au bout de 4h, les symptômes apparaissent. Je clique donc sur le carré blanc pour activer la prise en compte des malus.*
 ![25.jpg](/naheulbeuk/25.jpg =400x)
 * L'oeil à droite de **Caractéristiques** permet de voir les objets équipés qui impactent mon personnage.
 ![7.jpg](/naheulbeuk/7.jpg =400x)
@@ -112,9 +112,9 @@ Un template de base est présent pour vous donner des idées.
 <br/>
 ### Onglet Compétences {#titre13}
 
-On retrouve ici les compétences héritées et choisies, drag and drop précédemment.
+On retrouve ici [les compétences](#titre60) héritées et choisies, drag and drop précédemment.
 Comme pour l'onglet **Caractéristiques** vous trouverez des **d20** et **d6** en fonction de si la compétence demande un jet de dés ou non.
-*Par exemple Erudition a des dés pour permettre un test d'intelligence en cas de lecture d'une langue inhabituelle*
+*Par exemple Érudition a des dés pour permettre un test d'intelligence en cas de lecture d'une langue inhabituelle*
 
 Si mon personnage joueur gagne une compétence, je peux chercher la compétence en question dans le compendium des compétences choisies ou héritées et la drag and drop. Puis je l'édite pour cocher **Compétence de base** et indiquer comment j'ai gagné cette compétence.
 
@@ -122,18 +122,18 @@ Si mon personnage joueur gagne une compétence, je peux chercher la compétence 
 
 **/!\ Ajout personnel**
 J'aime bien demander à mes joueurs de faire un test sur une compétence, plutôt que sur une caractéristique.
-*Par exemple, si mon personnage pousuit un PNJ, je préfère lui demander un test de courir/sauter plutôt que d'adresse.*
+*Par exemple, si mon personnage poursuit un PNJ, je préfère lui demander un test de courir/sauter plutôt que d'adresse.*
 Et je trouve ça dommage de limiter les actions si un personnage ne possède pas certaines compétences.
 *Par exemple, si mon personnage veut escalader un mur mais n'a pas la compétence, je trouve ça dommage de lui dire non.*
 
 J'ai donc rajouté la notion de **Compétences de base**.
 Une compétence de base c'est quoi ? 
 Une compétence que tout le monde peut avoir (nager, escalader, tenter de voler quelqu'un, se déplacer silencieusement...), mais une compétence qui est beaucoup plus dur à réussir que la même compétence choisie ou héritée.
-Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me permet d'éviter de demander un jet de caractéristique (courir/sauter, perceptionner ref Game of roles :D)
+Ça peut aussi être une compétence qui n'existe pas dans Naheulbeuk mais qui me permet d'éviter de demander un jet de caractéristique (courir/sauter, perceptionner ref Game of roles :D)
 
 Bref vous n'êtes pas du tout obligés d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
 Vous pouvez aussi les utiliser et modifier les malus que j'ai fixé. 
-Personnelement j'aime bien rajouter [@malus-mvt-pr](#titre87) pour prendre en compte l'armure physique de mon personage. 
+Personnellement j'aime bien rajouter [@malus-mvt-pr](#titre87) pour prendre en compte l'armure physique de mon personnage. 
 *Par exemple déplacement silencieux donnerait : [@ad](#titre87) -2 - [@malus-mvt-pr](#titre87)*
 Au passage [@ad](#titre87) ou [@int](#titre87)... est la convention des raccourcis du système.
 
@@ -141,7 +141,7 @@ Au passage [@ad](#titre87) ou [@int](#titre87)... est la convention des raccourc
 <br/>
 ### Onglet Coups spéciaux {#titre14}
 
-Cet onglet n'est visible que si on a drag and drop un coup spécial sur le personnage.
+Cet onglet n'est visible que si on a drag and drop un [coups spécial](#titre56) sur le personnage.
 
 Il y a 2 types de coups spéciaux.
 
@@ -153,15 +153,15 @@ Si un lancé de dés est possible ces dés sont donc présents.
 Sinon, l'épreuve est indiquée mais il n'y a pas de dés.
 *Par exemple pour un barrage d'acier qui demande une épreuve d'attaque classique, avec l'arme souhaitée il n'y a pas de dés*
 
-**Remarque :** ne soyez pas surpis de voir des [@fo](#titre87) pour la force ou [@bonusfo](#titre87) pour le bonus de force > 12. C'est la convention des raccourcis du système.
+![79.jpg](/naheulbeuk/79.jpg =500x)
 
-![13.jpg](/naheulbeuk/13.jpg =500x)
+**Remarque :** si vous ouvrez un coup spécial, ne soyez pas surpris de voir des [@fo](#titre87) pour la force ou [@bonusfo](#titre87) pour le bonus de force > 12... C'est la convention des raccourcis du système.
 <br/>
 ### Onglet APE {#titre15}
 
 Cet onglet n'est visible que si on a drag and drop une **A**ptitude **P**arfois **E**trange sur le personnage.
 
-Les APE sont tellement WTF qu'il est impossible d'automatiser les bonus associés. C'est donc à vous et à vos joueurs de vous rappeler de ces bonus, ou de faire un nouvel "Etat" pour s'en rappeler.
+Les APE sont tellement WTF qu'il est impossible d'automatiser les bonus associés. C'est donc à vous et à vos joueurs de vous rappeler de ces bonus, ou de faire un nouvel [État](#titre58) pour s'en rappeler.
 
 Ceci étant dit, rien de particulier à rajouter.
 Simplement si vos joueurs gagnent une APE déjà existante, il ne faut pas la drag and drop mais éditer celle qui existe pour changer le niveau et le bonus.
