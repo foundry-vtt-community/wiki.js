@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T14:04:12.890Z
+date: 2022-11-22T14:22:48.113Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -616,7 +616,8 @@ Comme pour le reste, la description des jets de dés utilise la convention de ra
 * [Rechercher un compendium](#titre84)
 * [Rencontres : liste et "générateur"](#titre85)
 * [Tirer un élément aléatoire d'un compendium](#titre86)
-* [Avancé](#titre87)
+* [Raccourcis du système](#titre87)
+* [Avancé](#titre88)
 
 ### Chercher un objet et générer un magasin {#titre81}
 
@@ -630,4 +631,31 @@ Comme pour le reste, la description des jets de dés utilise la convention de ra
 
 ### Tirer un élément aléatoire d'un compendium {#titre86}
 
-### Avancé {#titre87}
+### Raccourcis du système {#titre87}
+Dans le système, que ce soit pour les objets, les feuilles de personnage ou même directement dans le code, il existe une convention de nommage pour récupérer des attributs spécifiques.
+Cette convention est la suivante :
+* **@cou** : courage total du personnage
+* **@int** : intelligence totale du personnage
+* **@cha** : charisme total du personnage
+* **@ad** : adresse totale du personnage
+* **@fo** : force totale du personnage
+* **@att** : attaque du personnage 
+Attention, pour avoir l'attaque totale qu'on fera avec une arme équipée, il faut rajouter à @att le bonus d'attaque de cette arme
+* **@prd** : parade du personnage
+Attention, pour avoir la parade totale qu'on fera avec une arme ou un bouclier équipé, il faut rajouter à @prd le bonus de parade de cette arme ou de ce bouclier
+* **@pr** : protection totale du personnage
+* **@prm** : protection magique totale du personnage
+* **@esq** : esquive totale du personnage
+* **@rm** : résistance magique totale du personnage
+* **@mphy** : magie physique du personnage
+* **@mpsy** : magie psychique du personnage
+* **@lvl** : niveau du personnage
+* **@bonusfo** : bonus / malus de force > 12 ou < 9
+* **@bonusint** : bonus d'intelligence > 12
+* **@malus-mvt-pr** : valeur du malus de déplacement en fonction de la protection (basée sur le tableau des esquives dans les pdf)
+* **@att-distance** : valeur d'attaque à distance, avec la prise en compte de **Tirer correctement**
+Attention, pour une arme, il faut rajouter son propre bonus d'attaque pour avoir la valeur totale
+* **@att-arme-poudre** : valeur d'attaque d'une arme à poudre avec le bonus spécifique de **Tirer correctement**
+* 
+
+### Avancé {#titre88}
