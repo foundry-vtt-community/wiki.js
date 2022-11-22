@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T14:22:48.113Z
+date: 2022-11-22T14:28:31.704Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -641,6 +641,14 @@ Cette convention est la suivante :
 * **@fo** : force totale du personnage
 * **@att** : attaque du personnage 
 Attention, pour avoir l'attaque totale qu'on fera avec une arme équipée, il faut rajouter à @att le bonus d'attaque de cette arme
+* **@att-distance** : valeur d'attaque à distance, avec la prise en compte de **Tirer correctement**
+Attention, pour avoir l'attaque totale qu'on fera avec une arme équipée, il faut rajouter à @att-distance le bonus d'attaque à distance de cette arme
+* **@att-arme-poudre** : valeur d'attaque d'une arme à poudre avec le bonus spécifique de **Tirer correctement**
+Attention, pour avoir l'attaque totale qu'on fera avec une arme équipée, il faut rajouter à @att-arme-poudre le bonus d'attaque à distance de cette arme
+* **@degat-contact** : bonus de dégât au corps à corps.
+Attention, pour avoir les dégâts totaux qu'on fera avec une arme équipée, il faut rajouter à @degat-contact le bonus de dégât de cette arme
+* **@degat-distance** : bonus de dégâts à distance.
+Attention, pour avoir les dégâts totaux qu'on fera avec une arme équipée, il faut rajouter à @degat-distance le bonus de dégât à distance de cette arme
 * **@prd** : parade du personnage
 Attention, pour avoir la parade totale qu'on fera avec une arme ou un bouclier équipé, il faut rajouter à @prd le bonus de parade de cette arme ou de ce bouclier
 * **@pr** : protection totale du personnage
@@ -653,9 +661,5 @@ Attention, pour avoir la parade totale qu'on fera avec une arme ou un bouclier �
 * **@bonusfo** : bonus / malus de force > 12 ou < 9
 * **@bonusint** : bonus d'intelligence > 12
 * **@malus-mvt-pr** : valeur du malus de déplacement en fonction de la protection (basée sur le tableau des esquives dans les pdf)
-* **@att-distance** : valeur d'attaque à distance, avec la prise en compte de **Tirer correctement**
-Attention, pour une arme, il faut rajouter son propre bonus d'attaque pour avoir la valeur totale
-* **@att-arme-poudre** : valeur d'attaque d'une arme à poudre avec le bonus spécifique de **Tirer correctement**
-* 
 
 ### Avancé {#titre88}
