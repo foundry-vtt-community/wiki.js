@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T14:28:31.704Z
+date: 2022-11-22T15:02:47.884Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -133,9 +133,9 @@ Ca peut aussi être une compétence qui n'existe pas dans naheulbeuk mais qui me
 
 Bref vous n'êtes pas du tout obligés d'utiliser ça, mais si vous le souhaitez il existe un compendium **Compétences de base** dédié.
 Vous pouvez aussi les utiliser et modifier les malus que j'ai fixé. 
-Personnelement j'aime bien rajouter "@malus-mvt-pr" pour prendre en compte l'armure physique de mon personage. 
-*Par exemple déplacement silencieux donnerait : @ad -2 -@malus-mvt-pr*
-Au passage "@ad" ou "@int"... est la convention des raccourcis du système.
+Personnelement j'aime bien rajouter [@malus-mvt-pr](#titre87) pour prendre en compte l'armure physique de mon personage. 
+*Par exemple déplacement silencieux donnerait : [@ad](#titre87) -2 - [@malus-mvt-pr](#titre87)*
+Au passage [@ad](#titre87) ou [@int](#titre87)... est la convention des raccourcis du système.
 
 ![12.jpg](/naheulbeuk/12.jpg =700x)
 <br/>
@@ -153,8 +153,7 @@ Si un lancé de dés est possible ces dés sont donc présents.
 Sinon, l'épreuve est indiquée mais il n'y a pas de dés.
 *Par exemple pour un barrage d'acier qui demande une épreuve d'attaque classique, avec l'arme souhaitée il n'y a pas de dés*
 
-**Remarque :** ne soyez pas surpis de voir des "@fo" pour la force ou "@bonusfo" pour le bonus de force > 12. C'est la convention des raccourcis du système.
-J'en reparlerai dans le chapitre avancé sur les macros.
+**Remarque :** ne soyez pas surpis de voir des [@fo](#titre87) pour la force ou [@bonusfo](#titre87) pour le bonus de force > 12. C'est la convention des raccourcis du système.
 
 ![13.jpg](/naheulbeuk/13.jpg =500x)
 <br/>
@@ -184,7 +183,7 @@ Comme pour le reste, il faut ensuite drag and drop les sorts à partir du compen
 
 **Remarques :**
 * On retrouve les **d20** et **d6** habituels.
-* Comme pour les coups spéciaux, on retrouve les raccourcis du système : "@mphy" pour la magie physique, "@bonusint" pour le bonus d'intelligence > 12 ...
+* Comme pour les coups spéciaux, on retrouve les raccourcis du système : [@mphy](#titre87) pour la magie physique, [@bonusint](#titre87) pour le bonus d'intelligence > 12 ...
 Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles signifient que le PNJ cible doit faire un jet de dés (ici de résistance magique). Dans ces cas là, soit le MJ fait le jet de RM pour la cible, soit le joueur doit cibler le PNJ avant de faire le jet.
 * L'incantation, la durée, la portée <u>ET LE COÛT</u> ne sont pas automatisés. C'est à vous et vos joueurs de prendre en compte ces valeurs.
 * En cliquant sur le stylo, on ouvre la description qui contient beaucoup plus d'information. <u>**C'est indispensable d'aller la lire car le résumé affiché n'est pas suffisant**</u>.
@@ -410,6 +409,8 @@ Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) 
 ![56.jpg](/naheulbeuk/56.jpg =500x)
 * En cliquant sur l'oeil en haut à droite d'un objet, on masque toutes les informations importantes et on peut définir un nouveau nom et une nouvelle description. Cette fonctionnalité existe pour permettre de ne pas révéler le détail d'un objet looté et ne fonctionne que si c'est le MJ qui clique sur l'oeil.
 ![57.jpg](/naheulbeuk/57.jpg =500x)
+* Si jamais l'objet demande une épreuve et pas un jet de dés, il faut écrire **epreuve:difficulté** dans le champ **Jet de dés**
+*Par exemple si un antidote fonctionne sur un test de force réussi, on peu écrire **epreuve:@fo***
 <br/>
 ### Les armures et autres objets portés {#titre52}
 
