@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T15:02:47.884Z
+date: 2022-11-22T15:03:48.347Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -409,8 +409,8 @@ Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) 
 ![56.jpg](/naheulbeuk/56.jpg =500x)
 * En cliquant sur l'oeil en haut à droite d'un objet, on masque toutes les informations importantes et on peut définir un nouveau nom et une nouvelle description. Cette fonctionnalité existe pour permettre de ne pas révéler le détail d'un objet looté et ne fonctionne que si c'est le MJ qui clique sur l'oeil.
 ![57.jpg](/naheulbeuk/57.jpg =500x)
-* Si jamais l'objet demande une épreuve et pas un jet de dés, il faut écrire **epreuve:difficulté** dans le champ **Jet de dés**
-*Par exemple si un antidote fonctionne sur un test de force réussi, on peu écrire **epreuve:@fo***
+* Si jamais l'objet demande une épreuve et pas un jet de dés, il faut écrire **épreuve:difficulté** dans le champ **Jet de dés**
+*Par exemple si un antidote fonctionne sur un test de force réussi, on peu écrire **épreuve:@fo***
 <br/>
 ### Les armures et autres objets portés {#titre52}
 
