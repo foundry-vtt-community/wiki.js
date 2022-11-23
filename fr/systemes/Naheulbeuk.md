@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-23T13:01:55.882Z
+date: 2022-11-23T13:30:04.806Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -740,6 +740,7 @@ Des tableaux pour les gemmes et les objets exclusifs
 Des tableaux pour les punitions et les récompenses
 
 ## Les macros {#titre8}
+Les 6 premiers chapitres concernent des macros qui existent dans le compendium des macros et qui peuvent être drag and drop dans la barre dédiée.
 * [Chercher un objet et générer un magasin](#titre81)
 * [Combat rapide](#titre82)
 * [Lancer Custom](#titre83)
@@ -750,7 +751,45 @@ Des tableaux pour les punitions et les récompenses
 * [Avancé](#titre88)
 
 ### Chercher un objet et générer un magasin {#titre81}
+C'est outil est extrêmement puissant puisqu'il va vous permettre de retrouver des objets parmi la multitude existantes dans Naheulbeuk.
+Je m'en sers à chaque préparation de partie, mais également pour réagir rapidement lorsqu'un joueur souhaite un objet spécifique.
 
+Il contient un grand nombre de filtres, et liste les objets qu'il trouve. Ces objets peuvent ensuite être drag and drop n'importe où.
+
+Il permet également de remplir directement un journal qui fait office de magasin.
+
+![95.jpg](/naheulbeuk/95.jpg =500x)
+
+* **Mots clés**
+Permet de chercher des mots clés (par exemple épée, sang de corbeaux...) dans tous les attributs des objets (le nom, la description...)
+Ce champ permet donc de chercher un objet, mais aussi où il est utilisé. Si je cherche **sang de corbeaux** je vais trouver l'objet en question ainsi que les recettes, plans, rituels qui l'utilisent.
+On peut chercher plusieurs mots clés : mots clés 1 && mots clés 2
+On peut chercher des mots clés ou d'autres : mots clés 1 || mots clés 2
+* **Prix min / max**
+Permet de chercher des objets avec un prix minimum ET / OU un prix maximum fixé.
+Si on rentre une des deux valeurs, seuls les objets avec un prix seront listés, du moins cher au plus cher.
+* **Type d'objet** 
+Permet de chercher un type d'objets au sens Foundry. Ce sont tous les types d'objets décris dans le [chapitre précédent](#titre5).
+Si plusieurs types sont sélectionnés, on cherche l'un ou l'autre
+* **Catégorie d'objet**
+Permet de chercher une catégorie d'objets au sens catégorie dans l'inventaire.
+Si plusieurs types sont sélectionnés, on cherche l'un ou l'autre
+* **Filtre pour armes ou armures**
+Si on cherche une arme (= un objet en mains) ou une armure (= un objet porté), on peut définir son type.
+Si plusieurs type sont sélectionnés, on cherche l'un et l'autre
+* **Mots clés compendium**
+Permet de ne lister que les objets issus des compendiums qui contiennent ces mots clés. 
+*Si je tape "soldat" j'aurai uniquement des objets issus des compendiums contenant le mot clé "soldat"*
+
+Ensuite si je souhaite utiliser cet outil pour créer des magasins, je dois au préalable créer un journal avec une page dédiée, puis rentrer leur nom dans la catégorie **Magasin** de l'outil.
+En relançant la recherche, on a des options supplémentaires.
+
+![96.jpg](/naheulbeuk/96.jpg =500x)
+
+On peut désormais modifier le nom de l'objet, modifier son prix et l'ajouter au magasin.
+Dans la page dédiée du journal, l'objet est rajouté avec le nom et le prix choisis, et le lien vers l'objet visible uniquement pour le MJ.
+
+![97.jpg](/naheulbeuk/97.jpg =500x)
 ### Combat rapide {#titre82}
 
 ### Lancer Custom {#titre83}
