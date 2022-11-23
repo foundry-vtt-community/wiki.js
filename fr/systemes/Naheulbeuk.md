@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-23T12:52:40.576Z
+date: 2022-11-23T13:01:55.882Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -167,6 +167,8 @@ Ceci étant dit, rien de particulier à rajouter.
 Simplement si vos joueurs gagnent une APE déjà existante, il ne faut pas la drag and drop mais éditer celle qui existe pour changer le niveau et le bonus.
 
 ![14.jpg](/naheulbeuk/14.jpg =500x)
+
+Le tirage aléatoire d'une APE se fait via les compendiums **Tableaux : APE**
 <br/>
 ### Onglet Magie {#titre16}
 
@@ -720,6 +722,22 @@ On les trouve dans le compendium : **Système : bestiaire données**
 ![94.jpg](/naheulbeuk/94.jpg =500x)
 <br/>
 ## Les tableaux {#titre7}
+
+Foundry permet de faire des tableaux pour en tirer un élément aléatoire.
+Je ne vais pas présenter ici le fonctionnement des tableaux, uniquement vous donner la liste de ceux qui sont dans le système :
+* **Tableaux : APE**
+Un tableau existe pour chaque race de Naheulbeuk 
+* **Tableaux : critiques et maladresses**
+Des tableaux pour les critiques des attaques et parades
+Des tableaux pour les maladresse des attaques, parades et sorts
+* **Tableaux : divers**
+Des tableaux pour les débilibeuk et mankdebol
+Des tableaux pour les folies, et mutations
+Un tableau pour les sorts et prodiges entropiques
+Un tableau pour le toucher de Niourgl
+Des tableaux pour les gemmes et les objets exclusifs
+* **Tableaux : extension soldat**
+Des tableaux pour les punitions et les récompenses
 
 ## Les macros {#titre8}
 * [Chercher un objet et générer un magasin](#titre81)
