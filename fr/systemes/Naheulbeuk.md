@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-23T13:30:04.806Z
+date: 2022-11-23T13:31:05.925Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -751,7 +751,7 @@ Les 6 premiers chapitres concernent des macros qui existent dans le compendium d
 * [Avancé](#titre88)
 
 ### Chercher un objet et générer un magasin {#titre81}
-C'est outil est extrêmement puissant puisqu'il va vous permettre de retrouver des objets parmi la multitude existantes dans Naheulbeuk.
+C'est outil est extrêmement puissant puisqu'il va vous permettre de retrouver des objets parmi la multitude existante dans Naheulbeuk.
 Je m'en sers à chaque préparation de partie, mais également pour réagir rapidement lorsqu'un joueur souhaite un objet spécifique.
 
 Il contient un grand nombre de filtres, et liste les objets qu'il trouve. Ces objets peuvent ensuite être drag and drop n'importe où.
