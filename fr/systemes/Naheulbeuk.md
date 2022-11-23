@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-23T13:31:05.925Z
+date: 2022-11-23T13:43:46.144Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -790,10 +790,26 @@ On peut désormais modifier le nom de l'objet, modifier son prix et l'ajouter au
 Dans la page dédiée du journal, l'objet est rajouté avec le nom et le prix choisis, et le lien vers l'objet visible uniquement pour le MJ.
 
 ![97.jpg](/naheulbeuk/97.jpg =500x)
+<br/>
 ### Combat rapide {#titre82}
+
+Cette macro est créé et maintenu par **doudlink** que je remercie !
+Elle permet d'utiliser les règles de combat rapide.
+Le joueur peut choisir l'arme qu'il veut utiliser, puis demande au MJ si le PNJ réalise une parade, une esquive ou rien du tout.
+Il peut ensuite indiquer son positionnement, et s'il y a d'autres modifications impactantes (alliés, ambidextrie...).
+La macro calcule alors le seuil et indique les dégâts si l'attaque réussie.
+
+![98.jpg](/naheulbeuk/98.jpg =500x)
 
 ### Lancer Custom {#titre83}
 
+Une macro permettant simplement de préparer des jets de dés.
+
+![99.jpg](/naheulbeuk/99.jpg =500x)
+
+En éditant cette macro, on peut par exemple l'appeler "Courage", puis remplacer la difficulté par diff="[@cou](#titre87)" et le nom par name="Courage" pour avoir une macro toute prète pour les tests de courage.
+Pour des jets de dés directs, sans interface, remplacer option="interface" par option="simple"
+<br/>
 ### Rechercher un compendium {#titre84}
 
 ### Rencontres : liste et "générateur" {#titre85}
