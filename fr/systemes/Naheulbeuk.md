@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-22T16:02:44.165Z
+date: 2022-11-23T12:52:40.576Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -411,6 +411,7 @@ Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) 
 ![57.jpg](/naheulbeuk/57.jpg =500x)
 * Si jamais l'objet demande une épreuve et pas un jet de dés, il faut écrire **épreuve:difficulté** dans le champ **Jet de dés**
 *Par exemple si un antidote fonctionne sur un test de force réussi, on peu écrire **épreuve:@fo***
+* Si vous créez un nouvel objet, il existe de très nombreuses icônes rangées dans le dossier : **systems/naheulbeuk/assets/from-rexard-icons/**
 <br/>
 ### Les armures et autres objets portés {#titre52}
 
@@ -620,32 +621,103 @@ L'onglet description donne tout le détail de l'évaluation du type et du prix d
 ### Les recettes {#titre61}
 
 **Nom dans Foundry** : recette
-**Type d'objets** : 
+
+**Type d'objets** : plans et recettes pour les ingénieurs
+
+La fiche d'une recette contient toutes les informations sur qui peut la réaliser, à partir de quand, et comment.
+Si la recette permet de fabriquer un objet, il sera dans la partie **Confection** et pourra être drag and drop.
+Les matériaux et outils nécessaires existent tous dans le système, mais ils sont rangés dans différents compendiums (suivant les pdf de Naheulbeuk). Je vous encourage donc à utiliser [l'outil de recherche](#titre81) pour les retrouver.
+
+![45.jpg](/naheulbeuk/45.jpg =500x)
+
+Une fois drag and drop, le personnage peut réaliser un **jet de confection** (**d6** à droite du plan) qui prendra en compte l'ingéniosité du personnage et la difficulté de fabrication de l'objet. 
+La spécialisation nécessaire est bien évidemment indiquée dans la fiche de l'objet.
+
+![50.jpg](/naheulbeuk/50.jpg =500x)
+
+![46.jpg](/naheulbeuk/46.jpg =500x)
 <br/>
 ### Les conteneurs {#titre641}
 
 **Nom dans Foundry** : conteneur
-**Type d'objets** : 
+
+**Type d'objets** : les coffres, et autres objets contenant d'autres objets.
+
+*Avant de décrire le fonctionnement, une petite remarque. De base Foundry ne permet pas de mettre un objet dans un objet. Le système a donc exploité des fonctionnalités complexes pour le permettre et nous ne sommes pas à l'abri de problèmes dans des scénarios qui n'ont pas été anticipés. N'hésitez donc pas à remonter tout comportement anormal sur le discord !*
+
+![89.jpg](/naheulbeuk/89.jpg =500x)
+
+**L'entête contient :**
+* La quantité (qui logiquement devrait rester à 1 pour un conteneur)
+* La place qu'il y a dedans
+* Le poids du conteneur
+* Le poids total avec les objets contenus (calculé automatiquement)
+* Le prix du conteneur
+* La catégorie d'inventaire dans lequel il sera rangé
+
+**L'onglet Détails contient :**
+* Les objets qu'on drag and drop dedans 
+*L'objet drag and drop disparaitra de l'emplacement d'origine*
+*On ne peut pas drag and drop un objet équipé*
+* Un bouton pour sortir l'objet du conteneur
+*L'objet sera enlevé du conteneur et déplacé à l'endroit où le conteneur se trouve : les objets Foundry ou la fiche d'un personnage.*
+* Un bouton pour éditer un objet
+*Logiquement un objet placé dans un conteneur ne devrait pas être édité, mais c'est quand même possible*
+*Un conteneur peut contenir un autre conteneur, mais sa fiche est en lecture seul pour éviter les bugs*
+* Un bouton pour supprimer un objet
+
+**L'onglet Description contient la description du conteneur**
 <br/>
 ### Les pièges {#titre65}
 
 **Nom dans Foundry** : piege
-**Type d'objets** : 
+
+**Type d'objets** : tous les pièges de Naheulbeuk
+
+**Attention :** les pièges sont des objets Foundry, mais ils sont uniquement là pour aider le MJ à se souvenir des caractéristiques, ainsi que faire les jets de dés.
+Ils ne peuvent donc pas être drag and drop sur un personnage où sur la scène.
+
+Ils contiennent donc toutes les caractéristiques du pièges, une formule éventuelle pour les dégâts (avec le **d20** pour faire le lancer) et une description dans laquelle peut se trouver un [état](#titre58) (malus pour les personnages touchés).
+
+![90.jpg](/naheulbeuk/90.jpg =500x)
 <br/>
 ### Les attaques (pour PNJ){#titre55}
 
 **Nom dans Foundry** : attaque
-**Type d'objets** : 
+
+**Type d'objets** : les attaques des PNJ
+
+Comme expliqué dans le [chapitre sur les PNJ](#titre2.3), les PNJ n'utilisent pas les armes comme les PJ et les statistiques d'attaque.
+Ils ont directement des attaques qui intègrent l'épreuve et les dégâts.
+C'est ce qu'on retrouve dans un objet **attaque**.
+
+![91.jpg](/naheulbeuk/91.jpg =500x)
+
+Si l'attaque du PNJ a plus d'information que l'épreuve et les dégâts, on peut cliquer sur le **+** à droite d'**Attaque** pour faire un jet de dés plus complexe.
+
+![92.jpg](/naheulbeuk/92.jpg =500x)
 <br/>
 ### Les régions (pour PNJ){#titre66}
 
 **Nom dans Foundry** : region
-**Type d'objets** : 
+
+**Type d'objets** : les régions dans lesquelles on peut trouver les PNJ
+
+Le bestiaire papier de Naheulbeuk contient les régions dans lesquelles se trouvent les PNJ. Logiquement ils sont tous dans le système, vous ne devriez donc pas avoir besoin d'en rajouter.
+On les trouve dans le compendium : **Système : bestiaire données**
+
+![93.jpg](/naheulbeuk/93.jpg =500x)
 <br/>
 ### Les traits (pour PNJ){#titre67}
 
 **Nom dans Foundry** : trait
-**Type d'objets** : 
+
+**Type d'objets** : les traits des PNJ
+
+Le bestiaire papier de Naheulbeuk contient des traits correspondant à des caractéristiques spéciales des PNJ. Logiquement ils sont tous dans le système, vous ne devriez donc pas avoir besoin d'en rajouter.
+On les trouve dans le compendium : **Système : bestiaire données**
+
+![94.jpg](/naheulbeuk/94.jpg =500x)
 <br/>
 ## Les tableaux {#titre7}
 
