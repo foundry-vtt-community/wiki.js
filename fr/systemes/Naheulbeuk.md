@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-23T13:43:46.144Z
+date: 2022-11-24T13:48:52.238Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -793,7 +793,7 @@ Dans la page dédiée du journal, l'objet est rajouté avec le nom et le prix ch
 <br/>
 ### Combat rapide {#titre82}
 
-Cette macro est créé et maintenu par **doudlink** que je remercie !
+Cette macro est créée et maintenue par **doudlink** que je remercie !
 Elle permet d'utiliser les règles de combat rapide.
 Le joueur peut choisir l'arme qu'il veut utiliser, puis demande au MJ si le PNJ réalise une parade, une esquive ou rien du tout.
 Il peut ensuite indiquer son positionnement, et s'il y a d'autres modifications impactantes (alliés, ambidextrie...).
@@ -807,14 +807,68 @@ Une macro permettant simplement de préparer des jets de dés.
 
 ![99.jpg](/naheulbeuk/99.jpg =500x)
 
-En éditant cette macro, on peut par exemple l'appeler "Courage", puis remplacer la difficulté par diff="[@cou](#titre87)" et le nom par name="Courage" pour avoir une macro toute prète pour les tests de courage.
-Pour des jets de dés directs, sans interface, remplacer option="interface" par option="simple"
+En éditant cette macro, on peut par exemple l'appeler "Test de courage", puis remplacer la difficulté par diff="[@cou](#titre87)" et le nom par name="Test de courage" pour avoir une macro toute prète pour les tests de courage.
+Pour faire des jets de dés directs, sans interface, il faut remplacer option="interface" par option="simple"
 <br/>
 ### Rechercher un compendium {#titre84}
 
+Cette macro permet de rechercher des compendiums du système.
+Bien pratique vu le nombre qui existe !
+A partir d'un mot clé, elle sort la liste des compendiums trouvés, les résultats étant cliquables pour permettre leur ouverture.
+
+![100.jpg](/naheulbeuk/100.jpg =300x)
+
 ### Rencontres : liste et "générateur" {#titre85}
 
+Ces deux macros sont des tentatives un peu loupées pour faire des générateurs de rencontre.
+Pour le moment je n'ai pas réussi à trouver une logique suffisamment robuste avec les informations présentes dans le JDR Naheulbeuk pour arriver à faire un outil satisfaisant.
+
+Faute de mieux, j'ai quand même laissé les 2 outils dans le système.
+(Les deux commencent par récupérer tous les PNJ du bestiaire, donc la première ouverture prend quelques secondes)
+
+<u>**Rencontres-liste**</u>
+
+![102.jpg](/naheulbeuk/102.jpg =400x)
+
+On sélectionne un trait, et / ou une région, et / ou une catégorie de PNJ et la macro sort les résultats correspondants.
+Elle affiche également l'xp que donne le monstre (théoriquement plus un monstre donne d'XP plus il est fort, même si ce n'est pas toujours vrai dans Naheulbeuk).
+Enfin elle affiche une sélection aléatoire pour permettre un choix random parmi les résultats.
+
+En haut de l'outil, il y a 3 boutons :
+* Ouvrir le compendium (pour ouvrir le bestiaire)
+* Relancer la sélection aléatoire
+* Lancer de dés (pour permettre de lancer des dés, par exemple si on veut choisir 1d6 montres)
+
+
+<u>**Rencontres-générateur**</u>
+Un essai un peu plus complexe, mais encore loin d'être suffisant :'(
+
+![103.jpg](/naheulbeuk/103.jpg =300x)
+
+Comme pour l'outil précédent, on indique une zone (zone 1 OU zone 2 en cas de choix multiples), et / ou des traits (trait 1 ET trait 2 en cas de choix multiples), et / ou une catégorie de PNJ (catégorie 1 OU catégorie 2 en cas de choix multiples).
+On rajoute également la plage d'xp dans laquelle doit se trouver la rencontre, et l'outil sort un résultat aléatoire qui correspond à tout ça.
+
+![104.jpg](/naheulbeuk/104.jpg =300x)
+
+On peut dire à l'outil de sortir plus de résultats en cliquant sur **Ajouter une rencontre**. Par défaut les rencontres suivantes sont du même type que la première mais rien ne vous empêche de modifier ça !
+On peut également demander à l'outil de rajouter 1d6 résultats en cliquant sur **Ajouter 1d6 rencontres**.
+
+Enfin il existe 2 options supplémentaires.
+* **Les rencontres 2,3,n seront de la même famille que la première**
+Dans le bestiaire, si les PNJ ont une "famille" elle apparait de la sorte : **Famille | nom du monstre**. *Par exemple : Gobelin | chef dément*
+Avec cette option, toutes les rencontres auront la même famille.
+![105.jpg](/naheulbeuk/105.jpg =300x)
+* **Lister toutes les rencontres de la même famille que la première**
+L'outil affiche en dessous de la première rencontre toutes les autres rencontres possibles de la même famille. 
+C'est intéressant pour trouver par exemple un mâle qui va avec la femelle, un jeune avec un adulte...
+![106.jpg](/naheulbeuk/106.jpg =300x)
+<br/>
 ### Tirer un élément aléatoire d'un compendium {#titre86}
+
+Cette macro permet de chercher un compendium du système à partir d'un mot clé, puis après avoir sélectionné un résultat, de tirer un élément aléatoire de ce compendium.
+L'intérêt est de pouvoir faire des loots plus rapidement.
+
+![101.jpg](/naheulbeuk/101.jpg =500x)
 
 ### Raccourcis du système {#titre87}
 Dans le système, que ce soit pour les objets, les feuilles de personnage ou même directement dans le code, il existe une convention de nommage pour récupérer des attributs spécifiques.
