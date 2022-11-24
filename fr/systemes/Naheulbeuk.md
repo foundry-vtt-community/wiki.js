@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T15:16:23.819Z
+date: 2022-11-24T16:08:34.339Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -752,6 +752,7 @@ Les 6 premiers chapitres concernent des macros qui existent dans le compendium d
 * [Rechercher un compendium](#titre84)
 * [Rencontres : liste et "générateur"](#titre85)
 * [Tirer un élément aléatoire d'un compendium](#titre86)
+* [Compétences](#titre89)
 * [Raccourcis du système](#titre87)
 * [Avancé](#titre88)
 
@@ -874,6 +875,15 @@ Cette macro permet de chercher un compendium du système à partir d'un mot clé
 L'intérêt est de pouvoir faire des loots plus rapidement.
 
 ![101.jpg](/naheulbeuk/101.jpg =500x)
+
+### Compétences {#titre89}
+
+Cette macro permet de lister les compétences possédées par un joueur.
+
+![109.jpg](/naheulbeuk/109.jpg =300x)
+
+En cliquant sur le nom de la compétence, on ouvre sa fiche.
+En cliquant sur la valeur, on fait un jet de dés simple avec interface.
 
 ### Raccourcis du système {#titre87}
 Dans le système, que ce soit pour les objets, les feuilles de personnage ou même directement dans le code, il existe une convention de nommage pour récupérer des attributs spécifiques.
