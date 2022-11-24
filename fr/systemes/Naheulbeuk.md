@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T13:48:52.238Z
+date: 2022-11-24T13:52:19.382Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -59,6 +59,7 @@ Ils viennent tous du super site : https://tools.2minutetabletop.com/token-editor
 ![2.jpg](/naheulbeuk/2.jpg =250x)
 
 Pensez bien ensuite à cliquer sur **Prototype token** en haut à droite, puis cochez **Link Actor Data** dans l'onglet **Identity**.
+*On est sur du fonctionnement Foundry, mais je préfère le préciser car c'est indispensable pour que la modification d'un token/fiche d'une scène soit prise en compte sur les autres scènes, et c'est fréquemment oublié*
 
 Puis commencez par cliquer sur **Caractéristiques** pour faire un lancer de **1d6+7** et rentrez cette valeur dans la colonne **Base** du courage.
 Répétez cette opération pour l'intelligence, le charisme, l'adresse et la force.
@@ -902,3 +903,6 @@ Attention, pour avoir la parade totale qu'on fera avec une arme ou un bouclier �
 * **@malus-mvt-pr** : valeur du malus de déplacement en fonction de la protection (basée sur le tableau des esquives dans les pdf)
 
 ### Avancé {#titre88}
+L'objectif de ce chapitre est de donner quelques bases pour le cas où vous voudriez créer vos propres macros.
+
+Pour commencer, il faut savoir qu'un PJ ou un PNJ est un **actor** Foundry. Tous le reste sont des **item**.
