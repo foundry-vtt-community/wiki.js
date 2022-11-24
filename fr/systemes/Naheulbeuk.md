@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T15:13:06.677Z
+date: 2022-11-24T15:16:23.819Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -236,6 +236,7 @@ Le sac simple envoie les objets dans le sac, le sac avec le dollar envoie dans l
 
 Dans ce chapitre, nous n'allons pas voir comment faire un nouveau PNJ, mais plutôt regarder le fonctionnement de ceux déjà créés.
 De manière générale lorsque vous souhaitez créer un nouvel objet ou PNJ il faut toujours partir de l'existant !
+*Mais si vous souhaitez quand même partir de 0, il faut aller dans Actor puis Create Actor et sélectionner le type npc.*
 
 Le système contient des PNJ dans le compendium **Bestiaire**.
 
@@ -341,6 +342,9 @@ Le jet calcule l'ingéniosité et prend en compte la difficulté de l'objet.
 ![46.jpg](/naheulbeuk/46.jpg =500x)
 
 ## Les objets {#titre5}
+
+Pour tous les objets qui seront traités ici, je vous conseille dans le cas où vous souhaiteriez faire vos propres objets de partir d'une copie d'un objet similaire existant.
+Mais bien sûr, rien ne vous empêche de partir de 0 (Items puis Create new item).
 * [Les trucs](#titre51)
 * [Les armures et autres objets portés](#titre52)
 * [Les armes et autres objets en mains](#titre53)
