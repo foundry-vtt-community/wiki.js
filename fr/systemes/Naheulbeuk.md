@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T15:09:26.969Z
+date: 2022-11-24T15:10:35.789Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -996,13 +996,13 @@ let datasetRoll = {}
 //si on a un premier résultat
 if (arme_ou_bouclier[0]!=undefined) {
   datasetRoll.dice1="d20" //on lance 1d20
-  datasetRoll.dice1="@prd+"+arme_ou_bouclier[0].system.prd //La difficulté vaut la parade du personnage : @prd + la parade de l'objet : arme_ou_bouclier[0].system.prd
+  datasetRoll.diff1="@prd+"+arme_ou_bouclier[0].system.prd //La difficulté vaut la parade du personnage : @prd + la parade de l'objet : arme_ou_bouclier[0].system.prd
   datasetRoll.name1="Parade "+arme_ou_bouclier[0].name //Le nom du bouton sera Attaque et le nom de l'objet
 }
 //si on a un deuxième résultat
 if (arme_ou_bouclier[1]!=undefined) {
   datasetRoll.dice2="d20" //on lance 1d20
-  datasetRoll.dice2="@prd+"+arme_ou_bouclier[1].system.prd //La difficulté vaut la parade du personnage : @prd + la parade de l'objet : arme_ou_bouclier[1].system.prd
+  datasetRoll.diff2="@prd+"+arme_ou_bouclier[1].system.prd //La difficulté vaut la parade du personnage : @prd + la parade de l'objet : arme_ou_bouclier[1].system.prd
   datasetRoll.name2="Parade "+arme_ou_bouclier[1].name //Le nom du bouton sera Attaque et le nom de l'objet
 }
 
