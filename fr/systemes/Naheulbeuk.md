@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T14:51:21.929Z
+date: 2022-11-24T14:59:33.105Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -936,7 +936,7 @@ Pour finir, il y a quelques outils intégrés qui permettent de vous simplifier 
 **let cible = game.naheulbeuk.macros.getSpeakersTarget()**
 Renvoie une cible unique sélectionnée 
 
-**let actor = game.naheulbeuk.macros.getSpeakersActor()**
+**let actor_source = game.naheulbeuk.macros.getSpeakersActor()**
 Renvoie l'acteur unique sélectionné (PJ contrôlé par le joueur)
 
 **let formula = game.naheulbeuk.macros.replaceAttr(expr, actor)**
@@ -980,3 +980,6 @@ datasetRoll.dice3 = "d20"
 datasetRoll.diff3 = "@int"
 datasetRoll.name3 = "test d'intelligence"
 ```
+
+Exemple :
+Je souhaite faire un test de parade avec les objets équipées.
