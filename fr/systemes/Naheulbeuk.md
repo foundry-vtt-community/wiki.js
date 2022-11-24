@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T14:59:33.105Z
+date: 2022-11-24T15:09:26.969Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -981,5 +981,34 @@ datasetRoll.diff3 = "@int"
 datasetRoll.name3 = "test d'intelligence"
 ```
 
-Exemple :
+**Exemple :**
 Je souhaite faire un test de parade avec les objets équipées.
+```js
+//on récupère l'acteur du joueur
+let actor_source = game.naheulbeuk.macros.getSpeakersActor()
+//on regarde ses objets pour trouver les armes et les boucliers équipés
+let arme_ou_bouclier=[]
+for (let item of actor.items){
+  if (item.system.equipe==true && (item.system.prbouclier==true || item.system.arme_cac==true)) {arme_ou_bouclier.push(item)}
+}
+//on construit le jet de dés (il y a maximum 2 résultats : une arme + un bouclier ou 2 armes)
+let datasetRoll = {}
+//si on a un premier résultat
+if (arme_ou_bouclier[0]!=undefined) {
+  datasetRoll.dice1="d20" //on lance 1d20
+  datasetRoll.dice1="@prd+"+arme_ou_bouclier[0].system.prd //La difficulté vaut la parade du personnage : @prd + la parade de l'objet : arme_ou_bouclier[0].system.prd
+  datasetRoll.name1="Parade "+arme_ou_bouclier[0].name //Le nom du bouton sera Attaque et le nom de l'objet
+}
+//si on a un deuxième résultat
+if (arme_ou_bouclier[1]!=undefined) {
+  datasetRoll.dice2="d20" //on lance 1d20
+  datasetRoll.dice2="@prd+"+arme_ou_bouclier[1].system.prd //La difficulté vaut la parade du personnage : @prd + la parade de l'objet : arme_ou_bouclier[1].system.prd
+  datasetRoll.name2="Parade "+arme_ou_bouclier[1].name //Le nom du bouton sera Attaque et le nom de l'objet
+}
+
+//On fait le jet de dés complexe
+game.naheulbeuk.macros.onRollCustom(actor_source,{},datasetRoll)
+```
+Ce qui donne :
+
+![107.jpg](/naheulbeuk/107.jpg =700x)
