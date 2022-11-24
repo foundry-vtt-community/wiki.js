@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T13:52:19.382Z
+date: 2022-11-24T14:51:21.929Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -905,4 +905,78 @@ Attention, pour avoir la parade totale qu'on fera avec une arme ou un bouclier �
 ### Avancé {#titre88}
 L'objectif de ce chapitre est de donner quelques bases pour le cas où vous voudriez créer vos propres macros.
 
-Pour commencer, il faut savoir qu'un PJ ou un PNJ est un **actor** Foundry. Tous le reste sont des **item**.
+Pour commencer, il faut savoir qu'un PJ ou un PNJ est un **actor** Foundry. Tous les objets sont des **items**. Il y a aussi des tableaux des journaux... mais je ne vais pas en parler ici.
+
+Ensuite, un actor comme un item a un type.
+* Pour les actors : character ou npc 
+* Pour les items : ape, arme, armure, attaque, competence, conteneur, coup, etat, gemme, metier, origine, piege, recette, region, sac, sort, trait, truc
+
+On récupère le type d'un élément avec actor.type ou item.type
+
+On peut aussi récupèrer le nom d'un élément avec actor .name ou item .name
+
+Les actors et les items ont des attributs qui permettent d'enregistrer ce qu'ils contiennent. Ces attributs sont visibles dans le fichier **template.json** à la racine du système.
+On les récupères avec actor.system ou item.system.
+*Par exemple pour avoir la valeur totale du courage, il faut faire :*
+```js
+let courage = actor.system.abilities.cou.value + actor.system.abilities.cou.bonus + actor.system.abilities.cou.bonus_man
+```
+*value est la valeur de base, bonus le modificateur lié aux objets, et bonus_man est le modificateur lié aux bonus renseignés par le joueur/mj dans l'onglet Caractéristiques*
+
+Les actors possèdent des items qui ont été drag an drop, ils sont accessibles via actor.items.
+*Par exemple, je peux afficher le nom des items possédés dans la console avec les lignes :*
+```js
+for (let item of actor.items){
+  console.log(item.name)
+}
+```
+
+Pour finir, il y a quelques outils intégrés qui permettent de vous simplifier la tâche :
+
+**let cible = game.naheulbeuk.macros.getSpeakersTarget()**
+Renvoie une cible unique sélectionnée 
+
+**let actor = game.naheulbeuk.macros.getSpeakersActor()**
+Renvoie l'acteur unique sélectionné (PJ contrôlé par le joueur)
+
+**let formula = game.naheulbeuk.macros.replaceAttr(expr, actor)**
+Renvoie la valeur d'une expression (expr) en remplaçant les [raccourcis du système](#titre87) (@fo, @bonusfo...) par les valeurs correspondantes de l'actor passé en paramètre.
+*Par exemple, si mon actor a 13 de force, game.naheulbeuk.macros.replaceAttr("d6+@bonusfo", actor) renverra d6+1
+Autre exemple, si je veux connaitre la valeur totale de protection de mon PJ, je peux faire : game.naheulbeuk.macros.replaceAttr("@pr", actor)*
+
+**game.naheulbeuk.macros.onRoll(actor,item,dataset,option)**
+Fait un jet de dés simple, avec ou sans interface.
+En paramètre on retrouve :
+* l'actor qui fait le jet
+* l'item qui n'est plus utilisé mais conservé au cas où. Vous pouvez mettre un objet vide {} pour ce paramètre.
+* l'objet dataset qui contient les valeurs du lancer.
+*Par exemple :*
+```js
+let datasetRoll = {}
+datasetRoll.dice = "d20" //dés à lancer
+datasetRoll.diff = "@cou" //difficulté
+datasetRoll.name = "test de courage" //nom de la fenêtre
+```
+* Une option pour indiquer si on veut faire le lancer avec interface (option="interface") ou sans (option="simple")
+
+**game.naheulbeuk.macros.onRollCustom(actor,item,dataset)**
+Fait un jet de dés complexe.
+En paramètre on retrouve :
+* l'actor qui fait le jet
+* l'item est utilisé pour l'affichage du nom du jet dans le chat.
+*Par exemple si mon objet s'appelle "épée" et que je fais un "test de force", le nom dans le chat sera : test de force - épée*
+On peut passer un objet vide {} pour ignorer cette possibilité, ou alors passer un objet réel en paramètre pour utiliser son nom.
+* l'objet dataset qui contient les valeurs du lancer (max dice7, diff7, name7).
+*Par exemple :*
+```js
+let datasetRoll = {}
+datasetRoll.dice1 = "d20" //dés à lancer pour le premier jet
+datasetRoll.diff1 = "@cou" //difficulté du premier jet
+datasetRoll.name1 = "test de courage" //nom du bouton pour le premier jet
+datasetRoll.dice2 = "d20"
+datasetRoll.diff2 = "@fo"
+datasetRoll.name2 = "test de force"
+datasetRoll.dice3 = "d20"
+datasetRoll.diff3 = "@int"
+datasetRoll.name3 = "test d'intelligence"
+```
