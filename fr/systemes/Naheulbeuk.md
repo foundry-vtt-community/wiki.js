@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T15:10:35.789Z
+date: 2022-11-24T15:12:48.567Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -1010,5 +1010,4 @@ if (arme_ou_bouclier[1]!=undefined) {
 game.naheulbeuk.macros.onRollCustom(actor_source,{},datasetRoll)
 ```
 Ce qui donne :
-
-![107.jpg](/naheulbeuk/107.jpg =700x)
+![108.jpg](/naheulbeuk/108.jpg =700x)
