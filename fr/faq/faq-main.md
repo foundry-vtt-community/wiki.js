@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2022-05-19T13:21:11.664Z
+date: 2022-11-25T21:58:10.085Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -28,6 +28,12 @@ C’est peut-être effectivement cher pour vous – et je peux le comprendre –
 ## 60 $ ? Et les joueurs doivent payer aussi ?
 
 C’est une question qui revient très souvent : donc, non bien sûr les joueurs ne payent pas. Une seule licence permet de faire jouer autant de joueurs que vous voulez à votre table. La seule contrainte est qu’il ne peut y a voir qu’1 seul jeu actif à un moment donné.
+
+## Pourquoi c'est payant et pas gratuit ?
+
+Le modèle de Foundry est un achat one-shot : vous disposez du soft, il est à vous à vie, et si jamais la société Foundry disparait, le code source sera disponible et pourra être repris par d'autres. Tout à l'opposé des modèles hébergés basés sur des abonnements ou des micro-transactions (Roll20, Lets'Role, etc).
+En payant 60 EUR (ou 50 EUR lors des promos), vous rémunèrez une équipe de rolistes développeurs de manière décente pour le travail fourni. Précisons que l'équipe de Foundry est internationale, et qu'il y a même un Français dans la team officielle (SecretFire).
+Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut en être conscient 🙂 
 
 ## Admettons que je l’achète. Est-ce que je dois re-payer pour les mises à jour ?
 
