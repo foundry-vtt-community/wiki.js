@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-24T16:08:34.339Z
+date: 2022-11-25T11:03:34.393Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -28,6 +28,8 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 ![49.jpg](/naheulbeuk/49.jpg =300x)
 
 ## Sommaire
+* [Vidéo d'introduction MJ](#titre01)
+* [Vidéo d'introduction PJ](#titre02)
 * [Création d'un PJ](#titre1)
 * [Les PNJ](#titre2)
 * [L'extension soldat](#titre3)
@@ -35,6 +37,16 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 * [Les objets](#titre5)
 * [Les tableaux](#titre7)
 * [Les macros](#titre8)
+
+
+## Vidéo d'introduction MJ {#titre01}
+Petite vidéo pour faire une introduction à l'utilisation du système en tant que Maitre du Jeu.
+https://www.youtube.com/watch?v=Lc8tfl2d8CY
+    <video width="600" controls>
+      <source src=”https://www.youtube.com/watch?v=Lc8tfl2d8CY” type=video/ogg>
+    </video>
+## Vidéo d'introduction PJ {#titre02}
+Petite vidéo pour faire une introduction à l'utilisation du système en tant que Personnage Joueur.
 
 ## Création d'un PJ {#titre1}
 * [Onglet Caractéristiques](#titre11)
