@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-25T11:14:12.489Z
+date: 2022-11-25T15:10:30.888Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -216,6 +216,7 @@ C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la par
 ![20.jpg](/naheulbeuk/20.jpg =500x)
 Comme pour les sorts, un **d6** tout seul signifie un jet un peu particulier, c'est le cas notamment des armes à poudre.
 *Le bonus de force > 12 ou < 9, et la compétence **Tirer correctement** sont déjà pris en compte dans le système.*
+Enfin il y a des limitations sur les objets équipés dans cette catégorie (2 armes, 1 arme à distance, 1 bouclier...), elles peuvent être ignorées avec un **shift+clic**
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
 ![21.jpg](/naheulbeuk/21.jpg =500x)
@@ -478,6 +479,7 @@ Voici les différences :
   * Une seule arme de contact peut être équipée avec un bouclier
   * Plusieurs munitions peuvent être équipées
   * Les armes de jet (hache, lance) compte comme des armes de contact dans les règles précédentes.
+  * En appuyant sur shift lors du clic, on peut ignoré les règles précédentes.
 <br/>
 ### Les sacs {#titre54}
 
