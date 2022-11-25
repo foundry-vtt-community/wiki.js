@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-25T11:07:23.190Z
+date: 2022-11-25T11:12:50.284Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -42,7 +42,12 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 ## Vidéo d'introduction MJ {#titre01}
 Petite vidéo pour faire une introduction à l'utilisation du système en tant que Maitre du Jeu.
 https://www.youtube.com/watch?v=Lc8tfl2d8CY
-<video width="560" height="315" src="https://www.youtube.com/embed/Lc8tfl2d8CY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></video>
+<video controls width="250">
+
+    <source src="https://www.youtube.com/v/Lc8tfl2d8CY"
+            
+
+</video>
 ## Vidéo d'introduction PJ {#titre02}
 Petite vidéo pour faire une introduction à l'utilisation du système en tant que Personnage Joueur.
 
