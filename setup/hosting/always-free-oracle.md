@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-11-27T03:43:29.523Z
+date: 2022-11-27T04:05:32.078Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -294,6 +294,8 @@ ssh -i foundry.key ubuntu@<public ip address>
 sudo apt-get update
 sudo apt-get upgrade -y
 ```
+
+> Blocks like the above with multiple lines of commands should be run a single line at a time. This avoids some issues with some SSH clients messing with newlines if one pastes a block of text in and lets you stop if one of the commands throws an error rather than immediately running the next command. {.is-warning}
 
 >You may be prompted for choices during the `upgrade` command above. Simply hit <kbd>enter</kbd> to accept the defaults and continue. {.is-info}
 
