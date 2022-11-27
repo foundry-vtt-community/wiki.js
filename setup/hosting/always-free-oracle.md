@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-11-14T23:24:23.683Z
+date: 2022-11-27T03:43:29.523Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -348,7 +348,7 @@ sudo apt-get install nano unzip -y
 <a id="D15" href="#D15">D15.</a>  The software needed to launch and manage Foundry is now successfully installed.
 
 ## Install and launch Foundry
-<a id="D16" href="#D16">D16.</a>  Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
+<a id="D16" href="#D16">D16.</a>  Login to [FoundryVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
 <a id="D17" href="#D17">D17.</a>  Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
