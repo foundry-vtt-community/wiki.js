@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-25T15:10:30.888Z
+date: 2022-11-27T07:06:51.342Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -419,7 +419,7 @@ En cliquant sur le **+** à droite de **Jet de dés**, on fait apparaitre  une i
 Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) mais restera dans le sac.
 ![54.jpg](/naheulbeuk/54.jpg =500x)
   * *La part du bonus/malus de Charisme ignoré pour la magie psychique, permet de donner un bonus de Charisme sans qu'il ne modifie la valeur de magie psychique. Dans l'exemple, le bonus de 8 en charisme est entièrement ignoré.*
-  * *La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entre pas en compte dans le calcul des malus pour le déplacement et l'esquive. Je peux par exemple avoir une armure donnant 10 Pr, mais dont 4 seulement rentre en compte dans le calcul du malus de déplacement. J'indique donc 6 dans ce champ.*
+  * *La part du bonus/malus de Pr ignoré pour le malus d'encombrement, permet de définir combien de Pr sur le bonus total n'entrent pas en compte dans le calcul des malus pour le déplacement et l'esquive. Par exemple une armure de glace niveau 1 donne 3 Pr qui n'entrent pas en compte pour le malus d'encombrement. J'ai donc 3 en Protection et 3 dans ce champs.*
 * Un champ **Autre** pour noter les remarques éventuelles liées à l'activation. 
 Un objet avec des bonus / malus sera activable dans l'inventaire (case blanche) mais restera dans le sac.
 
