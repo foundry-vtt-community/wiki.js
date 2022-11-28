@@ -2,7 +2,7 @@
 title: Cloudflare Proxying & Tunnel
 description: Use Cloudflare's protection for your public-facing FoundryVTT server.
 published: true
-date: 2022-05-25T02:32:11.319Z
+date: 2022-11-28T15:19:01.573Z
 tags: cloudflare, proxy, tunnel, tls, https
 editor: ckeditor
 dateCreated: 2022-03-25T02:38:49.920Z
@@ -81,17 +81,34 @@ $ sudo apt-get install cloudflared -y</code></pre>
 <p>3. Navigate &amp; log into the Cloudflare Zero Trust dashboard, <a href="https://dash.teams.cloudflare.com/">here</a>.</p>
 <p>&nbsp; &nbsp; &nbsp;a. Under the “Access” tab, click on “Tunnel”.</p>
 <p>&nbsp; &nbsp; &nbsp;b. Click on “Create Tunnel” at the top &amp; continue through the generator.&nbsp;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Name the tunnel whatever you'd like, I named mine “FoundryVTT”.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1. Name the tunnel whatever you'd like; I named mine “FoundryVTT”.</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2. On the Installer Screen, press the Debian environment build and chose whichever architecture your host is running.</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3. Now copy and paste the string of characters listed in the “<i>If you already have cloudflared installed on your machine</i>” box on the website. It should look something like this:</p>
 <p><code>sudo cloudflared service install &lt;THIS IS A REALLY LONG STRING OF CHARACTERS THAT IS UNIQUE TO THIS TUNNEL YOU JUST CREATED - DON'T SHARE THIS&gt;</code></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4. Once you run this command, a tunnel connector will be established, it may not update on the website.</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5. On the final screen, choose the “Public Hostname” option, enter your domain name (this is the same name that is in your Foundry <code>options.conf</code>file), set the path to *, set the protocol to “HTTPS" and enter your <strong><u>PUBLIC</u></strong> IP address followed by the semicolon and port of the FoundryVTT server.</p>
-<p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Note: If you enter your private IP here, this will fail. Your private IP may look something like 192.168.XXX.XXX (usually something such as 192.168.0.XXX or 192.168.1.XXX). If you don't know what your public IP is, check it </strong><a href="https://www.whatismyip.com/"><strong>here</strong></a><strong>.</strong></p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 4. Once you run this command, a tunnel connector will be established; it may not update on the website.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 5. On the final screen, choose the “Public Hostname” option, enter your domain name (this is the same name that is in your Foundry <code>options.conf</code>file), set the path to *, set the protocol to “HTTPS" and enter “<strong>Private IP Address</strong>” followed by a colon and port of the FoundryVTT server, (default is <strong>30000</strong>). So, for example, it should look like <strong>HTTPS://192.168.1.20:30000</strong>.</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A. If you don't know what your private IP address is, you can run “<strong>ifconfig</strong>” and the IP address will be printed under your ethernet (usually eth0) or wireless (wlan0) adapter. Whichever one you're connecting to the internet from.</p>
+<pre><code class="language-plaintext">$ ifconfig
+eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+        inet 192.168.1.20  netmask 255.255.255.0  broadcast 192.168.1.255
+        ether XX:XX:XX:XX:XX:XX  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 0  memory 0x00000000-00000000  
+
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0 GB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0</code></pre>
 <p>4. Login to the <code>cloudflared</code> service using the command: <code>sudo cloudflared login</code>.</p>
-<p>&nbsp; &nbsp; &nbsp;a. Your browser should open. If it doesn't, just copy and paste the URL and log in again like normal.</p>
-<p>&nbsp; &nbsp; &nbsp;b. Assign that login to your created tunnel, this will link certificates and other required information. Without this, you'll have to add another certificate to your PATH, which I don't recommend.</p>
-<p>5. Assuming everything went to plan, you should be able to refresh the webpage that has the named tunnel you just created and you should see a status of “Active”. If not, you may have to look up the docs, <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/">here</a> and see if there's something that may have gone wrong.</p>
+<p>&nbsp; &nbsp; &nbsp;a. Your browser should open. If it doesn't, just copy and paste the URL and login again like normal.</p>
+<p>&nbsp; &nbsp; &nbsp;b. Assign that login to your created tunnel. This will link certificates and other required information. Without this, you'll have to add another certificate to your PATH, which I don't recommend.</p>
+<p>5. Assuming everything went to plan, you should be able to refresh the webpage that has the named tunnel you just created and you should see a status of “Active”. If not, you may have to look up the docs, <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/">here</a> and see if something may have gone wrong.</p>
 <h3>Part 3: Testing Connectivity</h3>
 <p>1. Ensure your foundry server is running (with sudo permissions, otherwise it will fail when trying to read your certificate files).</p>
 <p>2. Navigate to your foundry server using your webpage URL. If you get a certificate error, you may need to install Cloudflare's Root CA into your trusted certificate repository on your PC. Instructions on how to do that are <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/install-cloudflare-cert/">here</a>.</p>
