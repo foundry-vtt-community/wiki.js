@@ -2,16 +2,15 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-11-27T07:07:49.244Z
+date: 2022-12-19T18:17:14.161Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
 ---
 
 # Naheulbeuk
-Le système pour le JDR Naheulbeuk n'est pas officiel.
-Il n'est pas non plus trouvable directement dans Foundry, pour l'installer il faut donc utiliser l'URL :
-https://github.com/Dipess/naheulbeuk/releases/latest/download/system.json
+Le système pour le JDR Naheulbeuk est maintenant officiel ! Il est donc directement trouvable dans le store de Foundry :)
+https://github.com/Dipess/naheulbeuk/releases/latest/download/
 Le système est fait pour la version 10 de Foundry.
 
 En cas de problème ou de question, vous pouvez demander de l'aide sur le Discord **La Fonderie** canal naheulbeuk.
