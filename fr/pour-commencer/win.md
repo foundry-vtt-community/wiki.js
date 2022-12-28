@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2022-05-19T13:21:00.444Z
+date: 2022-12-28T13:56:52.686Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -132,7 +132,7 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 
 
 ### Utilisateur Freebox et IPv4 Full-Stack
-><u>**ATTENTION:**</u> Les utilisateurs **Freebox** (**hors Freebox Delta**) devront choisir un port entre <u>**49152 et 65535**</u>, par exemple le choix du port **50000** pour Foundry VTT fonctionne parfaitement sur une freebox.
+><u>**ATTENTION:**</u> Les utilisateurs **Freebox** (**hors Freebox Delta**) devront choisir un port entre <u>**49152 et 65535**</u>. N'utilisez pas le port 49152, nous vous conseillons l'utilisation un port supérieur tel que le port **50000** ou **50100** pour Foundry VTT, fonctionnant parfaitement sur une freebox.
 {.is-warning}
 
 Face à la pénurie des IPv4 (et à leur prix), Free a mis en place un système de partage des adresses IP entre 4 abonnés, comme donc une adresse d’immeuble partagée avec 4 logements. Ce système fait que chaque abonné se voit dédié une plage de ports (1-16363, puis 16384-32767 etc). On a donc une IP publique fixe mais partagée.
