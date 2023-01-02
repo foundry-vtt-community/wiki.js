@@ -2,7 +2,7 @@
 title: Développement
 description: 
 published: true
-date: 2023-01-02T08:48:11.665Z
+date: 2023-01-02T08:49:23.811Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-10T14:46:28.370Z
@@ -30,4 +30,9 @@ Git est un outil assez indissociable du développement pour Foundry : [a se pass
 ## Faire un module de traduction
 
 Pour les compendiums et le reste des termes : [c'est ici](/fr/developpement/guides/Traduire-compendium-Babele).
+
+## Faire un module de contenu
+
+Pour faire un module de contenu, avec des compendiums et éventuellement un fichier CSS : [c'est par là](/fr/developpement/guides/module-contenu).
+
 
