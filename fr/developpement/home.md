@@ -2,7 +2,7 @@
 title: Développement
 description: 
 published: true
-date: 2022-05-19T13:23:51.875Z
+date: 2023-01-02T08:48:11.665Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-10T14:46:28.370Z
@@ -23,3 +23,11 @@ C'est par ici : [La playlist Youtube (en)](https://www.youtube.com/playlist?list
 
 Et bien sûr, le wiki anglais reste une source précieuse d'informations : [Wiki Développeurs (en)](/en/development/home)
 Et en particulier : [Learning API](/en/development/guides/API-Learning-API)
+
+## Comprendre git 
+Git est un outil assez indissociable du développement pour Foundry : [a se passe ici](/fr/developpement/guides/git) 
+
+## Faire un module de traduction
+
+Pour les compendiums et le reste des termes : [c'est ici](/fr/developpement/guides/Traduire-compendium-Babele).
+
