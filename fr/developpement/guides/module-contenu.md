@@ -2,7 +2,7 @@
 title: Faire un module de contenu
 description: 
 published: true
-date: 2023-01-02T09:09:51.176Z
+date: 2023-01-02T09:13:04.068Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-02T09:05:01.700Z
@@ -41,20 +41,6 @@ Il doit avoir la structure suivante :
         "verified": 10,
         "maximum": 10
     },
-    "relationships": {
-        "systems": [
-            {
-                "id": "bol",
-                "type": "system",
-                "manifest": ""
-            }
-        ]
-    },
-    "authors": [
-        {
-            "name": "Un auteur anonyme"
-        }
-    ],
     "esmodules": [],
     "styles": [
       "styles/styles.css"
@@ -64,7 +50,6 @@ Il doit avoir la structure suivante :
         {
             "name": "cartes-roberts",
             "label": "Cartes du Pirate Roberts",
-            "system": "bol",
             "path": "packs/cartes-roberts.db",
             "type": "Adventure"
         }
@@ -75,5 +60,10 @@ Il doit avoir la structure suivante :
 }
 ```
 
-
+- id : très important. Doite être **strictement identique** au nom de votre module (et donc à votre répertoire)
+- title : Ce que vous voulez
+- description : Idem
+- styles : Si votre module comporte des styles, placez le fichier CSS ici. Sino, supprimez la ligne, tout simplement.
+- packs : c'est le second élément important. Vous devez venir déclarer vos compendiums ici. Le champ Type est important, il doit être : 
+    - 
 
