@@ -2,7 +2,7 @@
 title: Faire un module de contenu
 description: 
 published: true
-date: 2023-01-02T09:13:04.068Z
+date: 2023-01-02T09:17:03.258Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-02T09:05:01.700Z
@@ -64,6 +64,17 @@ Il doit avoir la structure suivante :
 - title : Ce que vous voulez
 - description : Idem
 - styles : Si votre module comporte des styles, placez le fichier CSS ici. Sino, supprimez la ligne, tout simplement.
-- packs : c'est le second élément important. Vous devez venir déclarer vos compendiums ici. Le champ Type est important, il doit être : 
-    - 
+- packs : c'est le second élément important. Vous devez venir déclarer vos compendiums ici. Le champe "name" doit être identique au nom du fichier sans le .db. Le champ Type est important, il doit avoir une des valeurs suivantes: 
+    - RollTable : des roll tables
+		- Scene : des maps et images
+    - Item : des items (selon le système : sorts, équipement, etc, etc)
+    - Adventure : un compendium "Aventure"
+    - Actor : des PJs/PNJs
+    - JournalNote : des notes de journaux
+
+## Installation
+
+Uen fois votre module.json prêt, recopiez l'intégralité du répertoire dans votre répertoires *modules* de Foundry et relancez Foundry. Si tout s'est bien passé, il devrait apparaître dans la liste des modules disponibles.
+
+Si ce n'est pas le cas, consultez la console (F12) pour voir quellles erreurs se sont produites.
 
