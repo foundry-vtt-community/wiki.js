@@ -2,7 +2,7 @@
 title: Wiki Francophone pour FoundryVTT
 description: Page d'accueil sur l'aide et l'assistance de FoundryVTT
 published: true
-date: 2023-01-02T08:45:47.277Z
+date: 2023-01-02T08:46:08.930Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-16T18:36:25.395Z
@@ -26,7 +26,7 @@ Chaque mois, l'équipe du Discord Fr de FoundryVTT et GeekPowa proposent une pet
 Cette [section recense des informations courantes sur les systèmes de jeu traduits et certains modules de scénarios clés en mains.](/fr/pages/systemescontenus)
 
 ## Développement
-Des tutos et conseils pour démarrer [un développement de modules ou de système](fr/developpement/home), y compris une traduction.
+Des tutos et conseils pour démarrer [un développement de modules ou de système](/fr/developpement/home), y compris une traduction.
 
 ## Ressources pour le jeu
 [Compilation et liens vers des ressources pour jouer en ligne](/fr/pages/ressourcesjeux) (tokens, art, images d'ambiance, musiques)
