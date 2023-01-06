@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2022-12-19T18:18:59.410Z
+date: 2023-01-06T16:08:11.260Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -86,6 +86,7 @@ Si vous choisissez un mage, un prêtre ou un paladin, vous voyez apparaitre de n
 Un onglet **Magie** apparait également, mais on en reparlera plus tard !
 
 <u>Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage.</u> Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (énergie vitale, énergie astrale, charge maximum, attaque, parade...).
+*Il faut également compléter la PR max, qui a été rajoutée depuis que cette capture a été faite.*
 
 Au passage, à partir des métiers et origines, vous devez aussi drag and drop les **Compétences héritées**, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
 
@@ -113,6 +114,8 @@ Il ne reste plus qu'à cliquer sur **Point de destin** pour générer la valeur 
 * En cliquant sur **Protection** on peut voir la répartition de l'armure physique
 ![15.jpg](/naheulbeuk/15.jpg =400x)
 * Un calcul basique des déplacements en fonction des PR est disponible à droite de **Protection**. La première valeur est le déplacement possible depuis l'arrêt, la deuxième valeur est le déplacement possible lorsqu'on est lancé.
+* La valeur de **PR max** permettra de bloquer l'équipement d'une armure qui n'est pas adaptée à un héros. A noter que la PR qui n'impacte pas les déplacements (Truc de mauviette, armure de glace...) n'intervient pas dans le calcul de la PR max, c'est également le cas pour les boucliers.
+*Exemple : J'ai PR max 4 et j'ai truc de mauviette. Ma PR est donc à 1. Je peux équiper une armure qui donne PR + 4, et également un bouclier qui donne PR +2. Je serai donc à 7 PR tout en respectant ma valeur de PR max à 4.*
 <br/>
 ### Onglet Description {#titre12}
 
@@ -450,6 +453,7 @@ Voici les différences :
 * L'objet a une valeur de rupture
 ![59.jpg](/naheulbeuk/59.jpg =500x)
 * Ces objets seront activables dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armures et Protections - objets portés**.
+* Si équiper un de ces objets fait dépasser la PR max, alors l'objet ne sera pas équipé et il y aura un message d'erreur. Pour ignorer la restriction liée à la PR max, il faut appuyer sur shift lors de l'équipement.
 <br/>
 ### Les armes et autres objets en mains {#titre53}
 
