@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2022-09-13T21:27:35.046Z
+date: 2023-01-07T03:29:11.966Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -44,7 +44,7 @@ This guide supports the following distributions:
 1. Debian 11 based, such as (but not limited to):
 a. Debian
 b. Ubuntu
-c. Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14+)
+c. 64 bit Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14+)
 2. CentOS 8 based, such as (but not limited to):
 a. CentOS
 b. Red Hat Linux
@@ -52,7 +52,7 @@ c. Fedora
 
 Any distrition that uses the `apt` or `dnf` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
 
->This guide requires Debian 11 or CentOS 8 based distributions or higher. Using lower versions may not function properly. {.is-info}
+>This guide requires 64 bit Debian 11 or CentOS 8 based distributions or higher. Using lower versions may not function properly. 32 bit OSs will have issues with RAM and NodeJS heap size. {.is-info}
 
 ## Getting Help
 If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
