@@ -2,7 +2,7 @@
 title: CoC ou CoCth
 description: Choisir la skin de sa fiche PJ
 published: true
-date: 2023-01-11T09:47:38.803Z
+date: 2023-01-11T11:35:18.611Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T18:20:06.666Z
@@ -22,11 +22,7 @@ Voici la démarche pour changer le visuel si vous jouez à CoCth :
 - Bouton "**Configuration des Options**"
 - Dans l'onglet "Système de jeu" activez l'option "Points de Folies"
 
-Il faudra ensuite installer manuellement le module COC Cthulhu :
-
-1. Installez [ce module pour CO Cthulhu](https://github.com/ZigmundKreud/coc-cthulhu) : "**installer un module**" > "**URL du Manifest**" = `https://raw.githubusercontent.com/ZigmundKreud/coc-cthulhu/main/module.json`
-2. Dans votre monde, "**Gestionnaire de modules**" > activez le module pour Chroniques Oubliées : Cthulhu
-3. Dans les paramètres de la fiche de personnage, vous pouvez maintenant choisir le template pour Chroniques Oubliées : Cthulhu
+Il faudra ensuite installer manuellement le module COC Cthulhu, allez vous renseigner sur le Discord.
 
 Et voici la feuille Correspondante :
 
