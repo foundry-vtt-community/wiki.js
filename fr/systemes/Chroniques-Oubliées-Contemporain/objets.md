@@ -2,7 +2,7 @@
 title: CoC : Création d'Objets
 description: Bienvenue au Supermarché où l'on fait tout soit même
 published: true
-date: 2022-05-19T13:22:49.781Z
+date: 2023-01-11T10:53:23.642Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-26T20:38:04.151Z
@@ -34,7 +34,7 @@ Dans "**Type**" : Item
 C'est dans l'onglet "Détail" que vous pourrez choisir le type d'Objet que vous aller créer.
 Il suffit de choisir dans la liste de la **"Sous-Catégorie**"
 
-Vous pouvez aussi choisir pour quel Setting vous souhaitez utiliser cet objet : Base / Epouvante / Pulp / Zombies / Espionnage / Surhumains / Cyberpunk *****(pas buggé... quoi ya pas de troll ici)*****
+Vous pouvez aussi choisir pour quel Setting vous souhaitez utiliser cet objet : Base / Epouvante / Pulp / Zombies / Espionnage / Surhumains / Cyberpunk
 
 ![crea_objet2.png](/images/chroniques-oubliées-contemporain/coc/crea_objet2.png)
 
