@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2022-11-27T04:05:32.078Z
+date: 2023-01-18T13:07:58.609Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -36,7 +36,7 @@ b.  Terminal in Linux and MacOS.
 3. Valid domain name (for secure connection with HTTPS only), such as:
 a.  A purchased domain name.
 b.  A free subdomain from a service like [Duck DNS](http://duckdns.org). 
-4. A valid credit card is required to sign up for the Always Free Tier services on Oracle Cloud. Authorization charges may appear temporarily. 
+4. A valid credit or debit card is required to sign up for the Always Free Tier services on Oracle Cloud. Authorization charges may appear temporarily. 
 
 ## Getting Help
 If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
@@ -62,13 +62,13 @@ All information in this guide is accurate as of the date it was written.
 At the end of this section, you will have a registered account with Oracle Cloud that has access to the Always Free Tier services. 
 
 ## Account Creation and Upgrade
-> A valid credit card is required to sign up for an account with Oracle Cloud in order to access the Always Free Tier services. 
+> A valid credit or debit card is required to sign up for an account with Oracle Cloud in order to access the Always Free Tier services. 
 {.is-warning}
 
 
 <a id="B1" href="#B1">B1.</a> Review the availability of [Always Free services in your preferred region](https://www.oracle.com/cloud/data-regions.html). At minimum, this guide targets the Compute VM, Block Storage, and optionally the Object Storage services. Ensure that they are available in the region you want to use. 
 
-<a id="B2" href="#B2">B2.</a> Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
+<a id="B2" href="#B2">B2.</a> Sign up for an account at [Oracle Cloud](https://www.oracle.com/cloud/free/), entering your personal information as well as credit or debit card information when prompted. Ensure that you select the proper region to set as your Home Region. Once this is selected, it cannot be changed. 
 
 >**READ THIS WARNING**: When choosing your home region, pay very special attention to any messages about Arm Ampere A1 Compute capacity. See example below. **Do not choose regions listed in the warning message** as you will not be able to continue with this guide until the A1 instances become available, which may take **several days**. Choose the next closest geographical region to you and your players and continue. 
 > ![a1.availability-warning.webp](/images/oracle/a1.availability-warning.webp)
