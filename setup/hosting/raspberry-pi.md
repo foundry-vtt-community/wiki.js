@@ -2,11 +2,16 @@
 title: Raspberry Pi
 description: how to install Foundry VTT on a Raspberry PI
 published: true
-date: 2022-06-25T06:49:17.553Z
+date: 2023-01-19T15:19:06.554Z
 tags: hosting, self-hosting, raspberry pi
 editor: markdown
 dateCreated: 2021-04-18T20:02:58.536Z
 ---
+
+>This guide contains mostly duplicated or outdated information. 
+Refer to https://foundryvtt.wiki/en/setup/linux-installation for a maintained FoundryVTT setup guide that is equally viable for setting up Foundry on a Raspberry Pi computer.
+{.is-danger}
+
 
 Raspberry Pi OS (previous called Raspbian) it's a Debian-based image for Raspberry Pi.
 
