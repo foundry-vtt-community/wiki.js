@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-01-07T03:29:11.964Z
+date: 2023-01-19T00:55:21.185Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -123,7 +123,7 @@ foundry@<servername>:_
 ## System Setup
 We will now install the necessary software to run and manage Foundry behind a reverse proxy. This includes:
 
-* nodejs 14+, Required to run Foundry itself
+* nodejs 16+, Required to run Foundry itself
 * caddy 2+, the webserver that will be used as a reverse proxy
 * pm2, the process manager that will keep Foundry running
 * unzip, the utility used to decompress the Foundry installation zip archive
@@ -154,19 +154,19 @@ sudo dnf update -y
 
 >If after entering the correct password, you receive an error: `<user> is not in the sudoers file` or similar, then you must login as **root** and complete ther [User Setup](#user-setup). {.is-warning}
 
-<a id="B6" href="#B6">B6.</a> Add the nodejs 16 repository to the system package manager:
+<a id="B6" href="#B6">B6.</a> Add the nodejs 18 repository to the system package manager:
 
 <details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
-curl -sL https://deb.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 ```
 </details>
 
 <details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
+curl -sL https://rpm.nodesource.com/setup_18.x | sudo bash -
 ```
 </details>
 
