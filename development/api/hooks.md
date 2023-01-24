@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2022-05-19T13:27:59.975Z
+date: 2023-01-24T00:20:29.654Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -14,7 +14,7 @@ dateCreated: 2022-03-15T14:35:36.691Z
 
 ## Overview
 
-> There is documentation about the various Hook Events in Core [in the official docs](https://foundryvtt.com/api/hookEvents.html). However, it is advised to set `CONFIG.debug.hooks = true` when looking for hooks as this will print them to the console as they happen. The [Developer Mode module](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode) can assist with this.
+> There is documentation about the various Hook Events in Core [in the official docs](https://foundryvtt.com/api/modules/hookEvents.html). However, it is advised to set `CONFIG.debug.hooks = true` when looking for hooks as this will print them to the console as they happen. The [Developer Mode module](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode) can assist with this.
 {.is-info}
 
 Hooks are how Foundry Core exposes certain public API events modules and systems to interact with. It is always recommended to register a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) for an existing hook event instead of [monkey patching](https://www.audero.it/blog/2016/12/05/monkey-patching-javascript/) a core method.
