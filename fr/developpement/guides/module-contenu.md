@@ -2,7 +2,7 @@
 title: Faire un module de contenu
 description: 
 published: true
-date: 2023-01-25T17:34:36.505Z
+date: 2023-01-25T17:45:27.879Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-02T09:05:01.700Z
@@ -15,6 +15,7 @@ dateCreated: 2023-01-02T09:05:01.700Z
 Créez vos compendiums dans votre monde, puis arrêtez votre monde et allez récupérer les fichiers .db correspondants.
 
 Choisissez un nom pour votre module de contenu. Si votre module concerne les aventures du terrible pirate Roberts, nommez le "*fvtt-pirate-roberts*" par exemple.
+
 
 ## Structure
 
@@ -81,8 +82,9 @@ Ce qui est conseillé :
 - Après avoir récupéré les fichiers .db et les avoir copiée dans votre module : ouvrez les avec un éditeur de texte (Notepad++ ou VSCode), puis faites un rechercher/remplacer de /worlds/nom-du-monde-original vers /modules/nom-du-module. Cela permet de changer le chemin pour accéder aux images qui sont dans le module.
 
 ### Petit conseil
-Vous pouvez créer votre répertoire destiné à recevoir votre module avant de construire vos contenus. 
-Ainsi, dans le répertoire, vous y ajouter de suite votre répertoire *assets* et vous y mettez vos images et autres documents.
+Vous pouvez créer votre répertoire destiné à recevoir votre module (dans le répertoire *Data/modules*) avant de construire vos contenus.
+Ainsi vous aurez `Data/modules/fvtt-pirate-roberts` dans l'exemple donné en introduction.
+Ainsi, dans le répertoire de votre module, vous y ajouter de suite votre répertoire *assets* (par exemple) et vous y mettez vos images et autres documents.
 Quand vous faites vos contenus comme les scènes, utilisez les images qui sont dans votre module. Cela vous fera gagner du temps :)
 
 ## Installation
@@ -91,3 +93,9 @@ Uen fois votre module.json prêt, recopiez l'intégralité du répertoire dans v
 
 Si ce n'est pas le cas, consultez la console (F12) pour voir quellles erreurs se sont produites.
 
+## Pour aller plus loin
+
+la documentation sur les modules est accessible sur le site de Foundry VTT :  https://foundryvtt.com/article/module-development/
+Vous y trouverez plus d'informations sur les options du manifest (le fichier module.json)
+
+Vous trouverez également sur le guide de FoundryVTT, un moyen de classer vos fichiers et images : https://foundryvtt.com/article/media/
