@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2022-07-07T06:29:04.979Z
+date: 2023-01-25T20:48:15.166Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -32,7 +32,8 @@ dateCreated: 2021-05-14T17:58:11.311Z
 <i class="fab fa-discord"></i> [Discord: League of Extraordinary FoundryVTT Developers](https://discord.gg/fvttdevleague) – Unofficial community for module and system developers.
 <i class="fas fa-globe"></i> [World Smiths](https://discord.gg/2YCFD8fxG7) – A community of content creators dedicated to providing help and facilitating collaboration on world content.
 <i class="fab fa-reddit"></i> [Reddit: /r/FoundryVTT subreddit](https://www.reddit.com/r/FoundryVTT/) – Independently-run community for Foundry troubleshooting and sharing your Foundry creativity.
-<i class="fas fa-users"></i> [Foundry Hub](https://foundryvtt-hub.com/) - Partnered Foundry blog and forums for high quality articles and discussion.
+<i class="fas fa-users"></i> [Foundry Hub](https://foundryvtt-hub.com/) – Partnered Foundry blog and forums for high quality articles and discussion.
+<i class="fab fa-facebook"></i> [Facebook group: Foundry VTT Community](https://www.facebook.com/groups/foundryvttcommunity) – Independently run Facebook group for Foundry troubleshooting, tips and sharing creativity.
 
 ### Regional Communities
 <i class="fab fa-discord"></i> [Discord: Foundry VTT Español](https://discord.gg/MHCerwd) – Unofficial Spanish community.
