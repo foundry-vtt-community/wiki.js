@@ -2,7 +2,7 @@
 title: Faire un module de contenu
 description: 
 published: true
-date: 2023-01-02T09:17:03.258Z
+date: 2023-01-25T16:26:58.509Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-02T09:05:01.700Z
@@ -14,7 +14,7 @@ dateCreated: 2023-01-02T09:05:01.700Z
 
 Créez vos compendiums dans votre monde, puis arrêtez votre monde et allez récupérer les fichiers .db correspondants.
 
-Choisissez un nom pour votre module de contenu. Si votre module concerne les aventures du terrible pirate Roberts, nommez le "*fvtt-pirate-roberts*" par exemple
+Choisissez un nom pour votre module de contenu. Si votre module concerne les aventures du terrible pirate Roberts, nommez le "*fvtt-pirate-roberts*" par exemple.
 
 ## Structure
 
@@ -71,6 +71,14 @@ Il doit avoir la structure suivante :
     - Adventure : un compendium "Aventure"
     - Actor : des PJs/PNJs
     - JournalNote : des notes de journaux
+
+## Cas particulier des images
+Si vous utilisez des images dans un de vos compendiums, que ce soit l'image d'un acteur ou une image intégrée dans un journal que vous avez mis dans une aventure, il y a un traitement particulier. En effet le chemin de l'image sera sauvegardé dans le compendium. Comme vous travaillez dans un monde, ce sera donc le chemin lié au monde (dans data/worlds/nom-du-monde-original). Si quelqu'un d'autre installe votre module, celui-ci ira chercher les images dans data/worlds/nom-du-monde-original et bien sûr ne trouvera rien.
+
+Ce qui est conseillé : 
+- Créez dans votre monde un répertoire assets dans lequel vous mettez toutes les images, vous pouvez organiser l'intérieur comme vous voulez.
+- Copiez ce répertoire assets puis coller le dans votre module : à la racine, donc au même niveau que packs
+- Après avoir récupéré les fichiers .db et les avoir copiée dans votre module : ouvrez les avec un éditeur de texte (Notepad++ ou VSCode), puis faites un rechercher/remplacer de /worlds/nom-du-monde-original vers /modules/nom-du-module. Cela permet de changer le chemin pour accéder aux images qui sont dans le module.
 
 ## Installation
 
