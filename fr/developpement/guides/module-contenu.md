@@ -2,7 +2,7 @@
 title: Faire un module de contenu
 description: 
 published: true
-date: 2023-01-25T17:45:27.879Z
+date: 2023-01-25T17:45:34.641Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-02T09:05:01.700Z
