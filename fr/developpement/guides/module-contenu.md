@@ -2,7 +2,7 @@
 title: Faire un module de contenu
 description: 
 published: true
-date: 2023-01-25T16:26:58.509Z
+date: 2023-01-25T17:34:36.505Z
 tags: 
 editor: markdown
 dateCreated: 2023-01-02T09:05:01.700Z
@@ -79,6 +79,11 @@ Ce qui est conseillé :
 - Créez dans votre monde un répertoire assets dans lequel vous mettez toutes les images, vous pouvez organiser l'intérieur comme vous voulez.
 - Copiez ce répertoire assets puis coller le dans votre module : à la racine, donc au même niveau que packs
 - Après avoir récupéré les fichiers .db et les avoir copiée dans votre module : ouvrez les avec un éditeur de texte (Notepad++ ou VSCode), puis faites un rechercher/remplacer de /worlds/nom-du-monde-original vers /modules/nom-du-module. Cela permet de changer le chemin pour accéder aux images qui sont dans le module.
+
+### Petit conseil
+Vous pouvez créer votre répertoire destiné à recevoir votre module avant de construire vos contenus. 
+Ainsi, dans le répertoire, vous y ajouter de suite votre répertoire *assets* et vous y mettez vos images et autres documents.
+Quand vous faites vos contenus comme les scènes, utilisez les images qui sont dans votre module. Cela vous fera gagner du temps :)
 
 ## Installation
 
