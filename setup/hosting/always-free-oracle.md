@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-01-27T16:43:17.059Z
+date: 2023-01-27T17:04:02.020Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -755,7 +755,19 @@ If you see a projected cost from the Cost Analysis and are within 30 days of acc
 >You now have a warning that will send you an email on the first of the month if there are any projected costs whatsoever. {.is-info}
 
 
-# H. Optional: S3 Storage Setup
+# H. Optional: Updating NodeJS Version
+## Objective
+If you have a message from Foundry telling you that you must updated your NodeJS version, this section will walk you through how to do that. At the end of this section you'll have the latest NodeJS version installed and Foundry up and running. 
+
+## Updating NodeJS
+
+<a id="H1" href="#H1">H1.</a> Reconnect to your Oracle instance, as in step [D2](#D2).
+
+<a id="H2" href="#H2">H2.</a> Once successfully connected, follow the the updating steps as outlined in the [Recommended Linux Install Guide](https://foundryvtt.wiki/en/setup/linux-installation#optional-f-updating-nodejs).
+
+Once completed, you are good to go!
+
+# I. Optional: S3 Storage Setup
 ## Objective
 At the end of this section, you will have a functional S3 storage bucket that Foundry can access to store assets under the “Amazon S3” tab in the file picker. This allows you to have extra storage beyond that provided by the instance volume and serve large assets more efficiently. 
 
@@ -763,7 +775,7 @@ At the end of this section, you will have a functional S3 storage bucket that Fo
 
 >This section has been removed since reports of it not playing well within Foundry. Once a fix has been found, it will be modified and updated. If an S3 store is desired/needed, please look into setting up an [AWS S3 store](https://foundryvtt.wiki/en/setup/hosting/Self-Hosting-on-AWS#h-5-simple-storage-service-s3). {.is-danger}
 
-# I. Restore Disabled A1 Instance
+# J. Restore Disabled A1 Instance
 ## Objective
 This section helps users who have had their A1 Ampere instances disabled at the end of the trial account period. These instances are still `Always Free` and can continue to be used. Once restored as described below, the instances should remain running without issue or fear of being disabled. 
 
@@ -772,33 +784,33 @@ To see why the instance has been disabled, check step B4 in the <a href="#archiv
 ## Restore Instance Including All Data
   To create a new instance that retains all data up to the point it was disabled:
   
-<a id="I1" href="#I1">I1.</a> To be safe, create a backup of your Boot Volume by going to **Compute** -> **Instances** -> `<Instance Name>`
+<a id="J1" href="#J1">J1.</a> To be safe, create a backup of your Boot Volume by going to **Compute** -> **Instances** -> `<Instance Name>`
 
-<a id="I2" href="#I2">I2.</a> Scroll down to **Boot Volume** -> Click the `<Boot Volume Name>`
+<a id="J2" href="#J2">J2.</a> Scroll down to **Boot Volume** -> Click the `<Boot Volume Name>`
 
-<a id="I3" href="#I1">I3.</a> Scroll down to **Boot Volume Backups** and click `Create Boot Volume Backup`. Enter a name for the backup, and click `Create Boot Volume Backup`. This backup is not technically needed, but is good to have just in case. 
+<a id="J3" href="#J1">J3.</a> Scroll down to **Boot Volume Backups** and click `Create Boot Volume Backup`. Enter a name for the backup, and click `Create Boot Volume Backup`. This backup is not technically needed, but is good to have just in case. 
 
-<a id="I4" href="#I4">I4.</a> Go to **Compute** -> **Instances** and click on the `Foundry` instance. Click **More Actions** and choose `Terminate`. Make ***absolutely*** sure that `Permanently delete the attached boot volume` is ***NOT CHECKED***.
+<a id="J4" href="#J4">J4.</a> Go to **Compute** -> **Instances** and click on the `Foundry` instance. Click **More Actions** and choose `Terminate`. Make ***absolutely*** sure that `Permanently delete the attached boot volume` is ***NOT CHECKED***.
 
-<a id="I5" href="#I5">I5.</a> Wait for the instance status to change from `Terminating` to `Terminated`. You may need to refresh the page. 
+<a id="J5" href="#J5">J5.</a> Wait for the instance status to change from `Terminating` to `Terminated`. You may need to refresh the page. 
 
-<a id="I6" href="#I6">I6.</a> Scroll down to **Boot Volume** and click the `<Boot Volume Name>`. 
+<a id="J6" href="#J6">J6.</a> Scroll down to **Boot Volume** and click the `<Boot Volume Name>`. 
 
-<a id="I7" href="#I7">I7.</a> At the top of the page, click `Create Instance`. 
+<a id="J7" href="#J7">J7.</a> At the top of the page, click `Create Instance`. 
 
-<a id="I8" href="#I8">I8.</a> Give the instance a name, such as `Foundry`. Scroll down to verify the **Shape** indicates `VM.Standard.A1.Flex` with 1 core OCPU and 6 GB memory. The **Image** should be the `Boot Volume Name`.
+<a id="J8" href="#J8">J8.</a> Give the instance a name, such as `Foundry`. Scroll down to verify the **Shape** indicates `VM.Standard.A1.Flex` with 1 core OCPU and 6 GB memory. The **Image** should be the `Boot Volume Name`.
 
 >Optionally, you can edit the **shape** to be up to 4 core OCPU and 24GB memory. As part of the `Always Free` services, you get up to 4 core OCPU and 24GB of member spread over up to 4 A1 instances. Please allocate accordingly.
 >
 >Do **not modify the image**. {.is-info}
 
-<a id="I9" href="#I9">I9.</a> Scroll down to **Add SSH Keys** and click `Save Private Key`. Save this key in a safe location, preferrably the same location as you previously saved the SSH key. You will need this key if you ever want to connect to your instance via SSH in the future. 
+<a id="J9" href="#J9">J9.</a> Scroll down to **Add SSH Keys** and click `Save Private Key`. Save this key in a safe location, preferrably the same location as you previously saved the SSH key. You will need this key if you ever want to connect to your instance via SSH in the future. 
 
-<a id="I10" href="#I10">I10.</a> Click `Create`. You now have a new `Always Free` A1 instance running that should not be disabled again. 
+<a id="J10" href="#J10">J10.</a> Click `Create`. You now have a new `Always Free` A1 instance running that should not be disabled again. 
 
-<a id="I11" href="#I11">I11.</a> If you set up a domain name, you will need to point the domain's A record to the instances `<Public IP address>`. If you did not set up a domain name, you can now connect to Foundry directly, using a link like this: `http://<Public IP Address>:30000`
+<a id="J11" href="#J11">J11.</a> If you set up a domain name, you will need to point the domain's A record to the instances `<Public IP address>`. If you did not set up a domain name, you can now connect to Foundry directly, using a link like this: `http://<Public IP Address>:30000`
 
-# J. Archived: A1 Disabling and Upgrading to Pay As You Go (Reference Only)
+# K. Archived: A1 Disabling and Upgrading to Pay As You Go (Reference Only)
 ## Purpose
 
 This section contains outdated information, left here for reference only. This information is outdated and should only be used to reference previous instructions for informational purposes. 
