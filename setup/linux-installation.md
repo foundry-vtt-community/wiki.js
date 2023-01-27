@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-01-19T00:55:21.185Z
+date: 2023-01-27T16:47:15.508Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -20,6 +20,7 @@ At the end of this guide you will have:
 * Foundry server running 24/7 behind a reverse proxy providing HTTPS, including automatic restarts
 * A domain name pointing to the server
 * (Optional) Cyberduck, a file transfer program, configured to manage user data of the Foundry server
+* (Optional) A swapfile set up to help in low-RAM (2GB) instances.
 
 ## Important Information and Requirements
 
@@ -123,7 +124,7 @@ foundry@<servername>:_
 ## System Setup
 We will now install the necessary software to run and manage Foundry behind a reverse proxy. This includes:
 
-* nodejs 16+, Required to run Foundry itself
+* nodejs 18+, Required to run Foundry itself
 * caddy 2+, the webserver that will be used as a reverse proxy
 * pm2, the process manager that will keep Foundry running
 * unzip, the utility used to decompress the Foundry installation zip archive
@@ -435,7 +436,7 @@ At the end of this optional section, you will be able to directly access the fil
 
 # (Optional) E. Creating Swapfile
 ## Objective
-The minimum RAM requirement for hosting Foundry is 1GB, however some systems or modules may use more than the minimum RAM. If your linux host has less than 2GB of RAM you can create a swapfile to prevent out-of-memory errors when using heavier modules, systems, or large compendiums. 
+The minimum RAM requirement for hosting Foundry is 2GB (4GB recommended), however some systems or modules may use more than the minimum RAM. If your linux host has 2GB of RAM you can create a swapfile to prevent out-of-memory errors when using heavier modules, systems, or large compendiums. 
 
 ## Create and Enable Swapfile
 The instructions below are compatible with the <a href="#preferred-linux-distribution">preferred linux distributions</a>.
@@ -446,7 +447,7 @@ All commands below are assumed to be entered by a non-root sudoer user, such as 
 ```
 sudo fallocate -l 2G /swapfile
 ```
->This will create a 2GB swapfile which is a recommended size for hosts with 1GB of RAM. You can increase this size as you'd like, but it is not recommended to create a smaller swapfile. {.is-info}
+>This will create a 2GB swapfile which is a recommended size for hosts with 2GB of RAM. You can increase this size as you'd like, but it is not recommended to create a smaller swapfile. {.is-info}
 
 <a id="E2" href="#E2">E2.</a> Change the permissions to prevent regular users from accessing the swapfile:
 ```
