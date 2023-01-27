@@ -2,7 +2,7 @@
 title: Compendia
 description: 
 published: true
-date: 2022-05-19T13:17:45.242Z
+date: 2023-01-27T19:51:20.318Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
@@ -61,7 +61,7 @@ Storing unused Entities in a Compendium **greatly** reduces the time it takes to
 
 You can use a tiny module to share content between worlds. This site will help you create a shared compendium in just a few clicks. 
 
-[Site to create a tiny module for shared content between worlds](https://fgen-mxzf-prod.herokuapp.com/module/create)
+[Site to create a tiny module for shared content between worlds](https://fgen.lffg.org/module/create)
 
 Steps to use:
 1. Fill in the Module Name field and optionally the Actor/Description fields.
