@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-01-19T00:54:42.316Z
+date: 2023-01-27T16:43:17.059Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -74,13 +74,6 @@ At the end of this section, you will have a registered account with Oracle Cloud
 > ![a1.availability-warning.webp](/images/oracle/a1.availability-warning.webp)
 > (Image for example only, check your warning very closely for the regions listed) {.is-danger}
 
-
-<details><summary>What if I can't choose a region that has Arm Ampere A1 availability? ▼</summary>
-	
-  The older `VM.Standard.E2.1.Micro` instances should still be available in all regions. That instance type is limited to 1 throttled OCPU, 1GB RAM, and 50mbps external network speeds. While lower in resources than the new A1 instances, it is still enough to meet the **minimum** requirements to host Foundry.
-  
-  You can choose the `VM.Standard.E2.1.Micro` shape in step [C24](#C24) instead of the `VM.Standard.A1.Flex` shape mentioned in the step, and then continue the guide.
-</details>
 
 <a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account. You are now ready to continue this guide!
 
@@ -206,11 +199,10 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <details><summary>What if I can't choose the VM.Standard.A1.Flex shape? ▼</summary>
 	
-  First, try switching to another Availability Domain (checking to ensure it is tagged `always-free`) to see if there are A1 instances in other Availability Domains within your home region. The number of Availability Domains differs in each reagion, with some regions only having 1.
+  You may try switching to another Availability Domain (checking to ensure it is tagged `always-free`) to see if there are A1 instances in other Availability Domains within your home region. The number of Availability Domains differs in each reagion, with some regions only having 1.
+
+ 	If no Availability Domains in your home region have A1 shapes available, you will have to check back periodically for new availability. This may happen at any time as others free up resources or Oracle adds more A1 resources to the region. It may take a few days, keep checking back regularly.
   
-  The older `VM.Standard.E2.1.Micro` instances should still be available in all regions. That instance type is limited to 1 throttled OCPU, 1GB RAM, and 50mbps external network speeds. While lower in resources than the new A1 instances, it is still enough to meet the **minimum** requirements to host Foundry.
-  
-  You can choose the `VM.Standard.E2.1.Micro` shape in step [C24](#C24) above, under the `Legacy and Specialty` section instead of the `VM.Standard.A1.Flex` shape mentioned in the step, and then continue the guide.
 </details>
 
 ![Select Shape](/images/oracle/ampere-shape.webp)
