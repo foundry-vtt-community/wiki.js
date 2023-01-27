@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-01-27T16:47:15.508Z
+date: 2023-01-27T16:58:30.320Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -490,3 +490,57 @@ NAME      TYPE      SIZE  USED PRIO
 You now have a swapfile enabled and should be protected against out-of-memory errors.
 
 
+# (Optional) F. Updating NodeJS
+## Objective
+
+As Foundry VTT is updated, the minimum requirements for NodeJS are also updated. If you've received a message stating that you must update NodeJS and you have used this guide (or similar guides, such as the Oracle Always Free guide, that use pm2 and the nodesource repo) then this section will describe how to update NodeJS to the latest version. 
+
+## Updating NodeJS
+This section assumes that you have set Foundry VTT to be managed by pm2 and have installed NodeJS through their repo as this guide describes. Please copy and paste the instructions carefully. 
+
+<a id="F1" href="#F1">F1.</a> Stop any managed pm2 processes.
+
+```
+pm2 stop all
+```
+
+<a id="F2" href="#F2">F2.</a> Remove the current pm2 from startup to allow for the upgrade. 
+
+```
+pm2 unstartup
+```
+
+<a id="F3" href="#F3">F3.</a> Add the new NodeJS version repository and update the installed version of NodeJS.
+
+```
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - 
+sudo apt update
+sudo apt upgrade
+```
+
+<a id="F4" href="#F4">F4.</a> Set pm2 to use the upgraded version of NodeJS and set it to run on start again.
+
+```
+npm rebuild -g pm2
+pm2 startup
+```
+
+<a id="F5" href="#F5">F5.</a> Restart any previously running pm2 managed processes. 
+
+```
+pm2 start all
+```
+
+<a id="F6" href="#F6">F6.</a> Check that Foundry is online. The output should show a green `online` indicator beside the Foundry process. 
+
+```
+pm2 list
+```
+
+<a id="F7" href="#F7">F7.</a> Save the current pm2 configuration.
+
+```
+pm2 save
+```
+
+You've now successfully updated NodeJS and should be good to go!
