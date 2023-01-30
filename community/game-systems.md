@@ -2,7 +2,7 @@
 title: Game Systems
 description: 
 published: true
-date: 2022-05-19T13:18:12.518Z
+date: 2023-01-30T17:29:58.668Z
 tags: game systems
 editor: markdown
 dateCreated: 2020-09-23T00:24:31.095Z
@@ -99,13 +99,12 @@ Foundry systems for the various Warhammer Fantasy Roleplay editions.
 * **Translation Support**: EN (full)	
 
 ### Link(s) to Module	
-* [https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT](https://github.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/tree/stable)	
-* [https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json](https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json)	
+For the current WFRP4e versions, see https://github.com/moo-man/WFRP4e-FoundryVTT
 
 ### Description	
 Installing this system allows you to create campaigns in the grim and perilous world of Warhammer Fantasy 4th edition!	
 
-To install, use the in-app installer and enter into the manifest URL: `https://raw.githubusercontent.com/CatoThe1stElder/WFRP-4th-Edition-FoundryVTT/stable/system.json`	
+To install, use the in-app installer and search for Warhammer
 
 ---	
 
