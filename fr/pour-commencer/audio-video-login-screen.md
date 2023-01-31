@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T18:32:58.208Z
+date: 2023-01-31T18:38:46.095Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -42,9 +42,9 @@ Si cela vous intéresse, il suffit d'installer ce module et de suivre les instru
 
 # Création d'une page de connexion avec Audio et Vidéo.
 Lorsque nous avons débuté sur Foundry, nous nous sommes aperçus que sur l'écran de connexion, nous ne pouvions pas mettre de vidéo au format MP4/WEBM/MKV et que la seule option était de mettre un GIF animé avec toutes les contraintes que cela impliquent.
-Par contre nous avons que Foundry peut lire tous les formats comme le JPG/PNG/WEBP etc etc etc ... mais aviez vous que le WEBP peut être animé ? c'est sur cette découverte, que nous allons donc pouvoir effectuer notre transformation afin d'avoir une vidéo d'introduction sur notre page de connexion.
+Par contre nous avons que Foundry peut lire tous les formats comme le JPG/PNG/WEBP etc etc etc ... mais aviez vous que le WEBP peut être animé ? c'est sur cette découverte, que nous allons donc pouvoir effectuer notre transformation afin d'avoir une vidéo d'introduction sur notre page de connexion, par contre ce format ne gère que la partie vidéo et non l'audio, mais nous allons voir tout cela en détail ci-dessous. 
 <br>
-## La vidéo
+## Pour la vidéo
 Si vous êtes experts en création de vidéo, vous serez sans doute ce que vous voulez comme introduction, voir la créer de toute pièce, pour les autres il existe quelques solutions plus ou moins facile à prendre en main.
 <br>
 ### La facilité pour récupérer une vidéo
