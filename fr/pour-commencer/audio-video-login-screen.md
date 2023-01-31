@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T18:30:09.321Z
+date: 2023-01-31T18:32:58.208Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -35,7 +35,7 @@ Nous nous sommes donc atelés à faire une autre présentation afin d'avoir le s
 <img src="https://puu.sh/Jy4oy/801517e986.jpg">
 
 Si cela vous intéresse, il suffit d'installer ce module et de suivre les instructions.
-> - Module Login compact : https://gitlab.com/sasmira/_fr-core-logon
+> - [Module Foundry, Login compact](https://gitlab.com/sasmira/_fr-core-logon)
 {.is-info}
 
 <br>
@@ -50,8 +50,7 @@ Si vous êtes experts en création de vidéo, vous serez sans doute ce que vous 
 ### La facilité pour récupérer une vidéo
 Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous. Il faudra juste faire attention au format de la vidéo et qu'elle soit en MP4 ou WEBM. Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** 
 
-> <u>***Dans un usage strictement personnel :***</u> *JDownloader 2 est outil multi-usage, qui permet de télécharger plus ou moins ce que vous voulez et donc permet de télécharger les vidéos Youtube, par exemple.*
-> Jdownloader 2, https://jdownloader.org/jdownloader2 
+> <u>***Dans un usage strictement personnel :***</u> *[Outil de téléchargement multi-usage, JDownloader2](https://jdownloader.org/jdownloader2) permet de télécharger plus ou moins ce que vous voulez et par la même occasion, permet de télécharger les vidéos Youtube, par exemple.*
 {.is-info}
 
 <br>
