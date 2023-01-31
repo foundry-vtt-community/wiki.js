@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T22:10:35.191Z
+date: 2023-01-31T22:11:54.930Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -89,4 +89,5 @@ Une fois que vous avez votre image au format <u>**WEBP**</u>, vous pouvez direct
 <br>
 
 ## Pour le son
-
+Maintenant que nous avons l'image ou la vidéo pour être plus exact, il va falloir mettre le son.
+En ce qui concerne le son, 
