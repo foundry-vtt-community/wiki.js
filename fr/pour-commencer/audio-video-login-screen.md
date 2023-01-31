@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T23:07:25.921Z
+date: 2023-01-31T23:18:10.827Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -89,7 +89,7 @@ Une fois que vous avez votre image au format <u>**WEBP**</u>, vous pouvez direct
 <br>
 
 ## Pour le son
-Afin que le son fonctionne chez tout le monde, il faudra que vous donniez le tips (que nous vous avons donner en début de cette procédure
+Afin que le son fonctionne chez tout le monde, il faudra que vous donniez le tips ***([prérequis](https://foundryvtt.wiki/fr/pour-commencer/audio-video-login-screen#pr%C3%A9requis))*** à vos joueurs afin qu'ils puissent pleinement profiter de votre travail. 
 Maintenant que nous avons l'image ou la vidéo pour être plus exact, il va falloir mettre le son.
 En ce qui concerne le son, deux choix s'offrent à vous pour le format :
 - OGG *(Une certaine préférence pour ce dernier qui fonctionnait mieux sous foundry)*.
@@ -104,4 +104,9 @@ Maintenant que nous avons pris le choix d'un format, nous avons un autre choix p
 <br>
 
 ### Utiliser une piste audio différente comme une musique
-La méthode la plus simple
+La méthode la plus simple :
+- Éditer 
+la syntaxe à mettre dans 
+> `<audio loop="" controls="" autoplay="">
+>     <source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">
+> </audio>`
