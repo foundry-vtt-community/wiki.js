@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T19:31:12.629Z
+date: 2023-01-31T21:27:56.959Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -11,7 +11,21 @@ dateCreated: 2023-01-31T17:20:28.017Z
 Comme nous avons souvent l'habitude d'en vouloir toujours plus afin de rendre notre travail encore plus long et plus beau pour nos joueurs, il existe encore quelques méthodes afin de partager encore plus notre créativité et de rendre tout cela possible.
 Dans ce tutoriel, nous allons essayer de vous aider à rendre la chose possible, avec quelques outils et un peu de patience.
 
-> ### Quelques outils, si nécessaires :
+Prérequis
+Il vous faudra activer l'autorisation Audio/video sur votre navigateur
+- sur Chrome, il faudra autoriser le site en cliquant sur le ***Cadenas à coté de l'url de votre navigateur***, puis cliquer sur ***Paramètres de site***, et enfin à ***Son, mettre le paramètre Autoriser***
+<img src="https://puu.sh/Jy5Ho/1aab4d18a2.png">
+<img src="https://puu.sh/Jy5HI/227b572a6a.png">
+- sur Edge
+<img src="https://puu.sh/Jy5ue/6dcc4bdb19.png">
+- sur Firefox
+<img src="https://puu.sh/Jy5tr/ccfaf8b81e.png">
+- sur Vivaldi
+<img src="https://puu.sh/Jy5vT/4dde9801c2.png">
+
+<br>
+
+### Quelques outils, si nécessaires :
 > Nous nous me permettons de vous faire une petite liste d'outils qui pourront vous servir si vous voulez pousser le vis tout en restant sur des outils gratuits.
 > - [Éditeur Audio, Audacity](https://www.audacityteam.org/download/)
 > - [Éditeur vidéo, Davinci Resolve](https://www.blackmagicdesign.com/fr/products/davinciresolve/)
