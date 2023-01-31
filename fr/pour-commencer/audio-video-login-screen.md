@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T21:28:33.257Z
+date: 2023-01-31T21:42:34.333Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -26,7 +26,7 @@ Il vous faudra activer l'autorisation Audio/video sur votre navigateur
 <br>
 
 ### Quelques outils, si nécessaires :
-> Nous nous me permettons de vous faire une petite liste d'outils qui pourront vous servir si vous voulez pousser le vis tout en restant sur des outils gratuits.
+> Nous nous permettons de vous faire une petite liste d'outils qui pourront vous servir si vous voulez pousser le vis tout en restant sur des outils gratuits.
 > - [Éditeur Audio, Audacity](https://www.audacityteam.org/download/)
 > - [Éditeur vidéo, Davinci Resolve](https://www.blackmagicdesign.com/fr/products/davinciresolve/)
 > - [Convertisseur tous formats, file-converter](https://framalibre.org/content/file-converter)
