@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T18:18:52.995Z
+date: 2023-01-31T18:30:09.321Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -13,12 +13,12 @@ Dans ce tutoriel, nous allons essayer de vous aider à rendre la chose possible,
 
 > ### Quelques outils, si nécessaires :
 > Nous nous me permettons de vous faire une petite liste d'outils qui pourront vous servir si vous voulez pousser le vis tout en restant sur des outils gratuits.
-> - Audacity, éditeur de son : https://www.audacityteam.org/download/
-> - Convertisseur tous formats : https://framalibre.org/content/file-converter
-> - Convertisseur en webp : https://webp.to/
-> - Davinci Resolve, éditeur vidéo : https://www.blackmagicdesign.com/fr/products/davinciresolve/
-> - Outil de téléchargement multi-usage : https://jdownloader.org/jdownloader2
-> - Module Login compact : https://gitlab.com/sasmira/_fr-core-logon
+> - [Éditeur Audio, Audacity](https://www.audacityteam.org/download/)
+> - [Éditeur vidéo, Davinci Resolve](https://www.blackmagicdesign.com/fr/products/davinciresolve/)
+> - [Convertisseur tous formats, file-converter](https://framalibre.org/content/file-converter)
+> - [Convertisseur en webp, site web](https://webp.to/)
+> - [Outil de téléchargement multi-usage, JDownloader2](https://jdownloader.org/jdownloader2)
+> - [Module Foundry, Login compact](https://gitlab.com/sasmira/_fr-core-logon)
 {.is-info}
 
 <br>
@@ -47,13 +47,14 @@ Par contre nous avons que Foundry peut lire tous les formats comme le JPG/PNG/WE
 ## La vidéo
 Si vous êtes experts en création de vidéo, vous serez sans doute ce que vous voulez comme introduction, voir la créer de toute pièce, pour les autres il existe quelques solutions plus ou moins facile à prendre en main.
 <br>
-### La facilité
-Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous.
+### La facilité pour récupérer une vidéo
+Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous. Il faudra juste faire attention au format de la vidéo et qu'elle soit en MP4 ou WEBM. Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** 
 
 > <u>***Dans un usage strictement personnel :***</u> *JDownloader 2 est outil multi-usage, qui permet de télécharger plus ou moins ce que vous voulez et donc permet de télécharger les vidéos Youtube, par exemple.*
 > Jdownloader 2, https://jdownloader.org/jdownloader2 
 {.is-info}
 
 <br>
+
 ### Pour les autres
-Pour les sachants qui sachent faire du montage vidéo
+Pour les sachants qui sachent faire du montage vidéo, il vous faudra une vidéo au format mp4 ou webm.
