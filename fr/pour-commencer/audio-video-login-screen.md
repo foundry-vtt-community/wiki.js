@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T18:38:46.095Z
+date: 2023-01-31T18:44:01.704Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -48,7 +48,8 @@ Par contre nous avons que Foundry peut lire tous les formats comme le JPG/PNG/WE
 Si vous êtes experts en création de vidéo, vous serez sans doute ce que vous voulez comme introduction, voir la créer de toute pièce, pour les autres il existe quelques solutions plus ou moins facile à prendre en main.
 <br>
 ### La facilité pour récupérer une vidéo
-Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous. Il faudra juste faire attention au format de la vidéo et qu'elle soit en MP4 ou WEBM. Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** 
+Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous. Il faudra juste faire attention au format de la vidéo et qu'elle soit en MP4 ou WEBM. Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)***.
+Une fois le convertisseur installé, faire un clic droit sur la vidéo, et choisir dans le menu du convertisseur, le format que vous désirez, MP4 ou WEBM. Pour question de rapidité, nous vous conseillons d'encoder en MP4 de préférence et en WEBM pour un gain de taille de vidéo.
 
 > <u>***Dans un usage strictement personnel :***</u> *[Outil de téléchargement multi-usage, JDownloader2](https://jdownloader.org/jdownloader2) permet de télécharger plus ou moins ce que vous voulez et par la même occasion, permet de télécharger les vidéos Youtube, par exemple.*
 {.is-info}
