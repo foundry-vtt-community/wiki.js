@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T23:18:10.827Z
+date: 2023-01-31T23:55:00.242Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -105,8 +105,21 @@ Maintenant que nous avons pris le choix d'un format, nous avons un autre choix p
 
 ### Utiliser une piste audio différente comme une musique
 La méthode la plus simple :
-- Éditer 
-la syntaxe à mettre dans 
+- Éditer votre world en cliquant sur ***éditer***.
+- Dans la partie ***Description du monde*** sélectionnez la ***Source HTML*** comme sur la capture d'écran ci-dessous
+<img src="https://puu.sh/Jy6xV/c5b3af515c.png">
+- Appliquez la syntaxe suivante dans la fenêtre  de la ***Source HTML***
 > `<audio loop="" controls="" autoplay="">
 >     <source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">
 > </audio>`
+{.is-info}
+
+<img src="https://puu.sh/Jy6xF/199281033f.png">
+
+- Valider en cliquant sur la ***Disquette*** à côté de la ***Source HTML*** et non en cliquant sur ***Mettre à jour le monde***.
+
+<img src="https://puu.sh/Jy6y7/9827406454.png">
+
+Si vous avez bien fait votre manipulation, en réouvrant la fenêtre d'édition, vous devriez votre le lecteur multimédia, mais aussi entendre l'audio se jouer.
+
+<img src="https://puu.sh/Jy6zq/fb21f53671.png">
