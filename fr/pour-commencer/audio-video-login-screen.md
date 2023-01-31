@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T22:22:23.177Z
+date: 2023-01-31T22:24:55.777Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -91,5 +91,5 @@ Une fois que vous avez votre image au format <u>**WEBP**</u>, vous pouvez direct
 ## Pour le son
 Maintenant que nous avons l'image ou la vidéo pour être plus exact, il va falloir mettre le son.
 En ce qui concerne le son, deux choix s'offrent à vous pour le format :
-- MP3
-- OGG. Une certaine préférence pour ce format qui a l'air de mieux fonctionner sous foundry.
+- OGG *(Une certaine préférence pour ce dernier qui fonctionnait mieux sous foundry)*.
+- MP3.
