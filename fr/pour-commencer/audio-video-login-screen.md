@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T18:44:01.704Z
+date: 2023-01-31T19:31:12.629Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -57,4 +57,4 @@ Une fois le convertisseur installé, faire un clic droit sur la vidéo, et chois
 <br>
 
 ### Pour les autres
-Pour les sachants qui sachent faire du montage vidéo, il vous faudra une vidéo au format mp4 ou webm.
+Pour les sachants qui sachent faire du montage vidéo, il vous faudra une vidéo au format MP4 ou WEBM.
