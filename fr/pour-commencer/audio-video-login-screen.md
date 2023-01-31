@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T21:45:51.252Z
+date: 2023-01-31T21:59:35.986Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -71,8 +71,15 @@ Une fois le convertisseur installé, faire un clic droit sur la vidéo, et chois
 <br>
 
 ### Pour les autres
-Pour les sachants qui sachent faire du montage vidéo, il vous faudra une vidéo au format MP4 ou WEBM.
+Pour les sachants qui sachent faire du montage vidéo, il vous faudra une vidéo au format <u>**MP4 ou WEBM**</u>.
 
 <br>
 
 ### Convertion de la vidéo
+Maintenant que nous une vidéo au format <u>**MP4 ou WEBM**</u>, il va nous falloir la transformer en <u>**WEBP Animé**</u> afin que Foundry puisse la jouer sur la page de connexion de votre partie.
+Pour cela nous allons utiliser le site de **[webp.to](https://webp.to/?lang=fr)** et en fonction de votre format de vidéo vous avez le choix entre :
+- [MP4 à WebP](https://webp.to/mp4-webp/)
+- [WebM à WebP](https://webp.to/webm-webp/)
+
+Il faudra suivre les instructions sur à la page et attendre le résultat que vous pourrez télécharger sur le site. En fonction de la taille de votre vidéo, le résultat final peut prendre beaucoup de temps.
+
