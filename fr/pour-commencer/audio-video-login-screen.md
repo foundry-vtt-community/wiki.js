@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T00:33:46.096Z
+date: 2023-02-01T00:38:20.643Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -159,4 +159,7 @@ En fonction de ce que vous désirez, certains commutateurs peuvent être optionn
 
 ### Utiliser une piste audio d'une vidéo comme une musique
 Le processus final est identique à la description ci-dessus, la variante va être sur l'extraction de la piste audio de votre vidéo.
-Pour cela il vous suffira d'utiliser le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** pour cette petite manipulation
+Pour cela il vous suffira d'utiliser le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** pour cette petite manipulation comme ci-dessous. Vous pouvez choisir le format qui vous convient le mieux entre le ***MP3 et l'OGG***
+<img src="https://puu.sh/Jy6Mc/5373fcdaaa.png">
+
+Maintenant il ne vous reste plus qu'a reproduire le processus 
