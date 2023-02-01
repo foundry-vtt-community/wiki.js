@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T00:05:34.623Z
+date: 2023-02-01T00:21:37.274Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -109,9 +109,9 @@ La méthode la plus simple :
 - Dans la partie ***Description du monde*** sélectionnez la ***Source HTML*** comme sur la capture d'écran ci-dessous
 <img src="https://puu.sh/Jy6xV/c5b3af515c.png">
 - Appliquez la syntaxe suivante dans la fenêtre  de la ***Source HTML***
-> `<audio loop="" controls="" autoplay="">
->     <source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">
-> </audio>`
+> `<audio loop="" controls="" autoplay="">`
+>     `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
+> `</audio>`
 {.is-info}
 
 <img src="https://puu.sh/Jy6xF/199281033f.png">
@@ -128,9 +128,29 @@ Si vous avez bien fait votre manipulation, en réouvrant la fenêtre d'édition,
 
 #### Explication de la Syntaxe
 En fonction de ce que vous désirez, certains commutateurs peuvent être optionnels et d'autres obligatoires.
-- Si vous audio est un MP3, il faudra mettre le ***type*** en <u>***audio/mpeg***</u>
+- Le commutateur ***autoplay*** est obligatoire dans notre utilisation, afin que l'audio se lancer lorsque le monde est lancé.
+> `<audio autoplay=""></audio>`
+{.is-success}
+- Si vous voulez que votre audio boucle
+> `<audio loop="" autoplay=""></audio>`
+{.is-success}
+- Si vous voulez avoir un panneau de contrôle apparant dans la fenêtre d'édition de votre monde.
+> `<audio controls="" autoplay=""></audio>`
+{.is-success}
+- Si vous voulez une boucle et un panneau de contrôle
+> `<audio loop="" controls="" autoplay="">`
+{.is-success}
+- Si votre audio est un MP3, il faudra mettre le ***type*** en <u>***audio/mpeg***</u>
 > `<source src="/<Chemin>/<Nom>.mp3" type="audio/mpeg">`
-{.is-warning}
-- Si vous audio est un OGG, il faudra mettre le ***type*** en <u>***audio/ogg***</u> et le codec en <u>***codecs=vorbis***</u>
+{.is-success}
+- Si votre audio est un OGG, il faudra mettre le ***type*** en <u>***audio/ogg***</u> et le codec en <u>***codecs=vorbis***</u>
 > `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
+{.is-success}
+
+<br>
+
+> Attention, afin que la source soit lue, il faut que la source soit placée entre les balises audio comme sur l'exemple 
+> `<audio loop="" controls="" autoplay="">`
+> `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
+> `</audio>`
 {.is-warning}
