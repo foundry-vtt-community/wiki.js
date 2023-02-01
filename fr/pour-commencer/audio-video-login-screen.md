@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T00:49:32.009Z
+date: 2023-02-01T01:03:55.616Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -12,7 +12,7 @@ Comme nous avons souvent l'habitude d'en vouloir toujours plus afin de rendre no
 Dans ce tutoriel, nous allons essayer de vous aider à rendre la chose possible, avec quelques outils et un peu de patience.
 <br>
 ### Prérequis
-Il vous faudra activer l'autorisation Audio/video sur votre navigateur
+Note que cette partie n'est obligatoire que pour l'audio et qu'il vous faudra activer ***l'Autorisation Audio/video sur votre navigateur***.
 - sur Chrome, il faudra autoriser le site en cliquant sur le ***Cadenas à coté de l'url de votre navigateur***, puis cliquer sur ***Paramètres de site***, et enfin à ***Son, mettre le paramètre Autoriser***
 <img src="https://puu.sh/Jy5Ho/1aab4d18a2.png">
 <img src="https://puu.sh/Jy5HI/227b572a6a.png">
