@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-01-31T23:55:00.242Z
+date: 2023-02-01T00:05:34.623Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -123,3 +123,14 @@ La méthode la plus simple :
 Si vous avez bien fait votre manipulation, en réouvrant la fenêtre d'édition, vous devriez votre le lecteur multimédia, mais aussi entendre l'audio se jouer.
 
 <img src="https://puu.sh/Jy6zq/fb21f53671.png">
+
+<br>
+
+#### Explication de la Syntaxe
+En fonction de ce que vous désirez, certains commutateurs peuvent être optionnels et d'autres obligatoires.
+- Si vous audio est un MP3, il faudra mettre le ***type*** en <u>***audio/mpeg***</u>
+> `<source src="/<Chemin>/<Nom>.mp3" type="audio/mpeg">`
+{.is-warning}
+- Si vous audio est un OGG, il faudra mettre le ***type*** en <u>***audio/ogg***</u> et le codec en <u>***codecs=vorbis***</u>
+> `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
+{.is-warning}
