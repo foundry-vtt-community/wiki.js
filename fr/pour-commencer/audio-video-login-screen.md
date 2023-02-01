@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T00:30:48.452Z
+date: 2023-02-01T00:33:46.096Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -83,7 +83,7 @@ Pour cela nous allons utiliser le site de **[webp.to](https://webp.to/?lang=fr)*
 
 Il faudra suivre les instructions sur à la page et attendre le résultat que vous pourrez télécharger sur le site. En fonction de la taille de votre vidéo, le résultat final peut prendre beaucoup de temps.
 
-Une fois que vous avez votre image au format <u>**WEBP**</u>, vous pouvez directement l'installer dans votre worlds comme ci-dessous.
+Une fois que vous avez votre image au format <u>**WEBP**</u>, copier la directement dans le répertoire de votre monde, à sa racine par exemple, puis indiquer le chemin en éditant votre monde, comme pour une image standard ***(En exemple ci-dessous)***.
 <img src="https://puu.sh/Jy5YM/f1e09e3835.png">
 
 <br>
