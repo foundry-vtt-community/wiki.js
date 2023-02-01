@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T00:38:20.643Z
+date: 2023-02-01T00:40:08.725Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -162,4 +162,4 @@ Le processus final est identique à la description ci-dessus, la variante va êt
 Pour cela il vous suffira d'utiliser le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** pour cette petite manipulation comme ci-dessous. Vous pouvez choisir le format qui vous convient le mieux entre le ***MP3 et l'OGG***
 <img src="https://puu.sh/Jy6Mc/5373fcdaaa.png">
 
-Maintenant il ne vous reste plus qu'a reproduire le processus 
+Maintenant il ne vous reste plus qu'a reproduire le processus [ci-dessus](https://foundryvtt.wiki/fr/pour-commencer/audio-video-login-screen#utiliser-une-piste-audio-diff%C3%A9rente-comme-une-musique) en mettant le fichier audio à la racine du répertoire de votre monde.
