@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T00:23:53.787Z
+date: 2023-02-01T00:30:48.452Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -89,8 +89,8 @@ Une fois que vous avez votre image au format <u>**WEBP**</u>, vous pouvez direct
 <br>
 
 ## Pour le son
-Afin que le son fonctionne chez tout le monde, il faudra que vous donniez le tips ***([prérequis](https://foundryvtt.wiki/fr/pour-commencer/audio-video-login-screen#pr%C3%A9requis))*** à vos joueurs afin qu'ils puissent pleinement profiter de votre travail. 
-Maintenant que nous avons l'image ou la vidéo pour être plus exact, il va falloir mettre le son.
+Afin que le son fonctionne chez tout le monde, il faudra que vous donniez le tips ***([prérequis](https://foundryvtt.wiki/fr/pour-commencer/audio-video-login-screen#pr%C3%A9requis))*** à vos joueurs afin qu'ils puissent pleinement profiter de votre travail.
+Maintenant que nous avons la vidéo, il va falloir mettre le son. Nous vous conseillons fortement de mettre le son dans le meme répertoire que la vidéo, et plus précisement dans le répertoire de votre monde directement à sa racine.
 En ce qui concerne le son, deux choix s'offrent à vous pour le format :
 - OGG *(Une certaine préférence pour ce dernier qui fonctionnait mieux sous foundry)*.
 - MP3.
@@ -154,3 +154,9 @@ En fonction de ce que vous désirez, certains commutateurs peuvent être optionn
 > `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
 > `</audio>`
 {.is-warning}
+
+<br>
+
+### Utiliser une piste audio d'une vidéo comme une musique
+Le processus final est identique à la description ci-dessus, la variante va être sur l'extraction de la piste audio de votre vidéo.
+Pour cela il vous suffira d'utiliser le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)*** pour cette petite manipulation
