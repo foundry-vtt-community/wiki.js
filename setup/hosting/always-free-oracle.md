@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-01-27T17:04:02.020Z
+date: 2023-02-03T20:03:04.539Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -16,7 +16,7 @@ This guide provides easy to follow steps for a relatively simple installation of
 
 * You will end up with:
 
-  1. A VM with 1 cpu core (optionally increased to 4 cores) and 6GB of RAM (optionally increased to 24GB).
+  1. A VM with 1 cpu core (optionally increased to 4 cores) and 4GB of RAM (optionally increased to 24GB).
   2. Foundry running 24/7, including after restarts.
   3. A domain name and an automatically managed encrypted connection to your Foundry instance.
   4. Roughly 40GB (optionally increased to roughly 190GB) available storage in the [User Data folder](https://foundryvtt.com/article/configuration/#where-user-data). 
@@ -185,15 +185,25 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Ampere**. 
 
-<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.A1.Flex shape**.
+<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.A1.Flex shape**. Reduce the RAM to 4GB.
+
+<details><summary>Why 4GB and not the default 6GB? ▼</summary>
+
+  As of January, 2023 Oracle stated that thay may begin reclaiming "idle" instances. One measure of idleness is RAM usage. Foundry does not need more than 4GB of RAM, and not raising it higher will ensure that more than 10% of RAM will be used at all times. 
+  
+  For more information see: [Always Free Tier Documentation](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#:~:text=a%20private%20subnet.-,Idle%20Compute%20Instances,-Important)
+
+</details>
 
 <details><summary>How many CPU cores and how much RAM should I use? ▼</summary>
 
-  As of June 7, 2021 Oracle offers [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 4 Ampere cores and 24GB of RAM spread over up to 4 instances, for free. This guide leaves the default selection of 1 core and 6GB of RAM as that is more than enough to run Foundry. 
+  As of June 7, 2021 Oracle offers [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 4 Ampere cores and 24GB of RAM spread over up to 4 instances, for free. This guide recommends the selection of 1 core and 4GB of RAM as that is more than enough to run Foundry. 
   
   An additional core may help increase performance of Foundry slightly and a few more gigs of RAM could help in the most extreme cases for resource-intensive modules. You can flexibly edit the shape after creation if you want to adjust the resources after creation. 
   
-  In the vast majority of cases, 1 core and 6GB is recommended for Foundry. 
+  In the vast majority of cases, 1 core and 4GB is recommended for Foundry. 
+  
+  If you choose more resources, you may run the risk of having your instance reclaimed due to being idle. For more details, see [Always Free Tier Documentation](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#:~:text=a%20private%20subnet.-,Idle%20Compute%20Instances,-Important).
 
 </details>
 
