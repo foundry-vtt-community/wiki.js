@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-02-03T20:17:21.513Z
+date: 2023-02-03T20:25:54.047Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -47,7 +47,7 @@ Troubleshooting assistance for this guide can be found on the official Foundry D
 >
 >Have you received an error message stating "**instance is disabled and will not accept any actions or requests**?"
 >
->See the <a href="#archived-information">archived information</a> onward for an explanation and the <a href="#i-restore-disabled-a1-instance">Restore Disabled A1 Instance</a> section for instructions on how to restore your Foundry instance. {.is-danger}
+>See the <a href="#archived-information">archived information</a> onward for an explanation and the <a href="#j-restore-disabled-a1-instance">Restore Disabled A1 Instance</a> section for instructions on how to restore your Foundry instance. {.is-danger}
 
 
 ## Disclaimer 
