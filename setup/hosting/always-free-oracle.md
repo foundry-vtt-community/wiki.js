@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-02-03T20:03:04.539Z
+date: 2023-02-03T20:17:21.513Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -76,6 +76,21 @@ At the end of this section, you will have a registered account with Oracle Cloud
 
 
 <a id="B3" href="#B3">B3.</a> Once your account is confirmed, a “Get Started” email will be sent to the registered email address providing access to the Oracle Cloud account. You are now ready to continue this guide!
+
+<details><summary>Will Oracle reclaim my Always Free instance for being idle? ▼</summary>
+  In January, 2023 Oracle sent the following message regarding idle A1 (Always Free) instances:
+  
+  >Oracle Cloud Infrastructure Customer,
+
+  >Oracle Cloud Infrastructure (OCI) will be reclaiming idle Always Free compute resources from Always Free customers. Reclaiming idle resources allows OCI to efficiently provide services to Always Free customers. Your account has been identified as having one or more compute instances that have been idle for the past 7 days. These idle instances will be stopped one week from today, January 30, 2023. If your idle Always Free compute instance is stopped, you can restart it as long as the associated compute shape is available in your region. You can keep idle compute instances from being stopped by converting your account to Pay As You Go (PAYG). With PAYG, you will not be charged as long as your usage for all OCI resources remains within the Always Free limits.
+  
+  The definition of "idle" is found here: [Always Free Tier Resources - Idle Instances](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#:~:text=a%20private%20subnet.-,Idle%20Compute%20Instances,-Important)
+  
+  Oracle support has confirmed on January 31, 2023 that *all* the idle conditions above need to be met for the instance to be considered idle. With a 4GB RAM instance, Foundry will use more than 10% at all times. Thus, following this guide after January 31, 2023 should keep the instance safe from being reclaimed.
+  
+  If you would like to be absolutely use, you can upgrade your account to Pay As You Go in the [Billing & Cost Management -> Upgrade and Manage Payment](https://cloud.oracle.com/invoices-and-orders/upgrade-and-payment) section. There is no charge to do so, however a temporary authorization must be placed on a credit card.
+</details>
+
 
 <details><summary>Don't I need to upgrade my account to Pay As You Go or my instance will be disabled? ▼</summary>
 
