@@ -13,13 +13,16 @@ Foundry tools that work across all or most systems are noted here. These differ 
 ## DunGen
 
 * **Author**: Nick#2947 on Discord.
-* **Version**: 0.9
-* **Foundry VTT Compatibility**: 0.6.0
+* **Version**: 0.14
+* **Foundry VTT Compatibility**: 10 (0.6.0+)
 * **Translation Support**: EN (full)
 
 ### Link(s) to Tool
 * <i class="fab fa-external-link-square-alt"></i> [https://DunGen.app](https://dungen.app/dungen/)
 * <i class="fab fa-patreon"></i>  [Link to the Patreon](https://www.patreon.com/DungeonChannel)
+
+A Foundry VTT Module was released on February 2023:
+* <i class="fab fa-external-link-square-alt"></i> [DunGen - Procedural Dungeons and Caves Generator](https://foundryvtt.com/packages/foundryvtt-dungen/)
 
 ### Description
 DunGen is a Dungeon Generator that creates high resolution maps ready to import into Foundry VTT. Alongside the maps, you can also generate a full scene file including pre-built walls to take full advantage of Foundry's lighting feature in only a minute. You can see it in action in [this short video](https://youtu.be/2RlPpLOFkhc).
