@@ -1,8 +1,8 @@
 ---
-title: Initiative ohne Token und Actor zum combat tracker hinzufügen
+title: Initiative für einen Actor ohne Token  zum combat tracker hinzufügen
 description: 
 published: true
-date: 2023-02-05T14:23:52.836Z
+date: 2023-02-05T14:24:44.044Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-05T14:23:18.336Z
