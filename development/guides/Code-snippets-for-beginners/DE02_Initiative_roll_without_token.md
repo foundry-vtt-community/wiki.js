@@ -2,13 +2,13 @@
 title: Initiative ohne Token und Actor zum combat tracker hinzufügen
 description: 
 published: true
-date: 2023-02-05T14:23:18.336Z
+date: 2023-02-05T14:23:52.836Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-05T14:23:18.336Z
 ---
 
-# Initiative ohne Token und Actor zum combat tracker hinzufügen
+# Initiative-Script
 
 Die Initiative für einen Actor kann mittels Script ermittelt werden. Dazu wird das combat-Objekt des globalen game-Objekt benötigt. 
 
