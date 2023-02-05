@@ -2,13 +2,13 @@
 title: Würfelwurf in einem Makro
 description: Beispiel eines Würfelwurfes als Makro mit Chatausgabe
 published: true
-date: 2023-02-05T12:10:50.895Z
+date: 2023-02-05T13:25:42.876Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-05T12:10:50.895Z
 ---
 
-# DSA 3W20 Wurf (simple Version)
+# 3W20 Wurf (simple Version)
 ```js
 //Erzeuge einen Würfelformel mit Zusatztext. Warte auf das Ergebnis der Auswertung der Würfelformel außerdem wird das asynchron ausgeführt. Das heißt andere Prozesse können zwischendurch abgearbeitet werden.
 // Notiz: Statt "evaluate" --> kann "roll" verwendet werden beides scheint gleichwertig
