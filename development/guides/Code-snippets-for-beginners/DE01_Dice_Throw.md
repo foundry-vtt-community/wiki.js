@@ -2,7 +2,7 @@
 title: Würfelwurf in einem Makro oder im Code
 description: Beispiel eines Würfelwurfes als Makro mit Chatausgabe
 published: true
-date: 2023-02-05T14:17:33.286Z
+date: 2023-02-05T14:20:59.583Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-05T12:10:50.895Z
@@ -24,7 +24,7 @@ let dies = await new Roll("1d20[black]+1d20[red]+1d20[yellow]").evaluate({async:
 
 // In dies liegt nun das Ergebnis des Wüfelwurfes bzw. genauer der verarbeiteten Würfelformel
 
-// Erzeueg nun eine html basierte Chat Nachricht welche ausgegeben wird.
+// Erzeuge nun eine html basierte Chat Nachricht welche ausgegeben wird.
 let ChatData={
 // Die Nachricht wird dem aktiven Sprecher/Actor zugewiesenet. Falls es den Sprecher nicht gibt oder er gelöscht wurde so wird stattdesen der Spielername verwendet.
 speaker: ChatMessage.getSpeaker({token: actor}),
