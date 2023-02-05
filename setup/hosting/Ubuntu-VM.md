@@ -2,7 +2,7 @@
 title: Ubuntu VM
 description: 
 published: true
-date: 2022-05-19T13:18:41.726Z
+date: 2023-02-05T23:00:17.019Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:26:28.384Z
@@ -249,7 +249,7 @@ sudo apt-get install software-properties-common
 sudo add-apt-repository universe
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt-get update
-sudo apt-get install certbot python-certbot-nginx
+sudo apt-get install certbot python3-certbot-nginx
 ```
 
 installs the software itself and `sudo certbot --nginx` runs the installer for nginx.
