@@ -2,7 +2,7 @@
 title: Würfelwurf in einem Makro
 description: Beispiel eines Würfelwurfes als Makro mit Chatausgabe
 published: true
-date: 2023-02-05T14:09:18.400Z
+date: 2023-02-05T14:16:26.478Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-05T12:10:50.895Z
@@ -144,7 +144,7 @@ Siehe auch Codebeispiel mit den Zeilen
 --> rollMode: RollTypeBe,
 
 Es lässt sich über den rollMode steuern als welche Art von Würfelwurf gmroll, blindroll etc der Würfelwurf ausgeführt wird.
---> let RollTypeBe = game.settings.get("core", "gmroll");
+--> let RollTypeBe = "gmroll";
 sollte einen Wurf des Spielleiters erzeugen der für Spieler nicht sichtbar ist.
 
 ```JS
@@ -156,6 +156,11 @@ let dies = await new Roll("1d20[black]+1d20[red]+1d20[yellow]").evaluate({async:
 
 // publicroll, gmroll, blindroll, selfroll --> just paste game.settings.get("core", "rollMode") in console. String is returned 
 let RollTypeBe = game.settings.get("core", "rollMode");
+// possible examples
+// let RollTypeBe = "gmroll";
+// let RollTypeBe = "blindroll";
+// let RollTypeBe = "selfroll";
+// let RollTypeBe = "publicroll";
 
 let ChatData={
 // let the roll take part as a roll of the actor. If speaker ist deleted then the roll takes place as the player.
