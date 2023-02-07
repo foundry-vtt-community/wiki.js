@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-02-03T20:26:18.759Z
+date: 2023-02-07T12:56:26.127Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -88,7 +88,7 @@ At the end of this section, you will have a registered account with Oracle Cloud
   
   Oracle support has confirmed on January 31, 2023 that *all* the idle conditions above need to be met for the instance to be considered idle. With a 4GB RAM instance, Foundry will use more than 10% at all times. Thus, following this guide after January 31, 2023 should keep the instance safe from being reclaimed.
   
-  If you would like to be absolutely use, you can upgrade your account to Pay As You Go in the [Billing & Cost Management -> Upgrade and Manage Payment](https://cloud.oracle.com/invoices-and-orders/upgrade-and-payment) section. There is no charge to do so, however a temporary authorization must be placed on a credit card.
+  If you would like to be absolutely sure, you can upgrade your account to Pay As You Go in the [Billing & Cost Management -> Upgrade and Manage Payment](https://cloud.oracle.com/invoices-and-orders/upgrade-and-payment) section. There is no charge to do so, however a temporary authorization must be placed on a credit card.
 </details>
 
 
