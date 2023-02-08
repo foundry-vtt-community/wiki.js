@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-02-08T18:49:31.970Z
+date: 2023-02-08T18:56:56.098Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -24,7 +24,7 @@ At the end of this guide you will have:
 
 ## Important Information and Requirements
 
-This guide assumes that you have already installed linux, and have at least a basic understanding of what linux and how to use a commanbd line. 
+This guide assumes that you have already installed linux, and have at least a basic understanding of linux and how to use a commanbd line. 
 
 The following is required to complete this guide:
 
