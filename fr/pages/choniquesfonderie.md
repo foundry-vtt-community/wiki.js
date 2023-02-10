@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2022-12-05T10:01:39.342Z
+date: 2023-02-10T14:39:00.594Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -26,5 +26,7 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 10](https://www.youtube.com/watch?v=WSL3cAxI_D4) spécial **Cthulhu Hack/Les Encagés** avec Carter, Kristov et Jerome (XII Singes)
  - Les Chroniques de la [Fonderie, Episode 11](https://www.youtube.com/watch?v=9BGlfo9xKqY) spécial **Custom System Builder (alias CSB)**, pour faire des systèmes de jeu sans développer avec LinkedFluuuhed, le créateur de CSB
  - Les Chroniques de la [Fonderie, Episode 12](https://www.youtube.com/watch?v=RizH5dM31AU) avec SecretFire pour des news et échanges sur Foundry, et **Ghorin et Hervé pour l'Anneau Unique**
+ - Les Chroniques de la [Fonderie, Episode 13]https://www.youtube.com/watch?v=t20_oVT4JQo&t=48s) avec  **VincentVK et LeRatierBretonnien pour Rêve de Dragon**
+ 
  
  - A venir : épisode 13 en Janvier 2023 avec pour thème ????? !
