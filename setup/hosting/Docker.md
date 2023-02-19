@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2022-05-19T13:18:59.505Z
+date: 2023-02-19T10:20:27.874Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -25,6 +25,7 @@ Here is a table of the approaches detailed within as well as notes on their comp
 | [DireckHit](#direckthits-guide-to-running-fvtt-docker-with-traefik-and-portainer)   | complex    | Traefik, Portainer | Good for Remote Hosting      |
 | [Vicknesh](#vickneshs-docker-deployment-guide)    | complex    | Caddy for TLS      |                              |
 | [MBRound18's](#mbround18-foundryvtt-docker) | simple | auto restarts on issues | Simple drop in link and ready to go |
+| [BTBTravis'](#btbtravis-foundryvtt-docker) | moderate | fly.io deploy | Deploy to fly.io via Dockerfile |
 ---
 
 # mikysan's simple dockerfile
@@ -295,3 +296,9 @@ docker run --rm -it \
 
 2. Navigate to [127.0.0.1:4444](http://1237.0.0.1:4444)
 3. Follow directions on screen. 
+
+<h1 id="btbtravis-foundryvtt-docker">BTBTravis' Fly.io Setup</h1>
+
+Please visit the README in the [travisshears/foundry-vtt repository](
+https://git.sr.ht/~travisshears/foundry-vtt) for the most up to date instructions.
+
