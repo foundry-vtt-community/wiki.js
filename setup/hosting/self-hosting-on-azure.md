@@ -2,11 +2,13 @@
 title: Self Hosting on Azure
 description: Simple Steps to follow to setup an Azure Free Tier VM
 published: true
-date: 2022-05-19T13:21:34.425Z
+date: 2023-03-13T18:06:06.329Z
 tags: azure, hosting, setup, getting started, vm
 editor: markdown
 dateCreated: 2020-11-19T05:34:12.177Z
 ---
+
+>**NOTE:** The Azure Free Tier provides 1GB of RAM. This is below the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server) for a dedicated Foundry server. You run the risk of running out of RAM and Foundry crashing, especially on heavier game systems, using many modules, or importing a lot of content into a world. {.is-warning}
 
 # Self Hosting on Azure
 ## 1. Introduction, Requirements, and A Disclaimer
