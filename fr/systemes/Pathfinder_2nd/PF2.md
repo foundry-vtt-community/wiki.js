@@ -2,45 +2,68 @@
 title: 0.0. Pathfinder Seconde Édition
 description: 
 published: true
-date: 2022-05-19T13:24:30.712Z
+date: 2023-03-21T13:34:52.962Z
 tags: pathfinder 2e, foundry
 editor: markdown
 dateCreated: 2021-02-27T10:55:46.524Z
 ---
 
-# Modules indispensables
-Si vous souhaitez jouer avec Pathfinder 2 en version française sous Foundry VTT, vous devez installer en premier lieu le système Pathfinder 2.
-Il vous permet de jouer en anglais.
+# Pathfinder 2e
+Si vous souhaitez jouer avec le système Pathfinder 2 développé par Paizo en français sous Foundry VTT, vous devez suivre les étapes suivantes.
 
-Si vous voulez jouer en français voici les modules à installer à partir de l'onglet modules :
-**FoundryVTT lang fr-FR** : https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr
-*Vous bénéficiez alors de toute l'interface permettant d'utiliser le logiciel Foundry VTT en francais*
 
-**Français Pathfinder 2**  
-Ce module permet de disposer de l'interface du système de jeu en français.
+
+## installer le système Pathfinder 2.
+
+Ce système vous permet de jouer en anglais avec les règles de Pathfinder 2e. Il est également conseillé d'installer le module PF2e companion compendia dans lequel se trouvent les règles pour tous les types de compagnon animaux, les innovations de l'inventeur et autres créatures similaires à l'exception des familiers qui sont dans le système.
+
+## Jouer en Français
+Si vous voulez jouer en français, vous devez installer les modules suivants que vous pouvez trouver dans l'onglet modules du logiciel foundry :
 
 **Babele** (https://gitlab.com/riccisi/foundryvtt-babele) 
-Ce module sert de support à la traduction et permet d'indiquer au logiciel ce qu'il doit substituer pour afficher les valeurs en français, sans toucher au reste, comme les valeurs numériques, par exemple.
+Ce module est le module qui sert de support à la traduction et qui permet d'indiquer au logiciel ce qu'il doit substituer au moment de l'affichage aux valeurs anglaises.
 
-**Foundry VTT Pathfinder 2e French** https://gitlab.com/pathfinder-fr/foundryvtt-pathfinder2e-lang-fr 
-*Vous bénéficiez grâce à ce module des conpendiums Pathfinder 2 en français : Ce module permet de construire votre personnage et à votre MJ de disposer de l'essentiel en français : ascendances, historiques, classes, dons, compétences, sorts, équipement. Ce module est en perpétuelle mise à jour et suit les parutions anglophones. Il intègre les mises à jour. Du fait de son avance sur la traduction officielle, il est possible que les capacités n'aient pas le même nom dans le compendium mais elles y sont !* 
+Ce fichier permet d'afficher les valeurs en français, sans toucher au reste du système, notamment les automatisations. Cela permet également de laisser intouchées les valeurs numériques, par exemple.
 
-> A noter : Pour intégrer les compendiums en français issus de ce module, il faut paramétrer Babele pour indiquer le chemin pour trouver les traductions Voir tuto pour le paramétrage https://foundryvtt.wiki/fr/systemes/PF2/babele
-{.is-info}
+**PF2e - Français - fan made (unofficial)**
+C'est le module de contenu que Babele va substituer.
+Le dépôt se trouve sur Gitlab à l'adresse suivante : https://gitlab.com/pathfinder-fr/foundryvtt-pathfinder2e-lang-fr 
 
-<h1>Paramétrer Babele pour Pathfinder Seconde Edition</h1>
+* Vous bénéficiez grâce à ce module des compendiums du système Pathfinder 2 en français ainsi que de l'interface utilisateur en français : 
 
-<p>1- Installer puis n'oubliez pas d'activer le module babele sur foundry VTT</p>
-<p>2- Dans Paramètres->Configuer les options->Onglet "Modules"->Section Babele</p>
-<p>2- Entrer le chemin du module dans lequel se trouve votre traduction :<br />
-  <img src="http://landreau.phpnet.org/wiki_fvtt/babele.PNG" border="0">
-</p>
+Ce module permet de construire votre personnage et à votre MJ de disposer de l'essentiel du contenu des règles en français : ascendances, héritages, historiques, classes, dons, compétences, archétypes, sorts, équipement, monstres des bestiaires, écran du MJ. 
+
+Ce module est régulièrement mis à jour et suit le rythme des parutions anglophones avec plus ou moins un mois de retard. Il intègre les **mises à jour** et les **erratas** au fur et à mesure de leur intégration en langue anglophone. 
+
+Du fait de son avance sur la traduction officielle, il est possible que les noms choisis par l'éditeur de la gamme française puisse différer dans les compendium mais les règles sont toutes présentes !
+
+
+**Paramétrer les modules
+
+1. Créez votre partie en choisissant le système PF2e
+
+2. Lancez votre partie
+
+3. dans le gestionnaire de modules, activez les modules :
+- Babele
+- PF2e
+- companion compendia
+
+4. dans la configuration des options :
+- Babele : laissez le chemin vers le répertoire des fichiers de traduction vide
+- Français \[Pathfinder 2e\] (Fan made) : Choisissez la version que vous souhaitez dans l'affichage des noms
 
 Voici les choix qui s'offrent à vous selon vos préférences
-• modules/pf2-fr/babele ... vous permet de disposer de la version en français 
-• modules/pf2-fr/babele-alt/vo-vf ... vous permet de disposer de la version en français avec le nom donné en vo suivi de sa traduction en français
-• modules/pf2-fr/babele-alt/vf-vo ... vous permet de disposer de la version en français avec le nom donné en vf suivi de l'original en vo entre parenthèse
+• vf : vous permet de disposer de la version en français 
+• vf (vo) : vous permet de disposer des noms en français avec le nom en vo entre parenthèses
+• vo (vf) : vous permet de disposer des noms en anglais avec le nom en vf entre parenthèses
+• vo (vf) : vous permet de disposer des noms en anglais
 
-Les versions vo/vf peuvent être utiles si vous jouez avec des anglophones par exemple.
+Quel que soit le cas, la description sera en version française.
 
-En cas de souci, la communauté Pathfinder-fr est à votre disposition pour vous aider à faire vos premiers pas
+L'utilisation des versions vo, vo(vf) et vf(vo) sont recommandées car de nombreux modules d'automatisation se basent sur les noms en anglais et ne sont pas localisés.
+
+En cas de souci, la communauté Pathfinder-fr est à votre disposition pour vous aider à faire vos premiers pas.
+
+Une liste de modules les plus couramment utilisées et plus d'informations peuvent être trouvées sur ce lien avec notamment des images si vous ne parvenez pas à réaliser l'installation
+https://docs.google.com/document/d/10JtPyk1lEln57dcs7bxBJRcsrHJYmsIjizn2bAylLHE/edit#heading=h.buqa69ajpysp
