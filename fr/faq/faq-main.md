@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-03-31T07:56:39.572Z
+date: 2023-03-31T07:59:31.368Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -64,7 +64,7 @@ Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus pop
 
 ## Y’a quoi comme jeu dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 01/03/2022, on recense 180+ « systems » : 
+Dans Foundry, les « jeux » sont appelés « systems ». Au 31/03/2023, on recense 248+ « systems » : 
 - 13th age,
 - Appel de Cthulhu, DeltGreen
 - Cthlulhu Hack
@@ -72,6 +72,9 @@ Dans Foundry, les « jeux » sont appelés « systems ». Au 01/03/2022, on rece
 - Aliens
 - D&D5,
 - Tales From The Loop
+- Knight
+- Donjons & Chatons
+- Mournblade, Hawkmoon
 - Anneau Unique
 - Fate, 
 - Pathfinder 1,
