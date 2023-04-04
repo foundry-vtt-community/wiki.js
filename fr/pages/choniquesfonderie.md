@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2023-02-27T17:50:15.911Z
+date: 2023-04-04T20:36:47.208Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -27,7 +27,8 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 11](https://www.youtube.com/watch?v=9BGlfo9xKqY) spécial **Custom System Builder (alias CSB)**, pour faire des systèmes de jeu sans développer avec LinkedFluuuhed, le créateur de CSB
  - Les Chroniques de la [Fonderie, Episode 12](https://www.youtube.com/watch?v=RizH5dM31AU) avec **SecretFire** pour des news et échanges sur Foundry, et **Ghorin et Hervé pour l'Anneau Unique**
  - Les Chroniques de la [Fonderie, Episode 13](https://www.youtube.com/watch?v=t20_oVT4JQo&t=48s) avec  **VincentVK et LeRatierBretonnien pour Rêve de Dragon**
- - - Les Chroniques de la [Fonderie, Episode 14](https://www.youtube.com/watch?v=ZSL67OmG98g) avec Carter, Zakarik, Sasmira et Fletch, sur Knight et La Ville en Jaune.
+ - Les Chroniques de la [Fonderie, Episode 14](https://www.youtube.com/watch?v=ZSL67OmG98g) avec Carter, Zakarik, Sasmira et Fletch, sur Knight et La Ville en Jaune.
+ - Les Chroniques de la [Fonderie, Episode 15](https://www.youtube.com/watch?v=nVA6oz9jQrc) avec VincentVK, LeRatier et Fletch, sur Shadowrun Anarchy et Barbarians of Lemuria.
  
  
- - A venir : épisode 15 en Mars 2023 avec pour thème ... Mystère  !
+ - A venir : épisode 16 le 23 avril avec pour thème ... Torg  !
