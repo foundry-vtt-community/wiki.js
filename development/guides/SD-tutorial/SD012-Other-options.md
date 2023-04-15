@@ -1,8 +1,8 @@
 ---
-title: 01-2. Other-options
+title: 01.2. Other-options
 description: 
 published: true
-date: 2023-04-15T11:30:32.517Z
+date: 2023-04-15T11:32:25.873Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:23.660Z
