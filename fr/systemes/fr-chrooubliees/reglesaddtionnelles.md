@@ -2,7 +2,7 @@
 title: Règles Additionnelles
 description: Des options de jeu différentes
 published: true
-date: 2022-05-19T13:22:29.277Z
+date: 2023-04-15T16:04:27.934Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:22:50.709Z
@@ -17,7 +17,7 @@ Vous pouvez modifier quelques paramètres de jeu pour utiliser des règles avanc
 - Cochez ou décochez les options qui vous intéressent
 - Sauvegardez
 
-![customrules.png](/images/chroniquesoubliees/customisation/customrules.png)
+![customrules.webp](/images/chroniquesoubliees/customisation/customrules.webp)
 
 **Points de Récupération :**
 
