@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T12:14:17.662Z
+date: 2023-04-15T12:20:06.016Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -24,7 +24,6 @@ Cliquez ensuite sur "Créer Personnage".
 Dans l'onglet "Nom" : choisissez le nom de votre PJ
 Dans l'onglet "Type" : sélectionnez "Personnage"
 
-![créa_pj.png](/images/chroniquesoubliees/créa_pj.png)
 ![crt_perso_01.webp](/images/chroniquesoubliees/crt_perso_01.webp)
 
 
