@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2023-04-15T16:40:00.424Z
+date: 2023-04-15T16:41:44.122Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -57,7 +57,7 @@ Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisqu
 Pour créer une nouvelle "Capacité" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos "Capacités" personnalisées.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Capacity".
-![créa_capacité.png](/images/chroniquesoubliees/créa_capacité.png)
+![créa_capacité.webp](/images/chroniquesoubliees/créa_capacité.webp)
 
 Votre "Capacité" est maintenant prête à être remplie.
 
