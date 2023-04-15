@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T15:26:50.843Z
+date: 2023-04-15T15:28:31.593Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -37,7 +37,11 @@ En allant dans l'onglet "Prototype Token" en haut à droite, puis "Images", vous
 Pour créer les tokens plus facilement, vous pouvez utiliser le module **Tokenizer** qui permet de créer les tokens drectement dans foundryvtt à partir de l'image du personnage.
 
 ## 3. La Race de mon PJ
-Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de faire un **clic droit** sur la case blanche à côté de l'onglet race.
+Il est temps maintenant de choisir la race de votre PJ : pour cela il faut avoir installer et activer le  module **Chroniques Oubliées Fantasy - SRD** 
+
+![module_cof_srd.webp](/images/chroniquesoubliees/customisation/module_cof_srd.webp)
+
+puis  il suffit de faire un **clic droit** sur la case blanche à côté de l'onglet race.
 Cela ouvre le **Compendium Races** du Système. Faites glisser la race choisie dans la case. 
 > **Les caractéristiques liées à la Race se mettent à jour automatiquement.**
 {.is-success}
@@ -50,11 +54,7 @@ Vous pouvez aussi y glisser une autre Race issue de votre imagination.
 
 
 ## 4. Le Profil de mon PJ
-Il est temps maintenant de choisir le Profil de votre PJ : pour cela il faut avoir installer et activer le  module **Chroniques Oubliées Fantasy - SRD** 
-
-![module_cof_srd.webp](/images/chroniquesoubliees/customisation/module_cof_srd.webp)
-
-puis il suffit de faire un **clic droit sur la case blanche à côté de l'onglet Profil**.
+Il est temps maintenant de choisir le Profil de votre PJ : il suffit de faire un **clic droit sur la case blanche à côté de l'onglet Profil**.
 Cela ouvre le **Compendium Profils** du Système. Faites glisser le Profil choisi dans la case. 
 > **Les voies et capacités liées au Profil se mettent à jour automatiquement (dans l'onglet Voies & Capacitées).**
 {.is-success}
