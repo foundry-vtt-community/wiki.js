@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T15:11:03.219Z
+date: 2023-04-15T15:12:57.396Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -90,8 +90,7 @@ On a tous besoin d'un peu de background pour faire vivre son PJ.
 Et bien vous pouvez remplir toutes les infos sur son histoire dans l'onglet "Description".
 Vous pouvez faire simple avec les 6 zones à remplir, ou faire une longue tirade sur ses origines en cliquant sur le bouton modifier de la zone "Description".
 
-![créa_pj_description.png](/images/chroniquesoubliees/créa_pj_description.png)
-
+![créa_pj_description.webp](/images/chroniquesoubliees/créa_pj_description.webp)
 ## 8. L'inventaire de base de mon PJ
 Votre profil vous donne droit à un inventaire de base.
 Pour retrouver ce que contient cet Inventaire, faites un clic gauche sur votre profil via l'onglet "Caractéristiques" pour afficher sa description. 
