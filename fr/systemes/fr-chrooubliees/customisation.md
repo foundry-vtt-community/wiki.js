@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2022-05-19T13:22:20.925Z
+date: 2023-04-15T16:35:55.848Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -19,17 +19,17 @@ dateCreated: 2020-12-23T12:17:20.011Z
 Pour créer un nouveau "profil" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos profils personnalisés.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Profile".
-![créa_voies.png](/images/chroniquesoubliees/créa_voies.png)
+![créa_voies.webp](/images/chroniquesoubliees/créa_voies.webp)
 
 Votre "Profil" est maintenant prêt à être rempli.
 
 Sur l'onglet "Description", vous pouvez écrire toute la description de votre "Profil".
 
  ###### Comparaison avec un Profil DRS et Custom
-![voies_description.png](/images/chroniquesoubliees/voies_description.png)
+![voies_description.webp](/images/chroniquesoubliees/voies_description.webp)
 
 Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisques qui vous intéressent.
-![voies_detail.png](/images/chroniquesoubliees/voies_detail.png)
+![voies_detail.webp](/images/chroniquesoubliees/voies_detail.webp)
 
 - L'onglet "Ressources" permet d'ajouter des "Voies" existantes ou personnalisée. Vous pouvez faire du drag&drop à partir du Compendium des Voies ou de votre liste personnelles.
 ---
@@ -37,7 +37,7 @@ Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisqu
 Pour créer une nouvelle "Voie" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos "Voies" personnalisées.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "Path".
-![cré_voie.png](/images/chroniquesoubliees/cré_voie.png)
+![cré_voie.webp](/images/chroniquesoubliees/cré_voie.webp)
 
 Votre "Voie" est maintenant prête à etre remplie.
 
