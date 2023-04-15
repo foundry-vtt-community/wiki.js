@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T12:22:27.121Z
+date: 2023-04-15T12:26:26.579Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -34,8 +34,10 @@ En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre pe
 
 En allant dans l'onglet "Prototype Token" en haut à droite, puis "Images", vous pouvez également modifier l'**Image du token** qui apparaitra sur les scènes jouées.
 
+Pour créer les tokens plus facilement, vous pouvez utiliser le module **Tokenizer** qui permet de créer les tokens drectement dans foundryvtt à partir de l'image du personnage.
+
 ## 3. La Race de mon PJ
-Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de faire un clic droit sur la case blanche à côté de l'onglet race.
+Il est temps maintenant de choisir la race de votre PJ : pour cela il suffit de faire un **clic droit** sur la case blanche à côté de l'onglet race.
 Cela ouvre le **Compendium Races** du Système. Faites glisser la race choisie dans la case. 
 > **Les caractéristiques liées à la Race se mettent à jour automatiquement.**
 {.is-success}
