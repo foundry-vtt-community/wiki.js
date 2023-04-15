@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T12:56:15.809Z
+date: 2023-04-15T12:59:42.848Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -46,7 +46,8 @@ Vous pouvez aussi y glisser une autre Race issue de votre imagination.
 > Pour des infos sur la création de nouvelles Races, c'est [ici](/fr/systemes/fr-chrooubliees/species)
 {.is-info}
 
-![créa_pj_choixrace.png](/images/chroniquesoubliees/créa_pj_choixrace.png)
+![créa_pj_choixrace.webp](/images/chroniquesoubliees/créa_pj_choixrace.webp)
+
 
 ## 4. Le Profil de mon PJ
 Il est temps maintenant de choisir le Profil de votre PJ : pour cela il suffit de faire un **clic droit sur la case blanche à côté de l'onglet Profil**.
