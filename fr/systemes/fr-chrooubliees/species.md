@@ -2,7 +2,7 @@
 title: Création de Races
 description: Alors on veut jouer au Créateur ? A l'alchimie des Corps et de l'âme ? Alors vous êtes au bon endroit
 published: true
-date: 2022-05-19T13:22:23.904Z
+date: 2023-04-15T16:57:15.934Z
 tags: custom, cof, species
 editor: markdown
 dateCreated: 2020-12-23T14:28:48.110Z
@@ -19,14 +19,14 @@ Si vous souhaitez utiliser les races issues d'autres Livres de l'Univers de Chro
 Pour créer une nouvelle "race" il faut d'abord aller dans l'onglet "Objet" de la barre d'outils. 
 Pour plus de lisibilité, je vous conseille de créer un Dossier spécifique à vos races personnalisées.
 Dans ce dossier vous aller ensuite créer un nouvel Objet. Vous lui donnerez un "Nom" et dans la liste "Type" vous selectionnez "species".
-![créa_race.png](/images/chroniquesoubliees/customisation/créa_race.png)
+![créa_race2.webp](/images/chroniquesoubliees/customisation/créa_race2.webp)
 
 Votre "race" est maintenant prêt à être remplie.
 
 Sur l'onglet "Description", vous pouvez écrire toute la description de votre "race".
 
  ###### Comparaison avec une Race DRS et Custom
-![créa_race_description.png](/images/chroniquesoubliees/customisation/créa_race_description.png)
+![créa_race_description.webp](/images/chroniquesoubliees/customisation/créa_race_description.webp)
 
 Sur l'onglet "Details", n'avez plus qu'à remplir les "Bonus Raciaux". 
 
