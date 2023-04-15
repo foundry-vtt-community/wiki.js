@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2023-04-15T15:47:26.970Z
+date: 2023-04-15T15:49:16.560Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -74,7 +74,7 @@ Vous devez ensuite definir vous-même les valeurs des **Attaques** (CONTACT, DIS
 
 La **DEF**, les **PV**, et l'**INIT** sont aussi à remplir manuellement.
 
-![crea_renc_caract.png](/images/chroniquesoubliees/customisation/crea_renc_caract.png)
+![crea_renc_caract.webp](/images/chroniquesoubliees/customisation/crea_renc_caract.webp)
 
 ### 5. L'Onglet Combat
 Ici pas d'arme à équiper.
