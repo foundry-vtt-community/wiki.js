@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T12:26:26.579Z
+date: 2023-04-15T12:28:57.154Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -30,7 +30,7 @@ Dans l'onglet "Type" : sélectionnez "Personnage"
 ## 2. Un PJ à mon image
 En cliquant sur le portrait blanc, vous pouvez personnaliser l'image de votre personnage via le gestionnaire de fichier de FoundryVTT.
 
-![crea_pj_portrait.webp](/images/chroniquesoubliees/crea_pj_portrait.webp)
+![crea_pj_portrait.webp](/images/chroniquesoubliees/créa_pj_portrait.webp)
 
 En allant dans l'onglet "Prototype Token" en haut à droite, puis "Images", vous pouvez également modifier l'**Image du token** qui apparaitra sur les scènes jouées.
 
