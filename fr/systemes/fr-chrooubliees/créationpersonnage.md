@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T15:28:31.593Z
+date: 2023-04-15T15:35:11.571Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -105,7 +105,7 @@ J'ouvre ensuite l'onglet "Inventaire" de mon personnage. Un clic droit sur cet o
 
 ![créa_pj_inventaire.webp](/images/chroniquesoubliees/customisation/créa_pj_inventaire.webp)
 
-Je peux ensuite décider d'équiper ou non certains objets en cliquant sur le petit bouclier. Les objets équipés se retrouvent dans l'onglet "Combat".
+Je peux ensuite décider d'**équiper** ou non certains objets **en cliquant sur le petit bouclier**. Les objets équipés se retrouvent dans l'onglet "Combat".
 
 > Pour des infos sur la création de nouveaux Objets, c'est [ici](/fr/systemes/fr-chrooubliees/creaobjets)
 {.is-info}
