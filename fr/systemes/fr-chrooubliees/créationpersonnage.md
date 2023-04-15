@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T15:35:11.571Z
+date: 2023-04-15T15:38:36.683Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -114,7 +114,7 @@ Je peux ensuite décider d'**équiper** ou non certains objets **en cliquant sur
 Exemple : l'armure de cuir équipée ajoute +2 en DEF automatiquement
 {.is-success}
 
-![pj_inventaire_2.webp](/images/chroniquesoubliees/customisation/pj_inventaire_2.webp)
+![pj_inventaire_2a.webp](/images/chroniquesoubliees/customisation/pj_inventaire_2a.webp)
 Votre personnage est maintenant prêt à attaquer ! Une fois en combat, allez dans l'onglet "Combat" et cliquez sur le petit **D20** pour lancer l'attaque d'une arme équipée avec son test de réussite ou sur les 2 **D6** pour faire uniquement un jet de dégâts.
 
 > **FELICITATIONS !** Votre personnage est prêt à partir à l'aventure !
