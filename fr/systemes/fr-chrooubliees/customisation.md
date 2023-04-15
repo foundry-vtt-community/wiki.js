@@ -2,7 +2,7 @@
 title: Customisation
 description: Vous ne trouvez pas de Profils, de Voies, des Capacités qui correspondent à votre style de jeu ? Créez les !
 published: true
-date: 2023-04-15T16:41:44.122Z
+date: 2023-04-15T16:43:43.812Z
 tags: #custom, #voies, profils, objets
 editor: markdown
 dateCreated: 2020-12-23T12:17:20.011Z
@@ -67,7 +67,7 @@ Sur l'onglet "Description", vous pouvez écrire toute la description de votre "V
 > Attention : Bien remplir la partie Description car c'est elle que le PJ verra sur sa fiche
 {.is-warning}
 
-![créa_capacité_description.png](/images/chroniquesoubliees/créa_capacité_description.png)
+![créa_capacité_description.webp](/images/chroniquesoubliees/créa_capacité_description.webp)
 
 
 Sur l'onglet "Details", n'avez plus qu'à cocher, selectionner les caractérisques qui vous intéressent.
