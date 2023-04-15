@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2023-04-15T15:51:36.489Z
+date: 2023-04-15T15:53:52.179Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -108,7 +108,7 @@ Vous pouvez également utiliser le **Compendium "Capacités des rencontres**", p
 C'est ce que je vais faire pour la Capacité "Vol (Pixie)" en Modifiant juste l'intitulé de la Capacité.
 {.is-info}
 
-![créa_rencontre_cap1.png](/images/chroniquesoubliees/customisation/créa_rencontre_cap1.png)
+![créa_rencontre_cap1.webp](/images/chroniquesoubliees/customisation/créa_rencontre_cap1.webp)
 
 > Si vous ne trouvez pas de **Voies** ou **Capacités** qui vous correspondent vous pouvez en créer de nouvelles. 
 Pour des infos sur la création de nouvelles **Voies** ou **Capacités**, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
