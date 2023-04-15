@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T15:10:17.353Z
+date: 2023-04-15T15:11:03.219Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -71,7 +71,7 @@ Vous pouvez aussi laisser la chance décider pour vous (ou par flemmardise avouo
 > Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiative** se mettent **automatiquement à jour**.
 {.is-success}
 
-![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.webp)
+![créa_pj_carac.webp](/images/chroniquesoubliees/créa_pj_carac.webp)
 
 ## 6. Les points de vie de mon PJ
 En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va calculer les points de vie de votre personnage.
@@ -83,7 +83,6 @@ En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va c
 **Dé de vie** (lié au profil) + **Modificateur de CONSTITUTION**.
 {.is-success}
 
-![créa_pj_pv.png](/images/chroniquesoubliees/créa_pj_pv.png)
 ![créa_pj_pv.webp](/images/chroniquesoubliees/créa_pj_pv.webp)
 
 ## 7. L'histoire de mon PJ
