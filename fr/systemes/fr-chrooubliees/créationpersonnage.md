@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T14:58:17.084Z
+date: 2023-04-15T15:01:53.976Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -56,7 +56,7 @@ Cela ouvre le **Compendium Profils** du Système. Faites glisser le Profil chois
 {.is-success}
 
 Vous pouvez aussi y glisser un autre Profil issu de votre imagination.
-> Pour des infos sur la création de nouveaux Profils, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
+![créa_pj_choixrace.webp](/images/chroniquesoubliees/créa_pj_choixrace.webp)> Pour des infos sur la création de nouveaux Profils, c'est [ici](/fr/systemes/fr-chrooubliees/customisation)
 {.is-info}
 
 ![créa_pj_choixprofil.webp](/images/chroniquesoubliees/créa_pj_choixprofil.webp)
@@ -71,7 +71,7 @@ Vous pouvez aussi laisser la chance décider pour vous (ou par flemmardise avouo
 > Toutes les **Caractéristiques**, **Modificateurs**, **Attaques**, **Défense** et **Initiative** se mettent **automatiquement à jour**.
 {.is-success}
 
-![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.png)
+![créa_pj_carac.png](/images/chroniquesoubliees/créa_pj_carac.webp)
 
 ## 6. Les points de vie de mon PJ
 En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va calculer les points de vie de votre personnage.
