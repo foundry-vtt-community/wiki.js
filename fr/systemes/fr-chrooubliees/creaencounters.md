@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2022-05-19T13:22:34.658Z
+date: 2023-04-15T15:44:14.704Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -30,7 +30,7 @@ Je le fais glisser du Compendium vers mon onglet Personnages ou directement vers
 
 Un clic gauche sur la rencontre importée permet d'ouvrir sa Fiche de Personnage.
 
-![crea_renc_compendium.png](/images/chroniquesoubliees/customisation/crea_renc_compendium.png)
+![crea_renc_compendium.webp](/images/chroniquesoubliees/customisation/crea_renc_compendium.webp)
 
 > **Pour tous les personnages issus du Compendium, les Caractéristiques, Attaques, Voies et Capacités sont déjà pré-remplies selon les règles du SRD**
 Vous pouvez toutefois les modifier à votre guise.
