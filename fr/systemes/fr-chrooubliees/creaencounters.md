@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2023-04-15T15:44:14.704Z
+date: 2023-04-15T15:47:26.970Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -49,7 +49,7 @@ Cliquez ensuite sur "Créer Personnage".
 Dans l'onglet "Nom" : choisissez le nom de votre Rencontre
 Dans l'onglet "Type" : selectionnez "Rencontre"
 
-![crea_encounter.png](/images/chroniquesoubliees/customisation/crea_encounter.png)
+![crea_encounter.webp](/images/chroniquesoubliees/customisation/crea_encounter.webp)
 
 ### 2. Un Monstre moche comme je souhaite
 En cliquant sur le portrait noir, vous pouvez personnaliser l'image de votre rencontre via le gestionnaire de fichier de FoundryVTT.
@@ -65,7 +65,7 @@ A vous de choisir les points suivants en fonction du Livre de Règles p.211 :
 - Catégorie
 - Boss
 
-![crea_rencontre_id.png](/images/chroniquesoubliees/customisation/crea_rencontre_id.png)
+![crea_rencontre_id.webp](/images/chroniquesoubliees/customisation/crea_rencontre_id.webp)
 
 ### 4. Les Caractéristiques de la Rencontre
 Ici aussi un changement majeur : **vous ne rentrez que les MOD**, c'est la valeur qui sera mise automatiquement à jour par le système.
