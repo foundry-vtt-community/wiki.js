@@ -2,7 +2,7 @@
 title: Règles Additionnelles
 description: Des options de jeu différentes
 published: true
-date: 2023-04-15T16:04:27.934Z
+date: 2023-04-15T16:27:49.426Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:22:50.709Z
@@ -21,25 +21,29 @@ Vous pouvez modifier quelques paramètres de jeu pour utiliser des règles avanc
 
 **Points de Récupération :**
 
-*Ajoute dans l'onglet "Cractéristiques" de vos personnages une catégorie "RECUPERATION" contenant les "PR".*
+*Ajoute dans l'onglet "Caractéristiques" de vos personnages une catégorie "RECUPERATION" contenant les "PR".*
 En cliquant sur "PR" vous pouvez dépenser un point pour vous soigner de : *1dé de vie + mod Const + niveau*.
 
 **Points de Chance :**
 
-*Ajoute dans l'onglet "Cractéristiques" de vos personnages une catégorie "RESSOURCES" contenant les "PC".*
+*Ajoute dans l'onglet "Caractéristiques" de vos personnages une catégorie "RESSOURCES" contenant les "PC".*
 Lorsque votre joueur souhaite faire appel à la chance lors de son RP, il suffit d'editer la valeur "Actuel" sur la ligne "PC" pour dépenser un point.
 
 **Points de Mana :**
 
-*Ajoute dans l'onglet "Cractéristiques" de vos personnages une catégorie "RESSOURCES" contenant les "PM".*
+*Ajoute dans l'onglet "Caractéristiques" de vos personnages une catégorie "RESSOURCES" contenant les "PM".*
 Lorsque votre joueur souhaite lancer un sort qui coute du mana lors de son RP, il suffit d'editer la valeur "Actuel" sur la ligne "PM" pour dépenser des points.
 
 **Résistance aux dommages :**
 
-*Ajoute dans la catégorie "DEFENSE" de l'onglet "Cractéristiques" la "RD".*
+*Ajoute dans la catégorie "DEFENSE" de l'onglet "Caractéristiques" la "RD".*
 Si dans votre partie un joueur bénéficie d'une réduction de dégats (par l'effet d'une voie par exemple), vous pouvez indiquer la valeur de cette réduction dans le champ "Base" de la ligne "RD".
 
-**Afficher les jets "combo" :**
+**Afficher la difficulté :**
+
+*Active l'affichage de la difficulté sur les jets de compétences/atriburs et d'armes.*
+
+**Activer les jests combinés attaque et dommages :**
 
 Lorsque votre joueur clique sur le **d20** d'une arme dans l'onglet "Combat" (ou lorsqu'il utilise la macro associée) si l'attaque est une réussite, les dés de DM seront automatiquement lancés.
 
