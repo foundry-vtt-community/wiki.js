@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T15:03:46.946Z
+date: 2023-04-15T15:10:17.353Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -84,6 +84,7 @@ En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va c
 {.is-success}
 
 ![créa_pj_pv.png](/images/chroniquesoubliees/créa_pj_pv.png)
+![créa_pj_pv.webp](/images/chroniquesoubliees/créa_pj_pv.webp)
 
 ## 7. L'histoire de mon PJ
 On a tous besoin d'un peu de background pour faire vivre son PJ.
