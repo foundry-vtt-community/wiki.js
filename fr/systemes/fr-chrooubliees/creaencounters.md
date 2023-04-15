@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2023-04-15T15:49:16.560Z
+date: 2023-04-15T15:51:36.489Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -88,7 +88,7 @@ En général les attaques de la Rencontre sont données dans sa description et s
 > La créature est prête à attaquer. Une fois en combat cliquez sur le petit **D20** pour lancer l'attaque avec son test de réussite ou sur les 2 **D6** pour faire uniquement un jet de dégâts.
 {.is-success}
 
-![créa_renc_combat.png](/images/chroniquesoubliees/customisation/créa_renc_combat.png)
+![créa_renc_combat.webp](/images/chroniquesoubliees/customisation/créa_renc_combat.webp)
 
 ### 6. L'Onglet Inventaire
 En général les Rencontres ne possèdent pas ou peu d'inventaire.
