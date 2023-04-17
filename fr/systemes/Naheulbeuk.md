@@ -2,13 +2,23 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-01-06T16:08:11.260Z
+date: 2023-04-17T19:11:04.557Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
 ---
 
 # Naheulbeuk
+
+```
+Version actuelle : 10.1.0
+- Ajout de nouveaux tokens
+- Ajout du PDF des règles (dans les notes)
+- Ajout du chamane et de ses sorts lvl 1-4
+- Ajout des montures
+- Modification système pour permettre l'affichage d'une icône sur les tokens liée aux états
+- Modifification des images des états existants pour les différencier lorsqu'ils sont affichés
+```
 Le système pour le JDR Naheulbeuk est maintenant officiel ! Il est donc directement trouvable dans le store de Foundry :)
 
 Le système est fait pour la version 10 de Foundry.
@@ -17,7 +27,6 @@ En cas de problème ou de question, vous pouvez demander de l'aide sur le Discor
 
 Avant de rentrer dans le détail, voici ce qui n'est pas dans le système actuellement :
  * Les sorts niveau 5 et plus
- * Les montures (il y a quand même quelques exemples avec l'extension soldat)
  * Les objets des extensions Fernol, Confins, Jungle
  * Les frappes localisées
  * Surement quelques autres petits trucs que j'ai zappé :D
@@ -225,7 +234,7 @@ On peut faire ici les tests de rupture.
 * **Équipement et Trucs** : cette catégorie contient l'ensemble des objets dont ceux des catégories précédentes avant qu'ils soient équipés.
 Certains objets peuvent être équipés, d'autres utilisés, d'autres encore avoir des jets de dés.
 Ils sont divisés en 3 sous catégories :
-  * **Les objets dans le sac :** c'est la que seront la grosse majorité des objets du personnage. Pour mieux les retrouver, ils sont placés dans un troisième niveau de catégories qui s'affichent uniquement si elles contiennent des objets. Ce sont les objets divers, les livres, les ingrédients, les potions, les armes, les armures, la nourriture, les richesses, les montures, les objets personnels...
+  * **Les objets dans le sac :** c'est la que seront la grosse majorité des objets du personnage. Pour mieux les retrouver, ils sont placés dans un troisième niveau de catégories qui s'affichent uniquement si elles contiennent des objets. Ce sont les objets divers, les livres, les ingrédients, les potions, les armes, les armures, la nourriture, les richesses, les objets personnels...
   ![22.jpg](/naheulbeuk/22.jpg =500x)
   * **Les objets dans la bourse** : on retrouve ici les objets qui sont dans la bourse, donc cette partie est utilisée principalement pour les pièces.
   * **Les objets en dehors du sac** : tout ce qui n'est pas dans le sac ou dans la bourse devrait être rangé ici : une guitare en bandoulière, une épée à la ceinture, un sac sur le dos...
@@ -510,6 +519,10 @@ Par exemple les bonus/malus des sorts, les maladies, les blessures, les folies, 
 Ces objets fonctionnent comme ceux de type **truc** mise à part qu'ils n'ont pas de prix ou de poids et qu'ils sont activables depuis l'onglet **Caractéristiques** du personnage.
 
 ![67.jpg](/naheulbeuk/67.jpg =700x)
+
+**Remarque** : depuis la version 10.1.0, les états ont une option "Affichage de l'état sur le token" qui si elle est activée rend visible l'état sur le token.
+
+![110.png](/naheulbeuk/110.png)
 <br/>
 ### Les sorts {#titre59}
 
