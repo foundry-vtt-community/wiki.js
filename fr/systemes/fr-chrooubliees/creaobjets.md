@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2023-04-20T16:35:51.452Z
+date: 2023-04-20T16:41:00.968Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -69,7 +69,7 @@ Endroit du corps où doit être équipé l'objet
 > - Rareté : Rare
 {.is-info}
 
-![armurecuir1.png](/images/chroniquesoubliees/customisation/armurecuir1.png)
+![armurecuir1.webp](/images/chroniquesoubliees/customisation/armurecuir1.webp)
 
 # 3. Le trait "Arme"
 A sélectionner dès que votre objet peut être utilisé pour attaquer et faire des dégâts
