@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2023-04-20T17:52:19.608Z
+date: 2023-04-20T18:00:55.792Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -126,7 +126,8 @@ Ce trait sert avant tout à définir l'objet comme un sort.
 > Vous remarquerez qu'ils ont été construit comme respecticement une Arme à distance et une Protection
 {.is-info}
 
-![armure5.png](/images/chroniquesoubliees/customisation/armure5.png)
+
+![projectilemagisue.webp](/images/chroniquesoubliees/customisation/projectilemagisue.webp)![armuredemage.webp](/images/chroniquesoubliees/customisation/armuredemage.webp)
 
 > **FELICITATIONS !** Vous êtes un expert Artisan !
 {.is-success}
