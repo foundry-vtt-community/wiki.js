@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-04-17T20:36:17.179Z
+date: 2023-04-20T13:56:39.999Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -10,16 +10,6 @@ dateCreated: 2022-11-15T16:04:44.061Z
 
 # Naheulbeuk
 
-```
-Version actuelle : 10.1.0
-- Ajout de nouveaux tokens
-- Ajout du PDF des règles (dans les notes)
-- Ajout du chamane et de ses sorts lvl 1-4
-- Ajout des montures
-- Modification système pour permettre l'affichage d'une icône sur les tokens liée aux états
-- Modifification des images des états existants pour les différencier lorsqu'ils sont affichés
-```
-<hr>
 Le système pour le JDR Naheulbeuk est maintenant officiel ! Il est donc directement trouvable dans le store de Foundry :)
 
 Le système est fait pour la version 10 de Foundry.
