@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2023-04-20T17:41:55.955Z
+date: 2023-04-20T17:52:19.608Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -102,7 +102,7 @@ A sélectionner si votre objet vous apporte de la défense et/ou une réduction 
 Elle accorde +2 en DEF, +1 en DEF(bonus) et sa bonne conception accorde une résistance de dégât de 1
 {.is-info}
 
-![armure_3.png](/images/chroniquesoubliees/customisation/armure_3.png)
+![armure_3.webp](/images/chroniquesoubliees/customisation/armure_3.webp)
 
 # 5. Le trait "A distance"
 A sélectionner si votre objet peut être utiliser/lancé lors d'un combat à distance.
@@ -116,7 +116,7 @@ A sélectionner si votre objet peut être utiliser/lancé lors d'un combat à di
 > Mon Armure n'étant pas une Arme à distance, voici un exemple d'Arc Court
 {.is-info}
 
-![armure_4.png](/images/chroniquesoubliees/customisation/armure_4.png)
+![arccourt_4.webp](/images/chroniquesoubliees/customisation/arccourt_4.webp)
 
 # 6. Le trait "Sort"
 A sélectionner si votre objet peut être utiliser/lancé comme un sort.
