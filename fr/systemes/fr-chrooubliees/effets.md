@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2023-04-20T18:39:04.363Z
+date: 2023-04-20T18:49:54.126Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -68,19 +68,32 @@ C'est là que vous allez créer toutes les modifications qu'apporte votre effet.
 
 Cliquez autant de fois sur le "+" qu'il y a d'effets à créer. !! ils seront ous activer/désactivé en même temps.
 **Exemple :** "le barde ajoute son Mod. d'INT en Initiative et en DEF en plus de son Mod de DEX", il y a 2 règles à appliquer.
+Supposons qu'il ait +2 en INT :
 
 ![effet_effet_01.webp](/images/chroniquesoubliees/effets/effet_effet_01.webp)
+![effet_effet_02.webp](/images/chroniquesoubliees/effets/effet_effet_02.webp)
+Pour rendre l'effet actif, il faut cliquer dans la colonne action.
+
+Personnage avec effet non actif :
+
+![effet_effet_nactif.webp](/images/chroniquesoubliees/effets/effet_effet_nactif.webp)
+après activation :
+![effet_effet_nactif.webp](/images/chroniquesoubliees/effets/effet_effet_actif.webp)
+
+
 - **Clé d'attribut** : c'est l'attribut qui va être modifié, voir la section Attributs juste après
 -	**Changer le mode**
 		-	Personnalisation
 		-	Multiplier : L'attribut sera multiplié par valeur
-		- Ajouter	: Valeur sera additionné à l'attribut. Si c'est un chiffre c'est une sommme, si c'est un texte ça sera une concaténation. Pour un bonus, utiliser un nombre positif, pour un malus un nombre négatif
+		- **Ajouter**	: Valeur sera additionné à l'attribut. Si c'est un chiffre c'est une sommme, si c'est un texte ça sera une concaténation. Pour un bonus, utiliser un nombre positif, pour un malus un nombre négatif
 		- Baisser : Remplace par la valeur si elle est inféieure à l'actuelle
 		- Augmenter : Remplace par la valeur si elle est supérieure à l'actuelle
 		- Surcharger : Remplace par la valeur quelle que soit l'actuelle
 - Valeur de l'effet : la valeur utilisée avec le mode
 
 **Ce qui a été validé : Utiliser Ajouter +x pour avoir un bonus, Ajouter -x pour avoir un malus.**
+
+"valeur de l'effet" ne peut contenir qu'un nombre. Il arrive souvent que cette valeur change avec l'avancement du personnage, il faudra penser à la modifier.
 
 
 
