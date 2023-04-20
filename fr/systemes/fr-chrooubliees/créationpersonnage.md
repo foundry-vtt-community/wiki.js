@@ -2,7 +2,7 @@
 title: Création d'un PJ
 description: Toute aventure commence avec un aventurier. Et ça tombe bien c'est ici que la votre commence
 published: true
-date: 2023-04-15T16:02:19.492Z
+date: 2023-04-20T18:59:00.228Z
 tags: pj, création
 editor: markdown
 dateCreated: 2020-12-23T16:41:05.529Z
@@ -77,8 +77,7 @@ Vous pouvez aussi laisser la chance décider pour vous (ou par flemmardise avouo
 
 ![créa_pj_carac.webp](/images/chroniquesoubliees/créa_pj_carac.webp)
 
-> N'entrez pas de valeur dans la colonne "Bonus", utilisez plutôt l'onglet **Effets** à droite
-{.is-warning}
+> Il est déconseillé de saisir des bonus car si un effet affecte également un bonus le système risque de fournir des résultats faux (et pas le temps de corriger ce problème). Si vous devez appliquer un bonus, créez un effet comme expliqué dans la page "effets". En plus cela présente l'avantage de documenter d'où vient ce bonus.{.is-warning}
 
 ## 6. Les points de vie de mon PJ
 En cliquant sur le **"Dé Vitalité"** au dessus de la Case PV, le système va calculer les points de vie de votre personnage.
