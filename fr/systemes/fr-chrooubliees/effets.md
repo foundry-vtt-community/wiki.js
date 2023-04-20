@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2023-04-20T18:55:49.809Z
+date: 2023-04-20T18:58:51.510Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -11,7 +11,7 @@ dateCreated: 2021-05-02T08:50:41.844Z
 # Les effets
 Vous pouvez créer des effets sur un personnage ou un objet. Le fonctionnement est quasi identique.
 
-> comme indiqué dans la page personnage, il est déconseillé d'y saisir de bonus car si un effet aafecte également un bonus le système risque de fournir des résultats faux (et pas le temps de corriger ce problème). Si vous devez applique un bonus, créez un effet comme expliqué c-dessous. En plus cela présente l'avantage de documenter d'où vient ce bonus.{.is-warning}
+> comme indiqué dans la page personnage, il est déconseillé d'y saisir de bonus car si un effet affecte également un bonus le système risque de fournir des résultats faux (et pas le temps de corriger ce problème). Si vous devez appliquer un bonus, créez un effet comme expliqué ci-dessous. En plus cela présente l'avantage de documenter d'où vient ce bonus.{.is-warning}
 
 ## Fonctionnement général
 La fonctionnalité des effets intégrées au système offre de nombreuses possibilités.
