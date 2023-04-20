@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2022-08-14T15:01:38.775Z
+date: 2023-04-20T16:35:51.452Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -18,9 +18,9 @@ Armure - Arme de Contact - Arme à distance - Bouclier - Sort - Bijou - Munition
 
 **Pour créer un Objet, il suffit de cliquer sur Créer un Objet.
 **Dans "**Nom**" : Le nom de votre Objet
-Dans "**Type**" : Item
+Dans "**Type**" : Objet (Item)
 
-![créa_objet1.png](/images/chroniquesoubliees/customisation/créa_objet1.png)
+![créa_objet1.webp](/images/chroniquesoubliees/customisation/créa_objet1.webp)
 
 > La création d'objet étant infinie, nous allons voir ici les différents **traits** accessibles.
 {.is-warning}
@@ -33,7 +33,7 @@ Dans "**Type**" : Item
 C'est dans l'onglet "Détail" que vous pourrez choisir le type d'Objet que vous aller créer.
 Il suffit de choisir dans la liste de la **"Sous-Catégorie**"
 
-![créa_objet_type_3.webp](/images/chroniquesoubliees/créa_objet_type_3.webp)
+![créa_objet_type_3.webp](/images/chroniquesoubliees/customisation/créa_objet_type_3.webp)
 
 Je choisis ensuite un ou plusieurs traits pour mon Objet.
 
