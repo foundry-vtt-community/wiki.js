@@ -2,7 +2,7 @@
 title: Création des Rencontres
 description: Un monde sans opposition ? Vous n'y pensez pas !
 published: true
-date: 2023-04-15T15:55:45.604Z
+date: 2023-04-20T19:02:13.021Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-23T18:58:15.043Z
@@ -19,6 +19,9 @@ Sur cette page nous traiterons de la façon de créer une Rencontre.
 > Il y a 2 façons de créer une Rencontre :
 -Soit en utilisant le **Compendium Rencontres** (qui contient un très large choix de créatures du SRD).
 -Soit en la créant de vous même.
+{.is-warning}
+
+> il y a un onglet effets, comme pour le PJ, mais il n'est pas géré pour les rencontres
 {.is-warning}
 
 ## 1. Récupérer une rencontre depuis le Compendium
