@@ -2,7 +2,7 @@
 title: CoF : Création d'Objets
 description: Bonjour l'Artisan ! Tu ne trouve pas assez d'Objets dans la boutique ? Et bien créons-en ensemble
 published: true
-date: 2023-04-20T17:37:37.443Z
+date: 2023-04-20T17:41:55.955Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-24T15:21:29.345Z
@@ -78,12 +78,12 @@ A sélectionner dès que votre objet peut être utilisé pour attaquer et faire 
 - "**Compétence**" : La compétence utilisée pour le jet de dés
 - "**Compétence (Bonus)**" : Si besoin rajouter un bonus au résultat du jet de dés
 - "**Dommages (base)**" : C'est la formule de calcul des dégats. *Pour l'exemple un arc court 1d6*
-- **"Dommages (Carac)"**: Si l'objet prend en compte une Carac pour le calcul des dégâts. *Une épée aura Force de choisi*
+- **"Dommages (Carac)"**: Caractéristique dont il faut ajouter le modificateur au DM. *Une épée aura Force de choisie*
 - "**Dommages (Bonus)**": Si besoin des dégâts peuvent être rajoutés.
 - "**Critique**" : Défini la valeur à partir de laquelle le jet est considéré en réussite critique. Prend la valeur comprise entre "x" et 20
 - "**Propriété** (possible d'en affecter plusieurs à un objet) : " : Des options en plus
 
-> Mon Armure n'étant pas une Arme, voici un exemple d'Arc Court
+> voici un exemple d'Arc Court et d'épée
 {.is-info}
 
 
