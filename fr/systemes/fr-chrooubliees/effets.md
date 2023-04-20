@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2023-04-20T18:49:54.126Z
+date: 2023-04-20T18:55:49.809Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -11,7 +11,7 @@ dateCreated: 2021-05-02T08:50:41.844Z
 # Les effets
 Vous pouvez créer des effets sur un personnage ou un objet. Le fonctionnement est quasi identique.
 
-**Rappel :** comme indiqué dans la page personnage, il est déconseillé d'y saisir de bonus car si un effet aafecte également un bonus le système risque de fournir des résultats faux (et pas le temps de corriger ce problème). Si vous devez applique un bonus, créez un effet comme expliqué c-dessous. En plus cela présente l'avantage de documenter d'où vient ce bonus.
+> comme indiqué dans la page personnage, il est déconseillé d'y saisir de bonus car si un effet aafecte également un bonus le système risque de fournir des résultats faux (et pas le temps de corriger ce problème). Si vous devez applique un bonus, créez un effet comme expliqué c-dessous. En plus cela présente l'avantage de documenter d'où vient ce bonus.{.is-warning}
 
 ## Fonctionnement général
 La fonctionnalité des effets intégrées au système offre de nombreuses possibilités.
@@ -32,9 +32,10 @@ Les bonus, malus et mod étant recalculés à tout moment, c'est aussi pour ça 
 
 ### Effet associé à un objet
 **Lorsque vous créez un effet sur un objet,** au moment vous donner l'objet à un personnage, il va y avoir un transfert de l'effet au personnage pour qu'il soit pris en compte.
-A partir de ce moment, **l'effet transféré est NON MODIFIABLE**. Vous pouvez toujours l'activer ou le désactiver, mais pas le modifier.
-Pour le supprimer, il suffit de supprimer l'objet de l'inventaire.
-Si vous voulez le modifier, il faut supprimer l'objet, aller éditer l'objet source et le redonner au personnage.
+>A partir de ce moment, **l'effet transféré est NON MODIFIABLE**. Vous pouvez toujours l'activer ou le désactiver, mais pas le modifier.Pour le supprimer, il suffit de supprimer l'objet de l'inventaire.
+Si vous voulez le modifier, il faut supprimer l'objet, aller éditer l'objet source et le redonner au personnage.{.is-warning}
+
+
 
 ### Créer un effet
 Il suffit d'aller dans l'onglet Effets du personnage ou de l'objet et de cliquer sur l"+ Aj.".
