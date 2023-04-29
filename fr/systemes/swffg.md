@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2022-05-19T13:21:08.779Z
+date: 2023-04-29T12:28:23.268Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -23,8 +23,6 @@ Ceci est une implémentation communautaire du jeu de rôle Star Wars de Fantasy 
 
 * Manifest Original : 
 https://raw.githubusercontent.com/StarWarsFoundryVTT/StarWarsFFG/master/system.json
-* Manifest Custom avec un meilleur rendu graphique (par Mandar) : 
-https://raw.githubusercontent.com/Mandaar/StarWarsFFG/master/system.json
 
 Merci à toute la team **StarWarsFoundryVTT**
 
