@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2023-04-29T12:42:23.388Z
+date: 2023-04-29T12:44:56.431Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -41,15 +41,15 @@ Comme le contenu de FFG Star Wars est protégé par des droits d'auteur, vous de
 
 Pour importer la grande majorité des données d'articles, vous pouvez utiliser l'importateur "OggDude Dataset Importer".
 
+- **Sur votre ordinateur**; Créez un zip du dossier Data de votre générateur de personnages OggDude (photo ci-dessous)
 - **Dans votre monde**; Sélectionnez Paramètres du jeu
 - Cliquez sur Configurer les paramètres
 - Sélectionnez les paramètres du système
 - Cliquez sur OggDude Dataset Importer
-- **Sur votre ordinateur**; Créez un zip du dossier Data de votre générateur de personnages OggDude (photo ci-dessous)
-- **Dans votre monde**; Sélectionnez votre fichier de données zippé à l'aide du sélecteur de fichiers "Choisir un fichier"
-- Cliquez sur Charger le fichier (important ça délock les checkbox)
-- Sélectionnez les types de données que vous souhaitez importer
-- Cliquez sur Démarrer l'importation en bas
+- Sélectionnez votre fichier de données zippé à l'aide du sélecteur de fichiers "Choisir un fichier"
+- Cliquez sur Charger le fichier (important cela retire la bloquage des checkbox)
+- Sélectionnez les types de données que vous souhaitez importer (cliquez sur les checkbox)
+- Cliquez sur Démarrer l'importation en bas de la fenêtre
 
 Les données qui en résultent sont ajoutées aux Compendiums.
 
