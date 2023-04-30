@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-04-30T20:02:51.500Z
+date: 2023-04-30T20:03:21.797Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -23,7 +23,7 @@ A ce jour (2023), Foundry n'est plus en beta depuis plus de 2 ans. Il est actuel
 
 ## Putain, 60$ ?
 
-C’est peut-être effectivement cher pour vous – et je peux le comprendre – mais pensez que ça correspond probablement à 3 ou 4 mois de votre abonnement de smartphone, et qu’une fois cette somme dépensée, le soft est à vous à vie. Comparez également avec un abonnement en ligne d’1 an chez Roll20 ou AstralTableTop. Enfin, pensez que vous allez pouvoir héberger tous vos jeux sur une seule licence, et que vous n’aurez que vos propres limites en matière de stockage de cartes, dessins, images, etc. Quand à ceux qui, par principe, cherchent à ne jamais dépenser quoi que ce soit, pour rien, et qui veulent toujours grappiller le moindre bout de machin – et ce sont ceux qui curieusement sont également les plus exigeants – , et bien vous pouvez arrêter de lire cette FAQ, l’outil n’est probablement pas pour vous :) !
+C’est peut-être effectivement cher pour vous – et je peux le comprendre – mais pensez que ça correspond probablement à 3 ou 4 mois de votre abonnement de smartphone, et qu’une fois cette somme dépensée, le soft est à vous à vie. Comparez également avec un abonnement en ligne d’1 an chez Roll20 ou équivalents. Enfin, pensez que vous allez pouvoir héberger tous vos jeux sur une seule licence, et que vous n’aurez que vos propres limites en matière de stockage de cartes, dessins, images, etc. Quand à ceux qui, par principe, cherchent à ne jamais dépenser quoi que ce soit, pour rien, et qui veulent toujours grappiller le moindre bout de machin – et ce sont ceux qui curieusement sont également les plus exigeants – , et bien vous pouvez arrêter de lire cette FAQ, l’outil n’est probablement pas pour vous :) !
 
 ## 60 $ ? Et les joueurs doivent payer aussi ?
 
