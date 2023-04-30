@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-04-30T20:03:21.797Z
+date: 2023-04-30T20:06:36.899Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -46,6 +46,10 @@ Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir de
 ## Je n'ai pas de serveur, je peux le mettre sur mon PC ?
 
 Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous avez un .EXE/.DMG qui va transformer votre PC/Mac en serveur Foundry. Vous aurez à ouvrir le port TCP 30000 (par défaut), et à l’autoriser dans votre firewall. Plus d’infos ici https://foundryvtt.wiki/fr/pour-commencer/pbcnx.
+
+## Je veux que tout soit accessible en permanence, comment je fais ?
+
+Cela revient à faire tourner Foundry tout le temps, et donc à laisser allumer un PC/serveur quelque part. Ce "quelque part" peut-être chez vous, ou encore sur un service d'hébergement en ligne (Oracle, AWS, TheForge). A noter que chez vous, une petit Raspberry Pi peut parfaitement se transformer un serveur Foundry pour un coût énergétique réduit.
 
 ## Et il faut de la bande passante ?
 
