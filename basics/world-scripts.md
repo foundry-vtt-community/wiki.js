@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2022-05-19T13:22:59.206Z
+date: 2023-04-30T15:11:36.137Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -49,17 +49,23 @@ To summarize the difference between world scripts, modules, and macros:
 2. World scripts are somewhere between modules and macros in terms of ease of development.
 
 ## Usage
-In order to use a world script you must: (a) have a javascript file you want to add to your world, and (b) edit the world's manifest to point to your javscript code.
+In order to use a world script you must: (a) have a Javascript file you want to add to your world, and (b) edit the world's manifest to point to your Javscript code.
 
-Your javscript file will usually live within the world directory for the world in which it is used, but in reality, it could live anywhere in your Foundry user data folder (see [Where Is My Data Stored?](https://foundryvtt.com/article/configuration/#where-user-data) on the Foundry knowledgebase for more information). This guide assumes that your javscript is in the root of the world directory (i.e. `Data/worlds/my-world/my-script.js`).
+Your Javscript file will usually live within the world directory for the world in which it is used, but in reality, it could live anywhere in your Foundry userdata folder (see [Where Is My Data Stored?](https://foundryvtt.com/article/configuration/#where-user-data) on the Foundry KB for more information). This guide assumes that your Javscript is in the root of the world directory (i.e. `Data/worlds/my-world/my-script.js`).
 
 
 ### Adding a world script to your world manifest
-To point your world manifest to point to your javascript code:
+To include your Javascript file in your world:
 1. Navigate to your world's directory in your user data folder.
 2. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
-3. In the `world.json` file, find the line with the `esmodules` key. If you have not added a world script before, it will most likely look like this: `"esmodules": [],`.
-4. Add the path to your javascript file to the `esmodules` array. If your javascript file is stored in the root of the world directory, it will look like this when you're done: `"esmodules": [ "./my-script.js" ],`
+3. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one, add it after any of the existing keys, like this for example:
+```json
+{
+  "title": "Evil Awakened",
+  "esmodules": [],
+  "version": "1.0.0",
+  ```
+4. Add the path to your Javascript file to the `esmodules` array. If your Javascript file is stored in the root of the world directory as suggested above, just write the filename in quotation marks. It will look like this when you're done: `"esmodules": [ "my-script.js" ],` (note the comma is required at the end of the line, unless you've added this as the very last key in the JSON file).
 5. Save and close `world.json`.
 6. If the world was already active, return to setup and launch it again. Whenever you change the `world.json`, you *must* re-launch the world for the changes to take effect.
 
