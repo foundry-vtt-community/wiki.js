@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2023-05-01T20:11:59.017Z
+date: 2023-05-01T20:12:12.055Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -32,4 +32,4 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 16](https://www.youtube.com/watch?v=tZwf964_7NA&pp=ygUZY2hyb25pcXVlcyBkZSBsYSBmb25kZXJpZQ%3D%3D) avec SecretFire de Foundry et Rwanoux pour le système Torg
  
  
- - A venir : épisode 16 le 23 avril avec pour thème ... Torg  !
+ - A venir : épisode 17....
