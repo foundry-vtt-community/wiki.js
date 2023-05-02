@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-05-02T19:17:34.240Z
+date: 2023-05-02T19:30:01.428Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -76,6 +76,8 @@ Répétez cette opération pour l'intelligence, le charisme, l'adresse et la for
 Vous pouvez bien sûr modifier ces valeurs suivant votre façon de créer un personnage ;)
 Vous pouvez déjà remarquer que la résistance magique et l'esquive ont été mis à jour à partir de ces valeurs.
 
+***Remarque** : un champ **Initiative** a été rajouté sous la Parade. De base il vaut la valeur de courage, mais il peut être modifié pour permettre d'adapter le RP.*
+
 En fonction de ces résultats, vous pouvez choisir une origine et un métier.
 
 Cliquez sur **Origine**, puis faites un drag and drop de l'origine souhaitée sur la feuille de personnage.
@@ -86,7 +88,7 @@ Si vous choisissez un mage, un prêtre ou un paladin, vous voyez apparaitre de n
 Un onglet **Magie** apparait également, mais on en reparlera plus tard !
 
 <u>Les origines et les métiers ne mettent pas à jour automatiquement la fiche du personnage.</u> Il faut donc cliquer sur le métier et l'origine choisie, puis lire la description et mettre à jour les stats (énergie vitale, énergie astrale, charge maximum, attaque, parade...).
-*Il faut également compléter la PR max, qui a été rajoutée depuis que cette capture a été faite.*
+*Il faut également compléter la <u>PR max</u>, qui a été rajoutée depuis que cette capture a été faite.*
 
 Au passage, à partir des métiers et origines, vous devez aussi drag and drop les **Compétences héritées**, et le nombre de **Compétences choisies** correspondant au niveau de votre personnage.
 
@@ -207,8 +209,6 @@ Par contre ici on peut aussi trouver des formules du type : "cible:@rm". Elles s
 ![18.jpg](/naheulbeuk/18.jpg =700x)
 * En cliquant sur **Niveau X** on peut masquer tous les sorts d'un niveau. Bien pratique quand on commence à avoir beaucoup de sorts !
 * Comme indiqué en introduction, seuls les sorts niveau 1-4 sont présents. A plus haut niveau il faut donc faire vos propres sorts, en s'inspirant des sorts existants.
-* Les sorts peuvent être drag an drop dans la barre de macro.
-![19.jpg](/naheulbeuk/19.jpg =700x)
 <br/>
 ### Onglet Inventaire {#titre17}
 
@@ -217,7 +217,7 @@ L'inventaire contient 3 catégories.
 C'est par ici qu'on fait les lancer de dés pour l'attaque, les dégâts, la parade, et la rupture.
 ![20.jpg](/naheulbeuk/20.jpg =500x)
 Comme pour les sorts, un **d6** tout seul signifie un jet un peu particulier, c'est le cas notamment des armes à poudre.
-*Le bonus de force > 12 ou < 9, et la compétence **Tirer correctement** sont déjà pris en compte dans le système.*
+*Le **bonus de force** > 12 ou < 9, la compétence **Tirer correctement**  et le bonus de **dégâts à 2 mains des nains**, sont déjà pris en compte dans le système.*
 Enfin il y a des limitations sur les objets équipés dans cette catégorie (2 armes, 1 arme à distance, 1 bouclier...), elles peuvent être ignorées avec un **shift+clic**
 * **Armures et Protection - objets portés** : cette catégorie contient tous les objets portés par le personnage et qui sont équipés. Ce sont principalement les armures, les bijoux et les vêtements.
 On peut faire ici les tests de rupture.
@@ -236,8 +236,6 @@ Ils sont divisés en 3 sous catégories :
 * Les boutons à droite des objets permettent de changer la catégorie d'inventaire d'un objet. Depuis les captures précédentes, ils ont changé car Foundry a rajouté de nouvelles icônes. 
 Le sac simple envoie les objets dans le sac, le sac avec le dollar envoie dans la bourse et le sac avec une croix envoie en dehors du sac.
 ![26.jpg](/naheulbeuk/26.jpg =700x)
-* Tous les objets peuvent être drag and drop dans la barre de macro. Si c'est une arme, on pourra faire les différents jet de dés à partir d'ici.
-![24.jpg](/naheulbeuk/24.jpg =700x)
 * Un objet équipé peut être consulté, mais pas modifié.
 
 
