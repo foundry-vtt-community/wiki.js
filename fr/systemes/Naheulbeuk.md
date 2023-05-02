@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-05-02T19:06:17.911Z
+date: 2023-05-02T19:17:34.240Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -452,7 +452,7 @@ Voici les différences :
 * Il n'y a pas de jets complexes possibles (**Jet de dés +**)
 * L'objet a une valeur de rupture
 ![59.jpg](/naheulbeuk/59.jpg =500x)
-* Ces objets seront activables dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armures et Protections - objets portés**.
+* Ces objets seront activables (équipables) dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armures et Protections - objets portés** une fois équipés.
 * Si équiper un de ces objets fait dépasser la PR max, alors l'objet ne sera pas équipé et il y aura un message d'erreur. Pour ignorer la restriction liée à la PR max, il faut appuyer sur shift lors de l'équipement.
 <br/>
 ### Les armes et autres objets en mains {#titre53}
@@ -476,9 +476,10 @@ Voici les différences :
 ![63.jpg](/naheulbeuk/63.jpg =500x)
 * Les armes à poudre sont toujours un peu complexe (dégâts en fonction de la distance, chance de fonctionnement...). Elles ont donc automatiquement des jet de dés complexes.
 ![66.jpg](/naheulbeuk/66.jpg =700x)
-* Ces objets seront activables dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armement et Baston - objets en mains**.
-  * Une seule arme à distance peut être équipée et sans arme de contact équipée
+* Ces objets seront activables (équipables) dans l'inventaire (case blanche) mais seront déplacés dans la catégorie **Armement et Baston - objets en mains** une fois équipés.
+  * Une seule arme à distance peut être équipée et ce, sans arme de contact équipée
   * Deux armes de contact maximum peuvent être équipées
+  * Une seule arme deux mains peut être équipée
   * Un seul bouclier peut être équipé
   * Une seule arme de contact peut être équipée avec un bouclier
   * Plusieurs munitions peuvent être équipées
