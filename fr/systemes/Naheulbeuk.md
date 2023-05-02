@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-04-20T13:56:39.999Z
+date: 2023-05-02T19:06:17.911Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -768,15 +768,15 @@ Des tableaux pour les punitions et les récompenses
 ## Les macros {#titre8}
 Les 6 premiers chapitres concernent des macros qui existent dans le compendium des macros et qui peuvent être drag and drop dans la barre dédiée.
 * [Chercher un objet et générer un magasin](#titre81)
-* [Combat rapide](#titre82)
 * [Lancer Custom](#titre83)
 * [Rechercher un compendium](#titre84)
 * [Rencontres : liste et "générateur"](#titre85)
 * [Tirer un élément aléatoire d'un compendium](#titre86)
 * [Compétences](#titre89)
+* [Sélection mode drag and drop ET Actions d'attaque](#titre82)
 * [Raccourcis du système](#titre87)
 * [Avancé](#titre88)
-
+<br/>
 ### Chercher un objet et générer un magasin {#titre81}
 C'est outil est extrêmement puissant puisqu'il va vous permettre de retrouver des objets parmi la multitude existante dans Naheulbeuk.
 Je m'en sers à chaque préparation de partie, mais également pour réagir rapidement lorsqu'un joueur souhaite un objet spécifique.
@@ -818,15 +818,6 @@ Dans la page dédiée du journal, l'objet est rajouté avec le nom et le prix ch
 
 ![97.jpg](/naheulbeuk/97.jpg =500x)
 <br/>
-### Combat rapide {#titre82}
-
-Cette macro est créée et maintenue par **doudlink** que je remercie !
-Elle permet d'utiliser les règles de combat rapide.
-Le joueur peut choisir l'arme qu'il veut utiliser, puis demande au MJ si le PNJ réalise une parade, une esquive ou rien du tout.
-Il peut ensuite indiquer son positionnement, et s'il y a d'autres modifications impactantes (alliés, ambidextrie...).
-La macro calcule alors le seuil et indique les dégâts si l'attaque réussie.
-
-![98.jpg](/naheulbeuk/98.jpg =500x)
 
 ### Lancer Custom {#titre83}
 
@@ -842,9 +833,10 @@ Pour faire des jets de dés directs, sans interface, il faut remplacer option="i
 Cette macro permet de rechercher des compendiums du système.
 Bien pratique vu le nombre qui existe !
 A partir d'un mot clé, elle sort la liste des compendiums trouvés, les résultats étant cliquables pour permettre leur ouverture.
+<br/>
 
 ![100.jpg](/naheulbeuk/100.jpg =300x)
-
+<br/>
 ### Rencontres : liste et "générateur" {#titre85}
 
 Ces deux macros sont des tentatives un peu loupées pour faire des générateurs de rencontre.
@@ -896,6 +888,7 @@ Cette macro permet de chercher un compendium du système à partir d'un mot clé
 L'intérêt est de pouvoir faire des loots plus rapidement.
 
 ![101.jpg](/naheulbeuk/101.jpg =500x)
+<br/>
 
 ### Compétences {#titre89}
 
@@ -905,6 +898,14 @@ Cette macro permet de lister les compétences possédées par un joueur.
 
 En cliquant sur le nom de la compétence, on ouvre sa fiche.
 En cliquant sur la valeur, on fait un jet de dés simple avec interface.
+<br/>
+
+### Sélection mode drag and drop ET Actions d'attaque {#titre82}
+
+La macro **Sélection mode drag and drop** permet de définir le comportement qu'aura le drag and drop d'un objet dans la barre de macros.
+La macro **Actions d'attaque** permet de proposer les différentes actions d'attaque possible pour un personnage, afin de remplacer le drag and drop de chacune d'elles.
+Ces deux macros sont expliqués dans le chapitre sur le drag and drop dans la barre de macros.
+<br/>
 
 ### Raccourcis du système {#titre87}
 Dans le système, que ce soit pour les objets, les feuilles de personnage ou même directement dans le code, il existe une convention de nommage pour récupérer des attributs spécifiques.
