@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-05-02T19:33:34.163Z
+date: 2023-05-02T19:35:16.223Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -35,7 +35,7 @@ Dernière précision, on va parler régulièrement d'objets et de compendiums, i
 * [L'extension ingénieur](#titre4)
 * [Les objets](#titre5)
 * [Les tableaux](#titre7)
-* [Le drag and drop depuis un personnage vers la barre des macros](titre9)
+* [Le drag and drop depuis un personnage vers la barre des macros](#titre9)
 * [Les macros](#titre8)
 
 
@@ -906,7 +906,7 @@ En cliquant sur la valeur, on fait un jet de dés simple avec interface.
 
 La macro **Sélection mode drag and drop** permet de définir le comportement qu'aura le drag and drop d'un objet dans la barre de macros.
 La macro **Actions d'attaque** permet de proposer les différentes actions d'attaque possible pour un personnage, afin de remplacer le drag and drop de chacune d'elles.
-Ces deux macros sont expliquées dans le chapitre sur [le drag and drop depuis un personnage vers la barre des macros](titre9).
+Ces deux macros sont expliquées dans le chapitre sur [le drag and drop depuis un personnage vers la barre des macros](#titre9).
 <br/>
 
 ### Raccourcis du système {#titre87}
