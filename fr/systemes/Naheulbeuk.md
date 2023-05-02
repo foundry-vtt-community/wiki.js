@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-05-02T19:35:16.223Z
+date: 2023-05-02T19:55:31.502Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -766,6 +766,40 @@ Des tableaux pour les gemmes et les objets exclusifs
 Des tableaux pour les punitions et les récompenses
 
 ## Le drag and drop depuis un personnage vers la barre des macros {#titre9}
+
+Il y a pas mal de choses à dire pour ce chapitre. Il est en effet un petit peu complexe mais c'est pour la bonne cause, puisqu'il a pour vocation de simplifier l'utilisation :D
+
+Pour commencer, que peut-on drag and drop dans la barre de macros ?
+A ma connaissance, à peu prêt tout : une macro (oui oui), une note, un objet, un tableau...
+Mais la partie qui m'intéresse dans ce chapitre, c'est le **drag and drop d'un objet depuis le personnage vers la barre de macros**.
+En effet dans ce cas là, le système va générer du code pour pouvoir mettre en place des comportements un peu sympathiques :)
+
+Plus spécifiquement, nous allons parler des **armes, des sorts, des coups spéciaux et des attaques de PNJ**. Pour le reste, la macro de drag and drop ne fera qu'afficher l'objet.
+
+Lors du drag and drop, le code généré ressemble à ça :
+<pre>
+let mode = 1;
+game.naheulbeuk.rollItemMacro(`Hache correcte 1m`,mode);
+</pre>
+
+Le mode correspond à l'effet qu'aura la macro :
+* 1 --> ouvre une interface permettant de choisir si on veut voir l'objet, ou si possible l'utiliser
+* 2 --> si possible, on lance directement l'option "utiliser l'objet".
+C'est par exemple utile pour lancer une attaque normale avec une arme, ou un sort
+* 3 --> si possible, on lance directement une attaque rapide
+C'est par exemple utile pour une arme de contact, ou une attaque de PNJ
+* 4 --> même interface que le mode 1, mais avec en plus un bouton attaque rapide
+
+Le joueur peut donc modifier la valeur du mode pour avoir le comportement qu'il souhaite.
+
+La valeur par défaut est fixée par le MJ. Pour celà, il doit lancer la macro **Sélection mode drag and drop** présente dans le compendium des macros.
+
+**Remarque :**
+Drag and drop chaque attaque de chaque PNJ peut être un peu lourd.
+Pour permettre malgré tout d'utiliser les options du drag and drop et notamment le combat rapide, il existe 2 options utiles :
+* Si le mode vaut 3 ou 4 (on utilise le combat rapide) un d20 supplémentaire apparait sur la ligne de l'attaque pour permettre de faire l'équivalent d'un clique sur l'attaque drag and drop (donc lancer le combat rapide, mode 3, ou lancer l'interface avec le combat rapide, mode 4).
+* Dans le compendium des macros, récupérer la macro **Actions d'attaque** permet en la lançant, de proposer l'action équivalente au drag and drop pour chaque attaque du PNJ.
+
 
 ## Les macros {#titre8}
 Les 6 premiers chapitres concernent des macros qui existent dans le compendium des macros et qui peuvent être drag and drop dans la barre dédiée.
