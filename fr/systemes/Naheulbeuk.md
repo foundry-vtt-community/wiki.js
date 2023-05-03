@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-05-02T19:55:31.502Z
+date: 2023-05-03T11:22:10.153Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -784,22 +784,28 @@ game.naheulbeuk.rollItemMacro(`Hache correcte 1m`,mode);
 
 Le mode correspond à l'effet qu'aura la macro :
 * 1 --> ouvre une interface permettant de choisir si on veut voir l'objet, ou si possible l'utiliser
+![111.png](/naheulbeuk/111.png =500x)
 * 2 --> si possible, on lance directement l'option "utiliser l'objet".
-C'est par exemple utile pour lancer une attaque normale avec une arme, ou un sort
+C'est par exemple utile pour lancer une attaque normale avec une arme, ou un sort. S'il y a une épreuve custom, on retombe sur le mode 1 pour choisir entre les différentes possibilités.
+![112.png](/naheulbeuk/112.png =500x)
 * 3 --> si possible, on lance directement une attaque rapide
-C'est par exemple utile pour une arme de contact, ou une attaque de PNJ
+C'est par exemple utile pour une arme de contact, ou une attaque de PNJ. Si c'est impossible de faire une attaque rapide, ou qu'il y a plusieurs choix (épreuve custom, attaque à distance en plus de corps à corps...) on retombe sur le mode 2 ou 1.
+![113.png](/naheulbeuk/113.png =500x)
+Pour lancer l'attaque rapide, il faut commencer par choisir une cible, puis définir son placement, les bonus/malus éventuelle et enfin comment la cible va se défendre.
 * 4 --> même interface que le mode 1, mais avec en plus un bouton attaque rapide
+![114.png](/naheulbeuk/114.png =500x)
 
 Le joueur peut donc modifier la valeur du mode pour avoir le comportement qu'il souhaite.
 
 La valeur par défaut est fixée par le MJ. Pour celà, il doit lancer la macro **Sélection mode drag and drop** présente dans le compendium des macros.
-
+![115.png](/naheulbeuk/115.png =500x)
 **Remarque :**
 Drag and drop chaque attaque de chaque PNJ peut être un peu lourd.
 Pour permettre malgré tout d'utiliser les options du drag and drop et notamment le combat rapide, il existe 2 options utiles :
-* Si le mode vaut 3 ou 4 (on utilise le combat rapide) un d20 supplémentaire apparait sur la ligne de l'attaque pour permettre de faire l'équivalent d'un clique sur l'attaque drag and drop (donc lancer le combat rapide, mode 3, ou lancer l'interface avec le combat rapide, mode 4).
-* Dans le compendium des macros, récupérer la macro **Actions d'attaque** permet en la lançant, de proposer l'action équivalente au drag and drop pour chaque attaque du PNJ.
-
+* Si le mode vaut 3 ou 4 (on utilise le combat rapide) un d20 supplémentaire apparait sur la ligne de l'attaque du PNJ pour permettre de faire l'équivalent d'un clique sur l'attaque drag and drop (donc lancer le combat rapide, mode 3, ou lancer l'interface avec le combat rapide, mode 4).
+![116.png](/naheulbeuk/116.png =500x)
+* Dans le compendium des macros, récupérer la macro **Actions d'attaque** permet en la lançant, de proposer l'action équivalente au drag and drop pour chaque attaque du PNJ. Cet outil permet donc de gérer toutes les attaques de tous les PNJ, il suffit de sélectionner au préalable le bon token.
+![117.png](/naheulbeuk/117.png =500x)
 
 ## Les macros {#titre8}
 Les 6 premiers chapitres concernent des macros qui existent dans le compendium des macros et qui peuvent être drag and drop dans la barre dédiée.
