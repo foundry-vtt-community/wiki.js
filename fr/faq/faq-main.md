@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-04-30T20:06:36.899Z
+date: 2023-05-15T16:35:21.043Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -100,7 +100,12 @@ Un système générique permet de plus de rapidement démarrer une table autour 
 
 Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite bar « Baktov », ainsi que les systèmes D&D5 (Baktov également), Shadowrun, Starfinder, Savage Worlds (ça c’est bibi), Pathfinder 1 (wiki PF-FR) & Pathfinder 2 (rectulo) et Warhammer 4 (ça c’est bibi aussi). Cependant, pour l’instant, il faut reconnaître qu’une partie importante du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
 
-## J’ai vu qu’il y avait des modules, c’est quoi ?
+## Je vois qu'il y a des "systèmes". C'est quoi ?
+
+Les systèmes, ce sont les systèmes de jeu. Donc 1 système = 1 JDR. Pour pouvoir jouer à un jeu Y, il faut donc installer le système Y correspondand. 
+Exemple : je veux jouer à Warhammer, j'installe le système de jeu "Warhammer" en le cherchant dans l'interface "Systèmes".
+
+## J’ai vu qu’il y avait aussi des modules, c’est quoi ?
 
 Les modules sont des extensions, comme des plugins, qui viennent ajouter des fonctionnalités au logiciel. Ces modules viennent donc ajouter des compléments aux « systèmes », en offrant des aides pour les MJ et les joueurs : 
 - effets spéciaux, 
@@ -108,6 +113,19 @@ Les modules sont des extensions, comme des plugins, qui viennent ajouter des fon
 - communication, etc, etc. 
 
 A chacun de venir piocher ce qu’il lui plaît !
+
+## Et les mondes, c'est quoi ?
+
+Un monde, c'est ta partie de JDR, ta table de jeu, quoi. On créée un monde à partir d'un système (cf plus haut), et éventuellement de quelques modules. Si on fait le parallèle avec une table de  jeu réelle, on a :
+
+* Le bouquin de règles = le système Foundry
+* La table et le scénario = le monde Foundry
+* Les accessoires (musique, dessins, dés) = les modules Foundry
+
+## J'ai vu qu'il y a avait des modules "premium". C'est quoi ?
+
+La grande majorité des modules sont gratuits, mais certains modules de contenus (règles, scénarios, campagnes, etc) sont produits par des éditeurs et sont en payants. En général, il faut les acheter sur le site de l'éditeur, qui fourni une clé de licence. Cette clé est à saisir dans l'interface d'administration de ton commpte Foundry (ie sur https://foundryvtt.com ). 
+Une fois cette clée saisie, le module apparait comme installable dans les modules "premiums", via l'interface "modules" de Foundry.
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
