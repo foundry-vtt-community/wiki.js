@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-05-15T16:51:23.605Z
+date: 2023-05-15T16:53:10.154Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -192,7 +192,7 @@ Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme R
 
 ## J'aime pas jouer en ligne, c'est de la m..., alors ça me sert à rien
 
-Cete attitude connue et un brin rétrograde est compréhensible, mais à titre perso je maitrise plus sur table réelle que virtuelle, et j'utilise Foundry dans tout les cas. C'est devenu un précieux outil de gestion et d'animation des parties dont je ne saurais plus me passer sur table désormais. Plus de détails ici : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/ 
+Cete attitude connue est compréhensible, mais à titre perso je maitrise plus sur table réelle que virtuelle, et j'utilise Foundry dans tout les cas. C'est devenu un précieux outil de gestion et d'animation des parties dont je ne saurais plus me passer sur table désormais. Plus de détails ici : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/ 
 
 ## Bon je veux bien regarder, il n'y a pas une vidéo de démonstration ?
 
