@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-05-15T16:41:11.942Z
+date: 2023-05-15T16:45:23.778Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -126,6 +126,12 @@ Un monde, c'est ta partie de JDR, ta table de jeu, quoi. On créée un monde à 
 
 La grande majorité des modules sont gratuits, mais certains modules de contenus (règles, scénarios, campagnes, etc) sont produits par des éditeurs et sont payants. En général, il faut les acheter sur le site de l'éditeur, qui fourni une clé de licence. Cette clé est à saisir dans l'interface d'administration de ton commpte Foundry (ie sur https://foundryvtt.com ). 
 Une fois cette clée saisie, le module apparait comme installable dans les modules "premiums", via l'interface "modules" de Foundry.  
+
+## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
+
+FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. 
+
+Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce point lorsque nécessaire :)
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
