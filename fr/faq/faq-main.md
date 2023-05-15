@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-05-15T16:45:23.778Z
+date: 2023-05-15T16:50:45.165Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -139,6 +139,14 @@ Voici un choix et une explication étayée - qui vaut ce qu'elle vaut : [cette p
 De plus, le modèle de Foundry est un achat one-shot : tu disposes du soft, il est à toi à vie, et si jamais la société Foundry disparait, le code source sera disponible et pourra être repris par d'autres. Tout à l'opposé des modèles hébergés basés sur des abonnements ou des micro-transactions (Roll20, Lets'Role, etc).
 En payant 60 EUR (ou 50 EUR si promo), tu rémunères une équipe de rolistes développeurs de manière décente pour le travail fourni. Je précise d'ailleurs que l'équipe de Foundry est internationale, et qu'il y a même un Français dans la team officielle (SecretFire).
 Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut - je pense - en être conscient"
+
+## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
+
+Tout d'abord, venir s'inscrire sur le Discord FR Foundry ( https://discord.gg/pPSDNJk ), puis lire cette FAQ :) 
+Ensuite, parcourir le Knowledge Base de Foundry : https://foundryvtt.com/kb
+Ensuite, seon le système de jeu choisi, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder sir ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission traite et présente un système de jeu : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
+
+Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
 
 ## Est-ce qu’il a des coupures audio/video ou autres ?
 
