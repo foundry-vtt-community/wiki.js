@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-05-15T16:50:45.165Z
+date: 2023-05-15T16:50:58.591Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -143,7 +143,7 @@ Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu p
 ## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
 
 Tout d'abord, venir s'inscrire sur le Discord FR Foundry ( https://discord.gg/pPSDNJk ), puis lire cette FAQ :) 
-Ensuite, parcourir le Knowledge Base de Foundry : https://foundryvtt.com/kb
+Ensuite, parcourir la "Knowledge Base" de Foundry : https://foundryvtt.com/kb
 Ensuite, seon le système de jeu choisi, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder sir ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission traite et présente un système de jeu : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
 
 Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
