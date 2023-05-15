@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-05-15T16:37:51.171Z
+date: 2023-05-15T16:41:11.942Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -129,7 +129,10 @@ Une fois cette clée saisie, le module apparait comme installable dans les modul
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
-Mon choix – partial s’il en est – est expliqué sur [cette page](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/). De plus, sur le fond, je pense que l’on est un peu tous responsable des hégémonies technologiques que l’on observe : Facebook serait-il devenu Facebook si on avait pas cédé à la « masse » et donner sa chance à un autre outil ? Idem pour Windows, Google et autres. On se plaint de l’hégémonie de tel ou telle société/outil/méthode, mais nous sommes – je m’inclus là dedans – souvent les premiers à l’entretenir. Donc à un tout petit niveau, à l’échelle excessivement modeste des « tables virtuelles », j’essaye également très modestement de faire connaître un outil auquel je trouve des qualités techniques et de jeu assez abouties pour éviter que Roll20 ne devienne le choix par défaut, fautes d’autres combattants. L’objectif est bien entretenir le choix, pas de rentrer dans des batailles trollesques de qualité/défaut de chaque outil ! 🙂
+Voici un choix et une explication étayée - qui vaut ce qu'elle vaut : [cette page](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/). 
+De plus, le modèle de Foundry est un achat one-shot : tu disposes du soft, il est à toi à vie, et si jamais la société Foundry disparait, le code source sera disponible et pourra être repris par d'autres. Tout à l'opposé des modèles hébergés basés sur des abonnements ou des micro-transactions (Roll20, Lets'Role, etc).
+En payant 60 EUR (ou 50 EUR si promo), tu rémunères une équipe de rolistes développeurs de manière décente pour le travail fourni. Je précise d'ailleurs que l'équipe de Foundry est internationale, et qu'il y a même un Français dans la team officielle (SecretFire).
+Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut - je pense - en être conscient"
 
 ## Est-ce qu’il a des coupures audio/video ou autres ?
 
