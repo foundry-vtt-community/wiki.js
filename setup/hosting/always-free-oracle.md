@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-03-21T16:56:56.176Z
+date: 2023-05-24T15:24:34.886Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -791,7 +791,7 @@ If you have a message from Foundry telling you that you must updated your NodeJS
 
 <a id="H1" href="#H1">H1.</a> Reconnect to your Oracle instance, as in step [D2](#D2).
 
-<a id="H2" href="#H2">H2.</a> Once successfully connected, follow the the updating steps as outlined in the [Recommended Linux Install Guide](https://foundryvtt.wiki/en/setup/linux-installation#optional-f-updating-nodejs).
+<a id="H2" href="#H2">H2.</a> Once successfully connected, follow the the updating steps as outlined in the [Recommended Linux Install Guide](https://foundryvtt.wiki/en/setup/linux-installation#optional-f-updating-nodejs-on-debianubuntu).
 
 Once completed, you are good to go!
 
