@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-03-14T17:54:44.216Z
+date: 2023-05-24T15:23:10.345Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -532,19 +532,21 @@ npm rebuild -g pm2
 pm2 startup
 ```
 
-<a id="F5" href="#F5">F5.</a> Restart any previously running pm2 managed processes. 
+<a id="F5" href="#F5">F5.</a> pm2 will list a command to run after the `pm2 startup` was run. Copy and paste that into the commandline and run it to ensure pm2 will launch on startup. 
+
+<a id="F6" href="#F6">F6.</a> Restart any previously running pm2 managed processes. 
 
 ```
 pm2 start all
 ```
 
-<a id="F6" href="#F6">F6.</a> Check that Foundry is online. The output should show a green `online` indicator beside the Foundry process. 
+<a id="F7" href="#F7">F7.</a> Check that Foundry is online. The output should show a green `online` indicator beside the Foundry process. 
 
 ```
 pm2 list
 ```
 
-<a id="F7" href="#F7">F7.</a> Save the current pm2 configuration.
+<a id="F8" href="#F8">F8.</a> Save the current pm2 configuration.
 
 ```
 pm2 save
