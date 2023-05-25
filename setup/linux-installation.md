@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-05-24T15:23:10.345Z
+date: 2023-05-25T13:15:18.240Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -553,3 +553,49 @@ pm2 save
 ```
 
 You've now successfully updated NodeJS and should be good to go!
+
+# (Optional) G. Performing a Clean Reinstall/Update
+## Objective
+
+This will guide you through the steps needed to clear a current installation, and download the install a fresh version of Foundry - either an update or the same version. 
+
+## Archiving Current Install and New Install
+Assuming that you have Foundry installed in `~/foundry` and your userdata in a separate location (likely `~/foundryuserdata`) and is managed by `pm2`. 
+
+<a id="G1" href="#G1">G1.</a> Once you have connected and navigated to your home directory `~`, stop Foundry using pm2. 
+
+```
+pm2 stop foundry
+```
+
+<a id="G2" href="#G2">G2.</a> Create a backup/archive of the current installation by moving the folder to a new location. 
+
+```
+mv foundry foundry-archive
+```
+
+<a id="G3" href="#G3">G3.</a> Create the installation directory and download desired Foundry version using wget. You must use the Timed URL, and the Linux version. Be sure to wrap the URL with quotes below.
+
+```
+mkdir ~/foundry
+wget --output-document ~/foundry/foundryvtt.zip "<download url>"
+```
+
+<a id="G4" href="#G4">G4.</a>	Once downloaded, extract Foundry and cleanup the zip file:
+
+```
+unzip ~/foundry/foundryvtt.zip -d ~/foundry/
+rm ~/foundry/foundryvtt.zip
+```
+
+<a id="G5" href="#G5">G5.</a> Restart Foundry using pm2. 
+
+```
+pm2 start foundry
+```
+
+
+You should now have the new version of Foundry running and accessible as before!
+
+
+
