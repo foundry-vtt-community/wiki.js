@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-05-24T15:24:34.886Z
+date: 2023-05-25T13:18:41.089Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -838,7 +838,17 @@ To see why the instance has been disabled, check step B4 in the <a href="#archiv
 
 <a id="J11" href="#J11">J11.</a> If you set up a domain name, you will need to point the domain's A record to the instances `<Public IP address>`. If you did not set up a domain name, you can now connect to Foundry directly, using a link like this: `http://<Public IP Address>:30000`
 
-# K. Archived: A1 Disabling and Upgrading to Pay As You Go (Reference Only)
+# K. Perform Clean Update/Reinstall
+## Purpose
+This section contains the instructions needed to remove the current installation, and replace it with a cleanly installed new version. It does not touch your userdata in any way. 
+
+## Clean Install
+
+<a id="K1" href="#K1">K1.</a> Reconnect to your Oracle instance, as in step [D2](#D2).
+
+<a id="K2" href="#K2">K2.</a> Once successfully connected, follow the the updating steps as outlined in the [Recommended Linux Install Guide](https://foundryvtt.wiki/en/setup/linux-installation#optional-g-performing-a-clean-reinstallupdate).
+
+# L. Archived: A1 Disabling and Upgrading to Pay As You Go (Reference Only)
 ## Purpose
 
 This section contains outdated information, left here for reference only. This information is outdated and should only be used to reference previous instructions for informational purposes. 
