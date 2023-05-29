@@ -2,7 +2,7 @@
 title: 3.0. Audio, Vidéo, HTTPS
 description: 
 published: true
-date: 2022-09-20T16:33:38.773Z
+date: 2023-05-29T13:22:16.091Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-23T17:47:31.756Z
@@ -114,15 +114,29 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 
 ### Activation du SSL dans Foundry VTT
 Maintenant nous allons devoir activer le SSL dans la VTT.
-- Selectionner Foundry VTT qui doit encore tourner en fond de tache sur votre machine
-- Cliquez sur l'onglet Configuration et remplisser les champs suivants par :
-	- Certificat SSL (Secure Socket Layer) 
-  `../Data/.well-known/acme-challenge/domain.crt`
-  - Clé privée SSL (Secure Socket Layer)
-  `../Data/.well-known/acme-challenge/domain.key`
-  ![ssl.png](/setup/winstall/ssl.png)
-- Cliquez sur ***Save Changes*** puis ***YES***
-- Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commençant par HTTPS.
+
+- **Avec Certbot** :
+	- Copier les fichiers "fullchain.pem" et "privkey.pem" situés dans C:\certbot\live\VotreDomaine
+  - Coller les fichiers dans le dossier de configuration Foundry VTT (par défaut : %localappdata%\FoundryVTT\Config)
+  - Selectionner Foundry VTT qui doit encore tourner en fond de tache sur votre machine
+  - Cliquez sur l'onglet Configuration et remplisser les champs suivants par :
+    - Certificat SSL (Secure Socket Layer) 
+    `fullchain.pem`
+    - Clé privée SSL (Secure Socket Layer)
+    `privkey.pem`
+  - Cliquez sur ***Save Changes*** puis ***YES***
+  - Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commençant par HTTPS.
+
+- **Avec Crypt-LE** :
+  - Selectionner Foundry VTT qui doit encore tourner en fond de tache sur votre machine
+  - Cliquez sur l'onglet Configuration et remplisser les champs suivants par :
+    - Certificat SSL (Secure Socket Layer) 
+    `../Data/.well-known/acme-challenge/domain.crt`
+    - Clé privée SSL (Secure Socket Layer)
+    `../Data/.well-known/acme-challenge/domain.key`
+    ![ssl.png](/setup/winstall/ssl.png)
+  - Cliquez sur ***Save Changes*** puis ***YES***
+  - Redémarrez Foundry VTT, lancer votre navigateur puis rentrez l'URL de votre Nom de Domaine en commençant par HTTPS.
 
 ## Paramétrage de l'Audio/Vidéo dans Foundry VTT
 Maintenant que le plus gros du travail est fait, nous allons activer l'Audio/Video pour les joueurs.
