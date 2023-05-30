@@ -2,7 +2,7 @@
 title: FreeBSD
 description: 
 published: true
-date: 2022-05-19T13:18:30.371Z
+date: 2023-05-30T13:56:42.662Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:57.469Z
@@ -10,6 +10,14 @@ dateCreated: 2020-09-23T00:25:57.469Z
 
 >This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
 {.is-warning}
+
+# Foundry 11 and later
+
+The officially supported platforms for Foundry VTT are Linux, macOS and Windows.
+
+As of Foundry 11, it no longer works on FreeBSD. This is likely because FreeBSD does not ship with `glibc`, it uses `libc` instead. Running on Linux is the easy solve here.
+
+An `npm install classic-level --build-from-source` did not resolve. It's possible that there's a way to get Foundry VTT 11+ going on FreeBSD; if so, please update this article.
 
 # Base install directly on FreeBSD, not for NAS
 
