@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-05-31T13:28:46.483Z
+date: 2023-05-31T13:28:55.880Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -58,7 +58,7 @@ Votre adresse IP publique sera donc http://xxx.zzz.www.uuu:42000/
 
 ## Je vois pas de NAT (ou redirection de port) dans ma box, ou bien j'ai un message qui m'indique que la redirection n'est pas disponible
 
-Cela veurt dire que votre opérateur utilise un mode GCNAT, et qu'il interdit le partage de port (pour faire simple). Votre seule option dans ce cas est d'appeler le service support de votre opérateur (oui, je sais...) et de demander une IP "full stack".
+Cela veut dire que votre opérateur utilise un mode GCNAT, et qu'il interdit le partage de port (pour faire simple). Votre seule option dans ce cas est d'appeler le service support de votre opérateur (oui, je sais...) et de demander une IP "full stack".
 
 Une fois cette IP "full stack" obtenue, vous pouvez reprendre les étapes de "Comment ?" ci-dessus.
 
