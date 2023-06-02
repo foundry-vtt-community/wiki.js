@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-05-25T14:31:56.755Z
+date: 2023-06-02T16:12:10.324Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -568,7 +568,7 @@ Assuming that you have Foundry installed in `~/foundry` and your userdata in a s
 pm2 stop foundry
 ```
 
-<a id="G2" href="#G2">G2.</a> Create a backup/archive of the current installation by moving the folder to a new location. 
+<a id="G2" href="#G2">G2.</a> Create a backup/archive of the current installation by moving the folder to a new location. You may need to name the destination folder something like `foundry-archive-2023-06-02` in the case of multiple updates. 
 
 ```
 mv foundry foundry-archive
