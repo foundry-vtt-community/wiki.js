@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-06-06T12:11:22.841Z
+date: 2023-06-06T12:12:37.409Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -926,7 +926,7 @@ Par exemple :
 **code** correspond au niveau et à la zone (11= plaine bas niveau, 21=plaine niveau moyen, 31=plaine haut niveau, 12=forêt bas niveau...).
 Les codes à utiliser sont indiqués dans le fichier :)
 
-Si je veux rajouter un dragon rouge adulte dans la plaine haut niveau, je dois donc écrire :
+Si je veux rajouter un dragon rouge adulte dans la plaine haut niveau, je peux donc écrire :
 <pre>{"name":"Dragon rouge énervé qui charge les aventuriers","id":"GAIIk71yPYH6brFH","nombre":"1","code":"31"}</pre>
 
 **ATTENTION** après une mise à jour, ce fichier sera écrasé, donc pensez à en faire une copie si vous faites des modifications.
