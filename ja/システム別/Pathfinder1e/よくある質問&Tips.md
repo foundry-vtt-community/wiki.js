@@ -2,7 +2,7 @@
 title: よくある質問&Tips
 description: よくありそうな質問と便利なテクニックをまとめています
 published: true
-date: 2023-06-06T12:55:20.124Z
+date: 2023-06-06T12:57:16.698Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-11T02:48:19.206Z
@@ -15,7 +15,8 @@ dateCreated: 2021-09-11T02:48:19.206Z
 **以下の内容はFoundryVTT v10環境では一部異なる場合があります**
 
 ## FVTT v10環境での日本語化について
-FVTTのMOD一覧に記載されているPF1e日本語化MODは長らく更新されておりません。臨時で更新したバージョンがありますのでそちらをお使いください。
+FVTTのMOD一覧に記載されているPF1e日本語化MODは長らく更新されておりません。
+臨時で更新したバージョンがありますのでそちらをお使いください。
 FVTT v10環境に対応したインストールURL
 https://github.com/shoki-yui/pf1eja/releases/latest/download/module.json
 FVTT v9環境、PF1e ver0.81.3以下に対応したインストールURL
