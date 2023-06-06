@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-06-06T11:40:12.302Z
+date: 2023-06-06T12:11:22.841Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -859,33 +859,77 @@ Permet de n'afficher qu'un résultat aléatoire parmis les résultats.
 
 **Exemple 1 : génération d'un ingrédient aléatoire pour du loot**
 Je sélectionne le compendium "Equipements : ingrédients" puis je coche un seul résultat.
-![magicsearch2.png](/naheulbeuk/magicsearch2.png)
+![magicsearch2.png](/naheulbeuk/magicsearch2.png =600x)
 
 **Exemple 2 : recherche d'une épée de qualité**
 J'entre dans le champs "Nom" : épée && qualité.
-![magicsearch4.png](/naheulbeuk/magicsearch4.png)
+![magicsearch4.png](/naheulbeuk/magicsearch4.png =600x)
 
 **Exemple 3 : recherche d'une arme au corps à corps enchantée, de moins de 500 PO**
 Je sélectionne les types d'arme "Armes de contact" et "Echantée", puis je mets le Prix max à 500.
-![magicsearch5.png](/naheulbeuk/magicsearch5.png)
+![magicsearch5.png](/naheulbeuk/magicsearch5.png =600x)
 
 **Exemple 4 : recherche des sorts d'eau, level 2**
 Je sélectionne le compendium "Magie : eau et glace" et j'entre "2" dans le champs du "Nom".
-![magicsearch6.png](/naheulbeuk/magicsearch6.png)
+![magicsearch6.png](/naheulbeuk/magicsearch6.png =600x)
 
 **Génération d'un magasin**
 On peut également utiliser cet outil pour créer des magasins sous forme de Journaux.
 Il faut au préalable créer un journal avec une page dédiée, puis rentrer leur nom dans la catégorie **Remplir un magasin** de l'outil.
 En relançant la recherche, on a des options supplémentaires. On peut désormais modifier le nom de l'objet, modifier son prix et l'ajouter au magasin.
 
-![magicsearch7.png](/naheulbeuk/magicsearch7.png)
+![magicsearch7.png](/naheulbeuk/magicsearch7.png =600x)
 
 Dans la page dédiée du journal, l'objet est rajouté avec le nom et le prix choisis, et le lien vers l'objet visible uniquement pour le MJ.
 
-![magicsearch8.png](/naheulbeuk/magicsearch8.png)
+![magicsearch8.png](/naheulbeuk/magicsearch8.png =600x)
 <br/>
 
 ### Chercher ou générer une rencontre {#titre85}
+Cette macro permet de chercher une rencontre spécifique, ainsi que de générer une rencontre (facile, moyenne, difficile) sur la base d'un fichier de configuration modifiable.
+
+![magicsearchpnj.png](/naheulbeuk/magicsearchpnj.png =500x)
+#### Rechercher une rencontre
+* **Catégorie**
+Permet de choisir la catégorie de la rencontre (Animaux, Végétaux..). Dans le cas des humanoïdes, on peut préciser le type d'humanoïde (créature, fanghien, elfe sylvain...)
+* **Nom**
+Permet de chercher des mots clés dans le nom de la rencontre.
+On peut chercher plusieurs mots clés : mots clés 1 && mots clés 2
+On peut chercher des mots clés ou d'autres : mots clés 1 || mots clés 2
+* **Trait**
+Permet de choisir un trait (violent+, agile...). On peut choisir dans rechercher 2 différents, la rencontre devra alors posséder les 2.
+* **Répartition géo.**
+Permet de choisir où trouver la rencontre. Si on choisit 2 zones, alors la rencontre doit se trouver dans l'une ou l'autre.
+* **Plage d'xp**
+Permet de définir l'xp minimum ET/OU maximum que rapportera la rencontre.
+* **Un seul résultat**
+Permet d'afficher un unique résultat aléatoire dans les rencontres possibles
+#### Générer une rencontre
+En choisissant le niveau (Bas niveau 1-3, Niveau intermédiaire 4-6, Haut niveau 6+) et la zone (Plaine, Forêt, Montagne...) l'outil génère aléatoirement une rencontre, basé sur un fichier de configuration.
+
+![magicsearchpnj2.png](/naheulbeuk/magicsearchpnj2.png =600x)
+
+**A noter que pour le moment le Haut niveau n'est pas disponible**. En effet les MJ pour du haut niveau sont capables de choisir des rencontres plus intéressantes que ce que peut proposer l'outil (avec ma trop faible experience), et le contenu HL est globalement absent du système (cf les sorts et prodiges).
+
+**A noter également qu'il est possible de modifier le fichier de rencontre** et donc d'ajouter le haut niveau (puis me l'envoyer ;) ).
+Pour celà, il faut aller dans le système naheulbeuk, puis **module**, **documents** et enfin **generator.mjs**.
+Là, vous pouvez modifier/ajouter du contenu.
+Par exemple :
+<pre>//// Plaine, bas niveau
+{"name":"Coccinelle berserk","id":"Ht1QZ9xBRKvyqgYy","nombre":"1","code":"11"}
+{"name":"Bouc en colère","id":"hP6gfZYurz24I2IL","nombre":"1","code":"11"}
+{"name":"2D6 Coyotes affamés","id":"rYZNUDXzWCpCKUsE","nombre":"2D6","code":"11"}</pre>
+**name** correspond au nom afficher par le générateur.
+**id** est l'ID de la rencontre, à récupérer sur Foundry.
+![magicsearchpnj3.png](/naheulbeuk/magicsearchpnj3.png =500x)
+**nombre** correspond à la quantité de rencontres à générer (1, 2, D6, 2D8...)
+**code** correspond au niveau et à la zone (11= plaine bas niveau, 21=plaine niveau moyen, 31=plaine haut niveau, 12=forêt bas niveau...).
+Les codes à utiliser sont indiqués dans le fichier :)
+
+Si je veux rajouter un dragon rouge adulte dans la plaine haut niveau, je dois donc écrire :
+<pre>{"name":"Dragon rouge énervé qui charge les aventuriers","id":"GAIIk71yPYH6brFH","nombre":"1","code":"31"}</pre>
+
+**ATTENTION** après une mise à jour, ce fichier sera écrasé, donc pensez à en faire une copie si vous faites des modifications.
 
 ### Lancer Custom {#titre83}
 
