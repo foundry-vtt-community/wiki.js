@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-06-06T10:47:45.665Z
+date: 2023-06-06T11:39:54.895Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -825,38 +825,66 @@ Il contient un grand nombre de filtres, et liste les objets qu'il trouve. Ces ob
 
 Il permet également de remplir directement un journal qui fait office de magasin.
 
-![95.jpg](/naheulbeuk/95.jpg =500x)
+![magicsearch.png](/naheulbeuk/magicsearch.png =500x)
 
+* **Choix du compendium**
+Permet de ne lister que les objets issus du compendium sélectionné.
+* **Nom**
+Permet de chercher des mots clés dans le nom des objets.
+On peut chercher plusieurs mots clés : mots clés 1 && mots clés 2
+On peut chercher des mots clés ou d'autres : mots clés 1 || mots clés 2
+* **Type d'objet** 
+Permet de chercher un type d'objets au sens Foundry. Ce sont tous les types d'objets décris dans le [chapitre précédent](#titre5).
+Si plusieurs types sont sélectionnés, on cherche l'un ou l'autre
+* **Catégorie d'inventaire**
+Permet de chercher une catégorie d'objets au sens catégorie dans l'inventaire (livres, potions, armes, armures, nourritures...).
+Si plusieurs types sont sélectionnés, on cherche l'un ou l'autre
+* **Types d'armes**
+Si on cherche une arme (= un objet en mains), on peut définir son type (enchantée, relique, arme de contact...).
+Si plusieurs types sont sélectionnés, on cherche l'un et l'autre
+* **Types d'armures**
+Si on cherche une armure (= un objet porté), on peut définir son type (enchantée, pr tête, pr jambes...).
+Si plusieurs types sont sélectionnés, on cherche l'un et l'autre
 * **Mots clés**
 Permet de chercher des mots clés (par exemple épée, sang de corbeaux...) dans tous les attributs des objets (le nom, la description...)
-Ce champ permet donc de chercher un objet, mais aussi où il est utilisé. Si je cherche **sang de corbeaux** je vais trouver l'objet en question ainsi que les recettes, plans, rituels qui l'utilisent.
+Ce champ permet donc de chercher un objet, mais aussi dans quel contexte il est utilisé.
+Par exemple, si je cherche **sang de corbeaux** je vais trouver l'objet en question ainsi que les recettes, plans, rituels qui l'utilisent.
 On peut chercher plusieurs mots clés : mots clés 1 && mots clés 2
 On peut chercher des mots clés ou d'autres : mots clés 1 || mots clés 2
 * **Prix min / max**
 Permet de chercher des objets avec un prix minimum ET / OU un prix maximum fixé.
 Si on rentre une des deux valeurs, seuls les objets avec un prix seront listés, du moins cher au plus cher.
-* **Type d'objet** 
-Permet de chercher un type d'objets au sens Foundry. Ce sont tous les types d'objets décris dans le [chapitre précédent](#titre5).
-Si plusieurs types sont sélectionnés, on cherche l'un ou l'autre
-* **Catégorie d'objet**
-Permet de chercher une catégorie d'objets au sens catégorie dans l'inventaire.
-Si plusieurs types sont sélectionnés, on cherche l'un ou l'autre
-* **Filtre pour armes ou armures**
-Si on cherche une arme (= un objet en mains) ou une armure (= un objet porté), on peut définir son type.
-Si plusieurs type sont sélectionnés, on cherche l'un et l'autre
-* **Mots clés compendium**
-Permet de ne lister que les objets issus des compendiums qui contiennent ces mots clés. 
-*Si je tape "soldat" j'aurai uniquement des objets issus des compendiums contenant le mot clé "soldat"*
+* **Un seul résultat**
+Permet de n'afficher qu'un résultat aléatoire parmis les résultats.
 
-Ensuite si je souhaite utiliser cet outil pour créer des magasins, je dois au préalable créer un journal avec une page dédiée, puis rentrer leur nom dans la catégorie **Magasin** de l'outil.
-En relançant la recherche, on a des options supplémentaires.
+**Exemple 1 : génération d'un ingrédient aléatoire pour du loot**
+Je sélectionne le compendium "Equipements : ingrédients" puis je coche un seul résultat.
+![magicsearch2.png](/naheulbeuk/magicsearch2.png)
 
-![96.jpg](/naheulbeuk/96.jpg =500x)
+**Exemple 2 : recherche d'une épée de qualité**
+J'entre dans le champs "Nom" : épée && qualité.
+![magicsearch4.png](/naheulbeuk/magicsearch4.png)
 
-On peut désormais modifier le nom de l'objet, modifier son prix et l'ajouter au magasin.
+**Exemple 3 : recherche d'une arme au corps à corps enchantée, de moins de 500 PO**
+Je sélectionne les types d'arme "Armes de contact" et "Echantée", puis je mets le Prix max à 500.
+![magicsearch5.png](/naheulbeuk/magicsearch5.png)
+
+**Exemple 4 : recherche des sorts d'eau, level 2**
+Je sélectionne le compendium "Magie : eau et glace" et j'entre "2" dans le champs du "Nom".
+![magicsearch6.png](/naheulbeuk/magicsearch6.png)
+
+
+
+**Génération d'un magasin**
+On peut également utiliser cet outil pour créer des magasins sous forme de Journaux.
+Il faut au préalable créer un journal avec une page dédiée, puis rentrer leur nom dans la catégorie **Remplir un magasin** de l'outil.
+En relançant la recherche, on a des options supplémentaires. On peut désormais modifier le nom de l'objet, modifier son prix et l'ajouter au magasin.
+
+![magicsearch7.png](/naheulbeuk/magicsearch7.png)
+
 Dans la page dédiée du journal, l'objet est rajouté avec le nom et le prix choisis, et le lien vers l'objet visible uniquement pour le MJ.
 
-![97.jpg](/naheulbeuk/97.jpg =500x)
+![magicsearch8.png](/naheulbeuk/magicsearch8.png)
 <br/>
 
 ### Chercher ou générer une rencontre {#titre85}
