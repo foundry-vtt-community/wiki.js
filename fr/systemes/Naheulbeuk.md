@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-06-06T12:12:37.409Z
+date: 2023-06-06T12:15:30.562Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -930,6 +930,7 @@ Si je veux rajouter un dragon rouge adulte dans la plaine haut niveau, je peux d
 <pre>{"name":"Dragon rouge énervé qui charge les aventuriers","id":"GAIIk71yPYH6brFH","nombre":"1","code":"31"}</pre>
 
 **ATTENTION** après une mise à jour, ce fichier sera écrasé, donc pensez à en faire une copie si vous faites des modifications.
+<br/>
 
 ### Lancer Custom {#titre83}
 
@@ -945,10 +946,10 @@ Pour faire des jets de dés directs, sans interface, il faut remplacer option="i
 
 Cette macro permet de lister les compétences possédées par un joueur.
 
-![109.jpg](/naheulbeuk/109.jpg =300x)
+![comp.png](/naheulbeuk/comp.png =500x)
 
-En cliquant sur le nom de la compétence, on ouvre sa fiche.
-En cliquant sur la valeur, on fait un jet de dés simple avec interface.
+En cliquant sur **Afficher**, on ouvre sa fiche.
+En cliquant sur **Jet de dés**, on fait un jet de dés simple avec interface.
 <br/>
 
 ### Sélection mode drag and drop ET Actions d'attaque {#titre82}
