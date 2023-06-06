@@ -2,7 +2,7 @@
 title: Naheulbeuk
 description: 
 published: true
-date: 2023-06-06T11:39:54.895Z
+date: 2023-06-06T11:40:12.302Z
 tags: naheulbeuk
 editor: markdown
 dateCreated: 2022-11-15T16:04:44.061Z
@@ -872,8 +872,6 @@ Je sélectionne les types d'arme "Armes de contact" et "Echantée", puis je mets
 **Exemple 4 : recherche des sorts d'eau, level 2**
 Je sélectionne le compendium "Magie : eau et glace" et j'entre "2" dans le champs du "Nom".
 ![magicsearch6.png](/naheulbeuk/magicsearch6.png)
-
-
 
 **Génération d'un magasin**
 On peut également utiliser cet outil pour créer des magasins sous forme de Journaux.
