@@ -2,7 +2,7 @@
 title: Self Hosting-on-AWS
 description: 
 published: true
-date: 2023-02-03T20:24:14.354Z
+date: 2023-06-16T16:11:37.348Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:51.723Z
@@ -208,12 +208,15 @@ After you've set up Foundry, you'll want to add in the information that Foundry 
 
     nano ~/.local/share/FoundryVTT/Config/aws.json
 
-The precise path will vary based on how you installed it.  The keys you need are in the .csv file you made all the way back in IAM, part 1.  The region is the AWS-compliant name of the region your bucket is located in -- if you hit the Regions dropdown in the top right, it'll be in all lower case next to the friendlier name (e.g. us-west-2).  Copy and paste the following into your aws.json file, replace the accessKeyId, secretAccessKey, and region with the appropriate selections:
+The precise path will vary based on how you installed it.  The keys you need are in the .csv file you made all the way back in IAM, part 1.  The region is the AWS-compliant name of the region your bucket is located in -- if you hit the Regions dropdown in the top right, it'll be in all lower case next to the friendlier name (e.g. us-west-2).  Copy and paste the following into your aws.json file, replace the accessKeyId, secretAccessKey, bucket, and region with the appropriate selections:
 
     {
-        "accessKeyId": "<your access key id>",
-        "secretAccessKey": "<your secret access key",
-        "region": "<your region>"
+        "region": "<your region>",
+        "buckets": ["<your bucket name>"],
+        "credentials": {
+        	"accessKeyId": "<your access key id>",
+        	"secretAccessKey": "<your secret access key"
+        }
     }
 
 Save the file, then go into the Configuration tab of the Foundry setup page.  Put the file path for the .json file into the AWS Configuration Path box, and hit Save Changes.  Note that is is from my personal setup -- yours may look different.
