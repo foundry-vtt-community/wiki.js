@@ -2,11 +2,15 @@
 title: AWS hosted foundry scripted
 description: An automated deployment of a server on aws using AWS Cloudformation script
 published: true
-date: 2022-09-02T17:08:05.427Z
+date: 2023-06-22T16:10:33.988Z
 tags: template, aws
 editor: markdown
 dateCreated: 2021-04-23T09:43:25.124Z
 ---
+
+>**NOTE:** The AWS Free Tier provides 1GB of RAM. This is below the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server) for a dedicated Foundry server. You run the risk of running out of RAM and Foundry crashing, especially on heavier game systems, using many modules, or importing a lot of content into a world. 
+>
+>This community guide appears to be unmaintained. If you used this guide and are encountering issues, you can try contacting the author at their github or on Discord as described below. {.is-warning}
 
 # Create a foundry server on AWS
 
