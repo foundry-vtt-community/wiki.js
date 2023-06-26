@@ -2,7 +2,7 @@
 title: 8．小ネタなど
 description: FVTTを扱う上での軽い情報や、MODほどではない改造の仕方など
 published: true
-date: 2022-06-09T13:13:00.956Z
+date: 2023-06-26T01:13:50.481Z
 tags: 
 editor: ckeditor
 dateCreated: 2021-04-06T15:00:36.087Z
@@ -14,30 +14,27 @@ dateCreated: 2021-04-06T15:00:36.087Z
 <p>情報が集まって大きくなれば、カテゴリを分けて掲載する事もあります。</p>
 <p>わざわざ記事を作る程じゃない…といった情報があれば、こちらに上げさせていただきます。</p>
 <p>&nbsp;</p>
-<p>2022/6/9 <mark class="pen-red">New!</mark></p>
+<p>2023/6/26 <mark class="pen-red">New!</mark></p>
 <p>&nbsp;</p>
 <h2>共有辞典</h2>
 <p><a href="https://www.reddit.com/r/FoundryVTT/comments/fvw3c7/how_to_create_a_tiny_module_for_shared_content/">世界間で共有コンテンツ用の小さなモジュールを作成する方法</a></p>
-<p>&nbsp;</p>
 <p>自作コンテンツをワールド間で共有する方法としてここに書いておく。</p>
 <p>自作コンテンツを入れるためのModを自分で作り、使用するワールドごとに有効化する。</p>
-<p>&nbsp;</p>
 <h3>■作り方</h3>
-<p>&nbsp;</p>
 <p>1. /Data/modules下に任意の名前（ここではSharedData）でフォルダを作成する。</p>
 <p>2. 下の内容でmodule.jsonを作ってその中に配置する（labelはお好きに）。</p>
 <p>3. module.jsonと同じ位置にサブフォルダ/packsを作成する。</p>
 <p>4. ワールドを再起動し、モジュールの管理から“共有データ”を有効にする。</p>
 <p>5. 共有したいデータをそれぞれの辞典に放り込む。</p>
-<p>&nbsp;</p>
+<p>v10用</p>
 <pre><code class="language-plaintext">{
       "name": "SharedData",
       "title": "共有データ",
       "description": "Worldをまたぐ共有データ",
       "author": "（自分の名前）",
       "version": "1.0.0",
-      "minimumCoreVersion": "0.5.0",
-      "compatibleCoreVersion":"0.7.9",
+      "minimumCoreVersion": "10",
+      "compatibleCoreVersion":"10",
       "packs": [
          {
             "name": "items",
@@ -73,8 +70,66 @@ dateCreated: 2021-04-06T15:00:36.087Z
          }
      ]
  }</code></pre>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<p>v11用（v10から以降する場合は、差分を変更してください）</p>
+<pre><code class="language-plaintext">{
+      "id": "SharedData",
+      "title": "共有データ",
+      "description": "Worldをまたぐ共有データ",
+      "authors": [
+    		{
+      			"name": "自分の名前",
+      			"url": "",
+      			"discord": "",
+      			"flags": {}
+    		}
+  		],
+      "version": "1.0.0",
+      "compatibility": {
+    		"minimum": "11",
+    		"verified": "11",
+    		"maximum": "11"
+  			},
+      "packs": [
+         {
+            "name": "items",
+            "label": "共有アイテム",
+            "path": "packs/items.db",
+            "type": "Item",
+            "system": "dnd5e",
+            "module": "SharedData"
+         },
+         {
+            "name": "actors",
+            "label": "共有アクター",
+            "path": "packs/npc.db",
+            "type": "Actor",
+            "system": "dnd5e",
+            "module": "SharedData"
+        },
+         {
+            "name": "scenes",
+            "label": "共有シーン",
+            "path": "packs/scenes.db",
+            "type": "Scene",
+            "system": "dnd5e",
+            "module": "SharedData"
+         },
+         {
+            "name": "journals",
+            "label": "共有資料",
+            "path": "packs/journals.db",
+            "type": "JournalEntry",
+            "system": "dnd5e",
+            "module": "SharedData"
+         }
+     ]
+ }</code></pre>
+<ul>
+  <li>title→id</li>
+  <li>authors→拡張</li>
+  <li>compatible→拡張</li>
+  <li>entity→type</li>
+</ul>
 <h2>ワールドスクリプト</h2>
 <p><a href="https://foundryvtt.wiki/en/basics/world-scripts">ユーザーがFoundryVTTの追加機能を定義する方法としてのワールドスクリプト</a></p>
 <p>Modではないが、ワールド固有の設定を変更する方法としてここに書いておく。</p>
