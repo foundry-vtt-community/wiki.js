@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-05-15T16:54:04.250Z
+date: 2023-06-26T12:24:47.480Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -210,13 +210,24 @@ La règle pour déterminer les origines des soucis c'est ça :
 Si le problème est côté serveur, il faut vérifier votre bande passante et probablement faire des essais sans UPnP.
 Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
 
+## Le répertoire Data mais il est où celui là ?
+
+Ce répertoire est utilisé par Foundry pour sauvegarder ce qui concerne les systèmes, les modules et les mondes.
+La localisation de ce répertoire peut être modifié dans l'interface de Foundry.
+Sous Windows, si vous installez la version Windows de Foundry, par défaut c'est : `C:\Users\ton_nom_d_utilisateur\AppData\Local\FoundryVTT\Data`.
+Tu peux aussi ouvir une fenêtre de l'explorateur Windows et taper `%localAppdata%\FoundryVTT\Data` pour ouvrir directement ce répertoire.
+
 ## Je change de PC : je peux récupérer tout mon contenu ?
 
-Oui, bien sûr. Les données de Foundry sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data` que vous pouvez configurer dans l'interface de Foundry. Donc changer de PC équivaut à recopier votre répertoire `worlds`, tout simplement.
-Notez que vous pouvez parfaitement avoir 1 installation de Foundry sur votre PC/Mac local (pour préparer vos parties par exemple) et 1 installation en ligne sur un serveur (TheForge par exemple), tout ça avec la même licence.
+Oui, bien sûr. Les données de Foundry sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data`.
+Donc changer de PC équivaut à recopier votre répertoire `worlds`, tout simplement.
+Cela sauvegardera toutes vos parties.
+Si vous voulez en plus récupérez vos systèmes et modules installés, il suffit de faire la même chose avec les répertoires `systems` et `modules`.
+Notez que vous pouvez parfaitement avoir une installation de Foundry sur votre PC/Mac local (pour préparer vos parties par exemple) et une installation en ligne sur un serveur (TheForge par exemple), tout ça avec la même licence.
 
-## Je veux faire des sauvegardes, ça marche comment ?
+## Je veux faire des sauvegardes de mes parties, ça marche comment ?
 
-Comme dit au paragraphe précédent, les données utilisateurs de Foundry sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data` (répertoire que vous pouvez configurer dans l'interface de Foundry). Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à l'archiver quelque part, tout simplement.
+Comme dit au paragraphe précédent, les données de vos parties sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data`.
+Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à l'archiver quelque part, tout simplement.
 
 
