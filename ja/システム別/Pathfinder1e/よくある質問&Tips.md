@@ -2,7 +2,7 @@
 title: よくある質問&Tips
 description: よくありそうな質問と便利なテクニックをまとめています
 published: true
-date: 2023-06-06T12:57:16.698Z
+date: 2023-07-01T09:17:39.571Z
 tags: 
 editor: markdown
 dateCreated: 2021-09-11T02:48:19.206Z
@@ -14,12 +14,9 @@ dateCreated: 2021-09-11T02:48:19.206Z
 編集時のバージョン FoundryVTT v9(build238)、Pathfinder1e 0.80.2
 **以下の内容はFoundryVTT v10環境では一部異なる場合があります**
 
-## FVTT v10環境での日本語化について
-FVTTのMOD一覧に記載されているPF1e日本語化MODは長らく更新されておりません。
-臨時で更新したバージョンがありますのでそちらをお使いください。
-FVTT v10環境に対応したインストールURL
-https://github.com/shoki-yui/pf1eja/releases/latest/download/module.json
-FVTT v9環境、PF1e ver0.81.3以下に対応したインストールURL
+## FVTT v9以下のバージョンでの日本語化について
+パッケージ検索で表示されるPF1e日本語化MODはFVTT v10以降にのみ対応していますので、v9以下の場合は下記のリンクからインストールしてください。
+FVTT v9以下、PF1e ver0.81.3以下に対応したインストールURL：
 https://github.com/shoki-yui/pf1eja/releases/download/1.8/module.json
 
 ## エラー関係
