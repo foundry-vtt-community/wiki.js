@@ -2,7 +2,7 @@
 title: Raspberry Pi
 description: how to install Foundry VTT on a Raspberry PI
 published: true
-date: 2023-07-06T20:42:27.465Z
+date: 2023-07-06T23:26:30.448Z
 tags: hosting, self-hosting, raspberry pi
 editor: markdown
 dateCreated: 2021-04-18T20:02:58.536Z
@@ -88,7 +88,9 @@ First we need to ensure that we have a folder that we can access to easily manta
 * Passing as a entry during the node command.
 
 The second approach is more feasible as we can use it to take advanced of the system configuration. So let's define it as `--dataPath=/home/<USER>/foundrydata`.
- 
+
+> When transferring the foundry data from a Windows instance of Foundry, ensure to compress the data to a `tar` and not `zip` before transmitting it to the RPi. The reason is that Windows' compression system has an issue where compressed zip files have backslashes `\` in the filepaths, which is in conflict with the UNIX requirement of forward slashes `/`. [Source](https://github.com/PowerShell/Microsoft.PowerShell.Archive/pull/62). {.is-warning} 
+
 With the latest version of Rapberry OS the system manager is *systemd* and we can configure it with the following file. 
 
 Create it on `sudo nano /etc/systemd/system/foundryvtt.service`
