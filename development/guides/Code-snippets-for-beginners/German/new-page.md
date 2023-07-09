@@ -2,7 +2,7 @@
 title: Einführung
 description: 
 published: true
-date: 2023-07-09T19:21:00.265Z
+date: 2023-07-09T19:22:26.793Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-09T15:06:05.790Z
@@ -33,7 +33,7 @@ Auch andere Code Schnippsel werden gerne genommen.
 Da Foundry nicht besonders gut Dokumentiert ist aus der halb Layen Sicht ist es notwendig sich Objekte, HTML Seiten etc. im "Quellcode" des Browsers anzusehen. Dazu kann man per F12 und dann über die Auswahl der Konsole den Output sichten den der Browser ausgegeben hat.
 
 #### F12
-
+![f12full.png](/codesnippets/f12full.png)
 #### Konsole
 ![konsole.png](/codesnippets/konsole.png)
 ### Logging
