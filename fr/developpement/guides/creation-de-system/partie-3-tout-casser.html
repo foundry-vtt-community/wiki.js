@@ -1,0 +1,131 @@
+<!--
+title: Partie 3 - Tout casser
+description: 
+published: true
+date: 2023-07-10T20:13:32.275Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-07-10T20:13:32.275Z
+-->
+
+<p><i><mark class="pen-red"><strong><u>(Page en cours d'édition)</u></strong></mark></i><br><br>Maintenant que nous savons que Foundry peut voir notre système et que nous avons créé un monde de développement, nous pouvons commencer les préliminaires de la création de notre fiche de personnage. Il est préférable d'effectuer ces étapes avec une copie d'une fiche de personnage de votre système devant vous, donc si vous prévoyez de créer Paranoia, assurez-vous d'avoir votre fiche de personnage clonée prête.</p>
+<p>&nbsp;</p>
+<p><span class="text-big"><strong>3a. Ouvrez à la fois les fichiers template.json et ./templates/actor-sheet.html dans votre éditeur.</strong></span></p>
+<p>(dans VSCode, vous pouvez cliquer avec le bouton droit de la souris sur l'un de ces fichiers en haut de l'écran après l'avoir ouvert et choisir "Diviser à droite" pour afficher une vue en écran partagé.)</p>
+<figure class="image"><img src="/fr/developpement/systemes/captures/template_et_actor_sheet.png"></figure>
+<p>La fenêtre de gauche est notre fichier template.json qui contient toutes nos données à utiliser, la fenêtre de droite est un fichier HTML qui utilise ces données.</p>
+<p>&nbsp;</p>
+<p><span class="text-big"><strong>3b. Lisez et comprenez un peu d'HTML</strong></span></p>
+<p>Certains d'entre vous pourront déjà comprendre ce qui se passe ici, mais pour être complet, nous allons examiner de plus près les lignes 7, 11 et 13 de notre fichier HTML.</p>
+<p>&nbsp;</p>
+<p>Ligne 7 :</p>
+<pre><code class="language-plaintext">&lt;h1 class="charname"&gt;
+   &lt;input name="name" type="text" value="{{data.name}}" placeholder="Name" /&gt;
+&lt;/h1&gt;</code></pre>
+<p>Ligne 11 :</p>
+<pre><code class="language-plaintext">&lt;input type="number" name="data.health.value" value="{{systemData.health.value}}"/&gt;</code></pre>
+<p>Ligne 13 :</p>
+<pre><code class="language-plaintext">&lt;input type="number" name="data.health.max" value="{{systemData.health.max}}"/&gt;</code></pre>
+<p>Chacune de ces lignes crée une zone de texte &lt;input&gt; sur notre fiche de personnage, et chacune est liée à quelque chose de différent. En simplifiant grandement : chaque fois que Foundry crée un personnage, il crée un objet de base de données pour ce personnage appelé "actor" et lui donne une sous-entrée appelée "data" qui contient tout ce de notre fichier template.json que nous lui avons dit qu'un acteur avait besoin.</p>
+<p>Foundry est livré avec certains Handlebars prédéfinis. Ce sont essentiellement des raccourcis que nous pouvons utiliser pour dire à Foundry de lire {{data.health.value}} à partir des données liées à l'acteur.</p>
+<p>&nbsp;</p>
+<p>En résumé : chaque fois que vous voyez quelque chose enveloppé dans {{}} dans le HTML de Foundry, c'est un raccourci qui (probablement) fait référence à des données d'un objet JSON.</p>
+<p>&nbsp;</p>
+<p>Nous pouvons utiliser cette structure exacte pour créer nos propres entrées. "Name" (nom) fait toujours référence au chemin où nous voulons stocker nos données. "Value" (valeur) fait toujours référence aux informations réelles que nous stockons.</p>
+<p>Ainsi, si notre santé maximale est de 10, ces informations sont stockées à data.health.max, ce qui dans notre modèle ressemble à ceci :</p>
+<pre><code class="language-plaintext">"health": {
+ "value": 10,
+ "min": 0,
+ "max": 10
+},</code></pre>
+<p>Mais nous n'obtenons pas la valeur dans la zone de texte à moins de dire à Foundry de nous donner la valeur en utilisant {{data.health.max}}.</p>
+<p>&nbsp;</p>
+<p>"Name" (nom) indique à Foundry où stocker les informations.</p>
+<p>"Value" (valeur) indique à Foundry d'obtenir les informations pour nous.</p>
+<p>&nbsp;</p>
+<p><span class="text-big"><strong>3c. Tout casser</strong></span></p>
+<p>Maintenant que nous pouvons voir comment Foundry fait référence à nos données, donnons-lui des données à utiliser. La section "Actor" de notre fichier template.json ne contient qu'un seul type, ce qui nous convient parfaitement. Nous nous intéressons uniquement aux personnages et nous voulons vraiment créer une fiche de personnage de toute façon.</p>
+<p>Nous ne prévoyons pas d'utiliser le système d'attributs à entrée libre de Foundry, alors supprimons les attributs et les groupes.</p>
+<p>&nbsp;</p>
+<p>Avant :</p>
+<pre><code class="language-plaintext">"character": {
+ "biography": "",
+ "health": {...},
+ "power": {...},
+ "attributes": {},
+ "groups": {}
+}
+
+Après :
+"character": {
+ "biography": "",
+ "health": {...},
+ "power": {...}
+}</code></pre>
+<p>Un bref détour</p>
+<p>Cependant, comme nous avons un tas de choses qui font référence à ces données, nous devons nous assurer de ne pas simplement les supprimer dans les données mais aussi dans le HTML. Sinon, nous ne pourrons pas ouvrir la fiche de personnage en raison d'erreurs nous indiquant que Foundry ne peut pas trouver certaines données auxquelles il a été demandé de rechercher.</p>
+<p>Donc, dans notre fichier actor-sheet.html, supprimons sans pitié le très beau système d'attributs à entrée libre qu'Atropos nous a créé afin de pouvoir mettre en place nos propres simples zones de saisie de texte.</p>
+<p>&nbsp;</p>
+<p>Avant :</p>
+<p>&nbsp;</p>
+<p>{{!-- Attributes Tab --}}</p>
+<p>&lt;div class="tab attributes" data-group="primary" data-tab="attributes"&gt;</p>
+<p>&nbsp; &nbsp;&lt;header class="attributes-header flexrow"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-key"&gt;{{localize "SIMPLE.AttributeKey"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-value"&gt;{{localize "SIMPLE.AttributeValue"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-label"&gt;{{localize "SIMPLE.AttributeLabel"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-dtype"&gt;{{localize "SIMPLE.AttributeDtype"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;a class="attribute-control" data-action="create" data-group="{{group}}"&gt;&lt;i class="fas fa-plus"&gt;&lt;/i&gt;&lt;/a&gt;</p>
+<p>&nbsp; &nbsp;&lt;/header&gt;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp;{{!-- Render the attribute list partial. --}}</p>
+<p>&nbsp; &nbsp;{{&gt; "systems/worldbuilding/templates/parts/sheet-attributes.html" attributes=systemData.ungroupedAttributes dtypes=dtypes}}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp;{{!-- Render the grouped attributes partial and control. --}}</p>
+<p>&nbsp; &nbsp;&lt;div class="groups"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;{{&gt; "systems/worldbuilding/templates/parts/sheet-groups.html" attributes=systemData.groupedAttributes groups=systemData.groups dtypes=dtypes}}</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;div class="group-controls flexrow"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;input class="group-prefix" type="text" value=""/&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;a class="button group-control" data-action="create-group"&gt;&lt;i class="fas fa-plus"&gt;&lt;/i&gt;Add Attribute Group&lt;/a&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp;&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p>Après :</p>
+<p>&nbsp;</p>
+<p>{{!-- Attributes Tab --}}</p>
+<p>&lt;div class="tab attributes" data-group="primary" data-tab="attributes"&gt;</p>
+<p>&nbsp; &nbsp;&lt;header class="attributes-header flexrow"&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-key"&gt;{{localize "SIMPLE.AttributeKey"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-value"&gt;{{localize "SIMPLE.AttributeValue"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-label"&gt;{{localize "SIMPLE.AttributeLabel"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;span class="attribute-dtype"&gt;{{localize "SIMPLE.AttributeDtype"}}&lt;/span&gt;</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp;&lt;a class="attribute-control" data-action="create</p>
+<p>&nbsp;</p>
+<p>D'accord, nous pouvons maintenant revoir les fichiers que nous allons utiliser pour créer notre système. Voici les fichiers principaux sur lesquels nous allons travailler :</p>
+<p>&nbsp;</p>
+<p>./template.json</p>
+<p>&nbsp;</p>
+<p>Le fichier template.json contient la structure de données que Foundry applique automatiquement lorsqu'une entité est créée. Une entité, dans notre cas, peut être un personnage ou un objet qui nécessite une fiche contenant différentes informations. Foundry possède d'autres types d'entités, mais nous nous intéressons uniquement aux personnages et aux objets.</p>
+<p>&nbsp;</p>
+<p>./styles/simple.css</p>
+<p>&nbsp;</p>
+<p>C'est le fichier CSS principal qui contrôle l'apparence de notre système. Nous nous intéresserons principalement à ce fichier pour modifier l'apparence de nos pages HTML.</p>
+<p>&nbsp;</p>
+<p>./templates/actor-sheet.html</p>
+<p>&nbsp;</p>
+<p>Chaque fois que Foundry crée un personnage pour notre système, il utilise cette page HTML. C'est là que nous allons créer notre fiche de personnage et la personnaliser pour afficher les informations que nous voulons.</p>
+<p>&nbsp;</p>
+<p>./module/actor-sheet.js</p>
+<p>&nbsp;</p>
+<p>C'est la classe JavaScript "ActorSheet" de notre système. Ce fichier est assez important, mais nous n'y passerons pas beaucoup de temps.</p>
+<p>&nbsp;</p>
+<p>./templates/item-sheet.html</p>
+<p>&nbsp;</p>
+<p>C'est la même chose que actor-sheet.html, mais pour les objets. Nous ne modifierons pas ce fichier dans ce guide.</p>
+<p>&nbsp;</p>
+<p>./module/item-sheet.js</p>
+<p>&nbsp;</p>
+<p>C'est la même chose que actor-sheet.js, mais pour les objets. Vous avez compris le principe.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
