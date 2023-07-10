@@ -1,0 +1,36 @@
+<!--
+title: Création de module partie 1 - Je l'ai fais
+description: 
+published: true
+date: 2023-07-10T19:59:09.563Z
+tags: creation de systeme, guide
+editor: ckeditor
+dateCreated: 2023-07-10T19:59:09.563Z
+-->
+
+<p><span class="text-huge"><strong>Partie 1 - Je l'ai fais</strong></span></p>
+<p><br>Tout d'abord, nous devons créer un système et faire en sorte que Foundry reconnaisse qu'il s'agit d'un nouveau système de jeu (du moins, en ce qui nous concerne). Nous pouvons nous épargner beaucoup de travail en clonant un système de jeu existant, heureusement Atropos a eu la gentillesse d'en créer un que nous pouvons sans vergogne voler et utiliser à nos propres fins malveillantes.</p>
+<p>1a. Installer ou télécharger le <strong>Simple Worldbuilding System</strong>.</p>
+<p>&nbsp;</p>
+<p>1b. Créer une copie du système de construction de monde dans un nouveau dossier et nommer ce dossier selon les restrictions suivantes :</p>
+<ul>
+  <li><i><mark class="marker-yellow">Le nom du dossier est entièrement en minuscules.</mark></i></li>
+  <li><i><mark class="marker-yellow">Le nom du dossier ne contient aucun caractère spécial ou symbole.</mark></i></li>
+  <li><i><mark class="marker-yellow">Le nom du dossier ne contient aucun espace.</mark></i></li>
+</ul>
+<p>&nbsp;</p>
+<p>1c. Une fois que vous avez fait cela, nous allons ouvrir votre nouveau dossier dans votre IDE de choix.</p>
+<p>&nbsp;</p>
+<p>1d. Ouvrez le fichier system.json et modifiez les valeurs selon vos besoins. Nous voulons nous assurer que :</p>
+<ul>
+  <li>"name" : "yoursystemname" - correspond exactement au nom du dossier de votre nouveau système.</li>
+  <li>"title" : "Your System Name" - remplacez-le par un nom lisible par les humains pour votre système.</li>
+  <li>Toutes les autres données pertinentes sont complétées dans cette liste. Nous créditons Atropos dans notre description. Après tout, nous volons son code.</li>
+  <li>"description" : "Une implémentation rudimentaire de &lt;yoursystemhere&gt; pour Foundry VTT, basée entièrement sur le Simple Worldbuilding System pour Foundry conçu par Atropos."</li>
+</ul>
+<p>&nbsp;</p>
+<p>Remarque : si vous n'avez pas l'intention de distribuer ce système (ou du moins pas encore), vous pouvez laisser url, manifest et download en tant que "chaîne vide" (guillemets vides).</p>
+<p>&nbsp;</p>
+<p>1e. VÉRIFIEZ VOTRE TRAVAIL ! Ouvrez Foundry (ou redémarrez-le complètement). Si tout est correct, Foundry affichera l'installation d'un nouveau système. Les erreurs courantes à cette étape incluent une mauvaise mise en forme du fichier json, la plus probable étant de mettre une virgule supplémentaire dans la dernière entrée du fichier.</p>
+<p>&nbsp;</p>
+<p>1f. Puisque nous sommes déjà là, créons un monde de développement pour notre système afin que nous puissions casser des choses sans prendre de risques, car oh boy, nous allons casser des choses. Créez un monde appelé (DEV) - mygamesystemhere.</p>
