@@ -1,0 +1,30 @@
+<!--
+title: Partie 2 - Visite éclaire
+description: 
+published: true
+date: 2023-07-10T20:00:25.318Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-07-10T20:00:25.317Z
+-->
+
+<p><br><span class="text-huge"><strong>Partie 2 - Visite éclair</strong></span></p>
+<p>&nbsp;</p>
+<p>Avant d'aller plus loin, nous allons faire un bref détour pour examiner ce que nous allons exactement détruire de manière catastrophique dans nos tentatives de créer un système fonctionnel. Voici les fichiers sur lesquels nous allons principalement travailler :</p>
+<p>./template.json</p>
+<p>Le fichier template.json contient la structure de données que Foundry applique automatiquement chaque fois qu'une entité est créée. Une entité, pour ce qui nous concerne, est simplement un personnage ou un objet qui doit avoir une fiche (formulaire) contenant des données. Foundry a d'autres types d'entités, mais nous nous intéressons uniquement aux personnages et aux objets.</p>
+<p>&nbsp;</p>
+<p>./styles/simple.css</p>
+<p>Le principal fichier CSS qui contrôle l'apparence de tout dans notre système. Nous nous intéressons principalement à cela pour rendre nos pages HTML plus attrayantes.</p>
+<p>&nbsp;</p>
+<p>./templates/actor-sheet.html</p>
+<p>Chaque fois que Foundry crée un personnage pour notre système, il utilise cette page. C'est là que nous allons créer notre fiche de personnage et la modifier pour qu'elle utilise les données que nous voulons.</p>
+<p>&nbsp;</p>
+<p>./module/actor-sheet.js</p>
+<p>La classe JavaScript "ActorSheet" pour notre système. Grande et effrayante. Nous n'y passerons pas beaucoup de temps.</p>
+<p>&nbsp;</p>
+<p>./templates/item-sheet.html</p>
+<p>Identique à actor-sheet.html, mais pour les objets. Nous ne le modifierons pas dans ce guide.</p>
+<p>&nbsp;</p>
+<p>./module/item-sheet.js</p>
+<p>Identique à actor-sheet.js... mais pour les objets. Vous avez compris l'idée.</p>
