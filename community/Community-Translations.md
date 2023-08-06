@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2022-05-19T13:18:22.047Z
+date: 2023-08-06T21:29:38.270Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -86,9 +86,18 @@ https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.j
 ## Finnish
 
 ### Core Game Foundry VTT 
-* **Authors**: Demian#9694
-* **Version**: *being tested* (ETA: 2020-12)
-* **Foundry VTT Compatibility**: 0.7.9+
+* **Authors**: Demian (demian.wright)
+* **Version**: 1.0.0–
+* **Foundry VTT Compatibility**: 0.7.5 and newer
+
+#### Link(s) to Translation
+* GitLab: [https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/tree/main/dist](https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/tree/main/dist)
+* Manifest: [https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/releases/permalink/latest/downloads/module.json](https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/releases/permalink/latest/downloads/module.json)
+
+#### Description
+Suomenkielinen käännös Foundry VTT -⁠sovelluksen käyttöliittymälle, karttamuistiinpanojen kuvakkeille, sekä TinyMCE:lle. Koko sovelluksen käännös vaatii moduulin aktivoimisen lisäksi myös muuta työtä, katso [yksityiskohtaiset asennusohjeet](https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/tree/main/dist#nopea-asennusohje).
+
+Finnish translation for the Foundry VTT application user interface, map note icons, and TinyMCE. Translating the entire application requires more work in addition to just enabling the module, see the [detailed installation instructions](https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/tree/main/dist#quick-installation-guide).
 
 ---
 
@@ -395,7 +404,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 | zh-Hans | Chinese (simplified) / 中文（简体） | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/xtlcme/foundry-vtt-chn/) | *none* | <i class="fas fa-comments"></i> Tencent QQ Group #: **716573917** | [HBuilder X](https://www.dcloud.io/hbuilderx.html) (locally) |
 | zh-Hant | Chinese (traditional) / 正體中文 |  <i class="fab fa-github"></i> [GitHub](https://github.com/hktrpg/foundry_zh-tw/) | *none* | <i class="fab fa-discord"></i> [HKTRPG Foundry VTT  C](https://discord.gg/vx4kcm7)  | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
 | cs-CZ | Czech / čeština | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz) | *none* | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) | [Transifex](https://www.transifex.com/foundryvtt-czech/public/) |
-| fi-FI | Finnish / suomi | *work in progress* | MIT | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) | [Transifex: Foundry VTT Community Translations](https://www.transifex.com/fvtt-community-l10n/public/) |
+| fi-FI | Finnish / suomi | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/tree/main/dist) | MIT | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) | Local. |
 | fr-FR | French / français | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr) | *none* | <i class="fab fa-discord"></i> [La Fonderie](https://discord.gg/pPSDNJk) | [Visual Studio Code](https://code.visualstudio.com/) (locally) |
 | de-DE | German / Deutsch | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/Hydroxi/foundryvtt-lang-de-de) | *none* | <i class="fab fa-discord"></i> [Die Gießerei (FoundryVTT)](https://discord.gg/XrKAZ5J) | ? |
 | it-IT | Italian / italiano | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/riccisi/foundryvtt-lang-it-it) | *none* | <i class="fab fa-discord"></i> [Foundry_ITA](https://discord.gg/hsRcTby) | [Transifex](https://www.transifex.com/foundryvtt-ita/public) |
