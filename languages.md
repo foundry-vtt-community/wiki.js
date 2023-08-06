@@ -2,7 +2,7 @@
 title: Languages
 description: Translations available for Foundry VTT.
 published: true
-date: 2022-09-07T18:36:22.394Z
+date: 2023-08-06T20:47:46.763Z
 tags: translations, languages, localizations
 editor: markdown
 dateCreated: 2021-02-24T21:22:56.597Z
@@ -21,7 +21,7 @@ For additional translations (including ones for game systems) see the [list of t
 | zh-Hant | Chinese (traditional) / 正體中文 | [Latest version](https://raw.githubusercontent.com/hktrpg/foundry_zh-tw/main/module.json) | [HKTRPG Foundry VTT (中文)](https://discord.gg/vx4kcm7) |
 | cs-CZ | Czech / čeština | [Latest version](https://gitlab.com/ptoseklukas/foundryvtt-lang-cs-cz/-/raw/master/cs-CZ/module.json) | <i class="fab fa-discord"></i> [The Foundry CZ komunita](https://discord.gg/7dHDqEW) (also Slovak) |
 | en-US | English (American) *[Default]* | — | <i class="fab fa-discord"></i> [The Foundry](https://discordapp.com/invite/DDBZUDf) (official) |
-| fi-FI | Finnish / suomi | *work in progress* | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |
+| fi-FI | Finnish / suomi | [Latest version](https://gitlab.com/foundry-vtt-suomi/fvtt-lang-fi-fi/-/releases/permalink/latest/downloads/module.json) | <i class="fab fa-discord"></i> [Foundry VTT Suomi](https://discord.gg/U4y3cNebbg) |
 | fr-FR | French / français | [Latest version](https://gitlab.com/baktov.sugar/foundryvtt-lang-fr-fr/-/raw/master/fr-FR/module.json) | <i class="fab fa-discord"></i> [La Fonderie](https://discord.gg/pPSDNJk) |
 | de-DE | German / Deutsch | [Latest version](https://gitlab.com/henry4k/foundryvtt-lang-de/-/raw/master/module.json) | <i class="fab fa-discord"></i> [Die Gießerei (FoundryVTT)](https://discord.gg/XrKAZ5J) |
 | it-IT | Italian / italiano | [Latest version](https://gitlab.com/riccisi/foundryvtt-lang-it-it/-/raw/master/it-IT/module.json) | <i class="fab fa-discord"></i> [Foundry_ITA](https://discord.gg/hsRcTby) |
