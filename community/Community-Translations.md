@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2023-08-06T21:29:38.270Z
+date: 2023-08-06T22:12:18.940Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -465,9 +465,38 @@ The table below lists various statistics of the core English translation file ac
 		<tr><td>0.8.6</td><td><strong>Yes</strong></td><td>No</td><td>37</td><td>0</td><td>0</td><td>1049</td><td>0</td><td>0</td><td>175</td><td>0</td></tr>
 		<tr><td>0.8.7</td><td>No</td><td>No</td><td>9</td><td>10</td><td>3</td><td>359</td><td>95</td><td>43</td><td>53</td><td>8</td></tr>
 		<tr><td>0.8.8</td><td><strong>Yes</strong></td><td>No</td><td>2</td><td>0</td><td>0</td><td>18</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
-		<tr><td>0.8.9</td><td>No</td><td><i>?</i></td><td>3</td><td>4</td><td>0</td><td>136</td><td>39</td><td>0</td><td>23</td><td>0</td></tr>
+		<tr><td>0.8.9</td><td>No</td><td>No</td><td>3</td><td>4</td><td>0</td><td>136</td><td>39</td><td>0</td><td>23</td><td>0</td></tr>
+		<tr><td>9.238</td><td>No</td><td>No</td><td>332</td><td>40</td><td>80</td><td>12521</td><td>939</td><td>2355</td><td>1906</td><td>372</td></tr>
+		<tr><td>9.240</td><td>No</td><td><strong>Yes</strong></td><td>3</td><td>8</td><td>0</td><td>351</td><td>161</td><td>0</td><td>57</td><td>0</td></tr>
+		<tr><td>9.241</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.242</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.245</td><td>No</td><td><strong>Yes</strong></td><td>4</td><td>3</td><td>0</td><td>83</td><td>58</td><td>0</td><td>12</td><td>0</td></tr>
+		<tr><td>9.249</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.251</td><td>No</td><td><strong>Yes</strong></td><td>8</td><td>4</td><td>0</td><td>98</td><td>4</td><td>0</td><td>21</td><td>0</td></tr>
+		<tr><td>9.254</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.255</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.266</td><td>No</td><td>No</td><td>1</td><td>18</td><td>0</td><td>11</td><td>66</td><td>0</td><td>2</td><td>0</td></tr>
+		<tr><td>9.268</td><td>No</td><td><strong>Yes</strong></td><td>0</td><td>1</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.269</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.280</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>9.283</td><td>No</td><td>No</td><td>0</td><td>33</td><td>16</td><td>0</td><td>289</td><td>543</td><td>0</td><td>92</td></tr>
+		<tr><td>10.282</td><td>No</td><td><strong>Yes</strong></td><td>363</td><td>57</td><td>39</td><td>11679</td><td>1446</td><td>1462</td><td>1854</td><td>220</td></tr>
+		<tr><td>10.283</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>10.284</td><td>No</td><td>No</td><td>0</td><td>2</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>10.285</td><td><strong>Yes</strong></td><td>No</td><td>5</td><td>0</td><td>0</td><td>208</td><td>0</td><td>0</td><td>32</td><td>0</td></tr>
+		<tr><td>10.286</td><td>No</td><td>No</td><td>3</td><td>1</td><td>0</td><td>55</td><td>149</td><td>0</td><td>7</td><td>0</td></tr>
+		<tr><td>10.287</td><td>No</td><td><strong>Yes</strong></td><td>19</td><td>1</td><td>5</td><td>1110</td><td>33</td><td>322</td><td>181</td><td>45</td></tr>
+		<tr><td>10.288</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>10.290</td><td>No</td><td>No</td><td>2</td><td>1</td><td>0</td><td>141</td><td>1</td><td>0</td><td>18</td><td>0</td></tr>
+		<tr><td>10.291</td><td><strong>Yes</strong></td><td>No</td><td>2</td><td>0</td><td>0</td><td>147</td><td>0</td><td>0</td><td>25</td><td>0</td></tr>
+		<tr><td>11.299</td><td>No</td><td>No</td><td>445</td><td>53</td><td>13</td><td>14107</td><td>1218</td><td>471</td><td>2216</td><td>72</td></tr>
+		<tr><td>11.300</td><td>No</td><td>No</td><td>2</td><td>6</td><td>0</td><td>53</td><td>67</td><td>0</td><td>6</td><td>0</td></tr>
+		<tr><td>11.301</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>2</td><td>0</td><td>0</td><td>17</td><td>0</td><td>0</td><td>3</td><td>0</td></tr>
+		<tr><td>11.302</td><td><strong>Yes</strong></td><td><i>?</i></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
 	</tbody>
 </table>
+
+
 
 **<a id="footnote-1"><sup>1</sup></a>**: These values are in comparison to the *previous* version's (row's) translation file.
 
