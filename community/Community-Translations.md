@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2023-08-06T22:12:18.940Z
+date: 2023-08-07T08:05:56.088Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -492,7 +492,11 @@ The table below lists various statistics of the core English translation file ac
 		<tr><td>11.299</td><td>No</td><td>No</td><td>445</td><td>53</td><td>13</td><td>14107</td><td>1218</td><td>471</td><td>2216</td><td>72</td></tr>
 		<tr><td>11.300</td><td>No</td><td>No</td><td>2</td><td>6</td><td>0</td><td>53</td><td>67</td><td>0</td><td>6</td><td>0</td></tr>
 		<tr><td>11.301</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>2</td><td>0</td><td>0</td><td>17</td><td>0</td><td>0</td><td>3</td><td>0</td></tr>
-		<tr><td>11.302</td><td><strong>Yes</strong></td><td><i>?</i></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>11.302</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+		<tr><td>11.304</td><td><strong>Yes</strong></td><td>No</td><td>1</td><td>0</td><td>0</td><td>182</td><td>0</td><td>0</td><td>26</td><td>0</td></tr>
+		<tr><td>11.305</td><td>No</td><td>No</td><td>1</td><td>0</td><td>2</td><td>72</td><td>0</td><td>200</td><td>10</td><td>30</td></tr>
+		<tr><td>11.306</td><td><strong>Yes</strong></td><td>No</td><td>14</td><td>0</td><td>0</td><td>296</td><td>0</td><td>0</td><td>44</td><td>0</td></tr>
+		<tr><td>11.307</td><td><strong>Yes</strong></td><td><i>?</i></td><td>2</td><td>0</td><td>0</td><td>34</td><td>0</td><td>0</td><td>6</td><td>0</td></tr>
 	</tbody>
 </table>
 
