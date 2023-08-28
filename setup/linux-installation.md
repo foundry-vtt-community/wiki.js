@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-06-22T14:52:23.564Z
+date: 2023-08-28T16:06:25.958Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -50,13 +50,24 @@ This guide supports the following distributions:
 1. Debian 11 based, such as (but not limited to):
 a. Debian
 b. Ubuntu
-c. 64 bit Raspberry Pi OS (***not*** Raspberry Pi Desktop which is based on 32-bit Debian and does not support Nodejs 14+)
+c. 64 bit Raspberry Pi OS 
 2. CentOS 8 based, such as (but not limited to):
 a. CentOS
 b. Red Hat Linux
 c. Fedora
 
 Any distrition that uses the `apt` or `dnf` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
+
+### Distributions to Avoid
+
+- **Amazon Linux 2**
+This AWS-specific distribution does not support Node 18+, and also includes a number of changes and customizations that are specific to AWS and are out of scope of a simple Foundry hosting setup. 
+
+- **NixOS** or similar containerized / declarative distributions
+These distributions can work to host Foundry, but the instructions below will not work. They require specialized setup.
+
+- Legacy or 32-bit **Raspberry Pi OS/Raspbian** 
+Current 64-bit Raspberry Pi OS works and is recommended, but older or 32-bit versions have limited support for newer Node versions or could bump into limitations down the line. 
 
 >This guide requires 64 bit Debian 11 or CentOS 8 based distributions or higher. Using lower versions may not function properly. 32 bit OSs will have issues with RAM and NodeJS heap size. {.is-info}
 
