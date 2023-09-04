@@ -2,7 +2,7 @@
 title: System Development-Part-1-I-Made-This
 description: 
 published: true
-date: 2023-09-04T19:02:40.069Z
+date: 2023-09-04T19:07:38.913Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:49.857Z
@@ -16,7 +16,7 @@ So first we need to create a system and have Foundry recognize that it’s a new
 
   
 
-1a. Install or download [Simple Worldbuilding System](https://github.com/foundryvtt/worldbuilding)
+1a. Install or download [Simple Worldbuilding System](https://gitlab.com/foundryvtt/worldbuilding)
 
   
 
