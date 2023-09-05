@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T09:55:07.784Z
+date: 2023-09-05T09:55:30.626Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -109,6 +109,7 @@ Exemple : je veux jouer à Warhammer, j'installe le système de jeu "Warhammer" 
 
 Les modules sont des extensions, comme des plugins, qui viennent ajouter des fonctionnalités au logiciel. Ces modules viennent donc ajouter des compléments aux « systèmes », en offrant des aides pour les MJ et les joueurs : 
 - effets spéciaux, 
+- des contenus (images, musiques, cartes, ...)
 - navigation dans les fichiers images, 
 - communication, etc, etc. 
 
