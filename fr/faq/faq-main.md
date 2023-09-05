@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T09:53:01.508Z
+date: 2023-09-05T09:54:22.523Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -53,7 +53,7 @@ Cela revient à faire tourner Foundry tout le temps, et donc à laisser allumer 
 
 ## Et il faut de la bande passante ?
 
-Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra au moins 4 Mbs montant (je dis bien montant) pour jouer confortablement. Donc si vous avez la fibtre ou un "gros" ADSL, ca doit marcher. Sinon, il faut vous orienter vers un hébergement tiers.
+Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra au moins 4 Mbs montant (je dis bien montant) pour jouer confortablement. Donc si vous avez la fibre ou un "gros" ADSL, ca doit marcher. Sinon, il faut vous orienter vers un hébergement tiers.
 
 ## J’ai déjà un serveur, comment je fais ?
 
