@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T09:58:45.531Z
+date: 2023-09-05T10:00:36.124Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -170,7 +170,9 @@ Au sein d'un même palier, les modules et systèmes indiquant le support du pali
 
 ## Mon JDR « Borglur of Daemon of Death Doomesque » est pas dispo ! Que faire ?
 
-Plusieurs options sont possibles. La première est d’utiliser le module générique. La seconde, qui n’empêche d’ailleurs pas la première, est d’aller sur le Discord de Foundry et de demander si quelqu’un est pas en train de bosser dessus. Et ensuite, si vous avez des connaissances Javascript (et éventuellement CSS), vous pouvez vous lancer dans le développement du système. Nul doute qu’en parlant sur le Discord, vous trouverez des personnes prêtes à vous aider. Bon peut être pas pour Borglur of Daemon of Death Doomesque, mais pour les autres, probablement.
+Plusieurs options sont possibles. La première est d’utiliser le module générique. La seconde, qui n’empêche d’ailleurs pas la première, est d’aller sur le Discord de Foundry et de demander si quelqu’un est pas en train de bosser dessus. Et ensuite, si vous avez des connaissances Javascript (et éventuellement CSS), vous pouvez vous lancer dans le développement du système. 
+Efin, il existe un système dédié à la création de JDR sans développer : Custom System Builder. Son auteur est français, et un canal dédié est disponible sur le Discord de Foundry FR, avec pas mal de membres capables de vous aider.
+Donc au final, nul doute qu’en parlant sur le Discord, vous trouverez des personnes prêtes à vous aider. Bon peut être pas pour Borglur of Daemon of Death Doomesque, mais pour les autres, probablement.
 
 ## Je veux développer mon système ou module, ou en traduire un existant. Je fais comment ?
 
