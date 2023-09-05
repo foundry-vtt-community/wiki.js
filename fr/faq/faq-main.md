@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T10:00:36.124Z
+date: 2023-09-05T10:02:34.055Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -203,7 +203,7 @@ Cete attitude connue est compréhensible, mais à titre perso je maitrise plus s
 Il ya de nombreuses vidéos sur YT, mais celle-ci est régulièrement citée en référnce  :
 [cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
 
-La chaine YT de Carter est utile également, ainsi que les Chroniques de la Fonderie, comme indiqué plus haut.
+La chaine YT de Carter (https://www.youtube.com/@carterfoundryvtt) contient plein de tutos à jour, et les Chroniques de la Fonderie peuvent aussi aider, comme indiqué plus haut.
 
 ## J'ai le soft, mais mes joueurs ne peuvent pas se connecter
 
