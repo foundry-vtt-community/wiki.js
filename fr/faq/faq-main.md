@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T09:54:22.523Z
+date: 2023-09-05T09:55:07.784Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -102,7 +102,7 @@ Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxon
 
 ## Je vois qu'il y a des "systèmes". C'est quoi ?
 
-Les systèmes, ce sont les systèmes de jeu. Donc 1 système = 1 JDR. Pour pouvoir jouer à un jeu Y, il faut donc installer le système Y correspondand. 
+Les systèmes, ce sont les systèmes de jeu. Donc 1 système = 1 JDR. Pour pouvoir jouer à un jeu Y, il faut donc installer le système Y correspondant. 
 Exemple : je veux jouer à Warhammer, j'installe le système de jeu "Warhammer" en le cherchant dans l'interface "Systèmes".
 
 ## J’ai vu qu’il y avait aussi des modules, c’est quoi ?
