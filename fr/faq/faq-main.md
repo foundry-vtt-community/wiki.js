@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T09:55:30.626Z
+date: 2023-09-05T09:56:49.264Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -125,7 +125,8 @@ Un monde, c'est ta partie de JDR, ta table de jeu, quoi. On créée un monde à 
 
 ## J'ai vu qu'il y a avait des modules "premium". C'est quoi ?
 
-La grande majorité des modules sont gratuits, mais certains modules de contenus (règles, scénarios, campagnes, etc) sont produits par des éditeurs et sont payants. En général, il faut les acheter sur le site de l'éditeur, qui fourni une clé de licence. Cette clé est à saisir dans l'interface d'administration de ton commpte Foundry (ie sur https://foundryvtt.com ). 
+La grande majorité des modules sont gratuits, mais certains modules de contenus (règles, scénarios, campagnes, etc) sont produits par des éditeurs et sont payants. En général, il faut les acheter sur le site de l'éditeur, qui fourni une clé de licence. Cette clé est à saisir dans l'interface d'administration de ton commpte Foundry (ie sur https://foundryvtt.com ). De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
+
 Une fois cette clée saisie, le module apparait comme installable dans les modules "premiums", via l'interface "modules" de Foundry.  
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
