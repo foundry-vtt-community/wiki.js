@@ -2,7 +2,7 @@
 title: 0.0. Pathfinder Seconde Édition
 description: 
 published: true
-date: 2023-03-21T13:34:52.962Z
+date: 2023-09-08T20:44:37.796Z
 tags: pathfinder 2e, foundry
 editor: markdown
 dateCreated: 2021-02-27T10:55:46.524Z
@@ -27,7 +27,7 @@ Ce fichier permet d'afficher les valeurs en français, sans toucher au reste du 
 
 **PF2e - Français - fan made (unofficial)**
 C'est le module de contenu que Babele va substituer.
-Le dépôt se trouve sur Gitlab à l'adresse suivante : https://gitlab.com/pathfinder-fr/foundryvtt-pathfinder2e-lang-fr 
+Le dépôt se trouve sur Gitlab à l'adresse suivante : https://gitlab.com/pathfinder-fr/foundryvtt-pathfinder2-fr 
 
 * Vous bénéficiez grâce à ce module des compendiums du système Pathfinder 2 en français ainsi que de l'interface utilisateur en français : 
 
