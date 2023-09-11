@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-08-28T16:33:08.529Z
+date: 2023-09-11T23:13:56.486Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -171,19 +171,23 @@ sudo dnf update -y
 
 >If after entering the correct password, you receive an error: `<user> is not in the sudoers file` or similar, then you must login as **root** and complete ther [User Setup](#user-setup). {.is-warning}
 
-<a id="B6" href="#B6">B6.</a> Add the nodejs 18 repository to the system package manager:
+<a id="B6" href="#B6">B6.</a> Add the nodejs 20 repository to the system package manager:
 
 <details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
-curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
 </details>
 
 <details><summary>CentOS/Red Hat/Fedora ▼ </summary>
   
 ```
-curl -sL https://rpm.nodesource.com/setup_18.x | sudo bash -
+sudo yum install https://rpm.nodesource.com/pub_20.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
 ```
 </details>
 
