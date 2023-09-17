@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-09-11T23:13:56.486Z
+date: 2023-09-17T19:47:25.218Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -140,8 +140,8 @@ foundry@<servername>:_
 ## System Setup
 We will now install the necessary software to run and manage Foundry behind a reverse proxy. This includes:
 
-* nodejs 18+, required to run Foundry itself
-* caddy 2+, the webserver that will be used as a reverse proxy
+* nodejs, required to run Foundry itself
+* caddy, the webserver that will be used as a reverse proxy
 * pm2, the process manager that will keep Foundry running
 * unzip, the utility used to decompress the Foundry installation zip archive
 * nano, the text editor used to edit configuration files
