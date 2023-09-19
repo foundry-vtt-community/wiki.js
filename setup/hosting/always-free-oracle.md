@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2023-09-11T23:16:10.809Z
+date: 2023-09-19T13:43:32.486Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -339,11 +339,12 @@ sudo netfilter-persistent save
 
 <a id="D9" href="#D9">D9.</a> Run the following commands to install nodejs:
 ```
-sudo apt-get install -y ca-certificates curl gnupg
+sudo apt install -y ca-certificates curl gnupg
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get install -y nodejs
+sudo apt update
+sudo apt install -y nodejs
 ```
 <a id="D10" href="#D10">D10.</a>  Check that node was installed correctly by verifying these commands return versions:
 ```
