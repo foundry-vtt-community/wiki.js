@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2023-09-21T13:30:57.019Z
+date: 2023-09-21T13:31:07.164Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -34,4 +34,4 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  
  
  
- - A venir : épisode 17....
+ - A venir : épisode 18....
