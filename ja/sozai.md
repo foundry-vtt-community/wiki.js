@@ -2,7 +2,7 @@
 title: 6．素材集
 description: 素材集
 published: true
-date: 2022-05-28T01:06:47.869Z
+date: 2023-09-21T15:15:25.805Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-06T11:02:35.590Z
@@ -25,4 +25,5 @@ https://drive.google.com/file/d/1-wCDamYDp90DHWs4sxZkSORWzSXHys-x/view?usp=shari
 https://github.com/BrotherSharper/dragonfestival1
 - レベル８　ショートシナリオ **紅蓮の炎の中で** (MTGフォーゴトン・レルム探訪）
 https://github.com/BrotherSharper/scarlet-flame-ja
-
+- レベル１～２　シナリオ　**怪物賃貸**（ https://twitter.com/Alba_gard 作）
+https://drive.google.com/drive/folders/15oB8BzQfD53zZlVWznlXeneFfFkuz1fx
