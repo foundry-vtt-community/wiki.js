@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-09-26T14:08:56.750Z
+date: 2023-09-26T14:09:55.443Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -47,6 +47,10 @@ Dans certains cas, l'adresse IP externe que vous obtenez dans FoundryVTT est err
 ## Avez vous un VPN sur le PC ? 
 
 Si oui, vérifiez bien qu'une tache lui appartenant ne s'execute pas en fond. Si oui, assurez de bien le/les stopper avant de ré-essayer. 
+
+## Avez vous un anti-virus intrusif ?
+
+Certains antivirus (comme Avast par exemple) viennent par défaut bloquer les ports, en plus du firewall. Si vous avez ce type d'antivirus, faites un essai en le désactivant temporairement.
 
 ## Mon opérateur me dit que mes ports sont possibles que de ZZZZZ à UUUUUU
 
