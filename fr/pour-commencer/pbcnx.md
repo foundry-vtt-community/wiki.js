@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-09-26T14:10:10.689Z
+date: 2023-09-26T14:11:07.958Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -70,7 +70,7 @@ Une fois cette IP "full stack" obtenue, vous pouvez reprendre les étapes de "Co
 
 ## Ben ca marche toujours pas (v2) ?
 
-Il nous faut découvrir si le problème vient de votre box ou de votre PC/Mac Foundry. Pour se faire, ce petit process dichotomique peut vous aider : 
+C'est la méthode dichotomique qui va permettre de localiser le problème. Il nous faut découvrir si le problème vient de votre box ou de votre PC/Mac Foundry. Pour se faire, ce petit process dichotomique peut vous aider : 
 
 1 - Prenez un autre PC/tablette chez vous (ou taxez en un à votre voisine ou à votre grand-mère)
 2 - Connectez vous à votre PC/Mac Foundry sur le réseau  local à partir de ce second PC/tablette. Il faut naturellement mettre l'@ IP locale de votre PC/Mac Foundry (ie genre http://192.168.1.www:30000/ )
