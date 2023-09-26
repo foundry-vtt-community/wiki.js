@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-09-26T14:06:35.557Z
+date: 2023-09-26T14:07:35.682Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -32,7 +32,7 @@ Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieu
 6. Rebootez votre box (optionnel, mais conseillé)
 7. Essayez de vous connectez avec l'adresse IP externe de votre box, suivie de ':30000'. Vous pouvez obtenir votre adresse IP publique en allant sur https://www.monippublique.com/ .
 
-Chaque box internet a une interface différente : il nous est donc impossible de donner une méthode exhaustive. Cependant, une recherche sur le net permet en général de se dépanner : "Comment ouvrir un port TCP sur ma box XXXXX", avec XXX = le nom de votre fournisseur.
+**RAPPEL** : Chaque box internet a une interface différente, il nous est impossible de donner une recette magique pour toutes les interfaces et modèles de box. Cependant, une recherche sur le net permet en général de se dépanner : "Comment ouvrir un port TCP sur ma box XXXXX", avec XXX = le nom de votre fournisseur.
 
 ## Ca marche toujours pas
 
