@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-05-31T13:29:58.463Z
+date: 2023-09-26T14:04:37.773Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -25,7 +25,7 @@ Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieu
 ## Comment ?
 
 1. Lancez Foundry et vérifiez que le port externe est bien à 30000 et que la case à cocher UPnP est **décochée**
-2. Sur votre PC/Mac, autorisez le port 30000/TCP en entrant dans votre firewall
+2. Sur votre PC/Mac, autorisez le port 30000/TCP entrant dans votre firewall. Si vous ne savez pas le faire, cherchez "Ouvrir un port TCP dans le firewall de Windows" (ou Mac) dans votre moteur de recherche favori.
 3. Connectez vous à l'interface de configuration de votre box, et cherchez une section s'appelant NAT/PAT (ou redirection de ports, ou quelque chose d'équivalent)
 4. Dans cette interface, vous pouvez saisir le port externe TCP (30000), le port interne TCP (30000) et l'adresse IP de votre PC/Mac (sur certaines box, vous pouvez choisir dans une liste déroulante).
 5. Sur certaines box, dans ces paramètres NAT, il vous est parfois demandé "Adresse IP Source" (ou un truc du du genre, avec "Source" dans le titre). Dans ce cas, il faut laisser "Toutes" ou "All", et ne surtout pas mettre une adresse IP.
