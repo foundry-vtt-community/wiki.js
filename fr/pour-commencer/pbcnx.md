@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-09-26T14:08:46.438Z
+date: 2023-09-26T14:08:56.750Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -42,7 +42,7 @@ Vou pouvez aussi consulter la page https://foundryvtt.wiki/fr/pour-commencer/win
 
 ## Vérifiez votre adresse IP externe
 
-Dans certains cas, l'adresse IP externe que vous obtenez est erronée. Vérifiez la via un site extene, par exemple https://myexternalip.com/ 
+Dans certains cas, l'adresse IP externe que vous obtenez dans FoundryVTT est erronée. Vérifiez la via un site extene, par exemple https://myexternalip.com/ 
 
 ## Avez vous un VPN sur le PC ? 
 
