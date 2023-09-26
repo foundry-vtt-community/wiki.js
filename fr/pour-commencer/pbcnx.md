@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-09-26T14:09:55.443Z
+date: 2023-09-26T14:10:10.689Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -54,7 +54,7 @@ Certains antivirus (comme Avast par exemple) viennent par défaut bloquer les po
 
 ## Mon opérateur me dit que mes ports sont possibles que de ZZZZZ à UUUUUU
 
-Bon fichtre, c'est pas très grave. Si par exemple votre opérateur vous dit que vos ports valides sont de 42000 à 50000, choisissez un port dans cette plage. Prenons 42100 par exemple.
+Bon fichtre, c'est pénible, mais pas très grave. Si par exemple votre opérateur vous dit que vos ports valides sont de 42000 à 50000, choisissez un port dans cette plage. Prenons 42100 par exemple.
 
 Dans ce cas, votre port externe devient 42100, à mettre en port externe/WAN dans les réglages du NAT de la box, mais laissez 30000 partout ailleurs (ie port interne, port de Foundry, port du firewall du PC Foundry).
 
