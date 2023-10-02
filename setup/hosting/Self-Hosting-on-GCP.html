@@ -2,7 +2,7 @@
 title: Self Hosting on GCP
 description: A quick description how to self-host a Foundry Server on the Google Cloud Platform that you can manually spin up, shut down and keep save at all times..
 published: false
-date: 2023-09-25T09:11:14.779Z
+date: 2023-10-02T09:47:13.277Z
 tags: hosting, setup, gcp
 editor: ckeditor
 dateCreated: 2023-09-25T09:11:14.779Z
@@ -16,3 +16,12 @@ dateCreated: 2023-09-25T09:11:14.779Z
 <p>Paragraph</p>
 <h2>Heading 2</h2>
 <p>Paragraph</p>
+<h2>Start-Up Script</h2>
+<pre><code class="language-plaintext">:: Re-create the VM from snapshot
+CALL gcloud compute instances create foundry-vm --project=foundry-390013 --zone=europe-west1-b --machine-type=e2-medium --network-interface=address=34.22.206.119,network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=foundrynet --maintenance-policy=MIGRATE --provisioning-model=STANDARD --service-account=768135181176-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/cloud-platform --tags=foundry-vm,http-server,https-server --create-disk=auto-delete=yes,boot=yes,device-name=foundry-vm,mode=rw,size=64,source-snapshot=projects/foundry-390013/global/snapshots/foundry-snapshot,type=projects/foundry-390013/zones/europe-west1-b/diskTypes/pd-balanced --metadata-from-file=startup-script=startup_script.txt --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any 
+
+::Delete old archive snapshot
+CALL gcloud compute snapshots delete foundry-archive-snapshot
+
+::Create archive snapshot
+CALL gcloud compute snapshots create foundry-archive-snapshot --project=foundry-390013 --source-disk=foundry-vm --source-disk-zone=europe-west1-b --storage-location=eu</code></pre>
