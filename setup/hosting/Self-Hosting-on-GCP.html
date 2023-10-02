@@ -2,7 +2,7 @@
 title: Self Hosting on GCP
 description: A quick description how to self-host a Foundry Server on the Google Cloud Platform that you can manually spin up, shut down and keep save at all times..
 published: false
-date: 2023-10-02T09:57:25.218Z
+date: 2023-10-02T10:24:20.446Z
 tags: hosting, setup, gcp
 editor: ckeditor
 dateCreated: 2023-09-25T09:11:14.779Z
@@ -11,6 +11,7 @@ dateCreated: 2023-09-25T09:11:14.779Z
 <h1>Self Hosting on GCP</h1>
 <p>Paragraph</p>
 <h2>Introduction, Requirements, Necessary Other Guides, Concept and Costs</h2>
+<h3>Why GCP?</h3>
 <p>Paragraph</p>
 <h2>Setting up a GCP account</h2>
 <p>Paragraph</p>
@@ -39,3 +40,20 @@ CALL gcloud compute snapshots delete $YOUR_ARCHIVE_SNAPSHOT_NAME
 CALL gcloud compute snapshots create $YOUR_ARCHIVE_SNAPSHOT_NAME
 --project=$YOUR_PROJECT --source-disk=$YOUR_VM_NAME 
 --source-disk-zone=$YOUR_ZONE --storage-location=$YOUR_LOCATION</code></pre>
+<p>&nbsp;</p>
+<h2>Shut-Down Script</h2>
+<pre><code class="language-plaintext">:: Stop the VM
+CALL gcloud compute instances stop $YOUR_VM_NAME --zone=$YOUR_ZONE
+
+:: Delete the old VM snapshot
+CALL gcloud compute snapshots delete $YOUR_SNAPSHOT_NAME
+
+:: Create the VM snapshot
+CALL gcloud compute snapshots create $YOUR_SNAPSHOT_NAME --project=$YOUR_PROJECT 
+--source-disk=$YOUR_VM:NAME --source-disk-zone=$YOUR_ZONE --storage-location=$YOUR_REGION
+
+::Delete the instance
+CALL gcloud compute instances delete $YOUR_VM_NAME --zone=$YOUR_ZONE
+</code></pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
