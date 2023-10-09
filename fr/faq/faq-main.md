@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T11:55:00.759Z
+date: 2023-10-09T11:55:19.930Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -239,7 +239,8 @@ L'emplacement de ce répertoire peut être modifiée dans l'interface de Foundry
 ![fvtt_set_path.webp](/setup/winstall/fvtt_set_path.webp)
 
 Sous Windows, si vous installez la version Windows de Foundry, par défaut c'est : `C:\Users\ton_nom_d_utilisateur\AppData\Local\FoundryVTT\Data`.
-Tu peux aussi ouvir une fenêtre de l'explorateur Windows et taper `%localAppdata%\FoundryVTT\Data` pour ouvrir directement ce répertoire.
+
+Vous pouvez aussi ouvir une fenêtre de l'explorateur Windows et taper `%localAppdata%\FoundryVTT\Data` pour ouvrir directement ce répertoire.
 
 ## Je change de PC : je peux récupérer tout mon contenu ?
 
