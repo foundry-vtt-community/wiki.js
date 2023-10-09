@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T11:39:36.681Z
+date: 2023-10-09T11:39:46.415Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -233,7 +233,7 @@ Ce répertoire Data est donc précieux, c'est lui que vous pouvez sauvegarder pa
 ## Le répertoire Data mais il est où celui là ?
 
 Ce répertoire est utilisé par Foundry pour sauvegarder ce qui concerne les systèmes, les modules et les mondes (cf plus haut).
-La localisation de ce répertoire peut être modifié dans l'interface de Foundry : 
+La localisation de ce répertoire peut être modifiée dans l'interface de Foundry : 
 
 Sous Windows, si vous installez la version Windows de Foundry, par défaut c'est : `C:\Users\ton_nom_d_utilisateur\AppData\Local\FoundryVTT\Data`.
 Tu peux aussi ouvir une fenêtre de l'explorateur Windows et taper `%localAppdata%\FoundryVTT\Data` pour ouvrir directement ce répertoire.
