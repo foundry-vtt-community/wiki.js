@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T11:58:34.638Z
+date: 2023-10-09T12:04:24.174Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -256,4 +256,13 @@ Notez que vous pouvez parfaitement avoir une installation de Foundry sur votre P
 Comme dit au paragraphe précédent, les données de vos parties sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data`.
 Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à l'archiver quelque part, tout simplement.
 
+## Une de mes joueuses/joueurs ne voit pas les scènes (ie maps), tout est noir. C'est grave ?
 
+En général, c'est le signe que le navigateur a un conflit avec le driver du GPU (ie la carte graphique). Essayez les étape suivantes : 
+- Mettre à jour le navigateur utilisé
+- Mettre à jour le driver de la carte graphique
+- Ré-essayer
+
+Si le problème persiste, essayer avec un autre navigateur : Chromium, Firefox, Chrome, Edge, Opera
+
+Si le problème est toujours présent, vérifiez la résolution de votre image de la scène : si la carte graphique de votre joueuse/joueur est ancienne ou faiblarde, certaines résolutions au-dessus de 8000x4000 ne s'affichent plus. Si c'est le cas, vous n'avez pas d'autres choix que de réduire les résolutions des scènes concernées (ou acheter une autre carte graphique à votre joueuse/joueur :) )
