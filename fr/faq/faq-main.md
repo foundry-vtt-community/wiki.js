@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-09-05T10:02:34.055Z
+date: 2023-10-09T11:39:36.681Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -214,10 +214,27 @@ La règle pour déterminer les origines des soucis c'est ça :
 Si le problème est côté serveur, il faut vérifier votre bande passante et probablement faire des essais sans UPnP.
 Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
 
+## Comment sont stockées les données  ?
+
+FoundryVTT utilise 2 répertoires : un répertoire d'installation et un répertoire de données. Ces deux répertoires sont bien séparés, ce qui fait que lorsque vous mettez à jour Foundry, **aucune de vos données de mondes/systèmes/modules ne sont effacées**.
+
+Par défaut, sous Windows, le répertoire des données est situé là : `C:\Users\ton_nom_d_utilisateur\AppData\Local\FoundryVTT\Data.`. Il contient : 
+- config : La config de votre installation (notamment la clé de licence, etc),
+- modules : Les modules que vous avez installé,
+- systems : Les systèmes de jeu que vous avez installé,
+- worlds : Vos mondes.
+
+C'est le contenu par défaut. Il est possible que d'autres répertoire soient présents, souvent ajoutés par des modules ou par vous-mêmes : ce n'est pas grave !
+
+Ce répertoire Data est donc précieux, c'est lui que vous pouvez sauvegarder par exemple pour conserver une image complète de vos données. 
+
+
+
 ## Le répertoire Data mais il est où celui là ?
 
-Ce répertoire est utilisé par Foundry pour sauvegarder ce qui concerne les systèmes, les modules et les mondes.
-La localisation de ce répertoire peut être modifié dans l'interface de Foundry.
+Ce répertoire est utilisé par Foundry pour sauvegarder ce qui concerne les systèmes, les modules et les mondes (cf plus haut).
+La localisation de ce répertoire peut être modifié dans l'interface de Foundry : 
+
 Sous Windows, si vous installez la version Windows de Foundry, par défaut c'est : `C:\Users\ton_nom_d_utilisateur\AppData\Local\FoundryVTT\Data`.
 Tu peux aussi ouvir une fenêtre de l'explorateur Windows et taper `%localAppdata%\FoundryVTT\Data` pour ouvrir directement ce répertoire.
 
