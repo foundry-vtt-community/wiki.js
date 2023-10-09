@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T11:43:28.013Z
+date: 2023-10-09T11:46:36.034Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -236,7 +236,7 @@ Ce répertoire est utilisé par Foundry pour sauvegarder ce qui concerne les sys
 
 L'emplacement de ce répertoire peut être modifiée dans l'interface de Foundry : 
 
-[fvtt_set_path.png](/fr/faq/fvtt_set_path.png)
+![fvtt_set_path.png](/fr/faq/fvtt_set_path.png)
 
 Sous Windows, si vous installez la version Windows de Foundry, par défaut c'est : `C:\Users\ton_nom_d_utilisateur\AppData\Local\FoundryVTT\Data`.
 Tu peux aussi ouvir une fenêtre de l'explorateur Windows et taper `%localAppdata%\FoundryVTT\Data` pour ouvrir directement ce répertoire.
