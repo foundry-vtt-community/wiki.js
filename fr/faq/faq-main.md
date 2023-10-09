@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T11:55:19.930Z
+date: 2023-10-09T11:55:29.882Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -227,8 +227,6 @@ Par défaut, sous Windows, le répertoire des données est situé là : `C:\User
 C'est le contenu par défaut. Il est possible que d'autres répertoire soient présents, souvent ajoutés par des modules ou par vous-mêmes : ce n'est pas grave !
 
 Ce répertoire Data est donc précieux, c'est lui que vous pouvez sauvegarder par exemple pour conserver une image complète de vos données. 
-
-
 
 ## Le répertoire Data mais il est où celui là ?
 
