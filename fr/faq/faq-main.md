@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T11:55:29.882Z
+date: 2023-10-09T11:58:34.638Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -212,7 +212,10 @@ La règle pour déterminer les origines des soucis c'est ça :
 2 - Soit **1 ou 2 joueurs** (toujours les mêmes) ont des problèmes de connexions -> le problème est chez eux. Cela peut venir de leur connexion à eux, de leur PC ou de toute autre merdouille informatique. 
 
 Si le problème est côté serveur, il faut vérifier votre bande passante et probablement faire des essais sans UPnP.
+
 Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
+
+Une FAQ dédiée à ces problèmes est dispo ici https://foundryvtt.wiki/fr/pour-commencer/dcnx-upnp
 
 ## Comment sont stockées les données  ?
 
