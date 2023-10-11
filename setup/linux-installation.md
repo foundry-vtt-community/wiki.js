@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2023-09-19T13:44:14.338Z
+date: 2023-10-11T15:43:14.796Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -537,7 +537,10 @@ pm2 unstartup
 <a id="F3" href="#F3">F3.</a> Add the new NodeJS version repository and update the installed version of NodeJS.
 
 ```
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - 
+sudo apt install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 sudo apt update
 sudo apt upgrade
 ```
