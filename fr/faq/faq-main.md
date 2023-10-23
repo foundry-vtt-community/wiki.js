@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-09T12:07:15.510Z
+date: 2023-10-23T14:33:17.259Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -19,7 +19,7 @@ FoundryVTT a démarré son développement notamment car l'auteur principal ne tr
 
 ## Très bien, ~~mais je vois que le truc est en bêta~~, comment qu’on l’achète ?
 
-A ce jour (2023), Foundry n'est plus en beta depuis plus de 2 ans. Il est actuellement en version 11, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
+A ce jour (2023), Foundry n'est plus en beta depuis plus de 3 ans. Il est actuellement en version 11, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
 
 ## Putain, 60$ ?
 
@@ -38,6 +38,15 @@ Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu p
 ## Admettons que je l’achète. Est-ce que je dois re-payer pour les mises à jour ?
 
 Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’achat. Ce qui peut venir en supplément, ce sont certaines licences officielles de contenus, signées avec les éditeurs, et venant avec un module complet, et pour lesquels l’éditeur demande lui même une rétribution. Mais tant que que l’on joue avec les modules et systèmes disponibles gratuitement, il n’y a rien d’autre à payer que le prix d’achat initial.
+
+## Y'a plein de vocabulaire que je comprends pas, comment faire ?
+
+Commence par lire la Knowledge Base de Foundry, disponible ici : https://foundryvtt.com/kb 
+Ensuite, selon ton système de jeu, regarde dans les émissions des Chroniques de la Fonderie : https://foundryvtt.wiki/fr/pages/choniquesfonderie et également sur la chaine YT de Carter : https://www.youtube.com/@carterfoundryvtt
+
+D'autres vidéos sont souvent disponibles sur YT également, à chercher selon ton système de jeu.
+
+Ensuite, naturellement, les canaux du Discord FR sont là pour répondre à toutes les questions : https://discord.gg/pPSDNJk
 
 ## J’y connais rien en informatique, je peux m’en servir quand même ?
 
