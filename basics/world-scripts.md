@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2023-04-30T15:11:36.137Z
+date: 2023-10-25T05:50:36.823Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -113,24 +113,22 @@ Hooks.on("preCreateActor", (actorData, options, userId) => {
     bar2: { attribute: null },
   });
 });
+
+```
+### Adding custom Door Sounds (v11)
+```js
+/// assumes you have an "audio" folder in your Data folder
+Hooks.once("init", function(){
+    CONFIG.Wall.doorSounds.myCustom = {
+       label: "My Custom Sound",
+       open: "./audio/customOpenSound.ogg",
+       close: "./audio/customCloseSound.ogg",
+       lock: "./audio/customLockSound.ogg",
+       unlock: "./audio/customUnlockSound.ogg",
+       test: "./audio/customTestSound.ogg",
+    }
+ });
 ```
 
-### Adding an additional custom damage type (DnD5e)
-```js
-// Adds a new "plasma" damage type that will be selectable as a new type of damage for weapons
-// and a new type of resistance for actors.
-// Note that this *might* not play well with modules which auto apply damage and resistances.
-Hooks.on("setup", () => {
-  CONFIG.DND5E.damageTypes.plasma = "Plasma";
-  CONFIG.DND5E.damageResistanceTypes.plasma = "Plasma";
-});
-```
-
-### Changing the Max Level Cap (DnD5E)
-```js
-/// Modifies the highest level available to a Player Character
-Hooks.on("setup", () => {
-  console.log("------ CHANGING MAX LEVEL -------");
-  CONFIG.DND5E.maxLevel = 30;
-});
-```
+NOTE:
+The dnd5e specific scripts that were previously listed here have been moved to the [dnd5e repository's wiki](https://github.com/foundryvtt/dnd5e/wiki/Modifying-Your-Game-with-Scripts#examples)
