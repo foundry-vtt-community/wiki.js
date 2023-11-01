@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-09-26T14:16:43.612Z
+date: 2023-11-01T11:28:17.793Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -78,6 +78,8 @@ C'est la méthode dichotomique qui va permettre de localiser le problème. Il no
 4 - Je vois la page d'accueil de Foundry : Ca marche ! => le problème est sur la box. Connectez vous sur votre box et vérifiez votre redirection de port et l'adresse IP de votre PC/Mac Foundry. Normalement, vous devriez voir 30000 -> 30000, TCP, @IP local de PC/Mac Foundry
 5 -> Je vois pas la page Foundry: Ca marche pas :( => le problème est sur le PC/Mac Foundry. Vérifiez bien que le port 30000/TCP est ouvert dans le firewall. Essayez également en désactivant temporairement votre anti-virus (si vous en avez un), juste pour tester si ce n'est pas lui qui rajoute une couche de blocage.
 6 - Ca permet déja de cibler le défaut, et en général, le problème est ensuite rapidement résolu 
+
+**RAPPEL IMPORTANT** : Tant que que vous ne voyez pas la page de Foundry en local (ie étapes 1, 2, 3 et 4), **il est strictement inutile d'aller plus loin**. La connexion en local doit absolument fonctionner avant de chercher des choses sur la box.
 
 Bon si y'a pas du tout de second matos dispo, c'est plus dur, c'est sûr.
 
