@@ -2,7 +2,7 @@
 title: Gérer les compendium v11 et + en JSON
 description: Comment gérer les compendiums en fichiers JSON ?
 published: false
-date: 2023-11-16T18:45:01.795Z
+date: 2023-11-16T18:50:31.894Z
 tags: compendium
 editor: markdown
 dateCreated: 2023-11-16T18:17:17.123Z
@@ -30,11 +30,11 @@ Une fois fait, vous aurez alors accès à la commande `fvtt` depuis une fenêtre
 
 ## Configuration de foundryvtt-cli
 
-Avant de pouvoir travailler avec l’outil, il est nécessaire de le configurer pour lui indiquer où est installé Foundry et où se trouve le répertoire `Data/`.
+Avant de pouvoir travailler avec l’outil, il est nécessaire de le configurer pour lui indiquer où se trouve le répertoire de vos données (le répertoire qui contient par défaut les sous-répertoires `Config/`, `Data/` et `Logs`).
 
-Pour cela, il faut exécuter deux commandes :
+Pour cela, il faut exécuter la commande suivante : `fvtt configure set dataPath /path/to/Foundry`
 
--   Définir où est le répertoire `Data/` de Foundry : `fvtt configure set dataPath /path/to/Foundry/Data`
+*Évidemment, il convient d’adapter le chemin vers le bon répertoire. Référez-vous [à la documentation officielle](https://foundryvtt.com/article/configuration/#where-user-data) si vous ne connaissez pas le chemin.*
 
 ## Transformer les LevelDB en fichiers JSON/YAML
 
