@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-10-23T14:33:17.259Z
+date: 2023-11-21T05:59:15.276Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -74,6 +74,10 @@ Bon si vous avez ça, l’installation ne devrait vous poser de problèmes, je v
 ## Et il n'y a pas de services en lignes déjà disponibles ?
 
 Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus populaire à l'heure actuelle) et FoundryServer (https://www.foundryserver.com/ ).
+
+## Je peux l'installer plusieurs fois ?
+
+Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pou jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
 
 ## Y’a quoi comme jeu dessus ?
 
