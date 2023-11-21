@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-11-21T05:59:15.276Z
+date: 2023-11-21T06:00:29.441Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -81,7 +81,8 @@ Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne p
 
 ## Y’a quoi comme jeu dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 31/03/2023, on recense 248+ « systems » : 
+Dans Foundry, les « jeux » sont appelés « systems ». Au 31/03/2023, on recense 276+ « systems », qu'on peut parcourir ici  : https://foundryvtt.com/packages/systems.
+Une liste succincte d'exemples : 
 - 13th age,
 - Appel de Cthulhu, DeltGreen
 - Cthlulhu Hack
