@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-11-21T06:07:24.883Z
+date: 2023-11-21T06:10:28.708Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -273,7 +273,13 @@ Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à
 ## On m'a donné un lien vers un fichier "system.json" ou "module.json". J'en fais quoi ?
 
 La méthode nominale pour installer un système ou un module, c'est de passer par l'interface de Foundry. Mais il se peut que certains systèmes/modules ne soient pas déclarés officiellement dans Foundry. Dans ce cas, il faut prendre le lien URL vers ce fichier JSON (appelé 'Manifest) et le copier dans la zone suivante : 
-![install_module_json.webp](/fr/faq/install_module_json.webp)
+![install_module_json.webp](/setup/winstall/install_module_json.webp)
+
+1 - Allez dans cette section en bas de la fenêtre d'installation d'un module/systeme
+2 - Copier le lien vers le fichier JSON
+3 - Cliquez sur le bouton
+
+Votre système ou module est alors prêt à être utilisé.
 
 ## Une de mes joueuses/joueurs ne voit pas les scènes (ie maps), tout est noir. C'est grave ?
 
