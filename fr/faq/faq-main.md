@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-11-21T06:00:29.441Z
+date: 2023-11-21T06:06:29.003Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -270,6 +270,11 @@ Notez que vous pouvez parfaitement avoir une installation de Foundry sur votre P
 Comme dit au paragraphe précédent, les données de vos parties sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data`.
 Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à l'archiver quelque part, tout simplement.
 
+## On m'a donné un lien vers un fichier "system.json" ou "module.json". J'en fais quoi ?
+
+La méthode nominale pour installer un système ou un module, c'est de passer par l'interface de Foundry. Mais il se peut que certains systèmes/modules ne soient pas déclarés officiellement dans Foundry. Dans ce cas, il faut prendre le lien URL vers ce fichier JSON (appelé 'Manifest) et le copier dans la zone suivante : 
+
+
 ## Une de mes joueuses/joueurs ne voit pas les scènes (ie maps), tout est noir. C'est grave ?
 
 En général, c'est le signe que le navigateur a un conflit avec le driver du GPU (ie la carte graphique). Essayez les étape suivantes : 
@@ -281,7 +286,7 @@ Si le problème persiste, essayez avec un autre navigateur : Chromium, Firefox, 
 
 Si le problème est toujours présent, vérifiez la résolution de votre image de la scène : si la carte graphique de votre joueuse/joueur est ancienne ou faiblarde, certaines résolutions au-dessus de 8000x4000 ne s'affichent plus. Si c'est le cas, vous n'avez pas d'autres choix que de réduire les résolutions des scènes concernées (ou acheter une autre carte graphique à votre joueuse/joueur :) )
 
-## J'ai un Raspberry Pi, est-ce que je peux installer Founry dessus ?
+## J'ai un Raspberry Pi, est-ce que je peux installer Foundry dessus ?
 
 Vous pouvez parfaitemet installer la partie serveur de Foundry dessus, mais pas la partie cliente (ie depuis un navigateur).
 
