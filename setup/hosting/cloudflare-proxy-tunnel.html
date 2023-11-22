@@ -2,7 +2,7 @@
 title: Cloudflare Proxying & Tunnel
 description: Use Cloudflare's protection for your public-facing FoundryVTT server.
 published: true
-date: 2023-11-22T20:26:41.328Z
+date: 2023-11-22T20:27:06.820Z
 tags: cloudflare, proxy, tunnel, tls, https
 editor: ckeditor
 dateCreated: 2022-03-25T02:38:49.920Z
@@ -79,8 +79,8 @@ $ sudo curl https://pkg.cloudflare.com/cloudflare-main.gpg -o /usr/share/keyring
 <pre><code class="language-plaintext">$ curl -L https://pkg.cloudflare.com/cloudflare-main.gpg | 
 sudo tee /usr/share/keyrings/cloudflare-archive-keyring.gpg &gt;/dev/null
 
-$ echo "deb [signed-by=/usr/share/keyrings/cloudflare-archive-keyring.gpg] https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | 
-sudo tee  /etc/apt/sources.list.d/cloudflared.list</code></pre>
+$ echo "deb [signed-by=/usr/share/keyrings/cloudflare-archive-keyring.gpg] 
+https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | sudo tee  /etc/apt/sources.list.d/cloudflared.list</code></pre>
 <p><a href="https://pimylifeup.com/raspberry-pi-cloudflare-tunnel/">https://pimylifeup.com/raspberry-pi-cloudflare-tunnel/</a></p>
 <p>2. Install the <code>cloudflared</code> service.</p>
 <pre><code class="language-plaintext">$ sudo apt-get update
