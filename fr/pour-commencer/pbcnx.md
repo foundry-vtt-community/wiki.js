@@ -2,7 +2,7 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-11-24T13:58:38.395Z
+date: 2023-11-24T14:00:52.703Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -16,8 +16,8 @@ Lorsque vous hébergez Foundry chez vous, si vous n'arrivez pas à vous connecte
 De la même manière, si vos joueurs se connectent mais se font déconnecter régulièrement, c'est très très certainement à cause de l'UpNP.
 
 ## Pourquoi ?
-Lorsque vous hébergez Foundry chez vous, vous hébergez un serveur, comme si vous hébergiez Roll20 chez vous typiquement. Cela veut donc dire que les joueurs (ie externes) se connectent à votre réseau (interne) : par défaut, ce fonctionnemment est bloqué par les box.
-Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieur", et cela veut dire 'ouvrir un port'.
+Lorsque vous hébergez Foundry chez vous, vous hébergez un serveur, comme si vous hébergiez Roll20 chez vous typiquement. Cela veut donc dire que les joueurs (ie externes) se connectent à votre réseau (interne) : par défaut, ce fonctionnemment est bloqué par les box ou les box supportent assez mal l'UpNP (cas des déconnexions).
+Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieur", et cela veut dire 'ouvrir un port' (sans passer par l'UpNP).
 
 ## De quoi j'ai besoin ?
 
