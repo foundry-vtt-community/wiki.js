@@ -2,13 +2,14 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-11-24T13:58:30.586Z
+date: 2023-11-24T13:58:38.395Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
 ---
 
 # Impossible de se connecter à distance
+# OU
 # Mes joueurs sont déconnectés régulièrement
 
 Lorsque vous hébergez Foundry chez vous, si vous n'arrivez pas à vous connecter à distance, c'est probablement parce que le port externe n'est pas ouvert dans votre box ADSL/Fibre.
