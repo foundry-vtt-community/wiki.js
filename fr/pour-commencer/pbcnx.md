@@ -2,15 +2,18 @@
 title: 5.1 Mes joueurs ne se connectent pas
 description: 
 published: true
-date: 2023-11-01T11:28:17.793Z
+date: 2023-11-24T13:58:21.464Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
 ---
 
 # Impossible de se connecter à distance
+ou
+# Mes joueurs sont déconnectés régulièrement
 
 Lorsque vous hébergez Foundry chez vous, si vous n'arrivez pas à vous connecter à distance, c'est probablement parce que le port externe n'est pas ouvert dans votre box ADSL/Fibre.
+De la même manière, si vos joueurs se connectent mais se font déconnecter régulièrement, c'est très très certainement à cause de l'UpNP.
 
 ## Pourquoi ?
 Lorsque vous hébergez Foundry chez vous, vous hébergez un serveur, comme si vous hébergiez Roll20 chez vous typiquement. Cela veut donc dire que les joueurs (ie externes) se connectent à votre réseau (interne) : par défaut, ce fonctionnemment est bloqué par les box.
