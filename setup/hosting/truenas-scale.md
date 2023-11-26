@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2023-11-26T13:13:16.296Z
+date: 2023-11-26T13:30:02.230Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -11,6 +11,8 @@ dateCreated: 2023-11-26T13:13:16.296Z
 # Overview
 
 TrueNAS SCALE runs Linux and k3s - a version of Kubernetes - under the hood. It offers a GUI and deploying Foundry is relatively simple.
+
+One wrinkle: TrueNAS SCALE sets a dynamic pod name, which means there will be a license acceptance screen every time the app is restarted.
 
 These instructions assume that you are at least somewhat-familar with TrueNAS and ZFS. Start there, make sure you have TrueNAS SCALE installed and one ZFS pool configured. Tested on SCALE 23.10.0.1 in Nov 2023.
 
