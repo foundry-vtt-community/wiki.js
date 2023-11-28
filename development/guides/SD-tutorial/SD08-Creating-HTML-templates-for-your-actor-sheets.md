@@ -1,30 +1,27 @@
 ---
-title: SD08 Creating-HTML-templates-for-your-actor-sheets
+title: 08. Creating HTML templates for your actor sheets
 description: 
 published: true
-date: 2022-10-12T21:38:57.994Z
+date: 2023-11-28T17:34:52.752Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z
 ---
 
-> **Not Updated for Foundry v10**
+> **Updated for Foundry v10**
 >
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
+> This section of the system development tutorial has been updated for Foundry v10. Other pages in the tutorial may still be in progress.
+{.is-info}
 
 
-In addition to the JS classes that define them, actors and items also have HTML templates that define the structure of your character and item sheets. In the Boilerplate System, these are placed in `/templates/actor/actor-sheet.html` and `/templates/item/item-sheet.html`. These paths are not discovered automatically; you have to define specify their full path in your ActorSheet and ItemSheet class' defaultOptions() method. You'll probably add many more templates than just these two as your system gets further into development, but the process is the same for all of them.
+In addition to the JS classes that define them, actors and items also have HTML templates that define the structure of your character and item sheets. In the Boilerplate System, these are placed in `/templates/actor/` and `/templates/item/`. These paths are not discovered automatically; you have to define specify their full path in your ActorSheet and ItemSheet class' defaultOptions() method. Within those directories, Boilerplate includes sheets for specific document types (such as `actor-character-sheet.html` and `item-spell-sheet.html`) along with template partials like `parts/actor-features.html`. Using partials is optional, but it can be helpful for dividing up complicated templates into more manageable chunks.
 
 HTML templates in Foundry use [Handlebars](https://handlebarsjs.com/guide/) for their templating engine. If you're using a code editor like [Visual Studio Code](https://code.visualstudio.com/), you can set the syntax highlighting mode to Handlebars and get useful color coding to help recognize the various statements and variables in your templates.
 
-Let's start by taking a look at how the `actor-sheet.html` template is laid out at a high level.
-
-
+Let's start by taking a look at how the `actor-character-sheet.html` template is laid out at a high level.
 
 ```handlebars
-<form class="{{cssClass}} flexcol" autocomplete="off">
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
 
     {{!-- Sheet Header --}}
     <header class="sheet-header">
@@ -58,7 +55,7 @@ And here's an annotated version of what that looks like:
 
 ## The `<form>`.
 
-The element that surrounds our entire sheet is a `<form>` element with a variable that's outputting `{{cssClass}}`. This is a combined version of the array of CSS classes we made earlier in the actor-sheet.js file's defaultOptions() method. You can also include classes and other attributes directly in the template, as we did here with `flexcol`. The flexcol class is a helper class provided by Foundry that can be used to layout things vertically without having to write additional CSS. There are several of those included by Foundry, and the Boilerplate System also includes several for grids.
+The element that surrounds our entire sheet is a `<form>` element with a variable that's outputting `{{cssClass}}` and `{{actor.type}}`. `cssClass` is a combined version of the array of CSS classes we made earlier in the actor-sheet.js file's defaultOptions() method. You can also include classes and other attributes directly in the template, as we did here with `flexcol`. The flexcol class is a helper class provided by Foundry that can be used to layout things vertically without having to write additional CSS. There are several of those included by Foundry, and the Boilerplate System also includes several for grids. Finally, `actor.type` is a variable defined in the actor sheet that lets us distinguish between different types of actors, like `character` and `npc`, which can be useful if your various sheets share some styling while needing variations for each of the different actor types.
 
 > ### Basic sheet layout in Boilerplate System
 >
@@ -94,7 +91,7 @@ The header element is used to create the header section of the form where we put
 The first element in our header is the actor's image. Aside from adding additional classes or tweaking the height/weight values, your actor images should always follow this pattern if they need to be editable by foundry. We're printing out the path to the image with the `{{actor.img}}` variable, and the `data-edit="img"` tells Foundry that this is an image that should be editable on click.
 
 > ### Variables in Handlebars
-> If you're inside an actor-sheet template, the `actor` object will be available for printing things such as the actor name and actor image source with variables such as `actor.name` and `actor.img`. The `actor.data.data` object is also available at a more convenient `data` variable, so for properties that are unique to your system you can print values such as `{{data.health.value}}`.
+> If you're inside an actor-sheet template, the `actor` object will be available for printing things such as the actor name and actor image source with variables such as `actor.name` and `actor.img`. The `actor.system` object is also available at a more convenient `system` variable, so for properties that are unique to your system you can print values such as `{{system.health.value}}`.
 
 ### The resources grid
 
@@ -103,26 +100,33 @@ The next item in our `<div class="header-fields">` div is the resources grid.
 
 
 ```handlebars
-            {{!-- ...continued... --}}
-            <div class="resources grid grid-2col">
-              <div class="resource flex-group-center">
-                  <label for="data.health.value" class="resource-label">Health</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
-                    <span> / </span>
-                    <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
-                  </div>
-              </div>
-              <div class="resource flex-group-center">
-                  <label for="data.power.value" class="resource-label">Power</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number"/>
-                    <span> / </span>
-                    <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number"/>
-                  </div>
-              </div>
-          </div>
-          {{!-- ...continued... --}}
+	{{!-- ...continued... --}}
+  <div class="resources grid grid-2col">
+    {{!-- "flex-group-center" is also defined in the _grid.scss file
+    and it will add a small amount of padding, a border, and will
+    center all of its child elements content and text. --}}
+    <div class="resource flex-group-center">
+      <label for="system.health.value" class="resource-label">Health</label>
+      <div class="resource-content flexrow flex-center flex-between">
+      <input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number"/>
+      <span> / </span>
+      <input type="text" name="system.health.max" value="{{system.health.max}}" data-dtype="Number"/>
+      </div>
+    </div>
+
+    <div class="resource flex-group-center">
+      <label for="system.power.value" class="resource-label">Power</label>
+      <div class="resource-content flexrow flex-center flex-between">
+      <input type="text" name="system.power.value" value="{{system.power.value}}" data-dtype="Number"/>
+      <span> / </span>
+      <input type="text" name="system.power.max" value="{{system.power.max}}" data-dtype="Number"/>
+      </div>
+    </div>
+
+  </div> {{!-- closes the "resources" div --}}
+</div> {{!-- closes the "header-fields" div --}}
+
+{{!-- ...continued... --}}
 ```
 
 
@@ -136,7 +140,7 @@ Finally, we have our inputs. Text inputs in Foundry always follow this pattern:
 
 
 ```handlebars
-<input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number" />
+<input type="text" name="system.health.value" value="{{system.health.value}}" data-dtype="Number" />
 ```
 
 
@@ -156,10 +160,10 @@ The abilities div is very similar to resources, but in this case we have a group
 ```handlebars
           {{!-- ...continued... --}}
           <div class="abilities grid grid-3col">
-            {{#each data.abilities as |ability key|}}
+            {{#each system.abilities as |ability key|}}
               <div class="ability flexrow flex-group-center">
-                <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
-                <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+                <label for="system.abilities.{{key}}.value" class="resource-label">{{key}}</label>
+                <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
                 <span class="ability-mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>
               </div>
             {{/each}}
@@ -178,30 +182,30 @@ The big difference is that we're running a loop with `{{#each}}`. Let's look at 
 
 
 ```handlebars
-{{#each data.abilities as |ability key|}}
+{{#each system.abilities as |ability key|}}
   {{!-- stuff --}}
 {{/each}}
 ```
 
 
 
-An each block starts with `#each` and ends with `/each`. The first thing after the opening `{{#each` is the object or array we want to iterate over, or in this case `data.abilities`.
+An each block starts with `#each` and ends with `/each`. The first thing after the opening `{{#each` is the object or array we want to iterate over, or in this case `system.abilities`.
 
-You can either iterate over just the values, which would be `data.abilities as ability` or over the values with the keys available as well, which is what we're doing with `data.abilities as |ability key|`. By doing that we can access the index/key using the `{{key}}` variable, which would evaluate to something like "str", "dex" or "con". The `{{ability}}` variable will give us the object for each ability, which will allow us to print out the current value with `{{ability.value}}`.
+You can either iterate over just the values, which would be `system.abilities as ability` or over the values with the keys available as well, which is what we're doing with `system.abilities as |ability key|`. By doing that we can access the index/key using the `{{key}}` variable, which would evaluate to something like "str", "dex" or "con". The `{{ability}}` variable will give us the object for each ability, which will allow us to print out the current value with `{{ability.value}}`.
 
 Here's what the actual ability input looks like:
 
 
 
 ```handlebars
-<input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+<input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
 ```
 
 
 
-The first thing to notice is that **name** and **value** are much different than they were in our earlier example! The name attribute needs to be the exact the set of properties that Foundry would use to update the value, so we're mostly printing it out as plain text except for the part that would be "str" or "dex". For that we have to print out the current `{{key}}`. So in our loop we're using `data.abilities.{{key}}.value` for the name, which will get rendered as something like `data.abilities.str.value`.
+The first thing to notice is that **name** and **value** are much different than they were in our earlier example! The name attribute needs to be the exact the set of properties that Foundry would use to update the value, so we're mostly printing it out as plain text except for the part that would be "str" or "dex". For that we have to print out the current `{{key}}`. So in our loop we're using `system.abilities.{{key}}.value` for the name, which will get rendered as something like `system.abilities.str.value`.
 
-The value is a bit different though. Because we already have the current ability object in the `{{ability}}` variable, we can just print out `{{ability.value}}` without worrying about the full `data.abilities` structure.
+The value is a bit different though. Because we already have the current ability object in the `{{ability}}` variable, we can just print out `{{ability.value}}` without worrying about the full `system.abilities` structure.
 
 Finally, let's take a look at the ability modifier:
 
@@ -254,7 +258,7 @@ Because we're using tabs on this sheet, each item inside sheet-body is a tab tha
 
         {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
-            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+            {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
         </div>
 
         {{!-- Owned Items Tab --}}
@@ -295,7 +299,7 @@ The biography tab in the Boilerplate System is both an example of how to make a 
 ```handlebars
 {{!-- Biography Tab --}}
 <div class="tab biography" data-group="primary" data-tab="description">
-  {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+  {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
 </div>
 ```
 
@@ -377,41 +381,66 @@ And finally, we're outputting the item controls. Notice that the controls have `
   activateListeners(html) {
     super.activateListeners(html);
 
+    // Render the item sheet for viewing/editing prior to the editable check.
+    html.find('.item-edit').click(ev => {
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      item.sheet.render(true);
+    });
+
+    // -------------------------------------------------------------
     // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
+    if (!this.isEditable) return;
 
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
-    // Update Inventory Item
-    html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.getOwnedItem(li.data("itemId"));
-      item.sheet.render(true);
-    });
-
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
-      this.actor.deleteOwnedItem(li.data("itemId"));
+      const item = this.actor.items.get(li.data("itemId"));
+      item.delete();
       li.slideUp(200, () => this.render(false));
     });
+
+    // Active Effect management
+    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
+
+    // Rollable abilities.
+    html.find('.rollable').click(this._onRoll.bind(this));
+
+    // Drag events for macros.
+    if (this.actor.isOwner) {
+      let handler = ev => this._onDragStart(ev);
+      html.find('li.item').each((i, li) => {
+        if (li.classList.contains("inventory-header")) return;
+        li.setAttribute("draggable", true);
+        li.addEventListener("dragstart", handler, false);
+      });
+    }
+
   }
 ```
 
 
 
-What's happening here? First, we're activating any listeners that Foundry itself defines with `super.activateListeners(html)`.
+What's happening here? First, we're activating any listeners that Foundry itself defines with `super.activateListeners(html)`. Our `item-edit` listener happens at this point because it works by rendering the item sheet, which would work for both users who can only view the item's sheet and owners who can actually edit it as well. To actually retrieve the item, we're finding the `<li>` tag based on the click event target and then reading the `item-id` data attribute (which gets converted to camel case `itemId` in this context). Once we have the item from the item ID, we can render its sheet.
 
 Second, we're returning early if the sheet isn't editable (which usually means an observer has it open rather than the sheet owner).
 
 Third, we're defining a click listener for `item-create`. We went into detail earlier about what the `_onItemCreate()` method did, so we'll skip over that here.
 
-Fourth, we're defining click listeners for `item-edit` and `item-delete`. These two listeners are similar; both of them grab the element for the list item that's a parent of the button being clicked, which is what `$(ev.currentTarget).parents('.item')` does. Since we have the `data-item-id` attribute on the list items, we can than use the actor's methods to either get the owned item and render it's item sheet or delete the owned item, depending on which listener we're in. If we're deleting the item, we also do a small animation with `li.slideUp()` to animate getting rid of the item.
+Fourth, we're defining a click listener for `item-delete`. This is similar to `item-edit` from before. First we grab the element for the list item that's a parent of the button being clicked, which is what `$(ev.currentTarget).parents('.item')` does. Since we have the `data-item-id` attribute on the list items, we can than use the actor's methods to either get the owned item and render it's item sheet or delete the owned item, depending on which listener we're in. If we're deleting the item, we also do a small animation with `li.slideUp()` to animate getting rid of the item.
+
+There are examples of additional listeners in here as well for more advanced usage.
+
+- The active effect management uses the `onManageActiveEffect()` method from `helpers/effects.mjs`, which we'll get into a later topic. 
+- The rollable abilities logic uses the `rollable` class we added to some parts of the sheet to make them clickable, and then passes that along to an `_onRoll()` method that's elsewhere in the sheet class.
+- The drag events logic adds special `draggable` and `dragstart` attributes/listeners to items on the sheet so that they can be dragged and dropped to Foundry's macrobar. We'll investigate that in more detail in a later topic.
 
 ## Wrapping up
 
-Jumping back over to the actor-sheet.html template, we've covered the list of the logic in it for the Boilerplate system. Don't forget your closing tags though!
+Jumping back over to the actor-character-sheet.html template, we've covered the list of the logic in it for the Boilerplate system. Don't forget your closing tags though!
 
 
 
