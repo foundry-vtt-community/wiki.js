@@ -2,17 +2,16 @@
 title: 07. Extending the ActorSheet class
 description: 
 published: true
-date: 2022-10-12T21:40:17.625Z
+date: 2023-11-28T17:42:41.819Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
 ---
 
-> **Not Updated for Foundry v10**
+> **Updated for Foundry v10**
 >
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
+> This section of the system development tutorial has been updated for Foundry v10. Other pages in the tutorial may still be in progress.
+{.is-info}
 
 The ActorSheet class is the class associated with our actor's character sheets. Let's take a look at what Boilerplate System does:
 
@@ -40,7 +39,7 @@ export class BoilerplateActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/boilerplate/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/boilerplate/templates/actor/actor-${this.actor.type}-sheet.html`;
   }
 ```
 
@@ -59,7 +58,7 @@ Document sheets also support a special `template()` getter method (see the `get`
 ```js
   /** @override */
   get template() {
-    return `systems/boilerplate/templates/actor/actor-${this.actor.data.type}-sheet.html`;
+    return `systems/boilerplate/templates/actor/actor-${this.actor.type}-sheet.html`;
   }
 ```
 
@@ -83,7 +82,7 @@ Much like the Actor class' `prepareData()` method, we can use the `getData()` me
     const context = super.getData();
 
     // Use a safe clone of the actor data for further operations.
-    const actorData = context.actor.data;
+    const actorData = this.actor.toObject(false);
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.data = actorData.data;
@@ -110,13 +109,13 @@ Much like the Actor class' `prepareData()` method, we can use the `getData()` me
   }
 ```
 
-The first thing we're doing here is setting a new constant called `context` that's equal to `super.getData()`. We're using `context` for the variable name so that we can avoid the `data.data` changes mentioned in the previous step of the tutorial and can instead use references like `context.data.attributes.level.value`.
+The first thing we're doing here is setting a new constant called `context` that's equal to `super.getData()`. We're using `context` for the variable name to distinguish it from `actorData` and to help establish that it's a variable only used for sheet data.
 
 > **What is super.getData()?**
 >
-> Calling `super.getData()` will execute the `getData()` method in the `ActorSheet` class that we extended for this, so it's helpful to be aware of what exactly that gives when we execute it. As of Foundry 0.8.6, it returns an object structured as:
+> Calling `super.getData()` will execute the `getData()` method in the `ActorSheet` class that we extended for this, so it's helpful to be aware of what exactly that gives when we execute it. As of Foundry v10, it returns an object structured as:
 >
-> `data`: A safe duplicate of the actor's data usable in sheets
+> `system`: A safe duplicate of the actor's data usable in sheets
 > `actor`: The actor document
 > `items`: Items on the actor document
 > `effects`: Active Effects on the actor document
@@ -133,9 +132,9 @@ The first thing we're doing here is setting a new constant called `context` that
 
 After grabbing an initial data object for the sheet and storing it in the `context` variable, we then grab the actor data (line 12 in the code snippet earlier).
 
-The first line is the most important one, as that's what retrieves a safe copy of the actor's data for sheet manipulation purposes. It uses the document data's built in `toObject()` method and gives it the `false` parameter, which instructs Foundry to not just convert this to a plain object but to also run a deep clone on nested objects/arrays. Just using `this.actor.data` can work, but if you don't use `this.actor.data.toObject(false)`, you can run into difficult to debug issues related to the original object.
+The first line is the most important one, as that's what retrieves a safe copy of the actor's data for sheet manipulation purposes. It uses the document data's built in `toObject()` method and gives it the `false` parameter, which instructs Foundry to not just convert this to a plain object but to also run a deep clone on nested objects/arrays. Just using `this.actor` can work, but if you don't use `this.actor.toObject(false)`, you can run into difficult to debug issues related to the original object.
 
-Afterwards, we set up new properties for both `context.data` and `context.flags` based on the actorData that we just retrieved. The `context.data` property is the one that will be used frequently in your Handlebars templates later, as its essentially the cleanest and most direct set of the actor's data. The flags are useful to go ahead and include the structure for, but they tend to be more useful for modules than systems (flags are used for arbitrary data structures that don't have to fit the system's template.json).
+Afterwards, we set up new properties for both `context.system` and `context.flags` based on the actorData that we just retrieved. The `context.system` property is the one that will be used frequently in your Handlebars templates later, as its essentially the cleanest and most direct set of the actor's system data. The flags are useful to go ahead and include the structure for, but they tend to be more useful for modules than systems (flags are used for arbitrary data structures that don't have to fit the system's template.json).
 
 ### Preparing Items
 
@@ -194,8 +193,8 @@ _prepareItems(context) {
     }
     // Append to spells.
     else if (i.type === 'spell') {
-      if (i.data.spellLevel != undefined) {
-        spells[i.data.spellLevel].push(i);
+      if (i.system.spellLevel != undefined) {
+        spells[i.system.spellLevel].push(i);
       }
     }
   }
@@ -225,7 +224,7 @@ Next, let's look at the `_prepareCharacterData()` method that was referenced ear
  */
 _prepareCharacterData(context) {
   // Handle ability scores.
-  for (let [k, v] of Object.entries(context.data.abilities)) {
+  for (let [k, v] of Object.entries(context.system.abilities)) {
     v.label = game.i18n.localize(CONFIG.BOILERPLATE.abilities[k]) ?? k;
   }
 }
