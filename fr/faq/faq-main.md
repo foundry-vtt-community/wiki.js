@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-11-22T21:11:51.376Z
+date: 2023-12-04T06:26:38.887Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -148,6 +148,19 @@ Une fois cette clée saisie, le module apparait comme installable dans les modul
 FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
 
 Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce point lorsque nécessaire :)
+
+## Comment mes joueurs peuvent-il se connecter ?
+
+Si vous hébergez chez vous, il faut donner accès à votre PC depuis Internet. Pour cela, la manip est toujours la même : 
+1 - Désactiver UpNP dans Foundry (dans les réglages)
+2 - Sur votre box Fibre, ouvrir le port TCP 30000
+3 - Dans le firewall du PC/Mac Foundry, ouvrir le port 30000 TCP
+4 - Récupérer votre adresse IP publique (via https://www.monippublique.com/ par exemple)
+5 - Votre URL de connexion pour vos joueurse sera : http://<ip_publique_obtenue>:30000 
+
+C'est un exemple résumé, il existe des FAQ plus spécialisées ici https://foundryvtt.wiki/fr/pour-commencer/win et ici https://foundryvtt.wiki/fr/pour-commencer/pbcnx .
+
+Si ça ne fonctionne toujours pas, venez poster un message dans le channel #support-technique du Discord Foundry FR.
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
