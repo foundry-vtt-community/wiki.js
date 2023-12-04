@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-12-04T06:26:38.887Z
+date: 2023-12-04T06:27:01.839Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -153,7 +153,7 @@ Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce poi
 
 Si vous hébergez chez vous, il faut donner accès à votre PC depuis Internet. Pour cela, la manip est toujours la même : 
 1 - Désactiver UpNP dans Foundry (dans les réglages)
-2 - Sur votre box Fibre, ouvrir le port TCP 30000
+2 - Sur votre box Fibre, ouvrir le port TCP 30000. 
 3 - Dans le firewall du PC/Mac Foundry, ouvrir le port 30000 TCP
 4 - Récupérer votre adresse IP publique (via https://www.monippublique.com/ par exemple)
 5 - Votre URL de connexion pour vos joueurse sera : http://<ip_publique_obtenue>:30000 
