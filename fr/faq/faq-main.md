@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-12-04T06:27:01.839Z
+date: 2023-12-06T13:32:19.936Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -304,6 +304,13 @@ En général, c'est le signe que le navigateur a un conflit avec le driver du GP
 Si le problème persiste, essayez avec un autre navigateur : Chromium, Firefox, Chrome, Edge, Opera
 
 Si le problème est toujours présent, vérifiez la résolution de votre image de la scène : si la carte graphique de votre joueuse/joueur est ancienne ou faiblarde, certaines résolutions au-dessus de 8000x4000 ne s'affichent plus. Si c'est le cas, vous n'avez pas d'autres choix que de réduire les résolutions des scènes concernées (ou acheter une autre carte graphique à votre joueuse/joueur :) )
+
+## Le temps de chargement pour arriver à la première scène est très long, c'est normal ?
+
+En général, non. Cela peut venir de plusieurs facteurs : 
+- Votre monde contient énormément de PNJs, scènes, journaux, etc. Il vaut mieux ne conserver que ce dont vous avez besoin pour vos 2-3 sessions à venir, et pas plus. Si vous voulez conserver malgré tout des données plus anciennes, créez un compendium dans le monde, copiez  vos PNJs/scènes/journaux dedans et supprimez les du monde.
+- Nettoyez régulièrement votre historique de tchat. Avec certains systèmes, cet historique peut avoir une taille de plusieurs dizaines de mega-octets.
+- Evitez les images PNG pour vos tokens, portraits et scènes. Préferrez des images JPEG ou (encore mieux) des images WEBP.
 
 ## J'ai un Raspberry Pi, est-ce que je peux installer Foundry dessus ?
 
