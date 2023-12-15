@@ -2,7 +2,7 @@
 title: Synology with Docker
 description: Guide to setting up Foundry on Synology's DSM 7.2 using Felddy's foundryvtt container.
 published: false
-date: 2023-12-15T18:47:27.997Z
+date: 2023-12-15T18:50:51.686Z
 tags: hosting, self-hosting, synology, docker
 editor: ckeditor
 dateCreated: 2023-12-15T18:47:27.997Z
@@ -31,8 +31,8 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <h2>1. Create your data folders</h2>
 <p>Wherever you store your Docker container folders, create a new Foundry data folder. This guide assumes this folder is set up under <code>home/docker/foundry</code>.</p>
 <p>&nbsp;</p>
-<h2><a href="https://foundryvtt.wiki/en/setup/hosting/Synology#configuring-https-ssl-on-your-foundry-vtt-web-site">¶</a> 2. Open up ports on your router</h2>
-<p>Set up port forwarding via your router (and modem depending on your provider) to your NAS. This guide assumes you will be using the default port <code>:30000</code>. Here's a <a href="https://nordvpn.com/blog/open-ports-on-router/">guide</a> from NordVPN.</p>
+<h2>2. Open up ports on your router</h2>
+<p>Set up port forwarding via your router (and modem depending on your provider) to your NAS. This guide assumes you will be using the default port <code>:30000</code>. Here's a decent <a href="https://nordvpn.com/blog/open-ports-on-router/">guide</a> from NordVPN with a wide range of router examples.</p>
 <ol>
   <li>Forward port <code>:30000</code> to the internal IP address of your Synology.</li>
   <li><i>[Required if you are using Synology's Let's Encrypt implementation for certificates] </i>Forward port <code>:80</code> to your NAS so that Synology can auto-renew this certificate with Let's Encrypt.</li>
@@ -42,19 +42,20 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <p>Download your certificate from your domain registrar, or use <a href="https://kb.synology.com/en-my/DSM/tutorial/How_to_enable_HTTPS_and_create_a_certificate_signing_request_on_your_Synology_NAS">Synology's Let's Encrypt</a> setup. If you use a registrar, this is usually found under the DNS section under your custom domain.</p>
 <h4>Set a reminder</h4>
 <ol>
-  <li>Before you start, go to your calendar app of choice and set a recurring 90 day calendar reminder to replace your Foundry and/or Synology certificates.</li>
+  <li>Before you start, go to your calendar app of choice and <strong>set a recurring 90 day calendar reminder</strong> to replace your Foundry and/or Synology certificates.</li>
+  <li>Make a note that you'll need to replace certificates in Control Center &gt; Security &gt; Certificate (<i>if you aren't using Synology's implementation</i>) <i><strong>and</strong></i> your Foundry Config folder (<code>home/docker/foundry/Config</code>).</li>
 </ol>
 <h4>Using domain registrar certificates</h4>
 <ol>
   <li>Download the certificates from your registrar.</li>
-  <li>Open <strong>DSM &gt; Control Panel &gt; Security &gt; Certificate</strong>.</li>
+  <li>Open <strong>Control Panel &gt; Security &gt; Certificate</strong>.</li>
   <li>Click the <strong>Add</strong> button then <strong>Add a new certificate</strong>.</li>
   <li>Add the name “Foundry” to the description field, then choose <strong>Import certificate</strong>.</li>
   <li>Upload your certificate files into the next step and complete registration.</li>
 </ol>
 <h4>Using Synology's Let's Encrypt certificates</h4>
 <ol>
-  <li>Open <strong>DSM &gt; Control Panel &gt; Security &gt; Certificate</strong></li>
+  <li>Open <strong>Control Panel &gt; Security &gt; Certificate</strong></li>
   <li>Click the <strong>Add</strong> button then <strong>Add a new certificate</strong>.</li>
   <li>Add the name “Foundry” to the description field, then choose <strong>Get a certificate from Let's Encrypt</strong></li>
   <li>Enter your domain name, email, and any subdomains you might be using.</li>
@@ -70,13 +71,13 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <ol>
   <li>Install <a href="https://www.synology.com/en-us/dsm/feature/docker">Synology Container Manager</a> (Docker) is through Package Center if you haven't already.</li>
   <li>Under <strong>Container</strong> press the <strong>Create</strong> button.</li>
-  <li>Under the <strong>Image</strong> dropdown, chose <strong>Add Image</strong> and search for “foundryvtt”&nbsp;</li>
+  <li>Under the <strong>Image</strong> dropdown, chose <strong>Add Image</strong> and search for “foundryvtt”</li>
   <li>In this example we're using <strong>felddy/foundryvtt</strong>. Choose that image and download, then select the <strong>latest</strong> tag.</li>
   <li>Name your container “foundry”</li>
   <li>Check <strong>Enable auto-restart</strong>. <i>Do not enable “Set up web portal via Web station”.</i></li>
   <li>Continue to <strong>Advanced Settings</strong>
     <ol>
-      <li>Set <strong>Port Settings</strong> to <code>30000</code> / <code>30000</code> / <code>TCP</code>&nbsp;</li>
+      <li>Set <strong>Port Settings</strong> to <code>30000</code> / <code>30000</code> / <code>TCP</code></li>
       <li>Under <strong>Volume Settings</strong>, choose <strong>+ Add Folder</strong>, then add the Foundry data folder you created earlier (<code>/home/docker/foundry</code>). Give it the alias <code>/data</code>, and leave <strong>Read/Write</strong> access.</li>
       <li>Under <strong>Environment</strong>, <i>add</i> the following settings to the default fields added:</li>
     </ol>
@@ -261,7 +262,7 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <p>You should now be able to visit your Foundry instance from two locations. In our example, externally this is <code>https://foundryonsynology.info:30000</code>, and on our internal network at <code>https://192.168.1.100:30000</code> (these are just the example addresses, yours will be different!)</p>
 <p>If you see the Foundry screen, but there is no card with login information and you see an error in the console referencing <code>websockets</code>, that means your Reverse Proxy is not set up correctly.</p>
 <ol>
-  <li>Double check <strong>Web Station &gt; Web Service </strong>and <strong>Web Portal</strong> and make sure there are <i><strong>not</strong></i> entries for your Docker container.&nbsp;<ol>
+  <li>Double check <strong>Web Station &gt; Web Service </strong>and <strong>Web Portal</strong> and make sure there are <i><strong>not</strong></i> entries for your Docker container.<ol>
       <li>If there are, delete them then go back to your Foundry container in <strong>Container Manager &gt; Container &gt; foundry &gt; Settings</strong> and make sure the <strong>Set up web portal via Web Station</strong> option is <i><strong>off</strong></i> and that you only see your <code>30000</code>/<code>30000</code>/<code>TCP</code> entry under <strong>Port Settings</strong>.</li>
     </ol>
   </li>
