@@ -2,7 +2,7 @@
 title: Synology with Docker
 description: Guide to setting up Foundry on Synology's DSM 7.2 using Felddy's foundryvtt container.
 published: true
-date: 2023-12-15T18:54:44.115Z
+date: 2023-12-15T19:22:29.876Z
 tags: hosting, self-hosting, synology, docker
 editor: ckeditor
 dateCreated: 2023-12-15T18:47:27.997Z
@@ -18,16 +18,17 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <ul>
   <li>You have Synology DSM 7.2 installed (latest version as of 12/2023 when this guide was written).</li>
   <li>You are using the default Foundry port: <code>:30000</code>.</li>
-  <li>You already own a custom domain name, which is a prerequisite for HTTPS/SSL. For this example we'll use <code>foundryonsynology.info</code></li>
+  <li>You own a custom domain name, which is a prerequisite for HTTPS/SSL. For this example we'll use <code>foundryonsynology.info</code>.</li>
   <li>You will be using HTTPS/SSL.</li>
-  <li>You have created an admin user that does not use the default “admin” login name.</li>
+  <li>You have created <a href="https://drfrankenstein.co.uk/step-2-setting-up-a-restricted-docker-user-and-obtaining-ids/">an admin user</a> that does not use the default “admin” login name.</li>
   <li>You will be using a Foundry login for your container, not the temporary download links (<a href="https://foundryvtt.wiki/en/setup/hosting/Synology#get-a-temporary-foundry-vtt-linuxnodejs-download-url">example of that setup here</a>).</li>
 </ul>
 <h4>Prerequisites</h4>
 <ul>
   <li>Foundry VTT license and login name/password on-hand.</li>
+  <li>A custom domain name. <a href="https://porkbun.com/">Porkbun</a> is a great option if you need a provider!</li>
   <li><a href="https://www.synology.com/en-us/dsm/feature/docker">Synology Container Manager</a> (Docker) is installed through Package Center.</li>
-  <li>Up to date certificates generated through your hosting provider or LetsEncrypt.</li>
+  <li>A limited access admin user and the PUID and PGID to use in Docker (<a href="https://drfrankenstein.co.uk/step-2-setting-up-a-restricted-docker-user-and-obtaining-ids/">guide here</a>).</li>
 </ul>
 <p>&nbsp;</p>
 <h2>1. Create your data folders</h2>
@@ -45,7 +46,7 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <h4>Set a reminder</h4>
 <ol>
   <li>Before you start, go to your calendar app of choice and <strong>set a recurring 90 day calendar reminder</strong> to replace your Foundry and/or Synology certificates.</li>
-  <li>Make a note that you'll need to replace certificates in Control Center &gt; Security &gt; Certificate (<i>if you aren't using Synology's implementation</i>) <i><strong>and</strong></i> your Foundry Config folder (<code>home/docker/foundry/Config</code>).</li>
+  <li>Make a note that you'll need to replace certificates in <strong>Control Center &gt; Security &gt; Certificate</strong> (<i>if you aren't using Synology's implementation</i>) <i><strong>and</strong></i> your Foundry Config folder (<code>home/docker/foundry/Config</code>).</li>
 </ol>
 <h4>Using domain registrar certificates</h4>
 <ol>
@@ -95,6 +96,16 @@ dateCreated: 2023-12-15T18:47:27.997Z
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td>PUID</td>
+        <td>1000</td>
+        <td><i>The PUID for your docker user (</i><a href="https://drfrankenstein.co.uk/step-2-setting-up-a-restricted-docker-user-and-obtaining-ids/"><i>guide here</i></a><i>)</i></td>
+      </tr>
+      <tr>
+        <td>PGID</td>
+        <td>1000</td>
+        <td><i>The PGID for your docker user (</i><a href="https://drfrankenstein.co.uk/step-2-setting-up-a-restricted-docker-user-and-obtaining-ids/"><i>guide here</i></a><i>)</i></td>
+      </tr>
       <tr>
         <td>FOUNDRY_USERNAME</td>
         <td>foundryonsynology</td>
