@@ -1,0 +1,273 @@
+<!--
+title: Synology with Docker
+description: Guide to setting up Foundry on Synology's DSM 7.2 using Felddy's foundryvtt container.
+published: false
+date: 2023-12-15T18:47:27.997Z
+tags: hosting, self-hosting, synology, docker
+editor: ckeditor
+dateCreated: 2023-12-15T18:47:27.997Z
+-->
+
+<h1>Setting up Foundry VTT on your NAS using Container Manager (Docker)</h1>
+<p>This is the Synology guide for those of us that need to interact with Docker using a UI! If you're comfortable managing everything through the command line, use the <a href="https://foundryvtt.wiki/en/setup/hosting/Synology">other guide</a>.</p>
+<p>Please note that Synology ransomware attacks are on the rise, so please secure your NAS, use strong passwords, use HTTPS, and turn off QuickConnect under Control Panel &gt; External Access.</p>
+<p>&nbsp;</p>
+<h4>Assumptions for this guide</h4>
+<ul>
+  <li>You have Synology DSM 7.2 installed (latest version as of 12/2023 when this guide was written).</li>
+  <li>You are using the default Foundry port: <code>:30000</code>.</li>
+  <li>You already own a custom domain name, which is a prerequisite for HTTPS/SSL. For this example we'll use <code>foundryonsynology.info</code></li>
+  <li>You will be using HTTPS/SSL.</li>
+  <li>You have created an admin user that does not use the default “admin” login name.</li>
+  <li>You will be using a Foundry login for your container, not the temporary download links (<a href="https://foundryvtt.wiki/en/setup/hosting/Synology#get-a-temporary-foundry-vtt-linuxnodejs-download-url">example of that setup here</a>).</li>
+</ul>
+<h4>Prerequisites</h4>
+<ul>
+  <li>Foundry VTT license and login name/password on-hand.</li>
+  <li><a href="https://www.synology.com/en-us/dsm/feature/docker">Synology Container Manager</a> (Docker) is installed through Package Center.</li>
+  <li>Up to date certificates generated through your hosting provider or LetsEncrypt.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>1. Create your data folders</h2>
+<p>Wherever you store your Docker container folders, create a new Foundry data folder. This guide assumes this folder is set up under <code>home/docker/foundry</code>.</p>
+<p>&nbsp;</p>
+<h2><a href="https://foundryvtt.wiki/en/setup/hosting/Synology#configuring-https-ssl-on-your-foundry-vtt-web-site">¶</a> 2. Open up ports on your router</h2>
+<p>Set up port forwarding via your router (and modem depending on your provider) to your NAS. This guide assumes you will be using the default port <code>:30000</code>. Here's a <a href="https://nordvpn.com/blog/open-ports-on-router/">guide</a> from NordVPN.</p>
+<ol>
+  <li>Forward port <code>:30000</code> to the internal IP address of your Synology.</li>
+  <li><i>[Required if you are using Synology's Let's Encrypt implementation for certificates] </i>Forward port <code>:80</code> to your NAS so that Synology can auto-renew this certificate with Let's Encrypt.</li>
+</ol>
+<p>&nbsp;</p>
+<h2>3. Get your certificates</h2>
+<p>Download your certificate from your domain registrar, or use <a href="https://kb.synology.com/en-my/DSM/tutorial/How_to_enable_HTTPS_and_create_a_certificate_signing_request_on_your_Synology_NAS">Synology's Let's Encrypt</a> setup. If you use a registrar, this is usually found under the DNS section under your custom domain.</p>
+<h4>Set a reminder</h4>
+<ol>
+  <li>Before you start, go to your calendar app of choice and set a recurring 90 day calendar reminder to replace your Foundry and/or Synology certificates.</li>
+</ol>
+<h4>Using domain registrar certificates</h4>
+<ol>
+  <li>Download the certificates from your registrar.</li>
+  <li>Open <strong>DSM &gt; Control Panel &gt; Security &gt; Certificate</strong>.</li>
+  <li>Click the <strong>Add</strong> button then <strong>Add a new certificate</strong>.</li>
+  <li>Add the name “Foundry” to the description field, then choose <strong>Import certificate</strong>.</li>
+  <li>Upload your certificate files into the next step and complete registration.</li>
+</ol>
+<h4>Using Synology's Let's Encrypt certificates</h4>
+<ol>
+  <li>Open <strong>DSM &gt; Control Panel &gt; Security &gt; Certificate</strong></li>
+  <li>Click the <strong>Add</strong> button then <strong>Add a new certificate</strong>.</li>
+  <li>Add the name “Foundry” to the description field, then choose <strong>Get a certificate from Let's Encrypt</strong></li>
+  <li>Enter your domain name, email, and any subdomains you might be using.</li>
+  <li>Complete registration.</li>
+</ol>
+<h4>Add your certificates to the Foundry data folder</h4>
+<ol>
+  <li>Under your Foundry data folder (<code>/home/docker/foundry</code> in our example), create a new <code>/Config</code> folder</li>
+  <li>Upload the certificate files you downloaded into the <code>/Config</code> folder.</li>
+</ol>
+<p>&nbsp;</p>
+<h2>4. Set up the Docker container</h2>
+<ol>
+  <li>Install <a href="https://www.synology.com/en-us/dsm/feature/docker">Synology Container Manager</a> (Docker) is through Package Center if you haven't already.</li>
+  <li>Under <strong>Container</strong> press the <strong>Create</strong> button.</li>
+  <li>Under the <strong>Image</strong> dropdown, chose <strong>Add Image</strong> and search for “foundryvtt”&nbsp;</li>
+  <li>In this example we're using <strong>felddy/foundryvtt</strong>. Choose that image and download, then select the <strong>latest</strong> tag.</li>
+  <li>Name your container “foundry”</li>
+  <li>Check <strong>Enable auto-restart</strong>. <i>Do not enable “Set up web portal via Web station”.</i></li>
+  <li>Continue to <strong>Advanced Settings</strong>
+    <ol>
+      <li>Set <strong>Port Settings</strong> to <code>30000</code> / <code>30000</code> / <code>TCP</code>&nbsp;</li>
+      <li>Under <strong>Volume Settings</strong>, choose <strong>+ Add Folder</strong>, then add the Foundry data folder you created earlier (<code>/home/docker/foundry</code>). Give it the alias <code>/data</code>, and leave <strong>Read/Write</strong> access.</li>
+      <li>Under <strong>Environment</strong>, <i>add</i> the following settings to the default fields added:</li>
+    </ol>
+  </li>
+</ol>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Variable name</th>
+        <th>Example value</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FOUNDRY_USERNAME</td>
+        <td>foundryonsynology</td>
+        <td><i>Your Foundry username, not email</i></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_PASSWORD</td>
+        <td>Foundry-On-Synology7.2</td>
+        <td><i>Your Foundry password</i></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_ADMIN_KEY</td>
+        <td>Let.Me.In.To.Foundry</td>
+        <td><i>The admin section login password you want to use in Foundry</i></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_LICENSE_KEY</td>
+        <td>1234-5678-9012-3456-7890</td>
+        <td><i>Your Foundry license key</i></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_HOSTNAME</td>
+        <td>foundryonsynology.info</td>
+        <td><i>Your custom domain name</i></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_SSL_CERT</td>
+        <td>cert.pem</td>
+        <td><i>The filename of the certificate you added to </i><code><i>/foundry/Config</i></code></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_SSL_KEY</td>
+        <td>privkey.pem</td>
+        <td><i>The filename of the private key file you added to </i><code><i>/foundry/Config</i></code></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_PROXY_SSL</td>
+        <td>true</td>
+        <td><i>Yes, you want to use SSL</i></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_PROXY_PORT</td>
+        <td>443</td>
+        <td>T<i>his requires the HTTPS port </i><code><i>443</i></code><i> , not our default </i><code><i>30000</i></code></td>
+      </tr>
+      <tr>
+        <td>FOUNDRY_LOCAL_HOSTNAME</td>
+        <td>foundryonsynology.info</td>
+        <td><i>Your custom domain name</i></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>Then start it up!</p>
+<p>&nbsp;</p>
+<h2>5. Set up a reverse proxy</h2>
+<ol>
+  <li>Open <strong>Control Panel &gt; Login Portal &gt; Advanced</strong> on your NAS and open <strong>Reverse Proxy</strong>.</li>
+  <li><strong>Create</strong> a new entry:</li>
+</ol>
+<figure class="table">
+  <table>
+    <thead>
+      <tr>
+        <th>Tab</th>
+        <th>Field</th>
+        <th>Value</th>
+        <th>&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><strong>General</strong></th>
+        <td>Reverse Proxy Name</td>
+        <td>Foundry</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><strong>Source</strong></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Protocol</td>
+        <td>HTTPS</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Hostname</td>
+        <td>foundryonsynology.info</td>
+        <td><i>Your domain name</i></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Port</td>
+        <td>30000</td>
+        <td><i>The external port you're forwarding inbound from your router</i></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Enable HSTS</td>
+        <td>Checked/true</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Access control profile</td>
+        <td>Not configured</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td><strong>Destination</strong></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Protocol</td>
+        <td>HTTPS</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Hostname</td>
+        <td>192.168.1.100</td>
+        <td><i>The internal IP address of your NAS, (Control Center &gt; Info Center &gt; Network)</i></td>
+      </tr>
+      <tr>
+        <th><strong>Custom Header</strong></th>
+        <td>Upgrade</td>
+        <td>$http_upgrade</td>
+        <td><i>Add these 5 custom entries</i></td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Connection</td>
+        <td>“Upgrade”</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>Host</td>
+        <td>$host</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>X-Forwarded-For</td>
+        <td>$proxy_x_add_forwarded_for</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>&nbsp;</th>
+        <td>X-Forwarded-Proto</td>
+        <td>$scheme</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
+<h2>6. Test your setup</h2>
+<p>You should now be able to visit your Foundry instance from two locations. In our example, externally this is <code>https://foundryonsynology.info:30000</code>, and on our internal network at <code>https://192.168.1.100:30000</code> (these are just the example addresses, yours will be different!)</p>
+<p>If you see the Foundry screen, but there is no card with login information and you see an error in the console referencing <code>websockets</code>, that means your Reverse Proxy is not set up correctly.</p>
+<ol>
+  <li>Double check <strong>Web Station &gt; Web Service </strong>and <strong>Web Portal</strong> and make sure there are <i><strong>not</strong></i> entries for your Docker container.&nbsp;<ol>
+      <li>If there are, delete them then go back to your Foundry container in <strong>Container Manager &gt; Container &gt; foundry &gt; Settings</strong> and make sure the <strong>Set up web portal via Web Station</strong> option is <i><strong>off</strong></i> and that you only see your <code>30000</code>/<code>30000</code>/<code>TCP</code> entry under <strong>Port Settings</strong>.</li>
+    </ol>
+  </li>
+  <li>If you have Watchtower set up, you may want to <a href="https://containrrr.dev/watchtower/container-selection/">exclude Foundry</a>.</li>
+</ol>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
