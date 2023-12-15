@@ -2,7 +2,7 @@
 title: Synology with Docker
 description: Guide to setting up Foundry on Synology's DSM 7.2 using Felddy's foundryvtt container.
 published: true
-date: 2023-12-15T19:22:29.876Z
+date: 2023-12-15T19:25:19.295Z
 tags: hosting, self-hosting, synology, docker
 editor: ckeditor
 dateCreated: 2023-12-15T18:47:27.997Z
@@ -164,7 +164,7 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <h2>5. Set up a reverse proxy</h2>
 <ol>
   <li>Open <strong>Control Panel &gt; Login Portal &gt; Advanced</strong> on your NAS and open <strong>Reverse Proxy</strong>.</li>
-  <li><strong>Create</strong> a new entry:</li>
+  <li><strong>Create</strong> a new reverse proxy, and remember to add the 5 entries under Custom Header.</li>
 </ol>
 <figure class="table">
   <table>
@@ -272,7 +272,9 @@ dateCreated: 2023-12-15T18:47:27.997Z
 </figure>
 <p>&nbsp;</p>
 <h2>6. Test your setup</h2>
-<p>You should now be able to visit your Foundry instance from two locations. In our example, externally this is <code>https://foundryonsynology.info:30000</code>, and on our internal network at <code>https://192.168.1.100:30000</code> (these are just the example addresses, yours will be different!)</p>
+<p>You should now be able to visit your Foundry instance from two locations. In our example, externally this is <code>https://foundryonsynology.info:30000</code>, and on our internal network at <code>https://192.168.1.100:30000</code>. <i>These are just the example addresses, yours will be different!</i></p>
+<p>&nbsp;</p>
+<h4>No login panel is showing up!!</h4>
 <p>If you see the Foundry screen, but there is no card with login information and you see an error in the console referencing <code>websockets</code>, that means your Reverse Proxy is not set up correctly.</p>
 <ol>
   <li>Double check <strong>Web Station &gt; Web Service </strong>and <strong>Web Portal</strong> and make sure there are <i><strong>not</strong></i> entries for your Docker container.<ol>
