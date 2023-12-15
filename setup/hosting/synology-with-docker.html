@@ -2,7 +2,7 @@
 title: Synology with Docker
 description: Guide to setting up Foundry on Synology's DSM 7.2 using Felddy's foundryvtt container.
 published: true
-date: 2023-12-15T19:43:53.357Z
+date: 2023-12-15T19:48:11.973Z
 tags: hosting, self-hosting, synology, docker
 editor: ckeditor
 dateCreated: 2023-12-15T18:47:27.997Z
@@ -275,16 +275,13 @@ dateCreated: 2023-12-15T18:47:27.997Z
 <h2>6. Test your setup</h2>
 <p>You should now be able to visit your Foundry instance from two locations. In our example, externally this is <code>https://foundryonsynology.info:30000</code>, and on our internal network at <code>https://192.168.1.100:30000</code>. <i>These are just the example addresses, yours will be different!</i></p>
 <p>&nbsp;</p>
-<h4>No login panel is showing up!!</h4>
+<h4>Help, no login panel is showing up!!</h4>
 <p>If you see the Foundry screen, but there is no card with login information and you see an error in the console referencing <code>websockets</code>, that means your Reverse Proxy is not set up correctly.</p>
-<ol>
-  <li>Double check <strong>Web Station &gt; Web Service </strong>and <strong>Web Portal</strong> and make sure there are <i><strong>not</strong></i> entries for your Docker container.<ol>
-      <li>If there are, delete them then go back to your Foundry container in <strong>Container Manager &gt; Container &gt; foundry &gt; Settings</strong> and make sure the <strong>Set up web portal via Web Station</strong> option is <i><strong>off</strong></i> and that you only see your <code>30000</code>/<code>30000</code>/<code>TCP</code> entry under <strong>Port Settings</strong>.</li>
-    </ol>
-  </li>
+<p>Double check <strong>Web Station &gt; Web Service </strong>and <strong>Web Portal</strong> and make sure there are <i><strong>not</strong></i> entries for your Docker container.</p>
+<p>If there are, delete them then go back to your Foundry container in <strong>Container Manager &gt; Container &gt; foundry &gt; Settings</strong> and make sure the <strong>Set up web portal via Web Station</strong> option is <i><strong>off</strong></i> and that you only see your <code>30000</code>/<code>30000</code>/<code>TCP</code> entry under <strong>Port Settings</strong>.</p>
+<p>&nbsp;</p>
+<h4>Other considerations</h4>
+<ul>
   <li>If you have Watchtower set up, you may want to <a href="https://containrrr.dev/watchtower/container-selection/">exclude Foundry</a>.</li>
-</ol>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+</ul>
 <p>&nbsp;</p>
