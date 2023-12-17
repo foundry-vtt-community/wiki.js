@@ -2,7 +2,7 @@
 title: Cloudflare R2 as S3 Bucket
 description: How to use Cloudflare's R2 as an S3 bucket for FoundryVTT
 published: true
-date: 2023-12-17T02:53:39.664Z
+date: 2023-12-17T02:58:09.088Z
 tags: s3, cloudflare
 editor: markdown
 dateCreated: 2023-12-17T02:48:11.296Z
@@ -458,21 +458,21 @@ export default {
     s3_request.headers.delete("x-real-ip");
 
     const orig_signer = new AwsV4Signer({
-      url: request_url,               // required, the AWS endpoint to sign
-      accessKeyId: my_access_key,                                        // required, akin to AWS_ACCESS_KEY_ID
-      secretAccessKey: my_secret_key,    // required, akin to AWS_SECRET_ACCESS_KEY
-      sessionToken: undefined,       // akin to AWS_SESSION_TOKEN if using temp credentials
-      method: request.method,             // if not supplied, will default to 'POST' if there's a body, otherwise 'GET'
-      headers: s3_request.headers,            // standard JS object literal, or Headers instance
-      body: request.body,               // optional, String or ArrayBuffer/ArrayBufferView – ie, remember to stringify your JSON
-      signQuery: undefined,          // set to true to sign the query string instead of the Authorization header
-      service: "s3",            // AWS service, by default parsed at fetch time
-      region: "us-east-1",             // AWS region, by default parsed at fetch time
-      cache: undefined,              // credential cache, defaults to `new Map()`
-      datetime: request.headers.get("x-amz-date"),           // defaults to now, to override use the form '20150830T123600Z'
-      appendSessionToken: undefined, // set to true to add X-Amz-Security-Token after signing, defaults to true for iot
-      allHeaders: undefined,         // set to true to force all headers to be signed instead of the defaults
-      singleEncode: undefined,       // set to true to only encode %2F once (usually only needed for testing)
+      url: request_url,               							// required, the AWS endpoint to sign
+      accessKeyId: my_access_key,       						// required, akin to AWS_ACCESS_KEY_ID
+      secretAccessKey: my_secret_key,								// required, akin to AWS_SECRET_ACCESS_KEY
+      sessionToken: undefined,       								// akin to AWS_SESSION_TOKEN if using temp credentials
+      method: request.method,           						// if not supplied, will default to 'POST' if there's a body, otherwise 'GET'
+      headers: s3_request.headers,      						// standard JS object literal, or Headers instance
+      body: request.body,               						// optional, String or ArrayBuffer/ArrayBufferView – ie, remember to stringify your JSON
+      signQuery: undefined,             						// set to true to sign the query string instead of the Authorization header
+      service: "s3",                    						// AWS service, by default parsed at fetch time
+      region: "us-east-1",              						// AWS region, by default parsed at fetch time
+      cache: undefined,                 						// credential cache, defaults to `new Map()`
+      datetime: request.headers.get("x-amz-date"),  // defaults to now, to override use the form '20150830T123600Z'
+      appendSessionToken: undefined, 								// set to true to add X-Amz-Security-Token after signing, defaults to true for iot
+      allHeaders: undefined,         								// set to true to force all headers to be signed instead of the defaults
+      singleEncode: undefined,       								// set to true to only encode %2F once (usually only needed for testing)
     });
 
     // Make sure the original request is signed correctly
@@ -481,21 +481,21 @@ export default {
     }
 
     const signer = new AwsV4Signer({
-      url: s3_url,               // required, the AWS endpoint to sign
-      accessKeyId: my_access_key,                                        // required, akin to AWS_ACCESS_KEY_ID
-      secretAccessKey: my_secret_key,    // required, akin to AWS_SECRET_ACCESS_KEY
-      sessionToken: undefined,       // akin to AWS_SESSION_TOKEN if using temp credentials
-      method: s3_request.method,             // if not supplied, will default to 'POST' if there's a body, otherwise 'GET'
-      headers: s3_request.headers,            // standard JS object literal, or Headers instance
-      body: s3_request.body,               // optional, String or ArrayBuffer/ArrayBufferView – ie, remember to stringify your JSON
-      signQuery: undefined,          // set to true to sign the query string instead of the Authorization header
-      service: "s3",            // AWS service, by default parsed at fetch time
-      region: "us-east-1",             // AWS region, by default parsed at fetch time
-      cache: undefined,              // credential cache, defaults to `new Map()`
-      datetime: s3_request.headers.get("x-amz-date"),           // defaults to now, to override use the form '20150830T123600Z'
-      appendSessionToken: undefined, // set to true to add X-Amz-Security-Token after signing, defaults to true for iot
-      allHeaders: undefined,         // set to true to force all headers to be signed instead of the defaults
-      singleEncode: undefined,       // set to true to only encode %2F once (usually only needed for testing)
+      url: s3_url,               												// required, the AWS endpoint to sign
+      accessKeyId: my_access_key,                      	// required, akin to AWS_ACCESS_KEY_ID
+      secretAccessKey: my_secret_key,    								// required, akin to AWS_SECRET_ACCESS_KEY
+      sessionToken: undefined,       										// akin to AWS_SESSION_TOKEN if using temp credentials
+      method: s3_request.method,             						// if not supplied, will default to 'POST' if there's a body, otherwise 'GET'
+      headers: s3_request.headers,            					// standard JS object literal, or Headers instance
+      body: s3_request.body,               							// optional, String or ArrayBuffer/ArrayBufferView – ie, remember to stringify your JSON
+      signQuery: undefined,          										// set to true to sign the query string instead of the Authorization header
+      service: "s3",            												// AWS service, by default parsed at fetch time
+      region: "us-east-1",             									// AWS region, by default parsed at fetch time
+      cache: undefined,              										// credential cache, defaults to `new Map()`
+      datetime: s3_request.headers.get("x-amz-date"),		// defaults to now, to override use the form '20150830T123600Z'
+      appendSessionToken: undefined, 										// set to true to add X-Amz-Security-Token after signing, defaults to true for iot
+      allHeaders: undefined,         										// set to true to force all headers to be signed instead of the defaults
+      singleEncode: undefined,       										// set to true to only encode %2F once (usually only needed for testing)
     });
     
     const auth_header = await signer.authHeader();
