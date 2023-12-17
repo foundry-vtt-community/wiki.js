@@ -2,7 +2,7 @@
 title: Cloudflare R2 as S3 Bucket
 description: How to use Cloudflare's R2 as an S3 bucket for FoundryVTT
 published: true
-date: 2023-12-17T02:58:09.088Z
+date: 2023-12-17T03:11:44.078Z
 tags: s3, cloudflare
 editor: markdown
 dateCreated: 2023-12-17T02:48:11.296Z
