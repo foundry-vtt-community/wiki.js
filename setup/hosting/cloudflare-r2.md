@@ -2,7 +2,7 @@
 title: Cloudflare R2 as S3 Bucket
 description: How to use Cloudflare's R2 as an S3 bucket for FoundryVTT
 published: true
-date: 2023-12-17T02:48:11.296Z
+date: 2023-12-17T02:53:39.664Z
 tags: s3, cloudflare
 editor: markdown
 dateCreated: 2023-12-17T02:48:11.296Z
@@ -53,7 +53,7 @@ We could get away with only the last one, but as explained later we want to redu
 ### Create CORS policy
 We need a CORS policy so that our users can load from our bucket that is hosted on a different subdomain.
 
-Create a CORS policy under the R2 bucket settings under CORS Policy -> Add CORS Policy. You can replace the template there with the follow policy and then click save.
+Create a CORS policy under the R2 bucket settings under CORS Policy -> Add CORS Policy. You can replace the template there with the following policy and then click save.
 ```
 [
   {
@@ -73,7 +73,6 @@ Create a CORS policy under the R2 bucket settings under CORS Policy -> Add CORS 
   }
 ]
 ```
-Head to your Cloudflare account main page and create an R2 bucket. If you want to keep things simple just name it `foundry`.
 
 ### Create R2 API Tokens
 We need to create API tokens to access our R2 bucket via the S3 compatability API.
