@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2023-12-06T13:32:19.936Z
+date: 2024-01-01T20:31:59.507Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -184,7 +184,7 @@ Tout n’est pas parfait, il faut parfois faire un « refresh » de son navigate
 ## Y'a plein de versions, j'y comprends rien.
 
 Foundry est basé sur des paliers et des canaux de "releases" : stable, test, beta et prototype.
-Un palier, c'est la première partie des numéros de versions. Par exemple, dans 0.5.3, le palier c'est "0.5". Ou dans 11.0.376, le palier, c'est 11. Dans un palier donné, il y a un ensemble de nouvelles fonctionnalités qui sont implémentées.  Dans un même palier, les derniers numéros indiquent les versions au sein du palier. Par exemple 0.7.0 est la première version du palier "0.7", puis 0.7.1 la seconde, etc.. Actuellement, en septembre 2023, nous sommes au palier 11.
+Un palier, c'est la première partie des numéros de versions. Par exemple, dans 0.5.3, le palier c'est "0.5". Ou dans 11.0.376, le palier, c'est 11. Dans un palier donné, il y a un ensemble de nouvelles fonctionnalités qui sont implémentées.  Dans un même palier, les derniers numéros indiquent les versions au sein du palier. Par exemple 0.7.0 est la première version du palier "0.7", puis 0.7.1 la seconde, etc.. Actuellement, en janvier 2024, nous sommes au palier 11.
 
 Tant que le palier n'a pas atteint un niveau stable, les versions sont des versions potentiellement instables : si vous n'êtes pas développeur, il n'est pas conseillé de les installer.
 
