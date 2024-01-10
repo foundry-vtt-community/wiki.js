@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-01-09T13:56:48.322Z
+date: 2024-01-10T11:46:23.958Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -196,7 +196,7 @@ Explication de la Fiche :
 
 ## Les Miaulements d'Ulthar
 Quel est-ce jeu ? : https://www.legrog.org/jeux/miaulements-d-ulthar
-Explication de la Fiche : A Venir
+Explication de la Fiche : https://youtu.be/HEP4gQzjCTE
 Site de l'Auteur : https://xaviiiier.com/
 >Automatisation sur cette fiche 
 {.is-info}
@@ -210,7 +210,7 @@ Site de l'Auteur : https://xaviiiier.com/
 
 ## Missions  
 Quel est-ce jeu ? : https://www.legrog.org/informations/actualites/02-02-2023-missions
-Explication de la Fiche : Vidéo a venir
+Explication de la Fiche : https://youtu.be/4Gy2A59WVvo
 
 > Automatisation sur cette fiche
 {.is-info}
@@ -224,7 +224,7 @@ Explication de la Fiche : Vidéo a venir
 
 ## Guilde "La Quête des Origines"
 Quel est-ce jeu ? : https://www.legrog.org/jeux/guildes/guildes-1ere-edition/guildes-la-quete-des-origines-fr
-Explication de la Fiche : Vidéo a venir
+Explication de la Fiche : https://youtu.be/eYPZfYdTmak
 
 > Automatisation sur cette fiche
 {.is-info}
@@ -262,7 +262,7 @@ Explication de la Fiche : Vidéo a venir
 
 ## Arkeos
 Quel est-ce jeu ? : https://www.legrog.org/jeux/arkeos
-Explication de la Fiche : Vidéo a venir
+Explication de la Fiche : https://youtu.be/jfTTkr0IzLc
 
 > Automatisation sur cette fiche
 {.is-info}
