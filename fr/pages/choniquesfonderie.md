@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2023-09-21T13:31:07.164Z
+date: 2024-01-16T09:07:17.356Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -31,6 +31,7 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 15](https://www.youtube.com/watch?v=nVA6oz9jQrc) avec VincentVK, LeRatier et Fletch, sur **Shadowrun Anarchy et Barbarians of Lemuria**.
  - Les Chroniques de la [Fonderie, Episode 16](https://www.youtube.com/watch?v=tZwf964_7NA&pp=ygUZY2hyb25pcXVlcyBkZSBsYSBmb25kZXJpZQ%3D%3D) avec SecretFire de Foundry et Rwanoux pour le système **Torg**
  - Les Chroniques de la [Fonderie, Episode 17](https://www.youtube.com/watch?v=3-v8Y3HWW8s) avec Kristov et Khaali pour le système **Trinités** 
+ - Les Chroniques de la [Fonderie, Episode 18](https://youtu.be/xYmE5bCmqw4) avec SecretFire (news Foundry), Carter (Blade Runner) et Kristov (Ludiverse+Cabinet des Murmures)
  
  
  
