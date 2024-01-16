@@ -2,7 +2,7 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-16T22:18:00.531Z
+date: 2024-01-16T22:50:55.360Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z
@@ -41,6 +41,7 @@ sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 ```
 
+### Certbot Cloudflare Setup
 If you have troubles using Certbot on its own and are using your own domain name (not one provided by free services like [DuckDNS](www.duckdns.org)), you will need to create a free Cloudflare account and follow the steps to use their DNS servers vs your registar's servers. Cloudflare has detailed steps and will walk you through the whole process for a number of different registars. This can take up to 24hrs to occur.
 
 To install the Cloudflare Certbot plugin, enter `sudo snap install certbot-dns-cloudflare` or `sudo apt-get install python3-certbot-dns-cloudflare` in the terminal. In order to link the Certbot plugin on your device to your Cloudflare account, you'll need to get an API token:
@@ -52,14 +53,75 @@ To install the Cloudflare Certbot plugin, enter `sudo snap install certbot-dns-c
 6. Fill out the form below
 > If you have multiple domains, change the 'All zones' drop down to be 'Specific zone' and select the domain you wish to use to use for Foundry & the LiveKit server. It is recommended for security that you set the TTL to be 6 to 12 months long.
 {.is-info}
+
 ![screenshot_2024-01-16_160503.png](/images/screenshot_2024-01-16_160503.png)
-7. Create a file `/etc/letsencrypt/cloudflare.ini` with the following text (replace YOUR_TOKEN_HERE with your generated API token):
+7. Create a file `/etc/letsencrypt/cloudflare.ini` (if the directory doesn't exist, make it with `mkdir /etc/letsencrypt`) with the following text (replace YOUR_TOKEN_HERE with your generated API token):
 ```
 # Cloudflare API token for Certbot
 dns_cloudflare_api_token = YOUR_TOKEN_HERE
 ```
 > When the API token expires, you will need to update this file with the new token each time.
 {.is-info}
+8. Make sure the file has the correct permissions: `sudo chmod 666 /etc/letsencrypt/cloudflare.ini`
+9. Get the cert (replace 'your-domain.com' with your domain):
+```
+sudo certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/letsencrypt/cloudflare.ini -d your-domain.com
+```
+10. Test to make sure auto-renewal is setup with the command `sudo certbot renew --dry-run`
+11. We will want to set up a simple bash script to make sure Nginx reloads when a new cert is generated. 
+	a. Create a new script in the `/etc/letsencrypt/renewal-hooks/deploy/` directory: `nano /etc/letsencrypt/renewal-hooks/deploy/reload-nginx.sh`
+  b. Enter the following into the file:
+  ```
+  #!/bin/bash
+  systemctl reload nginx
+  ```
+  c. Make the script executable: `sudo chmod +x /etc/letsencrypt/renewal-hooks/deploy/reload-nginx.sh`
+  
+
+# Setup Firewall
+The following ports will need to be opened:
+- 22/tcp - For SSH
+- 80/tcp - For listening on HTTP and TLS issuance
+- 443/tcp - For listening on HTTPS and TURN/TLS packets
+- 7880-7881/tcp - For WebRTC over TCP
+- 3478/udp - For TURN server UDP
+- 50000-60000/udp - For WebRTC over UDP
+- 8080/tcp - For Foundry connections (TURN Redis server uses port 30000 internally and causes errors sometimes)
+
+If using ufw, enter the follwoing:
+```
+sudo ufw allow 22/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 7880-7881/tcp
+sudo ufw allow 3478/udp 
+sudo ufw allow 443/udp
+sudo ufw allow 50000:60000/udp
+sudo ufw allow 8080/tcp
+sudo ufw enable
+```
+
+If using iptables, enter the following:
+```
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 7880:7881 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 3478 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 443 -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 50000:60000 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
+sudo iptables-save | sudo tee /etc/iptables/rules.v4
+```
+
+# Setup Nginx Reverse-Proxy
+## Switch From Caddy
+
+## Create Directories
+
+## Setup Nginx Config Files
+
+## 
 
 # Additional Guides & Credits
 There are several guides I have gone through that are extremely helpful. Several of them served as the foundation of this guide and I would like to give credit to them here. Thank you very much for your contributions and help!
