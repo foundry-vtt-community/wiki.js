@@ -2,7 +2,7 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-16T22:50:55.360Z
+date: 2024-01-16T23:53:11.148Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z
@@ -89,7 +89,7 @@ The following ports will need to be opened:
 - 8080/tcp - For Foundry connections (TURN Redis server uses port 30000 internally and causes errors sometimes)
 
 If using ufw, enter the follwoing:
-```
+```bash
 sudo ufw allow 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
@@ -102,7 +102,7 @@ sudo ufw enable
 ```
 
 If using iptables, enter the following:
-```
+```bash
 sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
@@ -116,12 +116,221 @@ sudo iptables-save | sudo tee /etc/iptables/rules.v4
 
 # Setup Nginx Reverse-Proxy
 ## Switch From Caddy
+If you followed the instructions for the Always Free Oracle Foundry server, you will want to open your caddyfile at `/etc/caddy/Caddyfile` and comment out the lines for your hostname:
+```
+your.hostname.com {
+    reverse_proxy localhost:30000
+    encode zstd gzip
+}
+```
+Should become:
+```
+#your.hostname.com {
+#    reverse_proxy localhost:30000
+#    encode zstd gzip
+#}
+```
+
+Commenting this out will allow for you to return to it easily in the event of an issue. 
+
+Since we need to move to port 8080 instead of port 30000 for Foundry (as explained in the previous step). Open the options.json file (located at `/home/ubuntu/foundryuserdata/Config/options.json` or where ever your userdata folder for Foundry is stored) and make sure the port is changed to 8080.
+
+Yours should have the following configurations:
+```json
+{
+  "port": 8080,
+  "upnp": true,
+  ...
+  "hostname": your.domain.com,
+  ...
+  "proxySSL": true,
+  "proxyPort": 443,
+  ...
+}
+```
 
 ## Create Directories
+Create log directories for the different Nginx config files:
+```bash
+sudo mkdir /var/log/nginx/livekit
+sudo mkdir /var/log/nginx/livekit-turn
+sudo mkdir /var/log/nginx/foundry
+```
 
 ## Setup Nginx Config Files
+You will need to create 3 config files in Nginx. One for Foundry, one for LiveKit and one for the LiveKit TURN server (this helps connection stability).
 
-## 
+Before we start, you will need to modify the Nginx config file. 
+Open the file: `sudo nano /etc/nginx/nginx.conf`
+In the `http { ... }` block:
+```
+http {
+		# Other Settings
+  	client_max_body_size 10m; #ADD TO THE END OF THE HTTP SECTION
+}
+```
+
+### Foundry Config File
+In the folder `/etc/nginx/sites-available`, create a new file `foundry`:
+```
+cd /etc/nginx/sites-available
+nano foundry
+```
+Add the following (replacing the example domain with your own) to the file:
+```
+server {
+        listen 80;
+        listen [::]:80;
+        listen 443 ssl;
+        listen [::]:443 ssl;
+
+
+        server_name                     foundry.your-domain.com;
+
+        ssl_certificate 								/etc/letsencrypt/live/your-domain.com/fullchain.pem;
+        ssl_certificate_key 						/etc/letsencrypt/live/your-domain.com/privkey.pem;
+
+        # Additional SSL settings
+        ssl_session_cache 							shared:le_nginx_SSL:1m;
+        ssl_session_timeout 						1440m;
+        ssl_protocols 									TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers 			on;
+        ssl_ciphers 										"ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
+
+
+        access_log                      /var/log/nginx/foundry/access.log;
+        error_log                       /var/log/nginx/foundry/error.log;
+
+        location / {
+                proxy_set_header        Host $host;
+                proxy_set_header        X-Real-IP $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header        X-Forwaaarded-Proto $scheme;
+
+                proxy_pass              http://127.0.0.1:8080;
+
+                proxy_http_version      1.1;
+                proxy_set_header        Upgrade $http_upgrade;
+                proxy_set_header        Connection "Upgrade";
+                proxy_read_timeout      90;
+
+                proxy_redirect          https:127.0.0.1:8080 http://foundry.your-domain.com;
+        }
+}
+
+```
+
+
+### LiveKit Config File
+In the same directory, create a config file for LiveKit:
+```
+nano livekit.your-domain.com.conf
+```
+
+Add the following (replacing the example domain with your own) to the file:
+```
+server {
+        listen 80;
+        listen [::]:80;
+        listen 443 ssl;
+        listen [::]:443 ssl;
+
+        server_name                 livekit.your-domain.com;
+
+        ssl_certificate 						/etc/letsencrypt/live/your-domain.com/fullchain.pem;
+        ssl_certificate_key 				/etc/letsencrypt/live/your-domain.com/privkey.pem;
+
+        # Additional SSL settings
+        ssl_session_cache 					shared:le_nginx_SSL:1m;
+        ssl_session_timeout 				1440m;
+        ssl_protocols 							TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers 	on;
+        ssl_ciphers 								"ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
+
+
+        access_log                  /var/log/nginx/livekit/access.log;
+        error_log                   /var/log/nginx/livekit/error.log;
+
+        location / {
+                proxy_set_header        Host $host;
+                proxy_set_header        X-Real-IP $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header        X-Forwarded-Proto $scheme;
+
+                proxy_pass              http://127.0.0.1:7880;
+
+                proxy_http_version      1.1;
+                proxy_set_header        Upgrade $http_upgrade;
+                proxy_set_header        Connection "Upgrade";
+                proxy_read_timeout      90;
+
+                proxy_redirect          https://127.0.0.1:7880 http://livekit.your-domain.com;
+        }
+}
+```
+
+### LiveKit TURN Config File
+In the same directory, create a config file for the LiveKit TURN server:
+```
+nano livekit-turn.your-domain.com.conf
+```
+
+Add the following (replacing the example domain with your own) to the file:
+```
+server {
+        listen 80;
+        listen [::]:80;
+        listen 443 ssl;
+        listen [::]:443 ssl;
+
+        server_name                 livekit-turn.your-domain.com;
+
+        ssl_certificate 						/etc/letsencrypt/live/your-domain.com/fullchain.pem;
+        ssl_certificate_key 				/etc/letsencrypt/live/your-domain.com/privkey.pem;
+
+        # Additional SSL settings
+        ssl_session_cache 					shared:le_nginx_SSL:1m;
+        ssl_session_timeout 				1440m;
+        ssl_protocols 							TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers 	on;
+        ssl_ciphers 								"ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
+
+
+        access_log                  /var/log/nginx/livekit-turn/access.log;
+        error_log                   /var/log/nginx/livekit-turn/error.log;
+
+        location / {
+                proxy_set_header        Host $host;
+                proxy_set_header        X-Real-IP $remote_addr;
+                proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header        X-Forwarded-Proto $scheme;
+
+                proxy_pass              http://127.0.0.1:5349;
+
+                proxy_http_version      1.1;
+                proxy_set_header        Upgrade $http_upgrade;
+                proxy_set_header        Connection "Upgrade";
+                proxy_read_timeout      90;
+
+                proxy_redirect          https://127.0.0.1:5349 http://livekit-turn.your-domain.com;
+        }
+}
+```
+
+
+### Enable Config Files
+First, make sure there are no files in the `/etc/nginx/sites-enabled` folder. If there are files, remove them with thr `rm` command. Then we are going to make a symbolic link from the 'sites-available' folder to the 'sites-enabled' folder. Replace all instances of 'your-domain.com' with your domain in the file names:
+
+```
+sudo ln -s /etc/nginx/sites-available/livekit.your-domain.com.conf /etc/nginx/sites-enabled/livekit.your-domain.com.conf
+sudo ln -s /etc/nginx/sites-available/livekit-turn.your-domain.com.conf /etc/nginx/sites-enabled/livekit-turn.your-domain.com.conf
+sudo ln -s /etc/nginx/sites-available/foundry /etc/nginx/sites-enabled/foundry
+```
+
+Test the Nginx configuration with the `sudo nginx -t` command. If you get an error about too many levels of symbolic links, make sure you aren't using relative paths (e.g. `./sites-available`) and are using the correct absolute path (`/etc/nginx/sites-available/`).
+
+If all works, restart Nginx: `sudo systemctl restart nginx`
+# Install & Setup LiveKit
 
 # Additional Guides & Credits
 There are several guides I have gone through that are extremely helpful. Several of them served as the foundation of this guide and I would like to give credit to them here. Thank you very much for your contributions and help!
