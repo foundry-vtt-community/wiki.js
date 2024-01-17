@@ -2,14 +2,14 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-17T03:34:16.194Z
+date: 2024-01-17T03:34:34.353Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z
 ---
 
 # Overview
-This guide will show you how to setup a LiveKit A/V server on your existing Linux server for FoundryVTT. This guide assumes you already have a Linux server self-hosted or cloud-hosted and will NOT go over the setup of a FoundryVTT Linux server. I would like to note that I created this guide because all the other guides I found didn't work for my situation. All guides I have come across for the LiveKit server hosting did serve as a foundation for this one. They will be credited and linked in the [Additional Guides & Credits](#additionaal-guides--credits) section of this guide.
+This guide will show you how to setup a LiveKit A/V server on your existing Linux server for FoundryVTT. This guide assumes you already have a Linux server self-hosted or cloud-hosted and will NOT go over the setup of a FoundryVTT Linux server. I would like to note that I created this guide because all the other guides I found didn't work for my situation. All guides I have come across for the LiveKit server hosting did serve as a foundation for this one. They will be credited and linked in the [Additional Guides & Credits](#additional-guides--credits) section of this guide.
 
 > Note: I have found that while LiveKit is significantly better than the built in A/V, there is occasional instability. You can try refreshing the page and enabling the 'Refresh room ID' setting in the LiveKit A/V server settings tab.
 {.is-info}
