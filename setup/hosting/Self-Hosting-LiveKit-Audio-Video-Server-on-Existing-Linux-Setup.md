@@ -2,7 +2,7 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-16T23:53:11.148Z
+date: 2024-01-17T03:22:24.640Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z
@@ -15,6 +15,7 @@ This guide will show you how to setup a LiveKit A/V server on your existing Linu
 - Linux self or cloud hosted machine
 - Nginx Reverse Proxy Service (If you are currently using Caddy as per the Always Free Oracle Cloud Hosting Guide for Foundry, switching to Nginx will be covered in this guide)
 - Certbot
+- Docker
 - Free Cloudflare DNS Account
 - Certbot Cloudflare Plugin
 - CNAME or A Records (one or the other, NOT both) for livekit.domain.com and livekit-turn.domain.com.
@@ -29,6 +30,11 @@ This guide will show you how to setup a LiveKit A/V server on your existing Linu
 To install Nginx on your device run the install command (depending on your Linux distro):
 - **REHL Linux Distros:** `sudo yum install nginx`
 - **Debian & Ubuntu:** `sudo apt install nginx`
+
+## Docker
+To install Docker on your device run the install command (depending on your Linux distro):
+- **REHL Linux Distros:** `sudo yum install docker-ce`
+- **Debian & Ubuntu:** `sudo apt-get install docker`
 
 ## Certbot & Certbot Cloudflare Plugins
 First you will need to install snapd if it is not pre-installed on your distro (you can check with the `sudo snap --version` command).
@@ -331,6 +337,7 @@ Test the Nginx configuration with the `sudo nginx -t` command. If you get an err
 
 If all works, restart Nginx: `sudo systemctl restart nginx`
 # Install & Setup LiveKit
+
 
 # Additional Guides & Credits
 There are several guides I have gone through that are extremely helpful. Several of them served as the foundation of this guide and I would like to give credit to them here. Thank you very much for your contributions and help!
