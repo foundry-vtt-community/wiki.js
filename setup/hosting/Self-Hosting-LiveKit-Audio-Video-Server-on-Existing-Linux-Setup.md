@@ -2,7 +2,7 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-17T03:22:24.640Z
+date: 2024-01-17T03:33:32.906Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z
@@ -10,6 +10,10 @@ dateCreated: 2024-01-16T22:18:00.531Z
 
 # Overview
 This guide will show you how to setup a LiveKit A/V server on your existing Linux server for FoundryVTT. This guide assumes you already have a Linux server self-hosted or cloud-hosted and will NOT go over the setup of a FoundryVTT Linux server. I would like to note that I created this guide because all the other guides I found didn't work for my situation. All guides I have come across for the LiveKit server hosting did serve as a foundation for this one. They will be credited and linked in the [Additional Guides & Credits](#additionaal-guides--credits) section of this guide.
+
+> Note: I have found that while LiveKit is significantly better than the built in A/V, there is occasional instability. You can try refreshing the page and enabling the 'Refresh room ID' setting in the LiveKit A/V server settings tab.
+{.is-info}
+
 
 ## Requirements
 - Linux self or cloud hosted machine
@@ -337,6 +341,65 @@ Test the Nginx configuration with the `sudo nginx -t` command. If you get an err
 
 If all works, restart Nginx: `sudo systemctl restart nginx`
 # Install & Setup LiveKit
+1. First you'll need to get the configuration and installation files: `sudo docker run --rm -it -v$PWD:/output livekit/generate`
+	- Input primary domain name: livekit.your-domain.com
+	- Input TURN server domain name: livekit-turn.your-domain.com
+	- Select latest version of LiveKit
+	- Select no to use bundled copy of Redis
+	- Select Startup Shell Script
+**Copy down the API Key and API Secret displayed on screen. You will need these in order to connect to the LiveKit server.** You can also find the Key and Secret in the file livekit.yaml in the generated installation directory.
+
+2. Next, you'll need to change to the generated installation directory: `cd livekit.your-domain.com`
+
+3. Then make the install script executable: `sudo chmod +x init_script.sh`
+
+4. Install LiveKit using the generated installation script: `sudo ./init_script.sh`
+
+5. Comment out the caddy section of the services in the docker-compose file: `sudo nano /opt/livekit/docker-compose.yaml`:
+	
+  ```
+  # LiveKit requires host networking, which is only available on Linux
+# This compose will not function correctly on Mac or Windows
+version: "3.9"
+services:
+  #  caddy:
+  #    image: livekit/caddyl4
+  #    command: run --config /etc/caddy.yaml --adapter yaml
+  #    restart: unless-stopped
+  #    network_mode: "host"
+  #    volumes:
+  #      - ./caddy.yaml:/etc/caddy.yaml
+  #      - ./caddy_data:/data
+  livekit:
+    image: livekit/livekit-server:latest
+    command: --config /etc/livekit.yaml
+    restart: unless-stopped
+    network_mode: "host"
+    volumes:
+      - ./livekit.yaml:/etc/livekit.yaml
+  redis:
+    image: redis:6-alpine
+    command: redis-server /etc/redis.conf
+    network_mode: "host"
+    volumes:
+      - ./redis.conf:/etc/redis.conf
+  ```
+# Install LiveKit Module for Foundry
+1. Install the LiveKit AVClient module from the Add-on Modules Tab in Foundry
+
+2. Open a world file and enable the LiveKit AVClient module in the module configuration tab.
+
+3. Open the Core Configuration Settings and click on Configure Audio/Video.
+
+4. Click on the Server tab and input the following settings:
+```
+LiveKit Server Address:  livekit.your-domain.com
+LiveKit API Key:         <value from livekit.yaml file>
+LiveKit API Secret:      <value from livekit.yaml file>
+```
+5. Enable Audio/Video on the General tab to connect to LiveKit.
+
+6. If you want players to have voice activiation rather than push to talk, each player will need to configure that in their own A/V settings. Additionally, to talk and have video, you will need to enable that ability for players in the permissions settings.
 
 
 # Additional Guides & Credits
