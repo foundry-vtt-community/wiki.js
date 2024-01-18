@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T19:46:16.066Z
+date: 2024-01-18T19:52:25.087Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -145,7 +145,10 @@ Une fois cette clée saisie, le module apparait comme installable dans les modul
 
 ## Comment je fais pour installer un système de jeu ?
 
-Dans l'interface de Foundry, 
+Dans l'interface de Foundry, cliquez sur le bouton d'installation : ![install_system.webp](/setup/winstall/install_system.webp)
+La fenêtre de recherche des systèmes s'ouvre. Saissisez alors le/les mots-clés du système souhaité : 
+
+
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
 FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
