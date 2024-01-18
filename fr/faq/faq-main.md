@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T19:54:32.993Z
+date: 2024-01-18T20:01:56.136Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -157,6 +157,21 @@ Exemple : Pour 'Warhammer", entrez "War"
 La méthode est identique à l'installation des sytsèmes, sauf que tout se passe dans l'onglet des modules.
 
 ## On m'a passé un lien vers un system.json ou un module.json. J'en fais quoi ?
+
+Ces liens sont en fait une ancienne méthode d'installation des systèmes et modules, obsolète depuis 2 ans désormais. Donc, en priorité, vérifiez bien que votre système ou module n'est pas déja présent dans le "Marketplace" de Foundry (cf les 2 questions juste au-dessus sur l'installation des systèmes/modules). 
+
+**Priviligiez toujours l'installation via le Markeplace de Foundry plutot que par des liens de .json.
+**
+
+Cependant, il peut arriver parfois que des système/modules ne soient pas présents dans le Marketplace pour diverses raisons : l'auteur ne veut pas le publier, le contenu est "privé", etc, etc. Dans ce cas, effectivement, vous pouvez l'installer dans Foundry.
+
+Pour ce faire, ouvrez la fenêtre de recherche de systèmes (ou modules) : 
+![install_system.webp](/setup/winstall/install_system.webp)
+
+Puis copier le lien dans le champ en bas de la fenêtre : 
+![install_system_03.webp](/setup/winstall/install_system_03.webp)
+
+Puis cliquez sur "Installation"
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
