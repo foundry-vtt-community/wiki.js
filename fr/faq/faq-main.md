@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T19:52:25.087Z
+date: 2024-01-18T19:52:54.665Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -147,7 +147,7 @@ Une fois cette clée saisie, le module apparait comme installable dans les modul
 
 Dans l'interface de Foundry, cliquez sur le bouton d'installation : ![install_system.webp](/setup/winstall/install_system.webp)
 La fenêtre de recherche des systèmes s'ouvre. Saissisez alors le/les mots-clés du système souhaité : 
-
+![install_system_02.webp](/setup/winstall/install_system_02.webp)
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
