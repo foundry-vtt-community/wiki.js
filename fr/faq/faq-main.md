@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T20:04:23.105Z
+date: 2024-01-18T20:06:43.726Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -175,7 +175,9 @@ Puis cliquez sur "Installation"
 
 ## On m'a passé un fichier .zip, j'en fais quoi ?
 
-Il peut arriver que l'on vous fournisse un .zip contenant par exemple un module de contenu fait par un membre du Discord. Pour l'installer, il faut le dezipper dans le répertoire `Data/modules` de votre installation.
+Il peut arriver que l'on vous fournisse un .zip contenant par exemple un module de contenu fait par un membre du Discord. Pour l'installer, il faut le dezipper dans le répertoire `Data/modules` de votre installation, comme indiquer dans "*Comment sont stockées les données  ?*" plus bas.
+
+Une fois décompressé dans ce répertoire, redemarrez Foundry, et activez le module dans le monde souhaité. Et voilà !
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
