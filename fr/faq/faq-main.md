@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-01T20:33:14.440Z
+date: 2024-01-18T19:46:16.066Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -143,6 +143,9 @@ La grande majorité des modules sont gratuits, mais certains modules de contenus
 
 Une fois cette clée saisie, le module apparait comme installable dans les modules "premiums", via l'interface "modules" de Foundry.  
 
+## Comment je fais pour installer un système de jeu ?
+
+Dans l'interface de Foundry, 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
 FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
