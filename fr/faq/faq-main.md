@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T20:03:01.793Z
+date: 2024-01-18T20:04:23.105Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -172,6 +172,10 @@ Puis copier le lien dans le champ en bas de la fenêtre :
 ![install_system_03.webp](/setup/winstall/install_system_03.webp)
 
 Puis cliquez sur "Installation"
+
+## On m'a passé un fichier .zip, j'en fais quoi ?
+
+Il peut arriver que l'on vous fournisse un .zip contenant par exemple un module de contenu fait par un membre du Discord. Pour l'installer, il faut le dezipper dans le répertoire `Data/modules` de votre installation.
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
