@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T19:53:31.358Z
+date: 2024-01-18T19:54:32.993Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -151,6 +151,12 @@ La fenêtre de recherche des systèmes s'ouvre. Saissisez alors le/les mots-clé
 ![install_system_02.webp](/setup/winstall/install_system_02.webp)
 
 Exemple : Pour 'Warhammer", entrez "War"
+
+## Comment je fais pour installer un module ?
+
+La méthode est identique à l'installation des sytsèmes, sauf que tout se passe dans l'onglet des modules.
+
+## On m'a passé un lien vers un system.json ou un module.json. J'en fais quoi ?
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
