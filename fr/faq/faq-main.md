@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T20:01:56.136Z
+date: 2024-01-18T20:03:01.793Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -158,7 +158,7 @@ La méthode est identique à l'installation des sytsèmes, sauf que tout se pass
 
 ## On m'a passé un lien vers un system.json ou un module.json. J'en fais quoi ?
 
-Ces liens sont en fait une ancienne méthode d'installation des systèmes et modules, obsolète depuis 2 ans désormais. Donc, en priorité, vérifiez bien que votre système ou module n'est pas déja présent dans le "Marketplace" de Foundry (cf les 2 questions juste au-dessus sur l'installation des systèmes/modules). 
+Ces liens sont en fait une ancienne méthode d'installation des systèmes et modules, obsolète depuis 2 ans désormais. Donc, en priorité, vérifiez bien que votre système ou module n'est pas déja présent dans le "Marketplace" de Foundry (cf les 2 questions juste au-dessus sur l'installation des systèmes/modules). De plus, ces liens JSON pointent assez souvent sur des systèmes/modules plus mis à jour depuis longtemps, et qui ne fonctionneront donc pas sur votre installation de Foundry. Dans le doute, venez en discutez sur le Discord FR de Foundry. 
 
 **Priviligiez toujours l'installation via le Markeplace de Foundry plutot que par des liens de .json.
 **
