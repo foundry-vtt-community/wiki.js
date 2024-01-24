@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2023-02-19T10:20:27.874Z
+date: 2024-01-24T10:58:05.225Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -97,11 +97,13 @@ We wrote a [full guide for setting up this Docker image on a Synology NAS](/setu
 
 # DirecktHit's Guide to Running FVTT-Docker with Traefik and Portainer
 
-Please visit [DirecktHit's blog](https://benprice.dev/posts/fvtt-docker-tutorial/) for the most up to date directions.
+Note:  Latest docker images do not work! However, instructions/labels are useful if you're trying to get it working with Traefik.
+~~Please visit [DirecktHit's blog](https://benprice.dev/posts/fvtt-docker-tutorial/) for the most up to date directions.~~
 
 ## DirecktHit's Docker Hub Image via `docker-compose`
 
-Please visit the README in the [fvtt-docker repository](https://github.com/BenjaminPrice/fvtt-docker) for the most up to date directions.
+Note: Latest docker images do not work!
+~~Please visit the README in the [fvtt-docker repository](https://github.com/BenjaminPrice/fvtt-docker) for the most up to date directions.~~
 
 ---
 
