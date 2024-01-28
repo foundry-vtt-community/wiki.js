@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-18T20:06:43.726Z
+date: 2024-01-28T17:04:13.142Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -230,6 +230,9 @@ Au sein d'un même palier, les modules et systèmes indiquant le support du pali
 **Règle 2** : Si vous n'êtes pas développeur, n'installez pas les releases prototype, beta et test. Attendez les tests "tardives" ou les premières "stables".
 **Règle 3**  : Au sein d'un même palier, placez vous toujours sur la dernière version du palier.
 
+De plus, le versionnage des systèmes et modules est complètement libre pour leurs auteurs, et donc indépendant de la numérotation de Foundy. On peut donc avoir Foundry en version 11, avec un système en v7 (le cas de Warhammer au 28/01/24, par exemple), et un module modules affichant une version 10. C'est totalement indépendant, et c'est normal.
+
+Pour faire un parallèle, c'est comme sous Windows avec ses applications : c'est pas parce que vous avez "Windows 11" que tout les softs affichent une version "11".
 
 ## Mon JDR « Borglur of Daemon of Death Doomesque » est pas dispo ! Que faire ?
 
