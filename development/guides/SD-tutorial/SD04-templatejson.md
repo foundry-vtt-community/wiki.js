@@ -2,19 +2,13 @@
 title: 04. template.json
 description: 
 published: true
-date: 2022-10-12T21:39:32.187Z
+date: 2024-02-05T21:15:48.778Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z
 ---
 
-> **Not Updated for Foundry v10**
->
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
-
-Your system's data model for character and item sheets is defined in `template.json`. Any changes you make to this file will require you to return to Foundry's setup screen and relaunch your world. The template.json for the Boilerplate System looks like this.
+The most straightforward way to define your system's data model for characters and items is in `template.json`. Any changes you make to this file will require you to return to Foundry's setup screen and relaunch your world. The template.json for the Boilerplate System looks like this.
 
 ```json
 {
@@ -106,7 +100,7 @@ The top level view of template.json looks like this:
 }
 ```
 
-Those two properties correspond with the two entity types that you can make changes to in your template.json. They both support 3 properties:
+Those two properties correspond with the two document types that you can make changes to in your template.json. They both support 3 properties:
 
 ```json
 {
@@ -134,7 +128,7 @@ Those two properties correspond with the two entity types that you can make chan
 }
 ```
 
-The first property, `types`, defines the different sub-types of this entity type that your system will use.  In this example, those types are `character` and `npc`, but you can create as many as you need.
+The first property, `types`, defines the different sub-types of this document type that your system will use.  In this example, those types are `character` and `npc`, but you can create as many as you need.
 
 The second property, `templates`, is where you define common attributes that can be applied to any of the other sub-types. In this example, we've defined a `base` template that has a `health` property that has `value` and `max` properties.
 
@@ -148,7 +142,7 @@ For more details, go to [https://foundryvtt.com/article/system-development/](htt
 
 ## Actors vs. Items
 
-What is the difference between an Actor and an Item? That depends on what your system needs, and only you can answer that question. On a technical level, actors will have tokens and can be added to scenes, while items are typically only used for creating compendium content and then attaching those to actors as owned items. Items are not just items/equipment in most RPG systems; they can be other things as well such as Class Features, Spells, or Feats. If your system needs to track more than a few properties on something that can be added to character sheets as a discreet piece, it should probably be an item type.
+What is the difference between an Actor and an Item? That depends on what your system needs, and only you can answer that question. On a technical level, actors will have tokens and can be added to scenes, while items are typically only used for creating compendium content and then attaching those to actors as owned items. Items are not just equipment in most RPG systems; they can be other things as well such as Class Features, Spells, or Feats. If your system needs to track more than a few properties on something that can be added to character sheets as a discreet piece, it should probably be an item type.
 
 For example, this snippet would add three different item types to your system, some of which share features:
 
