@@ -2,17 +2,11 @@
 title: 05. Creating-your-main-JS-file
 description: 
 published: true
-date: 2022-10-12T21:39:45.696Z
+date: 2024-02-05T21:53:02.849Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:47.008Z
 ---
-
-> **Not Updated for Foundry v10**
->
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
 
 Let's take a look at the Boilerplate System's `/module/boilerplate.mjs` file. We'll look at each section of it to see what's happening:
 
@@ -53,13 +47,13 @@ This example includes comments behind `//` that explain more about what's actual
 /*  Init Hook                                   */
 /* -------------------------------------------- */
 
-Hooks.once('init', function() {
-
+Hooks.once('init', function () {
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
   game.boilerplate = {
     BoilerplateActor,
     BoilerplateItem,
+    rollItemMacro,
   };
 
   // Add custom constants for configuration.
@@ -70,19 +64,30 @@ Hooks.once('init', function() {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "1d20 + @abilities.dex.mod",
-    decimals: 2
+    formula: '1d20 + @abilities.dex.mod',
+    decimals: 2,
   };
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = BoilerplateActor;
   CONFIG.Item.documentClass = BoilerplateItem;
 
+  // Active Effects are never copied to the Actor,
+  // but will still apply to the Actor from within the Item
+  // if the transfer property on the Active Effect is true.
+  CONFIG.ActiveEffect.legacyTransferral = false;
+
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("boilerplate", BoilerplateActorSheet, { makeDefault: true });
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("boilerplate", BoilerplateItemSheet, { makeDefault: true });
+  Actors.unregisterSheet('core', ActorSheet);
+  Actors.registerSheet('boilerplate', BoilerplateActorSheet, {
+    makeDefault: true,
+    label: 'BOILERPLATE.SheetLabels.Actor',
+  });
+  Items.unregisterSheet('core', ItemSheet);
+  Items.registerSheet('boilerplate', BoilerplateItemSheet, {
+    makeDefault: true,
+    label: 'BOILERPLATE.SheetLabels.Item',
+  });
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -91,14 +96,30 @@ Hooks.once('init', function() {
 
 We're doing a few things in here:
 
-1. **Line 9:** We're creating a `boilerplate` object on the global `game` object that Foundry itself provides so that we more easily have access to some of the classes defined in our ES modules. These are useful for things like debugging in your browser's console or letting modules interact with your system's classes.
+1. **Line 8:** We're creating a `boilerplate` object on the global `game` object that Foundry itself provides so that we more easily have access to some of the classes defined in our ES modules. These are useful for things like debugging in your browser's console or letting modules interact with your system's classes.
 2. **Line 15:** If you define constants for your system, such as in a `config.mjs` ES module, you can add them to the global `CONFIG` object like in this example.
 3. **Line 21:** There are several ways to define how initiative is rolled, but the simplest is to override the `CONFIG.Combat.initiative` object like in this example.
 4. **Line 27-28:** Because your system will define its own actor and item document classes, you need to override their CONFIG setting to utilize them.
-5. **Line 31-34:** Foundry defines a general ActorSheet and ItemSheet class by default, so we need to unregister those sheets and instead register our own sheet classes. You can register as many sheets as you like, and modules can also register their own sheets.
-6. **Line 37:** We'll go into more detail about this in a later step of the tutorial, but if you use Handlebars partials, this how you can preload them so that you can call them in templates.
+5. **Line 33:** This will be covered later in a discussion of Active Effects.
+6. **Line 36-45:** Foundry defines a general ActorSheet and ItemSheet class by default, so we need to unregister those sheets and instead register our own sheet classes. You can register as many sheets as you like, and modules can also register their own sheets.
+7. **Line 48:** We'll go into more detail about this in a later step of the tutorial, but if you use Handlebars partials, this how you can preload them so that you can call them in templates.
 
-And that's it!
+## Handlebars Helpers
+
+Foundry ships with a [LOT of core helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html) on top of what Handlebars natively provides, but sometimes you need your own.
+
+```js
+/* -------------------------------------------- */
+/*  Handlebars Helpers                          */
+/* -------------------------------------------- */
+
+// If you need to add Handlebars helpers, here is a useful example:
+Handlebars.registerHelper('toLowerCase', function (str) {
+  return str.toLowerCase();
+});
+```
+
+This is a fairly simple example - you can call it with `{{toLowerCase "The Quick Brown Fox"}}` and the finished HTML will output `the quick brown fox`. As with other helpers you can provide variables as arguments in place of static strings and/or combine it with other helpers such as `{{toLowerCase (concat foo bar)}}` to return the value of `concat(foo, bar).toLowerCase()`.
 
 ## The 'ready' hook
 
