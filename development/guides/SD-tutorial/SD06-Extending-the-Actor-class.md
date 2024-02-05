@@ -2,17 +2,11 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2022-10-12T21:40:02.834Z
+date: 2024-02-05T22:59:38.321Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
 ---
-
-> **Not Updated for Foundry v10**
->
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
 
 Let's start by taking a look a the BoilerplateActor class in `/module/documents/actor.js`. As with previous examples, you'll want to rename `BoilerplateActor` to whatever your system's name is, such as `MySystemNameActor`. Whenever you have calculations to your actor's data, you'll typically want to place them in the actor class itself like in the examples below, rather than in the actor sheet class (which we'll review in the next page of the tutorial). This file is a large one, so we'll review each section in detail.
 
@@ -42,7 +36,7 @@ export class BoilerplateActor extends Actor {
 
   /**
    * @override
-   * Augment the basic actor data with additional dynamic data. Typically,
+   * Augment the actor source data with additional dynamic data. Typically,
    * you'll want to handle most of your calculated/derived data in this step.
    * Data calculated in this step should generally not exist in template.json
    * (such as ability modifiers rather than ability scores) and should be
@@ -50,8 +44,8 @@ export class BoilerplateActor extends Actor {
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
-    const actorData = this.data;
-    const data = actorData.data;
+    const actorData = this;
+    const systemData = actorData.system;
     const flags = actorData.flags.boilerplate || {};
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
@@ -65,19 +59,24 @@ We're doing a few things in here. First, we're using `export` on this class so t
 
 We can override any method in the [Actor class](https://foundryvtt.com/api/Actor.html), but in this case we're just overriding the `prepareData()` method, along with its related methods `prepareBaseData()` and `prepareDerivedData()`.
 
-## Basic data vs. derived data
+## Source data vs. derived data
 
-So, what's the difference between basic data and derived data? Basic data are things that you define in your `template.json` file and should be editable on the character sheet. For example, ability scores in D&D would be basic data. Additionally, if a specific piece of data is not in your template.json, it will not be persisted when running duplication actions (such as dropping an item from the sidebar onto an actor's sheet) as it's assumed those attributes are calculated.
+So, what's the difference between source data and derived data? Source data are things that you define in your `template.json` file, should be editable on the character sheet, and are what's stored in the database. For example, ability scores in D&D would be source data. Additionally, if a specific piece of data is not in your template.json, it will not be persisted when running duplication actions (such as dropping an item from the sidebar onto an actor's sheet) as it's assumed those attributes are calculated.
 
 Derived data is the kind of data that you don't actually store and instead calculate it when you need it. For example, ability modifiers are based on applying a formula to ability scores, so we have no reason to make the user enter those manually. Because of that, we need to create those values in the `prepareData()` method, and more specifically in the `prepareDerivedData()`.
 
+
 ### prepareData()
+
+> **Do not call update() in data prep**
+> Elsewhere, when working with documents, you want to use the `update()` method to ensure that your changes are persisted to the database. When working with derived data, use standard javascript in-memory assignment with the `=` operator. If you try to use `update()`, you will likely cause an infinite loop, as `update()` will re-trigger `prepareData()`, which will then call `update()`, etc.
+{.is-danger}
 
 The `prepareData()` method usually doesn't have to overwritten since the version provided by default covers most use cases. You'll only typically need to modify it if you need to reorder how its submethods are called, which by default are:
 
 1. `this.data.reset();` - Resets actor data back to its unmodified state (equivalent to how it is stored in the database).
 2. `this.prepareBaseData();` - Prepare any data related to the Document itself, before any embedded Documents or derived data is computed.
-3. `this.prepareEmbeddedEntities();` Prepare all embedded Documents within the parent Document, such as owned items or Active Effects. Additionally, Active Effects are called in a submethod of this called `this.applyActiveEffects();` which can be overridden.
+3. `this.prepareEmbeddedDocuments();` Prepare all embedded Documents within the parent Document, such as owned Items or Active Effects. Additionally, Active Effects are called in a submethod of this called `this.applyActiveEffects();` which can be overridden.
 4. `this.prepareDerivedData();` Apply all transformations to data that will adjust its derived values. **Most calculations and derived data should occur during this step.**
 
 If the above order works for your system, you can either leave out the `prepareData()` method entirely or just call `super.getData()` in it, such as in the below example:
@@ -105,7 +104,7 @@ The `prepareBaseData()` method is the first method called that will modify your 
   }
 ```
 
-However, there are cases where it can be useful. For example, if you need an Active Effect to modify a derived value, you can calculate the derived value in this step (such as an ability score modifier) so that the Active Effect can modify it later.
+However, there are cases where it can be useful. For example, if you need an Active Effect to modify a derived value, you can initialize or calculate the derived value in this step (such as an ability score modifier) so that the Active Effect can modify it later.
 
 ### prepareDerivedData()
 
@@ -114,7 +113,7 @@ The `prepareDerivedData()` method is where most of your data modifications will 
 ```js
   /**
    * @override
-   * Augment the basic actor data with additional dynamic data. Typically,
+   * Augment the actor source data with additional dynamic data. Typically,
    * you'll want to handle most of your calculated/derived data in this step.
    * Data calculated in this step should generally not exist in template.json
    * (such as ability modifiers rather than ability scores) and should be
@@ -122,8 +121,8 @@ The `prepareDerivedData()` method is where most of your data modifications will 
    * is queried and has a roll executed directly from it).
    */
   prepareDerivedData() {
-    const actorData = this.data;
-    const data = actorData.data;
+    const actorData = this;
+    const systemData = actorData.system;
     const flags = actorData.flags.boilerplate || {};
 
     // Make separate methods for each Actor type (character, npc, etc.) to keep
@@ -133,17 +132,19 @@ The `prepareDerivedData()` method is where most of your data modifications will 
   }
 ```
 
-First, we're making a few convenience variables related to the actor. Those are `actorData`, `data`, and `flags`. These are optional, but without them you'll write out long variables like `this.data.data.abilities.value`. For the `flags` line in particular, we're setting it to either the actor's `boilerplate` flags, if any, or an empty object otherwise. If you have unreliable data that may or may not exist, it's always a good idea to have a fallback similar to that.
+First, we're making a few convenience variables related to the actor. Those are `actorData`, `systemData`, and `flags`. These are optional, but without them you'll write out long variables like `this.system.abilities.value`. For the `flags` line in particular, we're setting it to either the actor's `boilerplate` flags, if any, or an empty object otherwise. If you have unreliable data that may or may not exist, it's always a good idea to have a fallback similar to that.
 
-> **What's up with `data.data`?**
-> Some data is always part of the Actor document regardless of system, like `name` and is accessible at `actor.data.name`, while your system's unique properties are stored in a nested data property, such as `actor.data.data.abilities.str`. Why is `data.data` doubled up like that? Essentially, you can access your custom properties in the `data` getter of the `actor` object, and within that, you can use `_source` get to the original, unmodified data or `data` to access the data after modifications (like Active Effects) have been applied.
->
-> The main thing to keep in mind is that you'll _usually_ want to access your properties at `actor.data.data.myAttributeName` if you're working directly with the Actor document object.
+> **Flags 101**
+> Flags are a namespaced record of key-value pairs. As a system developer, you don't usually need to interact with them - you have full control over the `system` property - but occasionally it makes sense to put something there. The full path will look like `actor.flags.boilerplate.flagKey: flagValue`, which can be accessed with the method `actor.getFlag("boilerplate", "flagKey")`
+> The flags object is namespaced by package ID - so where this tutorial says `flags.boilerplate`, you should replace `boilerplate` with whatever you change the ID of your system to. The core software uses `flags.core` for its flags, such as to store which sheet a document uses (e.g. if there's multiple character sheets available). Modules your users install can use their own IDs to store data if they need to store information not tracked by your `template.json`. 
 {.is-info}
 
 Second, we're running custom methods for `this._prepareCharacterData(actorData);` and `this._prepareNpcData(actorData);`. Because we've named them with an underscore as a prefix, we're also signifying to any modules that extend our system that these methods are internal and generally shouldn't be overridden.
 
 If you have large amounts of data that get calculated or derived, it's helpful to break them out into additional methods to keep things organized.
+
+> If you implement a system data model, you can use their `prepareDerivedData()` methods in place of these next two type-specific data preparation methods.
+{.is-info}
 
 ### _prepareCharacterData()
 
@@ -167,7 +168,7 @@ Now that we've segmented off a custom method that can prepare character data wit
   }
 ```
 
-Because we know this method is intended to only run on character actors, we're starting it out with an if statement to check the actor's type and return early if it's not a character.
+Because we know this method is intended to only run on character actors, we're starting it out with an if statement to check the actor's type and return early if it's not a character. (This is called a typeguard).
 
 You can perform any sort of data modifications in this step. In this case, we want to generate d20-style ability modifiers. The Boilerplate system has an `abilities` property in its data model, so we're looping through it. The syntax is a bit tricky for the actual loop, but `Object.entries` will return pairs of key/value items for whatever apply it to, and when we loop through that each loop will have a `key` that would be the label such as `str` or `dex` and also an `ability` which would be the ability object.
 
@@ -187,12 +188,12 @@ As a second example, let's take a look at what preparing NPC data would look lik
     if (actorData.type !== 'npc') return;
 
     // Make modifications to data here. For example:
-    const data = actorData.data;
-    data.xp = (data.cr * data.cr) * 100;
+    const systemData = actorData.system;
+    systemData.xp = (systemData.cr * systemData.cr) * 100;
   }
 ```
 
-As with the previous method, we're starting out by checking the actor type and exiting early if needed. From there, we're doing a simple calculation to create a new `xp` property in the actor's data. This would be accessible on the actor at `actor.data.data.xp`.
+As with the previous method, we're starting out by checking the actor type and exiting early if needed. From there, we're doing a simple calculation to create a new `xp` property in the actor's data. This would be accessible on the actor at `actor.system.xp`.
 
 ## Actor#getRollData()
 
