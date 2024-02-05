@@ -2,7 +2,7 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2022-10-12T21:37:04.879Z
+date: 2024-02-05T20:50:34.924Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
@@ -21,7 +21,7 @@ When building a new system, you have several options to choose from. You can cop
 
 ## Option 2:  Generate with npm
 
-> The **generator-foundry** package has not yet been updated for Foundry v10. For now, it's advised to instead use the Boilerplate system or League TypeScript Template instead.
+> The **generator-foundry** package has not yet been updated for Foundry v10. For now, it's advised to instead use the Boilerplate system.
 {.is-warning}
 
 
