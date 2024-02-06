@@ -2,7 +2,7 @@
 title: 03. system.json
 description: 
 published: true
-date: 2024-02-06T20:26:25.439Z
+date: 2024-02-06T20:27:11.927Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:35.124Z
@@ -10,7 +10,7 @@ dateCreated: 2020-09-23T00:35:35.124Z
 
 > **Updated for Foundry v11**
 >
-> This section of the system development tutorial has been updated for Foundry v10. Other pages in the tutorial may still be in progress.
+> This section of the system development tutorial has been updated for Foundry v10 and v11. Other pages in the tutorial may still be in progress.
 {.is-info}
 
 Once you've created your system, you'll need to make some changes to system.json. Here's what it looks like for the Boilerplate System by default:
