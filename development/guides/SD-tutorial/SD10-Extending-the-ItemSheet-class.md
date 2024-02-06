@@ -1,114 +1,96 @@
 ---
-title: SD10 Extending-the-ItemSheet-class
+title: 10 Extending the ItemSheet class
 description: 
 published: true
-date: 2022-10-12T21:40:49.886Z
+date: 2024-02-06T05:28:27.918Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:18.600Z
 ---
 
-> **Not Updated for Foundry v10**
->
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
-
 The ItemSheet class is the class associated with our item sheets. Let's take a look at what Boilerplate System does:
 
 ## defaultOptions()
 
-Very similar to the actor sheet, we start out by defining our default options for this sheet. Our width and height tend to be smaller on item sheets so that they don't fully cover up the character sheet when they're opened. One thing that we did differently from the actor sheet is that this defaultOptions() method doesn't have a template property. That's intentional, and it could have been done on the actor sheet as well if we needed to. If you don't include a template property, you should create a <!-- {% raw %} -->`template()`<!-- {% endraw %} --> getter method to return the correct template.
-
-<!--- {% raw %} --->
+Very similar to the actor sheet, we start out by defining our default options for this sheet. Our width and height tend to be smaller on item sheets so that they don't fully cover up the character sheet when they're opened. One thing that we did differently from the actor sheet is that this defaultOptions() method doesn't have a template property. That's intentional, and it could have been done on the actor sheet as well if we needed to. If you don't include a template property, you should create a `template()` getter method to return the correct template.
 
 ```js
+
 /**
  * Extend the basic ItemSheet with some very simple modifications
  * @extends {ItemSheet}
  */
 export class BoilerplateItemSheet extends ItemSheet {
-
   /** @override */
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ["boilerplate", "sheet", "item"],
+    return foundry.utils.mergeObject(super.defaultOptions, {
+      classes: ['boilerplate', 'sheet', 'item'],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [
+        {
+          navSelector: '.sheet-tabs',
+          contentSelector: '.sheet-body',
+          initial: 'description',
+        },
+      ],
     });
   }
 ```
 
-<!--- {% endraw %} --->
-
 ## get template()
 
-The <!-- {% raw %} -->`template()`<!-- {% endraw %} --> method has the <!-- {% raw %} -->`get`<!-- {% endraw %} --> keyword placed before it to signal that this is a getter method for a property. In this case, we're just returning a single <!-- {% raw %} -->`${path}/item-sheet.html`<!-- {% endraw %} --> template for all items. However, if you have multiple item types such as <!-- {% raw %} -->`item`<!-- {% endraw %} -->, <!-- {% raw %} -->`feat`<!-- {% endraw %} -->, and <!-- {% raw %} -->`spell`<!-- {% endraw %} -->, you could remove the first return statement and uncomment the second return statement to dynamically return a template matching the item type name, such as <!-- {% raw %} -->`templates/item/spell-sheet.html`<!-- {% endraw %} -->.
+The `template()` method has the `get` keyword placed before it to signal that this is a getter method for a property. Like the actor sheet, we're returning different item sheets based on the item type, but you could have a single item sheet that uses handlebar helpers like `{{#if (eq type "spell")}}` to conditionally show sections of the sheet instead.
 
-<!--- {% raw %} --->
 
 ```js
+
   /** @override */
   get template() {
-    const path = "systems/boilerplate/templates/item";
+    const path = 'systems/boilerplate/templates/item';
     // Return a single sheet for all item types.
-    return `${path}/item-sheet.html`;
-    // Alternatively, you could use the following return statement to do a
-    // unique item sheet by type, like `weapon-sheet.html` -->.
+    // return `${path}/item-sheet.hbs`;
 
-    // return `${path}/${this.item.data.type}-sheet.html`;
+    // Alternatively, you could use the following return statement to do a
+    // unique item sheet by type, like `weapon-sheet.hbs`.
+    return `${path}/item-${this.item.type}-sheet.hbs`;
   }
 ```
 
-<!--- {% endraw %} --->
+
 
 ## getData()
 
-As with the actor sheet, you can use this to create derived data for your item sheet if needed. Values created here would only be available within this class or on the sheet's HTML template; it would not be available through returning the item entity elsewhere.
-
-<!--- {% raw %} --->
+As with the actor sheet, you can use this to create display data for your item sheet if needed. Values created here would only be available within this class or on the sheet's HTML template; it would not be available accessing the item document elsewhere. 
 
 ```js
-  /* -------------------------------------------- */
-
   /** @override */
   getData() {
-    const data = super.getData();
-    return data;
-  }
+    // Retrieve base data structure.
+    const context = super.getData();
 
-  /* -------------------------------------------- */
+    // Use a safe clone of the item data for further operations.
+    const itemData = context.data;
+
+    // Retrieve the roll data for TinyMCE editors.
+    context.rollData = this.item.getRollData();
+
+    // Add the item's data to context.data for easier access, as well as flags.
+    context.system = itemData.system;
+    context.flags = itemData.flags;
+
+    // Prepare active effects for easier access
+    context.effects = prepareActiveEffectCategories(this.item.effects);
+
+    return context;
+  }
 ```
 
-<!--- {% endraw %} --->
-
-## setPosition()
-
-This is a small override to handle remembering the sheet's position.
-
-<!--- {% raw %} --->
-
-```js
-  /** @override */
-  setPosition(options = {}) {
-    const position = super.setPosition(options);
-    const sheetBody = this.element.find(".sheet-body");
-    const bodyHeight = position.height - 192;
-    sheetBody.css("height", bodyHeight);
-    return position;
-  }
-
-  /* -------------------------------------------- */
-```
-
-<!--- {% endraw %} --->
+Unlike the actor sheet class, we don't need to use a generator to parse the effects - we can just directly pass the item's `effects` collection. (This is only displayed on the Features item by default, but you can do whatever you want with your system).
 
 ## activateListeners()
 
-As with the actor sheet, this is where you would activate listeners and events for your item sheet. For example, if you had logic that happened on click or edit, or if you had a roll button within the item sheet, that could go in here. <!-- {% raw %} -->`html`<!-- {% endraw %} --> is a jQuery object that you can use to find other elements, like <!-- {% raw %} -->`html.find('.rollable')`<!-- {% endraw %} -->.
-
-<!--- {% raw %} --->
+As with the actor sheet, this is where you would activate listeners and events for your item sheet. For example, if you had logic that happened on click or edit, or if you had a roll button within the item sheet, that could go in here. `html` is a jQuery object that you can use to find other elements, like `html.find('.rollable')`.
 
 ```js
   /** @override */
@@ -116,27 +98,28 @@ As with the actor sheet, this is where you would activate listeners and events f
     super.activateListeners(html);
 
     // Everything below here is only needed if the sheet is editable
-    if (!this.options.editable) return;
+    if (!this.isEditable) return;
 
     // Roll handlers, click handlers, etc. would go here.
+
+    // Active Effect management
+    html.on('click', '.effect-control', (ev) =>
+      onManageActiveEffect(ev, this.item)
+    );
   }
 ```
-
-<!--- {% endraw %} --->
 
 ## Wrapping up
 
 Don't forget closing brackets!
 
-<!--- {% raw %} --->
-
 ```js
 }
 ```
 
-<!--- {% endraw %} --->
+
 
 ---
 
-* **Prev:** [Extending the Item class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD08-Creating-HTML-templates-for-your-actor-sheets)
+* **Prev:** [Extending the Item class](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD09-Extending-the-Item-class)
 * **Next:** [Creating rollable buttons with event listeners](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD111-Creating-rollable-buttons-with-event-listeners)
