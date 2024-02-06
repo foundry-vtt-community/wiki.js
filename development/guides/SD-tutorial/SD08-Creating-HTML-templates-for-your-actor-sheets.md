@@ -2,23 +2,17 @@
 title: 08. Creating HTML templates for your actor sheets
 description: 
 published: true
-date: 2023-11-28T17:34:52.752Z
+date: 2024-02-06T03:17:17.706Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z
 ---
 
-> **Updated for Foundry v10**
->
-> This section of the system development tutorial has been updated for Foundry v10. Other pages in the tutorial may still be in progress.
-{.is-info}
-
-
 In addition to the JS classes that define them, actors and items also have HTML templates that define the structure of your character and item sheets. In the Boilerplate System, these are placed in `/templates/actor/` and `/templates/item/`. These paths are not discovered automatically; you have to define specify their full path in your ActorSheet and ItemSheet class' defaultOptions() method. Within those directories, Boilerplate includes sheets for specific document types (such as `actor-character-sheet.html` and `item-spell-sheet.html`) along with template partials like `parts/actor-features.html`. Using partials is optional, but it can be helpful for dividing up complicated templates into more manageable chunks.
 
 HTML templates in Foundry use [Handlebars](https://handlebarsjs.com/guide/) for their templating engine. If you're using a code editor like [Visual Studio Code](https://code.visualstudio.com/), you can set the syntax highlighting mode to Handlebars and get useful color coding to help recognize the various statements and variables in your templates.
 
-Let's start by taking a look at how the `actor-character-sheet.html` template is laid out at a high level.
+Let's start by taking a look at how the `actor-character-sheet.hbs` template is laid out at a high level.
 
 ```handlebars
 <form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
@@ -91,7 +85,7 @@ The header element is used to create the header section of the form where we put
 The first element in our header is the actor's image. Aside from adding additional classes or tweaking the height/weight values, your actor images should always follow this pattern if they need to be editable by foundry. We're printing out the path to the image with the `{{actor.img}}` variable, and the `data-edit="img"` tells Foundry that this is an image that should be editable on click.
 
 > ### Variables in Handlebars
-> If you're inside an actor-sheet template, the `actor` object will be available for printing things such as the actor name and actor image source with variables such as `actor.name` and `actor.img`. The `actor.system` object is also available at a more convenient `system` variable, so for properties that are unique to your system you can print values such as `{{system.health.value}}`.
+> If you're inside an actor-sheet template, the `actor` object will be available for printing things such as the actor name and actor image source with variables such as `actor.name` and `actor.img`. The `actor.system` object is also available at a more convenient `system` variable because of our work in `getData()`, so for properties that are unique to your system you can print values such as `{{system.health.value}}`.
 
 ### The resources grid
 
@@ -252,139 +246,190 @@ Because we're using tabs on this sheet, each item inside sheet-body is a tab tha
 
 
 ```handlebars
-    {{!-- ...continued... --}}
-    {{!-- Sheet Body --}}
-    <section class="sheet-body">
 
-        {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
-            {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
-        </div>
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
 
-        {{!-- Owned Items Tab --}}
-        <div class="tab items" data-group="primary" data-tab="items">
-            <ol class="items-list">
-                <li class="item flexrow item-header">
-                  <div class="item-image"></div>
-                  <div class="item-name">Name</div>
-                  <div class="item-controls">
-                    <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
-                  </div>
-                </li>
-            {{#each items as |item id|}}
-                <li class="item flexrow" data-item-id="{{item._id}}">
-                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                    <h4 class="item-name">{{item.name}}</h4>
-                    <div class="item-controls">
-                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                    </div>
-                </li>
+    {{!-- Owned Features Tab --}}
+    <div class="tab features" data-group="primary" data-tab="features">
+      <section class="grid grid-3col">
+        <aside class="sidebar">
+
+          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+          use both the "grid" and "grid-Ncol" class where "N" can be any number
+          from 1 to 12 and will create that number of columns.  --}}
+          <div class="abilities flexcol">
+            {{#each system.abilities as |ability key|}}
+            <div class="ability flexrow flex-group-center">
+              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
+              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+            </div>
             {{/each}}
-            </ol>
-        </div>
+          </div>
+        </aside>
 
-    </section>
+        {{!-- For the main features list, span the right two columns --}}
+        <section class="main grid-span-2">
+          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
+          {{> "systems/boilerplate/templates/actor/parts/actor-features.hbs"}}
+        </section>
+
+      </section>
+    </div>
+
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Owned Items Tab --}}
+    <div class="tab items" data-group="primary" data-tab="items">
+       {{> "systems/boilerplate/templates/actor/parts/actor-items.hbs"}}
+    </div>
+
+    {{!-- Owned Spells Tab --}}
+    <div class="tab spells" data-group="primary" data-tab="spells">
+      {{> "systems/boilerplate/templates/actor/parts/actor-spells.hbs"}}
+    </div>
+
+    {{!-- Active Effects Tab --}}
+    <div class="tab effects flexcol" data-group="primary" data-tab="effects">
+      {{> "systems/boilerplate/templates/actor/parts/actor-effects.hbs"}}
+    </div>
+
+  </section>
     {{!-- ...continued... --}}
 ```
 
+Many of these tabs are stored in handlebar partials - this both reduces the sheer length of a given file to comprehensible levels as well as makes these tabs reusable on other sheets as needed. A handlebars partial looks like the following - note that the FULL path from the foundry `Data` folder must be provided.
+```handlebars
+{{> "systems/boilerplate/templates/actor/parts/actor-features.hbs"}}
+```
 
 
-### The biography tab
+### The Biography tab
 
-The biography tab in the Boilerplate System is both an example of how to make a tab and how to use a TinyMCE editor.
-
-
+Skipping ahead slightly, the biography tab in the Boilerplate System is both an example of how to make a tab and how to use a TinyMCE editor.
 
 ```handlebars
-{{!-- Biography Tab --}}
-<div class="tab biography" data-group="primary" data-tab="description">
-  {{editor content=system.biography target="system.biography" button=true owner=owner editable=editable}}
-</div>
+    {{!-- Biography Tab --}}
+    <div class="tab biography" data-group="primary" data-tab="description">
+      {{!-- If you want TinyMCE editors to output inline rolls when rendered, you need to pass the actor's roll data to the rollData property. --}}
+      {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+    </div>
 ```
-
-
 
 First, we have the `tab` class to establish that this is a tab, and a `biography` class that we could use for more specific CSS styling if needed. The `data-group` attribute lets us associate with the primary tabs group, and the `data-tab` attribute tells Foundry that this is specifically the description tab (which we defined earlier in the `<nav>` element).
 
 The `{{editor}}` helper is a special Handlebars helper that will return a TinyMCE text editor. You'll usually want to format it very similar to this example, substituting the `content` and `target` properties with whatever data property you want the editor to make changes to.
 
-### The owned items tab
+### The Owned Features Tab
 
-The owned items tab starts out much like the biography tab:
-
-
+Now going back, let's look at the Owned Features tab as an example of how to display an array of embedded documents:
 
 ```handlebars
-<div class="tab items" data-group="primary" data-tab="items">
-{{!-- ...continued... --}}
+    {{!-- Owned Features Tab --}}
+    <div class="tab features" data-group="primary" data-tab="features">
+      <section class="grid grid-3col">
+        <aside class="sidebar">
+
+          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+          use both the "grid" and "grid-Ncol" class where "N" can be any number
+          from 1 to 12 and will create that number of columns.  --}}
+          <div class="abilities flexcol">
+            {{#each system.abilities as |ability key|}}
+            <div class="ability flexrow flex-group-center">
+              <label for="system.abilities.{{key}}.value" class="resource-label rollable flexlarge align-left" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{ability.label}}</label>
+              <input type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+              <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod" data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+            </div>
+            {{/each}}
+          </div>
+        </aside>
+
+        {{!-- For the main features list, span the right two columns --}}
+        <section class="main grid-span-2">
+          {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and defined in module/helpers/templates.mjs --}}
+          {{> "systems/boilerplate/templates/actor/parts/actor-features.hbs"}}
+        </section>
+
+      </section>
+    </div>
 ```
 
+One key thing here is the use of the `#each` [built-in handlebars helper](https://handlebarsjs.com/guide/builtin-helpers.html#each) - this allows you to loop through data, with the `as` keyword letting you assign variable names like a `for` loop. 
 
-
-The contents are significantly different though. For owned items, we're displaying it in a table-like format using ordered lists.
-
-
+As for the main features list, the partial calls this template:
 
 ```handlebars
-  {{!-- ...continued... --}}
-  <ol class="items-list">
-    <li class="item flexrow item-header">
-      <div class="item-image"></div>
-      <div class="item-name">Name</div>
-      <div class="item-controls">
-        <a class="item-control item-create" title="Create item" data-type="item"><i class="fas fa-plus"></i> Add item</a>
+<ol class='items-list'>
+  <li class='item flexrow items-header'>
+    <div class='item-name'>{{localize 'Name'}}</div>
+    <div class='item-controls'>
+      <a
+        class='item-control item-create'
+        title='Create item'
+        data-type='feature'
+      >
+        <i class='fas fa-plus'></i>
+        {{localize 'DOCUMENT.New' type='feature'}}
+      </a>
+    </div>
+  </li>
+  {{#each features as |item id|}}
+    <li class='item flexrow' data-item-id='{{item._id}}'>
+      <div class='item-name'>
+        <div class='item-image'>
+          <a class='rollable' data-roll-type='item'>
+          	<img
+              src='{{item.img}}'
+              title='{{item.name}}'
+              width='24'
+              height='24'
+            />
+           </a>
+        </div>
+        <h4>{{item.name}}</h4>
+      </div>
+      <div class='item-controls'>
+        <a
+          class='item-control item-edit'
+          title='{{localize "DOCUMENT.Edit" type='feature'}}'
+        >
+          <i class='fas fa-edit'></i>
+        </a>
+        <a
+          class='item-control item-delete'
+          title='{{localize "DOCUMENT.Delete" type='feature'}}'
+        >
+          <i class='fas fa-trash'></i>
+        </a>
       </div>
     </li>
-    {{!-- ...continued... --}}
+  {{/each}}
+</ol>
 ```
 
-
-
-First, we're defining an ordered listed with the `items-list` class. We need a header though, so we manually create an `<li>` tag with the `item`, `flexrow`, and `item-header` classes. The `item-header` class is used to let the CSS included with Boilerplate know that this is a header for a list and should use bold font weights.
-
-We then have one div for each column of our items, the image, name, and controls. We don't need a label for the image, so it's left empty, but we do still need the empty div so that the flexbox layout matches our item rows later. Item name has the name label included in it. For item controls, we've actually added an `<a>` tag that's used to create new items rather than just putting a label that says "controls." We'll come back to this in a later step of the tutorial, but the `item-create` class will be used for a click event listener, and the `data-type` attribute will be used to specify the item type to create (such as item, spell, or feat). You can also go back in the tutorial to the `actor-sheet.js` and in the `activateListeners()` method, you'll see where click listeners were added for this functionality.
-
-Up next, we have the loop to print out all of the owned items:
-
-
-
-```handlebars
-    {{!-- ...continued... --}}
-    {{#each items as |item id|}}
-      <li class="item flexrow" data-item-id="{{item._id}}">
-        <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-        <h4 class="item-name">{{item.name}}</h4>
-        <div class="item-controls">
-          <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-          <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-        </div>
-      </li>
-    {{/each}}
-    {{!-- ...continued... --}}
-```
-
-
-
-As we did earlier with abilities, we can iterate over an actor's items. This is a bit of a simple loop as we're iterating over _all_ of an actor's items, whether those are items, spells, feats, or any other sub-type that we've defined. We'll rework this in a later step of the tutorial to break it up into sorted groups of the different item types, but for now this will allow us to iterate over everything.
+This creates a table-like view, with the first row setup as a header while the `#each` loops through to display the features (which we set up back in the `getData()` method of our ActorSheet).
 
 For the most part, the `<li>` tags in this `#each` loop are very similar to the ones we made for the header row, but there are a few differences. First, we have a special `data-item-id="{{item._id}}"` attribute on the list item. Having this is very important to making your life easier, because by having it on the parent list item, any links that we make on one of the elements nested in the list item will be able to grab that ID for usage in our Javascript.
 
-Next, we're outputting the `item.img` and `item.name` variables as needed.
+Next, we're outputting the `item.img` and `item.name` variables as needed. We're also using `<a>` tags to utilize native browser styling that gives us a pointer cursor when a user mouses over something that we want to be interactible, but the actual interaction is going to be handled in `activateListeners()`.
 
-And finally, we're outputting the item controls. Notice that the controls have `item-edit` and `item-delete` classes, similar to the `item-create` class we added to the item-head div earlier? Those are two additional classes that have click listeners defined in `actor-sheet.js`. Let's step back to `actor-sheet.js` and take a look at the `activateListeners()` method:
-
-
+**Interactivity.** Notice that the controls have `item-edit` and `item-delete` classes, and the header has an `item-create` class? These classes have click listeners defined in `actor-sheet.js`. Let's step back to `actor-sheet.js` and take a look at the `activateListeners()` method:
 
 ```js
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
 
     // Render the item sheet for viewing/editing prior to the editable check.
-    html.find('.item-edit').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
+    html.on('click', '.item-edit', (ev) => {
+      const li = $(ev.currentTarget).parents('.item');
+      const item = this.actor.items.get(li.data('itemId'));
       item.sheet.render(true);
     });
 
@@ -393,44 +438,51 @@ And finally, we're outputting the item controls. Notice that the controls have `
     if (!this.isEditable) return;
 
     // Add Inventory Item
-    html.find('.item-create').click(this._onItemCreate.bind(this));
+    html.on('click', '.item-create', this._onItemCreate.bind(this));
 
     // Delete Inventory Item
-    html.find('.item-delete').click(ev => {
-      const li = $(ev.currentTarget).parents(".item");
-      const item = this.actor.items.get(li.data("itemId"));
+    html.on('click', '.item-delete', (ev) => {
+      const li = $(ev.currentTarget).parents('.item');
+      const item = this.actor.items.get(li.data('itemId'));
       item.delete();
       li.slideUp(200, () => this.render(false));
     });
 
     // Active Effect management
-    html.find(".effect-control").click(ev => onManageActiveEffect(ev, this.actor));
+    html.on('click', '.effect-control', (ev) => {
+      const row = ev.currentTarget.closest('li');
+      const document =
+        row.dataset.parentId === this.actor.id
+          ? this.actor
+          : this.actor.items.get(row.dataset.parentId);
+      onManageActiveEffect(ev, document);
+    });
 
     // Rollable abilities.
-    html.find('.rollable').click(this._onRoll.bind(this));
+    html.on('click', '.rollable', this._onRoll.bind(this));
 
     // Drag events for macros.
     if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
+      let handler = (ev) => this._onDragStart(ev);
       html.find('li.item').each((i, li) => {
-        if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
+        if (li.classList.contains('inventory-header')) return;
+        li.setAttribute('draggable', true);
+        li.addEventListener('dragstart', handler, false);
       });
     }
-
   }
+
 ```
 
+What's happening here? First, we're activating any listeners that Foundry itself defines with `super.activateListeners(html)`. This includes making sure our input fields update the document, make our editors interactive, and enable any file pickers we have.
 
-
-What's happening here? First, we're activating any listeners that Foundry itself defines with `super.activateListeners(html)`. Our `item-edit` listener happens at this point because it works by rendering the item sheet, which would work for both users who can only view the item's sheet and owners who can actually edit it as well. To actually retrieve the item, we're finding the `<li>` tag based on the click event target and then reading the `item-id` data attribute (which gets converted to camel case `itemId` in this context). Once we have the item from the item ID, we can render its sheet.
+Our `item-edit` listener happens first because it works by rendering the item sheet, which would work for both users who can only view the item's sheet and owners who can actually edit it as well. To actually retrieve the item, we're finding the `<li>` tag based on the click event target and then reading the `item-id` data attribute (which gets converted to camel case `itemId` in this context). Once we have the item from the item ID, we can render its sheet.
 
 Second, we're returning early if the sheet isn't editable (which usually means an observer has it open rather than the sheet owner).
 
-Third, we're defining a click listener for `item-create`. We went into detail earlier about what the `_onItemCreate()` method did, so we'll skip over that here.
+Third, we're defining a click listener for `item-create`. We went into detail in the previous tutorial about what the `_onItemCreate()` method did, so we'll skip over that here.
 
-Fourth, we're defining a click listener for `item-delete`. This is similar to `item-edit` from before. First we grab the element for the list item that's a parent of the button being clicked, which is what `$(ev.currentTarget).parents('.item')` does. Since we have the `data-item-id` attribute on the list items, we can than use the actor's methods to either get the owned item and render it's item sheet or delete the owned item, depending on which listener we're in. If we're deleting the item, we also do a small animation with `li.slideUp()` to animate getting rid of the item.
+Fourth, we're defining a click listener for `item-delete`. This is similar to `item-edit` from before. First we grab the element for the list item that's a parent of the button being clicked, which is what `$(ev.currentTarget).parents('.item')` does. Since we have the `data-item-id` attribute on the list items, we can than use the actor's methods to either get the owned item and render it's item sheet or delete the owned item, depending on which listener we're in. If we're deleting the item, we also do a small animation with `li.slideUp()` to animate getting rid of the item. Like most things in javascript, there's many ways to perform this kind of operation; when you look at other existing systems like `crucible`, `dnd5e`, or `swade` they may implement this kind of logic differently and with different accessors.
 
 There are examples of additional listeners in here as well for more advanced usage.
 
@@ -440,18 +492,11 @@ There are examples of additional listeners in here as well for more advanced usa
 
 ## Wrapping up
 
-Jumping back over to the actor-character-sheet.html template, we've covered the list of the logic in it for the Boilerplate system. Don't forget your closing tags though!
+The rest of the sheet performs similar operations, leveraging the same listeners and just providing data to contextualize what is supposed to happen at each step.
 
-
-
-```handlebars
-            {{!-- ...continued... --}}
-            </ol>
-        </div>
-    </section>
-</form>
-```
-
+> **Active Effect Display**
+> As of v11, effects use the `name` attribute like items but their image is stored in the `icon` property. This will change in v12, which will unify their image property as `img` like other documents.
+{.is-info}
 
 
 ---
