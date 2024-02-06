@@ -1,18 +1,12 @@
 ---
-title: SD13 Localization
+title: 13 Localization
 description: 
 published: true
-date: 2022-10-12T21:41:40.403Z
+date: 2024-02-06T06:26:59.547Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T22:06:29.592Z
 ---
-
-> **Not Updated for Foundry v10**
->
-> This section of the system development tutorial has not yet been updated for Foundry v10+ versions. While the general concepts are still applicable, it's recommended that you review the equivalent section of the Boilerplate system used in the tutorial for differences (the system itself has been updated for v10).
-> https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/tree/master
-{.is-warning}
 
 Supporting localization in your new system is critical to allow the maximum number of GMs and players to use your system. Localization provides others with the ability to translate your work into their language. It is easier to build into a system from the start when compared to coming back and adding it. Foundry uses the browser's language settings to determine which localization to use when displaying text. 
 
@@ -22,12 +16,12 @@ Supporting localization in your new system is critical to allow the maximum numb
 
 ## What do I localize?
 Every string that you display to a user should be localizable. A general rule is to allow localization of any strings that you display in your system. You don't need to localize text that the GM or players enter in Foundry. Typical areas of localization are:
-Headings 
-Body text
-Form labels
-Button labels
-Dialog box titles
-Error messages
+- Headings 
+- Body text
+- Form labels
+- Button labels
+- Dialog box titles
+- Error messages
 ## Adding Languages to system.json
 Adding the following code to your system.json file tells Foundry that there is an English language file in the folder lang called en.json. 
 ```json
@@ -55,37 +49,80 @@ The language file is a simple single-level JSON object. Each string has a variab
   "MYSYSTEM.ActorName": "Actor's Name"
 }
 ```
-##HTML localization using Handlebars
-Foundry uses a Handlebar `{{localize "variable.name"}}` to translate text in HTML files. Let's replace the placeholder for the actor's name in the actor-sheet.html file with a localization. In actor-sheet.html replace `placeholder="name"` with `placeholder="{{localize "MYSYSTEM.ActorName"}}. Your code should look like:
-```html
-<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize "MYSYSTEM.ActorName"}}"/></h1>
+
+You can also create nested properties, or even mix and match as you prefer. The above would be equivalent to
+
+```json
+{
+  "MYSYSTEM": {
+    "ActorName": "Actor's Name"
+  }
+}
 ```
-When you create a new character, you will not see Actor's Name in the Name field instead of Name. 
+
+One common localization need is document types in their create dialog. These paths are defined by foundry; the boilerplate system comes with the following translations, but these should be adjusted whenever you add or remove types from your `template.json`
+
+```json
+  "TYPES": {
+    "Actor": {
+      "character": "Character",
+      "npc": "NPC"
+    },
+    "Item": {
+      "item": "Item",
+      "feature": "Feature",
+      "spell": "Spell"
+    }
+  }
+```
+
+## HTML localization using Handlebars
+Foundry uses a Handlebar `{{localize "variable.name"}}` to translate text in HTML files. Let's replace the placeholder for the actor's name in the actor-sheet.html file with a localization. In actor-sheet.html replace `placeholder="name"` with `placeholder="{{localize 'MYSYSTEM.ActorName'}}"`. Your code should look like:
+```html
+<h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="{{localize 'MYSYSTEM.ActorName'}}"/></h1>
+```
+When you create a new character, you will now see Actor's Name in the Name field instead of Name. 
+
+> **Mind your quotes**
+> One common error when using localized property values is incorrectly handling nested quotes; you'll need to alternate between " and ' for your handlebars to parse properly.
+{.is-warning}
+
 
 ## JavaScript localization
-Foundry also provides a localize function as part of the game object `game.i18n.localize()`. Localize takes one parameter the stringID that you are localizing.  
+Foundry also provides a localize function as part of the game object `game.i18n.localize()`. Localize takes one parameter the stringID that you are localizing; if it fails it will try to fallback to an English translation, and if that fails it will simply return the input string.
 
 ### Using variables in JavaScript localizations
 Sometimes you want to change a string of text dynamically. Foundry provides the `game.i18n.format()` function to perform this task. The format function takes two parameters stringId and data. StringId is the string Foundry will lookup and replaces in the language file. Data is an object of variable names with the text that you want to replace in the localized string. In the language file, you denote the variable to be replaced with single curly brackets `{}`. For example, adding the variable itemType you would add the text `{itemType}` to your string in the language file.
-Let's add a string with a variable to our en.json file and replace the constant name in actor-sheet.js's _onItemCreate function with a localized string. Add a variable named MYSYSTEM.NewItem with a string value or "New {itemType}".
+
+Let's add a string with a variable to our en.json file and replace the constant name in actor-sheet.js's \_onItemCreate function with a localized string. Add a variable named MYSYSTEM.NewItem with a string value or "New {itemType}".
 ```json
 {
   "MYSYSTEM.ActorName": "Actor's Name",
   "MYSYSTEM.NewItem": "New {itemType}"
 }
 ```
+
 In actor-sheet.js change the line:
 ```js
 const name = `New ${type.capitalize()}`;
 ```
 with the `game.i18n.format()` function and the MYSYSTEM.NewItem passing type.capitalize() as a variable to it.
 ```js
-const name = game.i18n.format(MYSYSTEM.NewItem, {itemType: type.capitalize()})
+const name = game.i18n.format("MYSYSTEM.NewItem", {itemType: type.capitalize()})
 ```
 When you create a new item, the text should be the same, but it will translate if a user has their browser set to a different language.
 
+### Localizing in Handlebars
+
+You can also perform localizations in handlebars - the `{{localize}}` helper will intelligently switch between `localize` and `format` wheter you've provided additional arguments. One example is the spell level headers - `"BOILERPLATE.Item.Spell.SpellLVL": "Level {level} Spells"` gets used in `actor-spells.hbs` like so:
+
+```handlebars
+{{localize 'BOILERPLATE.Item.Spell.SpellLVL' level=spellLevel}}
+```
+
 ## Localizing Arrays of Labels
-Possibly the most complex localization of data in Foundry is localizing arrays of data like the display of abilities that come from your character template in template.json. By localizing the array of abilities, you can use the power of arrays and localization. 
+Possibly the most complex localization of data in Foundry is localizing arrays of data like the display of abilities that come from your character template in template.json. By localizing the array of abilities, you can use the power of arrays and localization. This is also exactly the type of work that `getData` is for, since this is only relevant to the display of the data.
+
 To start, we need to add a configuration variable to the system. Create a file named config.js in the module directory. In this file, we add a variable named MYSYSTEM, and then we add an object with names of our abilities and their translation strings.
 ```js
 export const MYSYSTEM = {}
