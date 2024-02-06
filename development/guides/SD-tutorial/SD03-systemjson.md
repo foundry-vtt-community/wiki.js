@@ -2,7 +2,7 @@
 title: 03. system.json
 description: 
 published: true
-date: 2024-02-05T21:00:29.841Z
+date: 2024-02-06T20:26:25.439Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:35.124Z
@@ -87,11 +87,15 @@ For a full breakdown of each of those properties head to [https://foundryvtt.com
 
 > **Managing Releases**
 > To properly manage releases, you need to do three things:
-> (1) Use the link to the latest version of your system in the `manifest` property of system.json. This will allow updates to be found by Foundry. If you have multiple release tracks such as `v9` and `v10` for versions compatible with the respective Foundry versions, use that in the manifest URL.
-> (2) Use the link to the **tagged** version of your system in the package listing on foundryvtt.com when making a new release. This will allow Foundry find and install specific versions (which is important for users who don't update immediately and stay on the previous stable version).
-> (3) Use the link to the **tagged** version of your system in the `download` property of your system.json, which allow the manifest to find and download a specific version (and works in tandem with #2 above about using tagged versions on foundryvtt.com).
+> (1) Use the link to the latest version (such as "main" or "master") of your system in the `manifest` property of system.json. This will allow updates to be found by Foundry. If you have multiple release tracks such as `v9` and `v10` for versions compatible with the respective Foundry versions, use that in the manifest URL.
+> (2) Use the link to the **tagged** version (such as "1.0.0") of your system in the package listing on foundryvtt.com when making a new release. This will allow Foundry find and install specific versions (which is important for users who don't update immediately and stay on the previous stable version).
+> (3) Use the link to the **tagged** version (such as "1.0.0") of your system in the `download` property of your system.json, which allow the manifest to find and download a specific version (and works in tandem with #2 above about using tagged versions on foundryvtt.com).
 >
-> The example **system.json** snippet above shows an example of how this structure would look. Review it closely when working on your own system.json file during releases.
+> For example, when using Gitlab, your URLs for the manifest and download properties of your system.json file might look like the following if your development branch was called **main** and your release version was **1.0.0**:
+>
+> `"manifest": "https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/raw/main/system.json",`
+> `"download": "https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/archive/1.0.0/boilerplate-1.0.0.zip",`
+> &nbsp;
 {.is-info}
 
 
