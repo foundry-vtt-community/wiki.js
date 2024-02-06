@@ -1,8 +1,8 @@
 ---
-title: 05. Creating-your-main-JS-file
+title: 05. Creating your main JS file
 description: 
 published: true
-date: 2024-02-05T21:53:02.849Z
+date: 2024-02-06T05:58:43.960Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:47.008Z
