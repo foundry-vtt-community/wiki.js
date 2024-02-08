@@ -2,7 +2,7 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2024-02-08T05:49:14.031Z
+date: 2024-02-08T05:50:44.232Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
@@ -217,7 +217,7 @@ Another important method for most system's is the actor's `getRollData()` method
    * Prepare character roll data.
    */
   _getCharacterRollData(data) {
-    if (this.data.type !== 'character') return;
+    if (this.type !== 'character') return;
 
     // Copy the ability scores to the top level, so that rolls can use
     // formulas like `@str.mod + 4`.
@@ -231,13 +231,12 @@ Another important method for most system's is the actor's `getRollData()` method
     if (data.attributes.level) {
       data.lvl = data.attributes.level.value ?? 0;
     }
-  }
 
   /**
    * Prepare NPC roll data.
    */
   _getNpcRollData(data) {
-    if (this.data.type !== 'npc') return;
+    if (this.type !== 'npc') return;
 
     // Process additional NPC data here.
   }
