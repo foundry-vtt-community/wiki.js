@@ -2,7 +2,7 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2024-02-05T22:59:38.321Z
+date: 2024-02-08T05:49:14.031Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
@@ -146,7 +146,7 @@ If you have large amounts of data that get calculated or derived, it's helpful t
 > If you implement a system data model, you can use their `prepareDerivedData()` methods in place of these next two type-specific data preparation methods.
 {.is-info}
 
-### _prepareCharacterData()
+### \_prepareCharacterData()
 
 Now that we've segmented off a custom method that can prepare character data without also affecting NPCs, let's calculate ability modifiers from ability scores.
 
@@ -158,10 +158,10 @@ Now that we've segmented off a custom method that can prepare character data wit
     if (actorData.type !== 'character') return;
 
     // Make modifications to data here. For example:
-    const data = actorData.data;
+    const systemData = actorData.system;
 
     // Loop through ability scores, and add their modifiers to our sheet output.
-    for (let [key, ability] of Object.entries(data.abilities)) {
+    for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
       ability.mod = Math.floor((ability.value - 10) / 2);
     }
@@ -176,7 +176,7 @@ In this case the ability object only has a `value` property, so we then use some
 
 And with that, we're done deriving new values! We don't have to return anything; because we're working with objects and we didn't clone or copy them, the changes we made to `ability.mod` will automatically work their way back up to the original `actorData` object.
 
-### _prepareNpcData()
+### \_prepareNpcData()
 
 As a second example, let's take a look at what preparing NPC data would look like:
 
