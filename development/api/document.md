@@ -2,7 +2,7 @@
 title: Document
 description: 
 published: true
-date: 2022-05-19T13:26:58.764Z
+date: 2024-02-12T19:41:05.254Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-15T16:03:42.636Z
 
 # Document
 
-![Up to date as of v8](https://img.shields.io/badge/FoundryVTT-v8-informational)
+![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
 ## Overview
 
@@ -18,14 +18,12 @@ Much of this article is copied from the [official API Docs](https://foundryvtt.c
 
 > Data in Foundry Virtual Tabletop is organized around the concept of Documents. Each document represents a single coherent piece of data which represents a specific object within the framework. The term Document refers to both the definition of a specific type of data (the Document class) as well as a uniquely identified instance of that data type (an instance of that class).
 
-Everything that is stored in the database is a `Document`. Some Documents are EmbeddedDocuments which live fully inside a parent document (e.g. Items in Actors or Tiles in Scenes).
-
-There is a [System Diagram](https://gitlab.com/foundrynet/foundryvtt/-/issues/4373) which might help explain the architecture.
+Everything that is stored in the database is a `Document`. Some Documents are EmbeddedDocuments which live fully inside a parent document (e.g. Items in Actors or Tiles in Scenes). Documents do not handle rendering; that is the job of Applications and the Canvas.
 
 ### Legend
 
 ```javascript
-Document.updateDocuments // `.` indicates static method or property
+Document.metadata // `.` indicates static method or property
 Document#update // `#` indicates instance method or property
 ```
 
@@ -33,84 +31,88 @@ Document#update // `#` indicates instance method or property
 
 ## Key Concepts
 
-### Primary and Embedded
+### Document Storage
 
-There are 2 kinds of `Document`: Primary and Embedded. Embedded Documents are full Documents same as the Primary, and the API for interacting with them is identical. There are some helper methods for interacting with a Primary Document's Embedded Collections.
+Broadly speaking, there are two general groups of document types: primary documents and embedded documents. The distinction is that the server maintains a database for each type of primary document and provides access to them in the `game` global object (such as `game.actors` and `game.scenes`) while embedded documents exist in a collection embedded inside the data of another document (for example, the `scene.tokens` for a given `scene` instance).
 
-- Primary Documents can contain Embedded Documents.
-- Embedded Documents are not directly indexed in a database table.
+In addition to the databases for primary documents, most primary document types can also be stored in compendiums (barring things like ChatMessage, Combat). Compendiums are additional databases, but their contents are only loaded as-needed, rather than being sent to all users as they connect to the world in the first place.
+
+Beyond world and embedded documents, the [Adventure](https://foundryvtt.com/api/classes/client.Adventure.html) document type is an outlier. Adventure documents only exist inside compendiums. They exist as a way to bundle world documents and bulk import them to a world as-needed; the functionality is primarily used for distributing packaged adventures as modules that can be imported and played.
 
 #### Primary Documents
 
 These are stored in their own database table within the active World or Compendium.
 
-Notable Examples:
+**Compendium Eligible:**
 
-- [Actor](https://foundryvtt.com/api/Actor.html)
-- [Item](https://foundryvtt.com/api/Item.html)
-- [JournalEntry](https://foundryvtt.com/api/JournalEntry.html)
-- [Scene](https://foundryvtt.com/api/Scene.html)
-- [User](https://foundryvtt.com/api/User.html)
+- [Actor](https://foundryvtt.com/api/classes/client.Actor.html)
+- [Cards](https://foundryvtt.com/api/classes/client.Cards.html)
+- [Folder*](https://foundryvtt.com/api/classes/client.Folder.html)
+- [JournalEntry](https://foundryvtt.com/api/classes/client.JournalEntry.html)
+- [Item](https://foundryvtt.com/api/classes/client.Item.html)
+- [Macro](https://foundryvtt.com/api/classes/client.Macro.html)
+- [Scene](https://foundryvtt.com/api/classes/client.Scene.html)
+- [Rollable Table](https://foundryvtt.com/api/classes/client.RollTable.html)
+
+\* As of v11, folders CAN go in compendiums and are displayed alongside the normal sidebar but data-wise are in their own, seperate collection within a compendium.
+
+**Cannot go in compendiums:**
+
+- [Chat Message](https://foundryvtt.com/api/classes/client.ChatMessage.html)
+- [Combat Encounter](https://foundryvtt.com/api/classes/client.Combat.html)
+- [Fog Exploration](https://foundryvtt.com/api/classes/client.FogExploration.html)
+- [Playlist](https://foundryvtt.com/api/classes/client.Playlist.html)
+- [Setting](https://foundryvtt.com/api/classes/client.ClientSettings.html)
+- [User](https://foundryvtt.com/api/classes/client.User.html)
 
 #### Embedded Documents
 
 Embedded Documents are document types which only exist within a Collection on a parent Primary Document and thus have no dedicated database entry. Some Primary Documents support being embedded in other Primary Documents, but most do not.
 
-Notable Examples:
+**Actor-related:**
 
-- All Scene embeds are EmbeddedDocuments within the Scene Primary Document:
-  - [AmbientSound](https://foundryvtt.com/api/AmbientSoundDocument.html)
-  - [Tile](https://foundryvtt.com/api/TileDocument.html)
-  - [Note](https://foundryvtt.com/api/NoteDocument.html)
+- [Active Effects](https://foundryvtt.com/api/classes/client.ActiveEffect.html) can be embedded in Items and Actors
+- [Combatants](https://foundryvtt.com/api/classes/client.Combatant.html) can be embedded in Combat Encounters
 - Items are embeddable within Actors
-- ActiveEffects are embeddable within both Items and Actors
 
-### Document Data
+**Scene-related:**
 
-Every Document stores a `Document#data._source` property which conforms to the Document Type's Schema. A given document's schema can be seen on the official API docs for that document, or by examining `Document#schema`.
+- [Ambient Light](https://foundryvtt.com/api/classes/client.AmbientLightDocument.html)
+- [Ambient Sound](https://foundryvtt.com/api/classes/client.AmbientSoundDocument.html)
+- [Drawing](https://foundryvtt.com/api/classes/client.DrawingDocument.html)
+- [Measured Template](https://foundryvtt.com/api/classes/client.MeasuredTemplateDocument.html)
+- [Note](https://foundryvtt.com/api/NoteDocument.html)
+- [Tile](https://foundryvtt.com/api/TileDocument.html)
+- [Token*](https://foundryvtt.com/api/classes/client.TokenDocument.html)
+- [Wall](https://foundryvtt.com/api/classes/client.Wall.html)
 
-This `data._source` property should rarely be accessed, instead access a Document's `data` property to get all of its prepared data in addition to its source data _(see [Data Preparation](#Data-Preparation) below for more about prepared data)_.
+\* Actors and combatatants have *links* to tokens, but the token document itself is embedded in a scene. Unlinked tokens also embed a synthetic actor via [Actor Delta](https://foundryvtt.com/api/classes/client.ActorDelta.html))
 
-> This is not to be confused with the `data` property within the Actor and Item document schema. That `data` property's schema is defined by the system's `template.json` and is accessed by `_data.data` or `data.data`.
-{.is-warning}
+**Other:**
 
-#### Validation
-
-`DocumentData` is governed by a Schema, `DocumentData#validate` is run during initialization and updates which will purge any 'unexpected' data (i.e. arbitrary data not in the Schema) from itself. As a result of these validations, it is impossible for a package to store arbitrary data on a Document without using Flags.
-
-> An exception to this rule is Systems which can define Actor and Item data templates. But even they cannot store arbitrary data not present in the template.
-{.is-warning}
+- [Journal Entry Pages](https://foundryvtt.com/api/classes/client.JournalEntryPage.html) embed in Journal Entries
+- [Playlist Sounds](https://foundryvtt.com/api/classes/client.PlaylistSound.html) embed in Playlists
+- [Table Results](https://foundryvtt.com/api/classes/client.TableResult.html) embed in Rollable Tables
 
 #### DocumentName and Type
 
 A Document's 'kind' can be obtained by checking the document's `documentName`. E.g. `"Actor"` for actors, `"Scene"` for scenes, `"Combatant"` for combatants, and so on. It is impossible to create a Document with an arbitrary documentName.
 
-Some documents have a `type` property in their Schema (Notable examples: Folder, Actor, Item; where Actor and Item types are system defined). These are also validated and thus it is impossible to create a Document with an arbitrary `type` property.
+Some documents have a `type` property in their Schema. These are also validated and thus it is impossible to create a Document with an arbitrary `type` property. As a system, you define the available types in your system.json; as a module, you can use [module sub-types](https://foundryvtt.com/article/module-sub-types/) to define new types.
 
-### Data Preparation
+**System-defined types**
 
-Documents do not need to store all the data needed to interact with them, often times, this data can be derived on the clientside when the document is initialized.
+- Actor
+- Card
+- Cards
+- Item
+- JournalEntryPage
 
-A common example would be an Actor attribute which can be calculated from the values of several other of the Actor's attributes.
+**Foundry-defined types**
 
-The following synchronous methods are fired by the `Document#prepareData` method in order when a document is initialized:
-
-#### [`Document#prepareBaseData`](https://foundryvtt.com/api/ClientDocumentMixin.html#prepareData)
-
-Any information which can be derived with just the base data of the document is prepared.
-
-This information is then available to embedded documents to use in their `prepareData` process.
-
-#### [`Document#prepareEmbeddedEntities`](https://foundryvtt.com/api/ClientDocumentMixin.html#prepareEmbeddedEntities)
-
-All of the embedded collections have their documents initialized.
-
-> Actors call their [`Actor#applyActiveEffects`](https://foundryvtt.com/api/Actor.html#applyActiveEffects) method at the end of this method.
-{.is-info}
-
-#### [`Document#prepareDerivedData`](https://foundryvtt.com/api/ClientDocumentMixin.html#prepareDerivedData)
-
-Final step in the core preparation process. All embedded documents have been initialized and their derived data can be used to affect the primary document's data.
+- Folder (eligible types are the same as Primary Documents that can go in compendiums)
+- Macro (chat or script)
+- Table result (text, document, or compendium)
 
 ### `id` vs `uuid`
 
@@ -118,19 +120,18 @@ Every document has both an `id` and `uuid`.
 
 The `id` is used as the key in all Collections the Document is a member of, making it simple to get a document instance whose Collection and `id` are known.
 
-The `uuid` is unique across all collections and allows for an easy way (via the `fromUuid` function) to find any arbitrary document whose collection might not be known.
+The `uuid` is unique across all collections and allows for an easy way (via the `fromUuid` or `fromUuidSync` functions) to find any arbitrary document whose collection might not be known.
 
-### Document Modification Context
-
-All Document update operations accept a final argument: the [`DocumentModificationContext`](https://foundryvtt.com/api/global.html#DocumentModificationContext) (a.k.a. "context"). This context affects _how_ the document is created/modified on the backend.
-
-The primary way to control whether a document being created is an Embedded Document is by providing a `parent` in the context.
-
-By default (i.e. with no context provided) a new document tries to be created as a Primary Document in the correct `WorldCollection`.
-
----
+You can use the book icon in the header bar of a document sheet to retrieve these values; a left click copies the ID to clipboard, while a right click copies the UUID to clipboard.
 
 ## API Interactions
+
+Many document operations take a `data` and `context` argument, which are each always objects.
+
+**Data:** This argument directly translates to the properties of the document. The eligible properties of a document come from the `defineSchema` method of the base document class, e.g. `BaseActor#defineSchema`; you can see the list of base document classes at the top of the [document API page](https://foundryvtt.com/api/classes/foundry.abstract.Document.html)
+
+**Context:** The [`DocumentConstructionContext`](https://foundryvtt.com/api/interfaces/types.DocumentConstructionContext.html) and [`DocumentModificationContext`](https://foundryvtt.com/api/interfaces/types.DocumentModificationContext.html) types affects _how_ the document is created/modified on the backend. The primary way to control whether a document being created is an Embedded Document is by providing a `parent` in the context. By default (i.e. with no context provided) a new document tries to be created as a Primary Document in the correct `WorldCollection`.
+
 
 ### Create
 
@@ -138,9 +139,9 @@ There are a variety of API paths for creating new document on the backend, each 
 
 #### Single Document
 
-At the most basic, [`DocumentClass.create`](https://foundryvtt.com/api/abstract.Document.html#.create) will create a document of that DocumentClass.
+At the most basic, [`DocumentClass.create`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#create) will create a document of that DocumentClass.
 
-Certain required fields must be provided during a creation operation, but most will be filled in with defaults. Failing to provide these will result in an error thrown which details which fields were missing.
+Certain required fields must be provided during a creation operation, but most will be filled in with defaults. Failing to provide these will result in an error thrown which details which fields were missing. 
 
 In general, the required fields are `name` and `type` if the document is one which has multiple subtypes.
 
@@ -149,6 +150,10 @@ const newJournalEntry = JournalEntry.create({
   name: 'Foo'
 });
 ```
+
+> **Calling the Constructor**
+> It is technically possible to instantiate a Document by calling the constructor with `new Document(data)` instead of using `Document.create()`. This is very rarely the correct way to do things, because it only creates an object in memory, it does not send the document to the database to be persisted or sent to other clients.
+{.is-warning}
 
 ##### Embedded Document
 
@@ -202,10 +207,10 @@ actor.createEmbeddedDocuments("Item", [
 
 ### Read
 
-Reading a document's data is as simple as examining the `data` property of that Document's instance. Primary Documents in the world are found in [`WorldCollection`](https://foundryvtt.com/api/WorldCollection.html)s within the `game` instance.
+Primary Documents in the world are found in [`WorldCollection`](https://foundryvtt.com/api/WorldCollection.html)s within the `game` instance.
 
 ```javascript
-game.actors.getName('Foo').data
+game.actors.getName('Foo')
 ```
 
 Embedded Documents are always in [`EmbeddedCollection`](https://foundryvtt.com/api/EmbeddedCollection.html)s at the root of the containing Primary Document's instance. A reference to this collection can also be found in the Primary Document's DocumentData.
@@ -214,47 +219,16 @@ Embedded Documents are always in [`EmbeddedCollection`](https://foundryvtt.com/a
 const actor = game.actors.getName('Foo');
 
 actor.items.getName('Bar');
-
-actor.data.items.getName('Bar'); // also works
 ```
 
 A Primary Document might also be in a Compendium. Documents in compendiums are not necessarily available immediately in the world and often require asynchronous operations to retrieve first. See the Compendium article for more details.
 
+
 ### Update the Database
 
-> It is possible to delete data necessary for a Document's initialization when updating a document.
-{.is-danger}
+The `Document#update(data, context={})` method is used for updating a document in the databases that the server maintains, which then gets propagated to all of the clients (including the one that issued the update in the first place).
 
-When updating a document, regardless of whether `Document.update` or `DocumentData.update` is being called, the context for the update object given is the same. These methods both expect the shape or paths provided in the update object to conform to the Document's Data Schema shape.
-
-```javascript
-const someDocument = {
-  data: {
-    schemaKeyOne: 'foo',
-    schemaKeyTwo: 'bar'
-  },
-  nonDbData: 'biz'
-}
-```
-
-For a document with the structure above, the update object should have the same shape as `document.data`:
-
-```javascript
-const updateData = {
-  schemaKeyOne: 'foobar'
-}
-
-someDocument.update(updateData);
-
-// Resulting someDocument:
-// {
-//   data: {
-//     schemaKeyOne: 'foobar',
-//     schemaKeyTwo: 'bar'
-//   },
-//   nonDbData: 'biz'
-// }
-```
+Updates are done using an object with the changes that need to be written to the document in the database. They can either be properly nested objects of data or you can use the `'parent.child'` notation to define a specific sub-property to update. `actor.update({'system.key': newValue})` and `actor.update({system: {key: newValue}})` will achieve the same end result of updating `actor.system.key` to `newValue`.
 
 #### Single Update
 
@@ -266,9 +240,13 @@ someDocument.update({ someSchemaKey: newValue });
 
 Directly update the document's entry on the database. This persists the change and pushes the new document to all clients.
 
+**Deleting Properties:** Because Foundry uses differences and merges to only send data being changed to the database, a special notation is needed to signal to the database that a value is being intentionally deleted from the database (because omitting a value is done when a value simply isn't being updated). To delete the `key` from `actor.system.key`, you need to make an update like `actor.update({'actor.system.-=key': null})`; the `-=` before the `key` to be deleted is the key there, that signals the database to delete the key. The value ostensibly being written doesn't matter, but convention is to use `null` for that to further indicate that the key is being deleted.
+
+**Working with Arrays:** Because the updates work using object key merges, whereas arrays purely work via index, Foundry cannot modify specific indexes inside an array via update, arrays need to be written as a cohesive whole. To update an array in a document's data, you need to edit a copy of the array and then write the new array as a whole with an update.
+
 #### Bulk Update
 
-The [`DocumentClass.updateDocuments()`](https://foundryvtt.com/api/abstract.Document.html#.updateDocuments) method is how one can perform an array of updates in a single server operation.
+The [`DocumentClass.updateDocuments()`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#updateDocuments) method is how one can perform an array of updates in a single server operation.
 
 ```javascript
 const updateData = {
@@ -296,11 +274,11 @@ Additionally, `updateAll` accepts a second parameter which is a filter function 
 game.actors.updateAll(
   (document) => {
     return {
-      "data.traits.size": document.data.data.traits.size === "sm" ? "md" : "lg",
+      "system.traits.size": document.system.traits.size === "sm" ? "md" : "lg",
     };
   },
   (document) => {
-    return document.data.data.traits.size !== "tiny";
+    return document.system.traits.size !== "tiny";
   }
 );
 ```
@@ -322,27 +300,23 @@ actor.updateEmbeddedDocuments("Item", [
 ]);
 ```
 
-### Updating Locally
+### Update vs. Assignment
 
-The `DocumentData#update()` method effectively mutates a Document's local of `document.data` directly. The key difference between using `DocumentData.update` and directly manipulating the `document.data` is that `update` has special logic for handling embedded document collections.
+`Document#update({prop: newValue})` is an asynchronous operation that makes a call to the database and propagates out across all connected clients. `Document#prop = newValue` is an in-memory assignment that runs synchronously and will not be shared with other clients. 
 
-```javascript
-someDocument.data.update({ someSchemaKey: newValue });
-```
-
-Any update made with this method does not persist to the database.
-
-An example usecase for this method is updating with Scene EmbeddedDocuments to temporarily have a local state that is different from the database state (e.g. animating the movement of a token).
+It's important to recognize the distinction between these two methods. The main time assignment is used for writing document data is during the derived data preparation, where you are intentionally calculating derived values that don't need to be stored in the database.
 
 ### Delete
 
+Deletion operations use the DocumentModifyContext type.
+
 #### Single Document
 
-[`Document#delete()`](https://foundryvtt.com/api/abstract.Document.html#delete) will delete that document instance's document.
+[`Document#delete(context)`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#delete) will delete that document instance's document.
 
 #### Bulk Delete
 
-[`DocumentClass.deleteDocuments()`](https://foundryvtt.com/api/abstract.Document.html#.deleteDocuments) accepts an array of document Ids to be deleted all at once.
+[`Document.deleteDocuments([ids], context)`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#deleteDocuments) accepts an array of document Ids to be deleted all at once.
 
 #### Embedded Documents
 
@@ -368,9 +342,9 @@ const tempDocument = SomeDocumentClass.create(documentData, { temporary: true })
 
 ### Updating Embedded Documents as part of the parent Update
 
-It is possible to update embedded documents in the same operation used to update a primary document. This is more intuitive after examining the `data._source` of the primary document being updated.
+It is possible to update embedded documents in the same operation used to update a primary document. This is more intuitive after examining the `_source` of the primary document being updated.
 
-Embedded Documents are ultimately stored as an array of document data. To modify an embedded document at the same time as its parent primary document, provide an array of data updates in the primary doucment update object. It is required to pass in the `_id` of the embedded document in addition to any updates.
+Embedded Documents are ultimately stored as an array of document data. To modify an embedded document at the same time as its parent primary document, provide an array of data updates in the primary document update object. It is required to pass in the `_id` of the embedded document in addition to any updates so Foundry knows which item to update (this is a special case of array updates where you don't need to pass the full array).
 
 ```javascript
 someDocument.update({
@@ -409,8 +383,6 @@ actorFoo.update({
 
 
 > Documents created in this way do not undergo the full document [creation event cycle](#creation-event-cycle).
-> 
-> This has some dangers when used in conjunction with unlinked tokens (which this author does not understand yet).
 {.is-warning}
 
 Similar to Updating embedded documents as part of the parent update, it is possible to create new documents by providing all required fields but no `_id`.
@@ -427,7 +399,7 @@ actorFoo.update({
       name: "New Item!",
       type: "weapon",
       img: "some/other/new/image/path",
-      data: {
+      system: {
         someSchemaKey: value,
       },
     },
@@ -437,26 +409,11 @@ actorFoo.update({
 
 ### Relationships between Primary Documents
 
-Sometimes it is desirable to create a relationship between documents which cannot be embedded within one another. The best way to accomplish this is by recording the ID or UUID on one or both of the documents, then constructing the relationship during `prepareData`.
-
-```javascript
-// TODO: Example
-```
-
-### Scene Embeds
+Sometimes it is desirable to create a relationship between documents which cannot be embedded within one another (e.g. Items within other Items). The best way to accomplish this is by recording the ID or UUID on one or both of the documents. Then, when you need to 
 
 #### Unlinked Actors/Tokens
 
-Here be dragons which this author knows nothing about... yet.
-
----
-
-## Troubleshooting
-
-> Stub
-> This section is a stub, you can help by contributing to it.
-
----
+Tokens are a form of canvas document that are embedded within scenes. When a token is linked to an actor, `Token#actor` simply returns that actor. When a token is NOT linked to an actor, the token stores an `ActorDelta` document that records the differences between the unlinked actor and the source actor (e.g. name, HP), then constructs a synthetic actor which it returns in that `actor` getter. 
 
 ## Event Cycles
 
@@ -464,19 +421,19 @@ Each Create, Update, and Delete operation undergoes an event cycle consisting of
 
 The event cycle triggered is dependant on the endpoint used to create/update/delete the document. The quick way to tell is to see if the 'key word' is in the method name (e.g. methods with "update" in their name will run the Update Event Cycle).
 
-| Method                                 | Event Cycle |
-| -------------------------------------- | ----------- |
-| `DocumentClass.create`                 | Create      |
-| `DocumentClass.createDocuments`        | Create      |
-| `someDocument#createEmbeddedDocuments` | Create      |
-| `DocumentClass.update`                 | Update      |
-| `DocumentClass.updateDocuments`        | Update      |
-| `someDocument#update`                  | Update      |
-| `someDocument#updateEmbeddedDocuments` | Update      |
-| `DocumentClass.delete`                 | Delete      |
-| `DocumentClass.deleteDocuments`        | Delete      |
-| `someDocument#delete`                  | Delete      |
-| `someDocument#deleteEmbeddedDocuments` | Delete      |
+| Method                             | Event Cycle |
+| ---------------------------------- | ----------- |
+| `Document.create`                  | Create      |
+| `Document.createDocuments`         | Create      |
+| `Document#createEmbeddedDocuments` | Create      |
+| `Document.update`                  | Update      |
+| `Document.updateDocuments`         | Update      |
+| `Document#update`                  | Update      |
+| `Document#updateEmbeddedDocuments` | Update      |
+| `Document.delete`                  | Delete      |
+| `Document.deleteDocuments`         | Delete      |
+| `Document#delete`                  | Delete      |
+| `Document#deleteEmbeddedDocuments` | Delete      |
 
 Embedded Documents created or updated as part of a Primary Document's `update` operation do not undergo their own Update Event Cycle.
 
@@ -497,7 +454,7 @@ The first steps of a Document Create runs locally:
 
 The client requesting the creation instanciates a new Document with the provided data, allowing all of the normal DocumentData apis to be available in the next steps.
 
-#### 1. [`Document#_preCreate`](https://foundryvtt.com/api/abstract.Document.html#_preCreate)
+#### 1. [`Document#_preCreate`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preCreate)
 
 Typically systems will declare a method here for Actors and Items when they need to intercept the creation and mutate the request.
 
@@ -505,12 +462,12 @@ Typically systems will declare a method here for Actors and Items when they need
 async _preCreate(data, options, user) {
   await super._preCreate(data, options, user);
 
-  // update the document's DocumentData instead of `data`
-  return this.data.update({ name: "Some other name" });
+  // update the document's source 
+  // this is a synchronous operation 
+  // because it's executed locally BEFORE the item data is sent to the database
+  return this.updateSource({ name: "Some other name" });
 }
 ```
-
-It is not possible to stop the creation process during `Document#_preCreate`.
 
 ##### Example: Adding Items to an Actor during preCreate
 
@@ -526,26 +483,37 @@ async _preCreate(data, options, user) {
 
   items.push(item.toObject());
 
-  this.data.update({ items });
+  this.updateSource({ items });
 }
 ```
 
-#### 2. [`Hooks.call('preCreate[DocumentName]')`](https://foundryvtt.com/api/alpha/hookEvents.html#.preCreateDocument)
+#### 2. [`Hooks.call('preCreate[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preCreateDocument)
 
 Modules are recommended to hook into the sequentially called `pre` hooks to make changes to the impending update `change`.
 
 ```javascript
 Hooks.on("preCreateActor", (document, data, options, userId) => {
   //update the document's DocumentData instead of mutating the arguments
-  document.data.update({ name: "Some other name" });
+  document.updateSource({ name: "Some other name" });
 });
 ```
 
-##### Preventing Updates
+##### Preventing Creation
 
-It is possible to stop the update in the pre Hook by returning `false` explicitly.
+It is possible to stop the creation of a document by returning `false` explicitly.
 
 ```javascript
+// System method
+class MyActor extends Actor {
+	/** @override */
+  async _preCreate(data, options, user) {
+  	if (data.name === "Don't Create") {
+      return false;
+    }
+  }
+}
+
+// Module method
 Hooks.on("preCreateActor", (document, data, options, userId) => {
   if (document.name === "Don't Create") {
     return false;
@@ -559,7 +527,7 @@ After the database is updated by the server, a socket broadcast triggers the cre
 
 As part of this create, the document is initialized, then the following are invoked:
 
-#### 4. [`Document#_onCreate`](https://foundryvtt.com/api/abstract.Document.html#_onUpdate)
+#### 4. [`Document#_onCreate`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onCreate)
 
 Allows some followup operations to be declared by the system in the case of Actors and Items.
 
@@ -576,7 +544,7 @@ _onCreate(data, options, userId) {
 }
 ```
 
-#### 5. [`Hooks.callAll('create[DocumentName]')`](https://foundryvtt.com/api/hookEvents.html#.updateDocument)
+#### 5. [`Hooks.callAll('create[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#createDocument)
 
 Similar to `_onCreate`, modules are encouraged to use `create` hooks to react to new Document creation.
 
@@ -588,7 +556,7 @@ The update cycle is very similar to the creation cycle, first steps run locally:
 
 First determines the minimum diff between provided update arguments and the current document's `data._source`. This prevents more data being sent in the update request than is actually changing.
 
-#### 1. [`Document#_preUpdate`](https://foundryvtt.com/api/abstract.Document.html#_preUpdate)
+#### 1. [`Document#_preUpdate`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preUpdate)
 
 Typically systems will declare a method here for Actors and Items when they need to intercept the update and mutate the change being requested.
 
@@ -601,9 +569,7 @@ async _preUpdate(changed, options, user) {
 }
 ```
 
-It is not possible to stop the update process during `Document#_preUpdate`.
-
-#### 2. [`Hooks.call('preUpdate[DocumentName]')`](https://foundryvtt.com/api/alpha/hookEvents.html#.preUpdateDocument)
+#### 2. [`Hooks.call('preUpdate[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preUpdateDocument)
 
 Modules are recommended to hook into the sequentially called `pre` hooks to make changes to the impending update `change`.
 
@@ -615,9 +581,20 @@ Hooks.on("preUpdateActor", (document, change, options, userId) => {
 
 ##### Preventing Updates
 
-It is possible to stop the update in the pre Hook by returning `false` explicitly.
+It is possible to stop the update by returning `false` explicitly.
 
 ```javascript
+// System method
+class MyActor extends Actor {
+	/** @override */
+  async _preCreate(data, options, user) {
+  	if (data.name === "Don't Touch") {
+      return false;
+    }
+  }
+}
+
+// Module method
 Hooks.on("preUpdateActor", (document, change, options, userId) => {
   if (document.name === "Don't Touch") {
     return false;
@@ -631,9 +608,9 @@ After the database is updated by the server, a socket broadcast triggers the upd
 
 As part of this update, the document is re-initialized, then the following are invoked:
 
-#### 4. [`Document#_onUpdate`](https://foundryvtt.com/api/abstract.Document.html#_onUpdate)
+#### 4. [`Document#_onUpdate`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onUpdate)
 
-Allows some followup operations to be declared by the system in the case of Actors and Items. Again be cautious of triggering too many "ping pong" backend requests and use the `pre` method/hook when practical.
+Allows some follow-up operations to be declared by the system in the case of Actors and Items. Again be cautious of triggering too many "ping pong" backend requests and use the `pre` method/hook when practical.
 
 Also be wary that these methods are called on all connected clients. The updater's `userId` is provided in the arguments.
 
@@ -646,7 +623,7 @@ _onUpdate(changed, options, userId) {
 }
 ```
 
-#### 5. [`Hooks.callAll('update[DocumentName]')`](https://foundryvtt.com/api/hookEvents.html#.updateDocument)
+#### 5. [`Hooks.callAll('update[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#updateDocument)
 
 Similar to `_onUpdate`, modules are encouraged to use `update` hooks to react to Document updates.
 
@@ -656,11 +633,11 @@ The delete event cycle has much the same characteristics of the Update and Creat
 
 Runs Locally:
 
-1. [`Document#_preDelete`](https://foundryvtt.com/api/abstract.Document.html#_preDelete)
-2. [`Hooks.call('preDelete[DocumentName]')`](https://foundryvtt.com/api/alpha/hookEvents.html#.preDeleteDocument)
+1. [`Document#_preDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preDelete)
+2. [`Hooks.call('preDelete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preDeleteDocument)
 3. Database entry is Deleted
 
 Runs on all connected Clients:
 
-5. [`Document#_onDelete`](https://foundryvtt.com/api/abstract.Document.html#_onDelete)
-6. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/hookEvents.html#.deleteDocument)
+5. [`Document#_onDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onDelete)
+6. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#deleteDocument)
