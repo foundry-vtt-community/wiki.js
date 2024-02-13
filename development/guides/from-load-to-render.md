@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-13T18:35:29.964Z
+date: 2024-02-13T18:41:46.742Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -28,9 +28,9 @@ Foundry begins its path with `client\tail.js`, which adds an event listener, `DO
 
 ### Calling the Document Constructor
 
-The next step is `Game#initialize`, where we get that `init` Hook call. This method eventually calls `Game#_initializeGameView`, which is really just a license-check wrapper for `Game#setupGame`. Inside *that* method we get `Game#initializePacks` and `Game#initializeDocuments`, the second step of our Document journey (after which the `setup` hook is called).
+The next step is `Game#initialize`, where we get that `init` Hook call and `"Foundry VTT | Initializing Foundry Virtual Tabletop Game"` printed to console. This method eventually calls `Game#_initializeGameView`, which is really just a license-check wrapper for `Game#setupGame`. Inside *that* method we get `Game#initializePacks` and `Game#initializeDocuments`, the second step of our Document journey (after which the `setup` hook is called).
 
-The first of these two methods, `initializePacks`, only instantiates the indices of the packs. The second, `initializeDocuments`, loops through all of the document data stashed in `game.data`, calls the appropriate constructor, and then puts it in the appropriate world collection. For example, `game.data.actors` gets fed into `new Actor` and the result is poured inside `game.actors`.
+The first of these two methods, `initializePacks`, only instantiates the indices of the packs. The second, `initializeDocuments`, loops through all of the document data stashed in `game.data`, calls the appropriate constructor, and then puts it in the appropriate world collection. For example, `game.data.actors` gets fed into `new Actor` and the result is poured inside `game.actors`. When all of these documents are loaded `"Foundry VTT | Prepared World Documents in ${Math.round(dt)}ms"` is printed to console.
 
 The following sections describe what happens inside these constructor calls.
 
@@ -108,7 +108,7 @@ The final step in the journey to displaying a document involves the application 
 
 The journey starts with a call to `Application#render(true)`, which "forces" the application to render; by default, `render` will only refresh an already displayed application. This encapsulates `_render` with some error handling.
 
-Inside `Application#_render`, there are several stages of processing possible application render states, followed by merging in the options until finally a call is made to `Application#getData`. The return of this is used by `Application#_renderInner` to call `renderTemplate(this.template, data)`, constructing the html that is eventually displayed.
+Inside `Application#_render`, there are several stages of processing possible application render states, including printing `"Foundry VTT | Rendering ${this.constructor.name}"` and merging in the options until finally a call is made to `Application#getData`. The return of this is used by `Application#_renderInner` to call `renderTemplate(this.template, data)`, constructing the html that is eventually displayed.
 
 ### DocumentSheet#getData
 
