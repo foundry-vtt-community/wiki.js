@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-13T18:30:41.112Z
+date: 2024-02-13T18:35:29.964Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -11,12 +11,9 @@ dateCreated: 2024-02-13T08:07:20.057Z
 
 ![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
-Data in Foundry progresses through many stages to be rendered in a document sheet. This guide is intented
+Data in Foundry progresses through many stages to be rendered in a document sheet. This guide is intended to be a reference for developers trying to understand where they should define data the order in which it is processed.
 
-
-This guide will reference file locations rather than the official API docs because this is focusing on the internal workings of methods that are not well-commented, 
-
-All file paths are all relative to `foundryInstallPath\resources\app`. Technically your installation just loads the general `public\scripts\foundry.js` file, but the files in `client` and `common` are smaller and easier to follow.
+This guide will reference file locations rather than the official API docs because this is focusing on the internal workings of methods that are not well-commented. All file paths are all relative to `foundryInstallPath\resources\app`. Technically your installation just loads the general `public\scripts\foundry.js` file, but the files in `client` and `common` are smaller and easier to follow.
 
 > **Legend**
 > `Class.method` is a static method or property on the given class
