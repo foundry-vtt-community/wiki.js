@@ -2,24 +2,26 @@
 title: Dialog
 description: 
 published: true
-date: 2022-05-19T13:27:27.081Z
+date: 2024-02-13T03:57:11.403Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-12-15T22:09:07.377Z
 ---
 
 # Dialog
-![Up to date as of v8](https://img.shields.io/static/v1?label=FoundryVTT&message=v8&color=informational)
+![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
 ## Overview
 
-[`Dialog`](https://foundryvtt.com/api/Dialog.html) is an ancestor of the [`Application`](https://foundryvtt.com/api/Application.html) class.
+[Dialogs](https://foundryvtt.com/api/classes/client.Dialog.html) are most useful for quick prompts and simple forms which do not re-render their contents as inputs or other data changes (as compared to [`FormApplication`](https://foundryvtt.com/api/classes/client.FormApplication.html) which is well-suited for more advanced forms).
 
-Dialogs are most useful for quick prompts and simple forms which do not re-render their contents as inputs or other data changes (as compared to [`FormApplication`](https://foundryvtt.com/api/FormApplication.html) which is well-suited for more advanced forms).
+The API documentation for the [DialogData](https://foundryvtt.com/api/interfaces/client.DialogData.html) and [DialogButton](https://foundryvtt.com/api/interfaces/client.DialogButton.html) types are useful references throughout this.
 
 ---
 
 ## Key Concepts
+
+Dialog extends the [`Application`](https://foundryvtt.com/api/classes/client.Application.html) class.
 
 
 ### Dialog Contents
@@ -28,11 +30,9 @@ Unlike the other `Application` ancestors, `Dialog`s have a hardcoded handlebars 
 
 It is expected that the `content` of the Dialog be passed to the `Dialog` constructor in the form of a static HTML string. Dialogs do not re-render if their `content` changes.
 
-
 ### Buttons
 
 Dialogs have an API for handling user input in the form of buttons. It is recommended to use these buttons instead of including your own in your `content`.
-
 
 ### Promise or Callback
 
@@ -70,12 +70,32 @@ function informUser() {
     content: "These are the results of your inquiry: 42",
     callback: () => {
       // do something when button is clicked
+      // Like all callbacks, you can provide a function here
+      // instead of doing this inline with an anonymous arrow function
     },
   })
 }
 ```
 
----
+### Dialog Template
+
+The actual template used for dialogs is quite simple:
+
+```handlebars
+<div class="dialog-content">
+    {{{content}}}
+</div>
+<div class="dialog-buttons">
+    {{#each buttons as |button id|}}
+    <button class="dialog-button {{cssClass}}" data-button="{{id}}" {{disabled button.disabled}}>
+        {{{button.icon}}}
+        {{{button.label}}}
+    </button>
+    {{/each}}
+</div>
+```
+
+
 ## API Interactions
 
 There are three ways to display a Dialog:
@@ -110,8 +130,9 @@ Dialogs allow buttons to be registered for display and interactivity. Buttons ar
 
 | Name     | Type     | Attributes | Description                                               |
 |----------|----------|------------|-----------------------------------------------------------|
-| icon     | string   | optional   | An HTML element that preceeds the button `label`          |
+| icon     | string   | optional   | An HTML element that preceeds the button `label`. Convention is to use Fontawesome icons |
 | label    | string   |            | The label for the button                                  |
+| disabled | boolean  | optional   | Whether the button is disabled														 |
 | callback | function | optional   | A callback function that fires when the button is clicked, the Dialog's `html` at the time of button click is provided as argument |
 
 ```js
@@ -187,7 +208,7 @@ new Dialog({
 
 ### Helper Factories
 
-The `Dialog.prompt` and `Dialog.confirm` methods are helper factory methods which provide abstractions for the two most common Dialog use cases.
+The `Dialog.prompt`, `Dialog.confirm`, and `Dialog.wait` methods are helper factory methods which provide abstractions for the two most common Dialog use cases.
 
 #### [`Dialog.prompt`](https://foundryvtt.com/api/Dialog.html#.prompt)
 
@@ -269,42 +290,35 @@ Dialog.confirm({
 
 ![An image example of the rendered confirm Dialog.](https://i.imgur.com/ZNOKeJC.png)
 
+#### Dialog.wait
 
----
-## Specific Use Cases
 
-### Wrapping in a Promise
-
-By wrapping the Dialog in a promise, it is possible to control the `resolve` and `reject` handling.
+Foundry provides a built-in method to handle dialogs as a promise, allowing you to `await` the output.
 
 This is useful in situations where a quick prompt for user input is desired in an asynchronous process.
 
 ```js
-function getDialogOutput() {
-  return new Promise((resolve, reject) => {
+const dialogOutput = await Dialog.wait({
+  title: "A custom dialog title",
+  content: "Some content for your dialog.",
+  buttons: {
+    foo: { label: "foo", callback: () => ( 'foo' ) },
+    bar: { label: "bar", callback: () => ( 'bar' ) },
+  },
+  close: () => { reject() }
+});
   
-    const dialog = new Dialog({
-      title: "A custom dialog title",
-      content: "Some content for your dialog.",
-      buttons: {
-        foo: { label: "foo", callback: () => { resolve('foo') } },
-        bar: { label: "bar", callback: () => { resolve('bar') } },
-      },
-      close: () => { reject() }
-    });
-
-    dialog.render(true);
-  });
-}
-
-const dialogOutput = await getDialogOutput();
-
+  
 console.log(dialogOutput); // logs based on the button clicked
 ```
 
+
+---
+## Specific Use Cases
+
 ### Using Handlebars for Content
 
-The `content` of a Dialog expects a string that can be safely rendered as HTML. It's possible to use handlebars to construct this html string by passing the output of a [`renderTemplate`](https://foundryvtt.com/api/global.html#renderTemplate) call to the Dialog constructor.
+The `content` of a Dialog expects a string that can be safely rendered as HTML. It's possible to use handlebars to construct this html string by passing the output of a [`renderTemplate`](https://foundryvtt.com/api/modules/client.html#renderTemplate) call to the Dialog constructor.
 
 Note that this will not re-render with new data like the core `DocumentSheet`s do without additional jerry-rigging. It's generally advisable to use a custom `Application` or `FormApplication` if such interactivity is desired.
 
@@ -325,7 +339,8 @@ new Dialog({
 
 The `callback` of a Dialog button gets the html of the dialog as its argument. From this, it is possible to read the state of form elements within the Dialog `content` when it is submitted.
 
-Foundry Core includes the helper class [`FormDataExtended`](https://foundryvtt.com/api/FormDataExtended.html) to help with this.
+Foundry Core includes the helper class [`FormDataExtended`](https://foundryvtt.com/api/classes/client.FormDataExtended.html) to help with this.
+
 
 ```js
 // this could be the output of renderTemplate to use handlebars
@@ -338,7 +353,7 @@ function handleSubmit(html) {
   const formData = new FormDataExtended(formElement);
   const formDataObject = formData.toObject();
   
-  // expects an object: { input-1: 'some value' }
+  // prints an object: { input-1: 'some value' }
   console.log('output form data object', formDataObject);
 }
 
@@ -352,6 +367,33 @@ new Dialog({
 }).render(true);
 ```
 
+Here's an alternate method that uses `Dialog.wait` and an anonymous arrow function:
+
+```js
+// this could be the output of renderTemplate to use handlebars
+const form = `<form>
+  <label>Input 1 <input name="input-1" type="string"/></label>
+</form>`;
+
+const formResult = await Dialog.wait({
+  title: "A custom dialog title",
+  content: form,
+  buttons: {
+    submit: { label: "Submit", callback: (html) => {
+      const formElement = html[0].querySelector('form');
+      const formData = new FormDataExtended(formElement);
+      const formDataObject = formData.toObject();
+      return formDataObject;
+    }},
+    cancel: { label: "Cancel" },
+  },
+});
+  
+// If submit was entered, this will print an object of the form { input-1: 'some value' }
+// If cancel was entered, there is no callback defined
+// Thus this will print the key of the button; in this case, `cancel`
+console.log('output form data object', formResult);
+```
 
 ### Preventing Dialog Close
 
