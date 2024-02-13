@@ -2,7 +2,7 @@
 title: Dialog
 description: 
 published: true
-date: 2024-02-13T03:57:11.403Z
+date: 2024-02-13T06:46:30.665Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-12-15T22:09:07.377Z
@@ -94,7 +94,7 @@ The actual template used for dialogs is quite simple:
     {{/each}}
 </div>
 ```
-
+---
 
 ## API Interactions
 
