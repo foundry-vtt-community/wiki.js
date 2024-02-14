@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2022-07-04T17:26:08.219Z
+date: 2024-02-14T22:43:24.837Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T14:06:05.915Z
 
 # Sockets
 
-![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
+![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
 ## Overview
 
@@ -144,30 +144,9 @@ socket.on('module.my-module', handleSocketEvent);
 > [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteforeveryone) has a handy abstraction for this pattern.
 {.is-info}
 
-#### With the Acknowledgement Callback
-
-<details>
-  <summary>This does not appear to work in v9</summary>
-
-The emitting client does not recieve a broadcast with the event it emits. As a result, it is recommended to use the Acknowledgement callback pattern described above to handle firing an event on the emitting client as well as all other clients.
-
-```js
-// called by both the socket listener and emitter's acknowledgement
-function handleEvent(arg) {
-  console.log(arg);
-}
-
-// not triggered when this client does the emit
-socket.on('module.my-module', handleEvent);
-
-socket.emit('module.my-module', 'foo', handleEvent);
-```
-</details>
-
-
 #### Pretend the Emitter was called
 
-If the Acknowledgement Callback method doesn't work, the expectation is to be able to call whatever method locally at the time of socket emission in addition to calling it in response to a broadcast.
+The expectation is to be able to call whatever method locally at the time of socket emission in addition to calling it in response to a broadcast.
 
 
 ```js
@@ -189,6 +168,8 @@ function emitEventToAll() {
 }
 ```
 
+**Socket#emitWithAck:** This method, despite being available as of v11, does not appear to be useful in the context of Foundry because the server acts as a middle-man for all socket events.
+
 ### Doing something on one GM client (aka. GM Proxy)
 
 > [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteasgm) has a handy abstraction for this pattern. This snippet is derived from its solution.
@@ -196,18 +177,9 @@ function emitEventToAll() {
 
 This is a common way to get around permission issues when player clients want to interact with Documents they do not typically have permission to modify (e.g. deducting the health of a monster after an attack).
 
-The tricky part here is to ensure that only one active GM is selected arbitrarily based on logic that is consistent on all connected clients.
-
 ```js
 function handleEvent(arg) {
-  if (!game.user.isGM) return;
-
-  // if the logged in user is the active GM with the lowest user id
-  const isResponsibleGM = game.users
-    .filter(user => user.isGM && user.isActive)
-    .some(other => other.data._id < game.user.data._id);
-
-  if (!isResponsibleGM) return;
+  if (game.user !== game.users.activeGM) return;
 
   // do something
   console.log(arg);
