@@ -2,7 +2,7 @@
 title: Flags
 description: 
 published: true
-date: 2022-05-19T13:27:04.256Z
+date: 2024-02-14T17:34:37.570Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T14:27:34.646Z
 
 # Flag
 
-![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
+![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
 ## Overview
 
@@ -29,19 +29,18 @@ A flag does not have to be a specific type, anything which can be `JSON.stringif
 ## Key Concepts
 
 ### Data Format
-Flags live on the root of a Document's [DocumentData](/en/development/api/document#document-data) schema, on the same level as `name`.
+Flags live on the root of a Document's schema, on the same level as `name`.
 
 ```text
 Document
 ├─ id
 ├─ parent
-└─ data
-   ├─ name
-   ├─ flags <---
-   └─ someOtherSchemaKey (e.g. `data`)
+├─ name
+├─ flags <---
+└─ someOtherSchemaKey (e.g. `system`)
 ```
 
-The `flags` object is keyed by scope as set in `setFlag`. Its values are objects keyed by flag name as set in `setFlag`.
+The `flags` object is keyed by scope then flag name as seen in [`setFlag`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#setFlag).
 
 ```js
 flags: {
@@ -56,13 +55,13 @@ flags: {
 ## API Interactions
 
 ### Setting a flag's value
-Flags are automatically namespaced within the first parameter given to [`Document#setFlag`](https://foundryvtt.com/api/abstract.Document.html#setFlag).
+Flags are automatically namespaced within the first parameter given to [`Document#setFlag`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#setFlag).
 
 The following are expected scopes:
 - `core`
 - `world`
 - The `id` of the world's system.
-- The `name` of a module present in `game.modules` - Note that this does not need to be an active module.
+- The `id` of a module present in `game.modules` - Note that this does not need to be an active module.
 
 If an unexpected scope is provided, Foundry core will `throw` an error.
 
@@ -84,7 +83,7 @@ someDocument.setFlag('myModuleName', 'myFlagName', newFlagValue);
 
 > Manually updating a Document's `flags` value does not have any of the client-side validations that `setFlag` has.
 >
-> For instance, nothing prevents an update from setting `flags` to be a `string` or `array` instead of the expected format of scope-namespaced objects. 
+> For instance, nothing prevents an update from directly replacing the namespaced flags object with a direct record of keys and values.
 > 
 > Be careful when interacting with flags manually to keep this structure lest you accidentally break someone else's package (or they yours).
 {.is-warning}
@@ -113,7 +112,7 @@ someDocument.update(updateData);
 
 
 ##### Mutation
-Simply mutating a flag's value on a document's data will not persist that change in the database, nor broadcast that change to other connected clients.
+Simply mutating a flag's value on a document's data with `=` assignment will not persist that change in the database, nor broadcast that change to other connected clients. Keep this in mind when editing a document during a hook that fires in `prepareData`.
 
 
 ### Getting a flag's value
@@ -134,7 +133,7 @@ someDocument.data.flags
 ```
 
 ### Unset a flag
-A safe way to delete your flag's value is with [`Document#unsetFlag`](https://foundryvtt.com/api/abstract.Document.html#unsetFlag). This will fully delete that key from your module's flags on the provided document.
+A safe way to delete your flag's value is with [`Document#unsetFlag`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#unsetFlag). This will fully delete that key from your module's flags on the provided document.
 
 ```js
 someDocument.unsetFlag('myModuleName', 'myFlagName');
@@ -151,7 +150,7 @@ For example, a `flag` on `ChatMessage` might be injected into the DOM for that m
 chatMessage.setFlag('myModule', 'emoji', '❤️');
 
 Hooks.on('renderChatMessage', (message, html) => {
-  if (hasProperty(message, 'data.flags.myModule.emoji')) {
+  if (message.getFlag('myModule', 'emoji')) {
     html.append(`<p>${message.data.flags.myModule.emoji}</p>`);
   }
 });
@@ -161,7 +160,7 @@ Hooks.on('renderChatMessage', (message, html) => {
 
 When the value being set is an object, the API doesn't replace the object with the value provided, instead it merges the update in. `Document#setFlag` is a very thin wrapper around `Document#update`. 
 
-The database operation that `update` eventually calls is configured by default to update objects with [mergeObject](https://foundryvtt.com/api/module-helpers.html#.mergeObject)'s default arguments.
+The database operation that `update` eventually calls is configured by default to update objects with [mergeObject](https://foundryvtt.com/api/modules/foundry.utils.html#mergeObject)'s default arguments.
 
 Example to demonstrate:
 ```js
