@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2023-01-24T00:20:29.654Z
+date: 2024-02-14T20:27:50.733Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -10,11 +10,11 @@ dateCreated: 2022-03-15T14:35:36.691Z
 
 # Hooks
 
-![Up to date as of v9](https://img.shields.io/static/v1?label=FoundryVTT&message=v9&color=informational)
+![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
 ## Overview
 
-> There is documentation about the various Hook Events in Core [in the official docs](https://foundryvtt.com/api/modules/hookEvents.html). However, it is advised to set `CONFIG.debug.hooks = true` when looking for hooks as this will print them to the console as they happen. The [Developer Mode module](https://github.com/League-of-Foundry-Developers/foundryvtt-devMode) can assist with this.
+> There is documentation about the various Hook Events in Core [in the official docs](https://foundryvtt.com/api/modules/hookEvents.html). However, it is advised to set `CONFIG.debug.hooks = true` when looking for hooks as this will print them to the console as they happen. 
 {.is-info}
 
 Hooks are how Foundry Core exposes certain public API events modules and systems to interact with. It is always recommended to register a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) for an existing hook event instead of [monkey patching](https://www.audero.it/blog/2016/12/05/monkey-patching-javascript/) a core method.
@@ -56,7 +56,7 @@ It is expected that all of the data a hook callback will need should be provided
 
 There are two ways to register a hook callback with slightly different usecases:
 
-#### [`Hooks.on`](https://foundryvtt.com/api/Hooks.html#.on)
+#### [`Hooks.on`](https://foundryvtt.com/api/classes/client.Hooks.html#on)
 
 Used when the callback being registered should run every time the event is triggered.
 
@@ -68,7 +68,7 @@ function someFunction(hookArg1, hookArg2) {
 Hooks.on('hookEvent', someFunction);
 ```
 
-#### [`Hooks.once`](https://foundryvtt.com/api/Hooks.html#.once)
+#### [`Hooks.once`](https://foundryvtt.com/api/classes/client.Hooks.html#once)
 Used if the event might be triggered many times but the callback being registered should only run once.
 
 This is a convience method to make manually calling `Hooks.off` unecessary for this specific use case.
@@ -83,7 +83,7 @@ Hooks.once('hookEvent', oneTimeFunction);
 
 ### Unregistering a Callback
 
-#### [`Hooks.off`](https://foundryvtt.com/api/Hooks.html#.off)
+#### [`Hooks.off`](https://foundryvtt.com/api/classes/client.Hooks.html#off)
 
 Used when a particular use case calls for a Hook callback to be executed a specific number of times, or if some other control makes the callback unecessary.
 
@@ -107,11 +107,11 @@ Hooks.off('hookEvent', someFunction); // both ways work
 
 ### Executing callbacks
 
-It is possible to leverage the Hook API for your own use cases, rather than simply registering callbacks for Core's existing hooks. Doing this is as simple as running `call` or `callAll` and providing a unique hook name. Any callbacks registered will fire at that point on the client machine which calls the hook.
+It is possible to leverage the Hook API for your own use cases, rather than simply registering callbacks for Core's existing hooks. Doing this is as simple as running `call` or `callAll` and providing a unique hook name. Any callbacks registered will fire at that point on the client machine which calls the hook. This is a great way for system developers to allow modules to extend system functionality.
 
 Remember Hooks must be synchronous and cannot `await` their registered callbacks.
 
-#### [`Hooks.call`](https://foundryvtt.com/api/Hooks.html#.call)
+#### [`Hooks.call`](https://foundryvtt.com/api/classes/client.Hooks.html#call)
 
 Calls the registered callbacks in order of registration, stopping when any of them explicitly returns `false`. This means not all registered callbacks might be called.
 
@@ -120,14 +120,14 @@ Useful for cases where a hook callback should be able to interrupt a process.
 ```javascript=
 function someProcessWithHook(arg) {
   const canProceed = Hooks.call('myCustomInterruptHook', arg);
-  if (!canProceed) { return; }
+  if (!canProceed) return;
   
   // do something else
 }
 ```
 
 
-#### [`Hooks.callAll`](https://foundryvtt.com/api/Hooks.html#.callAll)
+#### [`Hooks.callAll`](https://foundryvtt.com/apiclasses/client.Hooks.html#callAll)
 
 Calls the registered callbacks in order of registration, ensuring that all registered callbacks are called.
 
