@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-13T18:41:46.742Z
+date: 2024-02-14T19:56:38.029Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -73,11 +73,18 @@ On initial world load, this call is deferred until after ALL documents have been
 
 Everything here should be performed using standard javascript assignment (`=`). Calling `update` within `prepareData` or its subsidiary methods can easily trigger an infinite loop, as that `update` call then creates another `prepareData` call.  
 
+### prepareBaseData
+
+This is a good place to initialize any values that aren't stored in the database but are targets for active effects, such as creating a blank array or setting a value to 0. More complicated calculations should usually wait until `prepareDerivedData` after active effects have been applied, but your specific use case may disagree.
+
+### TypeDataModel#prepareBaseData
+
+If you have a system data model, you can run type-specific logic here. Keep in mind that you're operating within the `system` object, so you'll need to call `this.parent` to access the actual document properties, e.g. `this.parent.items` to access the items collection.
+
 ### ClientDocument#prepareBaseData
 
 Most documents do not do anything here natively; only ActiveEffect, Scene, and Token natively do things here, and ActiveEffect's handling covers a deprecated field. 
 
-This is a good place to initialize any values that aren't stored in the database but are targets for active effects, such as creating a blank array or setting a value to 0. More complicated calculations should usually wait until `prepareDerivedData` after active effects have been applied, but your specific use case may disagree.
 
 ### ClientDocument#prepareEmbeddedDocuments
 
@@ -85,9 +92,18 @@ Baseline, this loops through each of the Document's collections and calls `prepa
 
 Developers usually don't need to make direct edits here; they're better off making changes in the appropriate `prepareData` methods of the embedded documents or in `applyActiveEffects`.
 
-### ClientDocument#prepareDerivedData
+### prepareDerivedData
 
-This is the final place to manipulate a document's data in a way that is generally accessible within the foundry API. Many document classes have their own native handling here that you should keep in mind to call `super.prepareDerivedData()` for:
+This is the final place to manipulate a document's data in a way that is generally accessible within the foundry API. Derived data is the place to calculate modifiers, encumbrance, and all of the other pieces of information you want available. What actually needs to be derived depends enormously on what you're building; trad games like D&D, PF, or SWADE have lots of derived data, while more rules light games like various PbtAs have very little derived data.
+
+#### TypeDataModel#prepareDerivedData
+
+If you have a system data model, you can run type-specific logic here. Keep in mind that you're operating within the `system` object, so you'll need to call `this.parent` to access the actual document properties, e.g. `this.parent.items` to access the items collection.
+
+#### ClientDocument#prepareDerivedData
+
+
+Many document classes have their own native handling here that you should keep in mind to call `super.prepareDerivedData()` for:
 
 * ActiveEffect updates its duration
 * Cards ensure all of their faces have images to display
@@ -98,7 +114,6 @@ This is the final place to manipulate a document's data in a way that is general
 * Tiles derive their dimensions
 * Users ensure they have images available.
 
-Derived data is the place to calculate modifiers, encumbrance, and all of the other pieces of information you want available. What actually needs to be derived depends enormously on what you're building; trad games like D&D, PF, or SWADE have lots of derived data, while more rules light games like various PbtAs have very little derived data.
 
 ## DocumentSheet
 
