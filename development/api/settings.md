@@ -2,7 +2,7 @@
 title: Settings
 description: 
 published: true
-date: 2022-05-19T13:27:07.565Z
+date: 2024-02-14T22:05:54.875Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T15:31:39.865Z
 
 # Settings
 
-![Up to date as of v8](https://img.shields.io/static/v1?label=FoundryVTT&message=v8&color=informational)
+![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
 ## Overview
 
@@ -39,7 +39,7 @@ There is a separate permission dedicated to governing which users can edit World
 > It is recommended to register settings during the `init` hook.
 {.is-info}
 
-All settings must be registered before they can be set or accessed. This needs to be done with [`game.settings.register`](https://foundryvtt.com/api/ClientSettings.html#register), with `game.settings` being an instance of `ClientSettings`.
+All settings must be registered before they can be set or accessed. This needs to be done with [`game.settings.register`](https://foundryvtt.com/api/classes/client.ClientSettings.html#register), with `game.settings` being an instance of `ClientSettings`.
 
 ```js
 /*
@@ -50,28 +50,52 @@ game.settings.register('myModuleName', 'mySettingName', {
   hint: 'A description of the registered setting and its behavior.',
   scope: 'world',     // "world" = sync to db, "client" = local storage 
   config: true,       // false if you dont want it to show in module config
-  type: Number,       // Number, Boolean, String, Object 
+  type: Number,       // You want the primitive class, e.g. Number, not the name of the class as a string
   default: 0,
   onChange: value => { // value is the new value of the setting
     console.log(value)
   },
+  requiresReload: true, // true if you want to prompt the user to reload
+  /** Creates a select dropdown */
+  choices: {
+		1: "Option Label 1",
+  	2: "Option Label 2",
+  	3: "Option Label 3"
+	},
+  /** Number settings can have a range slider, with an optional step property */
+  range: {
+    min: 0,
+    step: 2,
+    max: 10
+  },
+  /** "audio", "image", "video", "imagevideo", "folder", "font", "graphics", "text", or "any" */
+  filePicker: "any" 
 });
 ```
 
 #### Some registration notes
+- `name` and `hint`, and the labels in `choices` are localized by the setting configuration application on render, so you can register settings in `init` and just pass a localizable string for those values
 - `config` defaults to `undefined` which behaves the same as `false`
-
-> Stub
-> TODO: put a table of all config options and default values
+- `requiresReload` is useful for settings that make changes during the `init` or `setup` hooks.
+- `scope` defaults to "client"
+- You can pass a data model as the `type` for complex settings that need data validation.
+- `filePicker`
 
 #### Setting Types
 
 The `type` of a setting is expected to be a constructor which is used when the setting's value is gotten. The 'normal' primitive constructors cover all basic use cases:
-- String
-- Number
-- Boolean
-- Array
-- Object
+- [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) - turns the setting into a checkbox
+- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+You can use fundamental language constructs as types
+- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [Function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+
+There's also some lesser used primitive types that are nevertheless eligible
+- [Symbol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 
 It is possible however to leverage this functionality to do some advanced data manipulation with a complex setting object during the `get`. Doing so has some gotchas surrounding the `onChange` callback.
 
@@ -91,6 +115,8 @@ game.settings.set('myModuleName', 'customClassSetting', {foo: 'foosius', bar: 'w
 game.settings.get('myModuleName', 'customClassSetting').merged; // 'foosiuswhatever'
 ```
 
+As an even more advanced use case, you could pass a `DataModel` as a setting to provide advanced validation; the type casting has a special case from these where it calls `YourDataModel.fromSource`.
+
 #### Localization
 When registering a setting, instead of passing a hard-coded string to `name` or `hint`, it is possible to pass a localization path to support translations. Both `name` and `hint` are run through [`game.i18n.localize`](https://foundryvtt.com/api/Localization.html#localize) before being displayed in the Setting UI.
 
@@ -100,7 +126,7 @@ When registering a setting, instead of passing a hard-coded string to `name` or 
 > Settings with `scope: world` cannot be `set` until the `ready` hook.
 {.is-info}
 
-A setting's value can be set with [`game.settings.set`](https://foundryvtt.com/api/ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a user with the "Modify Configuration Settings" permission (by default this is only Game Master and Assistant GM users), and that `scope: client` settings will only persist on the user's local machine.
+A setting's value can be set with [`game.settings.set`](https://foundryvtt.com/api/classes/client.ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a user with the "Modify Configuration Settings" permission (by default this is only Game Master and Assistant GM users), and that `scope: client` settings will only persist on the user's local machine.
 
 ```js
 const whateverValue = 'foo';
@@ -123,9 +149,7 @@ Note that `JSON.stringify` will prefer to use a value's `toJSON()` method if one
 
 #### Type Constraints
 
-There is no built-in gaurd for ensuring that a setting set is the correct type. Validation should be done on the package's side to ensure it is setting values correctly.
-
-However, since `get`ing a setting's value runs it through the `type` constructor, it is reasonably safe to assume the type of a saved setting will not be incorrect. See [Returned Value Type](#returned-value-type).
+If you wish to improve validation when updating a complex setting, you should consider a data model. If you're just using `String` or `Number`, it will run the new value through those primitives first before storing to the database (e.g. if the setting is `type: Number`, and someone passes `set(scope, key, "5")`, the setting will run `Number("5")` to cast the type).
 
 
 ### Getting a Setting's value
@@ -140,7 +164,7 @@ console.log(someVariable); // expected to be 'foo'
 
 #### Returned Value Type
 
-When getting a setting's value, the `type` of the setting registered is used by Core as a constructor for the returned value. For primitives like `Number`, `String`, and `Boolean`, this can provide some degree of type safety.
+When getting a setting's value, the `type` of the setting registered is used by Core as a constructor for the returned value.
 
 Example:
 ```js=
@@ -160,7 +184,7 @@ For more information on the basic primitive constructors and how they convert va
 
 ### Reacting to Setting Changes
 
-There is no hook for when a setting changes, instead an `onChange` callback must be provided during registration. This callback is fired after the setting has been set, meaning a `settings.get` inside this callback will return the new value of the setting, not the old.
+There is no hook for when a setting changes, instead an `onChange` callback must be provided during registration (You of course *could* run `Hooks.call()` in that callback). This callback is fired after the setting has been set, meaning a `settings.get` inside this callback will return the new value of the setting, not the old.
 
 The `onChange` callback does not fire if there are no differences between the `value` being `set` and the current value returned from `settings.get`.
 
@@ -169,27 +193,9 @@ This callback will fire on all clients for world scoped settings, but only local
 > Because this `value` argument is not necessarily the same value that would be returned from `settings.get`, it is safer to get the new value in this callback if you intend to operate on it.
 {.is-warning}
 
-#### Reloading after setting a setting
-Sometimes a setting's value changing means that the foundry client should reload for it to take effect. This can be accomplished with the `onChange` callback but should be debounced to allow for the case where several changed settings require a reload.
-
-```js
-const debouncedReload = foundry.utils.debounce(() => window.location.reload(), 100);
-
-game.settings.register("myModuleName", "myModuleSetting", {
-  // ...,
-  onChange: debouncedReload
-}
-
-game.settings.register("myModuleName", "myOtherSetting", {
-  // ...,
-  onChange: debouncedReload
-}
-```
-
-
 ### Setting Menus
 
-Sometimes a package is more complex than a few settings will allow a user to configure. In these cases it is recommended to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/ClientSettings.html#registerMenu), and manage the configuration with a FormApplication or Dialog. Note that `registerMenu` does not register a setting by itself, simply a menu button.
+Sometimes a package is more complex than a few settings will allow a user to configure. In these cases it is recommended to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/classes/client.ClientSettings.html#registerMenu), and manage the configuration with a FormApplication or Dialog. Note that `registerMenu` does not register a setting by itself, simply a menu button.
 
 Menus work best when used in conjunction with a registered setting of type `Object` which has been set to `config: false`. A menu could also be used to control many individual settings if desired.
 
@@ -361,11 +367,14 @@ game.settings.get('core', 'myFile'); // 'path/to/file'
 
 The following can be given to the `filePicker` option to change the behavior of the File Picker UI when it is opened. These are useful if you need the user to select only an image for instance.
 
-- `'audio'` - Displays audio files only
-- `'image'` - Displays image files only
-- `'video'` - Displays video files only
+- `'audio'`      - Displays audio files only
+- `'image'`      - Displays image files only
+- `'video'`      - Displays video files only
 - `'imagevideo'` - Displays images and video files
-- `'folder'` - Allows selection of a directory (beware, it does not enforce directory selection)
+- `'folder'` 		 - Allows selection of a directory (beware, it does not enforce directory selection)
+- `'font'`       - Display font files only
+- `'graphics'`   - Display 3D files only
+- `'text'`       - Display text files only
 - `'any'` - No different than `true`
 
 #### Directory Picker
