@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-14T19:56:38.029Z
+date: 2024-02-14T19:57:56.578Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -77,11 +77,11 @@ Everything here should be performed using standard javascript assignment (`=`). 
 
 This is a good place to initialize any values that aren't stored in the database but are targets for active effects, such as creating a blank array or setting a value to 0. More complicated calculations should usually wait until `prepareDerivedData` after active effects have been applied, but your specific use case may disagree.
 
-### TypeDataModel#prepareBaseData
+#### TypeDataModel#prepareBaseData
 
 If you have a system data model, you can run type-specific logic here. Keep in mind that you're operating within the `system` object, so you'll need to call `this.parent` to access the actual document properties, e.g. `this.parent.items` to access the items collection.
 
-### ClientDocument#prepareBaseData
+#### ClientDocument#prepareBaseData
 
 Most documents do not do anything here natively; only ActiveEffect, Scene, and Token natively do things here, and ActiveEffect's handling covers a deprecated field. 
 
