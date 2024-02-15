@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-15T18:00:18.858Z
+date: 2024-02-15T18:04:57.797Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -68,8 +68,11 @@ You don't have to use the most nested versions of a field; in fact, it's frequen
 
 #### DataField options
 
+There's quite a few options you can pass to DataField, which are officially documented [here](https://foundryvtt.com/api/interfaces/foundry.data.fields.DataFieldOptions.html). However, the most common change in a subclass is its handling of the options and what the defaults are.
+
 > Stub
 > This section is a stub, you can help by contributing to it.
+
 
 #### Migrating from template.json
 
