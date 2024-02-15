@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-15T18:00:00.416Z
+date: 2024-02-15T18:00:18.858Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -67,6 +67,9 @@ DataField
 You don't have to use the most nested versions of a field; in fact, it's frequently beter not to — StringField works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. EmbeddedCollectionField), as they require server-side support: This isn't a clever way to do "items within items".
 
 #### DataField options
+
+> Stub
+> This section is a stub, you can help by contributing to it.
 
 #### Migrating from template.json
 
