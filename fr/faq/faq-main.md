@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-01-28T17:04:13.142Z
+date: 2024-02-15T09:58:54.203Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -19,7 +19,7 @@ FoundryVTT a démarré son développement notamment car l'auteur principal ne tr
 
 ## Très bien, ~~mais je vois que le truc est en bêta~~, comment qu’on l’achète ?
 
-A ce jour (2023), Foundry n'est plus en beta depuis plus de 3 ans. Il est actuellement en version 11, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
+A ce jour, le 15 février 2024, Foundry n'est plus en beta depuis plus de 3 ans. Il est actuellement en version 11, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
 
 ## Putain, 60$ ?
 
@@ -321,6 +321,7 @@ Notez que vous pouvez parfaitement avoir une installation de Foundry sur votre P
 
 Comme dit au paragraphe précédent, les données de vos parties sont toutes placées au même endroit, dans un répertoire `worlds`, sous le répertoire `Data`.
 Donc faire une sauvegarde équivaut à recopier votre répertoire `worlds` et à l'archiver quelque part, tout simplement.
+A partir de la version 11, il y a une fonctionnalité de sauvegarde intégrée à Foundry : elle permet de sauvegarder, des mondes, des systèmes, des modules etc...
 
 ## On m'a donné un lien vers un fichier "system.json" ou "module.json". J'en fais quoi ?
 
