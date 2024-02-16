@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-16T07:04:41.208Z
+date: 2024-02-16T07:51:54.210Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -263,27 +263,29 @@ Developers generally don't need to know the ins and outs of how `new DataModel` 
 3. `validate` is called
 4. `_initialize` is called
 
-The following sections explain each of those function calls.
+The following sections explain each of those function calls. Whenever a data model is *updated*, only `validate` and `_initialize` are called, as the first two define many read-only properties.
 
 #### DataModel#\_initializeSource
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+`Actor#_initializeSource` routes to `BaseActor#_initializeSource`, which calls `super` then sets up some default `prototypeToken` properties. Otherwise, the relevant pieces are in `DataModel`, which checks that the source data provided is an object then calls `migrateDataSafe`, `cleanData`, and `shimData`. Importantly, these changes are at the lowest level of the data model and safeguard the data that is actually saved to the database.
+
+**migrateDataSafe**: An error-checking wrapper for `migrateData`, this moves old data loaded from the database into new formats (this is a synchronous operation; the moves are not saved back to the database automatically). `DataModel#migrateData` calls `this.schema.migrateSource()`, which ripples down to trigger migrations on any embedded data models such as `Actor#system`.
+
+**cleanData**: This just calls `schema.clean`, which propagates calls to all the fields to run `_cast` and `_cleanType`. For example, NumberField constricts the value to any provided `min` or `max` values, `StringField` will `trim` the input, and generally the DataFields attempt type coercion.
+
+**shimData**: This is where Foundry adds pointers like `Actor#data` pointing to `Actor#system` with their deprecation warnings getter/setters.
 
 #### DataModel#\_configure
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+This function defines all sorts of additional pointers and getters necessary to make the data model function. Data Model does not natively do anything here, it's strictly for subclasses. `Actor#_configure` calls `super` then defines its `_dependentTokens`; in `Document#_configure`, the document's collection relationships are setup, both where it can be found as well as any embedded collections it might have.
 
 #### DataModel#validate
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+This method is similar to `cleanData` but is more thorough, allowing things like joint validation rules where multiple fields are considered together. A simple example of this is folders checking that their parent pointer is not pointing to themselves, checking the `folder` property against the `_id` property.
 
 #### DataModel#\_initialize
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+This method copies data from the `_source` field to the top level of the data model. For `Actor`, the soonest layer of inheritance is `ClientDocument`, which calls `super` before kicking off the `prepareData` cycle; for more on that, check out [From Load to Render](/en/development/guides/from-load-to-render). 
 
 ---
 ## API Interactions
