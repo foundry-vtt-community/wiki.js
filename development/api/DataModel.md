@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-16T07:54:54.103Z
+date: 2024-02-16T08:19:10.431Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -290,7 +290,7 @@ This method copies data from the `_source` field to the top level of the data mo
 ---
 ## API Interactions
 
-Beyond their class definitions, there's a few other things to know with data models.
+Beyond their class definitions, there's a few other things to know with data models. More interactions can be found on the [Document](/en/development/api/document) page.
 
 ### Registering Data Models
 
@@ -316,6 +316,20 @@ Hooks.once("init", () => {
 
 ---
 ## Specific Use Cases
+
+There's lots of great benefits of working with data models
+
+### Type specific logic
+
+Historically, developers either used proxies and/or typeguards to implement type-specific logic; maybe both `weapon` and `consumable` should work with `item.use()`, but the specifics differ by type. Data models allow you to leverage conventional polymorphism; a built-in and great example of this is `TypeDataModel#prepareBaseData` and `TypeDataModel#prepareDerivedData`. The general flow of data preparation is covered in [From Load to Render](/en/development/guides/from-load-to-render#clientdocument).
+
+Returning to our earlier example of Heroes, Villains, and Pawns, we might have some generic logic in `Actor#prepareData`, but need to do specific calculations with a Hero's goodness score or a Villain's wickedness score. We can funnel those calculations to `HeroData#prepareDerivedData` and `VillainData#prepareDerivedData`, not worrying about checking `this.type === "hero"` and the like.
+
+With the `weapon` and `consumable` example, we could have `MyItem#use` run `if (this.system.use instanceof Function) this.system.use()`; if it's an instance of a function, it will run, otherwise we could throw an error in console or perform some default method.
+
+A key reason to use this pattern over typeguards and proxies is it allows module developers to leverage module sub-types; you won't know all the possible `type` values and their corresponding `system` setup, but you can check if the `system` object supports the operation you're trying to do.
+
+### Data Models for Settings
 
 [Settings](/en/development/api/settings) can take a data model as an argument when registered, allowing  you to have a strongly typed data.
 
