@@ -2,7 +2,7 @@
 title: 13 Localization
 description: 
 published: true
-date: 2024-02-06T06:26:59.547Z
+date: 2024-02-06T06:27:01.197Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T22:06:29.592Z

@@ -2,7 +2,7 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-17T03:39:45.973Z
+date: 2024-01-17T03:39:47.760Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z

@@ -2,7 +2,7 @@
 title: Self Hosting-on-AWS
 description: 
 published: true
-date: 2023-06-16T16:11:37.348Z
+date: 2023-06-16T16:11:41.526Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:51.723Z

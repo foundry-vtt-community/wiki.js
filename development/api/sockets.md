@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2024-02-14T22:43:24.837Z
+date: 2024-02-14T22:43:26.512Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z

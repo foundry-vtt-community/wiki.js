@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-02-14T20:27:50.733Z
+date: 2024-02-14T20:27:52.375Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z

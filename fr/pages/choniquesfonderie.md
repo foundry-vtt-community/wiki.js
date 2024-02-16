@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2024-01-16T09:07:30.968Z
+date: 2024-01-16T09:07:32.550Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z

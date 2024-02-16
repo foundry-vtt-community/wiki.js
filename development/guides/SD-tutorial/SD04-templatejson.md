@@ -2,7 +2,7 @@
 title: 04. template.json
 description: 
 published: true
-date: 2024-02-05T21:15:48.778Z
+date: 2024-02-05T21:15:50.607Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z

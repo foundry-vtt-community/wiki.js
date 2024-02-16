@@ -2,7 +2,7 @@
 title: Gérer les compendium v11 et + en JSON
 description: Comment gérer les compendiums en fichiers JSON ?
 published: true
-date: 2023-11-16T21:06:41.044Z
+date: 2023-11-16T21:06:42.651Z
 tags: compendium
 editor: markdown
 dateCreated: 2023-11-16T18:17:17.123Z

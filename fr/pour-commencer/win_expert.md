@@ -2,7 +2,7 @@
 title: 1.1. Windows (mode serveur)
 description: 
 published: true
-date: 2022-11-07T14:43:11.029Z
+date: 2022-11-07T14:43:12.756Z
 tags: 
 editor: markdown
 dateCreated: 2021-11-20T17:06:43.550Z

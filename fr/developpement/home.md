@@ -2,7 +2,7 @@
 title: Développement
 description: 
 published: true
-date: 2023-01-02T08:49:23.811Z
+date: 2023-01-02T09:05:04.931Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-10T14:46:28.370Z

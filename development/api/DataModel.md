@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-16T08:19:10.431Z
+date: 2024-02-16T08:19:12.470Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z

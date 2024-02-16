@@ -2,7 +2,7 @@
 title: Würfelwurf in einem Makro oder im Code
 description: Beispiel eines Würfelwurfes als Makro mit Chatausgabe
 published: true
-date: 2023-02-05T14:20:59.583Z
+date: 2023-02-05T14:21:01.340Z
 tags: 
 editor: markdown
 dateCreated: 2023-02-05T12:10:50.895Z

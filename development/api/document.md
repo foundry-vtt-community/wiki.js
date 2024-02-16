@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-02-16T05:18:06.815Z
+date: 2024-02-16T05:18:08.754Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z

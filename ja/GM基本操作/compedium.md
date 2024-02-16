@@ -2,7 +2,7 @@
 title: 辞典
 description: 辞典 (英：Compedium) 機能の簡単な説明です
 published: true
-date: 2022-09-04T05:40:46.699Z
+date: 2022-09-04T05:40:50.173Z
 tags: 
 editor: markdown
 dateCreated: 2022-09-04T05:40:46.699Z

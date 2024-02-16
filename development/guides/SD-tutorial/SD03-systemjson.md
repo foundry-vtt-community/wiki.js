@@ -2,7 +2,7 @@
 title: 03. system.json
 description: 
 published: true
-date: 2024-02-06T20:27:11.927Z
+date: 2024-02-06T20:27:13.586Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:35.124Z

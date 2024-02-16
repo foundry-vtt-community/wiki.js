@@ -2,7 +2,7 @@
 title: 10 Extending the ItemSheet class
 description: 
 published: true
-date: 2024-02-06T05:28:27.918Z
+date: 2024-02-06T05:28:29.508Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:18.600Z

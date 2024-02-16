@@ -2,7 +2,7 @@
 title: Einführung
 description: 
 published: true
-date: 2023-07-09T19:22:26.793Z
+date: 2023-07-09T19:22:28.711Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-09T15:06:05.790Z

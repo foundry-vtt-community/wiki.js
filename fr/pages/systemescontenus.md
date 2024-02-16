@@ -2,7 +2,7 @@
 title: Systèmes et Contenus
 description: 
 published: true
-date: 2022-12-01T07:16:40.372Z
+date: 2022-12-01T07:16:43.606Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:33:53.747Z

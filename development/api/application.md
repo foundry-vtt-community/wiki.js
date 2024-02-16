@@ -2,7 +2,7 @@
 title: Application
 description: Sheet rendering and other similar functions
 published: true
-date: 2024-02-13T19:36:31.269Z
+date: 2024-02-13T19:36:32.856Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z

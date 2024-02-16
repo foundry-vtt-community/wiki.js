@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-14T19:57:56.578Z
+date: 2024-02-14T19:57:58.228Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z

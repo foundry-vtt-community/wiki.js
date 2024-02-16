@@ -2,7 +2,7 @@
 title: Self Hosting on Azure
 description: Simple Steps to follow to setup an Azure Free Tier VM
 published: true
-date: 2023-03-13T18:06:06.329Z
+date: 2023-03-13T18:06:09.391Z
 tags: azure, hosting, setup, getting started, vm
 editor: markdown
 dateCreated: 2020-11-19T05:34:12.177Z
