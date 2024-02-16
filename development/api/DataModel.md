@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-16T07:51:54.210Z
+date: 2024-02-16T07:54:54.103Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -294,7 +294,7 @@ Beyond their class definitions, there's a few other things to know with data mod
 
 ### Registering Data Models
 
-Data models MUST be registered in an init hook.
+Document data models MUST be registered in an init hook.
 
 ```js
 // If we had properly exported all of our classes from the full example earlier
@@ -316,6 +316,8 @@ Hooks.once("init", () => {
 
 ---
 ## Specific Use Cases
+
+[Settings](/en/development/api/settings) can take a data model as an argument when registered, allowing  you to have a strongly typed data.
 
 > Stub
 > This section is a stub, you can help by contributing to it.
