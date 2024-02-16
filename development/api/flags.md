@@ -1,8 +1,8 @@
 ---
 title: Flags
-description: 
+description:  Flags represent key-value type data which can be used to store flexible or arbitrary data required by either the core software, game systems, or user-created modules.
 published: true
-date: 2024-02-14T17:34:37.570Z
+date: 2024-02-16T05:19:49.319Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
