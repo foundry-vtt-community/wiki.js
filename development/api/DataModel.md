@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-15T18:04:57.797Z
+date: 2024-02-16T07:04:41.208Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -16,6 +16,8 @@ Official documentation
 - [DataModel API reference](https://foundryvtt.com/api/classes/foundry.abstract.DataModel.html)
 - [DataField API reference](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html)
 
+
+
 ## Overview
 The data model is the root of how Foundry synchronizes information between the client and server. It includes functions for:
 
@@ -28,6 +30,11 @@ The data model is the root of how Foundry synchronizes information between the c
 
 **As a Module developer**: Data models are necessary for [Module Sub-Types](https://foundryvtt.com/article/module-sub-types/) module sub-types, where you provide your own new type of Actor, Item, JournalEntry, or other document sub-type. 
 
+### Legend
+```js
+DataModel.defineSchema // `.` indicates static method or property
+DataModel#invalid // `#` indicates instance method or property
+```
 --- 
 ## Key Concepts
 
@@ -68,11 +75,51 @@ You don't have to use the most nested versions of a field; in fact, it's frequen
 
 #### DataField options
 
-There's quite a few options you can pass to DataField, which are officially documented [here](https://foundryvtt.com/api/interfaces/foundry.data.fields.DataFieldOptions.html). However, the most common change in a subclass is its handling of the options and what the defaults are.
+There's quite a few options you can pass to DataField, which are officially documented [here](https://foundryvtt.com/api/interfaces/foundry.data.fields.DataFieldOptions.html). However, the most common change in a subclass is its handling of the options and what the defaults are. 
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+Here's some important information to know about each option:
 
+##### `required` and `nullable`
+
+*Default*: `required: false` and `nullable: false`
+
+These two options constitute a special form of validation; `required` prevents passing an undefined value, while `nullable` allows a `null` value.
+
+##### `initial`
+
+*Default*: `undefined`
+
+In addition to being a static value, this can be a function which takes in the entire data model as an argument and returns a value. If `required` is true and there's no `initial` value, this will create errors if the field is not passed in the constructor.
+
+`StringField` and its descendants modify the default slightly; if you pass `required: true, blank: true`, that's equivalent to also passing `initial: ""`.
+
+#### `readonly`
+
+*Default*: `false`
+
+This option prevents a field from being changed after initial creation. Readonly fields can still be altered by `Document#_preCreate` and the `preCreateDocument` hook, and can be dynamically set if `initial` is a function.
+
+#### `validate` and `validationError`
+
+*Default*: `validate: undefined` and `validationError: "is not a valid value"`
+
+If defined, `validate` should have the signature `(value, options) => boolean`; returning false is functionally the same as throwing a `DataModelValidationFailure`. This can be useful when you don't want to entirely define a new DataField subclass but do want a bit of additional handling, such as enforcing that a `StringField` is all lowercase with no special characters. The second argument, `options`, is [documented here](https://foundryvtt.com/api/interfaces/foundry.data.fields.DataFieldValidationOptions.html).
+
+The `validationError` option can be used with or without the `validate` option; it simply replaces the default console errors generated on a type validation failure. Many data field subclasses replace the default string with more specific language.
+
+#### `label` and `hint`
+
+*Default*: `""` (for both) 
+
+These two fields nominally allow you to pair your UI work with the core data definitions. In practice, these are difficult to access; From an `ActorSheet`, the path would be `this.actor.system.getField('relative.object.path').label`. These otherwise aren't used anywhere natively within Foundry, not even for token bars.
+
+#### Other Options
+
+DataField subclasses sometimes take additional options:
+
+- [NumberFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#NumberFieldOptions)
+- [StringFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#StringFieldOptions)
+- [FilePathFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#FilePathFieldOptions)
 
 #### Migrating from template.json
 
@@ -205,12 +252,35 @@ class VillainData extends CharacterData {
 }
 ```
 
-### \_source initialization
+### DataModel#constructor 
+
+Developers generally don't need to know the ins and outs of how `new DataModel` works. In case you do, the following summarizes the steps that occur using a `new Actor` as an example. For reference, `Actor extends ClientDocumentMixin(BaseActor)`, and `BaseActor extends Document extends DataModel`, so there are five distinct layers of inheritance happening.
+
+`Actor` doesn't override the `constructor`, but `ClientDocumentMixin` does; that calls `super` and then instantiates the `apps` record and the `_sheet` pointer. The super call skips through `BaseActor` and `Document`, as neither override the constructor, landing us in `DataModel#constructor`. Within this function several steps happen:
+
+1. `_source` is set to the return of `_initializeSource`
+2. `_configure` is called
+3. `validate` is called
+4. `_initialize` is called
+
+The following sections explain each of those function calls.
+
+#### DataModel#\_initializeSource
 
 > Stub
 > This section is a stub, you can help by contributing to it.
 
-### Data validation
+#### DataModel#\_configure
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+#### DataModel#validate
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+#### DataModel#\_initialize
 
 > Stub
 > This section is a stub, you can help by contributing to it.
