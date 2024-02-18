@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-02-15T09:58:56.422Z
+date: 2024-02-18T09:55:07.082Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -160,8 +160,7 @@ La méthode est identique à l'installation des sytsèmes, sauf que tout se pass
 
 Ces liens sont en fait une ancienne méthode d'installation des systèmes et modules, obsolète depuis 2 ans désormais. Donc, en priorité, vérifiez bien que votre système ou module n'est pas déja présent dans le "Marketplace" de Foundry (cf les 2 questions juste au-dessus sur l'installation des systèmes/modules). De plus, ces liens JSON pointent assez souvent sur des systèmes/modules plus mis à jour depuis longtemps, et qui ne fonctionneront donc pas sur votre installation de Foundry. Dans le doute, venez en discutez sur le Discord FR de Foundry. 
 
-**Priviligiez toujours l'installation via le Markeplace de Foundry plutot que par des liens de .json.
-**
+**Priviligiez toujours l'installation via le Markeplace de Foundry plutot que par des liens de .json.**
 
 Cependant, il peut arriver parfois que des système/modules ne soient pas présents dans le Marketplace pour diverses raisons : l'auteur ne veut pas le publier, le contenu est "privé", etc, etc. Dans ce cas, effectivement, vous pouvez l'installer dans Foundry.
 
