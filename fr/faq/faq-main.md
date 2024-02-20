@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-02-18T09:55:07.082Z
+date: 2024-02-20T06:58:24.344Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -63,6 +63,10 @@ Cela revient à faire tourner Foundry tout le temps, et donc à laisser allumer 
 ## Et il faut de la bande passante ?
 
 Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra au moins 4 Mbs montant (je dis bien montant) pour jouer confortablement. Donc si vous avez la fibre ou un "gros" ADSL, ca doit marcher. Sinon, il faut vous orienter vers un hébergement tiers.
+
+## Ca marche si j'héberge avec la 4G ?
+
+Non, impossible. Les operateurs 4G ne permettent pas d'ouvrir des ports ou d'ouvrir sa connexion. Donc à moins de passer par des mécaniques de VPN avancées, la 4G est inutilisable pour partager son Foundry local.
 
 ## J’ai déjà un serveur, comment je fais ?
 
