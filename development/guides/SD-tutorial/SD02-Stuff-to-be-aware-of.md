@@ -2,13 +2,13 @@
 title: 02: Stuff to be aware of
 description: 
 published: true
-date: 2024-02-20T02:40:53.406Z
+date: 2024-02-20T02:48:55.713Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:29.131Z
 ---
 
-![Foundry v11](https://img.shields.io/badge/Foundry-v11-green)
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 Before we start diving into development, there are a few useful things to know as background information.
 
