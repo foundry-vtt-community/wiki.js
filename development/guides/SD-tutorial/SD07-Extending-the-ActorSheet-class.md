@@ -2,11 +2,13 @@
 title: 07. Extending the ActorSheet class
 description: 
 published: true
-date: 2024-02-05T23:50:20.182Z
+date: 2024-02-20T02:50:28.186Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 The ActorSheet class is the class associated with our actor's character sheets. Let's take a look at what Boilerplate System does:
 
