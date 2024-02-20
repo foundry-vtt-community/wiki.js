@@ -2,13 +2,13 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2024-02-20T02:37:39.145Z
+date: 2024-02-20T02:39:23.187Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
 ---
 
-![Foundry v11](https://img.shields.io/badge/foundry-v11-green)
+![Foundry v11](https://img.shields.io/badge/Foundry-v11-green)
 
 When building a new system, you have several options to choose from. You can copy an existing system (depending on its license) like the Simple World-building system, you can use a system generator, or you could start from scratch and have total control.
 
