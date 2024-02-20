@@ -2,11 +2,13 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2024-02-08T05:50:45.962Z
+date: 2024-02-20T02:50:14.882Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 Let's start by taking a look a the BoilerplateActor class in `/module/documents/actor.js`. As with previous examples, you'll want to rename `BoilerplateActor` to whatever your system's name is, such as `MySystemNameActor`. Whenever you have calculations to your actor's data, you'll typically want to place them in the actor class itself like in the examples below, rather than in the actor sheet class (which we'll review in the next page of the tutorial). This file is a large one, so we'll review each section in detail.
 
