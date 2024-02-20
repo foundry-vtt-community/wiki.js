@@ -2,11 +2,13 @@
 title: 02: Stuff-to-be-aware-of
 description: 
 published: true
-date: 2022-05-19T13:19:16.713Z
+date: 2024-02-20T02:40:38.240Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:29.131Z
 ---
+
+![Foundry v11](https://img.shields.io/badge/Foundry-v11-green)
 
 Before we start diving into development, there are a few useful things to know as background information.
 
@@ -38,7 +40,7 @@ The more CSS you add to your system, the more difficult it will be to maintain o
 
 The Boilerplate System we're using in this tutorial includes support for SCSS, but you can also just work directly with the CSS files instead if you prefer. For a great implementation that uses Less, download the dnd5e system.
 
-To build the SCSS files in this system, you'll need to go into the system's directory in your terminal, run `npm install`, and then `npm run gulp` whenever you want to compile the SCSS into CSS. Using the gulp command will also kick off a watch process that will watch for additional changes.
+To build the SCSS files in this system, you'll need to go into the system's directory in your terminal, run `npm install`, and then `npm run build` whenever you want to compile the SCSS into CSS. If you would like to have the build script watch for changes and automatically compile them, you can instead use `npm run watch`
 
 ## Handlebars
 
