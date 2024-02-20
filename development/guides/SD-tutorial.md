@@ -2,15 +2,26 @@
 title: System Development Tutorial - Start to Finish
 description: 
 published: true
-date: 2022-05-19T13:22:13.175Z
+date: 2024-02-20T02:48:08.404Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T21:45:49.612Z
 ---
 
-Welcome to my system development tutorial for FoundryVTT! My goal is to guide you through system development with little to no knowledge of Foundry or the languages it uses. At first we'll walk through the steps to create relatively simple systems that allow you to collect data for things like stats and attributes and calculate modifiers for them, but eventually we'll get into more advanced topics like making dice rolls from your sheet or letting items be converted into macros.
+Welcome to the system development tutorial for FoundryVTT! Our goal is to guide you through system development with little to no knowledge of Foundry or the languages it uses. At first we'll walk through the steps to create relatively simple systems that allow you to collect data for things like stats and attributes and calculate modifiers for them, but eventually we'll get into more advanced topics like making dice rolls from your sheet or letting items be converted into macros.
 
 If you have any questions, you can find me on the Foundry discord as @Asacolips#1867. And with that, let's move onto to the tutorial!
+
+> **Foundry Compatibility Tags**
+> Throughout this guide you'll see tags at the top of each page listing the most recent of Foundry the page was updated for. If the guide supports multiple versions of Foundry, such as both v11 and v12, multiple tags will be shown on the page. Currently, this guide has been updated for Foundry v11.
+>
+> ![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
+>
+> If the guide is out of date and has known incompatibilities with the current Foundry version, you'll see a red indicator like the following:
+>
+> ![Foundry v13 Incompatible](https://img.shields.io/badge/Foundry-v13%20Incompatible-red)
+{.is-info}
+
 
 -   [Getting an empty system together](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD01-Getting-started)
     -   Start with a boilerplate system
