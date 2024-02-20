@@ -2,13 +2,13 @@
 title: 01.2. Other-options
 description: 
 published: true
-date: 2024-02-20T02:38:40.263Z
+date: 2024-02-20T02:38:55.131Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:23.660Z
 ---
 
-![Foundry v11](https://img.shields.io/badge/foundry-v11-green)
+![Foundry v11](https://img.shields.io/badge/Foundry-v11-green)
 
 In addition to using the Boilerplate System, you can also use Simple World-building or a project template such as the League's various templates.
 
