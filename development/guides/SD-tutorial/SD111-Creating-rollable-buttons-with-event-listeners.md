@@ -1,13 +1,14 @@
 ---
-title: 11.1 Creating rollable buttons with event listeners
+title: 11.1. Creating rollable buttons with event listeners
 description: 
 published: true
-date: 2024-02-06T05:55:10.655Z
+date: 2024-02-20T02:52:55.840Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:24.667Z
 ---
 
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 To make things on your character sheet rollable, you'll need to add a class that you can listen for in your sheet's `activateListeners()` method. In the Boilerplate System, ability rolls have an example of this with a `rollable` class. Let's look at the ability modifier line from `actor-sheet.html`:
 
