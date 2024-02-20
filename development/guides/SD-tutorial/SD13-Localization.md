@@ -1,12 +1,14 @@
 ---
-title: 13 Localization
+title: 12. Localization
 description: 
 published: true
-date: 2024-02-06T06:27:01.197Z
+date: 2024-02-20T02:53:25.440Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T22:06:29.592Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 Supporting localization in your new system is critical to allow the maximum number of GMs and players to use your system. Localization provides others with the ability to translate your work into their language. It is easier to build into a system from the start when compared to coming back and adding it. Foundry uses the browser's language settings to determine which localization to use when displaying text. 
 
