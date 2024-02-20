@@ -1,14 +1,16 @@
 ---
-title: System Development Tutorial - Start to Finish
+title: System Development Tutorial (Boilerplate)
 description: 
 published: true
-date: 2024-02-20T02:57:00.991Z
+date: 2024-02-20T02:58:52.399Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T21:45:49.612Z
 ---
 
 Welcome to the system development tutorial for FoundryVTT! Our goal is to guide you through system development with little to no knowledge of Foundry or the languages it uses. At first we'll walk through the steps to create relatively simple systems that allow you to collect data for things like stats and attributes and calculate modifiers for them, but eventually we'll get into more advanced topics like making dice rolls from your sheet or letting items be converted into macros.
+
+This tutorial is written to take advantage of the accompanying [Boilerplate](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate) system, but if you'd rather start from scratch or use a different base system, the concepts should still be helpful!
 
 If you have any questions, you can find me on the Foundry discord as @Asacolips#1867. And with that, let's move onto to the tutorial!
 
