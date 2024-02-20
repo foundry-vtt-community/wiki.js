@@ -1,12 +1,14 @@
 ---
-title: 10 Extending the ItemSheet class
+title: 10. Extending the ItemSheet class
 description: 
 published: true
-date: 2024-02-06T05:28:29.508Z
+date: 2024-02-20T02:52:19.899Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:18.600Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 The ItemSheet class is the class associated with our item sheets. Let's take a look at what Boilerplate System does:
 
