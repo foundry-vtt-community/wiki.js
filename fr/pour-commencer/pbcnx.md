@@ -1,13 +1,15 @@
 ---
-title: 5.1 Mes joueurs ne se connectent pas
+title: Comment connecter mes joueurs ?
 description: 
 published: true
-date: 2024-01-15T16:55:25.956Z
+date: 2024-02-20T07:00:01.719Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
 ---
 
+# Je veux ouvrir les ports pour permettre aux joueurs d'accéder à ma partie
+# OU
 # Impossible de se connecter à distance
 # OU
 # Mes joueurs sont déconnectés régulièrement
