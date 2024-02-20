@@ -2,11 +2,13 @@
 title: 05. Creating your main JS file
 description: 
 published: true
-date: 2024-02-06T05:58:45.566Z
+date: 2024-02-20T02:50:01.731Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:47.008Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 Let's take a look at the Boilerplate System's `/module/boilerplate.mjs` file. We'll look at each section of it to see what's happening:
 
