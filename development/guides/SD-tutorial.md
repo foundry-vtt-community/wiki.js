@@ -2,7 +2,7 @@
 title: System Development Tutorial (Boilerplate)
 description: 
 published: true
-date: 2024-02-20T02:58:52.399Z
+date: 2024-02-20T03:14:36.647Z
 tags: 
 editor: markdown
 dateCreated: 2020-12-20T21:45:49.612Z
@@ -21,7 +21,7 @@ If you have any questions, you can find me on the Foundry discord as @Asacolips#
 >
 > If the guide is out of date and has known incompatibilities with the current Foundry version, you'll see a red indicator like the following:
 >
-> ![Foundry v13 Incompatible](https://img.shields.io/badge/Foundry-v13%20Incompatible-red)
+> ![Foundry v13 Incompatible](https://img.shields.io/badge/Foundry-v13%20Incompatible-darkred)
 {.is-info}
 
 
