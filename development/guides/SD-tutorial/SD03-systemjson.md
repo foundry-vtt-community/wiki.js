@@ -2,16 +2,13 @@
 title: 03. system.json
 description: 
 published: true
-date: 2024-02-06T20:27:13.586Z
+date: 2024-02-20T02:49:31.348Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:35.124Z
 ---
 
-> **Updated for Foundry v11**
->
-> This section of the system development tutorial has been updated for Foundry v10 and v11. Other pages in the tutorial may still be in progress.
-{.is-info}
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 Once you've created your system, you'll need to make some changes to system.json. Here's what it looks like for the Boilerplate System by default:
 
