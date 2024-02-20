@@ -2,11 +2,13 @@
 title: 04. template.json
 description: 
 published: true
-date: 2024-02-05T21:15:50.607Z
+date: 2024-02-20T02:49:47.826Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 The most straightforward way to define your system's data model for characters and items is in `template.json`. Any changes you make to this file will require you to return to Foundry's setup screen and relaunch your world. The template.json for the Boilerplate System looks like this.
 
