@@ -2,11 +2,13 @@
 title: 08. Creating HTML templates for your actor sheets
 description: 
 published: true
-date: 2024-02-06T03:17:19.665Z
+date: 2024-02-20T02:50:41.421Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z
 ---
+
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 In addition to the JS classes that define them, actors and items also have HTML templates that define the structure of your character and item sheets. In the Boilerplate System, these are placed in `/templates/actor/` and `/templates/item/`. These paths are not discovered automatically; you have to define specify their full path in your ActorSheet and ItemSheet class' defaultOptions() method. Within those directories, Boilerplate includes sheets for specific document types (such as `actor-character-sheet.html` and `item-spell-sheet.html`) along with template partials like `parts/actor-features.html`. Using partials is optional, but it can be helpful for dividing up complicated templates into more manageable chunks.
 
