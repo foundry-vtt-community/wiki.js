@@ -2,13 +2,15 @@
 title: 09 Extending the Item class
 description: 
 published: true
-date: 2024-02-06T04:43:41.835Z
+date: 2024-02-20T02:51:42.221Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:12.667Z
 ---
 
-You can extend the Item class to use your own version, just like we did earlier with the Actor class. Let's start by taking a look a the BoilerplateItem class in <!-- {% raw %} -->`/module/item/item.js`<!-- {% endraw %} -->. As with previous examples, you'll want to rename <!-- {% raw %} -->`BoilerplateItem`<!-- {% endraw %} --> to whatever your system's name is, such as <!-- {% raw %} -->`MySystemNameItem`<!-- {% endraw %} -->.
+![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
+
+You can extend the Item class to use your own version, just like we did earlier with the Actor class. Let's start by taking a look a the BoilerplateItem class in `/module/item/item.js`. As with previous examples, you'll want to rename `BoilerplateItem` to whatever your system's name is, such as `MySystemNameItem`.
 
 Let's start with the class definition, stripping out all the content of the methods and leaving just the signatures for brevity.
 
