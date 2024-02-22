@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: false
-date: 2024-02-22T20:12:52.304Z
+date: 2024-02-22T20:13:24.780Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -202,7 +202,7 @@ If you need to perform updates on many documents in a collection you can use the
   async updateAll(transformation, condition=null, options={})
 ```
 
-For example, to set the image of all documents in the collection to `icons/svg/biohazard.svg`, you could run `CompendiumCollection#updateAll({img: 'icons/svg/biohazard.svg'})`. Alternatively, you can pass functions for both Transformation and Condition; the signature in each case is `(doc) => object` and `(doc) => boolean` respectively. Examples of this can be [found below](#using-updateAll).
+For example, to set the image of all documents in the collection to `icons/svg/biohazard.svg`, you could run `CompendiumCollection#updateAll({img: 'icons/svg/biohazard.svg'})`. Alternatively, you can pass functions for both Transformation and Condition; the signature in each case is `(doc) => object` and `(doc) => boolean` respectively. Examples of this can be [found below](#using-updateall).
 
 ### Importing documents
 
