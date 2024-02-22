@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: false
-date: 2024-02-22T20:13:24.780Z
+date: 2024-02-22T21:30:01.609Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -83,7 +83,7 @@ An array of folders, which are defined as follows:
 - packs: An array of pack `name` that go in this folder
 - folders: An array of further-nested folders, repeating this structure. Maximum depth of 4.
 
-The `packFolders` are only loaded once per world (per package); if you want to see how updates to the module property are working, run `game.settings.set("core", "compendiumConfiguration", {});`.
+The `packFolders` are only loaded once per world (per package); if you want to see how updates to the module property are working, in addition to restarting foundry, you must run `game.settings.set("core", "compendiumConfiguration", {});` and refresh your page twice (make sure the first refresh fully finishes before refreshing again).
 
 ## API Interactions
 
@@ -206,20 +206,144 @@ For example, to set the image of all documents in the collection to `icons/svg/b
 
 ### Importing documents
 
+One other use set of methods that are important when interacting with a CompendiumCollection is moving documents between the compendium and the world. These are some of the ways to do so.
+
 #### Single Document
 
-**CompendiumCollection#importDocument**
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 
 #### Many Documents
 
-**CompendiumCollection#importFolder**
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+
+### CompendiumCollection#folders
+
+The folders embedded into a compendium are not part of the main collection; `getDocuments()` won't return a single folder. Instead, folders are stored in a separate collection accessible as a `folders` property which gets a [CompendiumFolderCollection](https://foundryvtt.com/api/classes/client.CompendiumFolderCollection.html). This is a form of [DocumentCollection](https://foundryvtt.com/api/classes/client.DocumentCollection.html) - all of the [folder documents](https://foundryvtt.com/api/classes/client.Folder.html) are readily available, without any asynchronous operations in the server. The `contents` of these folder documents are always the *index* entries of the child documents.
 
 ## Specific Use Cases
 
 ### Using updateAll
 
+CompendiumCollection#updateAll is an incredibly powerful tool, especially in conjunction with other methods. Here's one example that finds all documents in a specific folder and updates `system.type.value` to `"race"`; this can be useful as a script macro to batch update content. Along the way, it will console.log the name of every document it executes an update on.
+
+```js
+const collection = game.packs.get('chaosos-5e-content.non-srd-backgrounds')
+
+ui.notifications.info("Beginning Update")
+await collection.updateAll(update, filter)
+ui.notifications.info("Completed Update")
+
+
+function update(doc) {
+	console.log(doc.name)
+  const update = {system: {}}
+  update.system.type = {value: "race"}
+  return update;
+}
+
+function filter(doc) {
+  return doc.folder?.id === "7l9VwmhPTzJstiWD"
+}
+```
+
+Keep in mind the wide expanse of [string operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) available within Javascript when doing an update — well-constructed RegEx can save a lot of manual work when updating HTML entries.
+
 ### foundryvtt-cli
 
-[The official Foundry VTT CLI](https://github.com/foundryvtt/foundryvtt-cli) is a tool to unpack compendiums from binary files into a human readable state - JSON or YAML.
+[The official Foundry VTT CLI](https://github.com/foundryvtt/foundryvtt-cli) is a tool to unpack compendiums from binary files into a human readable state - JSON or YAML. In general, actual document operations should be conducted *within* Foundry - `updateAll` and similar functions have the important benefit of leveraging Foundry's native data checking to ensure you don't corrupt data.
+
+However, one key weakness of Foundry's native database structure is it relies on binary files that change with every access, which conflicts with good GIT management practices. This is where the CLI can be useful, because the unpacked JSON/YAML files are much easier to track changes. You WILL have to repack the files as part of creating a release, but this is doable with git actions.
+
+To help developers, here are two node scripts. These scripts rely on *locally* installing the foundry CLI, which you can do with `npm install @foundryvtt/foundryvtt-cli --save-dev`. This also assumes you've already initialized your module or system folder as a node package. `fs` and `path` are provided natively by node versions that support Foundry. **These scripts can ONLY be run while the compendiums are not in use by a Foundry world**.
+
+This first script coverts the LDB setup in the `packs` directory to YAML files in `src/packs`; you can change the `const yaml = true` to false if you prefer JSON.
+
+```js
+import { extractPack } from "@foundryvtt/foundryvtt-cli";
+import { promises as fs } from "fs";
+import path from "path";
+
+const MODULE_ID = process.cwd();
+const yaml = true;
+
+const packs = await fs.readdir("./packs");
+for (const pack of packs) {
+  if (pack === ".gitattributes") continue;
+  console.log("Unpacking " + pack);
+  const directory = `./src/packs/${pack}`;
+  try {
+    for (const file of await fs.readdir(directory)) {
+      await fs.unlink(path.join(directory, file));
+    }
+  } catch (error) {
+    if (error.code === "ENOENT") console.log("No files inside of " + pack);
+    else console.log(error);
+  }
+  await extractPack(
+    `${MODULE_ID}/packs/${pack}`,
+    `${MODULE_ID}/src/packs/${pack}`,
+    {
+      yaml,
+      transformName,
+    }
+  );
+}
+/**
+ * Prefaces the document with its type
+ * @param {object} doc - The document data
+ */
+function transformName(doc) {
+  const safeFileName = doc.name.replace(/[^a-zA-Z0-9А-я]/g, "_");
+  const type = doc._key.split("!")[1];
+  const prefix = ["actors", "items"].includes(type) ? doc.type : type;
+
+  return `${doc.name ? `${prefix}_${safeFileName}_${doc._id}` : doc._id}.${
+    yaml ? "yml" : "json"
+  }`;
+}
+
+```
+
+This second script does the reverse - it takes the unpacked files from `src/packs` and assembles LevelDB files. Make sure to adjust `const yaml` in this script as well if you prefer JSON.
+
+```js
+import { compilePack } from '@foundryvtt/foundryvtt-cli';
+import { promises as fs } from 'fs';
+
+const MODULE_ID = process.cwd();
+const yaml = true;
+
+const packs = await fs.readdir('./src/packs');
+for (const pack of packs) {
+  if (pack === '.gitattributes') continue;
+  console.log('Packing ' + pack);
+  await compilePack(
+    `${MODULE_ID}/src/packs/${pack}`,
+    `${MODULE_ID}/packs/${pack}`,
+    { yaml }
+  );
+}
+
+```
+
+One general tip: If you add these to the `scripts` property to your node `package.json`, you can run the node scripts from wherever in your project and `process.cwd()` will always be the root. For example, both scripts are in a folder named `tools` and the first script is named `pushLDBtoYML.mjs` while the second is `pullYMLtoLDB.mjs`.
+```json
+  "scripts": {
+    "pushLDBtoYML": "node ./tools/pushLDBtoYML.mjs",
+    "pullYMLtoLDB": "node ./tools/pullYMLtoLDB.mjs",
+  },
+```
+
+When working across multiple computers, after pulling any updates to these files, you'll have to use `npm run pullYMLtoLDB` to ensure your local compendium databases reflect the stored YML.
 
 ## Troubleshooting
+
+Here are some of the most common issues when working with compendiums.
+
+### Asynchronicity
+
+Compendium operations involve a lot of asynchronous code, because they rely on client-server communication. You will need to use the `await` keyword in front of these operations, and there are many situations in Foundry you won't be able to use asynchronous functions, such as in `prepareData` or in a `preCreate` hook. 
