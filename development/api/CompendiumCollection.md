@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-02-22T21:30:14.205Z
+date: 2024-02-22T21:45:23.964Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -115,7 +115,7 @@ And of course like in core JS, you can chain these operations, like leading with
 
 ### Configuration
 
-Compendiums are not documents, which means they do not have an `update` method. Instead, `CompendiumCollection#configure(configuration)` allows you to edit them. The `configuration` argument is an object with the following arguments:
+Compendiums are not documents, which means they do not have an `update` method. Instead, `CompendiumCollection#configure(configuration)` allows you to edit them. The `configuration` argument is an object with the following optional fields:
 
 - **locked** (Boolean) - Whether documents in this compendium can be edited.
 - **folder** (Folder|string|null) - A folder or folder ID to put this compendium into. Null returns it to the root of the directory.
@@ -143,7 +143,7 @@ The advantage is that the index is accessible in a synchronous fashion. The inde
 
 #### Modifying the indexable fields
 
-By default, the indexed fields are set in `Document.metadat.compendiumIndexedFields` for any given document type. However, you can configure additonal fields in `CONFIG[documentName].compendiumIndexFields`; for example, dnd5e sets `CONFIG.Item.compendiumIndexFields = ["system.container"]` so it can properly render how items are stored in containers.
+By default, the indexed fields are set in `Document.metadata.compendiumIndexedFields` for any given document type. However, you can configure additonal fields in `CONFIG[documentName].compendiumIndexFields`; for example, dnd5e sets `CONFIG.Item.compendiumIndexFields = ["system.container"]` so it can properly render how items are stored in containers.
 
 ### Fetching Documents
 
