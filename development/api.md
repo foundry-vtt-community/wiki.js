@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2022-05-19T13:18:27.462Z
+date: 2024-02-22T03:58:35.320Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -17,13 +17,23 @@ If a page appears here which does not conform the to style notes below it may be
 ## Official API
 Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/).
 
-This is generated from the JSDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code.
+This is generated from the JSDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code. The bundled code can be found in `yourFoundryInstallLocation/resources/app/public/scripts/foundry.js`, while the unbundled code can be found in `yourFoundryInstallLocation/resources/app/client/` and `yourFoundryInstallLocation/resources/app/common/`.
 
 ---
 
 ## Exisiting Documentation
 
+### [Application](/en/development/api/application)
 
+#### Topics
+- Common Methods (render, getData, activateListeners)
+- Automatic rerendering on updates
+
+### [Data Model](/en/development/api/DataModel)
+- Data Model Schema
+- Registering Data models
+- TypeDataModel
+- Data Models for Settings
 
 ### [Dialog](/en/development/api/dialog)
 API documentation for the Dialog UI class used to inform and prompt users with simple popups.
