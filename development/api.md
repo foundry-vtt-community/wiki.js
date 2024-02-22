@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-02-22T03:58:35.320Z
+date: 2024-02-22T21:41:48.764Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -28,6 +28,15 @@ This is generated from the JSDoc comments within `foundry.js` that is accessible
 #### Topics
 - Common Methods (render, getData, activateListeners)
 - Automatic rerendering on updates
+
+### [Compendium Collection](/en/development/api/CompendiumCollection)
+Compendiums and how data is stored
+
+#### Topics
+- Accessing compendiums
+- Fetching documents
+- Updating documents
+- The FoundryVTT CLI
 
 ### [Data Model](/en/development/api/DataModel)
 - Data Model Schema
