@@ -1,8 +1,8 @@
 ---
 title: Settings
-description: 
+description: Provide user configuration for your package
 published: true
-date: 2024-02-14T22:05:56.889Z
+date: 2024-02-23T15:35:04.496Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -17,6 +17,9 @@ dateCreated: 2021-11-17T15:31:39.865Z
 Settings, like flags, are a way for packages to store and persist data. Settings are not tied to a specific document however, unlike flags. 
 
 For the vast majority of use-cases, settings are intended to be modified by a UI, either a Menu or within the Module Settings panel itself. These settings are intended to be used to modify the functionality of a package, rather than store arbitrary data for that module or system.
+
+Official Documentation
+- [ClientSettings in the API docs](https://foundryvtt.com/api/classes/client.ClientSettings.html#register)
 
 ---
 
