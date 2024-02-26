@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-26T19:41:14.380Z
+date: 2024-02-26T19:42:38.859Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -253,7 +253,7 @@ getData() {
 ```
 **The template Handlebars file for the application**
 This is where the `selectOptions` Handlebars helper actually gets used. It is taking the `optionObj` from the Handlebars rendering context, a selected argument with the current value (so that it can have the dropdown initially showing that choice), and an argument indicating that localization should be performed. The `<select name="system.mychoice">` uses the `name=""` to determine where in the data the value should be saved to (assuming the typical use-case of this defining a dropdown for an `ActorSheet`/`ItemSheet` or something similar).
-```hbs
+```handlebars
 <select name="system.mychoice">
     {{selectOptions optionObj selected=system.mychoice localize=true}}
 </select>
@@ -262,7 +262,7 @@ This is where the `selectOptions` Handlebars helper actually gets used. It is ta
 The final HTML generated will be this (assuming the initial value of system.mychoice is bravo, for illustrative purposes). It will save `alpha`, `bravo`, or `charlie` as a string to the document's data in the appropriate spot (if used in a DocumentSheet that has a document to save things to; tweak your name="" and such as-needed for other usages).
 
 **HTML**
-```
+```html
 <select name="system.mychoice">
     <option value="alpha">First Choice</option>
     <option value="bravo" selected>Second Choice</option>
