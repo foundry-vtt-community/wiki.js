@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-26T19:05:06.840Z
+date: 2024-02-26T19:05:38.864Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -156,6 +156,8 @@ The following helpers are not emitted to the foundry API page, but are neverthel
 One warning with these: Your primary application logic should still be occuring within `getData`, you should use these only sparingly.
 
 ## Specific Use Cases
+
+The following are walkthroughs of more complicated helpers or utils in the context of an overall package implementation.
 
 ### SelectOptions
 
