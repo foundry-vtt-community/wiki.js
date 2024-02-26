@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T19:53:11.759Z
+date: 2024-02-26T20:03:02.501Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -135,6 +135,10 @@ const properties = [
 // mutates the provided array
 game.i18n.sortObjects(properties, "label.long")
 ```
+
+### Hooks.once("i18ninit")
+
+This hook fires shortly after `init`, AFTER settings are registered and localizations are loaded. One common pattern is to define your package-specific `CONFIG` additions in `init` and then go back in an `i18ninit` hook and localize any labels stored in that object.
 
 ## Specific Use Cases
 
