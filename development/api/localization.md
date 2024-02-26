@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T19:52:20.745Z
+date: 2024-02-26T19:53:11.759Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -81,7 +81,7 @@ The most basic method is `game.i18n.localize`, which takes a localization string
 A more complex version of localize, this finds the localization string but also will perform substitutions for parameters in brackets. For example, the core software has `"DOCUMENT.New": "New {type}"`. If you call `game.i18n.format("DOCUMENT.New", {type: "Actor"})`, it returns `"New Actor"`. You often will want to call `localize` on your data before passing it to `format`, as the inserted data is not automatically localized.
 
 
-### {{localize}}
+### {{localize stringId}}
 
 In practice, you should rarely be directly calling `game.i18n.localize` and `game.i18n.format`; this render logic should be deferred to your handlebars template via the `localize` helper.
 
