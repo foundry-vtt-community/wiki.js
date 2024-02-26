@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-02-22T21:41:48.764Z
+date: 2024-02-26T19:57:13.587Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -73,6 +73,13 @@ Everything you need to know about using Flags to store arbitrary data on Documen
 - How to Set/Read/Unset a Flag
 - Gotchas with Objects
 
+### [Helpers and Utils](/en/development/api/helpers)
+Independently useful functions in the Foundry API
+
+#### Topics
+- foundry.utils
+- HandlebarsHelpers
+- Primitive extensions
 
 ### [Hooks](/en/development/api/hooks)
 Everying you need to know about working with and creating Hook events.
@@ -81,6 +88,14 @@ Everying you need to know about working with and creating Hook events.
 - Registering Hook Callbacks
 - Calling Hooks
 
+### [Localization](/en/development/api/localization)
+A helper class which assists with localization (i18n) and string translation
+
+#### Topics
+
+- Localizing in JS
+- Localizing in Handlebars
+- Localization best practices
 
 ### [Settings](/en/development/api/settings)
 Everything you need to know about using Settings for your package.
