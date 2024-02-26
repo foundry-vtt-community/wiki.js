@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-26T16:09:33.467Z
+date: 2024-02-26T19:05:06.840Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -61,6 +61,8 @@ Key files: `client\apps\templates.js`
 
 Foundry's [Applications](/en/development/api/application) use handlebars for rendering. To help with this, the core software has provided a number of default "Helpers" which you can reference in your `hbs` files via `{{helper arg1 option1="foo" option2=barVar}}`.
 
+You can nest handlebars helpers by using parentheses: `{{localize (concat "foo." barVar}}`.
+
 You can also invoke the HandlebarsHelpers class in your javascript; this is most useful for modules injecting dom elements as part of a render hook. One important note here is that the `options` properties *must* be passed inside of a property named `hash` inside another object, e.g.
 
 ```js
@@ -78,12 +80,31 @@ Rather than just use the common utility functions, Foundry has also directly mod
 
 ## API Interactions
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The following section highlights some important utility functions every developer should be familiar with.
 
 ### Global Methods
 
+
+
+#### foundry.utils.mergeObject()
+
 ### Handlebars Helpers
+
+Foundry's helpers augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html).
+
+#### Localize
+
+Primary article: [Localization](/en/development/api/localization)
+
+The localize helper represents two different functions; `game.i18n.localize` and `game.i18n.format`. If you only pass a single argument, `localize` is called and it's a simple translation. If you pass additional arguments, they get fed into `format`.
+
+```handlebars
+<!-- Returns "Actor" -->
+{{localize "DOCUMENT.Actor"}}
+
+<!-- Returns "Create New Actor" -->
+{{localize "DOCUMENT.Create" type="Actor"}}
+```
 
 #### SelectOptions
 
@@ -92,6 +113,47 @@ The `selectOptions` Handlebars helper is provided by Foundry for more easily bui
 The helper takes an object of values and labels (either labels to use as-is or localization strings) and generates the proper sequence of `<option>` HTML elements for them.
 
 The appropriate object for the options is often defined as a constant in the system, but can also be generated dynamically if needed. The object of choices gets passed into the template in the `getData` function of the application.
+
+#### Undocumented Helpers
+
+The following helpers are not emitted to the foundry API page, but are nevertheless very useful:
+
+```handlebars
+{{timeSince}}
+
+<!-- The following helpers return a boolean -->
+<!-- They should be used inside an #if or #unless -->
+<!-- As such they are presented to be nested, with ( ) instead of {{ }} -->
+
+<!-- Returns v1 === 2 -->
+(eq v1 v2)
+
+<!-- Returns v1 !== 2 -->
+(ne v1 v2)
+
+<!-- Returns v1 < 2 -->
+(lt v1 v2)
+
+<!-- Returns v1 > 2 -->
+(lt v1 v2)
+
+<!-- Returns v1 <= 2 -->
+(lte v1 v2)
+
+<!-- Returns v1 >= 2 -->
+(gte v1 v2)
+
+<!-- Returns !pred -->
+(not pred)
+
+<!-- Returns true if every argument is truthy  -->
+(and arg1 arg2 arg3 ...)
+
+<!-- Returns true if any argument is truthy -->
+(or arg1 arg2 arg3 ...)
+```
+
+One warning with these: Your primary application logic should still be occuring within `getData`, you should use these only sparingly.
 
 ## Specific Use Cases
 
