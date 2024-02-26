@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T18:44:20.116Z
+date: 2024-02-26T19:47:20.147Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -20,9 +20,9 @@ Localization, or i18n, is how Foundry supports playing in many different languag
 
 Localization allows Foundry to provide translated text content for UI elements on a per-application basis.
 
-The Localization class is available at `yourFoundryInstall\resources\app\client\apps\i18n.js`
-
 ## Key Concepts
+
+The Localization class is available at `yourFoundryInstall\resources\app\client\apps\i18n.js`
 
 ### Manifest Definition
 
@@ -80,6 +80,22 @@ The most basic method is `game.i18n.localize`, which takes a localization string
 
 A more complex version of localize, this finds the localization string but also will perform substitutions for parameters in brackets. For example, the core software has `"DOCUMENT.New": "New {type}"`. If you call `game.i18n.format("DOCUMENT.New", {type: "Actor"})`, it returns `"New Actor"`. You often will want to call `localize` on your data before passing it to `format`, as the inserted data is not automatically localized.
 
+
+### {{localize}}
+
+In practice, you should rarely be directly calling `game.i18n.localize` and `game.i18n.format`; this render logic should be deferred to your handlebars template via the `localize` helper.
+
+This handlebars helper performs two functions. If a single argument is passed, it simply calls `localize` on the string. If multiple arguments are passed, the rest are collated and passed as the `data` for `format`.
+
+```handlebars
+<!-- Returns "Actor" -->
+{{localize "DOCUMENT.Actor"}}
+
+<!-- Returns "Create New Actor" -->
+{{localize "DOCUMENT.Create" type="Actor"}}
+
+```
+
 ### has(stringId, fallback = true)
 
 This simple helper method returns true or false if a translation key exists. You can pass `false` as the second argument to ignore english-language fallback.
@@ -118,19 +134,6 @@ const properties = [
 
 // mutates the provided array
 game.i18n.sortObjects(properties, "label.long")
-```
-
-### {{localize}}
-
-This handlebars helper performs two functions. If a single argument is passed, it simply calls `localize` on the string. If multiple arguments are passed, the rest are collated and passed as the `data` for `format`.
-
-```handlebars
-<!-- Returns "Actor" -->
-{{localize "DOCUMENT.Actor"}}
-
-<!-- Returns "Create New Actor" -->
-{{localize "DOCUMENT.Create" type="Actor"}}
-
 ```
 
 ## Specific Use Cases
