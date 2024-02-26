@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T18:37:34.745Z
+date: 2024-02-26T18:44:20.116Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -142,6 +142,28 @@ Here are some additional things to know about localization.
 The core software provides definitions for the following languages:
 
 - English
+
+These translations can be found in `yourInstallPath\resources\app\public\lang\en.json`. They include many useful keys related to core functionality you may extending.
+
+### Document Types
+
+Translating package-provided types, e.g. `character` and `npc` as possible Actor types, is handled by a predefined structure. The pattern is `TYPES.DocumentType.type` These are used in core applications like the Create Dialog.
+
+```json
+{
+	"TYPES": {
+  	"Actor": {
+    	"character": "Character",
+      "npc": "Non-Player Character"
+    }
+    "Item": {
+  		"weapon": "Weapon",
+    	"spell": "Spell"
+  	}
+  }
+}
+
+```
 
 ### VSCode Configuration
 
