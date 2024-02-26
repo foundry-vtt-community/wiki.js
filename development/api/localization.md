@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T19:47:20.147Z
+date: 2024-02-26T19:52:20.745Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -167,6 +167,48 @@ Translating package-provided types, e.g. `character` and `npc` as possible Actor
 }
 
 ```
+
+### Word Order and Grammar
+
+Let us assume the phrase “This is an apple” as an example. In English, you might want to translate this as follows:
+
+```json
+"modulename.phrase": "This is an",
+"modulename.noun": "apple"
+```
+
+And then reuse the phrase “This is an” for other purposes. The problem is that in certain languages, this order is REVERSED. In languages such as Japanese, Turkish, Chinese, and other eastern/Asian languages it would become something akin to “An apple this is”.
+
+The correct way to do the above would be something along these lines:
+```json
+"modulename.phrase": "This is an {noun}",
+"modulename.noun": "apple"
+```
+
+This way, the translator can easily change the location of the noun before or after. For more complicated examples, there’s this wonderful part form monsterblock module about legendary action text which can serve as an example as to why having entries nested is important.
+
+```json
+"MOBLOKS5E.LegendaryText": "The {name} can take 3 legendary actions, choosing from the options below. Only one legendary action option can be used at a time and only at the end of another creature's turn. The {name} regains spent legendary actions at the start of its turn."
+```
+
+However, in the first example, you should take into consideration that some languages have gender-based nouns and noun classes. So “the word” should be split into “{the}” and “{word}” placeholders or just “{word}” and making the usage of “the” optional.
+
+
+### Give space for two-byte letters and long worded languages
+When creating containers for your UI, try to assume at least a 25~50% extra space for languages such as Japanese/Korean that use two-byte letters such as “日本” which are much bigger on the horizontal/vertical scale and easily break your carefully structured CSS settings. Or, make it so the container is scalable with the content.
+
+Of course, large modules will require their own language overrides but keeping this in mind will allow your module to be localizable with minimal effort (since not everybody understands how to make their own CSS rules).
+
+Try to merge string usage, unless it is on a different scope. Menu words like “save”, “close”, “Are you sure?” etc. always have the same meaning, therefore they should be reused whenever possible. However, use a new string if the scope is different.
+
+For example, until recently the dnd5e system used the same “Save” string both for “saving menu settings” and for “abbreviation of saving throw”, which made stuff confusing. If unsure, you should ask somebody that does localizations and they can tell you if you split them properly or not.
+
+
+### Try to avoid witty and clever messages
+This is a hard one. English wits and jokes are a massive headache to localize. Try to make your UI/settings work for standard descriptions first. However, you should feel free to express your creativity with it, just let translators know that they are free to change these expressions to match the locale of where they are going to be used. Inexperienced people will try to go for literal translations and severely slow their process, while experienced people will automatically try to adapt the phrasing. However, we are afraid to infringe on the author’s rights, especially if we get called out after the fact, so please add some messages to express your willingness to have the translation adapted rather than being literally translated.
+
+Add newly localizable strings on update notes if possible. If you would like to give more priority to localization and make localization feel welcome, it would help if you included new localizable strings in update notes. Or, express that new strings were added.
+
 
 ### VSCode Configuration
 
