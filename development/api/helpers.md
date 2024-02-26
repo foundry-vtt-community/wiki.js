@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-26T19:42:38.859Z
+date: 2024-02-26T19:58:38.849Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -172,7 +172,7 @@ The following helpers are not emitted to the foundry API page, but are neverthel
 (lt v1 v2)
 
 <!-- Returns v1 > 2 -->
-(lt v1 v2)
+(gt v1 v2)
 
 <!-- Returns v1 <= 2 -->
 (lte v1 v2)
