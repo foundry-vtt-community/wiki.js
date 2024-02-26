@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-26T19:05:38.864Z
+date: 2024-02-26T19:41:14.380Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -80,19 +80,56 @@ Rather than just use the common utility functions, Foundry has also directly mod
 
 ## API Interactions
 
-The following section highlights some important utility functions every developer should be familiar with.
+The following section highlights some important utility functions every developer should be familiar with. It is not a comprehensive list; for that, see the documentation at the top of the page. 
 
 ### Global Methods
 
+These methods are generally useful across the foundry API; functions available in `foundry.utils` are prefaced as such and should be called that way.
 
+### [fromUuid(uuid)](https://foundryvtt.com/api/modules/client.html#fromUuid) and [fromUuidSync(uuid)](https://foundryvtt.com/api/modules/client.html#fromUuidSync)
 
-#### foundry.utils.mergeObject()
+Primary article: [CompendiumCollection](/en/development/api/CompendiumCollection)
+
+These functions allow you to grab a pointer to any document. `fromUuid` is asynchronous and always returns a pointer, while `fromUuidSync` is synchronous and will only return an index entry if the document is inside a compendium. Both are very useful for tracking down things like a token actor for an unlinked token, since those are nested several layers deep.
+
+#### [foundry.utils.deepClone(object, {strict=false}={})](https://foundryvtt.com/api/modules/foundry.utils.html#deepClone)
+
+Ordinarily, javascript passes objects and arrays by *reference* rather than by *value* - if you edit that object or array, it will *mutate* the original. When this is undesired, deepClone can help, with the caveat that deepClone will *not* help on any advanced data like a Set or another class. This is an important caveat when working with a system that has implemented [Data Models](/en/development/api/DataModel) for its types: the `system` property is a class instantiation and so will still be passed by reference if you call deepClone on the parent object.
+
+Another common use for deepClone is while debugging; `console.log` on an object or array will output a reference to the object, so if updates are performed *after* the log call then those will be included when you inspect in the console. DeepClone can allow you to properly capture a snapshot.
+
+Keep in mind that this kind of operation can be performance intensive and you should carefully evaluate why you need a fresh object rather than mutating the reference.
+
+#### [foundry.utils.mergeObject(original, other, options)](https://foundryvtt.com/api/modules/foundry.utils.html#mergeObject)
+
+Foundry makes heavy use of nested object properties, and combining objects is a frequent need. One basic use of `mergeObject` is updating `CONFIG` in an init hook.
+
+```js
+// Object to add to CONFIG
+MYPACKAGE = {}
+
+Hooks.once("init", () => {
+	foundry.utils.mergeObject(CONFIG, { MYPACKAGE });
+}
+
+```
+
+#### [foundry.utils.isNewerVersion(v1, v0)](https://foundryvtt.com/api/modules/foundry.utils.html#isNewerVersion)
+
+This method is helpful when attempting to provide multi-version compatibility across core software and system updates. This supports both strings and numbers and is written with [semantic versioning](https://semver.org/) in mind.
+
+The most common targets for v1 are `game.version` and `game.system.version` for the core software and system versions respectively. It's important to check if a game system uses a leading `v` in their versioning definition so your comparisons can be accurate.
+
+#### [getDocumentClass(documentName)](https://foundryvtt.com/api/modules/client.html#getDocumentClass)
+
+This is the canonical way to find the correct class for a document after configuration has happened.
+
 
 ### Handlebars Helpers
 
-Foundry's helpers augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html).
+Foundry's helpers augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html). In addition to the helpers highlighted below, there's a number of other input helpers like numberInput, rangeInput, etc. that can simplify your rendering logic.
 
-#### Localize
+#### [localize](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#localize)
 
 Primary article: [Localization](/en/development/api/localization)
 
@@ -106,7 +143,7 @@ The localize helper represents two different functions; `game.i18n.localize` and
 {{localize "DOCUMENT.Create" type="Actor"}}
 ```
 
-#### SelectOptions
+#### [selectOptions](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#selectOptions)
 
 The `selectOptions` Handlebars helper is provided by Foundry for more easily building the list of options in a drop-down list. This is typically used in actor and item sheets, for offering the selection of one option among multiple.
 
@@ -154,6 +191,11 @@ The following helpers are not emitted to the foundry API page, but are neverthel
 ```
 
 One warning with these: Your primary application logic should still be occuring within `getData`, you should use these only sparingly.
+
+### Primitive Extensions
+
+> Stub
+> This section is a stub, you can help by contributing to it.
 
 ## Specific Use Cases
 
