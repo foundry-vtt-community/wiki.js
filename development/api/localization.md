@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T18:35:05.621Z
+date: 2024-02-26T18:37:34.745Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -11,6 +11,10 @@ dateCreated: 2024-02-26T18:35:05.621Z
 ![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
 Localization, or i18n, is how Foundry supports playing in many different languages.
+
+**Official Documentation**
+- [Knowledge Base](https://foundryvtt.com/article/localization/)
+- [API](https://foundryvtt.com/api/classes/client.Localization.html)
 
 ## Overview
 
@@ -37,7 +41,7 @@ Foundry loads localization from `.json` files provided by the core software, the
   ],
 ```
 
-The `lang` and `path` fields are mandatory; the first provides a valid [IETF language tag](https://en.wikipedia.org/wiki/IETF_language_tag), while the second provides the relative path from your package's root to find the file. By convention, packages store these files in a `lang` folder found in their root, but if you're only ever going to provide a single set of translations (e.g. it's a paid module) you can just put it in the root of your module without any problems.
+The `lang` and `path` fields are mandatory; the first provides a valid [ISO 639-2 code](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes), while the second provides the relative path from your package's root to find the file. By convention, packages store these files in a `lang` folder found in their root, but if you're only ever going to provide a single set of translations (e.g. it's a paid module) you can just put it in the root of your module without any problems.
 
 The name property is optional - if your language is among the [core supported languages](#core-supported-languages) then the name of the language is already set, and it's otherwise not really used elsewhere in the software.
 
