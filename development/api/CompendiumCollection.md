@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-02-26T20:30:00.765Z
+date: 2024-02-26T20:35:02.187Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -46,7 +46,7 @@ An array of packs, which are defined as follows:
 
 ```json
 {
-	"name": "string",
+  "name": "string",
   "label": "string",
   "banner": "string",
   "path": "string",
