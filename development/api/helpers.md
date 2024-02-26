@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-26T19:58:38.849Z
+date: 2024-02-26T19:59:57.555Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -156,7 +156,9 @@ The appropriate object for the options is often defined as a constant in the sys
 The following helpers are not emitted to the foundry API page, but are nevertheless very useful:
 
 ```handlebars
-{{timeSince}}
+<!-- Turns a timestamp into a relative string. -->
+<!-- The input can be a Date or string -->
+{{timeSince timeStamp}}
 
 <!-- The following helpers return a boolean -->
 <!-- They should be used inside an #if or #unless -->
