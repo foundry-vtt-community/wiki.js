@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-27T01:12:22.622Z
+date: 2024-02-27T01:13:13.294Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -285,11 +285,11 @@ Ultimately, the `selectOptions` helper has the potential to significantly simpli
 
 ### SignedString // NumberFormat
 
-You can display signed number that's editable as a number by combining `input type='text'`, `data-dtype='Number'`, and `Number#signedString` or `{{numberFormat value sign=true}}`. 
+You can display signed number that's editable as a number by combining `input type='text'`, `data-dtype='Number'`, and `Number#signedString()` or `{{numberFormat value sign=true}}`. 
 
 - A number input cannot display "+5", but a text input can.
 - `data-dtype='Number'` is a special property in Foundry that will cast the input from a string to a number as a FormApplication is submitted. ([FormDataExtended##castType](https://foundryvtt.com/api/classes/client.FormDataExtended.html#_castType))
-- Either in your `getData` you can use `Number#signedString` to derive the display value, or you can use the `numberFormat` helper with `sign=true`; it depends on how exactly you've structured your data which is better.
+- Either in your `getData` you can use `Number#signedString()` to derive the display value, or you can use the `numberFormat` helper with `sign=true`; it depends on how exactly you've structured your data which is better.
 
 ```handlebars
 <!-- The name and value attributes will depend on your getData and form object -->
