@@ -2,11 +2,13 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-02-27T02:11:47.082Z
+date: 2024-02-27T02:27:05.622Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
 ---
+
+![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
 Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with.
 
