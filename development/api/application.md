@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-02-27T02:10:57.385Z
+date: 2024-02-27T02:11:47.082Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -41,7 +41,7 @@ Applications are stored in the ui global namespace. So, you'll see stuff like th
 
 - Application: If truly anything beyond minimal window rendering would be an imposition
 - FormApplication: General form handling
-- DocumentSheet: If your application represents even a portion of a document.
+- DocumentSheet: If your application has an attached document and should have header buttons for thinks like grabbing the document ID/UUID as well as a configurable sheet.
 
 ### API Interactions
 The core functionality of Applications is provided by `render`, `getData`, and `activateListeners`.
