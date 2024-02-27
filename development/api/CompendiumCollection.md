@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-02-26T20:35:02.187Z
+date: 2024-02-27T21:21:41.676Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -233,7 +233,7 @@ The folders embedded into a compendium are not part of the main collection; `get
 CompendiumCollection#updateAll is an incredibly powerful tool, especially in conjunction with other methods. Here's one example that finds all documents in a specific folder and updates `system.type.value` to `"race"`; this can be useful as a script macro to batch update content. Along the way, it will console.log the name of every document it executes an update on.
 
 ```js
-const collection = game.packs.get('chaosos-5e-content.non-srd-backgrounds')
+const collection = game.packs.get('module-id.pack-id')
 
 ui.notifications.info("Beginning Update")
 await collection.updateAll(update, filter)
