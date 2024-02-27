@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-02-27T02:04:17.502Z
+date: 2024-02-27T02:10:57.385Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -16,7 +16,6 @@ Official Documentation
 - [Application](https://foundryvtt.com/api/classes/client.Application.html)
 - [FormApplication](https://foundryvtt.com/api/classes/client.FormApplication.html)
 - [DocumentSheet](https://foundryvtt.com/api/classes/client.DocumentSheet.html)
-- [ContextMenu](https://foundryvtt.com/api/classes/client.ContextMenu.html)
 
 **Legend**
 ```js
@@ -35,6 +34,14 @@ The Application class is the basic building block of Foundry's UI (which, combin
 There are two general types of Applications, popout applications and non-popout applications. Popout applications will have a header bar and be movable (all of the pop-up windows for configuration, actor/item sheets, and so on) while non-popout applications are generally fixed UI elements (such as the sidebar, the macro hotbar, the scene navigation, and so on).
 
 Applications are stored in the ui global namespace. So, you'll see stuff like the right sidebar tabs in `ui.sidebar`, the floating popout windows in `ui.windows`, the layer controls on the left in `ui.controls`, and so on.
+
+### Which class to extend
+
+`Application` subclasses are not mandatory but are intended to make things easier for you, as a developer. With the exception of `Dialog`, they're rarely directly invoked; instead, you declare a new class that *extends* one of these (sub-)classes.
+
+- Application: If truly anything beyond minimal window rendering would be an imposition
+- FormApplication: General form handling
+- DocumentSheet: If your application represents even a portion of a document.
 
 ### API Interactions
 The core functionality of Applications is provided by `render`, `getData`, and `activateListeners`.
