@@ -2,11 +2,13 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2024-02-28T15:08:04.904Z
+date: 2024-02-28T15:09:33.883Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
 ---
+
+# Installation sur Windows
 
 Il existe différentes manières de faire l'installation d'un logiciel vous allez me dire, mais je vais essayer de vous présenter ici, les deux façons de faire en fonction de votre machine.
 
