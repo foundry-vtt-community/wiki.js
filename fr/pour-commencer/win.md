@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2022-12-28T13:56:56.146Z
+date: 2024-02-28T15:07:20.393Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -118,7 +118,7 @@ Les façons de faire sont en fonction de la box internet que vous possédez, mai
 - Aller dans la partie **DHCP** de votre Box Internet
 	- Dans les **Adresses Statiques**, reservez une adresse locale de type **192.168.x.x** à l'**Adresse MAC** de votre ordinateur. [Obtenir l'adresse Mac sous Windows](https://www.commentcamarche.net/faq/10935-trouver-son-adresse-mac#obtenir-l-adresse-mac-sous-windows)
 
-### Box Internet, Ouverture du Port 30000.
+## Box Internet, Ouverture du Port 30000.
 >**<u>ATTENTION:</u>** Lorsque vous allez ouvrir des ports sur votre Box, il faudra **ABSOLUMENT** décocher **UPnP** dans l'onglet 'Administration' de Foundry.
 >*Cette option peut entrainer des dysfonctionnements et la perte de connexion sur vos parties.
 La désactivation de cette dernière est OBLIGATOIRE pour le bon fonctionnement de la VTT*.
@@ -131,7 +131,7 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 	- `rediriger le port externe 30000 vers le port de destination 30000 en TCP.`
 
 
-### Utilisateur Freebox et IPv4 Full-Stack
+## Utilisateur Freebox et IPv4 Full-Stack
 ><u>**ATTENTION:**</u> Les utilisateurs **Freebox** (**hors Freebox Delta**) devront choisir un port entre <u>**49152 et 65535**</u>. N'utilisez pas le port 49152, nous vous conseillons l'utilisation un port supérieur tel que le port **50000** ou **50100** pour Foundry VTT, fonctionnant parfaitement sur une freebox.
 {.is-warning}
 
@@ -153,7 +153,36 @@ Vous aurez ensuite un avertissement :
 
 Validez, puis redémarrez votre box 30 minutes après (ou moins parfois) et vous bénéficieriez à nouveau d’une IP fixe (à peu près) v4 full-stack.
 
-## Vous disposez d'un seul disque dur avec une seule partition.
+
+## Utilisateur Bouygues BBOX et IP dédiée.
+><u>**ATTENTION:**</u> Utilisateurs **BBOX** si sur la page de d'administration de votre box vous avez une plage définit de ports, c'est que votre adresse IP est une adresse Partagée avec d'autres utilisateurs. 
+>Pour la plupart des gens, cela n'a aucune répercution, mais pour notre cas il va falloir faire une demande d'adresse IP dédiée. Sachez que cette demande peut prendre un certain temps, entre 15min et 12h, généralement dans la nuit afin que les scripts s'executent.
+>Cela ne servira à rien de s'acharner sur un paramétrage tant que vous ne serez pas en **<u>IP Dédiée</u>** car aucun paramêtre n'est pris en compte sur une adresse IP Partagée.
+>Pour savoir si vous êtes bien en adresse **<u>IP Dédiée</u>**, le champ **<u>Plage de ports</u>** est inexistant.
+>Dernier point, il vous faudra changer le port d'utilisation de l'Accès à Distance de votre BBOX.
+{.is-warning}
+
+***Exemple d'adresse IP Partagée***
+![bbox_ip_partagee.webp](/setup/winstall/bbox_ip_partagee.webp)
+
+
+### Faire une demande dIP Dédiée
+- La demande est directement possible depuis l'espace client BBOX
+- Il faut aller sur : Mon offre > Ajouter des options > Onglet Pratique > Adressage IP Dédiée.
+- Il suffit de souscrire pour l'activer, comme mentionné.
+- Un délais autours de 15min (voir plus pour certaines personnes) entrainant un redémarrage de la BBOX automatique.
+
+- ![bbox_ip_dediee.webp](/setup/winstall/bbox_ip_dediee.webp)
+
+### Accès Distance à la BBOX
+- Avant de faire le paramétrage pour Foundry VTT et l'ouverture du port 30000, il vous faudra changer le port de l'Accès à Distance de votre BBOX car ce dernier utilise lui aussi le port **<u>30000</u>** comme le FoundryVTT.
+- Vous pouvez par exemple changer le port d'Accès à Distance **30000** par le port **40000**.
+
+![bbox_ip_bbox_acces_distant](/setup/winstall/bbox_acces_distant.webp)
+
+
+
+# Vous disposez d'un seul disque dur avec une seule partition.
 - Fermer l'application Foundry VTT
 - Grace au paramétrage de l'Explorateur Windows que nous avons fait au début de l'installation, nous avons désormais la visibilité sur les répertoires cachés.
 - Cela va nous permettre d'accéder avec simplicité au répertoire utilisateur de Foundry VTT. C'est à cet endroit que vous trouverez toutes les installations dans des répertoires portant le même nom, de vos **Modules**, de vos **Systems** et de vos **Worlds** ***(Worlds étant le répertoire ou vous retrouverez toutes les parties/campagnes que vous allez créer)***.
