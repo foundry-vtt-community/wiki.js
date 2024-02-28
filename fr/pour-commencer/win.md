@@ -2,7 +2,7 @@
 title: 1.0. Installation Windows
 description: 
 published: true
-date: 2024-02-28T15:07:20.393Z
+date: 2024-02-28T15:08:04.904Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:40:52.879Z
@@ -131,7 +131,7 @@ Pour cela, il vous faudra vous connecter à votre Box Internet.
 	- `rediriger le port externe 30000 vers le port de destination 30000 en TCP.`
 
 
-## Utilisateur Freebox et IPv4 Full-Stack
+# Utilisateur Freebox et IPv4 Full-Stack
 ><u>**ATTENTION:**</u> Les utilisateurs **Freebox** (**hors Freebox Delta**) devront choisir un port entre <u>**49152 et 65535**</u>. N'utilisez pas le port 49152, nous vous conseillons l'utilisation un port supérieur tel que le port **50000** ou **50100** pour Foundry VTT, fonctionnant parfaitement sur une freebox.
 {.is-warning}
 
@@ -154,7 +154,7 @@ Vous aurez ensuite un avertissement :
 Validez, puis redémarrez votre box 30 minutes après (ou moins parfois) et vous bénéficieriez à nouveau d’une IP fixe (à peu près) v4 full-stack.
 
 
-## Utilisateur Bouygues BBOX et IP dédiée.
+# Utilisateur Bouygues BBOX et IP dédiée.
 ><u>**ATTENTION:**</u> Utilisateurs **BBOX** si sur la page de d'administration de votre box vous avez une plage définit de ports, c'est que votre adresse IP est une adresse Partagée avec d'autres utilisateurs. 
 >Pour la plupart des gens, cela n'a aucune répercution, mais pour notre cas il va falloir faire une demande d'adresse IP dédiée. Sachez que cette demande peut prendre un certain temps, entre 15min et 12h, généralement dans la nuit afin que les scripts s'executent.
 >Cela ne servira à rien de s'acharner sur un paramétrage tant que vous ne serez pas en **<u>IP Dédiée</u>** car aucun paramêtre n'est pris en compte sur une adresse IP Partagée.
@@ -166,7 +166,7 @@ Validez, puis redémarrez votre box 30 minutes après (ou moins parfois) et vous
 ![bbox_ip_partagee.webp](/setup/winstall/bbox_ip_partagee.webp)
 
 
-### Faire une demande dIP Dédiée
+## Faire une demande dIP Dédiée
 - La demande est directement possible depuis l'espace client BBOX
 - Il faut aller sur : Mon offre > Ajouter des options > Onglet Pratique > Adressage IP Dédiée.
 - Il suffit de souscrire pour l'activer, comme mentionné.
@@ -174,7 +174,7 @@ Validez, puis redémarrez votre box 30 minutes après (ou moins parfois) et vous
 
 - ![bbox_ip_dediee.webp](/setup/winstall/bbox_ip_dediee.webp)
 
-### Accès Distance à la BBOX
+## Accès Distance à la BBOX
 - Avant de faire le paramétrage pour Foundry VTT et l'ouverture du port 30000, il vous faudra changer le port de l'Accès à Distance de votre BBOX car ce dernier utilise lui aussi le port **<u>30000</u>** comme le FoundryVTT.
 - Vous pouvez par exemple changer le port d'Accès à Distance **30000** par le port **40000**.
 
