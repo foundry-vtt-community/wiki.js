@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-14T19:57:58.228Z
+date: 2024-02-29T17:49:57.467Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -15,12 +15,14 @@ Data in Foundry progresses through many stages to be rendered in a document shee
 
 This guide will reference file locations rather than the official API docs because this is focusing on the internal workings of methods that are not well-commented. All file paths are all relative to `foundryInstallPath\resources\app`. Technically your installation just loads the general `public\scripts\foundry.js` file, but the files in `client` and `common` are smaller and easier to follow.
 
-> **Legend**
-> `Class.method` is a static method or property on the given class
-> `Class#method` is an instance method or property
-{.is-info}
-  
+**Legend**
+```
+Class.method is a static method or property on the given class
+Class#method is an instance method or property
+```  
 ## Loading from the Database
+
+The server loads up data from the various databases as part of opening a world from the setup screen, transmitting it to users who login to or refresh the `/game` page.
 
 ### Game.getData
 
@@ -71,7 +73,9 @@ Our main function of concern here is `ClientDocument#prepareData`, which is wrap
 
 On initial world load, this call is deferred until after ALL documents have been created. Afterwards, it's called for a document after it's created or updated. It can be manually called again as a side effect of other operations that wouldn't otherwise trigger it.
 
-Everything here should be performed using standard javascript assignment (`=`). Calling `update` within `prepareData` or its subsidiary methods can easily trigger an infinite loop, as that `update` call then creates another `prepareData` call.  
+Everything here should be performed using standard javascript assignment (`=`). Calling `update` within `prepareData` or its subsidiary methods can easily trigger an infinite loop, as that `update` call then creates another `prepareData` call.
+
+When the docs state that this method should be idempotent, they mean that running `prepareData` more than once should result in the same end state as running it exactly once. Side effects should be self-validating to ensure they result in a consistent state.
 
 ### prepareBaseData
 
@@ -100,6 +104,7 @@ This is the final place to manipulate a document's data in a way that is general
 
 If you have a system data model, you can run type-specific logic here. Keep in mind that you're operating within the `system` object, so you'll need to call `this.parent` to access the actual document properties, e.g. `this.parent.items` to access the items collection.
 
+
 #### ClientDocument#prepareDerivedData
 
 
@@ -114,6 +119,9 @@ Many document classes have their own native handling here that you should keep i
 * Tiles derive their dimensions
 * Users ensure they have images available.
 
+### Setup
+
+After all documents have prepared their data for the first time the `setup` hook fires.
 
 ## DocumentSheet
 
