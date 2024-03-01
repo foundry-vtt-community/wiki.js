@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-02-27T21:21:41.676Z
+date: 2024-03-01T15:35:07.805Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -133,6 +133,7 @@ When a compendium is loaded into a world, it establishes an index of all the doc
 ```js
 {
   _id: "string",
+  uuid: "string", // Special case: UUID is derived from _id, but is not actually stored
   name: "string",
   img: "string",
   type: "string",
