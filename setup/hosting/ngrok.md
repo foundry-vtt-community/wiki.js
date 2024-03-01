@@ -2,7 +2,7 @@
 title: ngrok
 description: A guide to allow your players to connect to your Foundry server
 published: true
-date: 2024-03-01T22:30:31.718Z
+date: 2024-03-01T23:19:10.443Z
 tags: hosting, networking, free, self-hosting, https, server
 editor: markdown
 dateCreated: 2024-03-01T22:30:04.263Z
@@ -19,6 +19,9 @@ Optionally, you can run ngrok as a service, so that it starts up whenever your s
 
 > ngrok can be used for free with any number of players able to connect to your Foundry server. There are some additional features you can unlock with a paid version of ngrok, such as configurable domains.
 {.is-info}
+
+> Recently ngrok has introduced bandwidth limits for the free tier. If you play a lot, have a lot of players, or have many large assets in your game, you may encounter these limits and need to upgrade to a paid plan.
+{.is-warning}
 
 In this guide, we'll assume you've installed Foundry VTT on a machine somewhere and that you do not have an ngrok account. We'll cover how to install and configure ngrok, how to have ngrok automatically start so you don't need to remember, and how to configure Foundry to use ngrok as a proxy.
 
