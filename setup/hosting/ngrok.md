@@ -2,8 +2,8 @@
 title: ngrok
 description: A guide to allow your players to connect to your Foundry server
 published: true
-date: 2024-03-01T22:30:04.263Z
-tags: hosting, networking, self-hosting, server
+date: 2024-03-01T22:30:31.718Z
+tags: hosting, networking, free, self-hosting, https, server
 editor: markdown
 dateCreated: 2024-03-01T22:30:04.263Z
 ---
