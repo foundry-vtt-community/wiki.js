@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-03-01T15:35:07.805Z
+date: 2024-03-01T20:23:06.035Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -207,15 +207,19 @@ If you need to perform updates on many documents in a collection you can use the
 
 For example, to set the image of all documents in the collection to `icons/svg/biohazard.svg`, you could run `CompendiumCollection#updateAll({img: 'icons/svg/biohazard.svg'})`. Alternatively, you can pass functions for both Transformation and Condition; the signature in each case is `(doc) => object` and `(doc) => boolean` respectively. Examples of this can be [found below](#using-updateall).
 
-### Importing documents
+### Importing and Exporting documents
 
-One other use set of methods that are important when interacting with a CompendiumCollection is moving documents between the compendium and the world. These are some of the ways to do so.
+One other use set of methods that are important when interacting with a CompendiumCollection is moving documents between the compendium and the world. These operations are always asynchronous because it involves database manipulation.
 
 #### Single Document
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+If you're working with a single document, you can use the native drag handlers or `import` button. The following information is for programmatic handling.
 
+`Document.create(data, context)` takes two important properties for `context`: 
+- `pack`: A Compendium pack identifier within which the Document should be created  
+- `parent`: A parent Document within which this Document should be embedded
+
+If `pack` is null or undefined, then the document will be created in a world collection like `game.actors`. Otherwise, it will be created in the relevant CompendiumCollection.
 
 #### Many Documents
 
@@ -229,9 +233,11 @@ The folders embedded into a compendium are not part of the main collection; `get
 
 ## Specific Use Cases
 
-### Using updateAll
+Managing compendium content across core and system updates can be tricky; here are some ways to manage that.
 
-CompendiumCollection#updateAll is an incredibly powerful tool, especially in conjunction with other methods. Here's one example that finds all documents in a specific folder and updates `system.type.value` to `"race"`; this can be useful as a script macro to batch update content. Along the way, it will console.log the name of every document it executes an update on.
+### Using `updateAll`
+
+`CompendiumCollection#updateAll` is an incredibly powerful tool, especially in conjunction with other methods. Here's one example that finds all documents in a specific folder and updates `system.type.value` to `"race"`; this can be useful as a script macro to batch update content. Along the way, it will console.log the name of every document it executes an update on.
 
 ```js
 const collection = game.packs.get('module-id.pack-id')
