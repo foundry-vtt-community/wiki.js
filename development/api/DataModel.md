@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-02-16T08:19:12.470Z
+date: 2024-03-01T18:54:54.381Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -26,11 +26,13 @@ The data model is the root of how Foundry synchronizes information between the c
 - Migrating data
 - Keeping what's saved to the database separate from what's served to developers
 
-**As a System developer**: Data models can entirely replace the type-specific field initialization of `template`json; the [dnd5e](https://github.com/foundryvtt/dnd5e/blob/master/template.json) system is an example of how much you can trim down that file, letting the data model do the rest.
+"Data Model" refers *both* to the root class that [Document](/en/development/api/document) extends, as well as the class that can be instantiated for the `system` property of eligible document types. 
+
+**As a System developer**: Data models can entirely replace the type-specific field initialization of the `template.json`; the [dnd5e](https://github.com/foundryvtt/dnd5e/blob/master/template.json) system is an example of how much you can trim down that file, letting the data model do the rest.
 
 **As a Module developer**: Data models are necessary for [Module Sub-Types](https://foundryvtt.com/article/module-sub-types/) module sub-types, where you provide your own new type of Actor, Item, JournalEntry, or other document sub-type. 
 
-### Legend
+**Legend**
 ```js
 DataModel.defineSchema // `.` indicates static method or property
 DataModel#invalid // `#` indicates instance method or property
@@ -71,7 +73,9 @@ DataField
     	EmbeddedCollectionDeltaField
 ```
 
-You don't have to use the most nested versions of a field; in fact, it's frequently beter not to — StringField works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. EmbeddedCollectionField), as they require server-side support: This isn't a clever way to do "items within items".
+You don't have to use the most nested versions of a field; in fact, it's frequently beter not to — `StringField` works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. `EmbeddedCollectionField`), as they require server-side support: This isn't a clever way to do "items within items".
+
+These fields are defined in `yourFoundryInstallPath\resources\app\common\data\fields.mjs` as well as the [official API docs](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html).
 
 #### DataField options
 
