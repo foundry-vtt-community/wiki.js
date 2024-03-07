@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2023-11-26T13:30:04.051Z
+date: 2024-03-07T14:14:55.071Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -95,6 +95,6 @@ You can of course at this point forward `30000` at your router and have your use
 
 > This assumes that the only app you want to access via 443 is this single Foundry instance. If you have multiple apps, you'd need to place a reverse proxy like Traefik between. That is out of scope for these instructions, but look for TrueCharts which includes a Traefik setup.
 
-## Dynamic DNS for CloudFlare
+## Dynamic DNS
 
-In a nutshell another custom app using `oznu/cloudflare-ddns` or `joshuaavalon/cloudflare-ddns` containers. Will document when I get around to setting that up. These are configured via ENV variables and use a CloudFlare API key.
+Use the [DDNS-Updater](https://www.truenas.com/docs/scale/scaletutorials/apps/communityapps/ddns-updater/) community app to set up dynamic DNS.
