@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-02-29T17:49:57.467Z
+date: 2024-03-08T08:36:24.463Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -34,18 +34,18 @@ The next step is `Game#initialize`, where we get that `init` Hook call and `"Fou
 
 The first of these two methods, `initializePacks`, only instantiates the indices of the packs. The second, `initializeDocuments`, loops through all of the document data stashed in `game.data`, calls the appropriate constructor, and then puts it in the appropriate world collection. For example, `game.data.actors` gets fed into `new Actor` and the result is poured inside `game.actors`. When all of these documents are loaded `"Foundry VTT | Prepared World Documents in ${Math.round(dt)}ms"` is printed to console.
 
-The following sections describe what happens inside these constructor calls.
+The following sections describe what happens inside these constructor calls as well as what happens after a database `update`.
 
 ## DataModel
 
-The top level inheritance for documents traces back to the `DataModel` class, found in `common\abstract\data.mjs`, which controls the earliest steps of processing.
+The top level inheritance for documents traces back to the [DataModel](/en/development/api/DataModel) class, found in `common\abstract\data.mjs`, which controls the earliest steps of processing. These are run 
 
 ### DataModel#\_initializeSource
 In the DataModel constructor, the data is first run through `DataModel#_initializeSource` and then stored in `_source`. This method applies `DataModel#migrateDataSafe`, `DataModel#cleanData`, and `DataModel#shimData`, ensuring the constructed document matches the specifications from its `schema` property before saving it in `_source`. After putting the cleaned up data in `_source`, `DataModel#validate` runs for one last check.
 
 ### DataModel#\_initialize
 
-This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer.
+This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer. Unlike `_initializeSource`, this runs after every document update.
 
 ## ClientDocument
 
@@ -125,7 +125,7 @@ After all documents have prepared their data for the first time the `setup` hook
 
 ## DocumentSheet
 
-The final step in the journey to displaying a document involves the application class stack. Many classes extend `DocumentSheet`, which can be found in `client\apps\form.js`. This extends `FormApplication` which extends `Application`. There's a lot of logic here that isn't relevant to our goal, which is "How does the document data we've defined in the previous sections get displayed to an end user"; drag handlers, listeners, and all the other methods are the topic of another guide.
+The final step in the journey to displaying a document involves the application class stack. Many classes extend `DocumentSheet`, which can be found in `client\apps\form.js`. This extends `FormApplication` which extends `Application`. There's a lot of logic here that isn't relevant to our goal, which is "How does the document data we've defined in the previous sections get displayed to an end user"; other features are covered in [Application](/en/development/api/application).
 
 ### Application#render
 
@@ -140,8 +140,8 @@ For a `DocumentSheet`, there are many layers of overrides to that `getData` call
 const isEditable = this.isEditable;
 {
   object: this.object,
-	options: this.options,
-	title: this.title,
+  options: this.options,
+  title: this.title,
   cssClass: isEditable ? "editable" : "locked",
   editable: isEditable,
   document: this.document,
