@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-03-14T12:01:49.067Z
+date: 2024-03-14T13:07:08.926Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -52,6 +52,14 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/green-dawn-mall
 > Aucune Automatisation sur cette fiche
 {.is-info}
 
+>** Contenu du World **
+>Fiche de Personnage
+>Règle de Jeu 
+{.is-info}
+
+
+
+
 > [MAJ] le **14/03/2024** - Fiche Fonctionnelle --
 {.is-success}
 
@@ -65,6 +73,8 @@ Création de la Fiche : https://www.youtube.com/watch?v=DVIh7zu46LM&list=PLWGjc0
 Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF5uXDc315oegriirJW5I4BY
 > Aucune Automatisation sur cette fiche
 {.is-info}
+
+
 
 > [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
 {.is-success}
