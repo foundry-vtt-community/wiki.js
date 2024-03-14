@@ -2,7 +2,7 @@
 title: Localtonet
 description: A guide to allow your players to connect to your Foundry server
 published: true
-date: 2024-03-14T13:32:20.672Z
+date: 2024-03-14T13:33:06.771Z
 tags: hosting, self-hosting, reverse proxy, tunnel, localtonet
 editor: markdown
 dateCreated: 2024-03-14T13:29:17.341Z
