@@ -2,7 +2,7 @@
 title: Localtonet
 description: A guide to allow your players to connect to your Foundry server
 published: true
-date: 2024-03-14T13:29:17.341Z
+date: 2024-03-14T13:32:20.672Z
 tags: hosting, self-hosting, reverse proxy, tunnel, localtonet
 editor: markdown
 dateCreated: 2024-03-14T13:29:17.341Z
@@ -15,7 +15,8 @@ dateCreated: 2024-03-14T13:29:17.341Z
 1.1. The first step is to [Download](https://localtonet.com/download) and install the version suitable for your OS. 
 1.2. If you haven't registered, [Register here](https://localtonet.com/Identity/Account/Register). 
 1.3. Copy your AuthToken value from the My Tokens page in the Dashboard. 
-1.4. Use the copied AuthToken value as examples given below. 
+1.4. Paste the AuthToken you copied into your localtonet application. 
+
 2. Go [HTTP Tunnel Page](https://localtonet.com/tunnel/http).
 3. Select Process Type for your needs. (Random Sub Domain, Custom Sub Domain, Custom Domain)
 4. Select the AuthToken you entered in the Localtonet App. ([My Tokens](https://localtonet.com/usertoken))
