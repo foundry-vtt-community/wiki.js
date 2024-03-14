@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-02-26T19:57:13.587Z
+date: 2024-03-14T04:48:46.938Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -154,7 +154,7 @@ A shield.io badge must be placed at the top of every page which details the "cor
 
 Name the page the same as the Class or Concept it documents. The goal is to be intuitive when scanning or searching for a specific chunk of the API a user might be having a problem with.
 
-E.g. `Document` describes Document, DocumentData, and some Collection logic. All of these feasibly fit together within one page.
+E.g. `Document` describes Document, and some Collection logic. All of these feasibly fit together within one page.
 
 #### Placement
 
