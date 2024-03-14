@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-03-14T10:29:32.651Z
+date: 2024-03-14T11:05:41.467Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -150,6 +150,9 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/nibiru
 >Aucune Automatisation sur cette fiche
 {.is-info}
 
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
 ![2022-07-13_(24).png](/sandbox/2022-07-13_(24).png)
 ![2022-07-13_(25).png](/sandbox/2022-07-13_(25).png)
 
@@ -158,8 +161,12 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/noc
 Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF77HGwPIhPzYaS5jhHwPlZj
 
 
->Automatisation sur cette fiche
+>Obsolète
 {.is-info}
+
+> Existe Actuellement un Game System pour "NOC"
+https://foundryvtt.com/packages/noc
+{.is-success}
 
 ![2022-07-13_(26).png](/sandbox/2022-07-13_(26).png)![2022-07-13_(27).png](/sandbox/2022-07-13_(27).png)![2022-07-13_(28).png](/sandbox/2022-07-13_(28).png)![2022-07-13_(29).png](/sandbox/2022-07-13_(29).png)
 
@@ -177,6 +184,9 @@ Exemple de partie : https://youtu.be/St9o22drFZ0?t=3531
 -github du projet: https://github.com/kenosama/MirJDR
 {.is-info}
 
+>Obsolète
+{.is-info}
+
 ![mirsplash.png](/sandbox/mirsplash.png)![mirintro.png](/sandbox/mirintro.png)![mirexemple1.png](/sandbox/mirexemple1.png)![mirexemple2.png](/sandbox/mirexemple2.png)
 
 ## Bloodlust Métal
@@ -190,6 +200,8 @@ Explication de la Fiche : https://youtu.be/CM_N4uqPu1o
 > MAJ de la fiche 10/08/2022: Lightbringer
 {.is-success}
 ---
+> MAJ de la fiche : A Venir par MagisterPhamtom
+{.is-success}
 
 ![2022-07-20_(10).png](/sandbox/2022-07-20_(10).png)
 
@@ -222,6 +234,10 @@ Explication de la Fiche :
 > MAJ de la fiche : MagisterPhamtom
 {.is-success}
 
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
+
 ![2022-08-11.png](/sandbox/2022-08-11.png)
 
 
@@ -235,6 +251,9 @@ Site de l'Auteur : https://xaviiiier.com/
 {.is-info}
 
 > MAJ de la fiche : MagisterPhamtom
+{.is-success}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
 {.is-success}
 
 ![capture_d'écran_2024-01-09_103250.png](/sandbox/capture_d'écran_2024-01-09_103250.png)
@@ -251,6 +270,10 @@ Explication de la Fiche : https://youtu.be/4Gy2A59WVvo
 > MAJ de la fiche : MagisterPhamtom
 {.is-success}
 
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
+
 ![capture_d'écran_2024-01-09_111135.png](/sandbox/capture_d'écran_2024-01-09_111135.png)
 ![capture_d'écran_2024-01-09_111332.png](/sandbox/capture_d'écran_2024-01-09_111332.png)
 
@@ -264,6 +287,10 @@ Explication de la Fiche : https://youtu.be/eYPZfYdTmak
 
 > MAJ de la fiche : MagisterPhamtom
 {.is-success}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
 
 ![capture_d'écran_2024-01-09_111435_copie.webp](/sandbox/capture_d'écran_2024-01-09_111435_copie.webp)
 ![capture_d'écran_2024-01-09_111611_copie.webp](/sandbox/capture_d'écran_2024-01-09_111611_copie.webp)
@@ -284,6 +311,9 @@ Explication de la Fiche : Vidéo a venir
 > MAJ de la fiche : MagisterPhamtom
 {.is-success}
 
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
 ![capture_d'écran_2024-01-09_110006.png](/sandbox/capture_d'écran_2024-01-09_110006.png)
 ![capture_d'écran_2024-01-09_110129.png](/sandbox/capture_d'écran_2024-01-09_110129.png)
 ![capture_d'écran_2024-01-09_110440.png](/sandbox/capture_d'écran_2024-01-09_110440.png)
@@ -301,6 +331,9 @@ Explication de la Fiche : https://youtu.be/jfTTkr0IzLc
 {.is-info}
 
 > MAJ de la fiche : MagisterPhamtom
+{.is-success}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
 {.is-success}
 
 ![capture_d'écran_2024-01-09_110553.png](/sandbox/capture_d'écran_2024-01-09_110553.png)
