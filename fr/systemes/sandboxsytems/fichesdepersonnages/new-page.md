@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-03-14T11:42:20.657Z
+date: 2024-03-14T12:01:49.067Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -386,3 +386,21 @@ Explication de la Fiche :
 ![capture_d'écran_2024-03-14_115559.png](/sandbox/capture_d'écran_2024-03-14_115559.png)
 ![capture_d'écran_2024-03-14_115629.png](/sandbox/capture_d'écran_2024-03-14_115629.png)
 ![capture_d'écran_2024-03-14_115653.png](/sandbox/capture_d'écran_2024-03-14_115653.png)
+
+## Elestria
+Quel est-ce jeu ? : https://www.legrog.org/informations/actualites/15-11-2022-elestria
+Explication de la Fiche : 
+
+> Automatisation sur cette fiche
+{.is-info}
+
+> MAJ de la fiche : MagisterPhamtom
+{.is-success}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
+![capture_d'écran_2024-03-14_115848.png](/sandbox/capture_d'écran_2024-03-14_115848.png)
+![capture_d'écran_2024-03-14_115955.png](/sandbox/capture_d'écran_2024-03-14_115955.png)
+![capture_d'écran_2024-03-14_120042.png](/sandbox/capture_d'écran_2024-03-14_120042.png)
+![capture_d'écran_2024-03-14_120015.png](/sandbox/capture_d'écran_2024-03-14_120015.png)
