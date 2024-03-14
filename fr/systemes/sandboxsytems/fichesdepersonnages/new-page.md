@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-01-10T11:46:26.321Z
+date: 2024-03-14T10:29:32.651Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -38,11 +38,22 @@ Sandbox Explorer
 Custom CSS (si vous voulez modifier en profondeur votre mise en page)
 {.is-success} 
 
+> Version Actuel de Sandbox : 0.14.4.4
+> Fonctionnelle avec Foundry V11 Build 315
+{.is-warning}
+
+
+
+
 # Fiches de Personnages 
 ## **Green Dawn Mall**
 Quel est-ce jeu ? : https://www.legrog.org/jeux/green-dawn-mall
 > Aucune Automatisation sur cette fiche
 {.is-info}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle --
+{.is-success}
+
 
 ![2022-07-13_copie.jpg](/sandbox/2022-07-13_copie.jpg)
 ![2022-07-13_(1).png](/sandbox/2022-07-13_(1).png)
@@ -54,6 +65,10 @@ Exemple de partie : https://www.youtube.com/playlist?list=PLWGjc0SHGgF5uXDc315oe
 > Aucune Automatisation sur cette fiche
 {.is-info}
 
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
+
 ![2022-07-13_(4).png](/sandbox/2022-07-13_(4).png)![2022-07-13_(3).png](/sandbox/2022-07-13_(3).png)
 
 
@@ -62,6 +77,9 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/dieux-ennemis
 Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF7M_u99BrAhpy9XxiOphWcA
 > Automatisation sur cette fiche
 {.is-info}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
 
 ![2022-07-13_(8).png](/sandbox/2022-07-13_(8).png)
 ![2022-07-13_(9).png](/sandbox/2022-07-13_(9).png)
@@ -76,6 +94,9 @@ Explication de la Fiche : https://youtu.be/pzE-Z6-1-_w
 > Automatisation sur cette fiche
 {.is-info}
 
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle --
+{.is-success}
+
 ![2022-07-13_(30).png](/sandbox/2022-07-13_(30).png)![2022-07-13_(31).png](/sandbox/2022-07-13_(31).png)
 ![2022-07-13_(32).png](/sandbox/2022-07-13_(32).png)![2022-07-13_(33).png](/sandbox/2022-07-13_(33).png)
 
@@ -83,16 +104,25 @@ Explication de la Fiche : https://youtu.be/pzE-Z6-1-_w
 ## Awaken
 Quel est-ce jeu ? : https://www.legrog.org/jeux/awaken
 Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF4oB0IxwpbEPZc6qq7l3z1k
-> Automatisation sur cette fiche
+> Obsolète
 {.is-info}
+
+> Existe Actuellement un Game System pour Awaken
+https://foundryvtt.com/packages/awaken
+{.is-success}
+
 
 ![2022-07-13_(5).png](/sandbox/2022-07-13_(5).png)![2022-07-13_(6).png](/sandbox/2022-07-13_(6).png)![2022-07-13_(7).png](/sandbox/2022-07-13_(7).png)
 
 ## Le Cabinet des Murmures
 Quel est-ce jeu ? : https://www.legrog.org/jeux/cabinet-des-murmures
 Création de la Fiche : https://www.youtube.com/playlist?list=PLWGjc0SHGgF64_Yv4LBnCvw9MNTt1yFjr
->Aucune Automatisation sur cette fiche
+>Obsolete
 {.is-info}
+
+> Existe Actuellement un Game System pour "Le Cabinet des Murmures"
+https://foundryvtt.com/packages/cabinet
+{.is-success}
 
 ![2022-07-13_(14).png](/sandbox/2022-07-13_(14).png)
 ![2022-07-13_(15).png](/sandbox/2022-07-13_(15).png)
@@ -107,6 +137,9 @@ Quel est-ce jeu ? : https://www.legrog.org/jeux/macadabre/macadabre-fr
 Explication de la Fiche : https://youtu.be/vtYM-Om0N04
 >Automatisation sur cette fiche
 {.is-info}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
 
 ![2022-07-13_(21).png](/sandbox/2022-07-13_(21).png)
 ![2022-07-13_(22).png](/sandbox/2022-07-13_(22).png)![2022-07-13_(23).png](/sandbox/2022-07-13_(23).png)
