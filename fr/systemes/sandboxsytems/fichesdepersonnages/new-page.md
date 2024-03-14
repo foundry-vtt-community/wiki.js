@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-03-14T11:22:00.618Z
+date: 2024-03-14T11:35:48.590Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -342,5 +342,27 @@ Explication de la Fiche : https://youtu.be/jfTTkr0IzLc
 ![capture_d'écran_2024-01-09_111030.png](/sandbox/capture_d'écran_2024-01-09_111030.png)
 ![capture_d'écran_2024-01-09_111003.png](/sandbox/capture_d'écran_2024-01-09_111003.png)
 
+## Prophecy 2nd Edition
+Quel est-ce jeu ? : https://www.legrog.org/jeux/prophecy#Prophecy+-+2%C3%A8me+%C3%A9dition
+Explication de la Fiche : 
 
+> Automatisation sur cette fiche
+{.is-info}
+
+> MAJ de la fiche : MagisterPhamtom
+{.is-success}
+
+> [MAJ] le **14/03/2024** - Fiche Fonctionnelle -
+{.is-success}
+
+![capture_d'écran_2024-03-14_114740.png](/sandbox/capture_d'écran_2024-03-14_114740.png)
+![capture_d'écran_2024-03-14_114640.png](/sandbox/capture_d'écran_2024-03-14_114640.png)
+![capture_d'écran_2024-03-14_114826.png](/sandbox/capture_d'écran_2024-03-14_114826.png)
+![capture_d'écran_2024-03-14_114806.png](/sandbox/capture_d'écran_2024-03-14_114806.png)
+![capture_d'écran_2024-03-14_114848.png](/sandbox/capture_d'écran_2024-03-14_114848.png)
+![capture_d'écran_2024-03-14_114907.png](/sandbox/capture_d'écran_2024-03-14_114907.png)
+![capture_d'écran_2024-03-14_114942.png](/sandbox/capture_d'écran_2024-03-14_114942.png)
+![capture_d'écran_2024-03-14_114959.png](/sandbox/capture_d'écran_2024-03-14_114959.png)
+![capture_d'écran_2024-03-14_115033.png](/sandbox/capture_d'écran_2024-03-14_115033.png)
+![capture_d'écran_2024-03-14_115100.png](/sandbox/capture_d'écran_2024-03-14_115100.png)
 
