@@ -2,7 +2,7 @@
 title: Sandbox Systems
 description: Sandbox System a été crée par Seregras
 published: true
-date: 2024-03-14T13:07:08.926Z
+date: 2024-03-15T18:42:27.894Z
 tags: sandbox systems
 editor: markdown
 dateCreated: 2022-07-13T10:34:42.796Z
@@ -232,9 +232,13 @@ Explication de la Fiche : https://youtu.be/jTnA-kX5nWA
 {.is-info}
 
 > MAJ de la fiche : MagisterPhamtom
+> Nouvelle Fiche de personnage [15/03/2024]
 {.is-success}
 
-![2022-08-03.png](/sandbox/2022-08-03.png)![2022-08-03_1.png](/sandbox/2022-08-03_1.png)![2022-08-03_2.png](/sandbox/2022-08-03_2.png)![2022-08-03_3.png](/sandbox/2022-08-03_3.png)![2022-08-03_4.png](/sandbox/2022-08-03_4.png)
+![capture_d'écran_2024-03-15_145516.png](/sandbox/capture_d'écran_2024-03-15_145516.png)
+![capture_d'écran_2024-03-15_145228.png](/sandbox/capture_d'écran_2024-03-15_145228.png)
+![capture_d'écran_2024-03-15_145017.png](/sandbox/capture_d'écran_2024-03-15_145017.png)
+
 
 ## Hellywood
 Quel est-ce jeu ? : https://www.legrog.org/jeux/hellywood
