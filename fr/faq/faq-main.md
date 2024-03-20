@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-02-20T06:58:35.927Z
+date: 2024-03-20T09:06:52.066Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -59,6 +59,12 @@ Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous a
 ## Je veux que tout soit accessible en permanence, comment je fais ?
 
 Cela revient à faire tourner Foundry tout le temps, et donc à laisser allumer un PC/serveur quelque part. Ce "quelque part" peut-être chez vous, ou encore sur un service d'hébergement en ligne (Oracle, AWS, TheForge). A noter que chez vous, une petit Raspberry Pi peut parfaitement se transformer un serveur Foundry pour un coût énergétique réduit.
+
+## Je joue pas en ligne, ça peut me servir quand même ?
+
+Oui, tout à fait. Etant donné que Foundry s'installe en local, on peut parfaitement utiliser Foundry pour gérer sa campagne, le suivi des PJ et des PNJs, etc, etc.
+
+Il peut de plus se transformer en assistant sur table, comme décrit ici par exemple : https://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/
 
 ## Et il faut de la bande passante ?
 
