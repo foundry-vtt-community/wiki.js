@@ -2,7 +2,7 @@
 title: Game
 description: The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience. The singleton instance of the Game class is available as the global variable game.
 published: true
-date: 2024-03-21T00:51:58.630Z
+date: 2024-03-21T00:53:38.238Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-21T00:03:08.559Z
@@ -96,33 +96,33 @@ The following properties are technically available but are not yet properly init
 #### i18nInit
 
 Technically called at the end of `Localization#initialize`, this hook is called after the the following methods:
-- `Game#registerSettings` - Registers various core settings
+- `Game#registerSettings` — Registers various core settings
 - `game.i18n` is fully set up, so `game.i18n.localize` and other similar methods are available
 
 #### setup
 
 This hook is less commonly used. It's called after the following are established
-- `Game#registerTours` - initializes `game.tours`
-- `Game#activateListeners` - initializes `game.tooltip`, `game.video`
-- `game.permissions` - loaded from world setting
-- `Game#initializePacks` - initalizes `game.packs`
-- `Game#initializeDocuments` - initializes `game.collections` and instantiates individual collections like `game.actors` all primary document types.
+- `Game#registerTours` — initializes `game.tours`
+- `Game#activateListeners` — initializes `game.tooltip`, `game.video`
+- `game.permissions` — loaded from world setting
+- `Game#initializePacks` — initalizes `game.packs`
+- `Game#initializeDocuments` — initializes `game.collections` and instantiates individual collections like `game.actors` all primary document types.
 
 The main point of the `setup` hook is it's after document data is loaded but before the canvas is initalized.
 
 #### ready
 
 The final step of Foundry's initialization process, this hook is called after all of these other methods are called.
-- `Game#initializeRTC` - initializes `game.webrtc`
-- `Game#initializeMouse` - initializes `game.mouse`
-- `Game#initializeGamepads` - initializes `game.gamepad`
-- `Game#initializeKeyboard` - initializes `game.keyboard` and `game.keybindings`
-- `Game#initializeCanvas` - initializes `game.canvas`
-- `Game#initializeUI` - Renders UI elements like the sidebar
-- `DocumentSheetConfig.initializeSheets` - processes registered sheet classes
-- `Game#activateSocketListeners` - Enables various pieces of interactivity and data-sharing that occur over sockets
-- `DocumentIndex#index` - initializes `game.documentIndex`
-- `NewUserExperience#initialize` - initializes `game.nue`
+- `Game#initializeRTC` — initializes `game.webrtc`
+- `Game#initializeMouse` — initializes `game.mouse`
+- `Game#initializeGamepads` — initializes `game.gamepad`
+- `Game#initializeKeyboard` — initializes `game.keyboard` and `game.keybindings`
+- `Game#initializeCanvas` — initializes `game.canvas`
+- `Game#initializeUI` — Renders UI elements like the sidebar
+- `DocumentSheetConfig.initializeSheets` — processes registered sheet classes
+- `Game#activateSocketListeners` — Enables various pieces of interactivity and data-sharing that occur over sockets
+- `DocumentIndex#index` — initializes `game.documentIndex`
+- `NewUserExperience#initialize` — initializes `game.nue`
 - `game.ready = true`
 
 ---
