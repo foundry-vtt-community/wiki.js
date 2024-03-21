@@ -2,7 +2,7 @@
 title: Game
 description: The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience. The singleton instance of the Game class is available as the global variable game.
 published: true
-date: 2024-03-21T00:53:38.238Z
+date: 2024-03-21T01:04:42.709Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-21T00:03:08.559Z
@@ -34,6 +34,7 @@ More information on how data is processed is available in the [From Load to Rend
 ---
 ## Key Concepts
 
+The following lays out how the `game` object acquires its properties.
 
 ### Constructor
 
@@ -44,6 +45,8 @@ The basics of how the `game` object is instantiated and its properties are fille
 	b. `Game.getData` fetches the live data from the database.
 	c. `new Game` constructs the singleton instance which is publicly stashed as `game`
 2. `Game.initialize` is called, which progressively builds out the `game` instance and calls a series of hooks.
+
+Note that the globally-available `CONST` and `CONFIG` objects are simply initialized as part of loading the relevant [javascript module files](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules). However, one should be hesitant to modify them before the `init` hook, to avoid any issues with module load order.
 
 ### Game initialization hooks
 
