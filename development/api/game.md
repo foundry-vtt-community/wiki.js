@@ -2,7 +2,7 @@
 title: Game
 description: The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience. The singleton instance of the Game class is available as the global variable game.
 published: true
-date: 2024-03-21T01:07:26.375Z
+date: 2024-03-21T01:07:39.118Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-21T00:03:08.559Z
@@ -46,7 +46,7 @@ The basics of how the `game` object is instantiated and its properties are fille
 	c. `new Game` constructs the singleton instance which is publicly stashed as `game`
 2. `Game.initialize` is called, which progressively builds out the `game` instance and calls a series of hooks.
 
-Note that the globally-available `CONST` and `CONFIG` objects are simply initialized as part of loading the relevant [javascript module files](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) (`common\constant.mjs` and `client\config.js` respectively). However, one should be hesitant to modify them before the `init` hook, to avoid any issues with module load order.
+Note that the globally-available `CONST` and `CONFIG` objects are simply initialized as part of loading the relevant [javascript module files](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) (`common\constants.mjs` and `client\config.js` respectively). However, one should be hesitant to modify them before the `init` hook, to avoid any issues with module load order.
 
 ### Game initialization hooks
 
