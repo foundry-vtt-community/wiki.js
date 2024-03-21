@@ -2,7 +2,7 @@
 title: Game
 description: The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience. The singleton instance of the Game class is available as the global variable game.
 published: true
-date: 2024-03-21T00:03:08.559Z
+date: 2024-03-21T00:05:04.190Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-21T00:03:08.559Z
@@ -65,7 +65,6 @@ This is called before any of the other processes in `Game#initialize`; as such, 
 - system
 - modules
 - workers
-- nue
 - sessionId
 - keybindings
 - socket
@@ -85,6 +84,7 @@ The following properties are technically available but are not yet properly init
 - keyboard
 - mouse
 - gamepad
+- nue
 - permissions
 - settings
 - canvas (and its global pointer `canvas`)
@@ -121,7 +121,8 @@ The final step of Foundry's initialization process, this hook is called after al
 - `Game#initializeUI` - Renders UI elements like the sidebar
 - `DocumentSheetConfig.initializeSheets` - processes registered sheet classes
 - `Game#activateSocketListeners` - Enables various pieces of interactivity and data-sharing that occur over sockets
-- `DocumentIndex#index` - initializes `game.documentIndex` 
+- `DocumentIndex#index` - initializes `game.documentIndex`
+- `NewUserExperience#initialize` - initializes `game.nue`
 
 ---
 ## API Interactions
