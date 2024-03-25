@@ -2,13 +2,20 @@
 title: 04. template.json
 description: 
 published: true
-date: 2024-02-20T02:49:47.826Z
+date: 2024-03-25T03:09:41.031Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z
 ---
 
 ![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
+
+> **Data Models**
+> The Boilerplate system uses template.json to define its actor and item structures by default, but it does include the new [System Data Model](https://foundryvtt.com/article/system-data-models/) feature as an optional setup. To use it, you'll need to run the generator CLI that's included with Boilerplate via `npm run generate` from inside the Boilerplate directory.
+>
+> This tutorial doesn't currently include documentation for data models, but that will be added here as well at a later date.
+{.is-info}
+
 
 The most straightforward way to define your system's data model for characters and items is in `template.json`. Any changes you make to this file will require you to return to Foundry's setup screen and relaunch your world. The template.json for the Boilerplate System looks like this.
 
