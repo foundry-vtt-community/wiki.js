@@ -2,7 +2,7 @@
 title: 09. Extending the Item class
 description: 
 published: true
-date: 2024-02-20T02:52:01.276Z
+date: 2024-02-20T02:52:03.044Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:12.667Z

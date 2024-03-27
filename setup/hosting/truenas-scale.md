@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2024-03-07T14:14:55.071Z
+date: 2024-03-07T14:14:58.884Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z

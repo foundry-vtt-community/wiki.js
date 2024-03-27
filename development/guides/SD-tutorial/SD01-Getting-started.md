@@ -2,7 +2,7 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2024-02-20T02:48:23.040Z
+date: 2024-02-20T02:48:24.584Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z

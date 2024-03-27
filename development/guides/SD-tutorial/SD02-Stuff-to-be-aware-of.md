@@ -2,7 +2,7 @@
 title: 02: Stuff to be aware of
 description: 
 published: true
-date: 2024-02-20T02:48:55.713Z
+date: 2024-02-20T02:48:57.318Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:29.131Z

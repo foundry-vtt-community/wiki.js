@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-03-14T05:09:06.025Z
+date: 2024-03-14T05:09:07.510Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z

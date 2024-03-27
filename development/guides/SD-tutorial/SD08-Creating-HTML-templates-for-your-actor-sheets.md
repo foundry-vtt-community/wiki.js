@@ -2,7 +2,7 @@
 title: 08. Creating HTML templates for your actor sheets
 description: 
 published: true
-date: 2024-02-20T02:50:41.421Z
+date: 2024-02-20T02:50:43.411Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:36:05.581Z
