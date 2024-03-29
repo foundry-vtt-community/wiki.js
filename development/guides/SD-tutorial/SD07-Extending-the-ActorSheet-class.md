@@ -2,7 +2,7 @@
 title: 07. Extending the ActorSheet class
 description: 
 published: true
-date: 2024-02-20T02:50:29.858Z
+date: 2024-03-29T16:17:49.832Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z
@@ -10,7 +10,7 @@ dateCreated: 2020-09-23T00:35:58.947Z
 
 ![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
-The ActorSheet class is the class associated with our actor's character sheets. Let's take a look at what Boilerplate System does:
+The ActorSheet class is the class associated with our actor's character sheets. Let's take a look at what Boilerplate System does in `/module/sheets/actor-sheet.mjs`:
 
 ## Class definition and defaultOptions()
 
