@@ -2,7 +2,7 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2024-02-20T02:48:24.584Z
+date: 2024-03-29T16:08:37.414Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
@@ -29,7 +29,7 @@ npm install
 Finally, run the generator. It will prompt you to name your system in several different ways, like `my-system` for your package name and `MySystem` for class names.
 
 ```bash
-npm run generator
+npm run generate
 ```
 
 This will create a generated version of Boilerplate that handles all of the filename and text replacements for you. The generated version will be saved to `boilerplate/build/<your-system-name` and then you can move the `<your-system-name>` directory out of the `build` directory and into your `/Data/systems` directory of your Foundry userData folder.
