@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-03-01T20:23:08.058Z
+date: 2024-03-29T06:26:37.248Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -215,17 +215,52 @@ One other use set of methods that are important when interacting with a Compendi
 
 If you're working with a single document, you can use the native drag handlers or `import` button. The following information is for programmatic handling.
 
-`Document.create(data, context)` takes two important properties for `context`: 
+**Option 1:** `Document.create`
+
+This method works in any direction: Importing and exporting. [`Document.create(data, context)`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#create) takes two important properties for `context`: 
 - `pack`: A Compendium pack identifier within which the Document should be created  
 - `parent`: A parent Document within which this Document should be embedded
 
 If `pack` is null or undefined, then the document will be created in a world collection like `game.actors`. Otherwise, it will be created in the relevant CompendiumCollection.
 
+**Option 2:** `CompendiumCollection#importDocument`
+
+This method creates a new document inside the compendium collection. [`CompendiumCollection#importDocument(document, options)`](https://foundryvtt.com/api/classes/client.CompendiumCollection.html#importDocument) adds some additional cleaning that can be configured in `options`:
+- `clearFlags`: Clear the flags object (default: `false`)
+- `clearSource`: Clear any prior sourceId flag (default: `true`)
+- `clearSort`: Clear the currently assigned sort order (default: `true`)
+- `clearFolder`: Clear the currently assigned folder (default: `false`)
+- `clearOwnership`: Clear document ownership (default: `true`)
+- `clearState`: Clear fields which store document state (default: `true`)
+- `keepId`: Retain the current Document id (default: `false`)
+
+**Option 3:** `WorldCollection#importFromCompendium`
+
+This method creates a new document inside the relevant world collection. [WorldCollection#importFromCompendium(pack, id, updateData, options)](https://foundryvtt.com/api/classes/client.WorldCollection.html#importFromCompendium) has a lot of arguments:
+- `pack` is the pointer to the pack from which to import
+- `id` is the ID of the document in the pack
+- `updateData` gets merged *after* the document is modified by `WorldCollection#fromCompendium`
+
+The `options` passed forward to `fromCompendium(options)` include
+- `addFlags`: Add flags which track the import source (default: `true`)
+- `clearFolder`: Clear the currently assigned folder (default: `false`)
+- `clearSort`: Clear the currently assigned folder and sort order (default: `true`)
+- `clearOwnership`: Clear document ownership (default: `true`)
+- `keepId`: Retain the Document id from the source Compendium (default: `false`)
+
 #### Many Documents
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+Just like a single document, there's many ways to programatically create large quantities of documents in a compendium collection or from a compendium collection.
 
+**Option 1:** `Document.createDocuments`
+
+This [small evolution from `Document.create(data, context)`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#createDocuments) takes an *array* of document data, rather than just a single document's data, for the first argument. In fact, one could simply pass an array of data to `Document.create` and it would work identically to this function call. 
+
+**Option 2:** `CompendiumCollection#importAll`
+
+This method imports all documents *from* the CompendiumCollection *to* the relevant world collection. [`CompendiumCollection#importAll(options)`](https://foundryvtt.com/api/classes/client.CompendiumCollection.html#importAll) has two bonus arguments besides the ones it forwards to `WorldCollection#fromCompendium` and `Document.createDocuments`
+- `folderId` specifies a folder to import into
+- `folderName` alternatively creates a parent folder before importing the documents with the given name.
 
 ### CompendiumCollection#folders
 
