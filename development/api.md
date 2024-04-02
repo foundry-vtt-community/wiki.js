@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-03-14T04:48:48.858Z
+date: 2024-04-02T15:25:25.535Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -73,6 +73,14 @@ Everything you need to know about using Flags to store arbitrary data on Documen
 - How to Set/Read/Unset a Flag
 - Gotchas with Objects
 
+### [Game](/en/development/api/game)
+
+Everything you need to know about the core `game` object.
+
+#### Topics
+- Client initialization
+- World collections
+
 ### [Helpers and Utils](/en/development/api/helpers)
 Independently useful functions in the Foundry API
 
@@ -96,6 +104,14 @@ A helper class which assists with localization (i18n) and string translation
 - Localizing in JS
 - Localizing in Handlebars
 - Localization best practices
+
+### [Roll](/en/development/api/roll)
+Everything you need to know about the rolls that make your game system work
+
+#### Topics
+- Roll construction
+- Roll manipulation
+- Roll evaluation
 
 ### [Settings](/en/development/api/settings)
 Everything you need to know about using Settings for your package.
