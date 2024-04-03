@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-04-02T16:42:39.584Z
+date: 2024-04-03T16:35:00.712Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -45,20 +45,63 @@ The two most important subclasses of `RollTerm` are `DiceTerm` and `NumericTerm`
 
 ---
 ## API Interactions
-> Stub
-> This section is a stub, you can help by contributing to it.
+
+The `Roll` class has a large number of instance and static functions, the use of which may not be entirely obvious.
+
+### [Roll#alter](https://foundryvtt.com/api/classes/client.Roll.html#alter)
+
+This simple instance method will multiply or add to each of the dice terms in a formula. This won't cover all possible ways you may want to modify a roll, but is an efficient one for many common use cases, such as adding or subtracting dice from a die pool.
+
+### CONFIG.Dice
+
+**CONFIG.Dice.Rolls:** Both `Roll.create` and `Roll.defaultImplementation` refer to `CONFIG.Dice.Rolls[0]`, an array that by default is just the default `Roll` class. These methods are used in a number of places:
+- Parsing the native chat command for `/r` and `/roll`
+- Inline roll parsing (e.g. `[[/r 1d6]]`)
+- `Combatant#getInitiativeRoll`
+- The default class for `RollTable#roll`
+- Internal evaluation handling for `MathTerm`, `ParentheticalTerm`, and `PoolTerm`
+
 ---
 ## Specific Use Cases
-> Stub
-> This section is a stub, you can help by contributing to it.
 
-### Modifying an existing Roll
+Here are some more specific examples and implementations involving the Roll class.
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+### Handling User-Input Formulas
+
+The Roll class isn't just useful for literal dice rolls - it's also useful as a well-scoped math engine to process user input. You can use `Roll.safeEval` to validate that a user-input formula evaluates to a clean result, including the use of external roll data. This is the type of structure that `dnd5e` uses for its custom AC formulas.
+
+```js
+// assuming you've defined `actor` and `formula` in some way
+const data = actor.getRollData()
+const updatedFormula = Roll.replaceFormulaData(formula, data, {missing: '0', warn: true})
+let result = null
+try {
+  result = Roll.safeEval(updatedFormula)
+}
+catch {
+	ui.notifications.warn("Bad formula!") // this should be more descriptive
+  // if you do this in a preUpdate operation you could `return false` here
+  // or you can do some kind of fallback `result = FALLBACK_FORMULA` kinda deal
+}
+```
+
+
+### Modifying System Rolls as a Module
+
+By default, rolls do not fire hooks - that must be handled by the system itself. One common way to do this is with a "preRoll" hook, along the lines of the following.
+```js
+const roll = new Roll(formula, data)
+if (Hooks.call("system.preRoll", roll) === false) return;
+```
+
+This constructs the roll, then *creates* a hook that modules can respond to with their own `Hooks.on("system.preRoll", (roll) => {})` invocation. Systems can any number of additional arguments to the hook - keep in mind that objects passed this way are mutable, which may or may not be desirable.
+
+To actually modify the roll as a module, the simplest option is to modify the `terms` property of the roll, then call `roll.resetFormula()`. Modifying the `terms` can either involve making specific changes (Keeping in mind that the subclass of the RollTerm matters - if you're changing a `1d6` to a `4` or visa versa, you have to swap between `DiceTerm` and `NumericTerm`. Another method is to to re-run `roll.terms = roll.constructor.parse(formula, data)`, if you want to totally rebuild things.
 
 ---
 ## Troubleshooting
+
+These are some of the common foibles and stumbling blocks when dealing with rolls.
 
 ### Asynchronicity
 
