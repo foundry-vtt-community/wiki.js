@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-04T15:35:39.562Z
+date: 2024-04-04T15:43:24.994Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -44,6 +44,8 @@ Working with data models doesn't have to be daunting - almost all of the functio
 ### \_source vs. initialized properties
 
 Data models keep two copies of their stored data; a database-friendly version under `_source`, and then the "initialized" properties at the top level of the data model. For example, `Actor#_source.folder` is a `string` that references the ID of the containing folder, while `Actor#folder` is a pointer to the folder instance. `Actor#_source.items` is an array, `Actor#items` is a `Collection`. Foundry usually intelligently handles either type when passing in data that matches either format in a `create` or `update` call, but core bugs in this handling do exist and your own code may need to keep these differences in mind.
+
+**IN GENERAL** You do not need to interact with the data in `_source` - it has NOT been put through the `prepareData` cycle. However, `DataModel#toObject()` by default returns the contents of `_source`, and even invoking `toObject(false)` will still give the data structure of source (arrays and objects instead of sets, maps, and collections) but with the post-`prepareData` values.
 
 ### The Schema
 
