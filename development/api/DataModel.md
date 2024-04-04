@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-03-13T00:56:06.754Z
+date: 2024-04-04T15:35:39.562Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -40,6 +40,10 @@ The data model is the root of how Foundry synchronizes information between the c
 ## Key Concepts
 
 Working with data models doesn't have to be daunting - almost all of the functionality is provided just by extending the appropriate `DataModel` class. (System and module developers usually want to start by extending `foundry.abstract.TypeDataModel`)
+
+### \_source vs. initialized properties
+
+Data models keep two copies of their stored data; a database-friendly version under `_source`, and then the "initialized" properties at the top level of the data model. For example, `Actor#_source.folder` is a `string` that references the ID of the containing folder, while `Actor#folder` is a pointer to the folder instance. `Actor#_source.items` is an array, `Actor#items` is a `Collection`. Foundry usually intelligently handles either type when passing in data that matches either format in a `create` or `update` call, but core bugs in this handling do exist and your own code may need to keep these differences in mind.
 
 ### The Schema
 
