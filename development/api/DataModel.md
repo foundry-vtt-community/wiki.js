@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-04T15:43:24.994Z
+date: 2024-04-10T17:22:31.286Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -78,7 +78,7 @@ DataField
     	EmbeddedCollectionDeltaField
 ```
 
-You don't have to use the most nested versions of a field; in fact, it's frequently beter not to — `StringField` works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. `EmbeddedCollectionField`), as they require server-side support: This isn't a clever way to do "items within items".
+You don't have to use the most nested versions of a field; in fact, it's frequently better not to — `StringField` works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. `EmbeddedCollectionField`), as they require server-side support: This isn't a clever way to do "items within items".
 
 These fields are defined in `yourFoundryInstallPath\resources\app\common\data\fields.mjs` as well as the [official API docs](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html).
 
@@ -120,7 +120,7 @@ The `validationError` option can be used with or without the `validate` option; 
 
 *Default*: `""` (for both) 
 
-These two fields nominally allow you to pair your UI work with the core data definitions. In practice, these are difficult to access; From an `ActorSheet`, the path would be `this.actor.system.getField('relative.object.path').label`. These otherwise aren't used anywhere natively within Foundry, not even for token bars.
+As of v11, these two fields nominally allow you to pair your UI work with the core data definitions. In practice, these are difficult to access; From an `ActorSheet`, the path would be `this.actor.system.getField('relative.object.path').label`. These otherwise aren't used anywhere natively within Foundry, not even for token bars. The upcoming V12 release has implemented more support for these fields.
 
 #### Other Options
 
@@ -130,7 +130,104 @@ DataField subclasses sometimes take additional options:
 - [StringFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#StringFieldOptions)
 - [FilePathFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#FilePathFieldOptions)
 
-#### Migrating from template.json
+### DataModel#constructor 
+
+Developers generally don't need to know the ins and outs of how `new DataModel` works. In case you do, the following summarizes the steps that occur using a `new Actor` as an example. For reference, `Actor extends ClientDocumentMixin(BaseActor)`, and `BaseActor extends Document extends DataModel`, so there are five distinct layers of inheritance happening.
+
+`Actor` doesn't override the `constructor`, but `ClientDocumentMixin` does; that calls `super` and then instantiates the `apps` record and the `_sheet` pointer. The super call skips through `BaseActor` and `Document`, as neither override the constructor, landing us in `DataModel#constructor`. Within this function several steps happen:
+
+1. `_source` is set to the return of `_initializeSource`
+2. `_configure` is called
+3. `validate` is called
+4. `_initialize` is called
+
+The following sections explain each of those function calls. Whenever a data model is *updated*, only `validate` and `_initialize` are called, as the first two define many read-only properties.
+
+#### DataModel#\_initializeSource
+
+`Actor#_initializeSource` routes to `BaseActor#_initializeSource`, which calls `super` then sets up some default `prototypeToken` properties. Otherwise, the relevant pieces are in `DataModel`, which checks that the source data provided is an object then calls `migrateDataSafe`, `cleanData`, and `shimData`. Importantly, these changes are at the lowest level of the data model and safeguard the data that is actually saved to the database.
+
+**migrateDataSafe**: An error-checking wrapper for `migrateData`, this moves old data loaded from the database into new formats (this is a synchronous operation; the moves are not saved back to the database automatically). `DataModel#migrateData` calls `this.schema.migrateSource()`, which ripples down to trigger migrations on any embedded data models such as `Actor#system`.
+
+**cleanData**: This just calls `schema.clean`, which propagates calls to all the fields to run `_cast` and `_cleanType`. For example, NumberField constricts the value to any provided `min` or `max` values, `StringField` will `trim` the input, and generally the DataFields attempt type coercion.
+
+**shimData**: This is where Foundry adds pointers like `Actor#data` pointing to `Actor#system` with their deprecation warnings getter/setters.
+
+#### DataModel#\_configure
+
+This function defines all sorts of additional pointers and getters necessary to make the data model function. Data Model does not natively do anything here, it's strictly for subclasses. `Actor#_configure` calls `super` then defines its `_dependentTokens`; in `Document#_configure`, the document's collection relationships are setup, both where it can be found as well as any embedded collections it might have.
+
+#### DataModel#validate
+
+This method is similar to `cleanData` but is more thorough, allowing things like joint validation rules where multiple fields are considered together. A simple example of this is folders checking that their parent pointer is not pointing to themselves, checking the `folder` property against the `_id` property.
+
+#### DataModel#\_initialize
+
+This method copies data from the `_source` field to the top level of the data model. For `Actor`, the soonest layer of inheritance is `ClientDocument`, which calls `super` before kicking off the `prepareData` cycle; for more on that, check out [From Load to Render](/en/development/guides/from-load-to-render). 
+
+---
+## API Interactions
+
+Beyond their class definitions, there's a few other things to know with data models. More interactions can be found on the [Document](/en/development/api/document) page.
+
+### Registering Data Models
+
+Document data models MUST be registered in an init hook.
+
+```js
+// If we had properly exported all of our classes from the full example earlier
+import { PawnData, HeroData, VillainData } from "./module/data.mjs"
+
+Hooks.once("init", () => {
+  // Systems can just use direct assignment here
+  // since they'll be merging into an empty object
+  // But it's generally safer to just use mergeObject when possible
+  foundry.utils.mergeObject(CONFIG.Actor.dataModels, {
+    // The keys are the types defined in our template.json
+    pawn: PawnData,
+    hero: HeroData,
+    villain: VillainData
+  })
+  // You can repeat with other document types, e.g. CONFIG.Item.dataModels
+})
+```
+
+### Examples of DataField usage
+
+The various data fields may be a bit obscure, so here are a few examples for each field of where it's used
+
+- SchemaField: `ChatMessage#speaker`, `Scene#grid`
+- BooleanField: `ActiveEffect#disabled`, `Card#drawn`
+- NumberField: `Combatant#initiative`, `Token#width`
+- StringField: `Actor#name`, `Actor#type`
+- ObjectField: `Actor#flags`
+- ArrayField: `ActiveEffect#changes`, `Card#faces`
+- SetField: `ActiveEffect#statuses`, `BasePackage#esmodules`
+- EmbeddedDataField: `Actor#prototypeToken`, `Drawing#shape`
+- EmbeddedCollectionField: `Actor#items`, `Combat#combatants`
+- EmbeddedCollectionDeltaField: `ActorDelta#items`, `ActorDelta#effects`
+- EmbeddedDocumentField: `Token#delta` (Technically an instance of `ActorDeltaField`, which extends EmbeddedDocumentField)
+- DocumentIdField: `Actor#_id`, `Item#_id`
+- ForeignDocumentField: `Actor#folder`, `User#character`
+- ColorField: `Folder#color`, `ActiveEffect#tint`
+- FilePathField: `Actor#img`, `ChatMessage#sound`
+- AngleField: `Drawing#rotation`, `MeasuredTemplate#direction`
+- AlphaField: `AmbientSound#volume`, `Token#alpha`
+- DocumentOwnershipField: `Actor#ownership`, `Item#ownership`
+- JSONField: `Setting#value`
+- HTMLField: `ActiveEffect#description`, `ChatMessage#content`
+- IntegerSortField: `Actor#sort`, `Item#sort`
+- DocumentStatsField: `Actor#_stats`, `Item#_stats`
+- TypeDataField: `Actor#system`, `Item#system`
+
+`EmbeddedCollectionField`, `EmbeddedCollectionDeltaField`, and `EmbeddedDocumentField` are for use by Foundry staff only. 
+
+---
+## Specific Use Cases
+
+There's lots of great benefits of working with data models
+
+### Migrating from template.json
 
 Classically, Foundry uses the `templates` object to define shared properties. `DataModel.defineSchema()` allows you to use standard [object-oriented principles](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming) to define inheritance. 
 
@@ -261,72 +358,6 @@ class VillainData extends CharacterData {
 }
 ```
 
-### DataModel#constructor 
-
-Developers generally don't need to know the ins and outs of how `new DataModel` works. In case you do, the following summarizes the steps that occur using a `new Actor` as an example. For reference, `Actor extends ClientDocumentMixin(BaseActor)`, and `BaseActor extends Document extends DataModel`, so there are five distinct layers of inheritance happening.
-
-`Actor` doesn't override the `constructor`, but `ClientDocumentMixin` does; that calls `super` and then instantiates the `apps` record and the `_sheet` pointer. The super call skips through `BaseActor` and `Document`, as neither override the constructor, landing us in `DataModel#constructor`. Within this function several steps happen:
-
-1. `_source` is set to the return of `_initializeSource`
-2. `_configure` is called
-3. `validate` is called
-4. `_initialize` is called
-
-The following sections explain each of those function calls. Whenever a data model is *updated*, only `validate` and `_initialize` are called, as the first two define many read-only properties.
-
-#### DataModel#\_initializeSource
-
-`Actor#_initializeSource` routes to `BaseActor#_initializeSource`, which calls `super` then sets up some default `prototypeToken` properties. Otherwise, the relevant pieces are in `DataModel`, which checks that the source data provided is an object then calls `migrateDataSafe`, `cleanData`, and `shimData`. Importantly, these changes are at the lowest level of the data model and safeguard the data that is actually saved to the database.
-
-**migrateDataSafe**: An error-checking wrapper for `migrateData`, this moves old data loaded from the database into new formats (this is a synchronous operation; the moves are not saved back to the database automatically). `DataModel#migrateData` calls `this.schema.migrateSource()`, which ripples down to trigger migrations on any embedded data models such as `Actor#system`.
-
-**cleanData**: This just calls `schema.clean`, which propagates calls to all the fields to run `_cast` and `_cleanType`. For example, NumberField constricts the value to any provided `min` or `max` values, `StringField` will `trim` the input, and generally the DataFields attempt type coercion.
-
-**shimData**: This is where Foundry adds pointers like `Actor#data` pointing to `Actor#system` with their deprecation warnings getter/setters.
-
-#### DataModel#\_configure
-
-This function defines all sorts of additional pointers and getters necessary to make the data model function. Data Model does not natively do anything here, it's strictly for subclasses. `Actor#_configure` calls `super` then defines its `_dependentTokens`; in `Document#_configure`, the document's collection relationships are setup, both where it can be found as well as any embedded collections it might have.
-
-#### DataModel#validate
-
-This method is similar to `cleanData` but is more thorough, allowing things like joint validation rules where multiple fields are considered together. A simple example of this is folders checking that their parent pointer is not pointing to themselves, checking the `folder` property against the `_id` property.
-
-#### DataModel#\_initialize
-
-This method copies data from the `_source` field to the top level of the data model. For `Actor`, the soonest layer of inheritance is `ClientDocument`, which calls `super` before kicking off the `prepareData` cycle; for more on that, check out [From Load to Render](/en/development/guides/from-load-to-render). 
-
----
-## API Interactions
-
-Beyond their class definitions, there's a few other things to know with data models. More interactions can be found on the [Document](/en/development/api/document) page.
-
-### Registering Data Models
-
-Document data models MUST be registered in an init hook.
-
-```js
-// If we had properly exported all of our classes from the full example earlier
-import { PawnData, HeroData, VillainData } from "./module/data.mjs"
-
-Hooks.once("init", () => {
-  // Systems can just use direct assignment here
-  // since they'll be merging into an empty object
-  // But it's generally safer to just use mergeObject when possible
-  foundry.utils.mergeObject(CONFIG.Actor.dataModels, {
-    // The keys are the types defined in our template.json
-    pawn: PawnData,
-    hero: HeroData,
-    villain: VillainData
-  })
-  // You can repeat with other document types, e.g. CONFIG.Item.dataModels
-})
-```
-
----
-## Specific Use Cases
-
-There's lots of great benefits of working with data models
 
 ### Type specific logic
 
