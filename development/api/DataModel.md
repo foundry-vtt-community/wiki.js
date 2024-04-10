@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-10T17:22:31.286Z
+date: 2024-04-10T17:22:51.654Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -194,7 +194,7 @@ Hooks.once("init", () => {
 
 ### Examples of DataField usage
 
-The various data fields may be a bit obscure, so here are a few examples for each field of where it's used
+The various data fields may be a bit obscure, so here are a few examples for each field of where they're
 
 - SchemaField: `ChatMessage#speaker`, `Scene#grid`
 - BooleanField: `ActiveEffect#disabled`, `Card#drawn`
