@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2024-01-17T04:18:56.418Z
+date: 2024-04-16T08:33:24.787Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -254,7 +254,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 ## Download, Install, and Test Foundry
 
-<a id="C1" href="#C1">C1.</a> Login to [FoundrVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
+<a id="C1" href="#C1">C1.</a> Login to [FoundryVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
 <a id="C2" href="#C2">C2.</a>	Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
