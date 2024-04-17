@@ -2,7 +2,7 @@
 title: 04. template.json
 description: 
 published: true
-date: 2024-03-25T03:09:44.813Z
+date: 2024-04-17T12:50:25.255Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:41.059Z
@@ -11,7 +11,9 @@ dateCreated: 2020-09-23T00:35:41.059Z
 ![Foundry v11 Compatible](https://img.shields.io/badge/Foundry-v11%20Compatible-blue)
 
 > **Data Models**
-> The Boilerplate system uses template.json to define its actor and item structures by default, but it does include the new [System Data Model](https://foundryvtt.com/article/system-data-models/) feature as an optional setup. To use it, you'll need to run the generator CLI that's included with Boilerplate via `npm run generate` from inside the Boilerplate directory.
+> The Boilerplate system uses template.json to define its actor and item structures by default, but it does include the new [System Data Model](https://foundryvtt.com/article/system-data-models/) feature as an optional setup. To use it, you'll need to run the generator CLI that's included with Boilerplate via `npm run generate` from inside the Boilerplate directory. 
+> 
+> Additional information and context on the System Data Model can be found in this wiki [here](https://foundryvtt.wiki/en/development/api/DataModel).
 >
 > This tutorial doesn't currently include documentation for data models, but that will be added here as well at a later date.
 {.is-info}
