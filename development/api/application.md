@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-18T14:32:50.642Z
+date: 2024-04-18T16:06:05.829Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -81,7 +81,28 @@ The `activateListeners` method handles binding JS listeners to the HTML of the a
 
 This is where any click handlers or other interactivity should be implemented.
 
+### ContextMenu
+
+API Reference
+- [ContextMenu](https://foundryvtt.com/api/classes/client.ContextMenu.html)
+- [ContextMenuEntry](https://foundryvtt.com/api/interfaces/client.ContextMenuEntry.html)
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+### DragDrop
+
+API Reference
+- [DragDrop](https://foundryvtt.com/api/classes/client.DragDrop.html)
+- [DragDropConfiguration](https://foundryvtt.com/api/interfaces/client.DragDropConfiguration.html)
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ### FormDataExtended
+
+API Reference
+- [FormDataExtended](https://foundryvtt.com/api/classes/client.FormDataExtended.html)
 
 When working with a `FormApplication`, you can cast the output of `input` elements by adding a `data-dtype` property. In modern foundry this is somewhat redundant if you're using a [Data Model](/en/development/api/DataModel), but it can still be useful for more advanced techniques. 
 
@@ -94,11 +115,24 @@ Valid choices include:
 
 It will also generally check for `window[dataType] instanceof Function`, so you can globally define a type by globally defining a function used to cast that type.
 
+### SearchFilter
+
+API Reference
+- [SearchFilter](https://foundryvtt.com/api/classes/client.SearchFilter.html)
+- [SearchFilterConfiguration](https://foundryvtt.com/api/interfaces/client.SearchFilterConfiguration.html)
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ### Tabs
 
-The base Foundry application provides [handling for tabs](https://foundryvtt.com/api/classes/client.Tabs.html). This requires handling in both the Application's `defaultOptions` as well as your .hbs file.
+API Reference
+- [Tabs](https://foundryvtt.com/api/classes/client.Tabs.html)
+- [TabsConfiguration](https://foundryvtt.com/api/interfaces/client.TabsConfiguration.html)
 
-In the application class, you need to provide a `tabs` property structured as an array of [TabsConfiguration](https://foundryvtt.com/api/interfaces/client.TabsConfiguration.html) objects. For example:
+The base Foundry application provides handling for tabs. This requires handling in both the Application's `defaultOptions` as well as your .hbs file.
+
+In the application class, you need to provide a `tabs` property structured as an array of TabsConfiguration objects. For example:
 ```js
 MyApplicationClass extends Application {
   /** @override */
@@ -142,7 +176,24 @@ Document classes each have an `apps` property which stores an object of Applicat
 
 DocumentSheet automatically adds itself to the apps when it initially renders, which lets the document easily automatically trigger re-rendering the sheet to reflect new changes in realtime. However, applications can add themselves to a document's apps as-needed, which can be used for any non-DocumentSheet Application subclasses which need to display data about a document and keep the display properly updated.
 
-## Troubleshooting
+### Text Enrichment
+
+API Reference
+- [TextEditor.enrichHTML](https://foundryvtt.com/api/classes/client.TextEditor.html#enrichHTML)
 
 > Stub
 > This section is a stub, you can help by contributing to it.
+
+## Troubleshooting
+
+Below are some of the common foibles in Foundry application development
+
+### The data provided to my Handlebars template isn't what I expect
+
+First, review the above section on `Application#getData`. Second, read [this guide](https://foundryvtt.wiki/en/development/guides/from-load-to-render) on how data flows through the various classes.
+
+### Arrays in Forms
+
+Foundry only natively handles arrays of primitives in its forms - that is, an array of strings, numbers, or booleans. If you have an array of objects, you have two options
+- Override the `_getSubmitData` method, calling `super` then modifying the `data` it returns.
+- Implement a [DataModel](/en/development/api/DataModel) for whatever you're returning, allowing the casting in `ArrayField` to handle the transformation.
