@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-02-27T02:27:07.703Z
+date: 2024-04-18T14:32:50.642Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -10,7 +10,7 @@ dateCreated: 2024-02-13T19:36:31.269Z
 
 ![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
-Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with.
+Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. Applications use Handlebars for rendering - ApplicationV2, which is coming in Foundry V12, is a major rework that makes using alternative engines more feasible.
 
 The [Dialog](/en/development/api/dialog) subclass has its own page detailing its specific options because its configuration is so specific.
 
@@ -18,6 +18,8 @@ Official Documentation
 - [Application](https://foundryvtt.com/api/classes/client.Application.html)
 - [FormApplication](https://foundryvtt.com/api/classes/client.FormApplication.html)
 - [DocumentSheet](https://foundryvtt.com/api/classes/client.DocumentSheet.html)
+- [Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
+- [Foundry Handlebar Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
 
 **Legend**
 ```js
@@ -27,7 +29,7 @@ Application#getData // `#` indicates instance method or property
 
 ## Overview
 
-The Application class is the basic building block of Foundry's UI (which, combined with the canvas that represents a scene, makes up everything you see in Foundry). At its fundamental level, it's an HTML element that is positioned somewhere in the browser window.
+The Application class is the basic building block of Foundry's UI (which, combined with the canvas that represents a scene, makes up everything you see in Foundry). At its fundamental level, it's an HTML element that is positioned somewhere in the browser window. 
 
 `Application` and its subclasses are stored in `yourFoundryInstall\resources\app\client\apps`
 
@@ -45,7 +47,7 @@ Applications are stored in the ui global namespace. So, you'll see stuff like th
 - FormApplication: General form handling
 - DocumentSheet: If your application has an attached document and should have header buttons for thinks like grabbing the document ID/UUID as well as a configurable sheet.
 
-### API Interactions
+## API Interactions
 The core functionality of Applications is provided by `render`, `getData`, and `activateListeners`.
 
 ### `Application#render`
@@ -92,7 +94,48 @@ Valid choices include:
 
 It will also generally check for `window[dataType] instanceof Function`, so you can globally define a type by globally defining a function used to cast that type.
 
+### Tabs
+
+The base Foundry application provides [handling for tabs](https://foundryvtt.com/api/classes/client.Tabs.html). This requires handling in both the Application's `defaultOptions` as well as your .hbs file.
+
+In the application class, you need to provide a `tabs` property structured as an array of [TabsConfiguration](https://foundryvtt.com/api/interfaces/client.TabsConfiguration.html) objects. For example:
+```js
+MyApplicationClass extends Application {
+  /** @override */
+  static get defaultOptions() {
+    foundry.utils.mergeObject(super.defaultOptions, {
+      tabs: [
+       {
+          group: 'primary-tabs',
+          navSelector: '.tabs',
+          contentSelector: '.content',
+          initial: 'tab1',
+        },
+      ]
+    }
+  }
+}
+```
+
+Then in your template `.hbs` file:
+
+```handlebars
+<nav class="tabs" data-group="primary-tabs">
+  <a class="item" data-tab="tab1" data-group="primary-tabs">Tab 1</li>
+  <a class="item" data-tab="tab2" data-group="primary-tabs">Tab 2</li>
+</nav>
+
+<section class="content">
+  <div class="tab" data-tab="tab1" data-group="primary-tabs">Content 1</div>
+  <div class="tab" data-tab="tab2" data-group="primary-tabs">Content 2</div>
+</section>
+```
+
+The `group` property is optional if you only intend to have one set of tabs, but if you plan to have two or more you must include the `group` property on each TabsConfiguration object.
+
 ## Specific Use Cases
+
+Here are some tips and tricks when working with Applications.
 
 ### Automatic re-rendering on Document updates
 Document classes each have an `apps` property which stores an object of Application references. This object is iterated through and each app is re-rendered whenever the Document changes, so that any open windows will reflect the new state of the document.
