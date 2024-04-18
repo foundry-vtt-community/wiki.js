@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-11T00:36:15.660Z
+date: 2024-04-18T00:39:18.376Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -78,11 +78,15 @@ DataField
     	EmbeddedCollectionDeltaField
 ```
 
-You don't have to use the most nested versions of a field; in fact, it's frequently better not to — `StringField` works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. `EmbeddedCollectionField`), as they require server-side support: This isn't a clever way to do "items within items".
+You don't have to use the most nested versions of a field; in fact, it's frequently better not to — `StringField` works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. `EmbeddedCollectionField` and `EmbeddedDocumentField`), as they require server-side support: This isn't a clever way to do "items within items".
 
 These fields are defined in `yourFoundryInstallPath\resources\app\common\data\fields.mjs` as well as the [official API docs](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html).
 
-#### DataField options
+#### SchemaField vs. EmbeddedDataField
+
+Both of these fields serve a similar purpose: They allow you to nest properties, so you can have `doc.system.myProp.fieldOne` and `doc.system.myProp.fieldTwo`. The difference is that `SchemaField` creates a nested object, while `EmbeddedDataField` is a full class instance. This can be useful if you want to have getters or other functions nested deeper than `doc.system.myFunc` - you could have  `doc.system.embedField.myFunc`. The downside is certain interactions, such as the javascript spread operator `{ ... }`, may not work as expected because it is a full class instance rather than a simple object.
+
+### DataField options
 
 There's quite a few options you can pass to DataField, which are officially documented [here](https://foundryvtt.com/api/interfaces/foundry.data.fields.DataFieldOptions.html). However, the most common change in a subclass is its handling of the options and what the defaults are. 
 
