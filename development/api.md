@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-04-02T15:25:25.535Z
+date: 2024-04-19T21:37:30.356Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -151,14 +151,15 @@ Some guiding questions to ask:
 
 #### Examples of Credible External Sources
 
-- foundryvtt.com/api Official Documentation
-- foundryvtt.com Knowledge Base
+- [Official Documentation](foundryvtt.com/api)
+- [Knowledge Base](foundryvtt.com/kb)
+- [Release Notes](https://foundryvtt.com/releases/)
 
 ### Relevant Version Annotation
 
 A shield.io badge must be placed at the top of every page which details the "core version we know this document is up to date as of." This allows readers and contributors alike to know at a glance if the document they're looking at is potentially out of date.
 
-![Up to date as of v8](https://img.shields.io/badge/FoundryVTT-v8-informational)
+![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
 ```
 ![Up to date as of <VERSION>](https://img.shields.io/badge/FoundryVTT-v<VERSION>-informational)
