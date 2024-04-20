@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-04-20T15:05:20.330Z
+date: 2024-04-20T15:18:02.058Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -311,6 +311,9 @@ const isV11 = foundry.utils.isNewerVersion(12, game.release.generation)
 
 // `Game#version` returns the full version string, e.g. 11.315
 const isV12dev2 = !foundry.utils.isNewerVersion("12.319", game.version)
+
+// You also don't *have* to use the helper function when you just need the major version
+const isV12 = game.release.generation >= 12
 ```
 
 ## Troubleshooting
