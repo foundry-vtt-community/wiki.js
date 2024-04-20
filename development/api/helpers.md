@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-02-27T01:13:15.396Z
+date: 2024-04-20T15:00:39.763Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -299,6 +299,18 @@ You can display signed number that's editable as a number by combining `input ty
 	name='system.attribute.mod'
 	value={{numberFormat system.attribute.mod sign=true}}
 />
+```
+
+### Branching version logic
+
+Supporting multiple versions of Foundry in the same codebase can be tricky when there's breaking API changes. One way to address this is `foundry.utils.isNewerVersion`.
+
+```js
+// `Game#version` returns the full version string, e.g. 11.315
+const newVersion = foundry.utils.isNewerVersion("12", game.version)
+
+// `Game#release.generation` returns just the major version number, e.g. 11
+const newGeneration = foundry.utils.isNewerVersion(12, game.release.generation)
 ```
 
 ## Troubleshooting
