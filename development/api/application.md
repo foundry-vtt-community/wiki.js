@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-18T16:06:05.829Z
+date: 2024-04-21T03:35:28.354Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -33,6 +33,7 @@ The Application class is the basic building block of Foundry's UI (which, combin
 
 `Application` and its subclasses are stored in `yourFoundryInstall\resources\app\client\apps`
 
+---
 ## Key Concepts
 
 There are two general types of Applications, popout applications and non-popout applications. Popout applications will have a header bar and be movable (all of the pop-up windows for configuration, actor/item sheets, and so on) while non-popout applications are generally fixed UI elements (such as the sidebar, the macro hotbar, the scene navigation, and so on).
@@ -47,6 +48,7 @@ Applications are stored in the ui global namespace. So, you'll see stuff like th
 - FormApplication: General form handling
 - DocumentSheet: If your application has an attached document and should have header buttons for thinks like grabbing the document ID/UUID as well as a configurable sheet.
 
+---
 ## API Interactions
 The core functionality of Applications is provided by `render`, `getData`, and `activateListeners`.
 
@@ -167,6 +169,7 @@ Then in your template `.hbs` file:
 
 The `group` property is optional if you only intend to have one set of tabs, but if you plan to have two or more you must include the `group` property on each TabsConfiguration object.
 
+---
 ## Specific Use Cases
 
 Here are some tips and tricks when working with Applications.
@@ -184,6 +187,7 @@ API Reference
 > Stub
 > This section is a stub, you can help by contributing to it.
 
+---
 ## Troubleshooting
 
 Below are some of the common foibles in Foundry application development
