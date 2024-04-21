@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-18T00:39:18.376Z
+date: 2024-04-21T01:03:43.859Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -10,7 +10,7 @@ dateCreated: 2024-02-15T18:00:00.416Z
 
 ![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
-"Data Model" refers *both* to the root class that [Document](/en/development/api/document) extends, as well as the `ypeDataModel` class that can be instantiated for the `system` property of eligible document types. 
+"Data Model" refers *both* to the root class that [Document](/en/development/api/document) extends, as well as the `TypeDataModel` class that can be instantiated for the `system` property of eligible document types. 
 
 Official documentation
 - [v10 Data Model](https://foundryvtt.com/article/v10-data-model/)
