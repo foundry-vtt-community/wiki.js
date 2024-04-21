@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-04-19T21:37:30.356Z
+date: 2024-04-21T00:00:32.021Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -39,6 +39,9 @@ Compendiums and how data is stored
 - The FoundryVTT CLI
 
 ### [Data Model](/en/development/api/DataModel)
+The abstract base class which defines the data schema contained within a Document.
+
+#### Topics
 - Data Model Schema
 - Registering Data models
 - TypeDataModel
@@ -54,7 +57,7 @@ API documentation for the Dialog UI class used to inform and prompt users with s
 
 
 ### [Document](/en/development/api/document)
-Everything you need to know about the data architecture of Foundry VTT Core (aka Documents).
+An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by \_id.
 
 #### Topics
 - Primary vs Embedded Documents
