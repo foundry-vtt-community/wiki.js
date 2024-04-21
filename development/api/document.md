@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-02-16T05:18:08.754Z
+date: 2024-04-21T01:02:53.121Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -12,24 +12,32 @@ dateCreated: 2021-11-15T16:03:42.636Z
 
 ![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
-## Overview
+If you're dealing with the underlying data of the Foundry API, you almost certainly are going to need to work with Documents.
 
-Much of this article is copied from the [official API Docs](https://foundryvtt.com/api/#documents-and-data). The official api documentation has a list of all Documents, their Data schemas, and other classes related to those documents.
+Official Documentation
+- [API frontpage subsection](https://foundryvtt.com/api/#documents-and-data)
+- [Document](https://foundryvtt.com/api/classes/foundry.abstract.Document.html)
 
-> Data in Foundry Virtual Tabletop is organized around the concept of Documents. Each document represents a single coherent piece of data which represents a specific object within the framework. The term Document refers to both the definition of a specific type of data (the Document class) as well as a uniquely identified instance of that data type (an instance of that class).
-
-Everything that is stored in the database is a `Document`. Some Documents are EmbeddedDocuments which live fully inside a parent document (e.g. Items in Actors or Tiles in Scenes). Documents do not handle rendering; that is the job of Applications and the Canvas.
-
-### Legend
+**Legend**
 
 ```javascript
 Document.metadata // `.` indicates static method or property
 Document#update // `#` indicates instance method or property
 ```
 
+## Overview
+
+Everything that is stored in the database is a `Document`. Some Documents are Embedded Documents which live fully inside a parent document (e.g. Items in Actors or Tiles in Scenes). Embedding can be multiply nested - a `Scene` could have a `TokenDocument` which has an `Actor` that has an `Item` that has an `ActiveEffect`. All layers of embedding are collectively known as "Descendant Documents".
+
+Documents do not handle rendering; that is the job of [Applications](/en/development/api/application) and the Canvas. Many document lifecycle events impact rendering, but the actual internal functions of those renders to translate the data changes to visual changes are handled by the aforementioned sections of the API.
+
+The official api documentation has a list of all Documents, their Data schemas, and other classes related to those documents. Document schemas are tracked in the "base" class, e.g. the valid data for an [Actor](https://foundryvtt.com/api/classes/client.Actor.html) document is derived from [`BaseActor.defineSchema`](https://foundryvtt.com/api/classes/foundry.documents.BaseActor.html#defineSchema).
+
 ---
 
 ## Key Concepts
+
+These are the most important thing to know with actors.
 
 ### Document Storage
 
@@ -93,6 +101,34 @@ Embedded Documents are document types which only exist within a Collection on a 
 - [Journal Entry Pages](https://foundryvtt.com/api/classes/client.JournalEntryPage.html) embed in Journal Entries
 - [Playlist Sounds](https://foundryvtt.com/api/classes/client.PlaylistSound.html) embed in Playlists
 - [Table Results](https://foundryvtt.com/api/classes/client.TableResult.html) embed in Rollable Tables
+
+### Inheritance
+
+Documents serve as the core of Foundry's data structure, but are not themselves the base class - instead, `class Document extends DataModel`. (Learn more about the [DataModel](/en/development/api/DataModel) class). What you need to know from the DataModel is that the  properties on a document are strictly controlled - you can't just add new ones wherever and hope it will save to the database. The two areas system and module developers *do* have control over are the `flags` field, which is present on all documents, and the `system` field, which is present on only a subset of document types.
+
+Another key piece of inheritance in every Document is `ClientDocumentMixin`, which due to the limitations of the auto-generated JSDoc is not documented on the official API website, and actually breaks most of the inheritance tracking. Despite this, you can still see the function for yourself at `yourFoundryInstallPath\resources\app\client\data\abstract\client-document.js` in your local installation.
+
+Some important properties introduced in ClientDocumentMixin:
+
+**Getters**
+- `collection`
+- `compendium`
+- `isOwner`
+- `hasPlayerOwner`
+- `limited`
+- `link`
+- `permission`
+- `sheet`
+- `uuid`
+- `visible`
+
+**Methods**
+- `prepareData`
+- `render`
+- `getRelativeUUID`
+- `static defaultName`
+- `static createDialog`
+- `static DeleteDialog`
 
 #### DocumentName and Type
 
@@ -639,5 +675,110 @@ Runs Locally:
 
 Runs on all connected Clients:
 
-5. [`Document#_onDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onDelete)
-6. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#deleteDocument)
+4. [`Document#_onDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onDelete)
+5. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#deleteDocument)
+
+### Descendant Document Updates
+
+When a descendant document is updated (or created or deleted), the chain parent documents do *not* receive the `#_onUpdate` method nor is the hook called. Instead, they call `_preUpdateDescendantDocuments` and `_onUpdateDescendantDocuments`.
+
+```js
+// Event can be Create, Update, or Delete
+ClientDocument#_pre${Event}DescendantDocuments(parent, collection, data, options, userId)
+ClientDocument_on${Event}DescendantDocuments
+```
+
+These events fire on all connected clients, but only if the modified document is in an embedded collection, and loop upwards through each parent document, starting with the first parent. E.g. if you delete an ActiveEffect on an Item on an Actor, `Item#_preDeleteDescendantDocuments` will fire then `Actor#_preDeleteDescendantDocuments`. 
+
+The first, `_pre${Event}DescendantDocuments` is called before `_on${Event}` for the document experiencing the CRUD operation. The second, `_on${Event}`, is called at the very end after the hook.
+
+The full signatures are provided below, on account of the official API not representing the ClientDocumentMixin well - keep in mind that some of these are directly modified by the various document classes, so you should call `super` to maintain useful upstream behaviors.
+
+```js
+// note: pseudo-class, the actual signature is 
+// function ClientDocumentMixin(Base) { return class ClientDocument extends Base {} }
+class ClientDocument {
+    /**
+     * Actions taken after descendant documents have been created, but before changes are applied to the client data.
+     * @param {Document} parent         The direct parent of the created Documents, may be this Document or a child
+     * @param {string} collection       The collection within which documents are being created
+     * @param {object[]} data           The source data for new documents that are being created
+     * @param {object} options          Options which modified the creation operation
+     * @param {string} userId           The ID of the User who triggered the operation
+     * @protected
+     */
+    _preCreateDescendantDocuments(parent, collection, data, options, userId)
+  
+  
+    /**
+     * Actions taken after descendant documents have been created and changes have been applied to client data.
+     * @param {Document} parent         The direct parent of the created Documents, may be this Document or a child
+     * @param {string} collection       The collection within which documents were created
+     * @param {Document[]} documents    The array of created Documents
+     * @param {object[]} data           The source data for new documents that were created
+     * @param {object} options          Options which modified the creation operation
+     * @param {string} userId           The ID of the User who triggered the operation
+     * @protected
+     */
+    _onCreateDescendantDocuments(parent, collection, documents, data, options, userId)
+  
+  
+    /**
+     * Actions taken after descendant documents have been updated, but before changes are applied to the client data.
+     * @param {Document} parent         The direct parent of the updated Documents, may be this Document or a child
+     * @param {string} collection       The collection within which documents are being updated
+     * @param {object[]} changes        The array of differential Document updates to be applied
+     * @param {object} options          Options which modified the update operation
+     * @param {string} userId           The ID of the User who triggered the operation
+     * @protected
+     */
+    _preUpdateDescendantDocuments(parent, collection, changes, options, userId)
+
+    /* -------------------------------------------- */
+
+    /**
+     * Actions taken after descendant documents have been updated and changes have been applied to client data.
+     * @param {Document} parent         The direct parent of the updated Documents, may be this Document or a child
+     * @param {string} collection       The collection within which documents were updated
+     * @param {Document[]} documents    The array of updated Documents
+     * @param {object[]} changes        The array of differential Document updates which were applied
+     * @param {object} options          Options which modified the update operation
+     * @param {string} userId           The ID of the User who triggered the operation
+     * @protected
+     */
+    _onUpdateDescendantDocuments(parent, collection, documents, changes, options, userId)
+
+    /* -------------------------------------------- */
+
+    /**
+     * Actions taken after descendant documents have been deleted, but before deletions are applied to the client data.
+     * @param {Document} parent         The direct parent of the deleted Documents, may be this Document or a child
+     * @param {string} collection       The collection within which documents were deleted
+     * @param {string[]} ids            The array of document IDs which were deleted
+     * @param {object} options          Options which modified the deletion operation
+     * @param {string} userId           The ID of the User who triggered the operation
+     * @protected
+     */
+    _preDeleteDescendantDocuments(parent, collection, ids, options, userId)
+
+    /* -------------------------------------------- */
+
+    /**
+     * Actions taken after descendant documents have been deleted and those deletions have been applied to client data.
+     * @param {Document} parent         The direct parent of the deleted Documents, may be this Document or a child
+     * @param {string} collection       The collection within which documents were deleted
+     * @param {Document[]} documents    The array of Documents which were deleted
+     * @param {string[]} ids            The array of document IDs which were deleted
+     * @param {object} options          Options which modified the deletion operation
+     * @param {string} userId           The ID of the User who triggered the operation
+     * @protected
+     */
+    _onDeleteDescendantDocuments(parent, collection, documents, ids, options, userId)
+
+}
+```
+## Troubleshooting
+
+
+> Stub
+> This section is a stub, you can help by contributing to it.
