@@ -2,7 +2,7 @@
 title: Chroniques de la Fonderie
 description: 
 published: true
-date: 2024-01-16T09:07:32.550Z
+date: 2024-04-22T19:33:20.356Z
 tags: 
 editor: markdown
 dateCreated: 2022-03-01T08:26:38.231Z
@@ -32,6 +32,7 @@ Les émissions et interview en français, avec Fletch, Sasmira, LeRatierBretonni
  - Les Chroniques de la [Fonderie, Episode 16](https://www.youtube.com/watch?v=tZwf964_7NA&pp=ygUZY2hyb25pcXVlcyBkZSBsYSBmb25kZXJpZQ%3D%3D) avec SecretFire de Foundry et Rwanoux pour le système **Torg**
  - Les Chroniques de la [Fonderie, Episode 17](https://www.youtube.com/watch?v=3-v8Y3HWW8s) avec Kristov et Khaali pour le système **Trinités** 
  - Les Chroniques de la [Fonderie, Episode 18](https://youtu.be/xYmE5bCmqw4) avec SecretFire (news Foundry), Carter (Blade Runner) et Kristov (Ludiverse+Cabinet des Murmures)
+ - Les Chroniques de la [Fonderie, Episode 19](https://www.youtube.com/watch?v=Wci4N5q3WRc) avec Fletch, Sasmira, Carter et LeRatierBretonnien. Thème : Wastelands, Mournblade, Hawkmoon, Les Héritiers sous FoundryVTT
  
  
  
