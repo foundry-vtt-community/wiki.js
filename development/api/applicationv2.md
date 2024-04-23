@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-23T05:01:33.143Z
+date: 2024-04-23T17:21:50.148Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -33,6 +33,18 @@ Code for ApplicationV2 and its related classes can be found at `yourFoundryInsta
 
 ## Key Concepts
 
+Here are the core things to know about ApplicationV2, including comparisons to the original Application class.
+
+### Advantages of ApplicationV2
+
+- Native light/dark mode support
+- Better application window frames
+- Architecture supports non-Handlebars rendering engines much more easily
+- Support for partial re-rendering in Handlebars
+- Better lifecycle events
+- Improved a11y handling
+- Overall simpler and cleaner to implement
+
 ### Use of ESModules
 
 Unlike the original Application classes, AppV2 and its subclasses are accessed through nested javascript modules, e.g. `foundry.applications.api.ApplicationV2`. One common trick when dealing with these is the use of [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to reduce line length and improve comprehensibility, e.g.
@@ -45,16 +57,17 @@ const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 class MyHandlebarsApp extends HandlebarsApplicationMixin(ApplicationV2) {}
 ```
 
-### Which Class to extend
+### Which Class to Extend
 
-No FormApplication
+Unlike the App V1, the base App V2 class handles forms natively, without reliance on a subclass. If you're not writing some kind of Document sheet, in which case you should use the appropriate subclass, everything is going to extend `ApplicationV2`. However, one important thing to know is that you need to use some form of rendering engine, whether that's the Foundry-provided `HandlebarsApplicationMixin` or one created by a community package. 
 
 ## API Interactions
 
 ### HandlebarsApplicationMixin
 
-
 ## Specific Use Cases
+
+### Example Actor sheet implementation
 
 ### Non-Handlebars Rendering Frameworks
 
