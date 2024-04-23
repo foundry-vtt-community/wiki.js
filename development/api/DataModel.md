@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-21T01:03:43.859Z
+date: 2024-04-23T00:22:15.816Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -179,7 +179,8 @@ Beyond their class definitions, there's a few other things to know with data mod
 Document data models MUST be registered in an init hook.
 
 ```js
-// If we had properly exported all of our classes from the full example earlier
+// Example of importing the relevant Data model classes
+// Later sections have worked implementations of these models
 import { PawnData, HeroData, VillainData } from "./module/data.mjs"
 
 Hooks.once("init", () => {
