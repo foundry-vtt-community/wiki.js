@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-23T20:01:54.042Z
+date: 2024-04-23T20:03:31.492Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -31,6 +31,7 @@ ApplicationV2 is an entirely new set of classes that serve as a complete alterna
 
 Code for ApplicationV2 and its related classes can be found at `yourFoundryInstallPath\resources\app\client-esm\applications`.
 
+---
 ## Key Concepts
 
 Here are the core things to know about ApplicationV2, including comparisons to the original Application class.
@@ -61,7 +62,10 @@ class MyHandlebarsApp extends HandlebarsApplicationMixin(ApplicationV2) {}
 
 Unlike the App V1, the base App V2 class handles forms natively, without reliance on a subclass. If you're not writing some kind of Document sheet, in which case you should use the appropriate subclass, everything is going to extend `ApplicationV2`. However, one important thing to know is that you need to use some form of rendering engine, whether that's the Foundry-provided `HandlebarsApplicationMixin` or one created by a community package. 
 
+---
 ## API Interactions
+
+The following section provides guidance for implementing ApplicationV2 and its related classes
 
 ### HandlebarsApplicationMixin
 
@@ -117,6 +121,13 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 {.is-info}
 
 
+#### DEFAULT_OPTIONS
+
+Another static method that's important to include
+
+##### Actions
+
+---
 ## Specific Use Cases
 
 ### Example ActorSheetV2 implementation
@@ -125,4 +136,6 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 
 ### Non-Handlebars Rendering Frameworks
 
+
+---
 ## Troubleshooting
