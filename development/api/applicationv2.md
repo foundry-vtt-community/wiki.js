@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-23T17:22:26.845Z
+date: 2024-04-23T20:01:54.042Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -64,6 +64,58 @@ Unlike the App V1, the base App V2 class handles forms natively, without relianc
 ## API Interactions
 
 ### HandlebarsApplicationMixin
+
+[MDN docs on Mixins](https://developer.mozilla.org/en-US/docs/Glossary/Mixin)
+
+Unless you are using an external rendering package, every AppV2 instance is going to extend `HandlebarsApplicationMixin`. This function returns a `HandlebarsApplication` class which fully implements the rendering logic required by ApplicationV2.
+
+#### PARTS
+
+The core of HandlebarsApplication is the `static PARTS` property, which is a Record consisting of objects with the following structure:
+
+```jsdoc
+/**
+ * @typedef {Object} HandlebarsTemplatePart
+ * @property {string} template                      The template entry-point for the part
+ * @property {string} [id]                          A CSS id to assign to the top-level element of the rendered part.
+ *                                                  This id string is automatically prefixed by the application id.
+ * @property {string[]} [classes]                   An array of CSS classes to apply to the top-level element of the
+ *                                                  rendered part.
+ * @property {string[]} [templates]                 An array of templates that are required to render the part.
+ *                                                  If omitted, only the entry-point is inferred as required.
+ * @property {string[]} [scrollable]                An array of selectors within this part whose scroll positions should
+ *                                                  be persisted during a re-render operation. A blank string is used
+ *                                                  to denote that the root level of the part is scrollable.
+ * @property {Record<string, ApplicationFormConfiguration>} [forms]  A registry of forms selectors and submission handlers.
+ */
+```
+
+Replicating a v1 Application is fairly simple - just pass a single part!
+```js
+static PARTS = {
+	form: {
+  	template: "modules/my-module/templates/my-app.hbs"
+  }
+}
+```
+
+However, you may want to have an application that leverages the flexibility of multiple parts. For example, if you have multiple document subtypes that share certain pieces of their schema, you can have a reusable part that handles the logic for that piece, such as a part that *just* handles Hit Point rendering and the logic that comes with it.
+
+#### \_prepareContext
+
+The variable-based rendering of handlebars is handled by `_prepareContext`, an asynchronous function that returns a `context` object with whatever data gets fed into the `template`. It has a single argument, `options`, which is the options object passed to the original `render` call, but this can usually be ignored.
+
+In Application V1 terms, this is functionally equivalent to its `getData` call, with the only functional change that this is *always* asynchronous.
+
+Inside your handlebars template, you'll *only* have access to the data setup in `_prepareContext`, so if you need to include information such as `CONFIG.MYSYSTEM` you'll want to include a pointer to it in the returned object.
+
+> **Note**
+> 
+> The disconnect between the data provided to the template via `_prepareContext` and the way that `DocumentSheetV2` stores data to the document via the `name=""` field can cause some confusion. It's common practice to store the document's system data in a system key in the context, which means that you can usually do `value="{{system.attribute.value}}"` and `name="system.attribute.value"` in an actor/item sheet and stuff works.
+>
+> However, under the hood, the `{{}}` is pulling stuff from the context object that the `getData` returns while the `name=""` is storing things based on the data path in the document itself. This means that there are situations where they won't actually line up, because they're not fundamentally pointing at the same thing at the end of the day, they just happen to often line up.
+{.is-info}
+
 
 ## Specific Use Cases
 
