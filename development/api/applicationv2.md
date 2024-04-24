@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-24T03:47:28.184Z
+date: 2024-04-24T04:14:26.997Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -46,6 +46,8 @@ Here are the core things to know about ApplicationV2, including comparisons to t
 - Improved a11y handling
 - Overall simpler and cleaner to implement
 
+Another major change is there's no more JQuery-by-default in AppV2; all internal functions work exclusively with base javascript DOM manipulation. JQuery is still fully included in Foundry, so developers who prefer it can call `const html = $(this.element)` to get a jquery representation of the application's rendered HTML.
+
 ### Use of ESModules
 
 Unlike the original Application classes, AppV2 and its subclasses are accessed through nested javascript modules, e.g. `foundry.applications.api.ApplicationV2`. One common trick when dealing with these is the use of [destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) to reduce line length and improve comprehensibility, e.g.
@@ -73,10 +75,12 @@ One property that's important to include is `static DEFAULT_OPTIONS`, which is a
 
 #### Actions
 
-The `actions` object is a Record of functions that automatically get bound as `click` listeners to any element that has the appropriate `data-action` in its attributes.
+The `actions` object is a Record of functions that automatically get bound as `click` listeners to any element that has the appropriate `data-action` in its attributes. Importantly, these should be *static* functions, but their `this` value will still point to the specific class instance.
 
 ```js
-class MyApplication extends Hand {
+// for proper class definition you'd need to use HandlebarsApplicationMixin
+// but it's not used here because these are properties of the base ApplicationV2 class
+class MyApplication extends ApplicationV2 {
 	static DEFAULT_OPTIONS = {
   	actions: {
     	myAction: this.myAction
@@ -97,6 +101,29 @@ This could pair with the following HTML to add the click event. You can use what
 
 ```html
 <a data-action="myAction">Using a link for inline text</a>
+```
+
+For those used to ApplicationV2, this largely replaces the role `activateListeners` played. If you have other event listeners to add, you can use `_onRender`.
+
+```js
+class MyApplication extends ApplicationV2 {
+  /**
+   * Actions performed after any render of the Application.
+   * Post-render steps are not awaited by the render process.
+   * @param {ApplicationRenderContext} context      Prepared context data
+   * @param {RenderOptions} options                 Provided render options
+   * @protected
+   */
+	_onRender(context, options) {
+		// an input
+    const nonStandardInput = this.element.find()
+    // keep in mind that if your callback is a named function instead of an arrow function expression
+    // you'll need to use `bind(this)` to maintain context
+    nonStandardInput.addEventListener("onChange", (e) => {
+    	console.log(e)
+    })
+  }
+}
 ```
 
 ### HandlebarsApplicationMixin
