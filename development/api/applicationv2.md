@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-24T04:14:26.997Z
+date: 2024-04-24T15:45:25.548Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -15,8 +15,8 @@ Applications are a core piece of Foundry's API that almost every developer will 
 
 *Official Documentation*
 
-- ApplicationV2
-- DocumentSheetV2
+- [ApplicationV2](https://foundryvtt.com/api/v12/classes/foundry.applications.api.ApplicationV2.html)
+- [DocumentSheetV2](https://foundryvtt.com/api/v12/classes/foundry.applications.api.DocumentSheetV2.html)
 
 **Legend**
 
@@ -103,28 +103,8 @@ This could pair with the following HTML to add the click event. You can use what
 <a data-action="myAction">Using a link for inline text</a>
 ```
 
-For those used to ApplicationV2, this largely replaces the role `activateListeners` played. If you have other event listeners to add, you can use `_onRender`.
+For those used to ApplicationV2, this largely replaces the role `activateListeners` played. If you have other event listeners to add, you can use `_onRender`, which is explored in the "Specific Use Cases" section.
 
-```js
-class MyApplication extends ApplicationV2 {
-  /**
-   * Actions performed after any render of the Application.
-   * Post-render steps are not awaited by the render process.
-   * @param {ApplicationRenderContext} context      Prepared context data
-   * @param {RenderOptions} options                 Provided render options
-   * @protected
-   */
-	_onRender(context, options) {
-		// an input
-    const nonStandardInput = this.element.find()
-    // keep in mind that if your callback is a named function instead of an arrow function expression
-    // you'll need to use `bind(this)` to maintain context
-    nonStandardInput.addEventListener("onChange", (e) => {
-    	console.log(e)
-    })
-  }
-}
-```
 
 ### HandlebarsApplicationMixin
 
@@ -182,9 +162,41 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 ---
 ## Specific Use Cases
 
-### Example ActorSheetV2 implementation
+### Adding Event Listeners
 
-### Example non-Document ApplicationV2
+The `actions` field, explored above, is usually sufficient for most sheet listeners - however, sometimes you need other, non-click listeners. For example, many systems like to display physical item's quantity as an editable field on the actor sheet, which isn't natively supported by Foundry's form submission and data architecture. The best place to add these is the `_onRender` function.
+
+```js
+class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
+  /**
+   * Actions performed after any render of the Application.
+   * Post-render steps are not awaited by the render process.
+   * @param {ApplicationRenderContext} context      Prepared context data
+   * @param {RenderOptions} options                 Provided render options
+   * @protected
+   */
+	_onRender(context, options) {
+		// Inputs with class `item-quantity`
+    const itemQuantities = this.element.querySelectorAll('.item-quantity')
+    for (const input of itemQuantities) {
+      // keep in mind that if your callback is a named function instead of an arrow function expression
+      // you'll need to use `bind(this)` to maintain context
+      itemQuantities.addEventListener("change", (e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        const newQuantity = e.currentTarget.value
+        // assuming the item's ID is in the input's `data-item-id` attribute
+        const itemId = e.currentTarget.dataset.itemId
+        const item = this.actor.items.get(itemId)
+        // the following is asynchronous and assumes the quantity is in the path `system.quantity`
+        item.update({ system: { quantity: newQuantity }});
+      })
+    }
+  }
+}
+```
+
+There are much less verbose implementations of the above code - the whole thing is theoretically doable in a single line - but for clarity this example does each piece step-by-step.
 
 ### Non-Handlebars Rendering Frameworks
 
