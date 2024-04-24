@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-24T15:46:09.050Z
+date: 2024-04-24T16:09:31.665Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -73,6 +73,10 @@ The following section provides guidance for implementing ApplicationV2 and its r
 
 One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`.
 
+#### Tag
+
+If you are building some kind of form, you want to set the `tag` property to `"form"` instead of the default `"div"`. This ensures the default `_onSubmitForm` and `_onChangeForm` methods are called.
+
 #### Actions
 
 The `actions` object is a Record of functions that automatically get bound as `click` listeners to any element that has the appropriate `data-action` in its attributes. Importantly, these should be *static* functions, but their `this` value will still point to the specific class instance.
@@ -142,7 +146,13 @@ static PARTS = {
 }
 ```
 
-However, you may want to have an application that leverages the flexibility of multiple parts. For example, if you have multiple document subtypes that share certain pieces of their schema, you can have a reusable part that handles the logic for that piece, such as a part that *just* handles Hit Point rendering and the logic that comes with it.
+However, you may want to have an application that leverages the flexibility of multiple parts. When using multiple parts, it's important to know the following
+
+- Each part must return a single HTML element - that is, only one pair of top-level tags.
+- The parts are concatenated in the order of the static property
+- All parts are encapsulated by the top-level tag set in `options.tag` - this is a `div` by default in `ApplicationV2`, but `DocumentSheetV2` changes this to `form`. 
+
+Broadly speaking, this means the most straightforward way to structure a multi-part application is to lead with a `header` part, then optionally a distinct `tabs` part, then finally one part for each of your tabs. 
 
 #### \_prepareContext
 
@@ -199,6 +209,8 @@ class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 ```
 
 There are much less verbose implementations of the above code - the whole thing is theoretically doable in a single line - but for clarity this example does each piece step-by-step.
+
+### Custom Widgets
 
 ### Non-Handlebars Rendering Frameworks
 
