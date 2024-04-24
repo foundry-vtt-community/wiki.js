@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-24T15:45:25.548Z
+date: 2024-04-24T15:46:09.050Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -161,6 +161,8 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 
 ---
 ## Specific Use Cases
+
+Below are some specific tricks and techniques to use with ApplicationV2 and its subclasses.
 
 ### Adding Event Listeners
 
