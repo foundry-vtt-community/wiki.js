@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-24T16:09:31.665Z
+date: 2024-04-24T16:26:09.804Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -73,9 +73,40 @@ The following section provides guidance for implementing ApplicationV2 and its r
 
 One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`.
 
-#### Tag
+#### Form Handling
 
-If you are building some kind of form, you want to set the `tag` property to `"form"` instead of the default `"div"`. This ensures the default `_onSubmitForm` and `_onChangeForm` methods are called.
+Unlike Application, ApplicationV2 has built in form handling with just some configuration changes. These are automatically implemented by DocumentSheetV2, so you only need to make these updates in `DEFAULT_OPTIONS` if you're building a form for a non-document object.
+
+First, set the `tag` property to `"form"` instead of the default `"div"`. This ensures the default `_onSubmitForm` and `_onChangeForm` methods are called.
+
+Second, you must define the sub-properties inside the `form` property - `handler` is the function that actually executes the update, while `submitOnChange` and `closeOnSubmit` are booleans.
+
+To put this all together, including the signature for the handler function, see the snippet below.
+
+```js
+class MyApplication extends ApplicationV2 {
+  static DEFAULT_OPTIONS = {
+  	tag: "form",
+    form: {
+    	handler: MyApplication.myFormHandler,
+      submitOnChange: false,
+      closeOnSubmit: false
+    }
+  }
+  
+  /**
+   * Process form submission for the sheet
+   * @this {MyApplication}                      The handler is called with the application as its bound scope
+   * @param {SubmitEvent} event                   The originating form submission event
+   * @param {HTMLFormElement} form                The form element that was submitted
+   * @param {FormDataExtended} formData           Processed data for the submitted form
+   * @returns {Promise<void>}
+   */
+  static async myFormHandler(event, form, formData) {
+  	// Do things with the returned FormData
+  }
+}
+```
 
 #### Actions
 
@@ -87,7 +118,7 @@ The `actions` object is a Record of functions that automatically get bound as `c
 class MyApplication extends ApplicationV2 {
 	static DEFAULT_OPTIONS = {
   	actions: {
-    	myAction: this.myAction
+    	myAction: MyApplication.myAction
     }
   }
   
