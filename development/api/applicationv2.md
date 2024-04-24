@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-23T20:03:31.492Z
+date: 2024-04-24T03:47:28.184Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -67,6 +67,38 @@ Unlike the App V1, the base App V2 class handles forms natively, without relianc
 
 The following section provides guidance for implementing ApplicationV2 and its related classes
 
+### DEFAULT_OPTIONS
+
+One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`.
+
+#### Actions
+
+The `actions` object is a Record of functions that automatically get bound as `click` listeners to any element that has the appropriate `data-action` in its attributes.
+
+```js
+class MyApplication extends Hand {
+	static DEFAULT_OPTIONS = {
+  	actions: {
+    	myAction: this.myAction
+    }
+  }
+  
+  /**
+   * @param {PointerEvent} event - The originating click event
+   * @param {HTMLElement} target - the capturing HTML element which defined a [data-action]
+   */
+  static myAction(event, target) {
+  	console.log(this) // logs the specific application class instance
+  }
+}
+```
+
+This could pair with the following HTML to add the click event. You can use whatever tags you want, but `<a>` tags and `<button>` tags usually require the least amount of additional CSS.
+
+```html
+<a data-action="myAction">Using a link for inline text</a>
+```
+
 ### HandlebarsApplicationMixin
 
 [MDN docs on Mixins](https://developer.mozilla.org/en-US/docs/Glossary/Mixin)
@@ -119,13 +151,6 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 >
 > However, under the hood, the `{{}}` is pulling stuff from the context object that the `getData` returns while the `name=""` is storing things based on the data path in the document itself. This means that there are situations where they won't actually line up, because they're not fundamentally pointing at the same thing at the end of the day, they just happen to often line up.
 {.is-info}
-
-
-#### DEFAULT_OPTIONS
-
-Another static method that's important to include
-
-##### Actions
 
 ---
 ## Specific Use Cases
