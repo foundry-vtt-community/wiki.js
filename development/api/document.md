@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-04-25T17:15:21.323Z
+date: 2024-04-25T17:15:43.537Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -452,6 +452,7 @@ Sometimes it is desirable to create a relationship between documents which canno
 
 Tokens are a form of canvas document that are embedded within scenes. When a token is linked to an actor, `Token#actor` simply returns that actor. When a token is NOT linked to an actor, the token stores an `ActorDelta` document that records the differences between the unlinked actor and the source actor (e.g. name, HP), then constructs a synthetic actor which it returns in that `actor` getter. 
 
+---
 ## Event Cycles
 
 Each Create, Update, and Delete operation undergoes an event cycle consisting of a sequence of instance methods and Hooks being fired. These allow packages to intercept and react to these operations.
@@ -778,6 +779,8 @@ class ClientDocument {
 
 }
 ```
+
+---
 ## Troubleshooting
 
 
