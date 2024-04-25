@@ -2,7 +2,7 @@
 title: Flags
 description:  Flags represent key-value type data which can be used to store flexible or arbitrary data required by either the core software, game systems, or user-created modules.
 published: true
-date: 2024-02-16T05:19:50.985Z
+date: 2024-04-25T23:42:28.712Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -12,10 +12,21 @@ dateCreated: 2021-11-17T14:27:34.646Z
 
 ![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
+Flags are a generalized way for documents to store additional information as needed by systems and modules.
+
+*Official Documentation*
+- [Document#setFlag](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#setFlag)
+
+**Legend**
+
+```js
+Document.defineSchema // `.` indicates static method or property
+Document#setFlag // `#` indicates instance method or property
+```
+
 ## Overview
 
 Flags are the safest way that packages can store arbitrary data on existing documents. If a package allows the user to set some data which isn't normally on the [Document](/en/development/api/document)'s data schema, it should leverage flags.
-
 
 > Note that this does not necessarily apply to Systems when talking about the Actor and Item document types. Systems can provide a `template.json` which allows the system to define the data schema for Actors and Items.
 >
@@ -79,6 +90,8 @@ someDocument.setFlag('myModuleName', 'myFlagName', newFlagValue);
 
 #### Without `setFlag`
 
+While `setFlag` is the easiest and generally best way to update the `flags` field, it's not the only way.
+
 ##### As part of a Document Update
 
 > Manually updating a Document's `flags` value does not have any of the client-side validations that `setFlag` has.
@@ -112,11 +125,11 @@ someDocument.update(updateData);
 
 
 ##### Mutation
+
 Simply mutating a flag's value on a document's data with `=` assignment will not persist that change in the database, nor broadcast that change to other connected clients. Keep this in mind when editing a document during a hook that fires in `prepareData`.
 
-
 ### Getting a flag's value
-There are two places to get a flag value: On the data model itself, or with [`Document#getFlag`](https://foundryvtt.com/api/abstract.Document.html#getFlag)
+There are two main ways to get a flag value: Following the chain of sub-fields, or with [`Document#getFlag`](https://foundryvtt.com/api/abstract.Document.html#getFlag)
 
 The arguments passed to `getFlag` have the same constraints as those passed to `setFlag`. Providing an unexpected scope will `throw` rather than return `undefined`. If you need a flag from a module which might not exist in the world, it is safer to access it on the data model itself.
 
@@ -125,18 +138,26 @@ const flagValue = someDocument.getFlag('myModuleName', 'myFlagName');
 // flagValue === 'foo'
 ```
 
-#### On the data model itself
+#### Chaining sub-fields
 Flags are readable on the Document's data as detailed in the [Data Format](#Data-Format) section:
 
 ```
-someDocument.data.flags
+someDocument.flags.packageId.flagKey
 ```
+
+Keep in mind that accessing deeply properties in javascript requires the optional chaining operator, `?.`, to avoid throwing errors if one of the properties in the path doesn't exist. Secondly, if any of the properties along the way is hyphenated, e.g. `package-id`, you'll have to use brackets and a string access, e.g. `flags["package-id"].flagKey`. The `getFlag` method already handles these conditions which is why it's usually preferable to use it in place of ordinary javascript property chaining.
 
 ### Unset a flag
 A safe way to delete your flag's value is with [`Document#unsetFlag`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#unsetFlag). This will fully delete that key from your module's flags on the provided document.
 
 ```js
 someDocument.unsetFlag('myModuleName', 'myFlagName');
+```
+
+This is semantically equivalent to the following call, just missing some additional protections checking the scope.
+
+```js
+someDocument.update({'flags.myModuleName.-=myFlagName': null})
 ```
 
 ## Specific Use Cases
@@ -151,7 +172,7 @@ chatMessage.setFlag('myModule', 'emoji', '❤️');
 
 Hooks.on('renderChatMessage', (message, html) => {
   if (message.getFlag('myModule', 'emoji')) {
-    html.append(`<p>${message.data.flags.myModule.emoji}</p>`);
+    html.append(`<p>${message.flags.myModule.emoji}</p>`);
   }
 });
 ```
