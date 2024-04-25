@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-04-21T01:02:53.121Z
+date: 2024-04-25T17:12:59.888Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -128,7 +128,7 @@ Some important properties introduced in ClientDocumentMixin:
 - `getRelativeUUID`
 - `static defaultName`
 - `static createDialog`
-- `static DeleteDialog`
+- `static deleteDialog`
 
 #### DocumentName and Type
 
