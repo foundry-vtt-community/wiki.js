@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-04-25T17:16:51.911Z
+date: 2024-04-25T17:17:49.252Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -14,7 +14,7 @@ dateCreated: 2021-11-15T16:03:42.636Z
 
 If you're dealing with the underlying data of the Foundry API, you almost certainly are going to need to work with Documents.
 
-Official Documentation
+*Official Documentation*
 - [API frontpage subsection](https://foundryvtt.com/api/#documents-and-data)
 - [Document](https://foundryvtt.com/api/classes/foundry.abstract.Document.html)
 
