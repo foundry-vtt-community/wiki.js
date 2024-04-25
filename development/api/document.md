@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-04-25T17:12:59.888Z
+date: 2024-04-25T17:15:21.323Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -132,7 +132,7 @@ Some important properties introduced in ClientDocumentMixin:
 
 #### DocumentName and Type
 
-A Document's 'kind' can be obtained by checking the document's `documentName`. E.g. `"Actor"` for actors, `"Scene"` for scenes, `"Combatant"` for combatants, and so on. It is impossible to create a Document with an arbitrary documentName.
+A Document's 'kind' can be obtained by checking the document's `documentName`. E.g. `"Actor"` for actors, `"Scene"` for scenes, `"Combatant"` for combatants, and so on. It is impossible to create a Document with an arbitrary `documentName`.
 
 Some documents have a `type` property in their Schema. These are also validated and thus it is impossible to create a Document with an arbitrary `type` property. As a system, you define the available types in your system.json; as a module, you can use [module sub-types](https://foundryvtt.com/article/module-sub-types/) to define new types.
 
@@ -160,6 +160,7 @@ The `uuid` is unique across all collections and allows for an easy way (via the 
 
 You can use the book icon in the header bar of a document sheet to retrieve these values; a left click copies the ID to clipboard, while a right click copies the UUID to clipboard.
 
+---
 ## API Interactions
 
 Many document operations take a `data` and `context` argument, which are each always objects.
@@ -167,7 +168,6 @@ Many document operations take a `data` and `context` argument, which are each al
 **Data:** This argument directly translates to the properties of the document. The eligible properties of a document come from the `defineSchema` method of the base document class, e.g. `BaseActor#defineSchema`; you can see the list of base document classes at the top of the [document API page](https://foundryvtt.com/api/classes/foundry.abstract.Document.html)
 
 **Context:** The [`DocumentConstructionContext`](https://foundryvtt.com/api/interfaces/types.DocumentConstructionContext.html) and [`DocumentModificationContext`](https://foundryvtt.com/api/interfaces/types.DocumentModificationContext.html) types affects _how_ the document is created/modified on the backend. The primary way to control whether a document being created is an Embedded Document is by providing a `parent` in the context. By default (i.e. with no context provided) a new document tries to be created as a Primary Document in the correct `WorldCollection`.
-
 
 ### Create
 
@@ -366,14 +366,15 @@ const actor = game.actors.getName("Foo");
 actor.deleteEmbeddedDocuments("Item", ["some-id"]);
 ```
 
+---
 ## Specific Use Cases
 
 ### Temporary Document
 
-It's possible to create an ephemeral document on the client side which does not get persisted to the database. This can be useful for complex creation operations where it is helpful to have the rest of a Document's API available before actually committing to creating a document on the backend.
+It's possible to create an ephemeral document on the client side which does not get persisted to the database. This can be useful for complex creation operations where it is helpful to have the rest of a Document's API available before actually committing to creating a document on the backend. To do this, use the document's class as a normal constructor.
 
 ```javascript
-const tempDocument = SomeDocumentClass.create(documentData, { temporary: true });
+const tempDocument = new SomeDocumentClass(documentData)
 ```
 
 ### Updating Embedded Documents as part of the parent Update
