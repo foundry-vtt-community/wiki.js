@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-04-25T17:15:43.537Z
+date: 2024-04-25T17:16:51.911Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -783,6 +783,4 @@ class ClientDocument {
 ---
 ## Troubleshooting
 
-
-> Stub
-> This section is a stub, you can help by contributing to it.
+Because documents are a super broad topic, you may find the [Flags](/en/development/api/flags) and [Hooks](/en/development/api/hooks) pages useful for understanding those specific processes.
