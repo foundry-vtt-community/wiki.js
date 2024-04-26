@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-02-14T20:27:52.375Z
+date: 2024-04-26T02:26:51.882Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -12,16 +12,30 @@ dateCreated: 2022-03-15T14:35:36.691Z
 
 ![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
+Hooks are an important method by which the core software, systems, and even modules can provide interaction points for other developers.
+
+*Official Documentation*
+- [Hook Events](https://foundryvtt.com/api/modules/hookEvents.html)
+- [Hooks](https://foundryvtt.com/api/classes/client.Hooks.html)
+
+*Note:* Not all core hook events are documented by the hook events page, and any system- or module-specific hooks may or may not be documented on that specific package's repository.
+
+**Legend**
+
+```js
+Hooks.on // `.` indicates static method or property
+// The Hooks class doesn't use instance methods as it's never instantiated
+```
+
 ## Overview
 
-> There is documentation about the various Hook Events in Core [in the official docs](https://foundryvtt.com/api/modules/hookEvents.html). However, it is advised to set `CONFIG.debug.hooks = true` when looking for hooks as this will print them to the console as they happen. 
-{.is-info}
-
-Hooks are how Foundry Core exposes certain public API events modules and systems to interact with. It is always recommended to register a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) for an existing hook event instead of [monkey patching](https://www.audero.it/blog/2016/12/05/monkey-patching-javascript/) a core method.
+Hooks are how Foundry Core exposes certain public API events modules and systems to interact with. It is always recommended to register a [callback](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) for an existing hook event instead of [monkey patching](https://www.audero.it/blog/2016/12/05/monkey-patching-javascript/) a core method whenever possible.
 
 ---
 
 ## Key Concepts
+
+Working with hooks requires keeping in mind the following limitations.
 
 ### Registration and Execution
 
@@ -31,7 +45,7 @@ These aspects are ignorant of eachother. It is not problematic to register a cal
 
 ### Returned Values
 
-Hook callbacks ignore returned values except in cases where the event is triggered with `call`.
+Hook callbacks ignore returned values except in cases where the event is triggered with `call`. If `call` is used, returning an explicit `false` will stop the hook event cycle and stop whatever upstream event is occuring (e.g. returning `false` in `preUpdate` will stop the update). 
 
 ### Synchronous in nature
 
@@ -119,7 +133,9 @@ Useful for cases where a hook callback should be able to interrupt a process.
 
 ```javascript=
 function someProcessWithHook(arg) {
+  // you can pass any number of additional arguments after the event name
   const canProceed = Hooks.call('myCustomInterruptHook', arg);
+  // You may want some kind of error message here more elaborate than the simple `return`
   if (!canProceed) return;
   
   // do something else
@@ -152,5 +168,13 @@ function someProcessWithHook(arg) {
 
 ## Troubleshooting
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+### What hooks are firing when?
+
+You can use `CONFIG.debug.hooks = true` in the console to set foundry to be verbose about when hooks are firing and what arguments they provide. It can be useful to have a simple macro to toggle this behavior:
+
+```js
+CONFIG.debug.hooks = !CONFIG.debug.hooks
+console.warn("Set Hook Debugging to", CONFIG.debug.hooks)
+```
+
+If you already know the name of the hook, you can also use `Hooks.once("hookEventNameHere", console.log)` to cleanly send the next instance to console to access its properties.
