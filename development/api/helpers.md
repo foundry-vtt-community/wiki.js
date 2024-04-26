@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-04-26T20:28:16.263Z
+date: 2024-04-26T20:29:45.358Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -325,8 +325,10 @@ Using the `formInput` and `formField` helpers can be confusing for nested struct
 - The main argument, `fields`, takes a pointer to the actual DataField instance it's rendering
   - Your `getData` or `_prepareContext` needs to provide `this.document.schema.fields` for base document properties (e.g. `Actor#name`). 
   - However, this pointer won't be able to traverse any nested data model instances, such as the `system` field; you'll need to provide a separate pointer to `this.document.system.schema.fields`.
-- formInput optional arguments are an instance of [FormInputConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
-- formField optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
+- `formInput` optional arguments are an instance of [FormInputConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
+- `formField` optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
+
+One example of their implementation is the new UserConfig application, available at `resources\app\client-esm\applications\sheets\user-config.mjs` and its template `resources\app\templates\sheets\user-config.hbs`
 
 ## Troubleshooting
 
