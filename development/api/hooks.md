@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-04-26T02:59:03.823Z
+date: 2024-04-26T03:02:02.965Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -160,6 +160,8 @@ function someProcessWithHook(arg) {
 
 ## Specific Use Cases
 
+Below are some common patterns working with specific hooks
+
 ### Render hooks
 
 One extremely common use for hooks is the various `render` hooks, which are triggered by instances of the [Application](/en/development/api/application) class. Whenever an application is rendered, a hook fires for it and each of its parent classes, e.g. `renderActorSheet` then `renderDocumentSheet` then `renderFormApplication` then `renderApplication`. Each of these event calls has the same information, the difference is just being able to specify how far up the inheritance tree you want to operate.
@@ -186,6 +188,8 @@ Hooks.on("renderActorSheet", (app, html, data) => {
 
 ## Troubleshooting
 
+Below are some common issues people run into when working with hooks.
+
 ### What hooks are firing when?
 
 You can use `CONFIG.debug.hooks = true` in the console to set foundry to be verbose about when hooks are firing and what arguments they provide. It can be useful to have a simple macro to toggle this behavior:
@@ -196,6 +200,8 @@ console.warn("Set Hook Debugging to", CONFIG.debug.hooks)
 ```
 
 If you already know the name of the hook, you can also use `Hooks.once("hookEventNameHere", console.log)` to cleanly send the next instance to console to access its properties.
+
+Hooks that fire as part of Foundry's initialization process, such as `init`, are documented in the [Game](/en/development/api/game) article.
 
 ### Object Reference Troubles
 
