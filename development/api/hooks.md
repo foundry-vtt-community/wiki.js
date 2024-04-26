@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-04-26T02:56:13.144Z
+date: 2024-04-26T02:59:03.823Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -169,11 +169,12 @@ All render hooks pass the same three arguments
 - `html`: A JQuery object of the application's rendered HTML
 - `data`: The result of the `getData` operation that was fed into the application's handlebars template
 
-A common usage pattern within these hooks is adding new inputs; by properly assigning the `name` property, you can have the application's native form handling do the work for you. Remember that you can't just assign arbitrary data to a data model, so you usually have to work with [flags](/en/development/api/flags).
+A common usage pattern within these hooks is adding new inputs; by properly assigning the `name` property, you can have the application's native form handling do the work for you. Remember that you can't just assign arbitrary data to a data model, so you usually have to work with [flags](/en/development/api/flags) to define your additional data.
 
 ```js
 Hooks.on("renderActorSheet", (app, html, data) => {
-	const myData = app.actor.getFlag("myModule", "myFlag", "myData");
+  // The value after `??` controls the "default" value for the input
+	const myData = app.actor.getFlag("myModule", "myFlag", "myData") ?? "foobar";
   // The `value` sets what shows in the input, and `name` is important for the form submission
   const myInput = `<input type="text" value="${myData}" name="flags.myModule.myFlag">`;
   // the jquery work here may be kinda complicated
