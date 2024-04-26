@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-04-20T15:18:02.058Z
+date: 2024-04-26T20:28:16.263Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -315,6 +315,18 @@ const isV12dev2 = !foundry.utils.isNewerVersion("12.319", game.version)
 // You also don't *have* to use the helper function when you just need the major version
 const isV12 = game.release.generation >= 12
 ```
+
+### formInput and formField
+
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+
+Using the `formInput` and `formField` helpers can be confusing for nested structures, even if they otherwise simplify sheet templating. For them to work properly, you *must* have implemented a [Data Model](/en/development/api/DataModel) for the document subtype.
+
+- The main argument, `fields`, takes a pointer to the actual DataField instance it's rendering
+  - Your `getData` or `_prepareContext` needs to provide `this.document.schema.fields` for base document properties (e.g. `Actor#name`). 
+  - However, this pointer won't be able to traverse any nested data model instances, such as the `system` field; you'll need to provide a separate pointer to `this.document.system.schema.fields`.
+- formInput optional arguments are an instance of [FormInputConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
+- formField optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
 
 ## Troubleshooting
 
