@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-04-26T02:31:14.719Z
+date: 2024-04-26T02:56:13.144Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -160,9 +160,26 @@ function someProcessWithHook(arg) {
 
 ## Specific Use Cases
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+### Render hooks
 
+One extremely common use for hooks is the various `render` hooks, which are triggered by instances of the [Application](/en/development/api/application) class. Whenever an application is rendered, a hook fires for it and each of its parent classes, e.g. `renderActorSheet` then `renderDocumentSheet` then `renderFormApplication` then `renderApplication`. Each of these event calls has the same information, the difference is just being able to specify how far up the inheritance tree you want to operate.
+
+All render hooks pass the same three arguments
+- `app`: The sheet class instance
+- `html`: A JQuery object of the application's rendered HTML
+- `data`: The result of the `getData` operation that was fed into the application's handlebars template
+
+A common usage pattern within these hooks is adding new inputs; by properly assigning the `name` property, you can have the application's native form handling do the work for you. Remember that you can't just assign arbitrary data to a data model, so you usually have to work with [flags](/en/development/api/flags).
+
+```js
+Hooks.on("renderActorSheet", (app, html, data) => {
+	const myData = app.actor.getFlag("myModule", "myFlag", "myData");
+  // The `value` sets what shows in the input, and `name` is important for the form submission
+  const myInput = `<input type="text" value="${myData}" name="flags.myModule.myFlag">`;
+  // the jquery work here may be kinda complicated
+  html.find(".some .selector").after(myInput);
+})
+```
 
 ---
 
