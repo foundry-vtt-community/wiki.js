@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-04-26T02:26:51.882Z
+date: 2024-04-26T02:31:14.719Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -178,3 +178,18 @@ console.warn("Set Hook Debugging to", CONFIG.debug.hooks)
 ```
 
 If you already know the name of the hook, you can also use `Hooks.once("hookEventNameHere", console.log)` to cleanly send the next instance to console to access its properties.
+
+### Object Reference Troubles
+
+Objects (this includes class instances as well as arrays) passed to hooks are *pass by reference* - any mutations made to them will also be present in the object instances used by the function that called them. If the arguments are re-assigned, that linkage breaks and changes will *not* be reflected. 
+
+By contrast, primitives - strings, numbers, booleans - will NOT see any changes made to them reflected in the original function.
+
+```js
+Hooks.on("someEvent", (someObj) => {
+  // this change will be present on the original instance
+	someObj.someProp = true
+  // this breaks the link and further changes will not be reflected
+  someObj = { foo: "bar" } 
+})
+```
