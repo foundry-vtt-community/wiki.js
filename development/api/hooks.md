@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-04-26T03:02:02.965Z
+date: 2024-04-26T03:03:11.378Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -65,6 +65,8 @@ It is expected that all of the data a hook callback will need should be provided
 ---
 
 ## API Interactions
+
+The `Hooks` class works entirely with static methods and is never actually instantiated. Below are coverage of its various static methods.
 
 ### Registering a Hook callback
 
