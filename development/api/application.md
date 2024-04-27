@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-27T01:23:13.512Z
+date: 2024-04-27T01:23:19.804Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -128,7 +128,7 @@ The SearchFilter helper class connects a text input box to filtering a list of r
 The Application class and its subclasses have native support with the `filters` option — usually in the `defaultOptions` static getter — that is an array of `SearchFilterConfiguration`. If you use this option you only need to provide the `inputSelector` and `contentSelector` properties, as the native handling automatically binds [`_onSearchFilter`](https://foundryvtt.com/api/classes/client.Application.html#_onSearchFilter) to the callback. The implementation of this function is entirely up to you; the implementation in `PackageConfiguration` is probably the most approachable. The inherited jsdoc is provided for clarity.
 
 ```js
-	// defaultOptions includes the following configuration for the search field
+	// defaultOptions includes the following configuration for the search field:
   // filters: [{inputSelector: 'input[name="filter"]', contentSelector: ".categories"}],
 
   /**
