@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-27T01:23:05.601Z
+date: 2024-04-27T01:23:13.512Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -129,7 +129,7 @@ The Application class and its subclasses have native support with the `filters` 
 
 ```js
 	// defaultOptions includes the following configuration for the search field
-  // `filters: [{inputSelector: 'input[name="filter"]', contentSelector: ".categories"}],`
+  // filters: [{inputSelector: 'input[name="filter"]', contentSelector: ".categories"}],
 
   /**
    * Handle changes to search filtering controllers which are bound to the Application
