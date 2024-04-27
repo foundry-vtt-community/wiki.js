@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-21T03:35:28.354Z
+date: 2024-04-27T01:23:05.601Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -123,8 +123,45 @@ API Reference
 - [SearchFilter](https://foundryvtt.com/api/classes/client.SearchFilter.html)
 - [SearchFilterConfiguration](https://foundryvtt.com/api/interfaces/client.SearchFilterConfiguration.html)
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The SearchFilter helper class connects a text input box to filtering a list of results. 
+
+The Application class and its subclasses have native support with the `filters` option — usually in the `defaultOptions` static getter — that is an array of `SearchFilterConfiguration`. If you use this option you only need to provide the `inputSelector` and `contentSelector` properties, as the native handling automatically binds [`_onSearchFilter`](https://foundryvtt.com/api/classes/client.Application.html#_onSearchFilter) to the callback. The implementation of this function is entirely up to you; the implementation in `PackageConfiguration` is probably the most approachable. The inherited jsdoc is provided for clarity.
+
+```js
+	// defaultOptions includes the following configuration for the search field
+  // `filters: [{inputSelector: 'input[name="filter"]', contentSelector: ".categories"}],`
+
+  /**
+   * Handle changes to search filtering controllers which are bound to the Application
+   * @param {KeyboardEvent} event   The key-up event from keyboard input
+   * @param {string} query          The raw string input to the search field
+   * @param {RegExp} rgx            The regular expression to test against
+   * @param {HTMLElement} html      The HTML element which should be filtered
+   * @protected
+   */
+  _onSearchFilter(event, query, rgx, html) {
+    const visibleCategories = new Set();
+
+    // Hide entries
+    for ( const entry of html.querySelectorAll(".form-group") ) {
+      if ( !query ) {
+        entry.classList.remove("hidden");
+        continue;
+      }
+      const label = entry.querySelector("label")?.textContent;
+      const notes = entry.querySelector(".notes")?.textContent;
+      const match = (label && rgx.test(SearchFilter.cleanQuery(label)))
+        || (notes && rgx.test(SearchFilter.cleanQuery(notes)));
+      entry.classList.toggle("hidden", !match);
+      if ( match ) visibleCategories.add(entry.parentElement.dataset.category);
+    }
+
+    // Hide categories which have no visible children
+    for ( const category of html.querySelectorAll(".category") ) {
+      category.classList.toggle("hidden", query && !visibleCategories.has(category.dataset.category));
+    }
+  }
+```
 
 ### Tabs
 
