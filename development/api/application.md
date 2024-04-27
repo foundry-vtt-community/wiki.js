@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-27T01:23:19.804Z
+date: 2024-04-27T02:06:03.236Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -98,8 +98,22 @@ API Reference
 - [DragDrop](https://foundryvtt.com/api/classes/client.DragDrop.html)
 - [DragDropConfiguration](https://foundryvtt.com/api/interfaces/client.DragDropConfiguration.html)
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The `DragDrop` helper class integrates dragging and dropping across different applications in the Foundry interface. The most common use is dragging and dropping documents from one location to another.
+
+The Application class and its subclasses have native support with the `dragDrop` option — usually in the `defaultOptions` static getter — that is an array of `DragDropConfiguration`. If you use this option you only need to provide the `dragSelector` and `dropSelector` properties, as the native handling automatically binds the following functions:
+- *Permissions*
+  - `_canDragStart` (default: `game.user.isGM`)
+  - `_canDragDrop` (default: `game.user.isGM`)
+- *Callbacks*
+  - `_onDragStart`
+  - `_onDragOver`
+  - `_onDrop`
+
+The most common interaction with drag events is on subclasses of ActorSheets, where there's already some native handling; for example, the `dragDrop` option defaults to `[{dragSelector: ".item-list .item", dropSelector: null}]`. It also replaces the default permission controls with `this.isEditable`.
+
+The `ActorSheet#_onDragStart` function natively supports dragging from `li.item` elements with `data-item-id` and `data-effect-id` properties, but only checks if those ids are directly in the embedded collections of the actor; there is no native support for effects embedded in items, for systems that have `CONFIG.ActiveEffect.legacyTransferral = false`.
+
+`ActorSheet#_onDrop` is more flexible, offering protected functions for `_onDropActiveEffect`, `_onDropActor`, `_onDropItem`, and `_onDropFolder`. These functions serve as sensible defaults, but can be overridden as needed (e.g. `_onDropActor` simply returns `false` if the current user is not an owner of the actor; you can extend it to do whatever linkages between actors are necessary).
 
 ### FormDataExtended
 
@@ -123,7 +137,7 @@ API Reference
 - [SearchFilter](https://foundryvtt.com/api/classes/client.SearchFilter.html)
 - [SearchFilterConfiguration](https://foundryvtt.com/api/interfaces/client.SearchFilterConfiguration.html)
 
-The SearchFilter helper class connects a text input box to filtering a list of results. 
+The `SearchFilter` helper class connects a text input box to filtering a list of results. It suppresses other events that might fire on the same input, instead activating the bound callback to modify the targeted HTML.
 
 The Application class and its subclasses have native support with the `filters` option — usually in the `defaultOptions` static getter — that is an array of `SearchFilterConfiguration`. If you use this option you only need to provide the `inputSelector` and `contentSelector` properties, as the native handling automatically binds [`_onSearchFilter`](https://foundryvtt.com/api/classes/client.Application.html#_onSearchFilter) to the callback. The implementation of this function is entirely up to you; the implementation in `PackageConfiguration` is probably the most approachable. The inherited jsdoc is provided for clarity.
 
