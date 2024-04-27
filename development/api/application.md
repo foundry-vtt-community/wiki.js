@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-27T02:06:03.236Z
+date: 2024-04-27T06:38:07.556Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -89,8 +89,40 @@ API Reference
 - [ContextMenu](https://foundryvtt.com/api/classes/client.ContextMenu.html)
 - [ContextMenuEntry](https://foundryvtt.com/api/interfaces/client.ContextMenuEntry.html)
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The `ContextMenu` provides a standard UI for context menus in FoundryVTT applications, and are triggered by right clicking. The normal way to create them is with `ContextMenu.create` in your application's `activateListeners` method, providing a name, icon, and a callback.
+
+```js
+  activateListeners(html) {
+  	super.activateListeners(html)
+  	// other listener handling
+    ContextMenu.create(this, html, [
+      {
+      	name: "Option 1",
+        icon: "fa-solid fa-trash",
+        callback: this.myFunction.bind(this),
+        condition: this.myCondition.bind(this)
+      }
+    ]);
+  }
+
+	/**
+   *	@param {JQuery} jq - The element that the ContextMenu was attached to
+   */
+	myFunction(jq) {
+  	// does something
+  }
+
+	/**
+   *	@param {JQuery} jq - The element that the ContextMenu was attached to
+   *  @returns {boolean} Whether or not to render this option
+   */
+	myCondition(jq) {
+  	// You don't have to use the provided JQuery object
+    // You could just have it be conditional on say `this.isEditable`
+  }
+```
+
+Note that the `icon` property uses the internal string for a [FontAwesome](https://fontawesome.com/search?o=r&m=free) icon, rather than the full html element.
 
 ### DragDrop
 
