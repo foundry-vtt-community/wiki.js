@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-29T22:10:36.893Z
+date: 2024-04-29T22:53:30.157Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -309,7 +309,11 @@ class MyApplication extends DocumentSheet {
     // htmlContent might be `this.document.system.description` or some other similar path
     context.enrichedDescription = await TextEditor.enrichHTML(
       this.document.system.description, 
-      { async: true }
+      { 
+        async: true,
+        // For Actors and Items
+        rollData: this.document.getRollData
+      }
     );
     return context;
   }
@@ -324,8 +328,40 @@ The corresponding handlebars helper, as text enrichment is typically paired. The
 
 #### Defining your own enrichers
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+API Reference
+- [TextEditorEnricherConfig](https://foundryvtt.com/api/interfaces/client.TextEditorEnricherConfig.html)
+- [TextEditorEnricher](https://foundryvtt.com/api/modules/client.html#TextEditorEnricher)
+
+By default, Foundry includes enrichers for the following:
+- Content links like ``
+- Hyperlinks
+- Inline rolls like `[[/roll]]`
+
+If you wish to add more, add them to the array at `CONFIG.TextEditor.enrichers` during the `init` hook.
+
+```js
+/**
+ * Replaces `<p>Foo</p>` with `<p>Bar</p>`
+ * @param {RegExpMatchArray} match    - The regular expression match result
+ * @param {EnrichmentOptions _options - Options provided to customize text enrichment
+ *                                      (can usually be ignored for custom enrichers)
+ * @returns {HTMLElement|null} An HTML element to insert in place of the matched text or null to
+ *                             indicate that no replacement should be made.
+ */ 
+async function myEnricher(match, _options) {
+	// You usually want to do something with the matched string
+  // Depending on your regex you'll also have capture groups
+  // const matchString = match[0];
+  const p = document.createElement(p)
+  p.textContent = "Bar"
+  return p;
+}
+
+Hooks.once("init", () => {
+  CONFIG.TextEditor.enrichers.push({pattern: /<p>Foo<\/p>/g, enricher: myEnricher})
+}
+
+```
 
 ---
 ## Troubleshooting
