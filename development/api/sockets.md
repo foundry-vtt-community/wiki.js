@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2024-04-29T16:12:29.352Z
+date: 2024-04-29T16:21:39.851Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -190,7 +190,7 @@ This helper class is then instantiated as part of the `init` hook:
 
 ```js
 Hooks.once("init", () => {
-	const myPackage = game.modules.get("my-module") // or just game.system if you're a system
+  const myPackage = game.modules.get("my-module") // or just game.system if you're a system
   myPackage.socketHandler = new MyPackageSocketHandler()
 });
 
