@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-29T20:41:28.546Z
+date: 2024-04-29T22:10:36.893Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -294,6 +294,35 @@ Hooks.once("init", () => {
 
 API Reference
 - [TextEditor.enrichHTML](https://foundryvtt.com/api/classes/client.TextEditor.html#enrichHTML)
+- [HandlebarsHelpers.editor](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#editor)
+- [EnrichmentOptions](https://foundryvtt.com/api/interfaces/client.EnrichmentOptions.html)
+
+Text enrichment is the process of replacing and augmenting input text like `[[/roll 1d6]]` in the final rendered HTML. It's most commonly used with the `{{editor}}` Handlebars helper.
+
+As of v10, text enrichment is an *asynchronous* process, which means it needs to happen inside `getData` before template rendering. The second argument implements EnrichmentOptions; make sure to pass `async: true` to avoid triggering a deprecation warning.
+```js
+// Text enrichment is available for all applications
+// it's just most commonly needed by custom DocumentSheets
+class MyApplication extends DocumentSheet {
+  async getData() {
+    const context = super.getData();
+    // htmlContent might be `this.document.system.description` or some other similar path
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      this.document.system.description, 
+      { async: true }
+    );
+    return context;
+  }
+}
+``` 
+
+The corresponding handlebars helper, as text enrichment is typically paired. The `target` property should match the source of what was enriched, in this case the assumption is that `system.description` of the document was the field run through enrichment. The `editable` value here is inherited from `super.getData`, which is why it's not explicitly declared in `context` above.
+
+```handlebars
+{{editor enrichedDescription target="system.description" editable=editable button=true engine=prosemirror" collaborate=false}}
+```
+
+#### Defining your own enrichers
 
 > Stub
 > This section is a stub, you can help by contributing to it.
