@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2024-02-14T22:43:26.512Z
+date: 2024-04-29T16:04:55.163Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -12,14 +12,28 @@ dateCreated: 2021-11-17T14:06:05.915Z
 
 ![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
+Sockets provide a way for different clients connected to the same server to communicate with each other.
+
+*Official Documentation*
+
+- [Socket](https://socket.io/docs/v4/client-api/#socket)
+- [SocketInterface](https://foundryvtt.com/api/classes/client.SocketInterface.html)
+
+**Legend**
+
+```js
+SocketInterface.dispatch // `.` indicates static method or property
+Socket#on // `#` indicates instance method or property
+```
+
 ## Overview
+
+Foundry Core uses socket.io v4 behind the scenes for its websocket connections between Server and Client. It exposes the active socket.io connection directly on `game.socket`, allowing packages to emit and respond to events they create. As such, most of the [socket.io documentation](https://socket.io/docs/v4/) is directly applicable to foundry's usage.
+
+This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other [Document](/en/development/api/document) [update cycle event](/en/development/api/document#event-cycles).
 
 > [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib) is a library module which provides useful abstractions for many common Foundry specific socket patterns.
 {.is-info}
-
-Foundry Core uses socket.io v4 behind the scenes for its websocket connections between Server and Client. It exposes the active socketio connection directly on `game.socket`, allowing packages to emit and respond to events they create. As such, most of the [socket.io documentation](https://socket.io/docs/v4/) is directly applicable to foundry's usage.
-
-This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other [Document](/en/development/api/document) [update cycle event](/en/development/api/document#event-cycles).
 
 ---
 
@@ -106,7 +120,7 @@ new Promise(resolve => {
 });
 ```
 
-The arguments of the acknowledgement callback are the same arguments that all other connected clients would get from the broadcast.
+The arguments of the acknowledgement callback are the same arguments that all other connected clients would get from the broadcast. Note that this is *not* the same as being able to fully `await` any actions taken on the other clients - you would need a *second* socket event, sent by the other clients, to handle that.
 
 ## Specific Use Cases
 
@@ -128,9 +142,9 @@ function handleAction(arg) {
 
 function handleSocketEvent({ type, payload }) {
   switch (type) {
-    case "ACTION": {
+    case "ACTION":
       handleAction(payload);
-    }
+      break;
     default:
       throw new Error('unknown type');
   }
@@ -139,10 +153,50 @@ function handleSocketEvent({ type, payload }) {
 socket.on('module.my-module', handleSocketEvent);
 ```
 
-### Handling the event on the emitter
+#### Using a helper class
 
-> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteforeveryone) has a handy abstraction for this pattern.
-{.is-info}
+You can encapsulate this strategy by defining a helper class; the following example is inspired by [SwadeSocketHandler](https://gitlab.com/peginc/swade/-/blob/develop/src/module/SwadeSocketHandler.ts):
+
+```js
+class MyPackageSocketHandler {
+	constructor() {
+  	this.identifier = "module.my-module" // whatever event name is correct for your package
+    this.registerSocketListeners()
+  }
+  
+  registerSocketHandlers() {
+  	game.socket.on(this.identifier, ({ type, payload }) => {
+    	switch (type) {
+        case "ACTION":
+          this.#handleAction(payload);
+          break;
+        default:
+          throw new Error('unknown type');
+      }
+    }
+  }
+                   
+  emit(type, payload) {
+    return game.socket.emit(this.identifier, { type, payload })
+  }
+                   
+  #handleAction(arg) {
+    console.log(arg);
+  }
+}
+```
+
+This helper class is then instantiated as part of the `init` hook:
+
+```js
+Hooks.once("init", () => {
+	const myPackage = game.modules.get("my-module") // or just game.system if you're a system
+  myPackage.socketHandler = new MyPackageSocketHandler()
+});
+
+// Emitting events works like this
+game.modules.get("myPackage").socketHandler.emit("ACTION", "foo")
+```
 
 #### Pretend the Emitter was called
 
@@ -170,10 +224,12 @@ function emitEventToAll() {
 
 **Socket#emitWithAck:** This method, despite being available as of v11, does not appear to be useful in the context of Foundry because the server acts as a middle-man for all socket events.
 
-### Doing something on one GM client (aka. GM Proxy)
+#### Handling the event on the emitter
 
-> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteasgm) has a handy abstraction for this pattern. This snippet is derived from its solution.
+> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteforeveryone) has a handy abstraction for this pattern.
 {.is-info}
+
+### Doing something on one GM client (aka. GM Proxy)
 
 This is a common way to get around permission issues when player clients want to interact with Documents they do not typically have permission to modify (e.g. deducting the health of a monster after an attack).
 
@@ -188,10 +244,10 @@ function handleEvent(arg) {
 socket.on('module.my-module', handleEvent);
 ```
 
-### Doing something on one specific client
-
-> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteasuser) has a handy abstraction for this pattern.
+> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteasgm) has a handy abstraction for this pattern. This snippet is derived from its solution.
 {.is-info}
+
+### Doing something on one specific client
 
 Some applications require a specific user to be targeted. This cannot be accomplished by the `emit` call and instead must happen in the handler.
 
@@ -214,6 +270,9 @@ function handleEvent({ targetUserId, payload }) {
 
 socket.on('module.my-module', handleEvent);
 ```
+
+> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib#socketexecuteasuser) has a handy abstraction for this pattern.
+{.is-info}
 
 ---
 
