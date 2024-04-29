@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-29T22:53:30.157Z
+date: 2024-04-29T23:05:01.372Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -337,11 +337,10 @@ By default, Foundry includes enrichers for the following:
 - Hyperlinks
 - Inline rolls like `[[/roll]]`
 
-If you wish to add more, add them to the array at `CONFIG.TextEditor.enrichers` during the `init` hook.
+If you wish to add more, add them to the array at `CONFIG.TextEditor.enrichers` during the `init` hook. The following demonstrates an enricher that replaces all instances of `<p>Foo</p>` with `<p>Bar</p>`.
 
 ```js
 /**
- * Replaces `<p>Foo</p>` with `<p>Bar</p>`
  * @param {RegExpMatchArray} match    - The regular expression match result
  * @param {EnrichmentOptions _options - Options provided to customize text enrichment
  *                                      (can usually be ignored for custom enrichers)
