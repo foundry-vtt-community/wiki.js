@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-29T20:22:47.053Z
+date: 2024-04-29T20:41:28.546Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -261,6 +261,34 @@ Here are some tips and tricks when working with Applications.
 Document classes each have an `apps` property which stores an object of Application references. This object is iterated through and each app is re-rendered whenever the Document changes, so that any open windows will reflect the new state of the document.
 
 DocumentSheet automatically adds itself to the apps when it initially renders, which lets the document easily automatically trigger re-rendering the sheet to reflect new changes in realtime. However, applications can add themselves to a document's apps as-needed, which can be used for any non-DocumentSheet Application subclasses which need to display data about a document and keep the display properly updated.
+
+### Registering Document Sheets
+
+API Reference
+- [DocumentSheetConfig.registerSheet](https://foundryvtt.com/api/classes/client.DocumentSheetConfig.html#registerSheet)
+
+When you define a new document sheet, you can register it in the `init` hook so it's configurable. 
+
+```js
+// You need to separately define your DocumentSheet subclass
+class MyActorSheet extends ActorSheet {}
+
+Hooks.once("init", () => {
+  // The the `config` object in the fourth argument is entirely optional, as are its properties
+	DocumentSheetConfig.registerSheet(Actor, "package-id", MyActorSheet, {
+    // Any string here will be localized
+  	label: "MyPackage.MyDocumentSheet.Label",
+    // If the sheet is only usable for some values of the `type` field
+    types: ["character, npc"],
+    // Generally useful, defaults to false
+    makeDefault: true,
+    // There are other properties that 
+  })
+  // `Actors.registerSheet` is semantically equivalent to passing Actor as the first argument
+  // This works for all world collections, e.g. Items
+  Actors.registerSheet("package-id", MyActorSheet, {})
+}
+```
 
 ### Text Enrichment
 
