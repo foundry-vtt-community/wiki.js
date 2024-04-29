@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2024-04-29T16:04:55.163Z
+date: 2024-04-29T16:12:29.352Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -41,7 +41,7 @@ This is useful in cases where a package wants to send information or events to o
 
 ### Prerequisites
 
-Before a package can send and receive socket events, it must request a socket namespace from the server. This is done by putting `socket: true` in the manifest json.
+Before a package can send and receive socket events, it must request a socket namespace from the server. This is done by putting `"socket": true` in the manifest json.
 
 All socket messages from a package must be emitted with the event name `module.{module-name}` or `system.{system-id}` (e.g. `module.my-cool-module`).
 
@@ -281,7 +281,7 @@ socket.on('module.my-module', handleEvent);
 ### No socket event is broadcast
 
 Run through this checklist of common issues:
-1. Does your manifest include the `socket: true` property mentioned in the [Prerequisites](#prerequisites)?
+1. Does your manifest include the `"socket": true` property mentioned in the [Prerequisites](#prerequisites)?
 2. Have you restarted the world since modifying the manifest JSON?
 3. Are you broadcasting with the correct namespace on your event? (Also mentioned in the Prerequisites section)
 4. Are you trying to respond to the broadcast from the emitting client? (Emitters do not recieve the broadcast, some strategies above for handling this.)
