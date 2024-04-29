@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-29T23:05:01.372Z
+date: 2024-04-29T23:05:22.312Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -333,7 +333,7 @@ API Reference
 - [TextEditorEnricher](https://foundryvtt.com/api/modules/client.html#TextEditorEnricher)
 
 By default, Foundry includes enrichers for the following:
-- Content links like ``
+- Content links like `@UUID[uuid]{name}`
 - Hyperlinks
 - Inline rolls like `[[/roll]]`
 
