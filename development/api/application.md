@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-27T06:38:07.556Z
+date: 2024-04-29T20:22:47.053Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -108,7 +108,7 @@ The `ContextMenu` provides a standard UI for context menus in FoundryVTT applica
 	/**
    *	@param {JQuery} jq - The element that the ContextMenu was attached to
    */
-	myFunction(jq) {
+  myFunction(jq) {
   	// does something
   }
 
@@ -116,7 +116,7 @@ The `ContextMenu` provides a standard UI for context menus in FoundryVTT applica
    *	@param {JQuery} jq - The element that the ContextMenu was attached to
    *  @returns {boolean} Whether or not to render this option
    */
-	myCondition(jq) {
+  myCondition(jq) {
   	// You don't have to use the provided JQuery object
     // You could just have it be conditional on say `this.isEditable`
   }
