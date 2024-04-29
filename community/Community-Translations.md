@@ -2,13 +2,14 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2024-04-04T14:16:37.265Z
+date: 2024-04-29T18:43:23.416Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
 ---
 
 # Translations
+
 ## Catalan
 
 ### Core Game Foundry VTT 
@@ -395,6 +396,50 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 ---
 
+# Game System Translation Statistics
+
+Below is a table of languages and the number of unique game systems for that particular language. For the time being only game systems that have native out-of-the-box support for translations without the need for another translation module are counted.
+
+Notably the following popular game systems either do not natively support translations so only their native versions (usually English) are counted or simply do not currently have additional translations:
+- Dungeons & Dragons 5th Edition<a href="#system-stats-footnote-1"><sup>1</sup></a>
+- Pathfinder Second Edition<a href="#system-stats-footnote-1"><sup>1</sup></a>
+- Warhammer Fantasy Roleplay 4th Edition
+- Lancer
+- Warhammer 40,000 Roleplay: Wrath & Glory
+- Dungeon Crawl Classics
+- Level Up: Advanced 5th Edition
+- Stars Without Number: Revised
+- Cities Without Number
+
+| IETF tag | Language name | Game systems |
+|:-|:-|-:|
+| ar | Arabic / العربية | 1 |
+| ca | Catalan / català | 8 |
+| cs | Czech / čeština | 5 |
+| da | Danish / dansk | 1 |
+| de | German / Deutsch | 69 |
+| en | English / English | 311 |
+| es | Spanish / español | 99 |
+| eu | Basque / euskara | 2 |
+| fi | Finnish / suomi | 1 |
+| fr | French / français | 135 |
+| gl | Galician / galego | 1 |
+| it | Italian / italiano | 31 |
+| ja | Japanese / 日本語 | 19 |
+| ko | Korean / 한국어 | 14 |
+| nl | Dutch / Nederlands | 1 |
+| pl | Polish / polski | 26 |
+| pt | Portuguese / português | 61 |
+| ru | Russian / русский | 13 |
+| sv | Swedish / svenska | 18 |
+| uk | Ukrainian / українська | 2 |
+| zh | Chinese / 中文 | 19 |
+| *—* | *No language specified.* | 24 |
+
+Data crawled on 2024-04-29.
+
+**<a id="system-stats-footnote-1"><sup>1</sup></a>**: Many known translations exist, but are not *currently* included in the statistics table.
+
 # Localization Teams & Tools
 
 | Code | Language | Repository | License | Local Community | Translation Tool |
@@ -415,6 +460,7 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 | ru-RU | Russian / русский | <i class="fab fa-github"></i> [GitHub](https://github.com/Phenomen/foundry-vtt-ru) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Russian Community](https://discord.gg/Z2CXFy35WF) | [i18n editor](https://github.com/jcbvm/i18n-editor) (locally) |
 | es-ES | Spanish / español | <i class="fab fa-gitlab"></i> [GitLab](https://gitlab.com/carlosjrlu/foundryvtt-es) | *none* | <i class="fab fa-discord"></i> [Foundry VTT Español](https://discord.gg/MHCerwd) (also Catalan) | [POEditor](https://poeditor.com/), [Transifex](https://www.transifex.com/none-738/public/), [Weblate](https://trans.etranslator.eu/projects/fvtt-system-swade/en-json/) (shared with Catalan), custom R code (locally) |
 | sv-SE | Swedish / Svenska | <i class="fab fa-github"></i> [GitHub](https://github.com/xdy/FoundryVTT-lang-sv) | [MIT](https://github.com/xdy/foundryvtt-lang-sv/blob/master/LICENSE) | *none* | [IntelliJ IDEA](https://www.jetbrains.com/idea/) (locally) |
+
 
 # Core Localization File Compatibility
 The table below lists various statistics of the core English translation file across different Foundry VTT versions. The data are intended to help translators determine whether it is necessary for them to update their core translation and for users who are using older version of the application to figure out if a core translation file for one version of the application will work in another version.
