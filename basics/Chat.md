@@ -2,13 +2,13 @@
 title: Chat
 description: 
 published: true
-date: 2022-05-19T13:17:43.321Z
+date: 2024-04-30T17:27:06.639Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:21:56.970Z
 ---
 
-# Chat, Macro, & Formatting Guide
+1. - # Chat, Macro, & Formatting Guide![unknown.png](/unknown.png)[Chat](/en/basics/Chat)hello![fvtt-solid-512.png](/fvtt-solid-512.png)
 
 # Chat Commands
 
