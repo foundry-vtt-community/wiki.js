@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2024-04-29T18:43:23.416Z
+date: 2024-05-01T13:16:11.898Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -396,13 +396,13 @@ För närvarande mestadels maskinöversatt, går långsamt igenom och förbättr
 
 ---
 
-# Game System Translation Statistics
+# Package Translation Statistics
 
 Below is a table of languages and the number of unique game systems for that particular language. For the time being only game systems that have native out-of-the-box support for translations without the need for another translation module are counted.
 
 Notably the following popular game systems either do not natively support translations so only their native versions (usually English) are counted or simply do not currently have additional translations:
-- Dungeons & Dragons 5th Edition<a href="#system-stats-footnote-1"><sup>1</sup></a>
-- Pathfinder Second Edition<a href="#system-stats-footnote-1"><sup>1</sup></a>
+- Dungeons & Dragons 5th Edition<a href="#language-stats-footnote-1"><sup>1</sup></a>
+- Pathfinder Second Edition<a href="#language-stats-footnote-1"><sup>1</sup></a>
 - Warhammer Fantasy Roleplay 4th Edition
 - Lancer
 - Warhammer 40,000 Roleplay: Wrath & Glory
@@ -411,34 +411,44 @@ Notably the following popular game systems either do not natively support transl
 - Stars Without Number: Revised
 - Cities Without Number
 
-| IETF tag | Language name | Game systems |
-|:-|:-|-:|
-| ar | Arabic / العربية | 1 |
-| ca | Catalan / català | 8 |
-| cs | Czech / čeština | 5 |
-| da | Danish / dansk | 1 |
-| de | German / Deutsch | 69 |
-| en | English / English | 311 |
-| es | Spanish / español | 99 |
-| eu | Basque / euskara | 2 |
-| fi | Finnish / suomi | 1 |
-| fr | French / français | 135 |
-| gl | Galician / galego | 1 |
-| it | Italian / italiano | 31 |
-| ja | Japanese / 日本語 | 19 |
-| ko | Korean / 한국어 | 14 |
-| nl | Dutch / Nederlands | 1 |
-| pl | Polish / polski | 26 |
-| pt | Portuguese / português | 61 |
-| ru | Russian / русский | 13 |
-| sv | Swedish / svenska | 18 |
-| uk | Ukrainian / українська | 2 |
-| zh | Chinese / 中文 | 19 |
-| *—* | *No language specified.* | 24 |
+The module column includes separate translation modules for game systems (that usually do not include added functionality to the game system itself) as well as the core software translation modules.
 
-Data crawled on 2024-04-29.
+For readability purposes data for regional variants of languages (such as fr-CA Canadian French and fr-FR for French spoken in France) have been summed under the main language tag.
 
-**<a id="system-stats-footnote-1"><sup>1</sup></a>**: Many known translations exist, but are not *currently* included in the statistics table.
+| IETF tag | Language name | Game systems | Modules |
+|:-|:-|-:|-:|
+| ar | Arabic / العربية | 1 | 6 |
+| ca | Catalan / català | 8 | 8 |
+| ceb | Cebuano / Cebuano | — | 1 |
+| cs | Czech / čeština | 5 | 13 |
+| da | Danish / dansk | 1 | 1 |
+| de | German / Deutsch | 69 | 281 |
+| en | English / English | 311 | 1224 |
+| es | Spanish / español | 99 | 256 |
+| eu | Basque / euskara | 2 | 1 |
+| fi | Finnish / suomi | 1 | 17 |
+| fr | French / français | 135 | 289 |
+| gl | Galician / galego | 1 | 3 |
+| hi | Hindi / हिन्दी | — | 2 |
+| hu | Hungarian / magyar | — | 3 |
+| it | Italian / italiano | 31 | 73 |
+| ja | Japanese / 日本語 | 19 | 201 |
+| ko | Korean / 한국어 | 14 | 85 |
+| nl | Dutch / Nederlands | 1 | 5 |
+| pl | Polish / polski | 26 | 67 |
+| pt | Portuguese / português | 61 | 188 |
+| ro | Romanian / română | — | 4 |
+| ru | Russian / русский | 13 | 13 |
+| sv | Swedish / svenska | 18 | 23 |
+| th | Thai / ไทย | — | 2 |
+| uk | Ukrainian / українська | 2 | 6 |
+| zh | Chinese / 中文 | 19 | 133 |
+| — | *No language specified.*<a href="#language-stats-footnote-2"><sup>2</sup></a> | 24 | 3226 |
+
+Game system data crawled on 2024-04-29, module data on 2024-04-30–2024-05-01.
+
+**<a id="language-stats-footnote-1"><sup>1</sup></a>**: Many known translations exist, but are not *currently* included in the statistics table.
+**<a id="language-stats-footnote-2"><sup>2</sup></a>**: Some modules do not have any displayed text to translate, or they do not support translations at all. Both are counted on this row.
 
 # Localization Teams & Tools
 
