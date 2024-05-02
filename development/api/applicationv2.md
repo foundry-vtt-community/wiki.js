@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-02T17:53:57.597Z
+date: 2024-05-02T23:09:53.931Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -143,7 +143,8 @@ For those used to ApplicationV2, this largely replaces the role `activateListene
 
 ### HandlebarsApplicationMixin
 
-[MDN docs on Mixins](https://developer.mozilla.org/en-US/docs/Glossary/Mixin)
+- [MDN docs on Mixins](https://developer.mozilla.org/en-US/docs/Glossary/Mixin)
+- [Handlebars Helpers](/en/development/api/helpers)
 
 Unless you are using an external rendering package, every AppV2 instance is going to extend `HandlebarsApplicationMixin`. This function returns a `HandlebarsApplication` class which fully implements the rendering logic required by ApplicationV2.
 
@@ -240,11 +241,6 @@ class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 ```
 
 There are much less verbose implementations of the above code - the whole thing is theoretically doable in a single line - but for clarity this example does each piece step-by-step.
-
-### Custom Widgets
-
-> Stub
-> This section is a stub, you can help by contributing to it.
 
 ### Non-Handlebars Rendering Frameworks
 
