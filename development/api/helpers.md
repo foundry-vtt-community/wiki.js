@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-05-02T23:23:05.921Z
+date: 2024-05-02T23:31:53.173Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -301,7 +301,7 @@ You can display signed number that's editable as a number by combining `input ty
 />
 ```
 
-### Branching version logic
+### Branching Core Software Version Logic
 
 Supporting multiple versions of Foundry in the same codebase can be tricky when there's breaking API changes. One way to address this is `foundry.utils.isNewerVersion`. You can always pair this with the core software compatibility controls in `module.json` or `system.json`
 
@@ -340,5 +340,8 @@ One way to offload HTML construction from the Handlebars template to a javascrip
 
 ## Troubleshooting
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+Here are some common problems when interacting with these utility functions.
+
+### Editor Height
+
+The `editor` helper does not have a native height, so if it's not contained in an external `div` it will collapse to 0. CSS classes can help here, but keep in mind the default class of the created div is `editor`.
