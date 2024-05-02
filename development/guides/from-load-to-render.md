@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-03-08T08:36:27.858Z
+date: 2024-05-02T23:59:19.210Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -49,7 +49,7 @@ This method copies data from `_source` to the top level, using the `schema` fiel
 
 ## ClientDocument
 
-The next step is specific to client documents, as these processes are not run in the server. The ClientDocumentMixin is found in `client\data\abstract\client-document.js` and takes a `Document` as its argument, for example `BaseActor`. This document provides the necessary schema information for all of the other processes to work.
+The next step is specific to client documents, as these processes are not run in the server. The `ClientDocumentMixin` is found in `client\data\abstract\client-document.js` and takes a `Document` as its argument, for example `BaseActor`. This document provides the necessary schema information for all of the other processes to work.
 
 Our main function of concern here is `ClientDocument#prepareData`, which is wrapped by `ClientDocument#_safePrepareData` with error-catching protections. The actual function is quite straightforward:
 
