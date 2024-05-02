@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-04-26T20:35:30.960Z
+date: 2024-05-02T23:23:05.921Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -331,6 +331,12 @@ Using the `formInput` and `formField` helpers can be confusing for nested struct
 - `formField` optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
 
 One example of their implementation is the new UserConfig application, available at `resources\app\client-esm\applications\sheets\user-config.mjs` and its template `resources\app\templates\sheets\user-config.hbs`
+
+#### The `widget` option
+
+One way to offload HTML construction from the Handlebars template to a javascript function is the `widget` option, which takes a function with the signature `(FormGroupConfig, FormInputConfig} => HTMLDivElement`\*. This is only available to the `formField` helper, not `formInput`, and its actual utility as compared to defining the structure in the template directly depends on the complxity of the application. 
+
+\*The function could technically return any HTML element with a valid `outerHTML` property, not just a div.
 
 ## Troubleshooting
 
