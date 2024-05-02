@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-04-24T16:26:09.804Z
+date: 2024-05-02T17:53:57.597Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -243,8 +243,16 @@ There are much less verbose implementations of the above code - the whole thing 
 
 ### Custom Widgets
 
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ### Non-Handlebars Rendering Frameworks
 
+> Stub
+> This section is a stub, you can help by contributing to it.
 
 ---
 ## Troubleshooting
+
+> Stub
+> This section is a stub, you can help by contributing to it.
