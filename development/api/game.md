@@ -2,7 +2,7 @@
 title: Game
 description: The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience. The singleton instance of the Game class is available as the global variable game.
 published: true
-date: 2024-05-03T04:32:36.675Z
+date: 2024-05-03T04:45:28.430Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-21T00:03:08.559Z
@@ -166,8 +166,36 @@ A third option is to use `WorldCollection#folders`, but this is generally inferi
 
 ---
 ## Specific Use Cases
-> Stub
-> This section is a stub, you can help by contributing to it.
+
+Here are some specific tips and tricks with the `game` instance
+
+### Adding functions for others to use
+
+Dumping functions into the global scope with `globalThis.myFunc = myFunc` can be risky if there's a name collission with another package. One way to deal with this is to add them to your package's instance, at either `game.system` or `game.modules.get('my-module')`. By convention, many group them under the `api`
+
+```js
+function myFunction() {}
+
+// Doing it here requires assigning during 
+Hooks.once("init", () => {
+  // system example
+  game.system.api = {
+    myFunction,
+  }
+  
+  // module example
+  game.modules.get('my-module').api = {
+  	myFunction,
+  }
+})
+
+// a macro could then call the function with
+game.system.api.myFunction()
+game.modules.get('my-module').api.myFunction()
+```
+
+One important caveat to this method is they won't reliably be available until AFTER the `init` hook, so this isn't as helpful for anything you expect end users to call either *before* hooks fire (classes to extend, for examples) or during the `init` hook. In these cases, just scoping out a globally available object can be preferable, such as using our package name.
+
 ---
 ## Troubleshooting
 > Stub
