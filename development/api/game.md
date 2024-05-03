@@ -2,7 +2,7 @@
 title: Game
 description: The core Game instance which encapsulates the data, settings, and states relevant for managing the game experience. The singleton instance of the Game class is available as the global variable game.
 published: true
-date: 2024-04-25T23:26:54.169Z
+date: 2024-05-03T04:32:36.675Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-21T00:03:08.559Z
@@ -13,7 +13,7 @@ dateCreated: 2024-03-21T00:03:08.559Z
 The Game class is the upper-most level of Foundry's data architecture and is responsible for initializing the application. It's usually referenced by the singleton `game` instance.
 
 *Official documentation*
-- https://foundryvtt.com/api/classes/client.Game.html
+- [Game](https://foundryvtt.com/api/classes/client.Game.html)
 
 The `Game` class relies heavily on read-only properties which are not documented by the official JSDoc, you can see the class in more detail in your local install at `foundryInstallPath\resources\app\client\game.js`.
 
