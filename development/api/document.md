@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-04-25T17:17:49.252Z
+date: 2024-05-03T15:41:25.827Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -190,6 +190,14 @@ const newJournalEntry = JournalEntry.create({
 > **Calling the Constructor**
 > It is technically possible to instantiate a Document by calling the constructor with `new Document(data)` instead of using `Document.create()`. This is very rarely the correct way to do things, because it only creates an object in memory, it does not send the document to the database to be persisted or sent to other clients.
 {.is-warning}
+
+##### Clone
+
+The [clone](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#clone) method of documents has many uses; by default, it creates an in-memory copy of the document. The official docs don't do a good job of explaining the arguments it takes, so here's some additional clarification:
+- The first argument, `data`, is merged into the document's data. This is a good way to change the `type` field of a document, letting Foundry squeeze the data into the new model.
+- The second argument, `context`, has two additional fields to the [DocumentConstructionContext](https://foundryvtt.com/api/interfaces/types.DocumentConstructionContext.html)
+  - `save`, which defaults to false, makes `clone` asynchronous and instantiates the cloned document in the database
+  - `keepId`, which defaults to false, keeps the `id` property; this is usually only used for in-memory copies, e.g. dnd5e uses this for upcasting spells.
 
 ##### Embedded Document
 
