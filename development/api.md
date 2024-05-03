@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-04-21T00:00:32.021Z
+date: 2024-05-03T05:41:38.091Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -25,9 +25,20 @@ This is generated from the JSDoc comments within `foundry.js` that is accessible
 
 ### [Application](/en/development/api/application)
 
+The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
+
 #### Topics
 - Common Methods (render, getData, activateListeners)
+- Helper classes like ContextMenu, DragDrop, FormDataExtended
 - Automatic rerendering on updates
+
+### [ApplicationV2](/en/development/api/applicationv2)
+
+The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface. It was introduced in Foundry Version 12 with the intent to slowly phase out use off the original Application class.
+
+#### Topics
+- Advantages over Application
+- HandlebarsApplicationMixin
 
 ### [Compendium Collection](/en/development/api/CompendiumCollection)
 Compendiums and how data is stored
@@ -125,7 +136,6 @@ Everything you need to know about using Settings for your package.
 - How to Create/Read/Update/Delete a Setting
 - Setting Menus
 - Possible Setting configurations
-
 
 ### [Sockets](/en/development/api/sockets)
 API documentation for the Socket functionality available to packages.
