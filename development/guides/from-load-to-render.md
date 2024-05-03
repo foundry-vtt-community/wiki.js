@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-05-02T23:59:19.210Z
+date: 2024-05-03T23:47:25.949Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -157,8 +157,9 @@ const isEditable = this.isEditable;
 
 Classes like `ActorSheet` or `ItemSheet` often add pieces to this, e.g. adding another pointer named after the document class. What happens here though is ultimately only for the purposes of being fed into a `renderTemplate` call, and so everything that happens here is for *display* logic.
 
-Things that are good to do in getData
+Things that are good to do in `getData`
 - Associate labels
+- Enrich editor data
 - Split embedded documents up into categories (e.g. items by type and active effects by enabled)
 - Sort embedded documents (ActorSheet already does this for items)
 - Construct `selectOptions` for dropdown fields
