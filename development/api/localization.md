@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-02-26T20:55:49.864Z
+date: 2024-05-03T04:53:15.311Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -257,6 +257,12 @@ You then need to finish configuration by adding the following to your `.vscode/s
 
 ## Troubleshooting
 
+Here are some common problems while working in 
+
 ### Language file isn't working
 
 Edits to your manifest.json are not checked while Foundry is running; try shutting the software down and then restarting.
+
+### Translation key isn't working
+
+Run your language file through a JSON linter, and double check if you're re-using the same key elsewhere in your file at that same level; items in particular can be a common issue where the same word is re-used in multiple different ways.
