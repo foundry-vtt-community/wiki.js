@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-02T23:09:53.931Z
+date: 2024-05-04T17:39:23.503Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -69,9 +69,15 @@ Unlike the App V1, the base App V2 class handles forms natively, without relianc
 
 The following section provides guidance for implementing ApplicationV2 and its related classes
 
+### BASE_APPLICATION
+
+In ApplicationV2 subclasses, the inheritanceChain determines how far up both `DEFAULT_OPTIONS` and hook calls will go from the currently instantiated class. This is controlled by the static property `BASE_APPLICATION`, which points to a class definition. By default, all ApplicationV2 subclasses inherit all the way up, but subclasses may prefer to limit this.
+
 ### DEFAULT_OPTIONS
 
-One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`.
+One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`. 
+
+There's no need to call `super.mergeObject` or anything here; subclasses by default merge their `DEFAULT_OPTIONS` into their parent class, all the way up to through the inheritance chain.
 
 #### Form Handling
 
@@ -139,6 +145,29 @@ This could pair with the following HTML to add the click event. You can use what
 ```
 
 For those used to ApplicationV2, this largely replaces the role `activateListeners` played. If you have other event listeners to add, you can use `_onRender`, which is explored in the "Specific Use Cases" section.
+
+#### Header Buttons
+
+ApplicationV2 provides a dropdown of header buttons, an alternative to the strictly in-line implementation from Application that caused problems when many different packages wanted to have header buttons. Instantiating these buttons involves the `window` object and its `controls` property, which is an array of [ApplicationHeaderControlsEntry](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationHeaderControlsEntry.html). Note that the `action` property is a *string* which must match one of the actions defined in the `actions` object (see the above section for more details).
+
+```js
+// for proper class definition you'd need to use HandlebarsApplicationMixin
+// but it's not used here because these are properties of the base ApplicationV2 class
+class MyApplication extends ApplicationV2 {
+	static DEFAULT_OPTIONS = {
+  	actions: {
+    	myAction: MyApplication.myAction
+    }
+    window: {
+      controls: [
+        icon: 'fa-solid fa-triangle-exclamation',
+        label: "Bar",
+        action: "myAction"
+      ]
+    }
+  }
+}
+```
 
 
 ### HandlebarsApplicationMixin
