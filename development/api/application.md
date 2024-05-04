@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-04-29T23:05:22.312Z
+date: 2024-05-04T17:03:17.991Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -251,6 +251,17 @@ Then in your template `.hbs` file:
 ```
 
 The `group` property is optional if you only intend to have one set of tabs, but if you plan to have two or more you must include the `group` property on each TabsConfiguration object.
+
+### Header Buttons
+
+The `_getHeaderButtons` method is responsible for managing the buttons in the header of the application. By default, all applications have a `close` button, and DocumentSheet adds buttons to import from compendium and configure the choice of sheet. Calling `const buttons = super._getHeaderButtons` is important because that's how you have the inherited buttons. By convention, subclasses use `unshift` to modify the array rather than `push` to ensure that the `close` button remains the right-most. The buttons array is typed as an array of [ApplicationHeaderButton](https://foundryvtt.com/api/modules/hookEvents.html#ApplicationHeaderButton). The `onClick` function can be asynchronous or not, as your application needs.
+
+Modules can inject header buttons with the [getApplicationHeaderButtons](https://foundryvtt.com/api/modules/hookEvents.html#getApplicationHeaderButtons) hook; like render hooks, this is called for each class in an application's inheritance chain.
+
+> **Use Header Buttons Sparingly**
+> By default, the Application class does not have any protections for large numbers of header buttons, which can crowd out the application's title and cause other UI issues.
+{.is-warning}
+
 
 ---
 ## Specific Use Cases
