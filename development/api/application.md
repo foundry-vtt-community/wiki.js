@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-05-04T17:03:17.991Z
+date: 2024-05-04T17:16:54.474Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -254,9 +254,46 @@ The `group` property is optional if you only intend to have one set of tabs, but
 
 ### Header Buttons
 
-The `_getHeaderButtons` method is responsible for managing the buttons in the header of the application. By default, all applications have a `close` button, and DocumentSheet adds buttons to import from compendium and configure the choice of sheet. Calling `const buttons = super._getHeaderButtons` is important because that's how you have the inherited buttons. By convention, subclasses use `unshift` to modify the array rather than `push` to ensure that the `close` button remains the right-most. The buttons array is typed as an array of [ApplicationHeaderButton](https://foundryvtt.com/api/modules/hookEvents.html#ApplicationHeaderButton). The `onClick` function can be asynchronous or not, as your application needs.
+The `_getHeaderButtons` method is responsible for managing the buttons in the header of the application. By default, all applications have a `close` button, and DocumentSheet adds buttons to import from compendium and configure the choice of sheet. Calling `const buttons = super._getHeaderButtons` is important because that's how you have the inherited buttons. By convention, subclasses use `unshift` to modify the array rather than `push` to ensure that the `close` button remains the right-most. The buttons array is typed as an array of [ApplicationHeaderButton](https://foundryvtt.com/api/modules/hookEvents.html#ApplicationHeaderButton). The `onClick` function can be asynchronous or not, as your application needs, but the `_getHeaderButtons` method itself is strictly synchronous.
 
-Modules can inject header buttons with the [getApplicationHeaderButtons](https://foundryvtt.com/api/modules/hookEvents.html#getApplicationHeaderButtons) hook; like render hooks, this is called for each class in an application's inheritance chain.
+A simple example:
+
+```js
+class MyApplication extends Application {
+	_getHeaderButtons() {
+  	const buttons = super._getHeaderButtons();
+    // You can use conditional logic here like any other function
+    buttons.unshift({
+      // there's no auto-localization so you probably want to use game.i18n.localize
+    	label: "Foo",
+      // class applied to the button for styling
+      class: 'foo',
+      // Free fontawesome icons
+      icon: 'fa-solid fa-triangle-exclamation',
+      // the callback when clicked
+      onclick: () => ui.notifications.info("Foo!")
+    })
+    return buttons;
+  }
+}
+```
+
+Modules can inject header buttons with the [getApplicationHeaderButtons](https://foundryvtt.com/api/modules/hookEvents.html#getApplicationHeaderButtons) hook; like render hooks, this is called for each class in an application's inheritance chain (e.g. both `getApplicationHeaderButtons` and `getDocumentSheetHeaderButtons` are called)
+
+```js
+// app is the application subclass that's calling the hook
+Hooks.on("getApplicationHeaderButtons", (app, buttons) => {
+  // You can use conditional logic here like any other function
+  buttons.unshift({
+    label: "Bar",
+    class: 'bar',
+    icon: 'fa-solid fa-triangle-exclamation',
+    onclick: () => ui.notifications.info("Bar!")
+  })
+  // You're mutating the `buttons` array so no return here
+}}
+
+```
 
 > **Use Header Buttons Sparingly**
 > By default, the Application class does not have any protections for large numbers of header buttons, which can crowd out the application's title and cause other UI issues.
