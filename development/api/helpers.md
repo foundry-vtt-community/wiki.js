@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-05-05T16:15:10.399Z
+date: 2024-05-05T16:19:01.121Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -147,7 +147,7 @@ The localize helper represents two different functions; `game.i18n.localize` and
 
 #### [selectOptions](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#selectOptions)
 
-The `selectOptions` Handlebars helper is provided by Foundry for more easily building the list of options in a drop-down list. This is typically used in actor and item sheets, for offering the selection of one option among multiple.
+The `selectOptions` Handlebars helper is provided by Foundry for more easily building the list of options in a `select` element. This is typically used in actor and item sheets, for offering the selection of one option among multiple. It can also be used in a `multi-select` element for choosing multiple options.
 
 The helper takes an object of values and labels (either labels to use as-is or localization strings) and generates the proper sequence of `<option>` HTML elements for them.
 
