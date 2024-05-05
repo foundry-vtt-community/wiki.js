@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-05-04T17:16:54.474Z
+date: 2024-05-05T19:32:15.168Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -372,6 +372,12 @@ The corresponding handlebars helper, as text enrichment is typically paired. The
 
 ```handlebars
 {{editor enrichedDescription target="system.description" editable=editable button=true engine=prosemirror" collaborate=false}}
+```
+
+If you're just trying to display enriched text without providing an editor input - such as an item's description in an actor sheet - triple braces will render a string as raw HTML.
+
+```handlebars
+{{{enrichedDescription}}}
 ```
 
 #### Defining your own enrichers
