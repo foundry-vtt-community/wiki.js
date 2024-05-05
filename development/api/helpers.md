@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-05-02T23:31:53.173Z
+date: 2024-05-05T16:15:10.399Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -16,6 +16,8 @@ Official documentation
 - [Client Utils](https://foundryvtt.com/api/modules/client.html)
 - [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html)
 - [Handlebars Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
+- Custom HTML Elements
+  - [`<multi-select>`](https://foundryvtt.com/api/classes/client.HTMLMultiSelectElement.html)
 - [Primitive Flattens](https://foundryvtt.com/api/modules/primitives.html)
   - [Array](https://foundryvtt.com/api/modules/primitives.Array.html)
   - [Date](https://foundryvtt.com/api/modules/primitives.Date.html)
