@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-05-03T05:41:38.091Z
+date: 2024-05-05T17:13:56.332Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -21,7 +21,7 @@ This is generated from the JSDoc comments within `foundry.js` that is accessible
 
 ---
 
-## Exisiting Documentation
+## Existing Documentation
 
 ### [Application](/en/development/api/application)
 
@@ -101,6 +101,7 @@ Independently useful functions in the Foundry API
 #### Topics
 - foundry.utils
 - HandlebarsHelpers
+- Custom HTML elements
 - Primitive extensions
 
 ### [Hooks](/en/development/api/hooks)
