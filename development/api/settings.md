@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-02-23T15:35:07.126Z
+date: 2024-05-05T18:13:12.329Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -12,34 +12,54 @@ dateCreated: 2021-11-17T15:31:39.865Z
 
 ![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
 
+Settings are a general way for packages to persist and store data without being attached to a [document](/en/development/api/document).
+
+*Official Documentation*
+- [ClientSettings](https://foundryvtt.com/api/classes/client.ClientSettings.html)
+
+**Legend**
+
+```js
+Setting.defineSchema // `.` indicates static method or property
+ClientSettings#register // `#` indicates instance method or property
+game.settings.register // The ClientSettings class is instantiated as part of the `game` object
+```
+
 ## Overview
 
-Settings, like flags, are a way for packages to store and persist data. Settings are not tied to a specific document however, unlike flags. 
+Settings, like flags, are a way for packages to store and persist data. Unlike flags, Settings are not tied to a specific document. 
 
 For the vast majority of use-cases, settings are intended to be modified by a UI, either a Menu or within the Module Settings panel itself. These settings are intended to be used to modify the functionality of a package, rather than store arbitrary data for that module or system.
-
-Official Documentation
-- [ClientSettings in the API docs](https://foundryvtt.com/api/classes/client.ClientSettings.html#register)
 
 ---
 
 ## Key Concepts
 
+The following elements are crucial to understanding settings.
+
 ### Scope
-Also unlike flags they are able to leverage a 'scope' field to keep a piece of data specific to a user's localStorage (`scope: client`) or put that data in the world's database (`scope: world`).
+
+Settings have a `scope` field which indicates if it's part of the device's localStorage (`scope: client`) or if it should be stored in the world's database (`scope: world`).
+
+If you wish to store data specific to a user across any devices they might use, consider instead storing the data as a [flag](/en/development/api/flags) on the user document. Alternatively, store the data as part of a object in the setting.
 
 ### Permissions
-There is a separate permission dedicated to governing which users can edit World Scoped settings. This is something to watch out for when using settings as your data storage medium.
+
+Client settings are always editable by any user, as they are device-specific. This works well for display-based settings.
+
+World settings have a global permission level that is shared with the ability to enable or disable modules. By default, only Assistant GMs and Game Masters can edit world settings. This is a critical limitation that may require [sockets](/en/development/api/sockets) to work around.
 
 ---
 
 ## API Interactions
 
+The `ClientSettings` is a singleton class instantiated as part of the [game](/en/development/api/game) object.
+
 ### Registering a Setting
 
 *See [Setting Types](#setting-types) below for examples about the different types of settings that can be registered.*
 
-> It is recommended to register settings during the `init` hook.
+> Settings MUST be registered during the `init` hook.
 {.is-info}
 
 All settings must be registered before they can be set or accessed. This needs to be done with [`game.settings.register`](https://foundryvtt.com/api/classes/client.ClientSettings.html#register), with `game.settings` being an instance of `ClientSettings`.
@@ -121,6 +141,7 @@ game.settings.get('myModuleName', 'customClassSetting').merged; // 'foosiuswhate
 As an even more advanced use case, you could pass a `DataModel` as a setting to provide advanced validation; the type casting has a special case from these where it calls `YourDataModel.fromSource`.
 
 #### Localization
+
 When registering a setting, instead of passing a hard-coded string to `name` or `hint`, it is possible to pass a localization path to support translations. Both `name` and `hint` are run through [`game.i18n.localize`](https://foundryvtt.com/api/Localization.html#localize) before being displayed in the Setting UI.
 
 ### Setting a Setting's value
@@ -184,6 +205,7 @@ For more information on the basic primitive constructors and how they convert va
 
 ## Specific Use Cases
 
+Here are some tips and tricks for working with settings.
 
 ### Reacting to Setting Changes
 
@@ -250,6 +272,8 @@ FormApplications in particular allow you to run any logic you want during the `_
 ---
 
 ## Troubleshooting
+
+Here are some common issues when working with settings.
 
 ### Cannot set properties of undefined (setting 'key')
 
