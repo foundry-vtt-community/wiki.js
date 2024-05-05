@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-05-05T16:19:40.609Z
+date: 2024-05-05T16:36:40.946Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -16,9 +16,7 @@ Official documentation
 - [Client Utils](https://foundryvtt.com/api/modules/client.html)
 - [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html)
 - [Handlebars Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
-- Custom HTML Elements
-  - [`<multi-checkbox>`](https://foundryvtt.com/api/classes/client.HTMLMultiCheckboxElement.html)
-  - [`<multi-select>`](https://foundryvtt.com/api/classes/client.HTMLMultiSelectElement.html)
+- [Custom HTML Elements](https://foundryvtt.com/api/v12/modules/foundry.applications.elements.html)
 - [Primitive Flattens](https://foundryvtt.com/api/modules/primitives.html)
   - [Array](https://foundryvtt.com/api/modules/primitives.Array.html)
   - [Date](https://foundryvtt.com/api/modules/primitives.Date.html)
@@ -74,6 +72,22 @@ const options: {sign: true}
 
 HandlebarsHelpers.numberFormat(value, {hash: options}) // returns '+3'
 ```
+
+### Custom HTML ELements
+
+Key files: `client-esm\applications\elements`
+
+As a more broadly applicable alternative to Handlebars Helpers, the core Foundry team has started implementing custom HTML elements. These are *not* tied to the Handlebars rendering engine and are less flexible as a result, but there are many aspects they *can* replace. 
+
+Calling a custom HTML element works just like ordinary browser elements like `<div>`; they support all of the normal properties like `name` and `class`. Most of these are some form of `input`, so `name` is especially necessary to work with the native form handling.
+```html
+<multi-select name="flags.my-module.foobar">
+  <option value="foo">Foo</option>
+  <option value="bar">Bar</option>
+</multi-select>
+```
+
+These custom elements can be combined with handlebars just fine, e.g. using `selectOptions` to fill in a `multi-select`. In other contexts, it may be preferable to construct them with Javascript; you can do this with their `create` static method. 
 
 ### Primitive Extensions
 
