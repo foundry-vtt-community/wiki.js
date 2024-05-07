@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-04T17:45:53.036Z
+date: 2024-05-07T03:59:41.751Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -148,7 +148,7 @@ For those used to ApplicationV2, this largely replaces the role `activateListene
 
 #### Header Buttons
 
-ApplicationV2 provides a dropdown of header buttons, an alternative to the strictly in-line implementation from Application that caused problems when many different packages wanted to have header buttons. Instantiating these buttons involves the `window` object and its `controls` property, which is an array of [ApplicationHeaderControlsEntry](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationHeaderControlsEntry.html). Note that the `action` property is a *string* which must match one of the actions defined in the `actions` object (see the above section for more details).
+ApplicationV2 provides a dropdown of header buttons, an alternative to the strictly in-line implementation from Application that caused problems when many different packages wanted to have header buttons. Instantiating these buttons involves the `window` object and its `controls` property, which is an array of [ApplicationHeaderControlsEntry](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationHeaderControlsEntry.html).
 
 ```js
 // for proper class definition you'd need to use HandlebarsApplicationMixin
@@ -160,8 +160,11 @@ class MyApplication extends ApplicationV2 {
     }
     window: {
       controls: [
+        // font awesome icon
         icon: 'fa-solid fa-triangle-exclamation',
+        // string that will be run through localization
         label: "Bar",
+        // string that MUST match one of your `actions`
         action: "myAction"
       ]
     }
