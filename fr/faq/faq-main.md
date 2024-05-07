@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-05-07T06:25:23.167Z
+date: 2024-05-07T06:25:46.152Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -274,7 +274,7 @@ Si vous êtes l'auteur des données (grosso-modo l'auteur du contenu ou du jeu d
 
 Dans tout les autres cas (la majorité, normalement), vous avez saisi dans Foundry du contenu (ie PNJs, talents, sorts, compétences, texte, ....) sur lequel vous n'avez aucun droit de diffusion. 
 
-Autrement dit : vous pouvez ajouter ce contenu dans Foundry autant que vous voulez, MAIS vous n'avez pas le droit de le distribuer publiquement. Pour le distribuer, il vous faut contacter les ayants-droits (ie donc les auteurs/éditeur du jeu).
+Autrement dit : vous pouvez ajouter ce contenu dans Foundry autant que vous voulez, MAIS vous n'avez pas le droit de le distribuer publiquement. Pour le distribuer, il vous faut contacter les ayants-droits (ie donc les auteurs/éditeur du jeu) et obtenir leur autorisation (ou pas...) sur la diffusion de ce contenu.
 
 ## Je suis paumé ... ça ne fonctionne pas !
 
