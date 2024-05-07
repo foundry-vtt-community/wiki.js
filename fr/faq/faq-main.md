@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-05-07T06:23:56.015Z
+date: 2024-05-07T06:24:41.947Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -271,7 +271,8 @@ Je suis – raisonnablement – disponible sur le Discord de Foundry (@LeRatierB
 ## J'ai ajouté des données à ma partie, et je veux les partager. j'ai le droit ?
 
 Si vous êtes l'auteur des données (grosso-modo l'auteur du contenu ou du jeu de rôle), vous avez tout les droits, c"est votre propriété.
-Dans tout les autres cas (la majorité, normalement), vous avez saisi dans Foundry du contenu (ie PNJs, talents, sorts, compétences, texte, ....) sur lequel vous n'avez aucun droit de diffusion. Autrement dit : vous pouvez ajouter ce contenu dans Foundry autant que vous voulez, MAIS vous n'avez pas le droit de le distribuer publiquement.
+
+Dans tout les autres cas (la majorité, normalement), vous avez saisi dans Foundry du contenu (ie PNJs, talents, sorts, compétences, texte, ....) sur lequel vous n'avez aucun droit de diffusion. Autrement dit : vous pouvez ajouter ce contenu dans Foundry autant que vous voulez, MAIS vous n'avez pas le droit de le distribuer publiquement. Pour le distribuer, il vous faut contacter les ayants-droits (ie donc les auteurs/éditeur du jeu)
 
 ## Je suis paumé ... ça ne fonctionne pas !
 
