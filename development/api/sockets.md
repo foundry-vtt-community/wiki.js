@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2024-04-29T16:21:39.851Z
+date: 2024-05-07T05:30:31.683Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -83,9 +83,15 @@ All socket messages from a package must be emitted with the event name `module.{
 > Note in my example that both the requesting client and all other clients both `doSomethingWithResponse(response)`, but for the requesting client that work happens inside the acknowledgement which allows the entire transaction to be encapsulated inside a single Promise. 
 > 
 
+### Socket Data
+
+Socket data *must* be JSON serializable; that is to say, it must consist only of [values valid in a JSON file](https://www.json.org/json-en.html). Complex data structures such as a Data Model instance or even Sets must be transformed back to simpler forms; also keep in mind that if possible you should keep the data in the transfer as minimal as possible. If you need to reference a document, just send the UUID rather than all of its data, as the other client can just fetch from the UUID.
+
 ---
 
 ## API Interactions
+
+These are common ways to interact with the Foundry socket framework.
 
 ### Simple emission of a socket event
 
@@ -123,6 +129,8 @@ new Promise(resolve => {
 The arguments of the acknowledgement callback are the same arguments that all other connected clients would get from the broadcast. Note that this is *not* the same as being able to fully `await` any actions taken on the other clients - you would need a *second* socket event, sent by the other clients, to handle that.
 
 ## Specific Use Cases
+
+Here are some helpful tips and tricks when working with sockets.
 
 ### Handling many kinds of events from one package
 
