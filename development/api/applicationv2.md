@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-07T03:59:41.751Z
+date: 2024-05-07T04:07:33.887Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -273,6 +273,51 @@ class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 ```
 
 There are much less verbose implementations of the above code - the whole thing is theoretically doable in a single line - but for clarity this example does each piece step-by-step.
+
+### Text Enrichment
+
+API Reference
+- [TextEditor.enrichHTML](https://foundryvtt.com/api/classes/client.TextEditor.html#enrichHTML)
+- [HandlebarsHelpers.editor](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#editor)
+- [EnrichmentOptions](https://foundryvtt.com/api/interfaces/client.EnrichmentOptions.html)
+
+Text enrichment is the process of replacing and augmenting input text like `[[/roll 1d6]]` in the final rendered HTML. It's most commonly used with the `{{editor}}` Handlebars helper.
+
+Text enrichment is an *asynchronous* process, which means it needs to happen inside `_prepareContext` before template rendering. The first argument is a path to the raw html string to be enriched, the second argument implements EnrichmentOptions.
+```js
+// Exact process may differ for non-handlebars mixins
+class MyApplication extends HandlebarsApplicationMixin(ApplicationV2) {
+  async _prepareContext() {
+    const context = {};
+    
+    // Be mindful of mutating other objects in memory when you enrich
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      this.document.system.description, 
+      { 
+        // Only show secret blocks to owner
+        secrets: this.document.isOwner,
+        // For Actors and Items
+        rollData: this.document.getRollData
+      }
+    );
+    
+    return context;
+  }
+}
+``` 
+
+The corresponding handlebars helper, as text enrichment is typically paired. The `target` property should match the source of what was enriched, in this case the assumption is that `system.description` of the document was the field run through enrichment. The `editable` value here is inherited from `super.getData`, which is why it's not explicitly declared in `context` above.
+
+```handlebars
+{{editor enrichedDescription target="system.description" editable=editable button=true engine=prosemirror" collaborate=false}}
+```
+
+If you're just trying to display enriched text without providing an editor input - such as an item's description in an actor sheet - triple braces will render a string as raw HTML.
+
+```handlebars
+{{{enrichedDescription}}}
+```
+
 
 ### DragDrop
 
