@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-05-07T06:11:44.873Z
+date: 2024-05-07T06:16:48.319Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -360,6 +360,11 @@ En général, c'est le signe que le navigateur a un conflit avec le driver du GP
 Si le problème persiste, essayez avec un autre navigateur : Chromium, Firefox, Chrome, Edge, Opera
 
 Si le problème est toujours présent, vérifiez la résolution de votre image de la scène : si la carte graphique de votre joueuse/joueur est ancienne ou faiblarde, certaines résolutions au-dessus de 8000x4000 ne s'affichent plus. Si c'est le cas, vous n'avez pas d'autres choix que de réduire les résolutions des scènes concernées (ou acheter une autre carte graphique à votre joueuse/joueur :) )
+
+## J'ai un message qui m'indique que mon navigateur ne supporte pas WebGL. C'est grave ?
+
+FoundryVTT fait une utilisation importante de la technologie WebGL qui permet un affichage graphique évolué dans les navigateurs Web. Si vous avez ce message, c'est que votre navigateur ou votre driver de carte graphique n'est pas à jour. Commencez à mettre à jour ces 2 éléments.
+Si le probème persiste, essayez avec un autre navigateur jusqu'à ce que ce message ne soit plus affiché.
 
 ## Le temps de chargement pour arriver à la première scène est très long, c'est normal ?
 
