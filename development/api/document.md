@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-05-03T15:41:25.827Z
+date: 2024-05-07T19:41:52.275Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -374,8 +374,36 @@ const actor = game.actors.getName("Foo");
 actor.deleteEmbeddedDocuments("Item", ["some-id"]);
 ```
 
+### Subclassing Documents
+
+Systems often provide their own document subclasses, most commonly for Actor and Item. This allows them to provide their own functionality and override existing functionality; all document classes come with a number of protected functions that *only* exist to be overridden by systems that need to.
+
+#### Setting
+
+Systems can configure their document classes in their init hook.
+
+```js
+Hooks.once("init", () => {
+  // Define custom Document classes
+  CONFIG.Actor.documentClass = BoilerplateActor;
+  CONFIG.Item.documentClass = BoilerplateItem;
+})
+```
+
+#### Fetching
+
+Modules can retrieve the configured document class with the `getDocumentClass` helper method. This is important to do when accessing static methods and properties to ensure you're using any overridden methods.
+
+```js
+getDocumentClass("Actor").create(data)
+// Semantically equivalent, but getDocumentClass is officially preferred
+Actor.implementation.create(data)
+```
+
 ---
 ## Specific Use Cases
+
+Here are some tips and tricks to working with the document portion of the Foundry API.
 
 ### Temporary Document
 
