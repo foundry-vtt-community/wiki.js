@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-05-05T19:32:15.168Z
+date: 2024-05-07T04:07:54.067Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -358,6 +358,8 @@ class MyApplication extends DocumentSheet {
     context.enrichedDescription = await TextEditor.enrichHTML(
       this.document.system.description, 
       { 
+        // Only show secret blocks to owner
+        secrets: this.document.isOwner,
         async: true,
         // For Actors and Items
         rollData: this.document.getRollData
