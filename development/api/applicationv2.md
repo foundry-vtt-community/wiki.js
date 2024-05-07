@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-07T04:07:33.887Z
+date: 2024-05-07T23:33:08.098Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -216,7 +216,46 @@ However, you may want to have an application that leverages the flexibility of m
 - The parts are concatenated in the order of the static property
 - All parts are encapsulated by the top-level tag set in `options.tag` - this is a `div` by default in `ApplicationV2`, but `DocumentSheetV2` changes this to `form`. 
 
-Broadly speaking, this means the most straightforward way to structure a multi-part application is to lead with a `header` part, then optionally a distinct `tabs` part, then finally one part for each of your tabs. 
+Broadly speaking, this means the most straightforward way to structure a multi-part application is to lead with a `header` part, then optionally a distinct `tabs` part, then finally one part for each of your tabs. You can even add a footer at the end!
+
+##### Only Displaying Some Parts
+
+One way to leverage parts is to only show some of them sometimes. The correct place to do this is by extending `_configureRenderOptions`; you *do* want to call `super` here, as some important things happen upstream.
+
+```js
+// This isn't DocumentSheet specific, but it's the most common place you'll want this
+class MyApplication extends HandlebarsApplicationMixin(DocumentSheetV2) {
+	static PARTS = {
+  	header: { template: '' },
+  	tabs: { template: '' },
+  	description: { template: '' },
+    foo: { template: '' },
+    bar: { template: '' },
+  }
+  
+  /** @override */
+  _configureRenderOptions(options) {
+    // This fills in `options.parts` with an array of ALL part keys by default
+    // So we need to call `super` first
+  	super._configureRenderOptions(options);
+    // Completely overriding the parts
+    options.parts = ['header', 'tabs', 'description']
+    // Don't show the other tabs if only limited view
+    if (this.document.limited) return;
+    // Keep in mind that the order of `parts` *does* matter
+    // So you may need to use array manipulation
+    switch (this.document.type) {
+      case 'typeA':
+        options.parts.push('foo')
+        break;
+      case 'typeB':
+        options.parts.push('bar')
+        break;
+    }
+  }
+
+}
+```
 
 #### \_prepareContext
 
@@ -273,6 +312,14 @@ class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 ```
 
 There are much less verbose implementations of the above code - the whole thing is theoretically doable in a single line - but for clarity this example does each piece step-by-step.
+
+### Tabs
+
+There's a handy Foundry-provided template for tabs at `templates/generic/tab-navigation.hbs` you may want to use.
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 
 ### Text Enrichment
 
