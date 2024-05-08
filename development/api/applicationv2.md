@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-08T01:07:51.259Z
+date: 2024-05-08T01:36:42.107Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -338,11 +338,34 @@ There are much less verbose implementations of the above code - the whole thing 
 
 ### Tabs
 
-There's a handy Foundry-provided template for tabs at `templates/generic/tab-navigation.hbs` you may want to use.
+ApplicationV2 includes partial support for tabs with the `changeTab` method and the `tabGroups` record. However, `HandlebarsApplicationMixin` will not automatically re-apply the relevant class adjustments on re-render automatically, meaning that developers are responsible for maintaining that status themselves.
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+**Tab Navigation**. There's a handy Foundry-provided template for tabs at `templates/generic/tab-navigation.hbs` you may want to use. It expects an array or record of `ApplicationTab` supplied in a field named `tabs`. A record is preferable to an array because it can be more easily used in tab *display*. Note that this is merely a typedef, you must actually construct the object yourself.
 
+```js
+/**
+ * @typedef ApplicationTab
+ * @property {string} id         The ID of the tab. Unique per group.
+ * @property {string} group      The group this tab belongs to.
+ * @property {string} icon       An icon to prepend to the tab
+ * @property {string} label      Display text, will be run through `game.i18n.localize`
+ * @property {boolean} active    If this is the active tab, set with `this.tabGroups[group] === id`
+ * @property {string} cssClass   "active" or "" based on the above boolean
+ */
+```
+
+**Tab Display**. Each element representing one of your tabs *must* have the following attributes
+- `data-group`, for the tab's group
+- `data-tab`, for the tab's ID
+- You'll want to include `cssClass` within your tab's `class` property to track `active` or not.
+
+If each of your tabs is a `part`, then you can store your `tabs` as `Record<partId, ApplicationTab>`. Then, in `_preparePartContext`, set `context.tab = context.tabs[partId]`. A simple example of the target handlebars:
+
+```handlebars
+<section class="tab {{tab.cssClass}}" data-group="primary" data-tab="foo">
+	{{! stuff }}
+</section>
+```
 
 ### Text Enrichment
 
