@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-07T23:33:08.098Z
+date: 2024-05-08T01:07:51.259Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -269,8 +269,31 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 > 
 > The disconnect between the data provided to the template via `_prepareContext` and the way that `DocumentSheetV2` stores data to the document via the `name=""` field can cause some confusion. It's common practice to store the document's system data in a system key in the context, which means that you can usually do `value="{{system.attribute.value}}"` and `name="system.attribute.value"` in an actor/item sheet and stuff works.
 >
-> However, under the hood, the `{{}}` is pulling stuff from the context object that the `getData` returns while the `name=""` is storing things based on the data path in the document itself. This means that there are situations where they won't actually line up, because they're not fundamentally pointing at the same thing at the end of the day, they just happen to often line up.
+> However, under the hood, the `{{}}` is pulling stuff from the context object that the `_prepareContext` returns while the `name=""` is storing things based on the data path in the document itself. This means that there are situations where they won't actually line up, because they're not fundamentally pointing at the same thing at the end of the day, they just happen to often line up.
 {.is-info}
+
+##### \_preparePartContext
+
+The `HandlebarsApplicationMixin` provides an additional method for handling context that can be useful, especially in conjunction with only rendering some of the parts so only processes that are actually necessary happen. You can cleanly override this method and ignore the native `partId` property it adds. A common pattern is to use a [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement on `partId` and then handle part-specific logic in the cases.
+
+```js
+    /**
+     * Prepare context that is specific to only a single rendered part.
+     *
+     * It is recommended to augment or mutate the shared context so that downstream methods like _onRender have
+     * visibility into the data that was used for rendering. It is acceptable to return a different context object
+     * rather than mutating the shared context at the expense of this transparency.
+     *
+     * @param {string} partId                         The part being rendered
+     * @param {ApplicationRenderContext} context      Shared context provided by _prepareContext
+     * @returns {Promise<ApplicationRenderContext>}   Context data for a specific part
+     * @protected
+     */
+    async _preparePartContext(partId, context) {
+      context.partId = `${this.id}-${partId}`;
+      return context;
+    }
+```
 
 ---
 ## Specific Use Cases
