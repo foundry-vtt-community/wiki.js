@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-05-08T20:04:18.883Z
+date: 2024-05-08T20:16:15.773Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -280,7 +280,7 @@ Si vous vous trouvez dans une autre configuration, par exemple :
 - ce que vous avez réalisé ne porte pas vraiment l’empreinte de votre personnalité mais se borne plutôt à un travail répétitif, procédurier, un travail au kilomètre etc.
 
 Tout n’est pas perdu pour autant mais vos possibilités de montrer le contenu en question, d’y faire jouer et bien sûr de le diffuser/distribuer sans prendre de risques juridiques commencent à devenir incertaines.
-Dans ce cas si vous êtes encore motivé(e), il vaudrait mieux vous abstenir de rendre votre travail public avant d’avoir consulté un juriste spécialisé (les avocats spécialisés en propriété intellectuelle et les conseils en propriété intellectuelle sont les experts de référence).
+Dans ce cas si vous êtes encore motivé(e), il vaudrait mieux vous abstenir de rendre votre travail public avant d’avoir consulté un juriste spécialisé (les avocats spécialisés en propriété intellectuelle et les conseils en propriété industrielle sont les experts de référence).
 
 Si vous dépendez du droit français, et que vous craignez d’être sanctionnés pour avoir montré/diffusé la propriété intellectuelle de quelqu’un d’autre, alors il reste deux méthodes pour vous rassurer :
 
