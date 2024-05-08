@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-05-07T06:25:46.152Z
+date: 2024-05-08T20:04:18.883Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -270,11 +270,39 @@ Je suis – raisonnablement – disponible sur le Discord de Foundry (@LeRatierB
  
 ## J'ai ajouté des données à ma partie, et je veux les partager. j'ai le droit ?
 
-Si vous êtes l'auteur des données (grosso-modo l'auteur du contenu ou du jeu de rôle), vous avez tout les droits, c"est votre propriété.
+Si c’est bien vous qui avez librement créé TOUT le contenu qui se voit et se lit (le texte, les images, les vidéos, le code source des modules…) celui qui s’entend (les sons/musiques) et que ces contenus portent l’empreinte de votre personnalité (on dit alors qu’ils sont originaux) alors vous êtes dans la meilleure des configurations : vous pourrez montrer, y faire jouer et même diffuser/distribuer votre contenu puisque vous disposez a priori de droits d’auteur sur celui-ci.
 
-Dans tout les autres cas (la majorité, normalement), vous avez saisi dans Foundry du contenu (ie PNJs, talents, sorts, compétences, texte, ....) sur lequel vous n'avez aucun droit de diffusion. 
+Si vous vous trouvez dans une autre configuration, par exemple :
 
-Autrement dit : vous pouvez ajouter ce contenu dans Foundry autant que vous voulez, MAIS vous n'avez pas le droit de le distribuer publiquement. Pour le distribuer, il vous faut contacter les ayants-droits (ie donc les auteurs/éditeur du jeu) et obtenir leur autorisation (ou pas...) sur la diffusion de ce contenu.
+- vous avez crée le contenu en travaillant avec plusieurs autres personnes et/ou
+- vous avez à la fois créé du contenu original ET repris du contenu créé par d’autres personnes et/ou
+- vous n’étiez pas complètement libre de votre création : par exemple parce que vous avez réalisé une traduction quasi littérale de contenus réalisés par d’autres, sans réelle part créative personnelle, ou que vous avez travaillé sous la dictée de quelqu’un sans prendre de réelles initiatives personnelles ou encore lorsque vous étiez contraint par d’autres paramètres assez exigeant qui ont bridé votre créativité et/ou
+- ce que vous avez réalisé ne porte pas vraiment l’empreinte de votre personnalité mais se borne plutôt à un travail répétitif, procédurier, un travail au kilomètre etc.
+
+Tout n’est pas perdu pour autant mais vos possibilités de montrer le contenu en question, d’y faire jouer et bien sûr de le diffuser/distribuer sans prendre de risques juridiques commencent à devenir incertaines.
+Dans ce cas si vous êtes encore motivé(e), il vaudrait mieux vous abstenir de rendre votre travail public avant d’avoir consulté un juriste spécialisé (les avocats spécialisés en propriété intellectuelle et les conseils en propriété intellectuelle sont les experts de référence).
+
+Si vous dépendez du droit français, et que vous craignez d’être sanctionnés pour avoir montré/diffusé la propriété intellectuelle de quelqu’un d’autre, alors il reste deux méthodes pour vous rassurer :
+
+1. soit vous passez un pacte de non-agression avec ceux qui pourraient exercer des représailles juridiques contre vous (autrement dit un **contrat de licence d’utilisation** ou éventuellement une **autorisation de représentation** avec les ayant-droits du scénario/module/système).  
+C’est ce qui se passe de manière transparente (et épouvantablement mal fait d’un point de vue de la forme) lorsque vous vous payez un contenu auprès d’un éditeur. 
+C’est aussi une étape fastidieuse mais importante que vous feriez mieux d’entreprendre avant de diffuser un module publiquement (même à titre gratuit) - n’hésitez pas à vous faire conseiller par un juriste pro pour ce tout dernier exercice d’équilibriste.
+
+1. soit vous ne passez pas de contrat mais profitez d’une particularité du droit d’auteur qui existe en France : **l’exception de représentation dans le cercle de famille**.  
+Il s’agit d’une situation dans laquelle vous pouvez effrontément vous passer de l’avis d’un auteur (ou d’un ayant droit ou encore d’un co-auteur du travail sur lequel vous avez oeuvré) pour MONTRER ce qu’elle/il a créé à d’autres gens, en l’occurence votre cercle familial avec qui vous allez jouer à votre partie de jdr en ligne.
+
+Veillez quand même à connaitre et bien respecter les paramètres de cette exception légale car si vous en franchissez les limites, vous vous retrouverez sous la grêle froide du délit de contrefaçon :
+
+
+- a) vous ne faites que **montrer** ce que d’autres auteurs ont fait pendant la partie (hors partie, vous ne remettez pas de copie nouvelles de leurs créations à vos joueurs, vous ne vous remettez pas de copies de modules intégrant des oeuvres de tiers). Bien évidemment vous pouvez montrer vos créations 100% perso à qui vous le souhaitez sans avoir besoin de cette exception.
+
+- b) ne proposez de partie **qu’à votre cercle rapproché**. Les juges considèrent généralement qu’il s’agit uniquement : « des personnes parentes ou amies proches unies de façon habituelle par des liens familiaux ou d'intimité ». On sent que les « vagues potes » ou les « clients du MJ payant en ligne » ne sont pas couverts. Quel magnifique plaidoyer pour nouer de belles amitiés et échanger des anecdotes intimes via Discord !
+
+- c) la partie doit être **privée** : pas de stream switch, de spectateurs n’appartenant pas à votre cercle proches, pas d’actual play ou de redif sinon vous perdez le bénéfice de l’exception.
+
+- d) la partie dois être **gratuite**. Si vous faites payer vous n’êtes plus couvert par l’exception : débrouillez-vous autrement.
+
+- e) ce n’est pas explicite mais des gens ont déjà eu des surprises avec ce dernier critère : **la source** de l’oeuvre** d’un tiers que vous montrez à vos joueurs **doit être licite**. Pas de module tombé du camion (illicite car recel), de copie de fond de garage (illicite car contrefaites) etc.
 
 ## Je suis paumé ... ça ne fonctionne pas !
 
