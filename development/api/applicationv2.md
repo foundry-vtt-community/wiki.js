@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-10T21:08:17.822Z
+date: 2024-05-10T21:16:49.037Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -435,3 +435,10 @@ Here are some common problems people run into with applications in Foundry.
 ### Using a button triggers full web page refresh
 
 The default HTML behavior for a `button` element is to submit the whole webpage as a form and refresh the page. To avoid this, you need to use `<button type="button">` so it only performs your click listener.
+
+
+### Arrays in Forms
+
+Foundry only natively handles arrays of primitives in its forms - that is, an array of strings, numbers, or booleans. If you have an array of objects, you have two options
+- Override `DocumentSheetV2#_prepareSubmitData`, calling `super` then modifying the `data` it returns. If you're not subclassing DocumentSheetV2, your own form handler is fully in charge of handling the data.
+- Implement a [DataModel](/en/development/api/DataModel) for whatever you're returning, allowing the casting in `ArrayField` to handle the transformation.
