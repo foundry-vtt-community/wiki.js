@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-05-07T04:07:54.067Z
+date: 2024-05-10T21:16:56.029Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -422,6 +422,10 @@ Hooks.once("init", () => {
 ## Troubleshooting
 
 Below are some of the common foibles in Foundry application development
+
+### Using a button triggers full web page refresh
+
+The default HTML behavior for a `button` element is to submit the whole webpage as a form and refresh the page. To avoid this, you need to use `<button type="button">` so it only performs your click listener.
 
 ### The data provided to my Handlebars template isn't what I expect
 
