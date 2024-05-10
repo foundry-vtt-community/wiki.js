@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-05-05T16:36:40.946Z
+date: 2024-05-10T18:32:54.981Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -215,6 +215,12 @@ One warning with these: Your primary application logic should still be occuring 
 
 > Stub
 > This section is a stub, you can help by contributing to it.
+
+### Notifications
+
+API Documentation: [Notifications](https://foundryvtt.com/api/classes/client.Notifications.html)
+
+Foundry has a "toasts" system available at `ui.notifications`. Its methods, `info`, `warn`, and `error` all call `notify`, which creates the toast then returns the ID of the notification. In some instances, you may wish to capture this ID for use with `remove` to programatically dismiss a toast.
 
 ## Specific Use Cases
 
