@@ -2,13 +2,11 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-05-07T19:41:52.275Z
+date: 2024-05-10T01:24:29.006Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
 ---
-
-# Document
 
 ![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
