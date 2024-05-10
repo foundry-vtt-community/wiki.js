@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-08T01:36:42.107Z
+date: 2024-05-10T21:08:17.822Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -430,5 +430,8 @@ If you're just trying to display enriched text without providing an editor input
 ---
 ## Troubleshooting
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+Here are some common problems people run into with applications in Foundry.
+
+### Using a button triggers full web page refresh
+
+The default HTML behavior for a `button` element is to submit the whole webpage as a form and refresh the page. To avoid this, you need to use `<button type="button">` so it only performs your click listener.
