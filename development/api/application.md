@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-05-10T21:16:56.029Z
+date: 2024-05-12T00:34:18.912Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -404,7 +404,7 @@ If you wish to add more, add them to the array at `CONFIG.TextEditor.enrichers` 
  *                             indicate that no replacement should be made.
  */ 
 async function myEnricher(match, _options) {
-	// You usually want to do something with the matched string
+  // You usually want to do something with the matched string
   // Depending on your regex you'll also have capture groups
   // const matchString = match[0];
   const p = document.createElement(p)
