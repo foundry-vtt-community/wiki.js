@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2024-05-19T06:20:05.207Z
+date: 2024-05-19T06:22:20.358Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -72,18 +72,6 @@ There are a variety of community-created module and system starter kits out ther
 - **Supports:** Typescript
 - **Description:** A template for typescript projects that uses manifest+ and auto creates versions using Github Actions.
 
-
-#### [TS Hot Module Replacement Template](https://github.com/Blackcloud010/FoundryVTT-Module-Template-Hotswap)
-- Lightly Opinionated
-- **Supports:** Typescript, Javascript, SCSS, ESLint
-- **Contains:** Bundler and Hot Module Replacement through webpack.
-- **Description:** A template for creating foundry modules using typescript. Project files are setup to be hot reloaded.
-
-
-#### [DJ Addi's VSCode Debugging Enabled Template](https://gitlab.com/DJ.Addi/fvtt-project-template)
-- Basically no Opinions
-- Has VS Code Debugger integration out of the box
-- **Description:** A bare bones template that plugs into the debugger features of Visual Studio Code.
 
 
 #### [Dragon Flagon TS Automated Module Template](https://github.com/flamewave000/fvtt-module-template)
