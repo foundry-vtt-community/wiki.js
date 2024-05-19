@@ -2,47 +2,36 @@
 title: Development Resources
 description: 
 published: true
-date: 2022-07-21T19:36:50.044Z
+date: 2024-05-19T06:20:05.207Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
 ---
 
+![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+
+> Many old links have been removed from this page due to their content not being updated to modern Foundry.
+{.is-warning}
+
+
 # Official API
-Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/), generated from the JSDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code.
+Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/), generated from the JSDoc comments within every local installation of Foundry. You m
+
+You have two options for perusing the source code within `resources/app`:
+- The subfolders `common` and `client` break the classes up into individual files. Classes inside `common` use [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), so for example the base `Document` class is bundled and available at `foundry.abstract.Document` in your client. By contrast, the classes within `client` are all thrown directly into the global scope
+- Alternatively, `public/scripts/foundry.js` is the entire script as it's delivered to end users; note that it has some external imports for the esmodules content.
+
+It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code.
 
 ## Macros and Code examples
 
 ### [Community Macros](https://github.com/foundry-vtt-community/macros)
 - Community contributed macros that can be downloaded as a module, a wide range of topics with pf1, pf2, and dnd5e system specific macros covered therein.
 
-
-### [Vance's Code Examples](https://github.com/VanceCole/macros)
-- Excellent resource covering a huge range of examples for how to interact with Foundry Core.
-
-
-### [Kekilla's Macros](https://github.com/Kekilla0/Personal-Macros)
-- Another well organized personal macro repository covering a wide range of useful applications.
-
-
 ## Tutorials
 
 ### [Boilerplate System Development Tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD01-Getting-started)
 - Wiki hosted guide to accompany and explain the Boilerplate system as well as a lot of core system development concepts.
-
-### [Foundry VTT Module Making for Beginners](https://hackmd.io/@akrigline/ByHFgUZ6u)
-- A tutorial covering every step from "I have no files" to "I have a module which interacts with Flags, Settings, FormApplication, CSS, Localization, Hooks, and more." 
-
-### [Spacemandev's Foundry VTT Development Video Series](https://www.youtube.com/watch?v=UDVH6UIFRos&list=PLLF8ndmyGEGyAWaZifYCzqMuRq2lsaENA)
-- Content that covers topics ranging from Setting up a development environment to the deep dive videos: Macros 101 and 102.
-
-
-### [Mougli's Foundry VTT System Development Video Series](https://www.youtube.com/watch?v=gcSN4AQcUzM&list=PLFV9z59nkHDccUbRXVt623UdloPTclIrz)
-- Video Series for those looking to create their own Systems.
-
-### [Svelte and Foundry](https://sunspots.eu/posts/foundry-svelte/)
-- A quick guide by Sunspots detailing their strategy for using Svelte to make Foundry Modules.
-
 
 ## Templates and Starter Kits
 
@@ -58,38 +47,6 @@ There are a variety of community-created module and system starter kits out ther
 
 
 ### Generators
-
-
-#### [Scene Packer Module Generator](https://sneat.github.io/scene-packer-module-generator/)
-- Very lightly opinionated
-- Bootstraps modules
-- **Supports**: JavaScript
-- **Description**: Fill in the form and download an empty (standalone) module. Optionally supports creating a Scene Packer integrated module. Primary use case is for content creators and non-developers.
-
-
-
-#### [Foundry Factory](https://github.com/ghost91-/foundry-factory)
-- Supports different presets that can be chosen from.
-  - ghost's Gulp + Rollup Preset (very opinionated)
-  - League Basic JS Module Template (lightly opinionated, see above)
-- Bootstraps both modules and systems
-- **Supports (depends on the preset)**: JavaScript, TypeScript, Less, SCSS, ESLint, Jest, sourcemaps, npm, yarn, yarn2, CI pipelines for checks and releases (GitHub and GitLab)
-- **Description**: Foundry Factory is an interactive CLI tool that developers can use to bootstrap modules and systems for Foundry Virtual Tabletop. It allows developers to choose among different presets to initialize their projects.
-
-
-#### [Foundry Generator](https://gitlab.com/asacolips-projects/foundry-mods/foundry-generator)
-- Lightly Opinionated
-- Bootstraps Systems
-- **Supports:** Javascript, SCSS
-- **Description:** This yeoman generator bootstraps a [Boilerplate System](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate) based on the user's configuration options.
-
-
-#### [NickEast's Foundry Project Creator](https://gitlab.com/foundry-projects/foundry-pc/create-foundry-project) (now archived)
-- Very Opinionated
-- Bootstraps both Systems and Modules
-- **Supports:** Typescript, SCSS, LESS, Javascript
-- **Description:** The Foundry Project Creator is a tool that developers can use to create modules and systems for the Foundry Virtual Tabletop software. It is designed to provide a (partially opinionated) boilerplate project and a set of scripts to quickly get started.
-
 
 ### System Development
 
