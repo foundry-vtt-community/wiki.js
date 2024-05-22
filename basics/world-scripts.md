@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-05-22T15:46:34.358Z
+date: 2024-05-22T15:47:15.113Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -56,7 +56,7 @@ Your Javscript file will usually live within the world directory for the world i
 
 ### Adding a world script to your world manifest
 To include your Javascript file in your world:
-1. Navigate to your world's directory in your user data folder.
+1. Navigate to your world's directory in your userdata folder.
 2. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
 3. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
 ```json
