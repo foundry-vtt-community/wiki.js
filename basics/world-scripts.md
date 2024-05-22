@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-05-22T16:05:29.078Z
+date: 2024-05-22T16:09:08.884Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -56,9 +56,10 @@ Your Javscript file will usually live within the world directory for the world i
 
 ### Adding a world script to your world manifest
 To include your Javascript file in your world:
-1. Navigate to your world's directory in your userdata folder.
-2. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
-3. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
+1. Make sure Foundry is not running.
+2. Navigate to your world's directory in your userdata folder (like `Data/worlds/my-world/`).
+3. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
+4. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
 ```json
 {
   "title": "My World",
@@ -67,9 +68,9 @@ To include your Javascript file in your world:
   "version": "1.0.0",
   ...
   ```
-4. Make sure you have included the `.js` extension on your file; it should look like this: `"esmodules": ["my-script.js"],` (note the comma is also required at the end of the line, unless you've added this as the very last key in the JSON file).
-5. Save and close `world.json`.
-6. Launch Foundry, and launch your world. You must always make sure your world is not running while making changes to its `world.json` file.
+5. Make sure you have included the `.js` extension on your file; it should look like this: `"esmodules": ["my-script.js"],` (note the comma is also required at the end of the line, unless you've added this as the very last key in the JSON file).
+6. Save and close `world.json`.
+7. Launch Foundry, and launch your world. You must always make sure your world is not running while making changes to its `world.json` file.
 
 ## Examples
 
