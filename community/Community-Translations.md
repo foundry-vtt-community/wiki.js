@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2024-05-01T13:16:11.898Z
+date: 2024-05-22T19:15:06.343Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z
@@ -483,6 +483,7 @@ The table below lists various statistics of the core English translation file ac
 	<tr>
 		<th rowspan="2" style="border-right:1px solid;">Foundry VTT Version</th>
 		<th colspan="2" style="border:none;border-left:1px solid;border-right:1px solid;">Combatible</th>
+		<th colspan="3" style="border:none;border-left:1px solid;border-right:1px solid;">Total Keys</th>
 		<th colspan="3" style="border:none;border-left:1px solid;border-right:1px solid;">Keys<a href="#footnote-1"><sup>1</sup></a></th>
 		<th colspan="3" style="border:none;border-left:1px solid;border-right:1px solid;">Characters<a href="#footnote-1"><sup>1</sup></a></th>
 		<th colspan="3" style="border:none;border-left:1px solid;">Words<a href="#footnote-1"><sup>1</sup></a> <a href="#footnote-2"><sup>2</sup></a></th>
@@ -490,6 +491,9 @@ The table below lists various statistics of the core English translation file ac
 	<tr style="text-align:right;">
 		<th style="border-left:1px solid;">Backwards<a href="#footnote-3"><sup>3</sup></a></th>
 		<th style="border-right:1px solid;">Forwards<a href="#footnote-4"><sup>4</sup></a></th>
+		<th style="border-left:1px solid;">Core</th>
+		<th>Icons</th>
+		<th style="border-right:1px solid;">Tours</th>
 		<th style="border-left:1px solid;">Added</th>
 		<th>Changed</th>
 		<th style="border-right:1px solid;">Removed</th>
@@ -502,57 +506,55 @@ The table below lists various statistics of the core English translation file ac
 	</tr>
 	</thead>
 	<tbody style="text-align:right;">
-		<tr><td>0.7.0</td><td><i>?</i></td><td>No</td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td>3655</td></tr>
-		<tr><td>0.7.1</td><td>No</td><td>No</td><td>56</td><td>4</td><td>7</td><td>1622</td><td>20</td><td>126</td><td>274</td><td>21</td><td>3912</td></tr>
-		<tr><td>0.7.2</td><td>No</td><td>No</td><td>48</td><td>5</td><td>5</td><td>1601</td><td>80</td><td>68</td><td>297</td><td>10</td><td>4206</td></tr>
-		<tr><td>0.7.3</td><td>No</td><td>No</td><td>58</td><td>2</td><td>2</td><td>1612</td><td>77</td><td>157</td><td>283</td><td>35</td><td>4464</td></tr>
-		<tr><td>0.7.4</td><td>No</td><td>No</td><td>117</td><td>4</td><td>15</td><td>2663</td><td>111</td><td>386</td><td>448</td><td>63</td><td>4832</td></tr>
-		<tr><td>0.7.5</td><td><strong>Yes</strong></td><td>No</td><td>11</td><td>0</td><td>0</td><td>1001</td><td>0</td><td>0</td><td>210</td><td>0</td><td>5042</td></tr>
-		<tr><td>0.7.6</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>7</td><td>0</td><td>0</td><td>48</td><td>0</td><td>0</td><td>11</td><td>0</td><td>5053</td></tr>
-		<tr><td>0.7.7</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5053</td></tr>
-		<tr><td>0.7.8</td><td><strong>Yes</strong></td><td>No</td><td>2</td><td>0</td><td>0</td><td>188</td><td>0</td><td>0</td><td>29</td><td>0</td><td>5082</td></tr>
-		<tr><td>0.7.9</td><td>No</td><td><strong>Yes</strong></td><td>2</td><td>0</td><td>2</td><td>249</td><td>0</td><td>188</td><td>39</td><td>29</td><td>5092</td></tr>
-		<tr><td>0.7.10</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5092</td></tr>
-		<tr><td>0.8.0</td><td>No</td><td>No</td><td>62</td><td>2</td><td>2</td><td>2070</td><td>9</td><td>23</td><td>395</td><td>4</td><td>5483</td></tr>
-		<tr><td>0.8.1</td><td>No</td><td>No</td><td>67</td><td>14</td><td>9</td><td>1604</td><td>122</td><td>764</td><td>282</td><td>191</td><td>5558</td></tr>
-		<tr><td>0.8.2</td><td>No</td><td>No</td><td>49</td><td>10</td><td>2</td><td>1877</td><td>423</td><td>259</td><td>348</td><td>44</td><td>5884</td></tr>
-		<tr><td>0.8.3</td><td>No</td><td>No</td><td>4</td><td>3</td><td>0</td><td>273</td><td>28</td><td>0</td><td>55</td><td>0</td><td>5939</td></tr>
-		<tr><td>0.8.4</td><td>No</td><td><strong>Yes</strong></td><td>10</td><td>6</td><td>3</td><td>203</td><td>148</td><td>50</td><td>36</td><td>10</td><td>5984</td></tr>
-		<tr><td>0.8.5</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5984</td></tr>
-		<tr><td>0.8.6</td><td><strong>Yes</strong></td><td>No</td><td>37</td><td>0</td><td>0</td><td>1049</td><td>0</td><td>0</td><td>197</td><td>0</td><td>6181</td></tr>
-		<tr><td>0.8.7</td><td>No</td><td>No</td><td>9</td><td>10</td><td>3</td><td>359</td><td>95</td><td>43</td><td>74</td><td>8</td><td>6239</td></tr>
-		<tr><td>0.8.8</td><td><strong>Yes</strong></td><td>No</td><td>2</td><td>0</td><td>0</td><td>18</td><td>0</td><td>0</td><td>4</td><td>0</td><td>6243</td></tr>
-		<tr><td>0.8.9</td><td>No</td><td>No</td><td>3</td><td>4</td><td>0</td><td>136</td><td>39</td><td>0</td><td>25</td><td>0</td><td>6265</td></tr>
-		<tr><td>9.238</td><td>No</td><td>No</td><td>332</td><td>40</td><td>80</td><td>12521</td><td>939</td><td>2355</td><td>2363</td><td>419</td><td>8185</td></tr>
-		<tr><td>9.240</td><td>No</td><td><strong>Yes</strong></td><td>3</td><td>8</td><td>0</td><td>351</td><td>161</td><td>0</td><td>66</td><td>0</td><td>8248</td></tr>
-		<tr><td>9.241</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8248</td></tr>
-		<tr><td>9.242</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8248</td></tr>
-		<tr><td>9.245</td><td>No</td><td><strong>Yes</strong></td><td>4</td><td>3</td><td>0</td><td>83</td><td>58</td><td>0</td><td>19</td><td>0</td><td>8270</td></tr>
-		<tr><td>9.249</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8270</td></tr>
-		<tr><td>9.251</td><td>No</td><td><strong>Yes</strong></td><td>8</td><td>4</td><td>0</td><td>98</td><td>4</td><td>0</td><td>29</td><td>0</td><td>8303</td></tr>
-		<tr><td>9.254</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8303</td></tr>
-		<tr><td>9.255</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8303</td></tr>
-		<tr><td>9.266</td><td>No</td><td>No</td><td>1</td><td>18</td><td>0</td><td>11</td><td>66</td><td>0</td><td>2</td><td>0</td><td>8305</td></tr>
-		<tr><td>9.268</td><td>No</td><td><strong>Yes</strong></td><td>0</td><td>1</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>8307</td></tr>
-		<tr><td>9.269</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8307</td></tr>
-		<tr><td>9.280</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8307</td></tr>
-		<tr><td>10.282</td><td>No</td><td><strong>Yes</strong></td><td>347</td><td>26</td><td>39</td><td>11136</td><td>1176</td><td>1462</td><td>2085</td><td>244</td><td>10100</td></tr>
-		<tr><td>10.283</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10100</td></tr>
-		<tr><td>10.284</td><td>No</td><td>No</td><td>0</td><td>2</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>10105</td></tr>
-		<tr><td>10.285</td><td><strong>Yes</strong></td><td>No</td><td>5</td><td>0</td><td>0</td><td>208</td><td>0</td><td>0</td><td>43</td><td>0</td><td>10148</td></tr>
-		<tr><td>10.286</td><td>No</td><td>No</td><td>3</td><td>1</td><td>0</td><td>55</td><td>149</td><td>0</td><td>7</td><td>0</td><td>10146</td></tr>
-		<tr><td>10.287</td><td>No</td><td><strong>Yes</strong></td><td>19</td><td>1</td><td>5</td><td>1110</td><td>33</td><td>322</td><td>210</td><td>59</td><td>10302</td></tr>
-		<tr><td>10.288</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10302</td></tr>
-		<tr><td>10.290</td><td>No</td><td>No</td><td>2</td><td>1</td><td>0</td><td>141</td><td>1</td><td>0</td><td>21</td><td>0</td><td>10322</td></tr>
-		<tr><td>10.291</td><td><strong>Yes</strong></td><td>No</td><td>2</td><td>0</td><td>0</td><td>147</td><td>0</td><td>0</td><td>28</td><td>0</td><td>10350</td></tr>
-		<tr><td>11.299</td><td>No</td><td>No</td><td>445</td><td>53</td><td>13</td><td>14107</td><td>1218</td><td>471</td><td>2639</td><td>96</td><td>12881</td></tr>
-		<tr><td>11.300</td><td>No</td><td>No</td><td>2</td><td>6</td><td>0</td><td>53</td><td>67</td><td>0</td><td>9</td><td>0</td><td>12893</td></tr>
-		<tr><td>11.301</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>2</td><td>0</td><td>0</td><td>17</td><td>0</td><td>0</td><td>3</td><td>0</td><td>12896</td></tr>
-		<tr><td>11.302</td><td><strong>Yes</strong></td><td>No</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12896</td></tr>
-		<tr><td>11.304</td><td><strong>Yes</strong></td><td>No</td><td>1</td><td>0</td><td>0</td><td>182</td><td>0</td><td>0</td><td>29</td><td>0</td><td>12925</td></tr>
-		<tr><td>11.305</td><td>No</td><td>No</td><td>1</td><td>0</td><td>2</td><td>72</td><td>0</td><td>200</td><td>16</td><td>33</td><td>12908</td></tr>
-		<tr><td>11.306</td><td><strong>Yes</strong></td><td>No</td><td>14</td><td>0</td><td>0</td><td>296</td><td>0</td><td>0</td><td>64</td><td>0</td><td>12972</td></tr>
-		<tr><td>11.307</td><td><strong>Yes</strong></td><td><i>?</i></td><td>2</td><td>0</td><td>0</td><td>34</td><td>0</td><td>0</td><td>6</td><td>0</td><td>12978</td></tr>
+		<tr><td>0.7.5</td><td><i>?</i></td><td>No</td><td>1006</td><td>27</td><td>&mdash;</td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td><i>?</i></td><td>10142</td></tr>
+		<tr><td>0.7.6</td><td>No</td><td><strong>Yes</strong></td><td>1013</td><td>27</td><td>&mdash;</td><td>7</td><td>0</td><td>1033</td><td>48</td><td>0</td><td>28978</td><td>11</td><td>5071</td><td>5082</td></tr>
+		<tr><td>0.7.7</td><td><strong>Yes</strong></td><td>No</td><td>1013</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5082</td></tr>
+		<tr><td>0.7.8</td><td><strong>Yes</strong></td><td>No</td><td>1015</td><td>27</td><td>&mdash;</td><td>2</td><td>0</td><td>0</td><td>188</td><td>0</td><td>0</td><td>29</td><td>0</td><td>5111</td></tr>
+		<tr><td>0.7.9</td><td>No</td><td><strong>Yes</strong></td><td>1015</td><td>27</td><td>&mdash;</td><td>2</td><td>0</td><td>2</td><td>249</td><td>0</td><td>188</td><td>39</td><td>29</td><td>5121</td></tr>
+		<tr><td>0.7.10</td><td><strong>Yes</strong></td><td>No</td><td>1015</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5121</td></tr>
+		<tr><td>0.8.6</td><td>No</td><td>No</td><td>1228</td><td>27</td><td>&mdash;</td><td>226</td><td>28</td><td>13</td><td>7060</td><td>570</td><td>984</td><td>1312</td><td>229</td><td>6210</td></tr>
+		<tr><td>0.8.7</td><td>No</td><td>No</td><td>1234</td><td>27</td><td>&mdash;</td><td>9</td><td>10</td><td>3</td><td>359</td><td>95</td><td>43</td><td>74</td><td>8</td><td>6268</td></tr>
+		<tr><td>0.8.8</td><td><strong>Yes</strong></td><td>No</td><td>1236</td><td>27</td><td>&mdash;</td><td>2</td><td>0</td><td>0</td><td>18</td><td>0</td><td>0</td><td>4</td><td>0</td><td>6272</td></tr>
+		<tr><td>0.8.9</td><td>No</td><td>No</td><td>1239</td><td>27</td><td>&mdash;</td><td>3</td><td>4</td><td>0</td><td>136</td><td>39</td><td>0</td><td>25</td><td>0</td><td>6294</td></tr>
+		<tr><td>9.238</td><td>No</td><td>No</td><td>1491</td><td>27</td><td>&mdash;</td><td>332</td><td>40</td><td>80</td><td>12521</td><td>939</td><td>2355</td><td>2363</td><td>419</td><td>8214</td></tr>
+		<tr><td>9.240</td><td>No</td><td><strong>Yes</strong></td><td>1494</td><td>27</td><td>&mdash;</td><td>3</td><td>8</td><td>0</td><td>351</td><td>161</td><td>0</td><td>66</td><td>0</td><td>8277</td></tr>
+		<tr><td>9.241</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>1494</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8277</td></tr>
+		<tr><td>9.242</td><td><strong>Yes</strong></td><td>No</td><td>1494</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8277</td></tr>
+		<tr><td>9.245</td><td>No</td><td><strong>Yes</strong></td><td>1498</td><td>27</td><td>&mdash;</td><td>4</td><td>3</td><td>0</td><td>83</td><td>58</td><td>0</td><td>19</td><td>0</td><td>8299</td></tr>
+		<tr><td>9.249</td><td><strong>Yes</strong></td><td>No</td><td>1498</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8299</td></tr>
+		<tr><td>9.251</td><td>No</td><td><strong>Yes</strong></td><td>1506</td><td>27</td><td>&mdash;</td><td>8</td><td>4</td><td>0</td><td>98</td><td>4</td><td>0</td><td>29</td><td>0</td><td>8332</td></tr>
+		<tr><td>9.254</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>1506</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8332</td></tr>
+		<tr><td>9.255</td><td><strong>Yes</strong></td><td>No</td><td>1506</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8332</td></tr>
+		<tr><td>9.266</td><td>No</td><td>No</td><td>1507</td><td>27</td><td>&mdash;</td><td>1</td><td>18</td><td>0</td><td>11</td><td>66</td><td>0</td><td>2</td><td>0</td><td>8334</td></tr>
+		<tr><td>9.268</td><td>No</td><td><strong>Yes</strong></td><td>1507</td><td>27</td><td>&mdash;</td><td>0</td><td>1</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>8336</td></tr>
+		<tr><td>9.269</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>1507</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8336</td></tr>
+		<tr><td>9.280</td><td><strong>Yes</strong></td><td>No</td><td>1507</td><td>27</td><td>&mdash;</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8336</td></tr>
+		<tr><td>10.282</td><td>No</td><td><strong>Yes</strong></td><td>1815</td><td>27</td><td>102</td><td>449</td><td>26</td><td>39</td><td>22439</td><td>1176</td><td>1462</td><td>4376</td><td>244</td><td>12420</td></tr>
+		<tr><td>10.283</td><td><strong>Yes</strong></td><td>No</td><td>1815</td><td>27</td><td>102</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12420</td></tr>
+		<tr><td>10.284</td><td>No</td><td>No</td><td>1815</td><td>27</td><td>102</td><td>0</td><td>2</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>12425</td></tr>
+		<tr><td>10.285</td><td><strong>Yes</strong></td><td>No</td><td>1820</td><td>27</td><td>102</td><td>5</td><td>0</td><td>0</td><td>208</td><td>0</td><td>0</td><td>43</td><td>0</td><td>12468</td></tr>
+		<tr><td>10.286</td><td>No</td><td>No</td><td>1823</td><td>27</td><td>102</td><td>3</td><td>1</td><td>0</td><td>55</td><td>149</td><td>0</td><td>7</td><td>0</td><td>12466</td></tr>
+		<tr><td>10.287</td><td>No</td><td><strong>Yes</strong></td><td>1837</td><td>27</td><td>102</td><td>19</td><td>1</td><td>5</td><td>1110</td><td>33</td><td>322</td><td>210</td><td>59</td><td>12622</td></tr>
+		<tr><td>10.288</td><td><strong>Yes</strong></td><td>No</td><td>1837</td><td>27</td><td>102</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12622</td></tr>
+		<tr><td>10.290</td><td>No</td><td>No</td><td>1839</td><td>27</td><td>102</td><td>2</td><td>1</td><td>0</td><td>141</td><td>1</td><td>0</td><td>21</td><td>0</td><td>12642</td></tr>
+		<tr><td>10.291</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>1841</td><td>27</td><td>102</td><td>2</td><td>0</td><td>0</td><td>147</td><td>0</td><td>0</td><td>28</td><td>0</td><td>12670</td></tr>
+		<tr><td>10.303</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>1841</td><td>27</td><td>102</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12670</td></tr>
+		<tr><td>10.312</td><td><strong>Yes</strong></td><td>No</td><td>1841</td><td>27</td><td>102</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12670</td></tr>
+		<tr><td>11.299</td><td>No</td><td>No</td><td>2273</td><td>27</td><td>102</td><td>445</td><td>53</td><td>13</td><td>14107</td><td>1218</td><td>471</td><td>2639</td><td>96</td><td>15201</td></tr>
+		<tr><td>11.300</td><td>No</td><td>No</td><td>2275</td><td>27</td><td>102</td><td>2</td><td>6</td><td>0</td><td>53</td><td>67</td><td>0</td><td>9</td><td>0</td><td>15213</td></tr>
+		<tr><td>11.301</td><td><strong>Yes</strong></td><td><strong>Yes</strong></td><td>2277</td><td>27</td><td>102</td><td>2</td><td>0</td><td>0</td><td>17</td><td>0</td><td>0</td><td>3</td><td>0</td><td>15216</td></tr>
+		<tr><td>11.302</td><td><strong>Yes</strong></td><td>No</td><td>2277</td><td>27</td><td>102</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>15216</td></tr>
+		<tr><td>11.304</td><td><strong>Yes</strong></td><td>No</td><td>2278</td><td>27</td><td>102</td><td>1</td><td>0</td><td>0</td><td>182</td><td>0</td><td>0</td><td>29</td><td>0</td><td>15245</td></tr>
+		<tr><td>11.305</td><td>No</td><td>No</td><td>2277</td><td>27</td><td>102</td><td>1</td><td>0</td><td>2</td><td>72</td><td>0</td><td>200</td><td>16</td><td>33</td><td>15228</td></tr>
+		<tr><td>11.306</td><td><strong>Yes</strong></td><td>No</td><td>2291</td><td>27</td><td>102</td><td>14</td><td>0</td><td>0</td><td>296</td><td>0</td><td>0</td><td>64</td><td>0</td><td>15292</td></tr>
+		<tr><td>11.307</td><td><strong>Yes</strong></td><td>No</td><td>2293</td><td>27</td><td>102</td><td>2</td><td>0</td><td>0</td><td>34</td><td>0</td><td>0</td><td>6</td><td>0</td><td>15298</td></tr>
+		<tr><td>11.308</td><td>No</td><td>No</td><td>2297</td><td>27</td><td>102</td><td>4</td><td>1</td><td>0</td><td>42</td><td>5</td><td>0</td><td>9</td><td>0</td><td>15308</td></tr>
+		<tr><td>11.309</td><td><strong>Yes</strong></td><td>No</td><td>2361</td><td>27</td><td>102</td><td>64</td><td>0</td><td>0</td><td>2512</td><td>0</td><td>0</td><td>506</td><td>0</td><td>15814</td></tr>
+		<tr><td>11.311</td><td>No</td><td>No</td><td>2384</td><td>27</td><td>108</td><td>37</td><td>4</td><td>8</td><td>2660</td><td>174</td><td>574</td><td>541</td><td>143</td><td>16184</td></tr>
+		<tr><td>11.313</td><td>No</td><td>No</td><td>2384</td><td>27</td><td>108</td><td>0</td><td>1</td><td>0</td><td>0</td><td>12</td><td>0</td><td>0</td><td>0</td><td>16182</td></tr>
+		<tr><td>11.314</td><td>No</td><td><strong>Yes</strong></td><td>2410</td><td>27</td><td>119</td><td>38</td><td>1</td><td>1</td><td>2496</td><td>1</td><td>19</td><td>453</td><td>2</td><td>16633</td></tr>
+		<tr><td>11.315</td><td><strong>Yes</strong></td><td>No</td><td>2410</td><td>27</td><td>119</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>16633</td></tr>
+		<tr><td>12.324</td><td>No</td><td><i>?</i></td><td>2469</td><td>27</td><td>119</td><td>400</td><td>29</td><td>73</td><td>13546</td><td>724</td><td>3048</td><td>2495</td><td>540</td><td>18651</td></tr>
 	</tbody>
 </table>
 
@@ -560,9 +562,9 @@ The table below lists various statistics of the core English translation file ac
 
 **<a id="footnote-2"><sup>2</sup></a>**: The number of words added and removed are not exact and may contain mistakes. The total word count is more likely to be correct.
 
-**<a id="footnote-3"><sup>3</sup></a>**: With translation files, *backwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **previous** row B. This property of the translation file is chainable: if the previous row B is **also** backwards compatible with the next previous row C, the original file A is also compatible with this oldest version C. For example the core translation for **FVTT 0.7.8** will work all the way back with **FVTT 0.7.4**.
+**<a id="footnote-3"><sup>3</sup></a>**: With translation files, *backwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **previous** row B. This property of the translation file is chainable: if the previous row B is **also** backwards compatible with the next previous row C, the original file A is also compatible with this oldest version C. For example the core translation for **FVTT 11.304** will work all the way back with **FVTT 11.300**.
 
-**<a id="footnote-4"><sup>4</sup></a>**: With translation files, *forwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **next** row B. This property of the translation file is chainable: if the next row B is **also** forwards compatible with the row C after that, the original file A is also compatible with this newest version C. For example the core translation for **FVTT 0.7.6** will also work with **FVTT 0.7.7**.
+**<a id="footnote-4"><sup>4</sup></a>**: With translation files, *forwards compatibility* means that the file for the FVTT version on the current row A is compatible with the FVTT version on the **next** row B. This property of the translation file is chainable: if the next row B is **also** forwards compatible with the row C after that, the original file A is also compatible with this newest version C. For example the core translation for **FVTT 10.291** will also work with **FVTT 10.312**.
 
 # Appendix
 
