@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2023-10-25T05:50:40.401Z
+date: 2024-05-22T15:46:34.358Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -58,14 +58,16 @@ Your Javscript file will usually live within the world directory for the world i
 To include your Javascript file in your world:
 1. Navigate to your world's directory in your user data folder.
 2. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
-3. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one, add it after any of the existing keys, like this for example:
+3. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
 ```json
 {
-  "title": "Evil Awakened",
-  "esmodules": [],
+  "title": "My World",
+  "id": "my-world",
+  "esmodules": ["my-script.js"],
   "version": "1.0.0",
+  ...
   ```
-4. Add the path to your Javascript file to the `esmodules` array. If your Javascript file is stored in the root of the world directory as suggested above, just write the filename in quotation marks. It will look like this when you're done: `"esmodules": [ "my-script.js" ],` (note the comma is required at the end of the line, unless you've added this as the very last key in the JSON file).
+4. Make sure you have included the `.js` extension on your file; it should look like this: `"esmodules": ["my-script.js"],` (note the comma is also required at the end of the line, unless you've added this as the very last key in the JSON file).
 5. Save and close `world.json`.
 6. If the world was already active, return to setup and launch it again. Whenever you change the `world.json`, you *must* re-launch the world for the changes to take effect.
 
