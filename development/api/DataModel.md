@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-04-23T00:22:15.816Z
+date: 2024-05-22T02:56:49.300Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -184,10 +184,8 @@ Document data models MUST be registered in an init hook.
 import { PawnData, HeroData, VillainData } from "./module/data.mjs"
 
 Hooks.once("init", () => {
-  // Systems can just use direct assignment here
-  // since they'll be merging into an empty object
-  // But it's generally safer to just use mergeObject when possible
-  foundry.utils.mergeObject(CONFIG.Actor.dataModels, {
+  // Use Object.assign over foundry.utils.mergeObject to preserve static properties 
+  Object.assign(CONFIG.Actor.dataModels, {
     // The keys are the types defined in our template.json
     pawn: PawnData,
     hero: HeroData,
