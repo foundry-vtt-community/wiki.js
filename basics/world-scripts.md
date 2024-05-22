@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-05-22T16:09:08.884Z
+date: 2024-05-22T16:09:45.104Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -55,7 +55,7 @@ Your Javscript file will usually live within the world directory for the world i
 
 
 ### Adding a world script to your world manifest
-To include your Javascript file in your world:
+To include a Javascript file in your world:
 1. Make sure Foundry is not running.
 2. Navigate to your world's directory in your userdata folder (like `Data/worlds/my-world/`).
 3. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
