@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-05-22T15:47:15.113Z
+date: 2024-05-22T16:05:29.078Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -69,7 +69,7 @@ To include your Javascript file in your world:
   ```
 4. Make sure you have included the `.js` extension on your file; it should look like this: `"esmodules": ["my-script.js"],` (note the comma is also required at the end of the line, unless you've added this as the very last key in the JSON file).
 5. Save and close `world.json`.
-6. If the world was already active, return to setup and launch it again. Whenever you change the `world.json`, you *must* re-launch the world for the changes to take effect.
+6. Launch Foundry, and launch your world. You must always make sure your world is not running while making changes to its `world.json` file.
 
 ## Examples
 
