@@ -1,8 +1,8 @@
 ---
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
-published: false
-date: 2024-05-23T06:51:37.187Z
+published: true
+date: 2024-05-23T06:51:48.096Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
