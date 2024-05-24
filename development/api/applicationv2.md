@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-24T15:07:53.697Z
+date: 2024-05-24T18:02:54.777Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -204,8 +204,8 @@ The core of HandlebarsApplication is the `static PARTS` property, which is a Rec
 Replicating a v1 Application is fairly simple - just pass a single part!
 ```js
 static PARTS = {
-	form: {
-  	template: "modules/my-module/templates/my-app.hbs"
+  form: {
+    template: "modules/my-module/templates/my-app.hbs"
   }
 }
 ```
