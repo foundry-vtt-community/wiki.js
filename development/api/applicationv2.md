@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-10T21:16:49.037Z
+date: 2024-05-24T15:07:53.697Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -414,8 +414,168 @@ If you're just trying to display enriched text without providing an editor input
 
 ### DragDrop
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+API Reference
+
+- [DragDrop](https://foundryvtt.com/api/classes/client.DragDrop.html)
+- [DragDropConfiguration](https://foundryvtt.com/api/interfaces/client.DragDropConfiguration.html)
+
+The `DragDrop` helper class integrates dragging and dropping across different applications in the Foundry interface. The most common use is dragging and dropping documents from one location to another.
+
+ApplicationV2 does not include an implementation of this handling, but the helper class still works - you just have to write it yourself. The following implementation uses HandlebarsApplicationMixin, but this should work with other rendering engines.
+
+**Step 1: Initialize the DragDrop.** To do this, we need to override the constructor so the DragDrop class is instantiated as part of the application class.
+
+```js
+class MyAppV2 extends HandlebarsApplicationMixin(ApplicationV2) {
+  constructor(options = {}) {
+    super(options);
+    this.#dragDrop = this.#createDragDropHandlers();
+  }
+  
+  /**
+   * Create drag-and-drop workflow handlers for this Application
+   * @returns {DragDrop[]}     An array of DragDrop handlers
+   * @private
+   */
+  #createDragDropHandlers() {
+    return this.options.dragDrop.map((d) => {
+      d.permissions = {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this),
+      };
+      d.callbacks = {
+        dragstart: this._onDragStart.bind(this),
+        dragover: this._onDragOver.bind(this),
+        drop: this._onDrop.bind(this),
+      };
+      return new DragDrop(d);
+    });
+  }
+  
+  #dragDrop;
+  
+  // Optional: Add getter to access the private property
+  
+  /**
+   * Returns an array of DragDrop instances
+   * @type {DragDrop[]}
+   */
+  get dragDrop() {
+    return this.#dragDrop;
+  }
+
+}
+```
+
+**Step 2: Define `options.dragDrop`.** This implementation mimics the [Application](/en/development/api/application) implementation by using `options.dragDrop` to define a class's bound drag handlers. The options object is compiled from the applications `DEFAULT_OPTIONS`, like the following:
+
+```js
+class MyAppV2 extends HandlebarsApplicationMixin(ApplicationV2) {
+  static DEFAULT_OPTIONS = {
+    dragDrop: [{ dragSelector: '[data-drag]', dropSelector: null }],
+  ]
+}
+```
+
+**Step 3:** Define the handlebars templating. Our actual draggable objects need to have the `data-drag` property, but the actual value of the property doesn't matter unless you want it to.
+```handlebars
+<ol class="foo">
+	{{#each someArray}}
+  	<li data-drag="true">{{this.label}}</li>
+  {{/each}}
+</ol>
+```
+
+**Step 4: Bind the DragDrop listeners.** In AppV2, event listeners for non-click events are handled inside `_onRender` (Click events should be implemented as Actions, see above for more details).
+
+```js
+class MyAppV2 extends HandlebarsApplicationMixin(ApplicationV2) {
+  /**
+   * Actions performed after any render of the Application.
+   * Post-render steps are not awaited by the render process.
+   * @param {ApplicationRenderContext} context      Prepared context data
+   * @param {RenderOptions} options                 Provided render options
+   * @protected
+   */
+  _onRender(context, options) {
+    this.#dragDrop.forEach((d) => d.bind(this.element));
+  }
+}
+```
+
+**Step 5: Define callbacks.** Back in step 1, we defined a number of callbacks during `#createDragDropHandlers`. Now we just need to implement them!
+
+```js
+class MyAppV2 extends HandlebarsApplicationMixin(ApplicationV2) {
+
+  /**
+   * Define whether a user is able to begin a dragstart workflow for a given drag selector
+   * @param {string} selector       The candidate HTML selector for dragging
+   * @returns {boolean}             Can the current user drag this selector?
+   * @protected
+   */
+  _canDragStart(selector) {
+    // game.user fetches the current user
+    return this.isEditable;
+  }
+  
+  
+  /**
+   * Define whether a user is able to conclude a drag-and-drop workflow for a given drop selector
+   * @param {string} selector       The candidate HTML selector for the drop target
+   * @returns {boolean}             Can the current user drop on this selector?
+   * @protected
+   */
+  _canDragDrop(selector) {
+    // game.user fetches the current user
+    return this.isEditable;
+  }
+  
+  
+  /**
+   * Callback actions which occur at the beginning of a drag start workflow.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  _onDragStart(event) {
+    const el = event.currentTarget;
+    if ('link' in event.target.dataset) return;
+
+    // Extract the data you need
+    let dragData = null;
+
+    if (!dragData) return;
+
+    // Set data transfer
+    event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
+  }
+  
+  
+  /**
+   * Callback actions which occur when a dragged element is over a drop target.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  _onDragOver(event) {}
+  
+  
+  /**
+   * Callback actions which occur when a dragged element is dropped on a target.
+   * @param {DragEvent} event       The originating DragEvent
+   * @protected
+   */
+  async _onDrop(event) {
+    const data = TextEditor.getDragEventData(event);
+    
+    // Handle different data types
+    switch (data.type) {
+        // write your cases
+    }
+  }
+}
+```
+
+There you have it, a basic implementation of DragDrop in ApplicationV2!
 
 ### SearchFilter
 
@@ -424,8 +584,9 @@ If you're just trying to display enriched text without providing an editor input
 
 ### Non-Handlebars Rendering Frameworks
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The following are community implementations of non-handlebars rendering frameworks.
+
+- [Vue](https://github.com/mouse0270/fvtt-vue) by Mouse0270
 
 ---
 ## Troubleshooting
