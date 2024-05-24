@@ -2,7 +2,7 @@
 title: FVTTの購入方法
 description: FVTTの購入方法
 published: true
-date: 2023-04-25T10:39:15.042Z
+date: 2024-05-24T03:23:33.067Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T14:43:25.066Z
@@ -42,4 +42,4 @@ dateCreated: 2021-04-21T14:43:25.066Z
 これで使用の準備は整いました。最初はシステムをインストールしないとワールド（卓部屋）を作れないので、そちらのインストールをお願いします。
 
 D&Dのものになりますが、手っ取り早く基本を学びたい人はスターターセットと一緒に解説する配信がありますので、御覧ください。
-https://www.youtube.com/watch?v=MEVfMJDOqn0
+https://youtu.be/4t3Ag9DXXb4
