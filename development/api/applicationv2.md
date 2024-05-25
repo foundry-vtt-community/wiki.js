@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-24T18:02:54.777Z
+date: 2024-05-25T17:30:07.915Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -340,7 +340,7 @@ There are much less verbose implementations of the above code - the whole thing 
 
 ApplicationV2 includes partial support for tabs with the `changeTab` method and the `tabGroups` record. However, `HandlebarsApplicationMixin` will not automatically re-apply the relevant class adjustments on re-render automatically, meaning that developers are responsible for maintaining that status themselves.
 
-**Tab Navigation**. There's a handy Foundry-provided template for tabs at `templates/generic/tab-navigation.hbs` you may want to use. It expects an array or record of `ApplicationTab` supplied in a field named `tabs`. A record is preferable to an array because it can be more easily used in tab *display*. Note that this is merely a typedef, you must actually construct the object yourself.
+**Tab Navigation**. There's a handy Foundry-provided template for tabs at `templates/generic/tab-navigation.hbs` you may want to use. It expects an array or record of `ApplicationTab` supplied in a field named `tabs`. A record is preferable to an array because it can be more easily used in tab display. (*This is merely a typedef, you must actually construct the object yourself*)
 
 ```js
 /**
