@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-25T17:30:07.915Z
+date: 2024-05-28T05:16:04.334Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -595,8 +595,22 @@ Here are some common problems people run into with applications in Foundry.
 
 ### Using a button triggers full web page refresh
 
-The default HTML behavior for a `button` element is to submit the whole webpage as a form and refresh the page. To avoid this, you need to use `<button type="button">` so it only performs your click listener.
+1) Add the following to your `static PARTS`:
+```js
+footer: {
+	template: "templates/generic/form-footer.hbs",
+}
+```
 
+2) Add the following to the return value of `_prepareContext`:
+```js
+buttons: [
+	{ type: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" },
+	// { type: "reset", action: "reset", icon: "fa-solid fa-undo", label: "SETTINGS.Reset" },
+]
+```
+3) Move all your buttons to the buttons array above.
+4) Be sure the HTML template for your form declared in `static PARTS` doesn't contain a HTML `<form>` (change them to `<div>`).	Otherwise, your `formData` argument on the submit method will be empty.
 
 ### Arrays in Forms
 
