@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-28T05:16:04.334Z
+date: 2024-05-30T16:16:05.252Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -617,3 +617,13 @@ buttons: [
 Foundry only natively handles arrays of primitives in its forms - that is, an array of strings, numbers, or booleans. If you have an array of objects, you have two options
 - Override `DocumentSheetV2#_prepareSubmitData`, calling `super` then modifying the `data` it returns. If you're not subclassing DocumentSheetV2, your own form handler is fully in charge of handling the data.
 - Implement a [DataModel](/en/development/api/DataModel) for whatever you're returning, allowing the casting in `ArrayField` to handle the transformation.
+
+### Debugging CSS
+
+The following script macro will toggle the color scheme between light and dark.
+
+```js
+const color = game.settings.get('core', 'colorScheme');
+const newColor = color === 'light' ? 'dark' : 'light';
+game.settings.set('core', 'colorScheme', newColor)
+```
