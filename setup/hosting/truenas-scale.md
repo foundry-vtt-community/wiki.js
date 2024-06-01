@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2024-06-01T15:31:45.672Z
+date: 2024-06-01T16:03:01.258Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -24,7 +24,7 @@ These instructions assume that you are at least somewhat-familar with TrueNAS an
 
 In the UI under Datasets, create two datasets. For example `apps/foundry-app` and `apps/foundry-data`, under the pool name. Do not place it under `ix-applications`, that is a system-managed dataset.
 
-Case sensitivity should be `on` for `foundry-app`. You can likely turn it off and use SMB sharing for `foundry-data`. I have tested sensitivity off for `foundry-data`, but not sharing it via SMB.
+Preset should be `Generic` or `Apps` for `foundry-app`. You can use `SMB` for `foundry-data`.
 
 ## Download and unzip Foundry node.js code
 
@@ -100,3 +100,16 @@ You can of course at this point forward `30000` at your router and have your use
 ## Dynamic DNS
 
 Use the [DDNS-Updater](https://www.truenas.com/docs/scale/scaletutorials/apps/communityapps/ddns-updater/) community app to set up dynamic DNS.
+
+## Manual Update
+
+A new major version of FoundryVTT may require a manual upgrade, instead of using the built-in updater. This was the case for Foundry 12.
+
+- Verify you have a snapshot for your `foundry-data` volume. If not, make one now. This will allow you to roll back if there are issues with the upgrade
+- Create a new dataset, preset `Generic` or `Apps`. Give it a name, e.g. `foundry-12`
+- Download the NodeJS ZIP file for the new version, scp it over to the TrueNAS SCALE server, and unzip it into the new dataset
+- Edit your Foundry custom app, and under `Storage` and `Host Path Volumes`, point the `/app` entry to the new dataset you created
+
+This will start the new version, and you can then proceed to upgrade modules, migrate Worlds, and so on.
+
+Once you are happy with the upgrade, the old Foundry app dataset can be deleted.
