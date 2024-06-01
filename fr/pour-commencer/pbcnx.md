@@ -2,7 +2,7 @@
 title: Comment connecter mes joueurs ?
 description: 
 published: true
-date: 2024-02-27T19:11:03.257Z
+date: 2024-06-01T18:48:10.229Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -45,8 +45,14 @@ Ca peut venir de plusieurs choses. Vérifiez bien que vous avez une adresse IP f
 
 Vou pouvez aussi consulter la page https://foundryvtt.wiki/fr/pour-commencer/win, qui contient de détails supplémentaires et des exemples.
 
-## Vérifiez votre adresse IP externe
+## Vérifiez l'adresse IP locae de votre PC
 
+Il faut que vous soyez certain de l'adresse IP locale du PC/MAC qui héberge Foundry. Ne vous fiez pas ou ne tentez pas de deviner cette adressse IP locale à partir de votre box ou de n'importe quoi d'autre : il faut la déterminer à partir du PC Foundry.
+ 
+Sous Windows par exemple, vous pouvez ouvrir une fenêtre MS-DOS, puis la commande `ipconfig`. Ou également chercher dans les menus de configuration réseau. En générale, cette adresse IP locale est de la forme 192.168.1.XXX ou 192.168.0.XXX.
+
+## Vérifiez votre adresse IP externe
+ 
 Dans certains cas, l'adresse IP externe que vous obtenez dans FoundryVTT est erronée. Vérifiez la via un site extene, par exemple https://myexternalip.com/ ou https://www.adresseip.com/.
 
 ## Avez vous un VPN sur le PC ? 
