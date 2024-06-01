@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2024-06-01T15:31:08.284Z
+date: 2024-06-01T15:31:45.672Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -49,7 +49,7 @@ Any settings I do not mention stay at default, which is most of them.
 - Give it an `Application Name`, e.g. `foundry`
 - `Image repository` is `node`
 - `Image Tag` is `20`
-- `Image Pull Policy is `Always`
+- `Image Pull Policy` is `Always`
 - `Container Cmd`, hit the Add button 1 time, and enter:
   - `/bin/sh`
 - `Container Args`, hit the Add button 2 times, and enter:
