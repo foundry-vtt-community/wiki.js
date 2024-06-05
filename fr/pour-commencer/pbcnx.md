@@ -2,7 +2,7 @@
 title: Comment connecter mes joueurs ?
 description: 
 published: true
-date: 2024-06-01T18:48:17.570Z
+date: 2024-06-05T13:43:08.339Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -53,7 +53,7 @@ Sous Windows par exemple, vous pouvez ouvrir une fenêtre MS-DOS, puis la comman
 
 ## Vérifiez votre adresse IP externe
  
-Dans certains cas, l'adresse IP externe que vous obtenez dans FoundryVTT est erronée. Vérifiez la via un site extene, par exemple https://myexternalip.com/ ou https://www.adresseip.com/.
+Dans certains cas, l'adresse IP externe que vous obtenez dans FoundryVTT est erronée. Vérifiez la via un site externe, par exemple https://myexternalip.com/ ou https://www.adresseip.com/.
 
 ## Avez vous un VPN sur le PC ? 
 
