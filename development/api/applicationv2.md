@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-05-30T16:16:05.252Z
+date: 2024-06-05T16:51:25.108Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -402,7 +402,7 @@ class MyApplication extends HandlebarsApplicationMixin(ApplicationV2) {
 The corresponding handlebars helper, as text enrichment is typically paired. The `target` property should match the source of what was enriched, in this case the assumption is that `system.description` of the document was the field run through enrichment. The `editable` value here is inherited from `super.getData`, which is why it's not explicitly declared in `context` above.
 
 ```handlebars
-{{editor enrichedDescription target="system.description" editable=editable button=true engine=prosemirror" collaborate=false}}
+{{editor enrichedDescription target="system.description" editable=editable button=true engine="prosemirror" collaborate=false}}
 ```
 
 If you're just trying to display enriched text without providing an editor input - such as an item's description in an actor sheet - triple braces will render a string as raw HTML.
