@@ -2,7 +2,7 @@
 title: Comment connecter mes joueurs ?
 description: 
 published: true
-date: 2024-06-05T13:43:08.339Z
+date: 2024-06-06T20:20:51.286Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T18:39:22.832Z
@@ -33,7 +33,7 @@ Il faut donc autoriser la connexion à votre serveur Foundry depuis "l'extérieu
 2. Sur votre PC/Mac, autorisez le port 30000/TCP entrant dans votre firewall. Si vous ne savez pas le faire, cherchez "Ouvrir un port TCP dans le firewall de Windows" (ou Mac) dans votre moteur de recherche favori.
 3. Connectez vous à l'interface de configuration de votre box, et cherchez une section s'appelant NAT/PAT (ou redirection de ports, ou quelque chose d'équivalent). Si vous ne savez pas comment faire, cherchez "Comment ouvrir un port TCP dans ma box XXXXXX" dans votre moteur de recherche favori (avec XXXX étant la marque/modèle de votre box).
 4. Une fois sur votre box, cherchez le menu d'ouverture de port (en général "Port Mapping", NAT, PAT "Redirection de ports", etc). Dans cette interface, vous pouvez saisir le port externe TCP (30000), le port interne TCP (30000) et l'adresse IP de votre PC/Mac (sur certaines box, vous pouvez choisir dans une liste déroulante).
-5. Sur certaines box également, dans ces mêmes paramètres NAT, il vous est parfois demandé "Adresse IP Source" (ou un truc du du genre, avec "Source" dans le titre). Dans ce cas, il faut laisser "Toutes" ou "All", et ne surtout pas mettre une adresse IP.
+5. Sur certaines box également, dans ces mêmes paramètres NAT, il vous est parfois demandé "Adresse IP Source" ou "IP Source" ou "Adresse IP Source" (ou un truc du du genre,). Dans ce cas, il faut laisser "Toutes" ou "All", et ne surtout pas mettre une adresse IP.
 6. Rebootez votre box (optionnel, mais conseillé)
 7. Essayez de vous connectez avec l'adresse IP externe de votre box, suivie de ':30000'. Vous pouvez obtenir votre adresse IP publique en allant sur https://www.monippublique.com/ .
 
