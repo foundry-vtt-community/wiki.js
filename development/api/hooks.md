@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-04-26T03:03:11.378Z
+date: 2024-06-09T06:30:55.512Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -10,7 +10,7 @@ dateCreated: 2022-03-15T14:35:36.691Z
 
 # Hooks
 
-![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
+![Up to date as of v12](https://img.shields.io/static/v1?label=FoundryVTT&message=v12&color=informational)
 
 Hooks are an important method by which the core software, systems, and even modules can provide interaction points for other developers.
 
@@ -184,6 +184,34 @@ Hooks.on("renderActorSheet", (app, html, data) => {
   // the jquery work here may be kinda complicated
   html.find(".some .selector").after(myInput);
 })
+```
+
+### World Initialization
+
+Sometimes fresh worlds need more initialization for proper system functionality than Foundry provides; for example, maybe your game rules need a card deck to properly function. The `ready` hook is the best place to do this, in conjunction with a simple [setting](/en/development/api/settings) as well as the use of the [ui notifications helper](/en/development/api/helpers#notifications)
+
+```js
+Hooks.once("init", () => {
+  game.settings.register('mySystem', 'setupWorld', {
+    name: 'Setup World',
+    scope: 'world',
+    config: false,
+    type: Boolean,
+    default: false
+  })
+});
+
+Hooks.once("ready", () => {
+  const isWorldSetup = game.settings.get("mySystem", "setupWorld");
+  if (!isWorldSetup && game.users.activeGM?.isSelf) setupWorld()
+})
+
+async setupWorld() {
+  const warning = ui.notifications.warn("Setting up world, please do not exit the program")
+  // do stuff
+  await game.settings.set("mySystem", "setupWorld", true)
+  ui.notifications.remove(warning)
+}
 ```
 
 ---
