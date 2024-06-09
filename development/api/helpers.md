@@ -2,13 +2,13 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-05-10T18:32:54.981Z
+date: 2024-06-09T06:45:14.214Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Foundry has a LOT of generally useful functions that are not highlighted in other documentation. This page seeks to organize them 
 
@@ -16,16 +16,16 @@ Official documentation
 - [Client Utils](https://foundryvtt.com/api/modules/client.html)
 - [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html)
 - [Handlebars Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
-- [Custom HTML Elements](https://foundryvtt.com/api/v12/modules/foundry.applications.elements.html)
-- [Primitive Flattens](https://foundryvtt.com/api/modules/primitives.html)
-  - [Array](https://foundryvtt.com/api/modules/primitives.Array.html)
-  - [Date](https://foundryvtt.com/api/modules/primitives.Date.html)
-  - [Math](https://foundryvtt.com/api/modules/primitives.Math.html)
-  - [Number](https://foundryvtt.com/api/modules/primitives.Number.html)
-  - [Set](https://foundryvtt.com/api/modules/primitives.Set.html)
-  - [String](https://foundryvtt.com/api/modules/primitives.String.html)
-  - [RegExp](https://foundryvtt.com/api/modules/primitives.RegExp.html)
-  - [URL](https://foundryvtt.com/api/modules/primitives.URL.html)
+- [Custom HTML Elements](https://foundryvtt.com/api/modules/foundry.applications.elements.html)
+- [Primitive Flattens](https://foundryvtt.com/api/v11/modules/primitives.html)
+  - [Array](https://foundryvtt.com/api/v11/modules/primitives.Array.html)
+  - [Date](https://foundryvtt.com/api/v11/modules/primitives.Date.html)
+  - [Math](https://foundryvtt.com/api/v11/modules/primitives.Math.html)
+  - [Number](https://foundryvtt.com/api/v11/modules/primitives.Number.html)
+  - [Set](https://foundryvtt.com/api/v11/modules/primitives.Set.html)
+  - [String](https://foundryvtt.com/api/v11/modules/primitives.String.html)
+  - [RegExp](https://foundryvtt.com/api/v11/modules/primitives.RegExp.html)
+  - [URL](https://foundryvtt.com/api/v11/modules/primitives.URL.html)
   
 **Legend**
 ```js
@@ -220,7 +220,7 @@ One warning with these: Your primary application logic should still be occuring 
 
 API Documentation: [Notifications](https://foundryvtt.com/api/classes/client.Notifications.html)
 
-Foundry has a "toasts" system available at `ui.notifications`. Its methods, `info`, `warn`, and `error` all call `notify`, which creates the toast then returns the ID of the notification. In some instances, you may wish to capture this ID for use with `remove` to programatically dismiss a toast.
+Foundry has a "toasts" system available at `ui.notifications`. Its methods, `info`, `warn`, and `error` all call `notify`, which creates the toast then returns the ID of the notification. In some instances, you may wish to capture this ID for use with `remove` to programatically dismiss a toast. Notifications take an optional second argument where you can pass `{ localize: true }` so any warnings you add are i18n-friendly.
 
 ## Specific Use Cases
 
@@ -340,8 +340,6 @@ const isV12 = game.release.generation >= 12
 ```
 
 ### formInput and formField
-
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Using the `formInput` and `formField` helpers can be confusing for nested structures, even if they otherwise simplify sheet templating. For them to work properly, you *must* have implemented a [Data Model](/en/development/api/DataModel) for the document subtype. Remember that these are just *helpers* and are in no ways mandatory.
 
