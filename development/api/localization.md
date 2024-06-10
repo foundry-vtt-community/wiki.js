@@ -2,13 +2,13 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-05-03T04:53:15.311Z
+date: 2024-06-10T21:34:25.453Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Localization, or i18n, is how Foundry supports playing in many different languages.
 
@@ -170,6 +170,40 @@ Translating package-provided types, e.g. `character` and `npc` as possible Actor
   }
 }
 
+```
+
+### LOCALIZATION_PREFIXES
+
+System and module defined type data models support the static method LOCALIZATION_PREFIXES to ease the burden of defining the `hint` and `label` fields. This is especially helpful for custom region behavior types because the configuration form is automatically generated from the schema using the hint and label fields.
+
+```js
+export default class MyBehavior extends foundry.data.regionBehaviors.RegionBehaviorType {
+
+  static LOCALIZATION_PREFIXES = ["NESTED.Path"];
+
+  static defineSchema() {
+    return {
+      someMessage: new fields.StringField()
+    };
+  }
+}
+```
+
+This would then pair with a `en.json` file that looks like the following. Note that the `NESTED.Path` part can be whatever you want, but after that the order is very strictly `FIELDS`, then the path to the field (if you have a `SchemaField` instance then you'll need to use dot notation), and then finally `hint` and `label`.
+
+```json
+{
+  "NESTED": {
+    "Path": {
+      "FIELDS": {
+        "someMessage": {
+          "hint": "Behavior hint",
+          "label": "Behavior label"
+        }
+      }
+    }
+  }
+}
 ```
 
 ### Word Order and Grammar
