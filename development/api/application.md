@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-06-11T17:36:24.022Z
+date: 2024-06-11T17:37:31.042Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -330,7 +330,7 @@ Hooks.once("init", () => {
     types: ["character, npc"],
     // Generally useful, defaults to false
     makeDefault: true,
-    // There are other properties that 
+    // There are other properties that are rarely needed. See the linked docs for more.
   })
   // `Actors.registerSheet` is semantically equivalent to passing Actor as the first argument
   // This works for all world collections, e.g. Items
