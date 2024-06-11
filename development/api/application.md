@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-05-12T00:34:18.912Z
+date: 2024-06-11T17:36:24.022Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -323,7 +323,7 @@ class MyActorSheet extends ActorSheet {}
 
 Hooks.once("init", () => {
   // The the `config` object in the fourth argument is entirely optional, as are its properties
-	DocumentSheetConfig.registerSheet(Actor, "package-id", MyActorSheet, {
+  DocumentSheetConfig.registerSheet(Actor, "package-id", MyActorSheet, {
     // Any string here will be localized
   	label: "MyPackage.MyDocumentSheet.Label",
     // If the sheet is only usable for some values of the `type` field
