@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-09T06:45:14.214Z
+date: 2024-06-12T16:05:44.855Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -346,6 +346,7 @@ Using the `formInput` and `formField` helpers can be confusing for nested struct
 - The main argument, `fields`, takes a pointer to the actual DataField instance it's rendering
   - Your `getData` or `_prepareContext` needs to provide `this.document.schema.fields` for base document properties (e.g. `Actor#name`). 
   - However, this pointer won't be able to traverse any nested data model instances, such as the `system` field; you'll need to provide a separate pointer, e.g. `context.systemFields = this.document.system.schema.fields`.
+  - For `formField`, the field *must* have a `label` and `hint` property. You can automatically assign these with the [LOCALIZATION_PREFIXES](/en/development/api/localization#localization_prefixes) static property.
 - Traversing a nested structure of SchemaField requires alternating with the `fields` property; a simple path to `system.details.biography.value` turns into `systemFields.details.fields.biography.fields.value`
 - Similar complications arise if you use the `EmbeddedDataField` class - it may be simpler in those cases to just use normal input creation.
 - `formInput` optional arguments are an instance of [FormInputConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
