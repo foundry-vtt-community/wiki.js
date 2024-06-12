@@ -2,7 +2,7 @@
 title: Flags
 description:  Flags represent key-value type data which can be used to store flexible or arbitrary data required by either the core software, game systems, or user-created modules.
 published: true
-date: 2024-04-25T23:42:28.712Z
+date: 2024-06-12T17:34:15.599Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -28,9 +28,8 @@ Document#setFlag // `#` indicates instance method or property
 
 Flags are the safest way that packages can store arbitrary data on existing documents. If a package allows the user to set some data which isn't normally on the [Document](/en/development/api/document)'s data schema, it should leverage flags.
 
-> Note that this does not necessarily apply to Systems when talking about the Actor and Item document types. Systems can provide a `template.json` which allows the system to define the data schema for Actors and Items.
->
-> _For more information about this data template, see the [Intro to System Development](https://foundryvtt.com/article/system-development/#data) article in the Foundry KB._
+> Systems and modules can define unique pairings of `type` field values and `system` using [Data Models](/en/development/api/DataModel) for many document classes. This provides significantly greater control over the data validation process. However, if you need to modify a document subtype another package defined, e.g. a module providing additional properties to a `"weapon"` item implemented by the system, then use flags rather than try to monkey patch the data schema defined by the system.
+> Documents with configurable types include `ActiveEffect`, `Actor`, `Card`, `Cards`, `ChatMessage`, `Combat`, `Combatant`, `Item`, and `JournalEntryPage`
 {.is-warning}
 
 A flag does not have to be a specific type, anything which can be `JSON.stringify`ed is valid.
