@@ -2,7 +2,7 @@
 title: Flags
 description:  Flags represent key-value type data which can be used to store flexible or arbitrary data required by either the core software, game systems, or user-created modules.
 published: true
-date: 2024-06-12T17:34:42.628Z
+date: 2024-06-12T17:35:29.800Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -38,6 +38,8 @@ A flag does not have to be a specific type, anything which can be `JSON.stringif
 
 ## Key Concepts
 
+Below are important things to always consider when working flags.
+
 ### Data Format
 Flags live on the root of a Document's properties, on the same level as `name`.
 
@@ -63,6 +65,8 @@ flags: {
 ---
 
 ## API Interactions
+
+These are the most common ways users interact with flags.
 
 ### Setting a flag's value
 Flags are automatically namespaced within the first parameter given to [`Document#setFlag`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#setFlag).
