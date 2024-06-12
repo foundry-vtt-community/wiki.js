@@ -2,13 +2,13 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-03-29T06:26:37.248Z
+date: 2024-06-12T17:19:24.195Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Systems and modules that wish to provide prebuilt documents to their users must use compendiums to store their data.
 
