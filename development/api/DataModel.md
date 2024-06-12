@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-06-12T16:25:02.036Z
+date: 2024-06-12T16:33:44.017Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -128,10 +128,10 @@ These fields are used by the [formInptut and formField](/en/development/api/help
 
 #### Other Options
 
-DataField subclasses sometimes take additional options:
+DataField subclasses sometimes take additional options. These are always in addition to the baseline DataFieldOptions.
 
 - [NumberFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#NumberFieldOptions)
-- [StringFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#StringFieldOptions)
+- [StringFieldParams](https://foundryvtt.com/api/interfaces/foundry.data.fields.StringFieldParams.html)
 - [FilePathFieldOptions](https://foundryvtt.com/api/modules/foundry.data.fields.html#FilePathFieldOptions)
 
 ### DataModel#constructor 
