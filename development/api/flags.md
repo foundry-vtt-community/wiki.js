@@ -2,7 +2,7 @@
 title: Flags
 description:  Flags represent key-value type data which can be used to store flexible or arbitrary data required by either the core software, game systems, or user-created modules.
 published: true
-date: 2024-06-12T17:35:38.863Z
+date: 2024-06-12T17:35:59.009Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:27:34.646Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T14:27:34.646Z
 
 # Flag
 
-![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
+![Up to date as of v12](https://img.shields.io/static/v1?label=FoundryVTT&message=v12&color=informational)
 
 Flags are a generalized way for documents to store additional information as needed by systems and modules.
 
