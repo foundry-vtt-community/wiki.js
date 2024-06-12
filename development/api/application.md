@@ -2,19 +2,19 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-06-11T17:37:31.042Z
+date: 2024-06-12T23:23:16.740Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
-Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. Applications use Handlebars for rendering - ApplicationV2, which is coming in Foundry V12, is a major rework that makes using alternative engines more feasible.
+Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. As of V12, the Application class has begun a (long) transition out of use - instead, [ApplicationV2](/en/development/api/applicationv2) should be preferred for new applications. See also [this guide](/en/development/guides/converting-to-appv2) for help changing over.
 
-The [Dialog](/en/development/api/dialog) subclass has its own page detailing its specific options because its configuration is so specific.
+The [Dialog](/en/development/api/dialog) subclass has its own page detailing its specific options because its configuration is so specific. It has an AppV2 equivalent in [DialogV2](/en/development/api/dialogv2).
 
-Official Documentation
+*Official Documentation*
 - [Application](https://foundryvtt.com/api/classes/client.Application.html)
 - [FormApplication](https://foundryvtt.com/api/classes/client.FormApplication.html)
 - [DocumentSheet](https://foundryvtt.com/api/classes/client.DocumentSheet.html)
