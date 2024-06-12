@@ -1,8 +1,8 @@
 ---
 title: Dialog
-description: 
+description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-02-13T06:46:32.552Z
+date: 2024-06-12T22:59:45.765Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-12-15T22:09:07.377Z
