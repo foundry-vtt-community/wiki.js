@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-06-12T16:33:44.017Z
+date: 2024-06-12T16:52:03.453Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -61,14 +61,18 @@ DataField
   NumberField
   	AngleField
     AlphaField
+    HueField
     IntegerSortField
   StringField
   	DocumentIdField
     	ForeignDocumentField
+    DocumentUUIDField
     ColorField
     FilePathField
     JSONField
     HTMLField
+    JavaScriptField
+    DocumentTypeField
   ObjectField
   	DocumentOwnershipField
     TypeDataField
@@ -76,11 +80,13 @@ DataField
   	SetField
     EmbeddedCollectionField
     	EmbeddedCollectionDeltaField
+  AnyField
+  TypedSchemaField
 ```
 
 You don't have to use the most nested versions of a field; in fact, it's frequently better not to — `StringField` works great by itself. Furthermore, several of these fields are NOT for system and module developers (e.g. `EmbeddedCollectionField` and `EmbeddedDocumentField`), as they require server-side support: This isn't a clever way to do "items within items".
 
-These fields are defined in `yourFoundryInstallPath\resources\app\common\data\fields.mjs` as well as the [official API docs](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html).
+These fields are defined in `yourFoundryInstallPath\resources\app\common\data\fields.mjs` as well as the [official API docs](https://foundryvtt.com/api/modules/foundry.data.fields.html).
 
 #### SchemaField vs. EmbeddedDataField
 
