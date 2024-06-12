@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-06-12T16:52:03.453Z
+date: 2024-06-12T16:52:32.036Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -90,7 +90,7 @@ These fields are defined in `yourFoundryInstallPath\resources\app\common\data\fi
 
 #### SchemaField vs. EmbeddedDataField
 
-Both of these fields serve a similar purpose: They allow you to nest properties, so you can have `doc.system.myProp.fieldOne` and `doc.system.myProp.fieldTwo`. The difference is that `SchemaField` creates a nested object, while `EmbeddedDataField` is a full class instance. This can be useful if you want to have getters or other functions nested deeper than `doc.system.myFunc` - you could have  `doc.system.embedField.myFunc`. The downside is certain interactions, such as the javascript spread operator `{ ... }`, may not work as expected because it is a full class instance rather than a simple object.
+These two fields serve a similar purpose: They allow you to nest properties, so you can have `doc.system.myProp.fieldOne` and `doc.system.myProp.fieldTwo`. The difference is that `SchemaField` creates a nested object, while `EmbeddedDataField` is a full class instance. This can be useful if you want to have getters or other functions nested deeper than `doc.system.myFunc` - you could have  `doc.system.embedField.myFunc`. The downside is certain interactions, such as the javascript spread operator `{ ... }`, may not work as expected because it is a full class instance rather than a simple object.
 
 ### DataField options
 
