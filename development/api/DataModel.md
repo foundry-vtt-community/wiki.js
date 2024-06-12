@@ -2,13 +2,13 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-05-22T02:56:49.300Z
+date: 2024-06-12T16:25:02.036Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 "Data Model" refers *both* to the root class that [Document](/en/development/api/document) extends, as well as the `TypeDataModel` class that can be instantiated for the `system` property of eligible document types. 
 
@@ -124,7 +124,7 @@ The `validationError` option can be used with or without the `validate` option; 
 
 *Default*: `""` (for both) 
 
-As of v11, these two fields nominally allow you to pair your UI work with the core data definitions. In practice, these are difficult to access; From an `ActorSheet`, the path would be `this.actor.system.getField('relative.object.path').label`. These otherwise aren't used anywhere natively within Foundry, not even for token bars. The upcoming V12 release has implemented more support for these fields.
+These fields are used by the [formInptut and formField](/en/development/api/helpers#forminput-and-formfield) handlebars helpers. If you implement [LOCALIZATION_PREFIXES](/en/development/api/localization#localization_prefixes) you don't need to manually define them, instead you can just structure your `en.json` file to provide the appropriate info.
 
 #### Other Options
 
