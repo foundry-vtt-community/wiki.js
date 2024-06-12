@@ -2,13 +2,13 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-05-10T01:24:29.006Z
+date: 2024-06-12T16:58:07.340Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 If you're dealing with the underlying data of the Foundry API, you almost certainly are going to need to work with Documents.
 
@@ -27,7 +27,7 @@ Document#update // `#` indicates instance method or property
 
 Everything that is stored in the database is a `Document`. Some Documents are Embedded Documents which live fully inside a parent document (e.g. Items in Actors or Tiles in Scenes). Embedding can be multiply nested - a `Scene` could have a `TokenDocument` which has an `Actor` that has an `Item` that has an `ActiveEffect`. All layers of embedding are collectively known as "Descendant Documents".
 
-Documents do not handle rendering; that is the job of [Applications](/en/development/api/application) and the Canvas. Many document lifecycle events impact rendering, but the actual internal functions of those renders to translate the data changes to visual changes are handled by the aforementioned sections of the API.
+Documents do not handle rendering; that is the job of a [Applications](/en/development/api/applicationv2) and the [Canvas](/en/development/api/canvas). Many document lifecycle events impact rendering, but the actual internal functions of those renders to translate the data changes to visual changes are handled by the aforementioned sections of the API.
 
 The official api documentation has a list of all Documents, their Data schemas, and other classes related to those documents. Document schemas are tracked in the "base" class, e.g. the valid data for an [Actor](https://foundryvtt.com/api/classes/client.Actor.html) document is derived from [`BaseActor.defineSchema`](https://foundryvtt.com/api/classes/foundry.documents.BaseActor.html#defineSchema).
 
@@ -132,13 +132,17 @@ Some important properties introduced in ClientDocumentMixin:
 
 A Document's 'kind' can be obtained by checking the document's `documentName`. E.g. `"Actor"` for actors, `"Scene"` for scenes, `"Combatant"` for combatants, and so on. It is impossible to create a Document with an arbitrary `documentName`.
 
-Some documents have a `type` property in their Schema. These are also validated and thus it is impossible to create a Document with an arbitrary `type` property. As a system, you define the available types in your system.json; as a module, you can use [module sub-types](https://foundryvtt.com/article/module-sub-types/) to define new types.
+Some documents have a `type` property in their Schema. These are also validated and thus it is impossible to create a Document with an arbitrary `type` property. As a system, you define the available types in your template.json or system.json; as a module, you can use [module sub-types](https://foundryvtt.com/article/module-sub-types/) to define new types.
 
 **System-defined types**
 
+- ActiveEffect
 - Actor
 - Card
 - Cards
+- ChatMessage
+- Combat
+- Combatant
 - Item
 - JournalEntryPage
 
@@ -147,6 +151,7 @@ Some documents have a `type` property in their Schema. These are also validated 
 - Folder (eligible types are the same as Primary Documents that can go in compendiums)
 - Macro (chat or script)
 - Table result (text, document, or compendium)
+- JournalEntryPage (image, text, pdf, or video)
 
 ### `id` vs `uuid`
 
@@ -156,7 +161,7 @@ The `id` is used as the key in all Collections the Document is a member of, maki
 
 The `uuid` is unique across all collections and allows for an easy way (via the `fromUuid` or `fromUuidSync` functions) to find any arbitrary document whose collection might not be known.
 
-You can use the book icon in the header bar of a document sheet to retrieve these values; a left click copies the ID to clipboard, while a right click copies the UUID to clipboard.
+You can use the book icon in the header bar of a document sheet to retrieve these values; a left click copies the UUID to clipboard, while a right click copies the ID to clipboard.
 
 ---
 ## API Interactions
