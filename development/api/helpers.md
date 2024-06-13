@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-12T16:05:44.855Z
+date: 2024-06-13T14:25:54.843Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -341,7 +341,30 @@ const isV12 = game.release.generation >= 12
 
 ### formInput and formField
 
-Using the `formInput` and `formField` helpers can be confusing for nested structures, even if they otherwise simplify sheet templating. For them to work properly, you *must* have implemented a [Data Model](/en/development/api/DataModel) for the document subtype. Remember that these are just *helpers* and are in no ways mandatory.
+API Reference
+- [formInput and formField](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#formInput)
+- [FormInputConfig](https://foundryvtt.com/api/interfaces/foundry.applications.fields.FormInputConfig.html)
+- [FormGroupConfig](https://foundryvtt.com/api/interfaces/foundry.applications.fields.FormGroupConfig.html)
+
+The `formInput` and `formField` helpers can programatically generate appropriate fields from their data model implementation. However, using these helpers can be confusing for nested structures, even if they otherwise simplify sheet templating. For them to work properly, you *must* have implemented a [Data Model](/en/development/api/DataModel) for the document subtype. Remember that these are just *helpers* and are in no ways mandatory.
+
+Basic handlebars usage:
+
+```handlebars
+// Sample handlebars
+{{formInput fields.name value=currentValue localize=true}}
+{{formGroup systemFields.myField value=currentValue localize=true}}
+```
+
+Alongside the corresponding `getData`/`_prepareContext`:
+
+```js
+  context.fields = this.document.schema.fields;
+	context.systemFields = this.document.system.schema.fields;
+  return context;
+```
+
+The primary difference between the two is that `formGroup` will render a label and hint alongside the raw input.
 
 - The main argument, `fields`, takes a pointer to the actual DataField instance it's rendering
   - Your `getData` or `_prepareContext` needs to provide `this.document.schema.fields` for base document properties (e.g. `Actor#name`). 
