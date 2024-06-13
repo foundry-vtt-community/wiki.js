@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-05-05T17:13:56.332Z
+date: 2024-06-13T20:53:22.467Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -15,9 +15,9 @@ This `/development/api/` section of the wiki is intended to be a highly structur
 If a page appears here which does not conform the to style notes below it may be completely rewritten, moved into the /guides directory, or deleted entirely.
 
 ## Official API
-Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/).
+The official API documentation on `foundryvtt.com` can be found [here](https://foundryvtt.com/api/).
 
-This is generated from the JSDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code. The bundled code can be found in `yourFoundryInstallLocation/resources/app/public/scripts/foundry.js`, while the unbundled code can be found in `yourFoundryInstallLocation/resources/app/client/` and `yourFoundryInstallLocation/resources/app/common/`.
+This is generated from the TypeDoc comments within `foundry.js` that is accessible from every local installation of Foundry. It is advisable to open this file up and search it in your IDE, as all of the TypeDoc comments are present and you can easily see what is really going on in the code. The bundled code can be found in `yourFoundryInstallLocation/resources/app/public/scripts/foundry.js`, while the unbundled code can be found in `yourFoundryInstallLocation/resources/app/client/` and `yourFoundryInstallLocation/resources/app/common/`.
 
 ---
 
