@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-06-13T07:25:16.746Z
+date: 2024-06-13T14:42:57.800Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -37,6 +37,8 @@ It's better to extend ApplicationV2 yourself, e.g. with `HandlebarsApplicationMi
 - You want your application to have tabs
 - There isn't a clear "I'm done here" state in your process
 
+The DialogV2 class can be accessed via `foundry.applications.api.DialogV2`, and the code can be found in `yourFoundryInstallPath\resources\app\client-esm\applications\api\dialog.mjs`
+
 ## Key Concepts
 
 Any usage of DialogV2 should keep the following in mind.
@@ -49,6 +51,37 @@ DialogV2 inherits all the options from [ApplicationConfiguration](https://foundr
 
 There are a few basic ways of invoking DialogV2 that can simplify your code.
 
+### confirm
+
+API Reference
+- [DialogV2.confirm](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#confirm)
+
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+### prompt
+
+API Reference
+- [DialogV2.prompt](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#prompt)
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+### wait
+
+API Reference
+- [DialogV2.wait](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#wait)
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ## Specific Use Cases
 
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ## Troubleshooting
+
+> Stub
+> This section is a stub, you can help by contributing to it.
