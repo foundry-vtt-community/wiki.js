@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-06-13T16:00:36.531Z
+date: 2024-06-13T16:01:21.672Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -197,7 +197,7 @@ Une fois décompressé dans ce répertoire, redemarrez Foundry, et activez le mo
 
 ## J'utilise l'appli Foundry et c'est très lent ou bien j'ai des messages d'erreurs
 
-C'est assez fréquent : il est conseillé d'utiliser un navigateur externe plutot que celui intégré à Foundry. Le principe : 
+C'est assez fréquent : il est conseillé d'utiliser un navigateur externe plutot que celui intégré à l'application Foundry, car celui-ci peut devenir incompatible après des mises à jour de votre OS (Mac/Windows) ou de votre driver graphique. Le principe : 
 
 1 - lancer Foundry
 2 - lancer un navigateur  (Chrome, Chromium, Firefox, Edge, Opera, ....)
