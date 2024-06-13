@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-06-12T16:58:07.340Z
+date: 2024-06-13T20:46:07.574Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -35,7 +35,7 @@ The official api documentation has a list of all Documents, their Data schemas, 
 
 ## Key Concepts
 
-These are the most important thing to know with actors.
+These are the most important thing to know with documents.
 
 ### Document Storage
 
@@ -512,7 +512,7 @@ The event cycle triggered is dependant on the endpoint used to create/update/del
 | `Document#delete`                  | Delete      |
 | `Document#deleteEmbeddedDocuments` | Delete      |
 
-Embedded Documents created or updated as part of a Primary Document's `update` operation do not undergo their own Update Event Cycle.
+Any embedded documents added inline as part of a `create` or `update` event will *not* trigger their own update cycles. 
 
 ### Event Cycle Commonalities
 
@@ -525,11 +525,11 @@ These cycles all follow roughly the same format (`...` is the name of the operat
 
 ### Creation Event Cycle
 
-The first steps of a Document Create runs locally:
+The document creation event cycle *only* runs on the initial creation event as part of adding a document to the database; it is not run during game initialization when a user loads into a world.
 
 #### 0. New Document is Instantiated Locally
 
-The client requesting the creation instanciates a new Document with the provided data, allowing all of the normal DocumentData apis to be available in the next steps.
+The client requesting the creation instantiates a new Document with the provided data, allowing all of the normal document and data model methods to be available in the next steps.
 
 #### 1. [`Document#_preCreate`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preCreate)
 
@@ -545,6 +545,8 @@ async _preCreate(data, options, user) {
   return this.updateSource({ name: "Some other name" });
 }
 ```
+
+As of v12, the call to `super._preCreate` will call `this.system._preCreate` if the `system` property is an instance of a `TypeDataModel`.
 
 ##### Example: Adding Items to an Actor during preCreate
 
@@ -621,6 +623,8 @@ _onCreate(data, options, userId) {
 }
 ```
 
+As of v12, the call to `super._onCreate` will call `this.system._onCreate` if the `system` property is an instance of a `TypeDataModel`.
+
 #### 5. [`Hooks.callAll('create[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#createDocument)
 
 Similar to `_onCreate`, modules are encouraged to use `create` hooks to react to new Document creation.
@@ -645,6 +649,8 @@ async _preUpdate(changed, options, user) {
   return super._preUpdate(changed, options, user);
 }
 ```
+
+As of v12, the call to `super._preUpdate` will call `this.system._preUpdate` if the `system` property is an instance of a `TypeDataModel`.
 
 #### 2. [`Hooks.call('preUpdate[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preUpdateDocument)
 
@@ -700,6 +706,8 @@ _onUpdate(changed, options, userId) {
 }
 ```
 
+As of v12, the call to `super._onUpdate` will call `this.system._onUpdate` if the `system` property is an instance of a `TypeDataModel`.
+
 #### 5. [`Hooks.callAll('update[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#updateDocument)
 
 Similar to `_onUpdate`, modules are encouraged to use `update` hooks to react to Document updates.
@@ -714,10 +722,14 @@ Runs Locally:
 2. [`Hooks.call('preDelete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preDeleteDocument)
 3. Database entry is Deleted
 
+As of v12, the call to `super._preDelete` will call `this.system._preDelete` if the `system` property is an instance of a `TypeDataModel`.
+
 Runs on all connected Clients:
 
 4. [`Document#_onDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onDelete)
 5. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#deleteDocument)
+
+As of v12, the call to `super._onDelete` will call `this.system._onDelete` if the `system` property is an instance of a `TypeDataModel`.
 
 ### Descendant Document Updates
 
