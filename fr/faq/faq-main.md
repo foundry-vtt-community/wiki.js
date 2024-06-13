@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-06-13T16:01:21.672Z
+date: 2024-06-13T16:01:44.043Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -201,7 +201,7 @@ C'est assez fréquent : il est conseillé d'utiliser un navigateur externe pluto
 
 1 - lancer Foundry
 2 - lancer un navigateur  (Chrome, Chromium, Firefox, Edge, Opera, ....)
-3 - Se connecter en http://127.0.0.1:30000 (si vous avez laissé le port 30000 par défaut bien sur, sinon à remplacer par le port utilisé)
+3 - Se connecter en http://127.0.0.1:30000 ou https://127.0.0.1:30000 (si vous avez laissé le port 30000 par défaut bien sur, sinon à remplacer par le port utilisé)
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
