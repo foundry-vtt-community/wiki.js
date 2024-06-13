@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-06-13T16:00:29.216Z
+date: 2024-06-13T16:00:36.531Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -195,7 +195,7 @@ Il peut arriver que l'on vous fournisse un .zip contenant par exemple un module 
 
 Une fois décompressé dans ce répertoire, redemarrez Foundry, et activez le module dans le monde souhaité. Et voilà !
 
-## J'utilise l'appli Foundry et c'est très lent ou bien j'ai des messages d'erreur
+## J'utilise l'appli Foundry et c'est très lent ou bien j'ai des messages d'erreurs
 
 C'est assez fréquent : il est conseillé d'utiliser un navigateur externe plutot que celui intégré à Foundry. Le principe : 
 
