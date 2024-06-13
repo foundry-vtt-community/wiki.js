@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-13T14:33:00.390Z
+date: 2024-06-13T14:34:08.156Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -346,7 +346,7 @@ API Reference
 - [FormInputConfig](https://foundryvtt.com/api/interfaces/foundry.applications.fields.FormInputConfig.html)
 - [FormGroupConfig](https://foundryvtt.com/api/interfaces/foundry.applications.fields.FormGroupConfig.html)
 
-The `formInput` and `formField` helpers can programatically generate appropriate fields from their data model implementation. However, using these helpers can be confusing for nested structures, even if they otherwise simplify sheet templating. For them to work properly, you *must* have implemented a [Data Model](/en/development/api/DataModel) for the document subtype. Remember that these are just *helpers* and are in no ways mandatory.
+The `formInput` and `formField` helpers can programatically generate appropriate fields from their data model implementation. This means text inputs for StringField, number inputs for NumberField, and even generating `select` inputs for fields with configured `choices`. However, using these helpers can be confusing for nested structures, even if they otherwise simplify sheet templating. For them to work properly, you *must* have implemented a [Data Model](/en/development/api/DataModel) for the document subtype. Remember that these are just *helpers* and are in no ways mandatory.
 
 Basic handlebars usage:
 
