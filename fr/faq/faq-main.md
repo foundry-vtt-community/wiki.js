@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-05-08T20:16:15.773Z
+date: 2024-06-13T16:00:29.216Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -89,7 +89,7 @@ Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus pop
 
 Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pou jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
 
-## Y’a quoi comme jeu dessus ?
+## Y’a quoi comme jeux dessus ?
 
 Dans Foundry, les « jeux » sont appelés « systems ». Au 7/05/2024, on recense 311+ « systems », qu'on peut parcourir ici  : https://foundryvtt.com/packages/systems.
 Une liste succincte d'exemples : 
@@ -194,6 +194,14 @@ Puis cliquez sur "Installation"
 Il peut arriver que l'on vous fournisse un .zip contenant par exemple un module de contenu fait par un membre du Discord. Pour l'installer, il faut le dezipper dans le répertoire `Data/modules` de votre installation, comme indiquer dans "*Comment sont stockées les données  ?*" plus bas.
 
 Une fois décompressé dans ce répertoire, redemarrez Foundry, et activez le module dans le monde souhaité. Et voilà !
+
+## J'utilise l'appli Foundry et c'est très lent ou bien j'ai des messages d'erreur
+
+C'est assez fréquent : il est conseillé d'utiliser un navigateur externe plutot que celui intégré à Foundry. Le principe : 
+
+1 - lancer Foundry
+2 - lancer un navigateur  (Chrome, Chromium, Firefox, Edge, Opera, ....)
+3 - Se connecter en http://127.0.0.1:30000 (si vous avez laissé le port 30000 par défaut bien sur, sinon à remplacer par le port utilisé)
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
