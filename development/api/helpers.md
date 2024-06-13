@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-13T14:25:54.843Z
+date: 2024-06-13T14:33:00.390Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -352,15 +352,20 @@ Basic handlebars usage:
 
 ```handlebars
 // Sample handlebars
-{{formInput fields.name value=currentValue localize=true}}
-{{formGroup systemFields.myField value=currentValue localize=true}}
+{{formInput fields.name value=document.name localize=true}}
+{{formGroup systemFields.myField value=system.myField localize=true}}
 ```
 
 Alongside the corresponding `getData`/`_prepareContext`:
 
 ```js
+  context.document = this.document;
   context.fields = this.document.schema.fields;
+  context.system = this.document.system;
 	context.systemFields = this.document.system.schema.fields;
+  // If you just need one specific field, in this case `img`
+  context.imgField = this.document.schema.getField("img");
+  context.img = this.documeng.img;
   return context;
 ```
 
