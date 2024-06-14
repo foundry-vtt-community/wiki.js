@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-06-13T14:42:57.800Z
+date: 2024-06-14T14:03:49.278Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -45,20 +45,31 @@ Any usage of DialogV2 should keep the following in mind.
 
 ### Options
 
-DialogV2 inherits all the options from [ApplicationConfiguration](https://foundryvtt.com/api/interfaces/foundry.applications.types.ApplicationConfiguration.html), the most notable of these is the `classes` array which can be helpful for specifying the styling of your dialogs. In addition, the options from [DialogV2Configuration](https://foundryvtt.com/api/interfaces/foundry.DialogV2Configuration.html) are all important to implement; `buttons` and `content` especially are where you usually do the most work to configure the dialog. The only automatic [localization](/en/development/api/localization) for these properties is the `label` of any button; use template strings and calls to `game.i18n.localize` for defining your `content`.
+DialogV2 inherits all the options from [ApplicationConfiguration](https://foundryvtt.com/api/interfaces/foundry.applications.types.ApplicationConfiguration.html), which has the `window` property that includes a field for `title` you should always set. You may also want to alter the the `classes` array which can be helpful for specifying the styling of your dialogs. 
+
+In addition, the options from [DialogV2Configuration](https://foundryvtt.com/api/interfaces/foundry.DialogV2Configuration.html) are all important to implement; `buttons` and `content` especially are where you usually do the most work to configure the dialog. The only automatic [localization](/en/development/api/localization) for these properties is the `label` of any button; use template strings and calls to `game.i18n.localize` for defining your `content`.
+
+One option in particular that should be used with care is `modal`, which causes the dialog to disable the rest of the Foundry UI while it is active. This can be good for simple pauses in a workflow, but any higher complexity dialog should avoid using this property.
 
 ## API Interactions
 
-There are a few basic ways of invoking DialogV2 that can simplify your code.
+There are a few basic ways of invoking DialogV2 that can simplify your code. These are all asynchronous operations. Also keep in mind that any strings should probably be template strings that make calls to `game.i18n.localize` or `game.i18n.format` as needed; the below examples use static strings for readability, but actual implementations should take advantage of Foundry's [localization](/en/development/api/localization) system.
 
 ### confirm
 
 API Reference
 - [DialogV2.confirm](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#confirm)
 
+The `confirm` static method provides a simple way to get a yes/no response. Yes returns true, no returns false. If needed, functions can be passed for the `yes` and `no` for more complex handling.
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+```js
+const userPermission = await foundry.applications.api.DialogV2.confirm({
+  window: { title: "Sweet Treat Check" },
+  content: "Do you like ice cream?",
+  rejectClose: false,
+  modal: true
+})
+```
 
 ### prompt
 
@@ -77,6 +88,8 @@ API Reference
 > This section is a stub, you can help by contributing to it.
 
 ## Specific Use Cases
+
+### Using renderTemplate to generate the `content`
 
 > Stub
 > This section is a stub, you can help by contributing to it.
