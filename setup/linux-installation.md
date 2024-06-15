@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2024-04-16T08:33:24.787Z
+date: 2024-06-15T20:12:06.580Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -45,18 +45,14 @@ b. A free subdomain from a free domain name service like [Duck DNS](http://duckd
 
 This guide includes instructions for a number of linux distributions, as described below. If you do not have a strong reason for another distribution, we recommend **Ubuntu 22.04**. 
 
-This guide supports the following distributions:
+This guide supports most distributions based on Debian 11 or 12, including:
 
-1. Debian 11 based, such as (but not limited to):
-a. Debian
-b. Ubuntu
-c. 64 bit Raspberry Pi OS 
-2. CentOS 8 based, such as (but not limited to):
-a. CentOS
-b. Red Hat Linux
-c. Fedora
+1. Debian
+2. Ubuntu
+3. 64 bit Raspberry Pi OS 
 
-Any distrition that uses the `apt` or `dnf` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
+
+Any distrition that uses the `apt` package managers *should* be compatible with this guide. Any differentiation in instructions for the distributions will be clearly indicated where necessary. 
 
 ### Distributions to Avoid
 
@@ -150,22 +146,15 @@ We will now install the necessary software to run and manage Foundry behind a re
 
 <a id="B5" href="#B5">B5.</a> First, let's update the system to make sure we have everything as up-to-date as possible. This may take a few minutes.
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
+
   
 ```
 sudo apt update
 sudo apt upgrade -y
 
 ```
-</details>
 
-<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
-  
-```
-sudo dnf update -y
 
-```
-</details>
 
 >You may be asked for a password the first time you use a `sudo` command. This is normal. Enter the password for the user. {.is-info}
 
@@ -173,7 +162,7 @@ sudo dnf update -y
 
 <a id="B6" href="#B6">B6.</a> Add the nodejs 20 repository to the system package manager:
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
+
   
 ```
 sudo apt install -y ca-certificates curl gnupg
@@ -181,51 +170,30 @@ sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 ```
-</details>
 
-<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
-  
-```
-sudo yum install https://rpm.nodesource.com/pub_20.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
-sudo yum install nodejs -y --setopt=nodesource-nodejs.module_hotfixes=1
-```
-</details>
+
 
 <a id="B7" href="#B7">B7.</a> Add the caddy repository to the system package manager:
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
+
   
 ```
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 ```
-</details>
 
-<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
-  
-```
-sudo dnf install 'dnf-command(copr)'
-sudo dnf copr enable @caddy/caddy -y
-```
-</details>
+
 
 <a id="B8" href="#B8">B8.</a> Install nodejs, caddy, unzip, and nano:
 
-<details><summary>Ubuntu/Debian/Raspberry Pi OS ▼ </summary>
   
 ```
 sudo apt update
 sudo apt install nodejs caddy unzip nano -y
 ```
-</details>
 
-<details><summary>CentOS/Red Hat/Fedora ▼ </summary>
-  
-```
-sudo dnf install nodejs caddy unzip nano -y
-```
-</details>
+
 
 <a id="B9" href="#B9">B9.</a> Check that nodejs and npm are installed and the correct versions:
 
@@ -516,8 +484,6 @@ You now have a swapfile enabled and should be protected against out-of-memory er
 ## Objective
 
 As Foundry VTT is updated, the minimum requirements for NodeJS are also updated. If you've received a message stating that you must update NodeJS and you have used this guide (or similar guides, such as the Oracle Always Free guide, that use pm2 and the nodesource repo) then this section will describe how to update NodeJS to the latest version. 
-
-This section supports updating on Debian/Ubuntu-based linux distributions. Please substitute the appropriate package manager (like `dnf`) if `apt` is not available. 
 
 ## Updating NodeJS
 This section assumes that you have set Foundry VTT to be managed by pm2 and have installed NodeJS through their repo as this guide describes. Please copy and paste the instructions carefully. 
