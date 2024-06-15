@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2024-06-15T20:12:06.580Z
+date: 2024-06-15T20:12:53.207Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -43,7 +43,7 @@ b. A free subdomain from a free domain name service like [Duck DNS](http://duckd
 
 ## Preferred Linux Distribution
 
-This guide includes instructions for a number of linux distributions, as described below. If you do not have a strong reason for another distribution, we recommend **Ubuntu 22.04**. 
+This guide includes instructions for a number of linux distributions, as described below. If you do not have a strong reason for another distribution, we recommend **Ubuntu 24.04**. 
 
 This guide supports most distributions based on Debian 11 or 12, including:
 
