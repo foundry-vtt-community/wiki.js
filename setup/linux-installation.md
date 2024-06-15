@@ -1,8 +1,8 @@
 ---
 title: Recommended Linux Installation Guide
-description: Sets up Foundry on linux with Caddy as reverse proxy. 
+description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-06-15T20:31:03.728Z
+date: 2024-06-15T20:33:33.176Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -589,7 +589,9 @@ The GLIBC error is caused by the `classic-level` node package not having a compi
 
 To correct this error, we need to build `classic-level` ourselves manually. 
 
-<a id="H1" href="#H1">H1.</a> Login as the user Foundry is running as and stop Foundry from running. If you followed this guide, login as `foundry` then you simply:
+The steps below assume you've followed the guide above to install and run Foundry, and you are logged in as the `foundry` user. If you didn't folow this guide, adjust accordingly to your own installation.
+
+<a id="H1" href="#H1">H1.</a> Login as the user Foundry is running as and stop Foundry from running. 
 
 ```
 pm2 stop foundry
