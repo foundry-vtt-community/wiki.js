@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy. 
 published: true
-date: 2024-06-15T20:14:17.195Z
+date: 2024-06-15T20:31:03.728Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -468,7 +468,7 @@ NAME      TYPE      SIZE  USED PRIO
 You now have a swapfile enabled and should be protected against out-of-memory errors.
 
 
-# (Optional) F. Updating NodeJS on Debian/Ubuntu
+# (Optional) F. Updating NodeJS
 ## Objective
 
 As Foundry VTT is updated, the minimum requirements for NodeJS are also updated. If you've received a message stating that you must update NodeJS and you have used this guide (or similar guides, such as the Oracle Always Free guide, that use pm2 and the nodesource repo) then this section will describe how to update NodeJS to the latest version. 
@@ -571,5 +571,48 @@ pm2 start foundry
 
 You should now have the new version of Foundry running and accessible as before!
 
+# (Optional) H. GLIBC Error Fix
+## Objective
 
+This section addresses a common error on ARM or other non-x86/x64 architectures, including some Raspberry Pis. If you encounter the GLIBC error listed below, please read through this section to correct it and have Foundry launch. 
 
+## Foundry Fails to Launch with GLIBC Error
+
+This section of the guide will correct the error where Foundry fails to launch, and you see this error (exact GLIBC version listed may be different):
+```
+Error: /lib/arm-linux-gnueabihf/libstdc++.so.6: version `GLIBCXX_3.4.29' not found (required by /home/foundry/foundry/resources/app/node_modules/classic-level/prebuilds/linux-arm/node.napi.armv7.node)
+```
+
+## Rebuild Classic-Level Database Engine
+
+The GLIBC error is caused by the `classic-level` node package not having a compiled version distributed for glibc versions on some ARM or non-x86/x64 archictectues. You may also see this error if you are using a non-linux POSIX OS like FreeBSD or are using an older linux distribution. 
+
+To correct this error, we need to build `classic-level` ourselves manually. 
+
+<a id="H1" href="#H1">H1.</a> Login as the user Foundry is running as and stop Foundry from running. If you followed this guide, login as `foundry` then you simply:
+
+```
+pm2 stop foundry
+```
+
+<a id="H2" href="#H2">H2.</a> Change to the installation `resources/app/` directory. 
+
+```
+cd ~/foundry/resources/app
+```
+
+<a id="H3" href="#H3">H3.</a> Run the `npm` command to build `classic-level` under the current glibc version and architecture.
+
+```
+npm install classic-level --build-from-source
+```
+
+>You MUST execute that command in the `resources/app/` directory in the Foundry installation. This fix will fail if you don't execute it in that directory.. {.is-warning}
+
+<a id="H4" href="#H4">H4.</a> Relaunch Foundry.
+
+```
+pm2 start foundry
+```
+
+Foundry should now start properly without the GLIBC error!
