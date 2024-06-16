@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-06-12T17:19:24.195Z
+date: 2024-06-16T14:31:58.161Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -126,9 +126,9 @@ Compendiums are not documents, which means they do not have an `update` method. 
 
 This operation is asynchronous; it's a wrapper for an update to `game.settings`. Any API call looking to batch edit compendiums should consider opening and closing with `collection.configure({locked: false})` and `collection.configure({locked: true})`.
 
-### CompendiumCollection#index
+### The Index
 
-When a compendium is loaded into a world, it establishes an index of all the documents inside of it. This index has a very limited subset of the document data, for example Actor and Item store these fields:
+When a compendium is loaded into a world, it establishes an `index` of all the documents inside of it. This index has a very limited subset of the document data, for example Actor and Item store these fields:
 
 ```js
 {
@@ -142,11 +142,7 @@ When a compendium is loaded into a world, it establishes an index of all the doc
 }
 ```
 
-The advantage is that the index is accessible in a synchronous fashion. The index is a [Collection](https://foundryvtt.com/api/classes/foundry.utils.Collection.html), so all the usual operations are availabe; `get` and `getName` to fetch individual index entries, `map` and `filter` to obtain subsets, and other such operations.
-
-#### Modifying the indexable fields
-
-By default, the indexed fields are set in `Document.metadata.compendiumIndexedFields` for any given document type. However, you can configure additonal fields in `CONFIG[documentName].compendiumIndexFields`; for example, dnd5e sets `CONFIG.Item.compendiumIndexFields = ["system.container"]` so it can properly render how items are stored in containers.
+The advantage is that the index is accessible in a synchronous fashion. The index is a [Collection](https://foundryvtt.com/api/classes/foundry.utils.Collection.html), so all the usual operations are availabe; `get` and `getName` to fetch individual index entries, `map` and `filter` to obtain subsets, and other such operations. (e.g. `const weapons = game.packs.get('some.pack').index.filter(i => i.type == "weapon")`). The index is modifiable, see "Modifying the indexable fields" under Specific Use Cases below.
 
 ### Fetching Documents
 
@@ -295,6 +291,24 @@ function filter(doc) {
 ```
 
 Keep in mind the wide expanse of [string operations](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) available within Javascript when doing an update — well-constructed RegEx can save a lot of manual work when updating HTML entries.
+
+### Modifying the indexable fields
+
+By default, the indexed fields are set in `Document.metadata.compendiumIndexedFields` for any given document type. However, you can configure additonal fields in `CONFIG[documentName].compendiumIndexFields`; for example, dnd5e sets `CONFIG.Item.compendiumIndexFields = ["system.container"]` so it can properly render how items are stored in containers. You will need to run `CompendiumCollection#getIndex` in a `"setup"` or `"ready"` hook for every pack, as the initial index is constructured from the base document pack data gathered during the start of world load without knowledge of any changes made client side.
+
+```js
+Hooks.once("init", () => {
+  CONFIG.Item.compendiumIndexFields = ["system.container"];
+});
+
+Hooks.once("ready", async () => {
+  for (const pack of game.packs.filter(p => p.documentName === "Item")) {
+  	await pack.getIndex()
+  }
+});
+```
+
+Keep in mind there is a performance cost to adding properties to the index, its why there's an index rather than just fully loading the document.
 
 ### foundryvtt-cli
 
