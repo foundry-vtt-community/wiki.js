@@ -2,7 +2,7 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2024-03-29T16:08:37.414Z
+date: 2024-06-17T14:19:06.035Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
@@ -37,7 +37,7 @@ This will create a generated version of Boilerplate that handles all of the file
 ## Option 2: Boilerplate with manual replacements
 
 
-1. Download a zip version of the [Boilerplate System](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate/-/archive/master/boilerplate-master.zip)
+1. Download a zip version of the [Boilerplate System](https://github.com/asacolips-projects/boilerplate/archive/refs/heads/main.zip)
 2. Extract it to the `/Data/systems` directory in your Foundry userData folder and rename it from `boilerplate-master` to your system's name (lowercase, machine-safe).
 3. Search the directory for any files with the filename `boilerplate` and rename them to your system's machine-safe name, such as `mysystemname`.
 4. Search the files for any occurrences of `Boilerplate` (case-sensitive) and replace those with a capitalized version of your system name that's still machine-safe, such as `MySystemName`. These are typically used for the classes in the Javascript files.
