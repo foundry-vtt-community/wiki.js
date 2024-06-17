@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-06-05T16:51:25.108Z
+date: 2024-06-17T20:32:13.915Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -47,6 +47,8 @@ Here are the core things to know about ApplicationV2, including comparisons to t
 - Overall simpler and cleaner to implement
 
 Another major change is there's no more JQuery-by-default in AppV2; all internal functions work exclusively with base javascript DOM manipulation. JQuery is still fully included in Foundry, so developers who prefer it can call `const html = $(this.element)` to get a jquery representation of the application's rendered HTML.
+
+See [this guide](https://foundryvtt.wiki/en/development/guides/converting-to-appv2) for a detailed walkthrough of converting to AppV2.
 
 ### Use of ESModules
 
