@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-06-19T17:26:21.677Z
+date: 2024-06-19T18:56:01.183Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -58,7 +58,8 @@ Your Javscript file will usually live within the world directory for the world i
 To include a Javascript file in your world:
 1. Make sure Foundry is not running.
 2. Navigate to your world's directory in your userdata folder (like `Data/worlds/my-world/`).
-3. Open `world.json` in a text editor (Visual Studio Code is a good choice, but almost any editor will do).
+3. If you haven't made a script yet, create a new empty text file in a text editor (Visual Studio Code is a good choice, but almost any editor will do), and save it as `my-script.js`.
+3. Open the `world.json` file in the text editor.
 4. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
 ```json
 {
