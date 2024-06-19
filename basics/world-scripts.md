@@ -2,13 +2,13 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-06-19T17:25:35.972Z
+date: 2024-06-19T17:26:21.677Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
 ---
 
-> This is known to be up to date as of Foundry Core 0.7.9
+> This is known to be up to date as of Foundry v12
 {.is-info}
 
 
