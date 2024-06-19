@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-06-19T18:56:01.183Z
+date: 2024-06-19T18:56:27.309Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -59,8 +59,8 @@ To include a Javascript file in your world:
 1. Make sure Foundry is not running.
 2. Navigate to your world's directory in your userdata folder (like `Data/worlds/my-world/`).
 3. If you haven't made a script yet, create a new empty text file in a text editor (Visual Studio Code is a good choice, but almost any editor will do), and save it as `my-script.js`.
-3. Open the `world.json` file in the text editor.
-4. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
+4. Open the `world.json` file in the text editor.
+5. In the `world.json` file, look for a line with the `esmodules` key. If there isn't one already, **insert** it after the `id` like this:
 ```json
 {
   "title": "My World",
@@ -69,10 +69,10 @@ To include a Javascript file in your world:
   "system": "crucible",
   ...
   ```
-5. Note that you are only adding *one line* to this file — the `"esmodules"` line — the other lines in the example above should already be there, and should not be added again.
-6. Make sure you have included the `.js` extension on your file; it should look like this: `"esmodules": ["my-script.js"],` (note the comma is also required at the end of the line, unless you've added this as the very last key in the JSON file).
-7. Save and close `world.json`.
-8. Launch Foundry, and launch your world. You must always make sure your world is not running while making changes to its `world.json` file.
+6. Note that you are only adding *one line* to this file — the `"esmodules"` line — the other lines in the example above should already be there, and should not be added again.
+7. Make sure you have included the `.js` extension on your file; it should look like this: `"esmodules": ["my-script.js"],` (note the comma is also required at the end of the line, unless you've added this as the very last key in the JSON file).
+8. Save and close `world.json`.
+9. Launch Foundry, and launch your world. You must always make sure your world is not running while making changes to its `world.json` file.
 
 ## Examples
 
