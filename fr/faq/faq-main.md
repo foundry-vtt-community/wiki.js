@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-06-25T06:27:41.931Z
+date: 2024-06-25T06:29:15.624Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -125,6 +125,14 @@ Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus pop
 ## Je peux l'installer plusieurs fois ?
 
 Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pou jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
+
+## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
+
+Tout d'abord, venir s'inscrire sur le Discord FR Foundry ( https://discord.gg/pPSDNJk ), puis lire cette FAQ :) 
+Ensuite, parcourir la "Knowledge Base" de Foundry : https://foundryvtt.com/kb
+Ensuite, selon le système de jeu qui t'interesse, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder si ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission présente en général un système de jeu français ou traduit : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
+
+Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
 
 # Comment jouer et questions associées 
 
@@ -253,14 +261,6 @@ C'est un exemple résumé, il existe des FAQ plus spécialisées ici https://fou
 Si ça ne fonctionne toujours pas, venez poster un message dans le channel #support-technique du Discord Foundry FR.
 
 
-## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
-
-Tout d'abord, venir s'inscrire sur le Discord FR Foundry ( https://discord.gg/pPSDNJk ), puis lire cette FAQ :) 
-Ensuite, parcourir la "Knowledge Base" de Foundry : https://foundryvtt.com/kb
-Ensuite, selon le système de jeu qui t'interesse, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder si ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission présente en général un système de jeu français ou traduit : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
-
-Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
-
 ## Est-ce qu’il a des coupures audio/video ou autres ?
 
 Tout n’est pas parfait, il faut parfois faire un « refresh » de son navigateur. Pour l’audio et la vidéo intégré, je vous conseille fortement d’ouvrir une session [Jitsi](http://www.jitsi.org ) dans un onglet à côté de celui de Foundry, et de vous connecter via ce canal, ou bien d'utiliser un canal audio sous Discord. Cela permet de faire fonctionner l’audio en permanence, indépendamment du rendu graphique des pages de Foundry.
@@ -339,8 +339,6 @@ Veillez quand même à connaitre et bien respecter les paramètres de cette exce
 ## Je suis paumé ... ça ne fonctionne pas !
 
 Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de Foundry. Vous n’avez rien à installer, tout se passe via un navigateur. Il existe plusieurs canaux de discussion, donc essayez de choisir le bon. Si votre problème est lié à l’installation, ben… #installation. Si c’est lié à un JDR (ie un système), et bien #systeme-discussion. Si c’est un #module-discussion. Et si c’est une question générale, plutôt dans #vtt-discussions ou #testing-question. Vous pouvez me contacter sur ces canaux en préfixant votre message avec @LeRatierBretonnien.
-
-
 
 ## J'ai le soft, mais mes joueurs ne peuvent pas se connecter
 
