@@ -2,11 +2,13 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-06-13T16:01:44.043Z
+date: 2024-06-25T06:27:41.931Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
 ---
+
+# Questions sur Foundry en général
 
 ## FoundryVTT, c'est quoi ?
 FoundryVTT est un logiciel permettant de jouer à des jeux de rôles sur table en mode connecté. La table physique devient ainsi "virtuelle", et le MJ et ses joueurs communiquent à distance via micro et webcam. [Un choix de cet outil expliqué ici](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/)
@@ -48,6 +50,46 @@ D'autres vidéos sont souvent disponibles sur YT également, à chercher selon t
 
 Ensuite, naturellement, les canaux du Discord FR sont là pour répondre à toutes les questions : https://discord.gg/pPSDNJk
 
+## Je joue pas en ligne, ça peut me servir quand même ?
+
+Oui, tout à fait. Etant donné que Foundry s'installe en local, on peut parfaitement utiliser Foundry pour gérer sa campagne, le suivi des PJ et des PNJs, etc, etc.
+
+Il peut de plus se transformer en assistant sur table, comme décrit ici par exemple : https://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/
+
+## C’est tout en anglais ce machin !
+
+Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite bar « Baktov », ainsi que les systèmes D&D5 (Baktov également), Shadowrun, Starfinder, Savage Worlds (ça c’est bibi), Pathfinder 1 (wiki PF-FR) & Pathfinder 2 (rectulo) et Warhammer 4 (ça c’est bibi aussi). Cependant, pour l’instant, il faut reconnaître qu’une partie importante du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
+
+## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
+
+Voici un choix et une explication étayée - qui vaut ce qu'elle vaut : [cette page](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/). 
+De plus, le modèle de Foundry est un achat one-shot : tu disposes du soft, il est à toi à vie, et si jamais la société Foundry disparait, le code source sera disponible et pourra être repris par d'autres. Tout à l'opposé des modèles hébergés basés sur des abonnements ou des micro-transactions (Roll20, Lets'Role, etc).
+En payant 60 EUR (ou 50 EUR si promo), tu rémunères une équipe de rolistes développeurs de manière décente pour le travail fourni. Je précise d'ailleurs que l'équipe de Foundry est internationale, et qu'il y a même un Français dans la team officielle (SecretFire).
+Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut - je pense - en être conscient"
+
+## Bah finalement, on peut faire la même chose avec un de meeting vidéo et partage d’écran
+
+Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme Roll20, Astral, FantasyGrounds, Foundry etc offrent toutefois des capacités des gestion des scènes, des actions, des PNJs qui sont difficilement atteignables avec un simple outil de meeting. Mais l’important c’est de jouer de toute manière.
+
+## J'aime pas jouer en ligne, c'est de la m..., alors ça me sert à rien
+
+Cete attitude connue est compréhensible, mais à titre perso je maitrise plus sur table réelle que virtuelle, et j'utilise Foundry dans tout les cas. C'est devenu un précieux outil de gestion et d'animation des parties dont je ne saurais plus me passer sur table désormais. Plus de détails ici : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/ 
+
+## Bon je veux bien regarder, il n'y a pas une vidéo de démonstration ?
+
+Il ya de nombreuses vidéos sur YT, mais celle-ci est régulièrement citée en référnce  :
+[cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
+
+La chaine YT de Carter (https://www.youtube.com/@carterfoundryvtt) contient plein de tutos à jour, et les Chroniques de la Fonderie (https://www.youtube.com/results?search_query=chroniques+de+la+fonderie) peuvent aussi aider, comme indiqué plus haut.
+
+# Foundry et son installation 
+
+## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
+
+FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
+
+Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce point lorsque nécessaire :)
+
 ## J’y connais rien en informatique, je peux m’en servir quand même ?
 
 Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir des ports dans son modem ADSL‘ dans votre moteur de recherche…) et que vous savez installer un programme sur votre ordinateur, il est probable que vous saurez vous en servir. Si tout ceci est déjà trop compliqué ou chiant (:)) pour vous, il faudra vous tourner ves les offres d’hébergement tiers, comme The Forge. Sinon, si un de vos joueurs est un peu informaticien, il peut probablement vous aider dans cette tâche. Il faut compter 3-4 Mbs d’upload montant pour héberger une partie chez vous, donc il est possible que vous ayez besoin d’un serveur tiers si votre connexion est lente. Il existe de l’aide à ce sujet sur le Wiki de Foundry. Un certains nombres d’utilisateurs présents sur le Discord FR de Foundy sont également capables d’apporter du support sur ces sujets.
@@ -60,11 +102,6 @@ Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous a
 
 Cela revient à faire tourner Foundry tout le temps, et donc à laisser allumer un PC/serveur quelque part. Ce "quelque part" peut-être chez vous, ou encore sur un service d'hébergement en ligne (Oracle, AWS, TheForge). A noter que chez vous, une petit Raspberry Pi peut parfaitement se transformer un serveur Foundry pour un coût énergétique réduit.
 
-## Je joue pas en ligne, ça peut me servir quand même ?
-
-Oui, tout à fait. Etant donné que Foundry s'installe en local, on peut parfaitement utiliser Foundry pour gérer sa campagne, le suivi des PJ et des PNJs, etc, etc.
-
-Il peut de plus se transformer en assistant sur table, comme décrit ici par exemple : https://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/
 
 ## Et il faut de la bande passante ?
 
@@ -88,6 +125,8 @@ Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus pop
 ## Je peux l'installer plusieurs fois ?
 
 Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pou jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
+
+# Comment jouer et questions associées 
 
 ## Y’a quoi comme jeux dessus ?
 
@@ -126,10 +165,6 @@ Une liste succincte d'exemples :
 - ....
 
 Un système générique permet de plus de rapidement démarrer une table autour d’un jeu non supporté.
-
-## C’est tout en anglais ce machin !
-
-Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite bar « Baktov », ainsi que les systèmes D&D5 (Baktov également), Shadowrun, Starfinder, Savage Worlds (ça c’est bibi), Pathfinder 1 (wiki PF-FR) & Pathfinder 2 (rectulo) et Warhammer 4 (ça c’est bibi aussi). Cependant, pour l’instant, il faut reconnaître qu’une partie importante du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
 
 ## Je vois qu'il y a des "systèmes". C'est quoi ?
 
@@ -203,11 +238,6 @@ C'est assez fréquent : il est conseillé d'utiliser un navigateur externe pluto
 2 - lancer un navigateur  (Chrome, Chromium, Firefox, Edge, Opera, ....)
 3 - Se connecter en http://127.0.0.1:30000 ou https://127.0.0.1:30000 (si vous avez laissé le port 30000 par défaut bien sur, sinon à remplacer par le port utilisé)
 
-## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
-
-FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
-
-Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce point lorsque nécessaire :)
 
 ## Comment mes joueurs peuvent-il se connecter ?
 
@@ -222,12 +252,6 @@ C'est un exemple résumé, il existe des FAQ plus spécialisées ici https://fou
 
 Si ça ne fonctionne toujours pas, venez poster un message dans le channel #support-technique du Discord Foundry FR.
 
-## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
-
-Voici un choix et une explication étayée - qui vaut ce qu'elle vaut : [cette page](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/). 
-De plus, le modèle de Foundry est un achat one-shot : tu disposes du soft, il est à toi à vie, et si jamais la société Foundry disparait, le code source sera disponible et pourra être repris par d'autres. Tout à l'opposé des modèles hébergés basés sur des abonnements ou des micro-transactions (Roll20, Lets'Role, etc).
-En payant 60 EUR (ou 50 EUR si promo), tu rémunères une équipe de rolistes développeurs de manière décente pour le travail fourni. Je précise d'ailleurs que l'équipe de Foundry est internationale, et qu'il y a même un Français dans la team officielle (SecretFire).
-Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut - je pense - en être conscient"
 
 ## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
 
@@ -316,20 +340,7 @@ Veillez quand même à connaitre et bien respecter les paramètres de cette exce
 
 Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de Foundry. Vous n’avez rien à installer, tout se passe via un navigateur. Il existe plusieurs canaux de discussion, donc essayez de choisir le bon. Si votre problème est lié à l’installation, ben… #installation. Si c’est lié à un JDR (ie un système), et bien #systeme-discussion. Si c’est un #module-discussion. Et si c’est une question générale, plutôt dans #vtt-discussions ou #testing-question. Vous pouvez me contacter sur ces canaux en préfixant votre message avec @LeRatierBretonnien.
 
-## Bah finalement, on peut faire la même chose avec un de meeting vidéo et partage d’écran
 
-Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme Roll20, Astral, FantasyGrounds, Foundry etc offrent toutefois des capacités des gestion des scènes, des actions, des PNJs qui sont difficilement atteignables avec un simple outil de meeting. Mais l’important c’est de jouer de toute manière.
-
-## J'aime pas jouer en ligne, c'est de la m..., alors ça me sert à rien
-
-Cete attitude connue est compréhensible, mais à titre perso je maitrise plus sur table réelle que virtuelle, et j'utilise Foundry dans tout les cas. C'est devenu un précieux outil de gestion et d'animation des parties dont je ne saurais plus me passer sur table désormais. Plus de détails ici : http://www.lahiette.com/leratierbretonnien/foundryvtt-pour-table-reelle/ 
-
-## Bon je veux bien regarder, il n'y a pas une vidéo de démonstration ?
-
-Il ya de nombreuses vidéos sur YT, mais celle-ci est régulièrement citée en référnce  :
-[cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
-
-La chaine YT de Carter (https://www.youtube.com/@carterfoundryvtt) contient plein de tutos à jour, et les Chroniques de la Fonderie (https://www.youtube.com/results?search_query=chroniques+de+la+fonderie) peuvent aussi aider, comme indiqué plus haut.
 
 ## J'ai le soft, mais mes joueurs ne peuvent pas se connecter
 
@@ -398,7 +409,8 @@ Votre système ou module est alors prêt à être utilisé.
 
 En général, c'est le signe que le navigateur a un conflit avec le driver du GPU (ie la carte graphique). Essayez les étape suivantes : 
 - Mettre à jour le navigateur utilisé
-- Mettre à jour le driver de la carte graphique
+- Mettre à jour le driver de la carte graphiqu
+- Vérifier qu'il reste 4 Go de disponible sur le disque C: (si vous êtes sous Windoze)
 - Ré-essayer
 
 Si le problème persiste, essayez avec un autre navigateur : Chromium, Firefox, Chrome, Edge, Opera
