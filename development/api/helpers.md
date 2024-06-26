@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-26T19:07:44.484Z
+date: 2024-06-26T19:08:31.599Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -343,7 +343,7 @@ const isV12 = game.release.generation >= 12
 
 Sometimes it's necessary to check the inheritance chain. There's many ways to do this:
 
-**With Documents**: If you just need to check the type of a document, the `documentName` getter will return a string like `"Actor"`. This is available as both an instance *and* static method.
+**With Documents**: If you just need to check the type of a document, the `documentName` getter will return a string like `"Actor"`. This is available as both an instance *and* static method - `Actor.documentName` as well as `actor.documentName`.
 
 **With other classes**: If you have a class `Foo` to evaluate against `OtherClass`, you can use `foundry.utils.isSubclass(foo, OtherClass)`. If you have an instance `foo`, you can use `foo instanceof OtherClass`.
 
