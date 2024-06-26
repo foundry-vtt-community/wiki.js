@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-26T19:46:04.500Z
+date: 2024-06-26T19:53:03.481Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -372,7 +372,7 @@ Alongside the corresponding `getData`/`_prepareContext`:
   context.document = this.document;
   context.fields = this.document.schema.fields;
   context.system = this.document.system;
-	context.systemFields = this.document.system.schema.fields;
+  context.systemFields = this.document.system.schema.fields;
   // If you just need one specific field, in this case `img`
   context.imgField = this.document.schema.getField("img");
   context.img = this.documeng.img;
