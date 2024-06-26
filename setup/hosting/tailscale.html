@@ -2,7 +2,7 @@
 title: Tailscale Funnel Setup
 description: For when normal port forwarding isn't possible but you still want to give easy access to your self-hosted Foundry instance
 published: true
-date: 2024-06-26T00:48:33.359Z
+date: 2024-06-26T07:34:09.042Z
 tags: hosting, setup, networking, self-hosting
 editor: ckeditor
 dateCreated: 2024-06-26T00:44:50.289Z
@@ -12,16 +12,25 @@ dateCreated: 2024-06-26T00:44:50.289Z
 <h2>What is Tailscale?</h2>
 <p>Tailscale is a free VPN service that gives you secure point-to-point encrypted access to any of your devices wherever they are in the world through practically any network, public or private. Unlike most VPNs you might have heard of, Tailscale does not give you private access to the internet - just to your other devices.</p>
 <p>For more information, see <a href="https://tailscale.com/kb/1151/what-is-tailscale">https://tailscale.com/kb/1151/what-is-tailscale</a>.</p>
+<p>&nbsp;</p>
 <h2>What is Tailscale Funnel?</h2>
-<p>This features allows you to securely route traffic from the internet to your local service, via Tailscale.</p>
+<p>This features allows you to securely route traffic from the internet to your local service, via Tailscale. It creates a TLS secured reverse proxy from a public web address to a service running on your computer with the specified port.</p>
 <p>What this means for Foundry is next to no setup to give anyone access to your Foundry instance. <strong>The player doesn't need to download any software, and you don't need to set up any port forwarding or firewall rules.</strong></p>
 <p>For information on how it works, see <a href="https://tailscale.com/kb/1223/funnel">https://tailscale.com/kb/1223/funnel</a>.</p>
+<p>&nbsp;</p>
 <h2>Is this right for me?</h2>
 <p>Possibly! If you've tried port forwarding but hit walls with CGNAT or network wide firewalls, especially in cases like apartment building and university networks, this might be the silver bullet that means you don't have to go and pay for an external hosting service.</p>
+<p>Please make sure you read the <strong>whole page</strong> before committing to try this out. While it's quite straightforward, you are using closed source third party software to expose Foundry to the whole internet. This inherently comes with some risks, similar to port forwarding.</p>
+<p>&nbsp;</p>
+<h2>Limitations</h2>
+<p>Tailscale Funnel is current a beta feature. While Tailscale don't have a history of removing beta features, they could in theory adjust access to the feature or remove it at any time, and will not guarantee any level of technical support. They may also make breaking changes to the feature, but will give some advance warning in these cases. I've been using Tailscale Funnel for other services for the last year without any issues, but your mileage may vary.</p>
+<p>There is also a bandwidth limit to Tailscale Funnel, which is undisclosed, but in my testing I have never hit this limit even with streaming 4k video. In the worst case this will just slow loading down and may cause lag or delays in updates for your players.</p>
+<p>Potentially more of an advantage than disadvantage, but from the internet your Foundry server will have HTTPS with a certificate signed by Let's Encrypt. You do not need to do any configuration on the server for this to work.</p>
+<p>&nbsp;</p>
 <h2>Setup Process</h2>
 <p>These setup steps should generally work no matter what operating system or network configuration you have. I have tested this on a Windows 11 PC, and a Debian container running on a Proxmox server.</p>
 <ol>
-  <li>Install Foundry on your host computer as if it was only for local access - <a href="https://foundryvtt.com/article/installation/">https://foundryvtt.com/article/installation/</a>. Ensure you can access Foundry locally before proceeding!</li>
+  <li>Install and run Foundry on your host computer as if it was only for local access - <a href="https://foundryvtt.com/article/installation/">https://foundryvtt.com/article/installation/</a>. Ensure you can access Foundry locally before proceeding!</li>
   <li>Create a Tailscale account - <a href="https://tailscale.com/">https://tailscale.com/</a></li>
   <li>Install Tailscale on the computer being used as the Foundry server - <a href="https://tailscale.com/download">https://tailscale.com/download</a></li>
   <li>Open a command line and run the command <code>tailscale funnel 30000</code> <i>(Replace the 30000 port with whatever port your Foundry instance is set up to use if needed)</i></li>
@@ -29,13 +38,17 @@ dateCreated: 2024-06-26T00:44:50.289Z
   <li>Try to access your Foundry server! Using a web browser, navigate to the Tailscale address of your host computer - this should follow the format hostname.tailnet-name.ts.net. If you're unsure what this will be, enter the command <code>tailscale funnel status</code> on your host computer and it should show you!</li>
   <li>If this works, you can end the running Tailscale Funnel command (usually Ctrl+C) and your Foundry instance will no longer be available to the internet. If you always want the funnel running, use the command <code>tailscale funnel --bg 30000</code> to run it in the background. To later shut this down, you can simply use the command <code>tailscale funnel off</code>.</li>
 </ol>
-<h2>Limitations</h2>
-<p>Tailscale Funnel is current a beta feature. While it is unlikely to go away, Tailscale could adjust access to the feature or remove it at any time, and will not guarantee any level of technical support. They may also make breaking changes to the feature, but will give some advance warning in these cases.</p>
-<p>There is also a bandwidth limit to Tailscale Funnel, which is undisclosed, but in my testing I have never hit this limit even with streaming video. In the worst case this will just slow loading down and may cause lag or delays in updates for your players.</p>
+<p>&nbsp;</p>
 <h2>Risks</h2>
 <p>As with any self hosting, you are exposing your Foundry instance, and to some extent your computer, to the internet as a whole. While Tailscale encrypts all the traffic between the server and the client, from the perspective of the internet it's a clean open path straight to your server. You should expect to have the same risks as when port forwarding.</p>
 <p>Make sure you have set a password for the Gamemaster account on any Foundry world you create, otherwise someone malicious that happens upon your server (or is watching the Tailscale public DNS records for new servers!) could easily gain access and do damage.</p>
 <p>It is good practice to disable the funnel using <code>tailscale funnel off</code> any time you aren't running the Foundry server. This prevents any accidental access to other services running on your machine that might happen to use the same port.</p>
 <p>If you only want people you trust to be able to access the Foundry server, you can ask them all to set up and install Tailscale accounts of their own and share your machine with them. More details on this are available at <a href="https://tailscale.com/kb/1084/sharing">https://tailscale.com/kb/1084/sharing</a>. In this instance it's more like Hamachi, although with a much cleaner and less intrusive interface!</p>
-<h2>Troubleshooting</h2>
+<p>&nbsp;</p>
+<h2>FAQs / Troubleshooting</h2>
 <p>If you've hit a hurdle setting up your Tailscale Funnel and want to share how you fixed it, please contribute to the wiki and add it here!</p>
+<p>&nbsp;</p>
+<h3>I don't want my computer's hostname to be seen by my players!</h3>
+<p>You can change the name used on the Tailscale admin page - go to <a href="https://login.tailscale.com/admin/machines">https://login.tailscale.com/admin/machines</a>, click on your machine, click ‘machine settings’, then 'edit machine name'</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
