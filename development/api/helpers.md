@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-26T19:08:31.599Z
+date: 2024-06-26T19:44:43.727Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -384,17 +384,17 @@ The primary difference between the two is that `formGroup` will render a label a
 - The main argument, `fields`, takes a pointer to the actual DataField instance it's rendering
   - Your `getData` or `_prepareContext` needs to provide `this.document.schema.fields` for base document properties (e.g. `Actor#name`). 
   - However, this pointer won't be able to traverse any nested data model instances, such as the `system` field; you'll need to provide a separate pointer, e.g. `context.systemFields = this.document.system.schema.fields`.
-  - For `formField`, the field *must* have a `label` and `hint` property. You can automatically assign these with the [LOCALIZATION_PREFIXES](/en/development/api/localization#localization_prefixes) static property.
+  - For `formGroup`, the field *must* have a `label` and `hint` property. You can automatically assign these with the [LOCALIZATION_PREFIXES](/en/development/api/localization#localization_prefixes) static property.
 - Traversing a nested structure of SchemaField requires alternating with the `fields` property; a simple path to `system.details.biography.value` turns into `systemFields.details.fields.biography.fields.value`
 - Similar complications arise if you use the `EmbeddedDataField` class - it may be simpler in those cases to just use normal input creation.
 - `formInput` optional arguments are an instance of [FormInputConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
-- `formField` optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
+- `formGroup` optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
 
 One example of their implementation is the new UserConfig application, available at `resources\app\client-esm\applications\sheets\user-config.mjs` and its template `resources\app\templates\sheets\user-config.hbs`
 
 #### The `widget` option
 
-One way to offload HTML construction from the Handlebars template to a javascript function is the `widget` option, which takes a function with the signature `(FormGroupConfig, FormInputConfig} => HTMLDivElement`\*. This is only available to the `formField` helper, not `formInput`, and its actual utility as compared to defining the structure in the template directly depends on the complxity of the application. 
+One way to offload HTML construction from the Handlebars template to a javascript function is the `widget` option, which takes a function with the signature `(FormGroupConfig, FormInputConfig} => HTMLDivElement`\*. This is only available to the `formGroup` helper, not `formInput`, and its actual utility as compared to defining the structure in the template directly depends on the complxity of the application. 
 
 \*The function could technically return any HTML element with a valid `outerHTML` property, not just a div.
 
