@@ -1,8 +1,8 @@
 ---
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
-published: false
-date: 2024-06-27T18:45:39.315Z
+published: true
+date: 2024-06-27T18:45:52.785Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
