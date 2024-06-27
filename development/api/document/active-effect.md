@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: false
-date: 2024-06-27T18:44:56.885Z
+date: 2024-06-27T18:45:39.315Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -83,12 +83,29 @@ Similarly, you can use `document.effects.get` to fetch an active effect, `effect
 
 ### Actor#applyActiveEffects
 
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ### applyActiveEffect hook
 
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ### `type` and `system`
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ___
 ## Specific Use Cases
 
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ### Status Effects
+> Stub
+> This section is a stub, you can help by contributing to it.
+
 ___
 ## Troubleshooting
+> Stub
+> This section is a stub, you can help by contributing to it.
