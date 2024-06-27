@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-06-11T02:09:57.551Z
+date: 2024-06-27T23:13:00.751Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -15,7 +15,7 @@ dateCreated: 2022-03-15T14:35:36.691Z
 Hooks are an important method by which the core software, systems, and even modules can provide interaction points for other developers.
 
 *Official Documentation*
-- [Hook Events](https://foundryvtt.com/api/v11/modules/hookEvents.html)
+- [Hook Events](https://foundryvtt.com/api/modules/hookEvents.html)
 - [Hooks](https://foundryvtt.com/api/classes/client.Hooks.html)
 
 *Note:* Not all core hook events are documented by the hook events page, and any system- or module-specific hooks may or may not be documented on that specific package's repository.
