@@ -2,7 +2,7 @@
 title: Converting to ApplicationV2
 description: A guide to convert an Application to ApplicationV2
 published: true
-date: 2024-05-28T06:47:30.755Z
+date: 2024-06-27T20:59:24.863Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T06:46:59.385Z
@@ -140,8 +140,7 @@ The main difference is that formData is the whole `FormDataExtended` instead of 
 #onSubmit(event, form, formData) {
 	const settings = foundry.utils.expandObject(formData.object);
   await Promise.all(
-    	Object.entries(settings).map(([key, value]) => game.settings.set("foo", key, value));
-		)
+    	Object.entries(settings).map(([key, value]) => game.settings.set("foo", key, value))
 	);
 }
 ```
