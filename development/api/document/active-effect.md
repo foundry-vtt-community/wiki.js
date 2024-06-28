@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2024-06-27T18:45:52.785Z
+date: 2024-06-28T15:32:03.410Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -83,8 +83,17 @@ Similarly, you can use `document.effects.get` to fetch an active effect, `effect
 
 ### Actor#applyActiveEffects
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The Actor class have the method `applyActiveEffects`, this method is used to apply any transformation to the Actor's data caused by a ActiveEffect.
+It may be of interest to edit this method to condition the changes applied to the actor, reorder the prioritization, etc. Something similar to:
+```js
+  applyActiveEffects() {
+    for ( const effect of this.allApplicableEffects() ) {
+      //Determine whether this Active Effect is suppressed or not.
+      effect.determineSuppression(); 
+    }
+    return super.applyActiveEffects();
+  }
+```
 
 ### applyActiveEffect hook
 
