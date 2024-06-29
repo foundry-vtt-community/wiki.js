@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-06-29T04:20:01.908Z
+date: 2024-06-29T04:41:10.260Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -384,6 +384,17 @@ A key reason to use this pattern over typeguards and proxies is it allows module
 
 > Stub
 > This section is a stub, you can help by contributing to it.
+
+### ValidateJoint
+
+[API reference](https://foundryvtt.com/api/classes/foundry.abstract.DataModel.html#validateJoint)
+
+The `DataModel.validateJoint` method is a property of data models that can be useful when handling complex, interlocked data. It's both called by the parent data model as well as any data models inside, such as the `TypeDataField` that represents the `system` field of documents and any `EmbeddedDocumentField` instances. If the validation fails, the method should throw an error.
+
+Some examples of its use in Foundry's code include:
+- Validating that a `DrawingDocument` has some visible content.
+- Validating that a `Folder` does not contain itself.
+- Validating that a `Macro` has valid javascript if it is a script macro.
 
 ---
 ## Troubleshooting
