@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-06-12T23:18:09.711Z
+date: 2024-06-29T04:20:01.908Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -387,5 +387,9 @@ A key reason to use this pattern over typeguards and proxies is it allows module
 
 ---
 ## Troubleshooting
-> Stub
-> This section is a stub, you can help by contributing to it.
+
+Below are some of the common issues people run into with data mdoels.
+
+### Registered Data Model isn't working
+
+While data models do *mostly* offload their work to your javascript files, for the purposes of server side validation you *must* register the appropriate `type` in a json file. This is `system.json` or `template.json` files for systems, or the `module.json` file for modules.
