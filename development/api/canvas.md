@@ -2,7 +2,7 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-06-29T05:35:52.764Z
+date: 2024-06-29T05:44:40.586Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
@@ -39,7 +39,7 @@ This is the most essential information to understanding the canvas
 
 ### Groups and Layers
 
-The canvas is made up of a number of groups which capture common objects. The top most is the "stage", which encompasses all of Foundry's core-defined groups. They are drawn in the following order with the designated hierarchy.
+The canvas is made up of a number of groups which define the drawing process. The top most is the `"stage"`, which encompasses all of Foundry's core-defined groups. They are drawn in the following order with the designated hierarchy.
 
 - hidden
 - rendered
