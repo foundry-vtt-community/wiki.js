@@ -2,7 +2,7 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-06-29T06:08:15.497Z
+date: 2024-06-29T06:09:17.762Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
@@ -30,7 +30,7 @@ The most performance-intensive aspect of Foundry Virtual Tabletop, the game canv
 
 Fortunately, while the Canvas is very complex, most developers do not need to worry about it; the core software team spends significant amounts of time each major release refining and upgrading the canvas capabilities. The downside of this is that the canvas API is not very stable, and so has major breaking un-deprecated changes every version. The top of this page has a version marker; even more so than the other pages in the wiki's API documentation, if you are developing for a different core version than what this documents it is unlikely the information here will be accurate.
 
-Code for the Canvas class and its related classes can be found at `yourFoundryInstallPath\resources\app\client\pixi`.
+Code for the Canvas class and its related classes can be found at `yourFoundryInstallPath/resources/app/client/pixi` as well as `yourFoundryInstallPath/resources/app/client-esm/canvas`.
 
 ---
 ## Key Concepts
