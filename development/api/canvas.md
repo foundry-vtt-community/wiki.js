@@ -2,7 +2,7 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-05-23T06:51:48.096Z
+date: 2024-06-29T05:01:47.093Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
@@ -39,8 +39,18 @@ This is the most essential information to understanding the canvas
 
 ### Groups and Layers
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The canvas is made up of a number of groups which capture common objects. The top most is the "stage", which encompasses all of Foundry's core-defined groups. They are drawn in the following order with the designated hierarchy.
+
+- hidden
+- rendered
+  - environment
+    - primary
+    - effects
+  - visibility
+  - interface
+- overlay
+
+Almost all canvas layers are drawn as part of the `interface` group, with the exception being the `weather` layer which is drawn as part of the `primary` group.
 
 ---
 ## API Interactions
