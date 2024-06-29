@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-06-13T20:46:52.079Z
+date: 2024-06-29T16:45:06.508Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -145,6 +145,7 @@ Some documents have a `type` property in their Schema. These are also validated 
 - Combatant
 - Item
 - JournalEntryPage
+- RegionBehavior
 
 **Foundry-defined types**
 
