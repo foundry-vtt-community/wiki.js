@@ -2,13 +2,13 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-06-29T05:54:12.810Z
+date: 2024-06-29T06:08:15.497Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Foundry's Canvas is the primary method by which Foundry fulfills its function as a *Virtual Tabletop*, providing a space to render maps full of rich details and complex interactions.
 
