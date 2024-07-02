@@ -1,0 +1,65 @@
+<!--
+title: Hosting
+description: Options and methods for hosting and setting up networking
+published: true
+date: 2024-07-02T17:41:06.671Z
+tags: hosting
+editor: ckeditor
+dateCreated: 2024-07-02T17:41:06.671Z
+-->
+
+<h1>Hosting</h1>
+<p>Methods of hosting and setting up networking so you can get started with Foundry VTT!</p>
+<p>Please note that most methods here will not be officially supported by Foundry VTT, and you are unlikely to get any help if you ask on the official Discord server. Any guides on this wiki are followed at your own risk, and may be out of date.</p>
+<p>Each list is in no particular order, and you should read the whole page before starting any guide.</p>
+<h2>Official Resources</h2>
+<p>Please see the official website's articles before returning here. The methods and options here will always be better supported and often easier to get up and running.</p>
+<p>Officially supported hosting options: <a href="https://foundryvtt.com/article/hosting/">https://foundryvtt.com/article/hosting/</a></p>
+<p>Installation guide: <a href="https://foundryvtt.com/article/installation/">https://foundryvtt.com/article/installation/</a></p>
+<p>Port Forwarding, for self hosting: <a href="https://foundryvtt.com/article/port-forwarding/">https://foundryvtt.com/article/port-forwarding/</a></p>
+<h2>Self-Hosting</h2>
+<p>These guides are for installing and setting up Foundry on your own hardware. There is some crossover with cloud hosting options, especially when tools like Docker are involved.</p>
+<ul>
+  <li><a href="/en/setup/hosting/Ubuntu-VM">Ubuntu VM</a> - full guide including setting up a custom domain name using nginx and SSL</li>
+  <li><a href="/en/setup/hosting/Archlinux">Arch Linux</a></li>
+  <li><a href="/en/setup/hosting/Docker">Docker</a> - multiple different dockerfiles with varying levels of complexity and features</li>
+  <li><a href="/en/setup/hosting/freebsd">FreeBSD</a></li>
+  <li><a href="/en/setup/hosting/Installing-on-Android">Android Phone</a></li>
+  <li><a href="/en/setup/hosting/Kubernetes">Kubernetes</a></li>
+  <li><a href="/en/setup/hosting/Local-play">Local Play</a> - options for local in-person playing with minimal setup</li>
+  <li><a href="/en/setup/hosting/raspberry-pi">Raspberry Pi</a> - outdated, use the <a href="https://foundryvtt.com/article/installation/">official linux setup instructions</a> instead</li>
+  <li><a href="/en/setup/hosting/Synology">Synology NAS</a></li>
+  <li><a href="/en/setup/hosting/synology-with-docker">Synology with Docker</a></li>
+  <li><a href="/en/setup/hosting/truenas-scale">TrueNAS SCALE</a></li>
+</ul>
+<h2>Cloud Hosting</h2>
+<p>These guides are for installing and setting up Foundry on cloud services like Oracle, Azure, AWS etc.</p>
+<ul>
+  <li><a href="/en/setup/hosting/always-free-oracle">Free Oracle Cloud Hosting</a> - full guide including reverse proxy using Caddy, currently completely free</li>
+  <li><a href="/en/setup/hosting/AWS-hosted-foundry-scripted">AWS hosted foundry scripted</a> - automated deployment using a AWS Cloudformation script</li>
+  <li><a href="/en/setup/hosting/azure-web-app">Azure App Service</a></li>
+  <li><a href="/en/setup/hosting/CloudAtCost">CloudAtCost</a></li>
+  <li><a href="/en/setup/hosting/cloudflare-r2">CloudFlare R2 as S3 Bucket</a></li>
+  <li><a href="/en/setup/hosting/Self-Hosting-on-AWS">Amazon Web Services</a></li>
+  <li><a href="/en/setup/hosting/self-hosting-on-azure">Azure</a> - Microsoft hosting</li>
+  <li><a href="/en/setup/hosting/Self-Hosting-on-GCP">Google Cloud Platform</a> - incomplete guide</li>
+</ul>
+<h2>Escaping Restrictive Networks</h2>
+<p>If port forwarding won't work for you, some of these options might. They are in no particular order,&nbsp;</p>
+<p>All of these options will require having installed and set up Foundry VTT.</p>
+<ul>
+  <li>Hamachi - software that creates a virtual local network between up to 5 people with Hamachi installed. Page WIP, see section in <a href="/en/setup/Windows#hamachi">Windows Setup</a> for now.</li>
+  <li>ZeroTier - similar to Hamachi without a connection number limit. Page WIP, see section in <a href="/en/setup/Windows#zerotier">Windows Setup</a> for now.</li>
+  <li><a href="/en/setup/hosting/cloudflare-proxy-tunnel">CloudFlare Proxying and Tunnelling</a></li>
+  <li><a href="/en/setup/hosting/tailscale">Tailscale Funnel</a> - free WireGuard based forwarding, HTTPS without extra setup, no installation needed for players</li>
+  <li><a href="/en/setup/hosting/localtonet">LocalToNet</a></li>
+  <li><a href="/en/setup/hosting/ngrok">ngrok</a></li>
+  <li><a href="/en/setup/hosting/Apache-Reverse-Proxy-Configuration">Apache Reverse Proxy</a></li>
+  <li><a href="/en/setup/hosting/ddns">DuckDNS</a></li>
+</ul>
+<h2>Hosting Additional Features</h2>
+<p>Guides for setting up additional features that need separate hosting.</p>
+<ul>
+  <li><a href="/en/setup/hosting/Self-Hosting-LiveKit-Audio-Video-Server-on-Existing-Linux-Setup">LiveKit Audio/Video Server</a> - for existing Linux servers</li>
+</ul>
+<p>&nbsp;</p>
