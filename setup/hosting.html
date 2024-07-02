@@ -2,7 +2,7 @@
 title: Hosting
 description: Options and methods for hosting and setting up networking
 published: true
-date: 2024-07-02T17:48:48.915Z
+date: 2024-07-02T18:00:49.295Z
 tags: hosting
 editor: ckeditor
 dateCreated: 2024-07-02T17:41:06.671Z
@@ -19,8 +19,11 @@ dateCreated: 2024-07-02T17:41:06.671Z
 <p>Port Forwarding, for self hosting: <a href="https://foundryvtt.com/article/port-forwarding/">https://foundryvtt.com/article/port-forwarding/</a></p>
 <h2>Self-Hosting</h2>
 <p>These guides are for installing and setting up Foundry on your own hardware. There is some crossover with cloud hosting options, especially when tools like Docker are involved.</p>
+<p>For Windows, MacOS and Linux, start by following the <a href="https://foundryvtt.com/article/installation/">official guides</a>.</p>
+<p>The main community <a href="/en/setup/linux-installation">Linux Installation and Usage Guide</a> is recommended for going a few steps beyond the basic setup, including running the server 24/7 behind a reverse proxy providing HTTPS, using a dedicated domain name.</p>
+<p>Other more specific guides for other operating systems and container systems are also available, but many are out of date:</p>
 <ul>
-  <li><a href="/en/setup/hosting/Ubuntu-VM">Ubuntu VM</a> - full guide including setting up a custom domain name using nginx and SSL</li>
+  <li><a href="/en/setup/hosting/Ubuntu-VM">Ubuntu VM</a></li>
   <li><a href="/en/setup/hosting/Archlinux">Arch Linux</a></li>
   <li><a href="/en/setup/hosting/Docker">Docker</a> - multiple different dockerfiles with varying levels of complexity and features</li>
   <li><a href="/en/setup/hosting/freebsd">FreeBSD</a></li>
@@ -45,7 +48,7 @@ dateCreated: 2024-07-02T17:41:06.671Z
   <li><a href="/en/setup/hosting/Self-Hosting-on-GCP">Google Cloud Platform</a> - incomplete guide</li>
 </ul>
 <h2>Escaping Restrictive Networks</h2>
-<p>If port forwarding won't work for you, some of these options might. They are in no particular order, and are used at your own risk. Some may expose your computer to the internet in ways that bypass firewalls that keep you safe.</p>
+<p>If port forwarding won't work for you, some of these options might. They are in no particular order, and are used at your own risk. Some may expose your computer to the internet in ways that bypass firewalls intended to keep you safe.</p>
 <p>All of these options will require having already installed and set up Foundry VTT.</p>
 <ul>
   <li>Hamachi - software that creates a virtual local network between up to 5 people with Hamachi installed. Page WIP, see section in <a href="/en/setup/Windows#hamachi">Windows Setup</a> for now.</li>
