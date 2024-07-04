@@ -2,7 +2,7 @@
 title: 06. Extending the Actor class
 description: 
 published: true
-date: 2024-02-20T02:50:16.551Z
+date: 2024-07-04T12:55:39.385Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:52.934Z
@@ -59,7 +59,7 @@ export class BoilerplateActor extends Actor {
 
 We're doing a few things in here. First, we're using `export` on this class so that it's available to our main ES module file for importing. Secondly, we're extending the base `Actor` class that Foundry provides so that we get all of the logic that comes along with that by default.
 
-We can override any method in the [Actor class](https://foundryvtt.com/api/Actor.html), but in this case we're just overriding the `prepareData()` method, along with its related methods `prepareBaseData()` and `prepareDerivedData()`.
+We can override any method in the [Actor class](https://foundryvtt.com/api/#md:actor), but in this case we're just overriding the `prepareData()` method, along with its related methods `prepareBaseData()` and `prepareDerivedData()`.
 
 ## Source data vs. derived data
 
