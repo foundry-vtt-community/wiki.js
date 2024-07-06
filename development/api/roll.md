@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-04-03T16:41:40.694Z
+date: 2024-07-06T22:10:59.335Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -117,5 +117,17 @@ For the first, this is an intentional limitation - data preparation should be id
 For the second, this is a major limitation of modules compared to systems; if you find yourself needing to perform an asynchronous `preCreate`, `preUpdate`, or `preDelete` operations, consider the two following two options
 1. Refactor to use `create`, `update`, or `delete` operations - these fire on all clients, so you will need to ensure only one client performs any further operations and you avoid infinite loops.
 2. Use [libWrapper](https://foundryvtt.com/packages/lib-wrapper) and wrap the relevant document class's operation.
+
+#### Manual Synchronous "Rolling"
+If you require synchronous randomization, for simple scenarios you can build your own.
+
+Given a `formula` of the format `xdy+z`:
+
+```js
+const TWIST = new foundry.dice.MersenneTwister(Date.now());
+const roll = new Roll(formula);
+roll.evaluateSync({strict: false}); // calculate the constant portion
+let total = Array(roll.dice[0].number).fill(roll.dice[0].faces).reduce((acc,f) => acc+Math.ceil(TWIST.random()*f), roll.total);
+```
 
 ---
