@@ -2,14 +2,14 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-05-03T23:47:25.949Z
+date: 2024-07-07T01:37:26.252Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
 ---
 
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Data in Foundry progresses through many stages to be rendered in a document sheet. This guide is intended to be a reference for developers trying to understand where they should define data the order in which it is processed.
 
@@ -47,6 +47,8 @@ In the DataModel constructor, the data is first run through `DataModel#_initiali
 
 This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer. Unlike `_initializeSource`, this runs after every document update.
 
+**TypeDataField**: This field stands out because it grabs a reference to `CONFIG?.[this.documentName]?.dataModels?.[type]` to check if there's a class to instantiate for the `system` property, otherwise it's created as a plain object.
+
 ## ClientDocument
 
 The next step is specific to client documents, as these processes are not run in the server. The `ClientDocumentMixin` is found in `client\data\abstract\client-document.js` and takes a `Document` as its argument, for example `BaseActor`. This document provides the necessary schema information for all of the other processes to work.
@@ -63,10 +65,10 @@ Our main function of concern here is `ClientDocument#prepareData`, which is wrap
      */
     prepareData() {
       const isTypeData = this.system instanceof foundry.abstract.TypeDataModel;
-      if ( isTypeData || (this.system?.prepareBaseData instanceof Function) ) this.system.prepareBaseData();
+      if ( isTypeData ) this.system.prepareBaseData();
       this.prepareBaseData();
       this.prepareEmbeddedDocuments();
-      if ( isTypeData || (this.system?.prepareDerivedData instanceof Function) ) this.system.prepareDerivedData();
+      if ( isTypeData ) this.system.prepareDerivedData();
       this.prepareDerivedData();
     }
 ```
@@ -89,7 +91,6 @@ If you have a system data model, you can run type-specific logic here. Keep in m
 
 Most documents do not do anything here natively; only ActiveEffect, Scene, and Token natively do things here, and ActiveEffect's handling covers a deprecated field. 
 
-
 ### ClientDocument#prepareEmbeddedDocuments
 
 Baseline, this loops through each of the Document's collections and calls `prepareData` on each document. Each document has a defined hierarchy to handle possible multiple collections; in the case of actors, Items are prepared before ActiveEffects. The Actor class follows this up with a call to `applyActiveEffects`, which provides native handling for data modifications.
@@ -104,9 +105,7 @@ This is the final place to manipulate a document's data in a way that is general
 
 If you have a system data model, you can run type-specific logic here. Keep in mind that you're operating within the `system` object, so you'll need to call `this.parent` to access the actual document properties, e.g. `this.parent.items` to access the items collection.
 
-
 #### ClientDocument#prepareDerivedData
-
 
 Many document classes have their own native handling here that you should keep in mind to call `super.prepareDerivedData()` for:
 
@@ -124,6 +123,8 @@ Many document classes have their own native handling here that you should keep i
 After all documents have prepared their data for the first time the `setup` hook fires.
 
 ## DocumentSheet
+
+*App V1*
 
 The final step in the journey to displaying a document involves the application class stack. Many classes extend `DocumentSheet`, which can be found in `client\apps\form.js`. This extends `FormApplication` which extends `Application`. There's a lot of logic here that isn't relevant to our goal, which is "How does the document data we've defined in the previous sections get displayed to an end user"; other features are covered in [Application](/en/development/api/application).
 
@@ -165,6 +166,12 @@ Things that are good to do in `getData`
 - Construct `selectOptions` for dropdown fields
 
 After the template is rendered, the `context` is handed off to the `renderDocumentSheet` hook and then evaporates, which is why any non-display logic should be processed in the previous steps.
+
+## DocumentSheetV2
+
+*AppV2*
+
+Alternatively, for `HandlebarsApplicationMixin(DocumentSheetV2)`,
 
 ## Conclusion
 
