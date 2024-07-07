@@ -2,7 +2,7 @@
 title: GreenSock
 description: Enabling and accessing the powerful GreenSock animation API in your system or module.
 published: true
-date: 2022-05-19T13:27:33.765Z
+date: 2024-07-07T04:09:47.223Z
 tags: greensock
 editor: markdown
 dateCreated: 2022-02-06T08:13:05.793Z
@@ -18,7 +18,7 @@ A tutorial on GreenSock's features is beyond the scope of this article, but don'
 Enabling GreenSock in your Foundry project, then accessing it from within your scripts, isn't especially well-documented and is the main purpose of this guide.  Fortunately, the process isn't difficult — follow these few quick steps, and you'll be off to the races:
 
 ### 1) Add a Reference in Your `system.json`/`module.json` File
-Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `system.json`/`module.json` file, e.g.:
+Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `system.json`/`module.json` file. Be sure to put it *before* your main script file, e.g.:
 
 ```json
 {
@@ -26,8 +26,8 @@ Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `
   "title": "My System",
   ...
   "esmodules": [
-    "scripts/mysystem.js",
-    "greensock/esm/all.js"
+    "greensock/esm/all.js",
+    "scripts/mysystem.js"
   ],
   ...
 }
