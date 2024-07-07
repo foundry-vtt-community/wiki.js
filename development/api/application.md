@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-07-07T08:27:50.623Z
+date: 2024-07-07T09:23:43.700Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -91,13 +91,15 @@ API Reference
 
 The `ContextMenu` provides a standard UI for context menus in FoundryVTT applications, and are triggered by right clicking. The normal way to create them is with `ContextMenu.create` in your application's `activateListeners` method, providing a name, icon, and a callback.
 
+The `name` option will be localized if its a locatilization variable.
+
 ```js
   activateListeners(html) {
   	super.activateListeners(html)
   	// other listener handling
     ContextMenu.create(this, html, '.css-selector-class', [
       {
-      	name: "Option 1",
+      	name: "SIDEBAR.Edit",
         icon: '<i class="fa-solid fa-trash"></i>',
         callback: this.myFunction.bind(this),
         condition: this.myCondition.bind(this)
