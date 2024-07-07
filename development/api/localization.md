@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-06-10T21:34:25.453Z
+date: 2024-07-07T01:51:36.675Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -158,8 +158,8 @@ Translating package-provided types, e.g. `character` and `npc` as possible Actor
 
 ```json
 {
-	"TYPES": {
-  	"Actor": {
+  "TYPES": {
+    "Actor": {
     	"character": "Character",
       "npc": "Non-Player Character"
     }
