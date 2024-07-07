@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-07-05T19:48:53.331Z
+date: 2024-07-07T08:27:50.623Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -98,7 +98,7 @@ The `ContextMenu` provides a standard UI for context menus in FoundryVTT applica
     ContextMenu.create(this, html, '.css-selector-class', [
       {
       	name: "Option 1",
-        icon: "fa-solid fa-trash",
+        icon: '<i class="fa-solid fa-trash"></i>',
         callback: this.myFunction.bind(this),
         condition: this.myCondition.bind(this)
       }
