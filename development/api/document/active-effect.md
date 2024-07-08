@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2024-06-28T15:32:03.410Z
+date: 2024-07-08T14:34:17.983Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -107,8 +107,44 @@ It may be of interest to edit this method to condition the changes applied to th
 ___
 ## Specific Use Cases
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+> *My system users want to know what they can fill in as Attribute Keys that the ActiveEffect can actually change..*
+
+You could add the following helper Hook to your system, which adds a `<datalist>` to the ActiveEffects configuration application dialogue.
+```js
+/**
+ * Adding a multselect helper for showing Actor attributes in ActiveEffect dialogue
+ */
+Hooks.on("renderActiveEffectConfig", async (activeEffectConfig, html, data) => {
+  const effectsSection = html[0].querySelector("section[data-tab='effects']");
+  const inputFields = effectsSection.querySelectorAll(".key input");
+  const datalist = document.createElement("datalist");
+  const attributeKeyOptions = {};
+
+  datalist.id = 'attribute-key-list';
+  inputFields.forEach((inputField) => {
+    inputField.setAttribute('list', 'attribute-key-list');
+  });
+
+  for (const datamodel in CONFIG.Actor.dataModels) {
+    CONFIG.Actor.dataModels[datamodel].schema.apply(function() {
+      if ( !(this instanceof foundry.data.fields.SchemaField) ) {
+        attributeKeyOptions[this.fieldPath] = this.label;
+      }
+    });
+  }
+
+  const sortedKeys =  Object.keys(attributeKeyOptions).sort();
+  sortedKeys.forEach(key => {
+    const attributeKeyOption = document.createElement("option");
+    attributeKeyOption.value = key;
+    if ( !!attributeKeyOptions[key] )
+      attributeKeyOption.label = attributeKeyOptions[key];
+    datalist.appendChild(attributeKeyOption);
+  });
+
+  effectsSection.append(datalist);
+});
+```
 
 ### Status Effects
 > Stub
