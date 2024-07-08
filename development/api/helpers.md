@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-06-26T19:53:03.481Z
+date: 2024-07-08T18:28:00.297Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -397,6 +397,46 @@ One example of their implementation is the new UserConfig application, available
 One way to offload HTML construction from the Handlebars template to a javascript function is the `widget` option, which takes a function with the signature `(FormGroupConfig, FormInputConfig} => HTMLDivElement`\*. This is only available to the `formGroup` helper, not `formInput`, and its actual utility as compared to defining the structure in the template directly depends on the complxity of the application. 
 
 \*The function could technically return any HTML element with a valid `outerHTML` property, not just a div.
+
+### Defining your own Handlebars Helper
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+```js
+function formGroupSimple(doc: ClientDocument, path: string, options) {
+  const {
+    classes,
+    label,
+    hint,
+    rootId,
+    stacked,
+    units,
+    widget,
+    ...inputConfig
+  } = options.hash;
+  const groupConfig = {
+    label,
+    hint,
+    rootId,
+    stacked,
+    widget,
+    localize: inputConfig.localize,
+    units,
+    classes: typeof classes === 'string' ? classes.split(' ') : [],
+  };
+  let field: foundry.data.fields.DataField;
+  if (path.startsWith('system')) {
+    const splitPath = path.split('.');
+    splitPath.shift();
+    field = doc.system.schema.getField(splitPath.join('.'));
+  } else {
+    field = doc.schema.getField(path);
+  }
+  const group = field.toFormGroup(groupConfig, inputConfig);
+  return new Handlebars.SafeString(group.outerHTML);
+}
+```
 
 ## Troubleshooting
 
