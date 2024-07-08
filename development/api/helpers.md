@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-08T18:40:33.106Z
+date: 2024-07-08T19:06:59.230Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -404,7 +404,7 @@ One way to offload HTML construction from the Handlebars template to a javascrip
 > This section is a stub, you can help by contributing to it.
 
 ```js
-function formGroupSimple(
+function prepareFormRendering(
   doc: ClientDocument,
   path: string,
   options: Handlebars.HelperOptions,
@@ -438,11 +438,36 @@ function formGroupSimple(
     units,
     classes: typeof classes === 'string' ? classes.split(' ') : [],
   };
-  inputConfig.value ??= foundry.utils.getProperty(
-    source ? doc._source : doc,
+  if (!('value' in inputConfig)) {
+    inputConfig.value = foundry.utils.getProperty(
+      source ? doc._source : doc,
+      path,
+    );
+  }
+  return { field, inputConfig, groupConfig };
+}
+
+function formGroupSimple(
+  doc: ClientDocument,
+  path: string,
+  options: Handlebars.HelperOptions,
+) {
+  const { field, inputConfig, groupConfig } = prepareFormRendering(
+    doc,
     path,
+    options,
   );
   const group = field.toFormGroup(groupConfig, inputConfig);
+  return new Handlebars.SafeString(group.outerHTML);
+}
+
+function formInputSimple(
+  doc: ClientDocument,
+  path: string,
+  options: Handlebars.HelperOptions,
+) {
+  const { field, inputConfig } = prepareFormRendering(doc, path, options);
+  const group = field.toInput(inputConfig);
   return new Handlebars.SafeString(group.outerHTML);
 }
 ```
