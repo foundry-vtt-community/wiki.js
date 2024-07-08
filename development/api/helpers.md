@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-08T19:06:59.230Z
+date: 2024-07-08T19:10:00.334Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -404,11 +404,7 @@ One way to offload HTML construction from the Handlebars template to a javascrip
 > This section is a stub, you can help by contributing to it.
 
 ```js
-function prepareFormRendering(
-  doc: ClientDocument,
-  path: string,
-  options: Handlebars.HelperOptions,
-) {
+function prepareFormRendering(doc,path,options) {
   let field: foundry.data.fields.DataField;
   if (path.startsWith('system')) {
     const splitPath = path.split('.');
@@ -417,17 +413,7 @@ function prepareFormRendering(
   } else {
     field = doc.schema.getField(path);
   }
-  const {
-    classes,
-    label,
-    hint,
-    rootId,
-    stacked,
-    units,
-    widget,
-    source,
-    ...inputConfig
-  } = options.hash;
+  const { classes, label,  hint, rootId, stacked, units, widget, source, ...inputConfig } = options.hash;
   const groupConfig = {
     label,
     hint,
@@ -447,25 +433,13 @@ function prepareFormRendering(
   return { field, inputConfig, groupConfig };
 }
 
-function formGroupSimple(
-  doc: ClientDocument,
-  path: string,
-  options: Handlebars.HelperOptions,
-) {
-  const { field, inputConfig, groupConfig } = prepareFormRendering(
-    doc,
-    path,
-    options,
-  );
+function formGroupSimple(doc, path, options) {
+  const { field, inputConfig, groupConfig } = prepareFormRendering(doc, path, options);
   const group = field.toFormGroup(groupConfig, inputConfig);
   return new Handlebars.SafeString(group.outerHTML);
 }
 
-function formInputSimple(
-  doc: ClientDocument,
-  path: string,
-  options: Handlebars.HelperOptions,
-) {
+function formInputSimple(doc, path, options) {
   const { field, inputConfig } = prepareFormRendering(doc, path, options);
   const group = field.toInput(inputConfig);
   return new Handlebars.SafeString(group.outerHTML);
