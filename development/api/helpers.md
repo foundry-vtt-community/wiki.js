@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-08T18:28:25.476Z
+date: 2024-07-08T18:40:33.106Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -404,7 +404,19 @@ One way to offload HTML construction from the Handlebars template to a javascrip
 > This section is a stub, you can help by contributing to it.
 
 ```js
-function formGroupSimple(doc: ClientDocument, path: string, options) {
+function formGroupSimple(
+  doc: ClientDocument,
+  path: string,
+  options: Handlebars.HelperOptions,
+) {
+  let field: foundry.data.fields.DataField;
+  if (path.startsWith('system')) {
+    const splitPath = path.split('.');
+    splitPath.shift();
+    field = doc.system.schema.getField(splitPath.join('.'));
+  } else {
+    field = doc.schema.getField(path);
+  }
   const {
     classes,
     label,
@@ -413,6 +425,7 @@ function formGroupSimple(doc: ClientDocument, path: string, options) {
     stacked,
     units,
     widget,
+    source,
     ...inputConfig
   } = options.hash;
   const groupConfig = {
@@ -425,14 +438,10 @@ function formGroupSimple(doc: ClientDocument, path: string, options) {
     units,
     classes: typeof classes === 'string' ? classes.split(' ') : [],
   };
-  let field: foundry.data.fields.DataField;
-  if (path.startsWith('system')) {
-    const splitPath = path.split('.');
-    splitPath.shift();
-    field = doc.system.schema.getField(splitPath.join('.'));
-  } else {
-    field = doc.schema.getField(path);
-  }
+  inputConfig.value ??= foundry.utils.getProperty(
+    source ? doc._source : doc,
+    path,
+  );
   const group = field.toFormGroup(groupConfig, inputConfig);
   return new Handlebars.SafeString(group.outerHTML);
 }
