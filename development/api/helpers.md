@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-08T18:28:00.297Z
+date: 2024-07-08T18:28:25.476Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -436,6 +436,10 @@ function formGroupSimple(doc: ClientDocument, path: string, options) {
   const group = field.toFormGroup(groupConfig, inputConfig);
   return new Handlebars.SafeString(group.outerHTML);
 }
+```
+
+```handlebars
+{{formGroupSimple doc 'system.builder.cost' localize=true}}
 ```
 
 ## Troubleshooting
