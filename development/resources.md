@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2024-05-19T06:22:20.358Z
+date: 2024-07-10T15:42:35.444Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
@@ -85,8 +85,8 @@ There are a variety of community-created module and system starter kits out ther
 
 ## Development Tools
 
-### [foundry-vtt-types](https://github.com/kmoschcau/foundry-vtt-types)
-- A community effort to cover all of Foundry’s API with TypeScript type definitions. At the moment, there are type definitions for versions `0.7.x`, `0.8.x`, and `v9`. Work on support for `v10` is ongoing.
+### [foundry-vtt-types](https://github.com/League-of-Foundry-Developers/foundry-vtt-types)
+- A community effort to cover all of Foundry’s API with TypeScript type definitions. At the moment, there are type definitions for versions `0.7.x`, `0.8.x`, and `v9`. Work on support for `v11` and `v12` is ongoing.
 
 
 ### [TyhponJS's @eslint/foundry](https://www.npmjs.com/package/@typhonjs-fvtt/eslint-config-foundry.js)
