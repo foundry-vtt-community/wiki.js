@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-06-14T14:03:49.278Z
+date: 2024-07-10T23:34:17.600Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -60,24 +60,34 @@ There are a few basic ways of invoking DialogV2 that can simplify your code. The
 API Reference
 - [DialogV2.confirm](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#confirm)
 
-The `confirm` static method provides a simple way to get a yes/no response. Yes returns true, no returns false. If needed, functions can be passed for the `yes` and `no` for more complex handling.
+The `confirm` static method provides a simple way to get a yes/no response. Yes returns true, no returns false. 
 
 ```js
-const userPermission = await foundry.applications.api.DialogV2.confirm({
+const likesIceCream = await foundry.applications.api.DialogV2.confirm({
   window: { title: "Sweet Treat Check" },
-  content: "Do you like ice cream?",
-  rejectClose: false,
+  content: "<p>Do you like ice cream?</p>", 
   modal: true
 })
 ```
+
+If needed, the default behavior of the `yes` and `no` buttons can be overridden by providing properties matching their name in argument object, e.g. `yes: { class: "mymodule yes"}`. 
 
 ### prompt
 
 API Reference
 - [DialogV2.prompt](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#prompt)
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The `prompt` static method gives the user a simple input that can be properly `await`ed before proceeding.
+
+```js
+const proceed = await foundry.applications.api.DialogV2.prompt({
+  window: { title: "Proceed" },
+  content: "<p>Do you wish to continue?</p>",
+  modal: true
+})
+```
+
+If needed, the default behavior of the `ok` button can be overridden by providing properties matching their name in argument object, e.g. `ok: { class: "mymodule ok"}`. 
 
 ### wait
 
@@ -87,12 +97,25 @@ API Reference
 > Stub
 > This section is a stub, you can help by contributing to it.
 
+### rejectClose
+
 ## Specific Use Cases
+
+Here are some common tips and tricks while working with DialogV2
 
 ### Using renderTemplate to generate the `content`
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+If you have a complex chunk of HTML you want to render that doesn't need re-rendering and can be handled as a dialog, outsourcing the HTML construction to handlebars can be an effective tactic. To do that, use the `renderTemplate(path, data)` function which is globally available. The `path` argument is a string representing a handlebars file on the server, while `data` is an object of properties used to fill in the handlebars. This function is asynchronous to allow fetching the file from the server if it's not in the cache.
+
+```js
+const content = await renderTemplate('path/to/template.hbs', data)
+
+const response = await foundry.applications.api.DialogV2.prompt({
+  window: { title: "Proceed" },
+	content,
+  modal: true
+})
+```
 
 ## Troubleshooting
 
