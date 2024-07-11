@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-07-10T23:34:17.600Z
+date: 2024-07-11T00:39:10.639Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -94,10 +94,37 @@ If needed, the default behavior of the `ok` button can be overridden by providin
 API Reference
 - [DialogV2.wait](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#wait)
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+The `wait` static method is the most flexible of the three and covers a wide range of uses. While the prior two methods *do* accept additional buttons, the `wait` method *requires* them. 
+
+```js
+const method = await foundry.applications.api.DialogV2.wait({
+  window: { title: "D20 Roll" },
+  content: "<pRoll Method?</p>",
+  modal: true
+  // This example does not use i18n strings for the button labels, 
+  // but they are automatically localized.
+  buttons: [
+  {
+    label: "Advantage",
+    action: "advantage",
+  },
+  {
+    label: "Standard",
+    action: "standard",
+  },
+  {
+    label: "Disadvantage",
+    action: "disadvantage",
+  },
+  ]
+})
+```
+
+This sample dialog will return the value `advantage`, `standard`, or `disadvantage` to the `method` constant - the values of each button's `action` property. If you provide a `callback` function, then the return of that function will be used in place of the `action`.
 
 ### rejectClose
+
+The `rejectClose` property, by default `true`, causes a dialog to throw an error if it is closed, halting all execution. If you would prefer to continue despite the user closing the dialog, pass `rejectClose: false` for the dialog to return `null` instead. 
 
 ## Specific Use Cases
 
@@ -117,7 +144,19 @@ const response = await foundry.applications.api.DialogV2.prompt({
 })
 ```
 
-## Troubleshooting
+### The `render` option
 
 > Stub
 > This section is a stub, you can help by contributing to it.
+
+## Troubleshooting
+
+Here are some of the common problems when working with DialogV2
+
+### Asynchronicity
+
+All three of the primary DialogV2 static methods are asynchronous, which means they return a Promise. Handling that promise requires the use of `then` or `await`. It also means that modules cannot use them in a `preCreate` hook, which operates synchronously, but systems *can* use them in the `_preCreate` method on Documents or TypeDataModel, as that function is asynchronous.
+
+### Re-rendering
+
+DialogV2 does *not* support re-rendering. If you need to re-render your application, use [ApplicationV2](/en/development/api/applicationv2) instead.
