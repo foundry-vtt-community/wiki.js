@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-07-12T00:31:51.492Z
+date: 2024-07-12T00:32:25.769Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -163,7 +163,7 @@ const response = await foundry.applications.api.DialogV2.prompt({
 API Reference
 - [DialogV2RenderCallback](https://foundryvtt.com/api/types/foundry.DialogV2RenderCallback.html)
 
-When using `confirm`, `prompt`, or `wait`, you can pass a function to the `render` property to trigger when the dialog finishes rendering.  
+When using `confirm`, `prompt`, or `wait`, you can pass a function to the `render` property to trigger when the dialog finishes rendering. This can be useful for adding event listeners to the rendered HTML. 
 
 ## Troubleshooting
 
