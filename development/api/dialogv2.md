@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-07-11T00:39:10.639Z
+date: 2024-07-12T00:29:02.953Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -36,6 +36,7 @@ It's better to extend ApplicationV2 yourself, e.g. with `HandlebarsApplicationMi
 - You expect to handle complex form data
 - You want your application to have tabs
 - There isn't a clear "I'm done here" state in your process
+- You need to re-render the application at some point
 
 The DialogV2 class can be accessed via `foundry.applications.api.DialogV2`, and the code can be found in `yourFoundryInstallPath\resources\app\client-esm\applications\api\dialog.mjs`
 
@@ -50,6 +51,19 @@ DialogV2 inherits all the options from [ApplicationConfiguration](https://foundr
 In addition, the options from [DialogV2Configuration](https://foundryvtt.com/api/interfaces/foundry.DialogV2Configuration.html) are all important to implement; `buttons` and `content` especially are where you usually do the most work to configure the dialog. The only automatic [localization](/en/development/api/localization) for these properties is the `label` of any button; use template strings and calls to `game.i18n.localize` for defining your `content`.
 
 One option in particular that should be used with care is `modal`, which causes the dialog to disable the rest of the Foundry UI while it is active. This can be good for simple pauses in a workflow, but any higher complexity dialog should avoid using this property.
+
+### Button Callbacks
+
+API Reference
+
+- [DialogV2Button](https://foundryvtt.com/api/interfaces/foundry.DialogV2Button.html)
+- [DialogV2ButtonCallback](https://foundryvtt.com/api/types/foundry.DialogV2ButtonCallback.html)
+
+The `callback` property of a DialogV2Button determines the return of that button when using the provided static methods - `confirm`, `prompt`, and `wait`. If no callback is defined or the callback returns a nullish result (`null` or `undefined`), it will return the value of the mandatory `action` property (a string). If the callback returns a value, then that value is the return of the button. 
+
+Frequently you may want to grab the value of an input in the dialog - to do so in the callback, `button.form.elements` is a Record of all of the input elements with the key being the element's name. So to access an input with `name="foo"` you could go `button.form elements.foo.value`. All dialogs wrap the `content` provided in a form, that tag does not need to be provided in your html.
+
+This behavior can be modified by passing a function to the `submit` property of the `options` when constructing the dialog or by overriding the `_onSubmit` method in an extension of the class.
 
 ## API Interactions
 
