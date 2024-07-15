@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-07-15T13:41:09.896Z
+date: 2024-07-15T13:45:12.708Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -575,6 +575,7 @@ rm ~/foundry/foundryvtt.zip
 pm2 start foundry
 ```
 
+<a id="G6" href="#G6">G6.</a> Check your node version using `node -v`against the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server). Head to section <a href="#F">F. Updating NodeJS</a> if you need to update Node.js.
 
 You should now have the new version of Foundry running and accessible as before!
 <a id="H"> </a>
