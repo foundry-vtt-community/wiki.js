@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-08T19:10:00.334Z
+date: 2024-07-15T15:08:47.958Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -144,7 +144,7 @@ This is the canonical way to find the correct class for a document after configu
 
 ### Handlebars Helpers
 
-Foundry's helpers augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html). In addition to the helpers highlighted below, there's a number of other input helpers like numberInput, rangeInput, etc. that can simplify your rendering logic.
+[Foundry's helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html) augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html). In addition to the helpers highlighted below, there's a number of other input helpers like numberInput, rangeInput, etc. that can simplify your rendering logic.
 
 #### [localize](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#localize)
 
