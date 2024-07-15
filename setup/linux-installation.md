@@ -2,14 +2,14 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-07-15T19:02:40.533Z
+date: 2024-07-15T19:03:46.332Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
 ---
 
 # Recommended Linux Installation and Usage Guide
-<a id="A"> </a>
+<a id="A" />
 
 # A. Overview
 ## Objective
@@ -206,7 +206,7 @@ pm2 startup
 ```
 >***REQUIRED STEP*** 
 >You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly. {.is-info}
-<a id="C"> </a>
+<a id="C" />
 
 # C. Foundry and Reverse Proxy Setup
 ## Objective
@@ -384,7 +384,7 @@ pm2 restart foundry
 >If you are hosting on your home network, you **must** use an external device to test the connection to the domain name. You can only test the connection to the internal IP address from within the network. {.is-warning}
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. {.is-info}
-<a id="D"> </a>
+<a id="D" />
 
 # (Optional) D. Accessing Userdata Files with Cyberduck
 ## Objective
@@ -416,7 +416,7 @@ At the end of this optional section, you will be able to directly access the fil
 <a id="D7" href="#D7">D7.</a> Click the **Bookmark** menu, then **New Bookmark**. Close the window that pops up. 
 
 >You now have a bookmarked connection in Cyberduck to the location of your Foundry userdata directory. Simply launch Cyberduck and double click the bookmark to connect and manage your files. {.is-info}
-<a id="E"> </a>
+<a id="E" />
 
 # (Optional) E. Creating Swapfile
 ## Objective
@@ -472,7 +472,7 @@ NAME      TYPE      SIZE  USED PRIO
 
 
 You now have a swapfile enabled and should be protected against out-of-memory errors.
-<a id="F"> </a>
+<a id="F" />
 
 # (Optional) F. Updating NodeJS
 ## Objective
@@ -533,7 +533,7 @@ pm2 save
 ```
 
 You've now successfully updated NodeJS and should be good to go!
-<a id="G"> </a>
+<a id="G" />
 
 # (Optional) G. Performing a Clean Reinstall/Update
 ## Objective
@@ -578,7 +578,7 @@ pm2 start foundry
 <a id="G6" href="#G6">G6.</a> Check your node version using `node -v` against the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server). Head to section <a href="#F">F. Updating NodeJS</a> if you need to update Node.js.
 
 You should now have the new version of Foundry running and accessible as before!
-<a id="H"> </a>
+<a id="H" />
 
 # (Optional) H. GLIBC Error Fix
 ## Objective
