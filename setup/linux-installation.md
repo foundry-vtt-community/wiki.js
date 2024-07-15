@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-06-15T20:33:33.176Z
+date: 2024-07-15T13:39:03.064Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -72,6 +72,7 @@ If you get stuck on a particular step, please first ensure that all commands in 
 
 Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C5) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/foundryvtt).
 
+<a id="B"> </a>
 # B. User and General System Setup
 ## Objective
 
