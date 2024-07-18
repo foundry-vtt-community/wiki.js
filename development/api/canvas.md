@@ -2,7 +2,7 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-07-18T00:14:28.664Z
+date: 2024-07-18T00:57:58.136Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
@@ -72,8 +72,45 @@ Here are some tips and tricks when working with the canvas.
 
 ### Retrieving Grid Spaces
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+#### Square Grids
+```js
+// Grabbing the hovered grid's space
+const p = canvas.mousePosition; // { x, y }
+const { x, y } = canvas.grid.getTopLeftPoint({x: p.x, y: p.y });
+```
+
+#### Hex Grids
+```js
+// Grabbing the hovered grid's space
+const coords = canvas.grid.getCenterPoint({ x: p.x, y: p.y }); // { x, y }
+const cube = canvas.grid.getCube(coords); // { q, r, s }
+const offset = canvas.grid.getOffset(cube); // { q, r, s }
+const { x, y } = canvas.grid.getTopLeftPoint(offset);
+```
+
+### Highlighting a Grid Space
+
+```js
+// Registering the Highlight 
+const highlightId = "foo";
+canvas.interface.grid.addHighlightLayer(highlightId);
+
+const CONFIG = {
+  x, y, // The grid space's coordinates
+  color: 0xff0000, // The fill color
+  border: null, // The border color
+  alpha: 0.25, // The highlight's opacity
+  shape: null // A PIXI.Polygon, unused unless highlighting a gridless canvas
+};
+// Positioning the Highlight
+canvas.interface.grid.highlightPosition(highlightId, CONFIG);
+
+// Hiding the Highlight
+canvas.interface.grid.clearHighlightLayer(highlightId);
+
+// Destroying the Highlight
+canvas.interface.grid.destroyHighlightLayer(highlightId);
+```
 
 ---
 ## Troubleshooting
