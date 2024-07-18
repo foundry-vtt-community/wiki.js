@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-15T15:08:47.958Z
+date: 2024-07-18T19:15:15.824Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -17,15 +17,15 @@ Official documentation
 - [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html)
 - [Handlebars Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
 - [Custom HTML Elements](https://foundryvtt.com/api/modules/foundry.applications.elements.html)
-- [Primitive Flattens](https://foundryvtt.com/api/v11/modules/primitives.html)
-  - [Array](https://foundryvtt.com/api/v11/modules/primitives.Array.html)
-  - [Date](https://foundryvtt.com/api/v11/modules/primitives.Date.html)
-  - [Math](https://foundryvtt.com/api/v11/modules/primitives.Math.html)
-  - [Number](https://foundryvtt.com/api/v11/modules/primitives.Number.html)
-  - [Set](https://foundryvtt.com/api/v11/modules/primitives.Set.html)
-  - [String](https://foundryvtt.com/api/v11/modules/primitives.String.html)
-  - [RegExp](https://foundryvtt.com/api/v11/modules/primitives.RegExp.html)
-  - [URL](https://foundryvtt.com/api/v11/modules/primitives.URL.html)
+- [Primitive Extensions](https://foundryvtt.com/api/modules/primitives.html)
+  - [Array](https://foundryvtt.com/api/modules/primitives.Array.html)
+  - [Date](https://foundryvtt.com/api/modules/primitives.Date.html)
+  - [Math](https://foundryvtt.com/api/modules/primitives.Math.html)
+  - [Number](https://foundryvtt.com/api/modules/primitives.Number.html)
+  - [Set](https://foundryvtt.com/api/modules/primitives.Set.html)
+  - [String](https://foundryvtt.com/api/modules/primitives.String.html)
+  - [RegExp](https://foundryvtt.com/api/modules/primitives.RegExp.html)
+  - [URL](https://foundryvtt.com/api/modules/primitives.URL.html)
   
 **Legend**
 ```js
