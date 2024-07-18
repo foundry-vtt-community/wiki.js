@@ -2,7 +2,7 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-07-18T00:57:58.136Z
+date: 2024-07-18T00:58:38.189Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
@@ -82,6 +82,7 @@ const { x, y } = canvas.grid.getTopLeftPoint({x: p.x, y: p.y });
 #### Hex Grids
 ```js
 // Grabbing the hovered grid's space
+const p = canvas.mousePosition; // { x, y }
 const coords = canvas.grid.getCenterPoint({ x: p.x, y: p.y }); // { x, y }
 const cube = canvas.grid.getCube(coords); // { q, r, s }
 const offset = canvas.grid.getOffset(cube); // { q, r, s }
