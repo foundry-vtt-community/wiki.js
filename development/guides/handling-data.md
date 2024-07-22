@@ -2,7 +2,7 @@
 title: Handling Data: Flags, Settings, and Files
 description: A primer on the different ways to handle data in Foundry VTT.
 published: true
-date: 2022-11-11T14:37:09.192Z
+date: 2024-07-22T00:12:01.435Z
 tags: settings, flags, data
 editor: markdown
 dateCreated: 2021-03-25T15:03:13.490Z
@@ -127,11 +127,17 @@ game.user.setFlag('world', 'todos', {});
 
 game.user.setFlag('world', 'todos', { zip: 'zop' });
 // flag value: { foo: 'bar', zip: 'zop' }
+
+// Careful! Objects whose keys have `.` in them are flattened/expanded 
+game.user.setFlag('world', 'flag2', { 'zip.zop': 'zoop' });
+game.user.getFlag('world', 'flag2');
+// flag value: { zip: { zop: 'zoop' }}
+
 ```
 
 `Document#setFlag` should perhaps be thought about as "updateFlag" instead, but that's only partly true because it can also set flags which doesn't exist yet.
 
-The biggest use case that is impacted by this is stroing an object as a flag, and then wanting to delete keys from it.
+The biggest use case that is impacted by this is storing an object as a flag, and then wanting to delete keys from it.
 
 The initial instinct of "I'll setFlag with an object that has everything but that thing which was deleted," doesn't work here. Instead you can either jerryrig `unsetFlag` in an unintuitive way:
 ```js
@@ -150,6 +156,29 @@ If you're happy with the key being `null`, setting it to `null` explicitly works
 game.user.setFlag('world', 'todos', { foo: null });
 // flag value: { foo: null, zip: 'zop' }
 ```
+
+> Caution
+> Just like other document fields, flags are flattened when saved to the database and expanded when they are restored.  This means that flags containing objects whose keys include a period (.) **WILL NOT** return the same value with getFlag() that was saved with setFlag()
+{.is-warning}
+
+This behavior occurs even when objects are inside arrays or deeply nested inside other objects.  
+
+Pro tip: you can get around this behavior (at least as of v12) by setting a constructor on your object.  Objects with constructors are considered "complex" by the expander and are saved as is.
+``` js
+// Careful! Objects whose keys have `.` in them are flattened/expanded 
+game.user.setFlag('world', 'flag', { 'zip.zop': 'zoop' });
+game.user.getFlag('world', 'flag');
+// flag value: { zip: { zop: 'zoop' }}
+
+// Add a constructor to get the behavior you expect
+const newObj = { 'zip.zop': 'zoop' };
+newObj.constructor = () => {}
+game.user.setFlag('world', 'flag2', { 'zip.zop': 'zoop' });
+game.user.getFlag('world', 'todo2');
+// flag value: { 'zip.zop': 'zoop' }
+
+```
+
 
 ## Settings
 
