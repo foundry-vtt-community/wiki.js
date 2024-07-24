@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-07-18T19:15:15.824Z
+date: 2024-07-24T21:03:56.851Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -109,7 +109,7 @@ Primary article: [CompendiumCollection](/en/development/api/CompendiumCollection
 
 These functions allow you to grab a pointer to any document. `fromUuid` is asynchronous and always returns a pointer, while `fromUuidSync` is synchronous and will only return an index entry if the document is inside a compendium. Both are very useful for tracking down things like a token actor for an unlinked token, since those are nested several layers deep.
 
-#### [foundry.utils.deepClone(object, {strict=false}={})](https://foundryvtt.com/api/modules/foundry.utils.html#deepClone)
+#### [foundry.utils.deepClone(object, {strict=false}={})](https://foundryvtt.com/api/modules/foundry.utils.deepClone)
 
 Ordinarily, javascript passes objects and arrays by *reference* rather than by *value* - if you edit that object or array, it will *mutate* the original. When this is undesired, deepClone can help, with the caveat that deepClone will *not* help on any advanced data like a Set or another class. This is an important caveat when working with a system that has implemented [Data Models](/en/development/api/DataModel) for its types: the `system` property is a class instantiation and so will still be passed by reference if you call deepClone on the parent object.
 
@@ -117,7 +117,7 @@ Another common use for deepClone is while debugging; `console.log` on an object 
 
 Keep in mind that this kind of operation can be performance intensive and you should carefully evaluate why you need a fresh object rather than mutating the reference.
 
-#### [foundry.utils.mergeObject(original, other, options)](https://foundryvtt.com/api/modules/foundry.utils.html#mergeObject)
+#### [foundry.utils.mergeObject(original, other, options)](https://foundryvtt.com/api/modules/foundry.utils.mergeObject)
 
 Foundry makes heavy use of nested object properties, and combining objects is a frequent need. One basic use of `mergeObject` is updating `CONFIG` in an init hook.
 
@@ -131,7 +131,13 @@ Hooks.once("init", () => {
 
 ```
 
-#### [foundry.utils.isNewerVersion(v1, v0)](https://foundryvtt.com/api/modules/foundry.utils.html#isNewerVersion)
+#### [foundry.utils.fetchJsonWithTimeout](https://foundryvtt.com/api/functions/foundry.utils.fetchJsonWithTimeout.html)
+
+This function retrieves a JSON file and parses it. While you should generally use a [Compendium Pack](/en/development/api/CompendiumCollection) for storing data in foundry as documents, sometimes it's necessary to store data outside of the document system. Note that this method ultimately uses the core [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch) function, wrapped in protective promises.
+
+It can also be useful in *creating* compendium packs; if you have a large amount of creation data, you can use a macro and this helper function to programatically fill in your packs.
+
+#### [foundry.utils.isNewerVersion(v1, v0)](https://foundryvtt.com/api/functions/foundry.utils.isNewerVersion.html)
 
 This method is helpful when attempting to provide multi-version compatibility across core software and system updates. This supports both strings and numbers and is written with [semantic versioning](https://semver.org/) in mind.
 
