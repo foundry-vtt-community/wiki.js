@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2024-07-08T14:34:17.983Z
+date: 2024-07-26T17:06:17.581Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -13,6 +13,12 @@ dateCreated: 2024-06-08T05:46:12.955Z
 Active Effects are a built-in way for users, systems, and modules to dynamically alter actor properties.
 
 *Official documentation*
+
+- [Knowledge Base](https://foundryvtt.com/article/active-effects/
+- [ActiveEffect](https://foundryvtt.com/api/classes/client.ActiveEffect.html)
+- [BaseActiveEffect](https://foundryvtt.com/api/classes/foundry.documents.BaseActiveEffect.html)
+- [Document](https://foundryvtt.com/api/classes/foundry.abstract.Document.html)
+- [ActiveEffectConfig](https://foundryvtt.com/api/classes/client.ActiveEffectConfig.html)
 
 **Legend**
 ```js
