@@ -2,7 +2,7 @@
 title: Actor
 description: One of the most fundamental documents within Foundry Virtual Tabletop is the Actor, as they are the protagonists, allies, monsters, antagonists, and persons within the World that you create.
 published: true
-date: 2024-07-26T16:55:14.280Z
+date: 2024-07-26T17:02:09.511Z
 tags: docs
 editor: markdown
 dateCreated: 2024-07-26T16:55:14.280Z
@@ -30,21 +30,30 @@ Actor#isToken
 ```
 
 ## Overview
+
 > Stub
 > This section is a stub, you can help by contributing to it.
+
 ---
 ## Key Concepts
-> Stub
-> This section is a stub, you can help by contributing to it.
-### Linked vs. Unlinked Actors
-> Stub
-> This section is a stub, you can help by contributing to it.
----
 
-## API Interactions
 > Stub
 > This section is a stub, you can help by contributing to it.
+
+### Linked vs. Unlinked Actors
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+---
+## API Interactions
+
+> Stub
+> This section is a stub, you can help by contributing to it.
+
+---
 ## Specific Use Cases
+
 > Stub
 > This section is a stub, you can help by contributing to it.
 
@@ -55,6 +64,7 @@ Many systems have implemented a "Group" actor. In short, this is an actor that h
 > Stub
 > This section is a stub, you can help by contributing to it.
 
+---
 ## Troubleshooting
 > Stub
 > This section is a stub, you can help by contributing to it.
