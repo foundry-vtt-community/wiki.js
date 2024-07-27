@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-07-20T16:25:30.921Z
+date: 2024-07-27T18:14:24.053Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -263,7 +263,7 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 <a id="C10" href="#C10">C10.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command. Be sure to replace `<user>` with the name of the actual user. There are two replacements:
 ```
-pm2 start --name foundry /home/<user>/foundry/resources/app/main.js -- --dataPath=/home/<user>/foundryuserdata
+pm2 start "/home/<user>/foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
 ```
 <a id="C11" href="#C11">C11.</a>	Double check pm2 has launched Foundry correctly:
 ```
