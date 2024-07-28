@@ -2,7 +2,7 @@
 title: Dialog
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-06-12T22:59:45.765Z
+date: 2024-07-28T02:19:19.747Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-12-15T22:09:07.377Z
@@ -341,6 +341,7 @@ The `callback` of a Dialog button gets the html of the dialog as its argument. F
 
 Foundry Core includes the helper class [`FormDataExtended`](https://foundryvtt.com/api/classes/client.FormDataExtended.html) to help with this.
 
+Note: In Foundry v12, FormDataExtended drops the `toObject` method used below and simply supplies the object as a property called `.object`.
 
 ```js
 // this could be the output of renderTemplate to use handlebars
