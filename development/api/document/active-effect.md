@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2024-07-26T17:24:58.645Z
+date: 2024-07-29T03:12:13.433Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -101,10 +101,21 @@ It may be of interest to edit this method to condition the changes applied to th
   }
 ```
 
-### applyActiveEffect hook
+### applyActiveEffect Hook
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+```js
+/**
+ * A hook event that fires when a custom active effect is applied.
+ * @event applyActiveEffect
+ * @category Active Effects
+ * @param {Actor} actor                   The actor the active effect is being applied to
+ * @param {EffectChangeData} change       The change data being applied
+ * @param {*} current                     The current value being modified
+ * @param {*} delta                       The parsed value of the change object
+ * @param {object} changes                An object which accumulates changes to be applied
+ */
+function applyActiveEffect(actor, change, current, delta, changes) {}
+```
 
 ### `type` and `system`
 > Stub
