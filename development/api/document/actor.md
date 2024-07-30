@@ -2,7 +2,7 @@
 title: Actor
 description: One of the most fundamental documents within Foundry Virtual Tabletop is the Actor, as they are the protagonists, allies, monsters, antagonists, and persons within the World that you create.
 published: true
-date: 2024-07-26T17:02:09.511Z
+date: 2024-07-30T18:16:08.799Z
 tags: docs
 editor: markdown
 dateCreated: 2024-07-26T16:55:14.280Z
@@ -42,8 +42,16 @@ Actor#isToken
 
 ### Linked vs. Unlinked Actors
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+When you drag and drop an actor from the sidebar to the map, you are creating a token. The behaviour of this token will depend on the configuration of the Actor and the Prototype Token. Linked actors will update the data from one to another. Changes made on the token are reflected on the Actor.
+
+Unlinked Actors, on the other side, creates a "copy" of the Actor for each token. Changes on the Token do not reflect on the Actor directly. Changes on the Actor will not be reflected on Tokens that already exists.
+
+The common approach is to link the PC Characters, while leaving enemies and monsters unlinked.
+
+
+
+> TODO
+> Check if there is any easier way to configure this on the prototype token, if that requires the override of the `onCreate` method.
 
 ---
 ## API Interactions
