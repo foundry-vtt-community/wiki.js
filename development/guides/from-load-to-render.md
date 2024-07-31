@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-07-07T01:37:26.252Z
+date: 2024-07-31T04:28:00.658Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -43,11 +43,13 @@ The top level inheritance for documents traces back to the [DataModel](/en/devel
 ### DataModel#\_initializeSource
 In the DataModel constructor, the data is first run through `DataModel#_initializeSource` and then stored in `_source`. This method applies `DataModel#migrateDataSafe`, `DataModel#cleanData`, and `DataModel#shimData`, ensuring the constructed document matches the specifications from its `schema` property before saving it in `_source`. After putting the cleaned up data in `_source`, `DataModel#validate` runs for one last check.
 
+**Validation**: Most validation occurs on the `DataField` level. If a validator returns a boolean, no further checks are needed - e.g. `_validateSpecial` will return either `true` or `false` if the `value` is `null` or `undefined`, but if it's neither then it will return `void` to pass the value on to be checked by `_validateType`.
+
 ### DataModel#\_initialize
 
 This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer. Unlike `_initializeSource`, this runs after every document update.
 
-**TypeDataField**: This field stands out because it grabs a reference to `CONFIG?.[this.documentName]?.dataModels?.[type]` to check if there's a class to instantiate for the `system` property, otherwise it's created as a plain object.
+**TypeDataField**: This field stands out because it grabs a reference to `CONFIG?.[this.documentName]?.dataModels?.[type]` to check if there's a class to instantiate for the `system` property, otherwise it's created as a plain object. This means that `system` is baseline an open-ended field, 
 
 ## ClientDocument
 
