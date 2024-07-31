@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-06-25T06:29:15.624Z
+date: 2024-07-31T12:06:48.519Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -434,3 +434,13 @@ Vous pouvez parfaitemet installer la partie serveur de Foundry dessus, mais pas 
 Un tuto en anglais est disponible ici : https://foundryvtt.wiki/en/setup/hosting/raspberry-pi
 
 En cas de soucis, plusieurs membres du Discord FR ont installé Foundry sur leur Pi, donc allez faire un tour dans le canal #support-technique.
+
+## Accéder à une feuille de personnage + l'affecter à un joueur
+
+Après que le Maitre de Jeu a créé les comptes des utilisateurs pour la partie dans Foundry, et après que les personnages aient été créés et donc que les feuilles des Personnages Joueurs sont prêtes, il faut que les joueurs aient les droits d'y accéder et les affecter nominativement. L'affectation des personnages à un joueur n'est pas indispensable pour que le joueur puisse accéder et modifier la feuille de personnage mais plusieurs fonctionnalités de Foundry ou de certains systèmes de jeu ne fonctionneront pas correctement sans cela. 
+2 étapes :
+1. Donner les droits d'accès des personnages aux joueurs
+Dans l'onglet des Acteurs, faire un clic-droit sur la feuille de personnage et choisir l'option "Configurer les droits". Dans la fenêtre qui apparait, il faut mettre le niveau de visibilité "Propriétaire" pour le joueur concerné. Ensuite sauvegarder les modifications. Maintenant le joueur peut consulter et modifier cette feuille de personnage. Mais elle ne lui est pas encore affectée. Répéter cette action pour chaque Personnage Joueur.
+2. Affecter chaque personnage à un joueur
+En bas à gauche de Foundry, ouvrir la liste des joueurs (elle n'affiche, en mode réduit, que les joueurs connectés) afin de voir tous les comptes des joueurs. Faire un clic droit sur le compte d'un joueur et choisir l'option "Configuration du joueur". Dans la fenêtre qui apparait, sélectionner le personnage et enregistrer la configuration. Répéter cette action pour chaque Personnage Joueur.
+Maintenant chaque joueur a une feuille de personnage qui lui est affectée. 
