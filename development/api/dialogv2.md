@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-07-12T00:32:25.769Z
+date: 2024-08-02T21:52:29.640Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -61,7 +61,7 @@ API Reference
 
 The `callback` property of a DialogV2Button determines the return of that button when using the provided static methods - `confirm`, `prompt`, and `wait`. If no callback is defined or the callback returns a nullish result (`null` or `undefined`), it will return the value of the mandatory `action` property (a string). If the callback returns a value, then that value is the return of the button. 
 
-Frequently you may want to grab the value of an input in the dialog - to do so in the callback, `button.form.elements` is a Record of all of the input elements with the key being the element's name. So to access an input with `name="foo"` you could go `button.form elements.foo.value`. All dialogs wrap the `content` provided in a form, that tag does not need to be provided in your html.
+Frequently you may want to grab the value of an input in the dialog - to do so in the callback, `button.form.elements` is a Record of all of the input elements with the key being the element's name. So to access an input with `name="foo"` you could go `button.form.elements.foo.value`. All dialogs wrap the `content` provided in a form, that tag does not need to be provided in your html.
 
 This behavior can be modified by passing a function to the `submit` property of the `options` when constructing the dialog or by overriding the `_onSubmit` method in an extension of the class.
 
