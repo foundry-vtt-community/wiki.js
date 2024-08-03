@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-07-06T22:10:59.335Z
+date: 2024-08-03T02:35:25.782Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -54,6 +54,25 @@ The `Roll` class has a large number of instance and static functions, the use of
 
 This simple instance method will multiply or add to each of the dice terms in a formula. This won't cover all possible ways you may want to modify a roll, but is an efficient one for many common use cases, such as adding or subtracting dice from a die pool.
 
+### Roll Rendering
+
+API Reference
+- [toMessage](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#toMessage)
+
+Foundry has built-in support for sending rolls to chat; often times just calling `roll.toMessage()` is sufficient. The first argument, `messageData`, uses the following defaults and then is passed into `new ChatMessage`.
+
+```js
+{
+  user: game.user.id,
+  content: String(this.total),
+  sound: CONFIG.sounds.dice
+}
+```
+
+If this doesn't seem like much, that's correct - the majority of the formatting comes from `roll.render`, which references `Roll.CHAT_TEMPLATE` and `Roll.TOOLTIP_TEMPLATE` to build the actual message HTML. By default, these reference `"templates/dice/roll.html"` and `"templates/dice/tooltip.html"` respectively. These static methods are the *actual* best place to alter roll HTML as a system. 
+
+While developing you may want to use the `log` helper to clarify what's available, e.g. `{{log message}}`.
+
 ### CONFIG.Dice
 
 **CONFIG.Dice.Rolls:** Both `Roll.create` and `Roll.defaultImplementation` refer to `CONFIG.Dice.Rolls[0]`, an array that by default is just the default `Roll` class. These methods are used in a number of places:
@@ -62,6 +81,8 @@ This simple instance method will multiply or add to each of the dice terms in a 
 - `Combatant#getInitiativeRoll`
 - The default class for `RollTable#roll`
 - Internal evaluation handling for `MathTerm`, `ParentheticalTerm`, and `PoolTerm`
+
+In combination with overriding `CHAT_TEMPLATE` and `TOOLTIP_TEMPLATE` you can do deep alterations of Foundry's default roll display across all possible invocations.
 
 ---
 ## Specific Use Cases
