@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-08-03T02:35:25.782Z
+date: 2024-08-03T02:52:56.127Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -58,6 +58,7 @@ This simple instance method will multiply or add to each of the dice terms in a 
 
 API Reference
 - [toMessage](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#toMessage)
+- [CHAT_TEMPLATE](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#CHAT_TEMPLATE)
 
 Foundry has built-in support for sending rolls to chat; often times just calling `roll.toMessage()` is sufficient. The first argument, `messageData`, uses the following defaults and then is passed into `new ChatMessage`.
 
@@ -69,7 +70,7 @@ Foundry has built-in support for sending rolls to chat; often times just calling
 }
 ```
 
-If this doesn't seem like much, that's correct - the majority of the formatting comes from `roll.render`, which references `Roll.CHAT_TEMPLATE` and `Roll.TOOLTIP_TEMPLATE` to build the actual message HTML. By default, these reference `"templates/dice/roll.html"` and `"templates/dice/tooltip.html"` respectively. These static methods are the *actual* best place to alter roll HTML as a system. 
+If this doesn't seem like much, that's correct - the majority of the formatting comes from `roll.render`, which references `Roll.CHAT_TEMPLATE` and `Roll.TOOLTIP_TEMPLATE` to build the actual message HTML. These static methods are the *actual* best place to alter roll HTML as a system through providing your own handlebars template to be filled in. 
 
 While developing you may want to use the `log` helper to clarify what's available, e.g. `{{log message}}`.
 
