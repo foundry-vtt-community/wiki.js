@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-08-03T02:52:56.127Z
+date: 2024-08-03T18:05:52.039Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -72,7 +72,20 @@ Foundry has built-in support for sending rolls to chat; often times just calling
 
 If this doesn't seem like much, that's correct - the majority of the formatting comes from `roll.render`, which references `Roll.CHAT_TEMPLATE` and `Roll.TOOLTIP_TEMPLATE` to build the actual message HTML. These static methods are the *actual* best place to alter roll HTML as a system through providing your own handlebars template to be filled in. 
 
-While developing you may want to use the `log` helper to clarify what's available, e.g. `{{log message}}`.
+The default object passed to the `CHAT_TEMPLATE` is as follows
+```js
+    const chatData = {
+      formula: isPrivate ? "???" : this._formula,
+      flavor: isPrivate ? null : flavor ?? this.options.flavor,
+      user: game.user.id,
+      tooltip: isPrivate ? "" : await this.getTooltip(),
+      total: isPrivate ? "?" : Math.round(this.total * 100) / 100
+    }
+```
+
+If you want to *change* that, you need to override `Roll#render`. Calling `super` won't be helpful in this instance as it's returning the raw HTML string; instead, you need to fully override the function. 
+
+For further context, `Roll#render` is called by two functions; `ChatMessage#_renderRollHTML` and `RollTable#toMessage`. The reason roll rendering is complicated and dynamic is to respect roll privacy settings across different clients, rather than have a static chunk of HTML stored in the message `content`.
 
 ### CONFIG.Dice
 
