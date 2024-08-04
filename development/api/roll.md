@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-08-04T02:11:53.359Z
+date: 2024-08-04T02:12:42.201Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -13,8 +13,8 @@ dateCreated: 2024-03-13T20:34:57.466Z
 Rolls are how Foundry handles randomization and the game math involving them.
 
 Official Documentation
-- [Roll](https://foundryvtt.com/api/classes/client.Roll.html)
-- [RollTerm](https://foundryvtt.com/api/classes/client.RollTerm.html)
+- [Roll](https://foundryvtt.com/api/classes/foundry.dice.Roll.html)
+- [RollTerm](https://foundryvtt.com/api/classes/foundry.dice.terms.RollTerm.html)
 
 **Legend**
 ```js
