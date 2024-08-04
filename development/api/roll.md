@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-08-04T01:55:00.562Z
+date: 2024-08-04T02:11:53.359Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -100,7 +100,7 @@ For further context, `Roll#render` is called by two functions; `ChatMessage#_ren
 
 ### CONFIG.Dice
 
-**CONFIG.Dice.Rolls:** Both `Roll.create` and `Roll.defaultImplementation` refer to `CONFIG.Dice.Rolls[0]`, an array that by default is just the default `Roll` class. These methods are used in a number of places:
+**CONFIG.Dice.Rolls:** Both `Roll.create` and `Roll.defaultImplementation` refer to `CONFIG.Dice.Rolls[0]`, an array that by default is just the base `Roll` class. These methods are used in a number of places:
 - Parsing the native chat command for `/r` and `/roll`
 - Inline roll parsing (e.g. `[[/r 1d6]]`)
 - `Combatant#getInitiativeRoll`
@@ -108,6 +108,8 @@ For further context, `Roll#render` is called by two functions; `ChatMessage#_ren
 - Internal evaluation handling for `MathTerm`, `ParentheticalTerm`, and `PoolTerm`
 
 In combination with overriding `CHAT_TEMPLATE` and `TOOLTIP_TEMPLATE` you can do deep alterations of Foundry's default roll display across all possible invocations.
+
+The remainder of the array is used as part of chat message serialization; if you use a roll subclass but *don't* register it with `CONFIG.Dice.Rolls.push` the rolls will fail to be properly reconstructed as part of message initialization.
 
 ---
 ## Specific Use Cases
