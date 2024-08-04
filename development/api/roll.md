@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-08-03T18:05:52.039Z
+date: 2024-08-04T01:55:00.562Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -44,6 +44,17 @@ Once a roll instance is constructed, you can call `Roll#evaluate` to produce a t
 The `Roll#terms` property actually determines how the roll is evaluated, and is constructed with `Roll.parse` on the formula and data. It's an array of `RollTerm` instances, which are handled in-order during evaluation to produce the final total.
 
 The two most important subclasses of `RollTerm` are [`DiceTerm`](https://foundryvtt.com/api/classes/client.DiceTerm.html) and [`NumericTerm`](https://foundryvtt.com/api/classes/client.NumericTerm.html). DiceTerm is *non-deterministic*, which is to say that the result will change each time it is evaluated. NumericTerm, by contrast, _is_ deterministic and always produces the same results.
+
+### Options
+
+The `options` argument in the roll constructor baseline only uses a `flavor` argument, but any JSON serializable parameter (e.g. Arrays but not Sets) can be passed and will be saved to `this.options`.
+
+The purpose of `options` is far larger; when a roll is added to a chat message, it is serialized as a JSON string and then reconstituted by field initialization. If you assign `this.foo = "bar"`, the serialization will *not* save that. However, if you assign `this.options.foo = "bar"`, that *will* be saved by the serialization and will be properly available to chat messages.
+
+Examples of things you might want to save into options:
+- Roll modifiers separate from the `formula` and `data`, like advantage/disadvantage in 5e
+- Target values to turn flat rolls into success/fails.
+- Other conditional modifier logic, like whether to reroll 1s.
 
 ---
 ## API Interactions
