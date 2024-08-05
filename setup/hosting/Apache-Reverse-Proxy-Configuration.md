@@ -2,7 +2,7 @@
 title: Apache Reverse-Proxy-Configuration
 description: 
 published: true
-date: 2022-05-19T13:18:56.306Z
+date: 2024-08-05T22:25:31.704Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:21.190Z
@@ -39,6 +39,10 @@ This method requires mod_rewrite (reference [here](https://www.happyassassin.net
 Note that while this method is versatile and should "just work" without modification for most installations, performance may not be as good as a specific websocket ProxyPass, as described in the ProxyPass and wstunnel Method section below.
 
 Replace `vtt.example.com` with your domain name where appropriate, and `localhost:30000` to match your Foundry server and port. If you happen to be running Foundry in SSL mode, also change occurrences of `http://` to `https://` and `ws://` to `wss://`.
+
+> If you direct rewrite traffic to `https://` and `wss://` endpoints on your server you must also setup the foundry vtt server with valid ssl certificates and manage their renewal. Be aware that programs like `certbot` use soft links that are updated when a certificate renews so that you do not need to change anything when the certificates are changed. <br><br> If the foundry server is behind a virtual machine or docker container the foundry server may be unable to follow any softlinks that use relative paths instead of absolute paths. If the server cannot follow the softlinks to a valid certificate you will end up with a ssl error.
+{.is-info}
+
 
 ```
 # Apache .conf for reverse proxy of Foundry VTT.
@@ -89,7 +93,11 @@ Note, however, that in this method the `ProxyPass  "/socket.io/" "ws://localhost
 
 The `ProxyPass  "/socket.io/" "ws://localhost:30000/socket.io/"` line must come before the `ProxyPass / http://localhost:30000/`, as the more specific rules must be specified first.
 
-Replace `vtt.example.com` with your domain name where appropriate, and `localhost:30000` to match your Foundry server and port. If you happen to be running Foundry in SSL mode, also change occurrences of `http://` to `https://` and `ws://` to `wss://`.
+Replace `vtt.example.com` with your domain name where appropriate, and `localhost:30000` to match your Foundry server and port. 
+
+> In this configuration the virtual host, in this case Apache2, will handle the SSL and TLS security between the client and the virtual host server. <br> <br> The virtual host will then act as a proxy between your foundry server and the virtual host without SSL. When you set the `proxySSL : true` option in your `options.json` server conifugration you are telling the foundry server that it is working through a proxy and should operate without ssl. If you make the proxy pass to a `https://` or `wss://` endpoint on the foundry server it will result in a proxy error because foundry is not expecting to handle SSL communication in this mode.
+{.is-info}
+
 
 ```
 # Apache .conf for reverse proxy of Foundry VTT.
