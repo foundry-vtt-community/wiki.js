@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-07-01T00:50:57.698Z
+date: 2024-08-05T06:46:53.493Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -583,8 +583,27 @@ There you have it, a basic implementation of DragDrop in ApplicationV2!
 
 ### SearchFilter
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+API Reference
+- [SearchFilter](https://foundryvtt.com/api/classes/client.SearchFilter.html)
+- [SearchFilterConfiguration](https://foundryvtt.com/api/interfaces/client.SearchFilterConfiguration.html)
+
+The `SearchFilter` helper class connects a text input box to filtering a list of results. It suppresses other events that might fire on the same input, instead activating the bound callback to modify the targeted HTML.
+
+ApplicationV2 does not implement its own SearchFilter support so you'll have to initialize it in the constructor or as a class property. Then you'll need to call `bind(this.element)` in `_onRender`. The callback parameter, while only referred to as the base `Function` in `SearchFilterConfiguration`, matches the signature of `Application#_onSearchFilter`, provided below.
+
+```js
+  /**
+   * Handle changes to search filtering controllers which are bound to the Application
+   * @param {KeyboardEvent} event   The key-up event from keyboard input
+   * @param {string} query          The raw string input to the search field
+   * @param {RegExp} rgx            The regular expression to test against
+   * @param {HTMLElement} html      The HTML element which should be filtered
+   * @protected
+   */
+  _onSearchFilter(event, query, rgx, html) {}
+```
+
+The body of this function must do the actual DOM manipulation; `rgx.test` is probably helpful, as are operations on the provided `html` element to mark elements as `display: hidden` or other ways of removing them from display in the DOM.
 
 ### Non-Handlebars Rendering Frameworks
 
