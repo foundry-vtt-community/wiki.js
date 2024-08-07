@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: false
-date: 2024-08-07T12:35:45.538Z
+date: 2024-08-07T12:35:54.887Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -87,7 +87,7 @@ In your `\_prepareContext`, construct a tabs field.  This is an object with keys
   }
 ```
 
-This construction can be automated somwhat and you may wish to delegate this to a `\_getTabs` method.
+This construction can be automated somewhat and you may wish to delegate this to a `\_getTabs` method.
 
 ```js
   async _prepareContext(options) {
