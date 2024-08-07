@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: false
-date: 2024-08-07T12:26:29.432Z
+date: 2024-08-07T12:35:45.538Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -66,7 +66,28 @@ Note, each part must generate a single html element, and the top level tag must 
 
 ## The data for each tab
 
-In your \_prepareContext, construct a tabs field, you may wish to delegate this to a \_getTabs method
+In your `\_prepareContext`, construct a tabs field.  This is an object with keys representing your tabs, where the values associated with the keys are objects that contain the configuration for the tab. 
+
+```js
+  context.tabs = {
+    traits: {
+      cssClass: '',
+      group: tabGroup,
+      id: 'traits',
+      icon: '',
+      label: 'MYSYS.tab.traits',
+    },
+    aptitudes: {
+      cssClass: '',
+      group: tabGroup,
+      id: 'aptitudes',
+      icon: '',
+      label: 'MYSYS.tab.aptitudes',
+    },
+  }
+```
+
+This construction can be automated somwhat and you may wish to delegate this to a `\_getTabs` method.
 
 ```js
   async _prepareContext(options) {
@@ -124,7 +145,7 @@ In your \_prepareContext, construct a tabs field, you may wish to delegate this 
 ```
 
 ## The prepare context for each part (\_preparePartContext)
-This operation is called as each part in the static PARTS objects is rendered
+This operation is called as each part in the `static PARTS` objects is rendered. It sets `context.tab` appropriately. If you have data that only relates to a single tab in your application (e.g. an html field that needs enriched), you may wish to do that here, rather than in the main `\prepareContext` 
 
 ```js
   async _preparePartContext(partId, context) {
