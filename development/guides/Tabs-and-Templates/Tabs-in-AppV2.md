@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: true
-date: 2024-08-07T13:14:13.105Z
+date: 2024-08-07T13:15:28.731Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -75,14 +75,14 @@ In your `\_prepareContext`, construct a `context.tabs` field.  This is an object
   context.tabs = {
     traits: {
       cssClass: this.tabGroups.primary === 'aptitudes' ? 'active' : '',
-      group: tabGroup,
+      group: 'primary',
       id: 'traits',
       icon: '',
       label: 'MYSYS.tab.traits',
     },
     aptitudes: {
       cssClass: this.tabGroups.primary === 'traits' ? 'active' : '',
-      group: tabGroup,
+      group: 'primary',
       id: 'aptitudes',
       icon: '',
       label: 'MYSYS.tab.aptitudes',
