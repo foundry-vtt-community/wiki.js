@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: false
-date: 2024-08-07T12:38:28.528Z
+date: 2024-08-07T12:40:16.102Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -42,7 +42,7 @@ A static variable that has an entry for each separate slice of html that will be
 
 If you want the individual tabbed pages to be scrollable, add the scrollable property here.
 
-Note, each part must generate a single html element, and the top level tag must include the data-group and data-tab attributes. It must also add `{{tab.cssClass}}` to the class of the html element and this is how the tab will be made active.
+Note, each part must generate a single html element. The top level tag must include the data-group, & data-tab attributes, it must also add `{{tab.cssClass}}` to the class attribute of the html element as this is how the tab will be made active.
 ### Example part
 
 ```html
