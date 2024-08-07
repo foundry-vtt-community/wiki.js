@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: true
-date: 2024-08-07T13:11:00.050Z
+date: 2024-08-07T13:14:13.105Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -15,7 +15,7 @@ There are four elements necessary to add tabs to an instance of AppV2, e.g. an a
 3. A \_preparePartContext that sets context.tab appropriately.
 4. The standard tab handlebars template (included in 1.)
 
-In the examples below, the system is represented by **my-system** and **MYSYS**. You'll need to change these to whatever your system is using.
+In the examples below, the system is represented by **my-system** and **MYSYS**. You'll need to change these to whatever your system is using. This short example will have two sections that are always rendered and two tabs (traits and aptitudes), only one of which will be selected and visible at any given time
 
 ## static PARTS
 A static variable that has an entry for each separate slice of html that will be rendered by the app. This may include a page header, the standard tab template, and an entry for each tabbed page.
