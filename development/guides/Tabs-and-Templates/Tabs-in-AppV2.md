@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: false
-date: 2024-08-07T12:40:16.102Z
+date: 2024-08-07T13:10:15.443Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -66,19 +66,22 @@ Note, each part must generate a single html element. The top level tag must incl
 
 ## The data for each tab
 
-In your `\_prepareContext`, construct a tabs field.  This is an object with keys representing your tabs, where the values associated with the keys are objects that contain the configuration for the tab. Note: Since the `header` and `tabs` PARTS are not tabs, they do not appear in this data structure.
+In your `\_prepareContext`, construct a `context.tabs` field.  This is an object with keys representing your tabs, where the values associated with the keys are objects that contain the configuration for the tab. Note: Since the `header` and `tabs` PARTS are not tabs, they do not appear in this data structure.
 
 ```js
+  // Default tab for first time it's rendered this session
+  if (!this.tabGroups.primary) this.tabGroups.primary = 'aptitudes';
+
   context.tabs = {
     traits: {
-      cssClass: '',
+      cssClass: this.tabGroups.primary === 'aptitudes' ? 'active' : '',
       group: tabGroup,
       id: 'traits',
       icon: '',
       label: 'MYSYS.tab.traits',
     },
     aptitudes: {
-      cssClass: '',
+      cssClass: this.tabGroups.primary === 'traits' ? 'active' : '',
       group: tabGroup,
       id: 'aptitudes',
       icon: '',
