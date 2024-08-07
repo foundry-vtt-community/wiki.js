@@ -2,7 +2,7 @@
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
 published: false
-date: 2024-08-07T12:35:54.887Z
+date: 2024-08-07T12:38:28.528Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
@@ -66,7 +66,7 @@ Note, each part must generate a single html element, and the top level tag must 
 
 ## The data for each tab
 
-In your `\_prepareContext`, construct a tabs field.  This is an object with keys representing your tabs, where the values associated with the keys are objects that contain the configuration for the tab. 
+In your `\_prepareContext`, construct a tabs field.  This is an object with keys representing your tabs, where the values associated with the keys are objects that contain the configuration for the tab. Note: Since the `header` and `tabs` PARTS are not tabs, they do not appear in this data structure.
 
 ```js
   context.tabs = {
