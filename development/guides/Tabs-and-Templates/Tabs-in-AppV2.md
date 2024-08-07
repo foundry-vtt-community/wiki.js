@@ -1,8 +1,8 @@
 ---
 title: 4. Tabs in AppV2
 description: A short primer on adding tabs to an instance of an ApplicationV2
-published: false
-date: 2024-08-07T13:10:15.443Z
+published: true
+date: 2024-08-07T13:11:00.050Z
 tags: appv2 tabs
 editor: markdown
 dateCreated: 2024-08-07T12:26:29.432Z
