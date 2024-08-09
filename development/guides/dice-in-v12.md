@@ -1,8 +1,8 @@
 ---
 title: Dice in v12+
 description: The dice parser was changed in v12, adding new die types now needs to hook into it
-published: false
-date: 2024-08-09T11:00:37.439Z
+published: true
+date: 2024-08-09T11:00:53.102Z
 tags: dice
 editor: markdown
 dateCreated: 2024-08-09T10:15:51.366Z
