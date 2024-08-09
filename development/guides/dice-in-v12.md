@@ -2,7 +2,7 @@
 title: Dice in v12+
 description: The dice parser was changed in v12, adding new die types now needs to hook into it
 published: true
-date: 2024-08-09T11:09:21.108Z
+date: 2024-08-09T11:10:19.832Z
 tags: dice
 editor: markdown
 dateCreated: 2024-08-09T10:15:51.366Z
@@ -114,7 +114,7 @@ export class MySystemRoll extends foundry.dice.Roll {
 ```
 
 ## The die class
-The original field is returned as expression, this means that chat messages report the term that was entered. This class has a factory method to construct an instance, this is called by the roll class. I have commented out the line that invokes the standard `_roll`, since I neither want nor need physical dice nor manual input. If you want to use physical dice, you'll need to uncommnet this and check for `(roll.result === this.faces)` instead of `(roll.result === undefined)`. Note that maximize doesn't make a lot of sense in this context.
+The original field is returned as expression, this means that chat messages report the term that was entered. This class has a factory method to construct an instance, this is called by the roll class. I have commented out the line that invokes the standard `_roll`, since I neither want nor need physical dice nor manual input. If you want to use physical dice, you'll need to uncomment this and check for `(roll.result === this.faces)` instead of `(roll.result === undefined)`. Note that maximize doesn't make a lot of sense in this context.
 
 ```js
 export class MySystemDie extends foundry.dice.terms.Die {
