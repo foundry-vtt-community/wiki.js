@@ -2,7 +2,7 @@
 title: Dice in v12+
 description: The dice parser was changed in v12, adding new die types now needs to hook into it
 published: true
-date: 2024-08-09T11:00:53.102Z
+date: 2024-08-09T11:05:30.994Z
 tags: dice
 editor: markdown
 dateCreated: 2024-08-09T10:15:51.366Z
@@ -193,6 +193,27 @@ export class MySystemDie extends foundry.dice.terms.Die {
     return this.fromData(data);
   }
 }
+```
+
+## The main js class
+You will need to hook these classes into the system. We can just completely replace `CONFIG.Dice.rolls` since our class falls back to the default behaviour.
+
+```js
+import { MySystemDie } from './dice/my-system-die.mjs';
+import { MySystemRollParser } from './dice/my-system-parser.mjs';
+import { MySystemRoll } from './dice/my-system-rolls.mjs';
+
+…
+
+  // Make the parser recognise and construct a MySystemDie
+  CONFIG.Dice.parser = MySystemRollParser;
+  CONFIG.Dice.rolls = [MySystemRoll];
+
+  if (!('l' in CONFIG.Dice.terms)) {
+    CONFIG.Dice.terms.l = MySystemDie;
+  }
+```
+
 
 
 
