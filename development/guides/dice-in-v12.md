@@ -2,14 +2,14 @@
 title: Dice in v12+
 description: The dice parser was changed in v12, adding new die types now needs to hook into it
 published: true
-date: 2024-08-09T11:06:30.988Z
+date: 2024-08-09T11:09:21.108Z
 tags: dice
 editor: markdown
 dateCreated: 2024-08-09T10:15:51.366Z
 ---
 
 # Adding a new die type in v12
-The die parser in v12 is changed, adding a new die type now involves hooking into it.
+The die parser in v12 is changed, adding a new die type now involves hooking into it. This example adds an exploding die type that modifies the result rolled to reflect the total. The standard Foundry exploding die just keeps adding more dice to the end of the roll. This makes choosing the largest result impossible for the system to do. 
 
 We will need three new files and a modification to the main js file.
 
