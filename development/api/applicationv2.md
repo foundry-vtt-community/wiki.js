@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-08-05T06:46:53.493Z
+date: 2024-08-12T22:32:19.919Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -604,6 +604,36 @@ ApplicationV2 does not implement its own SearchFilter support so you'll have to 
 ```
 
 The body of this function must do the actual DOM manipulation; `rgx.test` is probably helpful, as are operations on the provided `html` element to mark elements as `display: hidden` or other ways of removing them from display in the DOM.
+
+### Registering Document Sheets
+
+API Reference
+- [DocumentSheetConfig.registerSheet](https://foundryvtt.com/api/classes/client.DocumentSheetConfig.html#registerSheet)
+
+When you define a new document sheet, you can register it in the `init` hook so it's configurable. 
+
+```js
+
+// You need to separately define your DocumentSheetV2 subclass
+class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {}
+
+Hooks.once("init", () => {
+  // The the `config` object in the fourth argument is entirely optional, as are its properties
+  DocumentSheetConfig.registerSheet(Actor, "package-id", MyActorSheet, {
+    // Any string here will be localized
+  	label: "MyPackage.MyDocumentSheet.Label",
+    // If the sheet is only usable for some values of the `type` field
+    types: ["character, npc"],
+    // Generally useful, defaults to false
+    makeDefault: true,
+    // There are other properties that are rarely needed. See the linked docs for more.
+  })
+  // `Actors.registerSheet` is semantically equivalent to passing Actor as the first argument
+  // This works for all world collections, e.g. Items
+  Actors.registerSheet("package-id", MyActorSheet, {})
+}
+```
+
 
 ### Non-Handlebars Rendering Frameworks
 
