@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-07-27T18:19:17.302Z
+date: 2024-08-15T18:56:15.460Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -35,7 +35,7 @@ b. A linux virtual machine on any host.
 c. A linux virtual private server or dedicated server in the cloud.
 2. A basic understanding of using a terminal that includes the ssh utility, such as:
 a. Powershell in Windows.
-b. Terminal in Linux or MacOS. 
+b. Terminal in Linux or macOS. 
 3. Valid domain name, such as:
 a. A purchased domain name from a registrar like [Namecheap](https://namecheap.com) or [gandi.net](https://gandi.net).
 b. A free subdomain from a free domain name service like [Duck DNS](http://duckdns.org).
@@ -127,11 +127,11 @@ foundry@<servername>:_
 ## System Setup
 We will now install the necessary software to run and manage Foundry behind a reverse proxy. This includes:
 
-* nodejs, required to run Foundry itself
-* caddy, the webserver that will be used as a reverse proxy
-* pm2, the process manager that will keep Foundry running
-* unzip, the utility used to decompress the Foundry installation zip archive
-* nano, the text editor used to edit configuration files
+* `nodejs`, required to run Foundry itself
+* `caddy`, the webserver that will be used as a reverse proxy
+* `pm2`, the process manager that will keep Foundry running
+* `unzip`, the utility used to decompress the Foundry installation zip archive
+* `nano`, the text editor used to edit configuration files
 
 >To continue, you must be using a non-root user with `sudo` access. If that is not the case, please review the steps in [User Setup](#user-setup). {.is-info} 
 
@@ -151,7 +151,7 @@ sudo apt upgrade -y
 
 >If after entering the correct password, you receive an error: `<user> is not in the sudoers file` or similar, then you must login as **root** and complete ther [User Setup](#user-setup). {.is-warning}
 
-<a id="B6" href="#B6">B6.</a> Add the nodejs 20 repository to the system package manager:
+<a id="B6" href="#B6">B6.</a> Add the `nodejs` v20 repository to the system package manager:
 
 
   
@@ -164,7 +164,7 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 
 
 
-<a id="B7" href="#B7">B7.</a> Add the caddy repository to the system package manager:
+<a id="B7" href="#B7">B7.</a> Add the `caddy` repository to the system package manager:
 
 
   
@@ -176,7 +176,7 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 
 
 
-<a id="B8" href="#B8">B8.</a> Install nodejs, caddy, unzip, and nano:
+<a id="B8" href="#B8">B8.</a> Install `nodejs`, `caddy`, `unzip`, and `nano`:
 
   
 ```
@@ -186,26 +186,26 @@ sudo apt install nodejs caddy unzip nano -y
 
 
 
-<a id="B9" href="#B9">B9.</a> Check that nodejs and npm are installed and the correct versions:
+<a id="B9" href="#B9">B9.</a> Check that `nodejs` and `npm` are installed and the correct versions:
 
 ```
 node --version
 npm --version
 ```
-Node should return a version of 18 or greater. The npm version doesn't matter, but should return something. 
+`node` should return a version of 18 or greater. The `npm` version doesn't matter, but should return something. 
 
-<a id="B10" href="#B10">B10.</a> Install pm2:
+<a id="B10" href="#B10">B10.</a> Install `pm2`:
 
 ```
 sudo npm install pm2 -g
 ```
-<a id="B11" href="#B11">B11.</a> Add pm2 to startup as the current user. Be sure to carefully read the `blue notice` and follow all instructions given:
+<a id="B11" href="#B11">B11.</a> Add `pm2` to startup as the current user. Be sure to carefully read the `blue notice` and follow all instructions given:
 
 ```
 pm2 startup
 ```
 >***REQUIRED STEP*** 
->You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly. {.is-info}
+>You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly.
 <a id="C" />
 
 # C. Foundry and Reverse Proxy Setup
