@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T16:28:38.047Z
+date: 2024-08-16T17:01:39.004Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -78,6 +78,7 @@ Comme ces données sur les adversaires ne sont pas configurées pour utiliser le
 
 Voici une liste des modules conseillés par la communauté Discord FR pour profiter au maximum du système Star Wars FFG:
 - [Dice So Nice](https://foundryvtt.com/packages/dice-so-nice/) - Permet d'ajouter des animations 3D lors des jets de dés.
+- [Condition Lab & Triggler](https://foundryvtt.com/packages/condition-lab-triggler) - Permet, notamment, de modifier les icônes d'état.
 - [FXMaster](https://foundryvtt.com/packages/fxmaster/) Permet un excellent éventail d'effets divers.
 - [JB2A - Jules&Ben's Animated Assets](https://foundryvtt.com/packages/JB2A_DnD5e/) Un module au départ pour DnD mais qui permet des effets d'arme et de sort utilisable dans Star Wars.
 - [Multilevel token](https://foundryvtt.com/packages/multilevel-tokens/) - Ce module est intégré à la V12 dès à présent (https://foundryvtt.com/article/scene-regions/).
@@ -97,3 +98,7 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 -- ***Du côté des modules  "Interfaces utilisateurs":***
 - [FFG Star Wars Space Opera Ui](https://foundryvtt.com/packages/space-op-ui/) - Une interface Star Wars basé sur (LCARS UI de Startrek Adventures)
 - [Star Wars - User Interface Creative Common](https://foundryvtt.com/packages/swffgUI-cc/) - Un module d'interface avec de multiples options (Police de caractère Star Wars, Animations dans les fiches, différents thèmes pour vos campagnes, etc.)
+
+## Liens vidéos
+[Présentation de Star Wars FFG pour Foundry](https://www.youtube.com/watch?v=zVMW8oq8O7c)
+
