@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T17:10:44.822Z
+date: 2024-08-16T18:40:40.756Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -94,7 +94,7 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 - [Star Wars - Silhouette](https://foundryvtt.com/packages/starwars-silhouette) - Permet de personnaliser la silhouette de vos vaiseaux (options d'import/conversion en webp des images oggDude en prime).
 
 -- ***Du côté des modules  "Interfaces utilisateurs":***
-- [FFG Star Wars Space Opera Ui](https://foundryvtt.com/packages/space-op-ui/) - Une interface Star Wars basé sur (LCARS UI de Startrek Adventures)
+- [FFG Star Wars Space Opera Ui](https://foundryvtt.com/packages/space-op-ui/) - Une interface Star Wars basée sur (LCARS UI de Startrek Adventures)
 - [Star Wars - User Interface Creative Common](https://foundryvtt.com/packages/swffgUI-cc/) - Un module d'interface avec de multiples options (Police de caractère Star Wars, Animations dans les fiches, différents thèmes pour vos campagnes, etc.)
 
 ## Liens vidéos
