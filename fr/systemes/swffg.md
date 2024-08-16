@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T16:15:00.770Z
+date: 2024-08-16T16:15:59.428Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -79,7 +79,6 @@ Comme ces données sur les adversaires ne sont pas configurées pour utiliser le
 Voici une liste des modules conseillés par la communauté Discord FR pour profiter au maximum du système Star Wars FFG:
 - [FXMaster](https://foundryvtt.com/packages/fxmaster/) Permet un excellent éventail d'effets divers.
 - [JB2A - Jules&Ben's Animated Assets](https://foundryvtt.com/packages/JB2A_DnD5e/) Un module au départ pour DnD mais qui permet des effets d'arme et de sort utilisable dans Star Wars.
-- [Maestro](https://foundryvtt.com/packages/maestro/) - Pour la musique et certains automatismes
 - [Multilevel token](https://foundryvtt.com/packages/multilevel-tokens/) - Ce module est intégré à la V12 dès à présent (https://foundryvtt.com/article/scene-regions/).
 -- [Easy Regions](https://foundryvtt.com/article/scene-regions/) - Permet de faciliter l'utilisation de Scene Region (V12).
 -- [Region Enchantment](https://foundryvtt.com/packages/regionenchantment) - Quelques aides supplémentaires pour l'utilisation de Scene Region (V12)
