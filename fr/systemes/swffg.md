@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T17:01:39.004Z
+date: 2024-08-16T17:10:44.822Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -86,9 +86,7 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 -- [Region Enchantment](https://foundryvtt.com/packages/regionenchantment) - Quelques aides supplémentaires pour l'utilisation de Scene Region (V12)
 - [Tile Scroll](https://foundryvtt.com/packages/tile-scroll/) - Permet de faire de la parallaxe (*l'ancien module parallaxe n'est plus compatible FoundryVTT depuis la version 10*).
 - [Permission Viewer](https://foundryvtt.com/packages/permission_viewer/) - Petit mais puissant indique avec des couleurs les permissions de chaque item/table/objets
-- [Pings](https://foundryvtt.com/packages/pings/) - Permet déplacer les gens sur un ping ou encore montrer des choses sur la map
 - [PopOut](https://foundryvtt.com/packages/popout/) - Permet de sortir des fiches de ta fenêtre navigateur
-- [The Furnace](https://foundryvtt.com/packages/furnace/) - Gros module visant à améliorer la vie des Joueurs et MJ
 - [Token Action HUD](https://foundryvtt.com/packages/token-action-hud/) - Ce module remplit un HUD flottant, montrant les actions communes pour un jeton contrôlable.
 - [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import/) - Permet d'importer des fichiers d'export Dungeondraft et DungeonFog dans FoundryVTT, avec murs et lumières.
 - [Smart Target](https://foundryvtt.com/packages/smarttarget/) ou [Easy Target](https://foundryvtt.com/packages/easy-target) - Permettent de cibler des PJ/PNJ très facilement. (raccourcis).
