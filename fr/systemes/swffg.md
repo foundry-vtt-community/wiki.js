@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T16:10:12.164Z
+date: 2024-08-16T16:13:28.146Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -92,4 +92,5 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 - [The Furnace](https://foundryvtt.com/packages/furnace/) - Gros module visant à améliorer la vie des Joueurs et MJ
 - [Token Action HUD](https://foundryvtt.com/packages/token-action-hud/) - Ce module remplit un HUD flottant, montrant les actions communes pour un jeton contrôlable.
 - [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import/) - Permet d'importer des fichiers d'export Dungeondraft et DungeonFog dans FoundryVTT, avec murs et lumières.
-- [Smart Target](https://foundryvtt.com/packages/smarttarget/) ou [Easy Target](https://foundryvtt.com/packages/easy-target) - Permettent de cibler des PJ/PNJ très facilement. (raccourcis)
+- [Smart Target](https://foundryvtt.com/packages/smarttarget/) ou [Easy Target](https://foundryvtt.com/packages/easy-target) - Permettent de cibler des PJ/PNJ très facilement. (raccourcis).
+- [FFG Star Wars Enhancements](https://foundryvtt.com/packages/ffg-star-wars-enhancements/) - Excellent complément au système Starwars FFG (Intro, Datapad, Transitions en hyper-espace, animations des attaques, etc.
