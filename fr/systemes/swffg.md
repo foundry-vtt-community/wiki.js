@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T15:54:08.279Z
+date: 2024-08-16T15:57:02.436Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -82,7 +82,7 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 - [FXMaster](https://foundryvtt.com/packages/fxmaster/) Permet un excellent éventail d'effets divers.
 - [JB2A - Jules&Ben's Animated Assets](https://foundryvtt.com/packages/JB2A_DnD5e/) Un module au départ pour DnD mais qui permet des effets d'arme et de sort utilisable dans Star Wars.
 - [Maestro](https://foundryvtt.com/packages/maestro/) - Pour la musique et certains automatismes
-- [Multilevel token](https://foundryvtt.com/packages/multilevel-tokens/) - Permet de déplacer les tokens entre map et bien d'autres choses encore
+- [Multilevel token](https://foundryvtt.com/packages/multilevel-tokens/) - Ce module est intégré à la V12 dès à présent (https://foundryvtt.com/article/scene-regions/)
 - [Tile Scroll](https://foundryvtt.com/packages/tile-scroll/) - Permet de faire de la parallaxe (l'ancien module parallaxe n'est plus compatible FoundryVTT depuis la version 10.
 - [Permission Viewer](https://foundryvtt.com/packages/permission_viewer/) - Petit mais puissant indique avec des couleurs les permissions de chaque item/table/objets
 - [Pings](https://foundryvtt.com/packages/pings/) - Permet déplacer les gens sur un ping ou encore montrer des choses sur la map
