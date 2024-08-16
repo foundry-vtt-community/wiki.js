@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T16:14:43.080Z
+date: 2024-08-16T16:15:00.770Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -77,7 +77,6 @@ Comme ces données sur les adversaires ne sont pas configurées pour utiliser le
 ## Modules conseillés par la communauté
 
 Voici une liste des modules conseillés par la communauté Discord FR pour profiter au maximum du système Star Wars FFG:
-- [Chat Images](https://foundryvtt.com/packages/chat-images/) Permet d'importer rapidement via un cliquer glisser dans le Chat.
 - [FXMaster](https://foundryvtt.com/packages/fxmaster/) Permet un excellent éventail d'effets divers.
 - [JB2A - Jules&Ben's Animated Assets](https://foundryvtt.com/packages/JB2A_DnD5e/) Un module au départ pour DnD mais qui permet des effets d'arme et de sort utilisable dans Star Wars.
 - [Maestro](https://foundryvtt.com/packages/maestro/) - Pour la musique et certains automatismes
