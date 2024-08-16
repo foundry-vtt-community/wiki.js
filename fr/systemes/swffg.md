@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-08-16T15:49:50.156Z
+date: 2024-08-16T15:54:08.279Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -88,5 +88,6 @@ Voici une liste des modules conseillés par la communauté Discord FR pour profi
 - [Pings](https://foundryvtt.com/packages/pings/) - Permet déplacer les gens sur un ping ou encore montrer des choses sur la map
 - [PopOut](https://foundryvtt.com/packages/popout/) - Permet de sortir des fiches de ta fenêtre navigateur
 - [The Furnace](https://foundryvtt.com/packages/furnace/) - Gros module visant à améliorer la vie des Joueurs et MJ
-- [Token Action HUD](https://foundryvtt.com/packages/token-action-hud/) Ce module remplit un HUD flottant, montrant les actions communes pour un jeton contrôlable.
-- [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import/) Permet d'importer des fichiers d'export Dungeondraft et DungeonFog dans FoundryVTT, avec murs et lumières.
+- [Token Action HUD](https://foundryvtt.com/packages/token-action-hud/) - Ce module remplit un HUD flottant, montrant les actions communes pour un jeton contrôlable.
+- [Universal Battlemap Importer](https://foundryvtt.com/packages/dd-import/) - Permet d'importer des fichiers d'export Dungeondraft et DungeonFog dans FoundryVTT, avec murs et lumières.
+- [Smart Target](https://foundryvtt.com/packages/smarttarget/) ou [Easy Target](https://foundryvtt.com/packages/easy-target) - Permettent de cibler des PJ/PNJ très facilement. (raccourcis)
