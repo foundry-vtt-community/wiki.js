@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-06-29T16:45:06.508Z
+date: 2024-08-16T21:22:57.962Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -288,7 +288,7 @@ someDocument.update({ someSchemaKey: newValue });
 
 Directly update the document's entry on the database. This persists the change and pushes the new document to all clients.
 
-**Deleting Properties:** Because Foundry uses differences and merges to only send data being changed to the database, a special notation is needed to signal to the database that a value is being intentionally deleted from the database (because omitting a value is done when a value simply isn't being updated). To delete the `key` from `actor.system.key`, you need to make an update like `actor.update({'actor.system.-=key': null})`; the `-=` before the `key` to be deleted is the key there, that signals the database to delete the key. The value ostensibly being written doesn't matter, but convention is to use `null` for that to further indicate that the key is being deleted.
+**Deleting Properties:** Because Foundry uses differences and merges to only send data being changed to the database, a special notation is needed to signal to the database that a value is being intentionally deleted from the database (because omitting a value is done when a value simply isn't being updated). To delete the `key` from `actor.system.key`, you need to make an update like `actor.update({'system.-=key': null})`; the `-=` before the `key` to be deleted is the key there, that signals the database to delete the key. The value ostensibly being written doesn't matter, but convention is to use `null` for that to further indicate that the key is being deleted.
 
 **Working with Arrays:** Because the updates work using object key merges, whereas arrays purely work via index, Foundry cannot modify specific indexes inside an array via update, arrays need to be written as a cohesive whole. To update an array in a document's data, you need to edit a copy of the array and then write the new array as a whole with an update.
 
