@@ -2,7 +2,7 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-07-18T00:58:38.189Z
+date: 2024-08-16T01:37:58.271Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
@@ -64,6 +64,20 @@ Systems and modules have many ways to interact with the canvas by modifying the 
 - Canvas document classes, such as Token and Tiles, have `objectClass`, `layerClass`, and `hudClass` properties to replace and extend the relevant classes like you might for `documentClass`. (e.g. `CONFIG.Token.objectClass = MyToken`)
   - Many of these objects have additional properties such as `CONFIG.Wall.doorSounds`
 - `CONFIG.Canvas` has many configurable properties, including the `groups` and `layers` that are used to define new groups and layers or alter the existing ones
+
+### Scene Control Buttons
+
+API Reference
+
+- [getSceneControlButtons](https://foundryvtt.com/api/functions/hookEvents.getSceneControlButtons.html)
+- [SceneControl](https://foundryvtt.com/api/interfaces/client.SceneControl.html)
+- [SceneControlTool](https://foundryvtt.com/api/interfaces/client.SceneControlTool.html)
+
+The controls on the left side of the screen can be modified in the `getSceneControlButtons` hook. The only argument it passes is the current array of scene controls. To add new ones, you can use `controls.push` to add new elements, or [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) if you want to add your controls to a spot besides the bottom of the array.
+
+- The `title` property of the scene control as well as individual tools are automatically localized. 
+- The `icon` property is expected to be a valid [FontAwesome](https://fontawesome.com/search?o=r&m=free) class, e.g. `"fa-solid fa-expand"`. 
+- The signature for the `onClick` callback is `(toggled: boolean) => void` if the `toggle: true`, otherwise it is just `() => void`
 
 ---
 ## Specific Use Cases
