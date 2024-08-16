@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-08-16T08:53:14.991Z
+date: 2024-08-16T15:41:59.315Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -102,7 +102,9 @@ Here's some important information to know about each option:
 
 *Default*: `required: false` and `nullable: false`
 
-These two options control `_validateSpecial`; `required` prevents passing an undefined value, while `nullable` allows a `null` value. The important difference is that once a field is set to a non-`undefined` value, it cannot be returned to `undefined`, but you *can* set a `nullable` field to `null`. Also, `null` will *not* be overridden by `initial` but `undefined` will always be replaced by an initial value if it is present.
+These two options control `_validateSpecial`; `required` prevents passing an undefined value, while `nullable` allows a `null` value. The important difference is that `null` will *not* be overridden by `initial` but `undefined` will always be replaced by an initial value if it is present.
+
+**blank**: In StringField and its subclasses, `blank` operates on a similar level to `required` and `nullable` by controlling if `''` is a valid value; it's even checked at the same step with `_validateSpecial`. By default, `blank` is true EXCEPT if `choices` is provided, in which case `blank` defaults to false. Also, basically every StringField subclass sets `blank: false` in its defaults.
 
 ##### `initial`
 
