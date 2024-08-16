@@ -2,7 +2,7 @@
 title: Starwars FFG
 description: Support pour Starwars FFG
 published: true
-date: 2024-01-04T14:44:17.474Z
+date: 2024-08-16T11:44:31.298Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T15:58:58.380Z
@@ -31,7 +31,7 @@ Merci à toute la team **StarWarsFoundryVTT**
 Maintenant que le système est installé, vous devez créer un monde.
 Retournez à la page Mondes de jeu, cliquez sur Créer un monde, et assurez-vous de sélectionner **Star Wars FFG** dans le menu déroulant Système de jeu.
 
-![créer un monde](https://cdn.discordapp.com/attachments/722396272505389087/791333007659106324/screenNewWorld.jpg)
+![créer un monde](https://camo.githubusercontent.com/b57d56ea3c99e9f5238e5c301313e3dbfa65905690ef1cb4c9148670232984b9/68747470733a2f2f692e696d6775722e636f6d2f63566561506f732e706e67)
 
 ## Importer des données
 
@@ -53,7 +53,7 @@ Pour importer la grande majorité des données d'articles, vous pouvez utiliser 
 
 Les données qui en résultent sont ajoutées aux Compendiums.
 
-![Le fichier de données zippé](https://camo.githubusercontent.com/8ee0498bce3adcaf3abb4873645598d767481a5758ff38ccebaaf6100597e989/68747470733a2f2f692e696d6775722e636f6d2f726651504a73732e706e67)
+![Le fichier de données zippé](https://camo.githubusercontent.com/92de8c3650a611d5848347b43ea6e7322f045ad1e49c5147a33b39b8039d3896/68747470733a2f2f692e696d6775722e636f6d2f726651504a73732e706e67)
 
 **Remarque :** Si l'un des Compendiums est vide, cela signifie généralement qu'il y a un problème avec votre jeu de données, mais si, vous-êtes sur la branche de développement, il peut également s'agir d'un bogue.
 
