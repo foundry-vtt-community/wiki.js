@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-06-29T04:41:10.260Z
+date: 2024-08-16T08:53:14.991Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -102,7 +102,7 @@ Here's some important information to know about each option:
 
 *Default*: `required: false` and `nullable: false`
 
-These two options constitute a special form of validation; `required` prevents passing an undefined value, while `nullable` allows a `null` value.
+These two options control `_validateSpecial`; `required` prevents passing an undefined value, while `nullable` allows a `null` value. The important difference is that once a field is set to a non-`undefined` value, it cannot be returned to `undefined`, but you *can* set a `nullable` field to `null`. Also, `null` will *not* be overridden by `initial` but `undefined` will always be replaced by an initial value if it is present.
 
 ##### `initial`
 
