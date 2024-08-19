@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-08-12T22:32:19.919Z
+date: 2024-08-19T03:14:04.662Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -323,7 +323,7 @@ class MyActorSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     for (const input of itemQuantities) {
       // keep in mind that if your callback is a named function instead of an arrow function expression
       // you'll need to use `bind(this)` to maintain context
-      itemQuantities.addEventListener("change", (e) => {
+      input.addEventListener("change", (e) => {
         e.preventDefault();
         e.stopImmediatePropagation();
         const newQuantity = e.currentTarget.value
