@@ -2,7 +2,7 @@
 title: 01 - Présentation
 description: 
 published: true
-date: 2022-05-19T13:24:05.646Z
+date: 2024-08-19T15:36:30.182Z
 tags: 
 editor: markdown
 dateCreated: 2021-02-23T18:25:13.793Z
@@ -12,7 +12,7 @@ dateCreated: 2021-02-23T18:25:13.793Z
 
    ![logo dd5](https://theme.zdassets.com/theme_assets/1990310/9a78bfafe808700a64f63952979e3c6b6e9d6a59.png) 
 ### L'implémentation par défaut ne porte pas sur l'ensemble des règles de DD5, mais sur la version "open gaming licence" de celui-ci : 
-[le SRD - Systems Reference Document](https://dnd.wizards.com/articles/features/systems-reference-document-srd) ou en français communément : DRS - Document de Référence du Système.
+[Le SRD - Systems Reference Document](https://dnd.wizards.com/fr/resources/systems-reference-document) ou en français communément : DRS - Document de Référence du Système.
 C'est une diffusion 'libre' du système autorisé à la diffusion et à la réutilisation, adaptation etc .. d'où les jeux 'dérivés' qu'on voit fleurir 'compatible 5ème (je ne rentre pas plus dans le détail, je vous laisse googlé ^^).
 Une précision néanmoins : en Français peut se rajouter le droit de l'auteur de la traduction.  
 
@@ -35,8 +35,9 @@ Une précision néanmoins : en Français peut se rajouter le droit de l'auteur d
 
 - La traduction Fr est basée sur un mix entre des termes librements traduit, présents dans les livres, proposés sur le site d'[AideDD](https://www.aidedd.org)
 		*note : le Livre édité fait foi en cas de doute.*
-    La traduction des compendiums est par contre entièrement reprise depuis le site [AideDD](https://www.aidedd.org)
-- Plusieurs contributeurs ont participés / participent à cette traduction (il ne tient qu'à vous d'apporter votre Aide :) ) : `Baktov, Rwanoux, Olirin, thorni, jyah, Temvaryen`
+    La traduction des compendiums est par contre entièrement reprise depuis le site [AideDD](https://www.aidedd.org)	
+		*note : Depuis la reprise du module par JDedeWS, la traduction est intégralement réécrite (au fur et à mesure) à partir du [DRS 5.1](https://media.wizards.com/2023/downloads/dnd/SRD_CC_v5.1_FR.pdf)*
+- Plusieurs contributeurs ont participés / participent à cette traduction (il ne tient qu'à vous d'apporter votre Aide :) ) : `Baktov, Rwanoux, Olirin, thorni, jyah, Temvaryen, Padhiver, JDedeWS`
 
 ---
 
