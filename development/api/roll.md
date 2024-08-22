@@ -2,13 +2,13 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-08-04T02:12:42.201Z
+date: 2024-08-22T16:41:12.316Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
 Rolls are how Foundry handles randomization and the game math involving them.
 
