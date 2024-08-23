@@ -2,7 +2,7 @@
 title: Kubernetes
 description: 
 published: true
-date: 2022-06-25T06:52:48.904Z
+date: 2024-08-23T20:04:43.523Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:40.922Z
@@ -19,7 +19,7 @@ Requirements:
 
 * Kubernetes Cluster (EKS/GKE/AKS/K3S/K8S)
 
-Follow the detailed step on the his [repo](https://github.com/mbround18/foundryvtt-docker/blob/master/README.md#installation-on-kubernetes).
+Follow the detailed step on the his [repo](https://github.com/mbround18/foundryvtt-docker/blob/main/docs/kube.md).
 
 
 ## Helm Charts
