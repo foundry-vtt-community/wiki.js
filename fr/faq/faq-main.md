@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-07-31T12:06:48.519Z
+date: 2024-08-26T14:43:02.294Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -21,7 +21,7 @@ FoundryVTT a démarré son développement notamment car l'auteur principal ne tr
 
 ## Très bien, ~~mais je vois que le truc est en bêta~~, comment qu’on l’achète ?
 
-A ce jour, le 15 février 2024, Foundry n'est plus en beta depuis plus de 3 ans. Il est actuellement en version 11, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
+A ce jour, le 26 Aout 2024, Foundry n'est plus en beta depuis plus de 3,5 ans. Il est actuellement en version 12, achetable en 1 fois pour la somme de 60$. Des promotions d'environ -15/-20% sont proposées régulièrement. Ca se passe ici :  https://foundryvtt.com/ 
 
 ## Putain, 60$ ?
 
