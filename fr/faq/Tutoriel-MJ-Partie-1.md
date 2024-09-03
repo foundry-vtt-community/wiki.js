@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T20:09:04.946Z
+date: 2024-09-03T20:19:10.984Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -189,76 +189,79 @@ Lorsque le jeu est en pause, une horloge tournante apparaît. En pause, les joue
 
 Utilisés pour changer d'outil sur vos scènes afin de contrôler les différents objets placés sur le canevas. Chacun de icônes de contrôle fournit différent outils. Les outils de contrôle disponibles et que les joueurs peuvent utiliser incluent :
 
-Détail du Menu des outils **Outils de token** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg))
+
+<details><summary>Détail du Menu des outils</summary> 
+**Outils de token** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width=16>)
 
 Contient tous les outils nécessaires pour sélectionner et contrôler [les acteurs](https://foundryvtt.com/article/actors/) .
 
-**Outils de gabarit** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/ruler-combined.svg))
+**Outils de gabarit** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/ruler-combined.svg" width=16>)
 
 Contient les outils nécessaires à l'utilisation [des mesures et des modèles](https://foundryvtt.com/article/measurement/) .
 
-**Outils de tuile** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cubes.svg))
+**Outils de tuile** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cubes.svg" width=16>)
 
 Outils de création, d'édition et de gestion [de tuiles](https://foundryvtt.com/article/tiles/) .
 
-**Outils de dessin** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/pencil.svg))
+**Outils de dessin** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/pencil.svg" width=16>)
 
 Outils nécessaires à la création, à l'édition et à la gestion [des outils de dessin](https://foundryvtt.com/article/drawings/) .
 
-**Outils de mur** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/landmark.svg))
+**Outils de mur** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/landmark.svg" width=16>)
 
 Outils nécessaires à la création, à la modification et à la gestion [des murs](https://foundryvtt.com/article/walls/) .
 
-**Outils de lumière** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/lightbulb.svg))
+**Outils de lumière** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/lightbulb.svg" width=16>)
 
 Outils nécessaires à la création, à l'édition et à la gestion [de l'éclairage](https://foundryvtt.com/article/lighting/) .
 
-**Outils du son d'ambiance** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/volume-low.svg))
+**Outils du son d'ambiance** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/volume-low.svg" width=16>)
 
 Outils nécessaires à la création, l'édition et la gestion [des sons ambiants](https://foundryvtt.com/article/ambient-sound/) .
 
-**Notes** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/bookmark.svg))
+**Notes** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/bookmark.svg" width=16>)
 
 Outils nécessaires à la création, à la modification et à la gestion [des entrées de journaux](https://foundryvtt.com/article/journal/) .
+</details>
 
-Détails des barres latérales des répertoires
+<details><summary>Détails des barres latérales des répertoires</summary>
 
-**Messages du tchat** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/comments.svg))  
+**Messages du tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/comments.svg" width=16>)  
 Cet onglet affiche [les messages de discussion](https://foundryvtt.com/article/chat/) et les résultats des lancers de dés et permet aux utilisateurs d'envoyer leurs propres messages.
 
 **Rencontres de combat** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/swords.svg))  
 Cet onglet affiche toutes [les rencontres de combat](https://foundryvtt.com/article/combat/) actuellement actives , indiquant l'initiative et l'ordre du combat.
 
-**Acteurs** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/users.svg))  
+**Acteurs** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/users.svg" width=16>)  
 Cet onglet contient [les acteurs](https://foundryvtt.com/article/actors/) que les joueurs utiliseront pour suivre leurs personnages.
 
-**Objets** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/suitcase.svg) )  
+**Objets** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/suitcase.svg" width=16>)  
 Cet onglet stocke les fiches d'informations sur [les objets](https://foundryvtt.com/article/items/), qui peuvent être n'importe quoi, des armes et armures aux sorts et capacités.
 
-**Journaux** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book.svg))  
+**Journaux** (<img src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book.svg" width=16>)  
 Cet onglet stocke [les entrées de journal](https://foundryvtt.com/article/journal/) et les pages de journal qui contiennent des informations et des traditions que les joueurs peuvent lire et modifier.
 
-**Tables aléatoires** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/table-list.svg))  
+**Tables aléatoires** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/table-list.svg" width=16>)  
 Cet onglet contient [les tables aléatoires](https://foundryvtt.com/article/roll-tables/) qui peuvent être utilisés pour déterminer des résultats aléatoires à partir d'une liste de résultats.
 
-**Playlists** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/music.svg))  
+**Playlists** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/music.svg" width=16>)  
 Cet onglet donne accès aux paramètres de volume globaux et au contrôleur des [Playlists](https://foundryvtt.com/article/playlists/) qui affiche l'audio en cours de lecture.
 
-**Ensemble de cartes** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cards.svg))  
+**Ensemble de cartes** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cards.svg" width=16>)  
 Cet onglet donne accès à la barre latérale des [Cartes](https://foundryvtt.com/article/cards/) , qui stocke les jeux de cartes, les mains et les pioches dont les utilisateurs auront besoin pour utiliser les cartes.
 
-**Compendiums** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book-atlas.svg))  
+**Compendiums** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book-atlas.svg" width=16>)  
 Donne accès à la barre latérale des [Compendiums](https://foundryvtt.com/article/compendium/) , qui stocke les documents qui ne sont pas réellement nécessaires. La plupart des joueurs n'auront pas besoin d'accéder à cet onglet.
 
-**Paramètres** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/gears.svg))  
+**Paramètres** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/gears.svg" width=16>)  
 Ouvre la barre latérale [Paramètres du jeu](https://foundryvtt.com/article/settings/) , qui permet la configuration ou la personnalisation de votre expérience Foundry VTT.
 
-**Exporter le contenu du tchat** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/floppy-disk.svg))  
+**Exporter le contenu du tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/floppy-disk.svg" width=16>)  
 Ce bouton est utilisé pour enregistrer une copie de tous les messages qui apparaissent actuellement dans votre journal de tchat dans un fichier texte brut.
 
-**Effacer le tchat** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/trash.svg))
-
+**Effacer le tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/trash.svg" width=16>)
 Ce bouton supprime tous les messages du journal de tchat.
+</details>
 
 #### Conclusion de la partie 1
 
