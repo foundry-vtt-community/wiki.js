@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T20:42:59.401Z
+date: 2024-09-03T20:45:33.632Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -226,35 +226,27 @@ Utilisés pour changer d'outil sur vos scènes afin de contrôler les différent
 <details><summary>Détail des outils de contrôle</summary> 
 
   **Outils de token** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width=16>)
-
-Contient tous les outils nécessaires pour sélectionner et contrôler [les acteurs](https://foundryvtt.com/article/actors/) .
+Contient tous les outils nécessaires pour sélectionner et contrôler [les tokens](https://foundryvtt.com/article/actors/) .
 
 **Outils de gabarit** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/ruler-combined.svg" width=16>)
-
-Contient les outils nécessaires à l'utilisation [des mesures et des modèles](https://foundryvtt.com/article/measurement/) .
+Contient les outils nécessaires à l'utilisation [des mesures et des gabarits](https://foundryvtt.com/article/measurement/) .
 
 **Outils de tuile** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cubes.svg" width=16>)
-
-Outils de création, d'édition et de gestion [de tuiles](https://foundryvtt.com/article/tiles/) .
+Outils de création, d'édition et de gestion [des tuiles](https://foundryvtt.com/article/tiles/) .
 
 **Outils de dessin** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/pencil.svg" width=16>)
-
-Outils nécessaires à la création, à l'édition et à la gestion [des outils de dessin](https://foundryvtt.com/article/drawings/) .
+Outils nécessaires à la création, à l'édition et à la gestion [des dessins](https://foundryvtt.com/article/drawings/) .
 
 **Outils de mur** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/landmark.svg" width=16>)
-
 Outils nécessaires à la création, à la modification et à la gestion [des murs](https://foundryvtt.com/article/walls/) .
 
 **Outils de lumière** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/lightbulb.svg" width=16>)
-
 Outils nécessaires à la création, à l'édition et à la gestion [de l'éclairage](https://foundryvtt.com/article/lighting/) .
 
 **Outils du son d'ambiance** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/volume-low.svg" width=16>)
-
-Outils nécessaires à la création, l'édition et la gestion [des sons ambiants](https://foundryvtt.com/article/ambient-sound/) .
+Outils nécessaires à la création, l'édition et la gestion [des sons d'ambiance](https://foundryvtt.com/article/ambient-sound/) .
 
 **Notes** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/bookmark.svg" width=16>)
-
 Outils nécessaires à la création, à la modification et à la gestion [des entrées de journaux](https://foundryvtt.com/article/journal/) .
 </details>
 
