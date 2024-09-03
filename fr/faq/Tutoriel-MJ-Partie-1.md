@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T20:19:10.984Z
+date: 2024-09-03T20:20:08.387Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -56,6 +56,7 @@ Ce panneau répertorie tous les modules actuellement installés et disponibles p
 Ce panneau répertorie différents paramètres de configuration que vous pouvez utiliser pour affiner le comportement de Foundry.
 
 > Lorsque vous lancez Foundry Virtual Tabletop pour la première fois, il est recommandé d'accéder à l'onglet Configuration et de définir un mot de passe administrateur. Ce mot de passe est crypté et vous permet de sécuriser Foundry VTT pour empêcher l'accès au menu de configuration principal. Il est également nécessaire d'utiliser la fonction Retour à la configuration à partir de la page de connexion de tout monde actuellement hébergé.
+{.is-warning}
 
 #### Mise à jour du logiciel
 
@@ -162,6 +163,7 @@ L'écran de connexion au monde vous permet de vous connecter à un monde de jeu 
 Une fois votre monde de jeu créé, cliquez simplement sur le bouton « Lancer » (bouton "Play" sur la vignette du monde) pour lancer le monde et vous amener à l'écran de connexion du jeu. À partir de là, vous pouvez sélectionner le nom d'utilisateur pour vous connecter (par défaut, tous les mondes commencent avec un seul compte Gamemaster sans mot de passe) ou revenir au menu de configuration.
 
 > **Retour à la configuration :** si vous souhaitez revenir aux menus de configuration à partir de la page de connexion, vous pouvez cliquer sur le bouton **Retour à l'accueil** pour fermer le monde et revenir aux menu principal de configuration de Foundry VTT. Si vous avez défini un mot de passe administrateur pour votre logiciel, vous devrez le fournir pour utiliser cette option.
+{.is-info}
 
 **Sélectionnez le joueur Gamemaster et connectez-vous.**
 
