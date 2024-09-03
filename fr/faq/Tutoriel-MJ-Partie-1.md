@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T20:20:08.387Z
+date: 2024-09-03T20:22:01.649Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -193,7 +193,8 @@ Utilisés pour changer d'outil sur vos scènes afin de contrôler les différent
 
 
 <details><summary>Détail du Menu des outils</summary> 
-**Outils de token** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width=16>)
+
+  **Outils de token** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width=16>)
 
 Contient tous les outils nécessaires pour sélectionner et contrôler [les acteurs](https://foundryvtt.com/article/actors/) .
 
@@ -231,7 +232,7 @@ Outils nécessaires à la création, à la modification et à la gestion [des en
 **Messages du tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/comments.svg" width=16>)  
 Cet onglet affiche [les messages de discussion](https://foundryvtt.com/article/chat/) et les résultats des lancers de dés et permet aux utilisateurs d'envoyer leurs propres messages.
 
-**Rencontres de combat** (![](https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/swords.svg))  
+**Rencontres de combat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/swords.svg" width=16>)  
 Cet onglet affiche toutes [les rencontres de combat](https://foundryvtt.com/article/combat/) actuellement actives , indiquant l'initiative et l'ordre du combat.
 
 **Acteurs** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/users.svg" width=16>)  
