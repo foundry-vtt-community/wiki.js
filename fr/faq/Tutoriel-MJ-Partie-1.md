@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T20:28:22.733Z
+date: 2024-09-03T20:42:59.401Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -16,7 +16,7 @@ Foundry Virtual Tabletop est une application puissante dotée de nombreuses fonc
 
 -   **Le menu principal.** Tout le monde doit commencer quelque part, et c'est ici que chaque utilisateur commence avec Foundry VTT !
 -   **Installation de systèmes de jeu.** Les systèmes de jeu contiennent toutes les règles et la tuyauterie nécessaire pour exécuter un jeu et stocker des informations à son sujet.
--   **Créer (ou installer) des mondes de jeu.** Les mondes de jeu utilisent un système de jeu pour disposer d'un endroit lieu où toutes les données et informations peuvent vivre. Chaque monde de jeu est en fait une campagne autonome avec des scènes, des personnages, des objets et autres éléments similaires.
+-   **Créer (ou installer) des mondes de jeu.** Les mondes de jeu utilisent un système de jeu pour disposer d'un endroit où toutes les données et informations peuvent vivre. Chaque monde de jeu est en fait une campagne autonome avec des scènes, des personnages, des objets et autres éléments similaires.
 -   **Lancement des jeux.** Une fois qu'un système est installé et qu'un monde de jeu est créé, vous voudrez le démarrer pour voir ce qu'il contient.
 -   **L'interface utilisateur de Foundry.** L'interface utilisateur de Foundry est assez simple, mais il est toujours utile de savoir de quoi on parle !
 
@@ -41,7 +41,7 @@ Le menu principal de Foundry VTT permet de gérer les mondes, les systèmes de j
 
 #### Mondes
 
-Ce panneau est celui qui s'affiche par défaut lors du premier chargement de Foundry. Il contient tous les mondes de jeu que vous avez créés pour y exécuter des parties. Lorsque Foundry est lancé pour la première fois, cette liste sera vide (comme illustré à droite), mais sera rapidement remplie de campagnes dans lesquelles vous et vos joueurs pourrez vous aventurer.
+Ce panneau est celui qui s'affiche par défaut lors du chargement de Foundry. Il contient tous les mondes de jeu que vous avez créés pour y exécuter des parties. Lorsque Foundry est lancé pour la première fois, cette liste sera vide, mais sera rapidement remplie de campagnes dans lesquelles vous et vos joueurs pourrez vous aventurer.
 
 #### Systèmes
 
@@ -55,7 +55,7 @@ Ce panneau répertorie tous les modules actuellement installés et disponibles p
 
 Ce panneau répertorie différents paramètres de configuration que vous pouvez utiliser pour affiner le comportement de Foundry.
 
-> Lorsque vous lancez Foundry Virtual Tabletop pour la première fois, il est recommandé d'accéder à l'onglet Configuration et de définir un mot de passe administrateur. Ce mot de passe est crypté et vous permet de sécuriser Foundry VTT pour empêcher l'accès au menu de configuration principal. Il est également nécessaire d'utiliser la fonction Retour à la configuration à partir de la page de connexion de tout monde actuellement hébergé.
+> Lorsque vous lancez Foundry Virtual Tabletop pour la première fois, il est recommandé d'accéder à l'onglet Configuration et de définir un **mot de passe administrateur**. Ce mot de passe est crypté et vous permet de sécuriser Foundry VTT pour empêcher l'accès au menu de configuration principal. Il est également nécessaire pour utiliser la fonction **Retour à l'accueil** à partir de la page de connexion de tout monde actuellement hébergé.
 {.is-warning}
 
 #### Mise à jour du logiciel
@@ -68,7 +68,7 @@ Ce panneau vous permet de voir la version actuelle de Foundry et si une version 
 
 Les systèmes de jeu peuvent être facilement installés à l'aide du navigateur.
 
-Avant de pouvoir créer votre premier monde, vous devez d'abord installer un **système**. Les systèmes de jeu définissent les règles selon lesquelles votre monde fonctionne, qu'il s'agisse de l'un des ensembles de règles les plus courants d'un grand éditeur ou que vous préfériez utiliser quelque chose comme le système Simple Worldbuilding. Chaque monde est associé à un **système de jeu. Sans un système de jeu** installé, il est impossible de créer un monde.
+Avant de pouvoir créer votre premier monde, vous devez d'abord installer un **système**. Les systèmes de jeu définissent les règles selon lesquelles votre monde fonctionne, qu'il s'agisse de l'un des ensembles de règles les plus courants d'un grand éditeur ou que vous préfériez utiliser quelque chose comme le système Simple WorldBuilding. Chaque monde est associé à un **système de jeu**. Sans système de jeu installé, il est impossible de créer un monde.
 
 Foundry VTT fournit un système d'installation de packages disponible depuis l'écran de configuration pour l'installation des **mondes de jeu**, **des systèmes de jeu** et **des modules complémentaires**. Le bouton « Installer » en bas de chacun de ces onglets sur l'écran de navigation vous permettra d'installer le type de packages pour cet onglet.
 
@@ -76,19 +76,20 @@ Foundry VTT fournit un système d'installation de packages disponible depuis l'�
 
 1.  Depuis l' **écran de configuration,** accédez à l'onglet Systèmes de jeu
 2.  Cliquez sur le bouton « **Installer un système de jeu**» en haut du menu
-3.  Un navigateur d'installation de package apparaîtra vous permettant de voir tous les systèmes de jeu actuellement disponibles pour Foundry VTT
+3.  Un navigateur pour l'installation de package apparaîtra vous permettant de voir tous les systèmes de jeu actuellement disponibles pour Foundry VTT
 4.  Vous pouvez rechercher cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages
 5.  Une fois que vous avez choisi un système de jeu, cliquez sur le bouton d'installation à droite du nom du système et FVTT le téléchargera et l'installera pour vous
 
-Les systèmes de jeu qui n'ont pas encore été officiellement publiés peuvent également être installés manuellement si vous disposez d'un lien vers le fichier `system.json`(appelé URL **du manifeste** ) pour ce système, en collant l'URL dans le champ URL du Manifeste et en cliquant sur le bouton Installer.
+Les systèmes de jeu qui n'ont pas encore été officiellement publiés peuvent également être installés manuellement si vous disposez d'un lien vers le fichier `system.json`(appelé **URL du manifeste** ) pour ce système, en collant l'URL dans le champ URL du Manifeste et en cliquant sur le bouton Installer.
 
 #### Mise à jour des systèmes de jeu
 
-Pour rappel, il est conseillé de mettre à jour périodiquement les systèmes installés depuis l'onglet Système de jeu de Foundry VTT. Vous pouvez mettre à jour les systèmes de jeu individuellement en cliquant sur le bouton « Effectuer la mise à jour » associé dans l'entrée du système, ou utiliser le bouton « Tout mettre à jour » en haut de l'onglet pour vérifier si des mises à jour sont disponibles sur tous vos systèmes installés, qui seront ensuite automatiquement appliquées si une mise à jour est disponible.
+Pour rappel, il est conseillé de mettre à jour périodiquement les systèmes installés depuis l'onglet Système de Foundry VTT. Vous pouvez mettre à jour les systèmes de jeu individuellement en cliquant sur le bouton « Effectuer la mise à jour » associé dans l'entrée du système, ou utiliser le bouton « Tout mettre à jour » en haut de l'onglet pour vérifier si des mises à jour sont disponibles sur tous vos systèmes installés, qui seront ensuite automatiquement appliquées si une mise à jour est disponible.
 
 #### À propos des modules
 
-Certains utilisateurs ont tendance à se précipiter pour installer des modules complémentaires sans avoir au préalable appris à utiliser les fonctionnalités de base de Foundry VTT. Bien que les modules offrent une grande variété de personnalisations et de modifications du fonctionnement des fonctionnalités de base de Foundry VTT, ils peuvent entraîner des problèmes de compatibilité et doivent être installés par petits incréments pour vous permettre d'être certain des fonctionnalités ajoutées par des modules pris en charge par la communauté et de celles qui font partie du logiciel de base.
+>Certains utilisateurs ont tendance à se précipiter pour installer des modules complémentaires sans avoir au préalable appris à utiliser les fonctionnalités de base de Foundry VTT. Bien que les modules offrent une grande variété de personnalisations et de modifications du fonctionnement des fonctionnalités de base de Foundry VTT, ils peuvent entraîner des problèmes de compatibilité et doivent être installés par petits incréments pour vous assurer d'être certain des fonctionnalités ajoutées par des modules et de celles qui font partie du logiciel de base.
+{.is-warning}
 
 N'oubliez jamais que la première étape pour résoudre tout problème que vous pourriez rencontrer dans Foundry VTT est de désactiver tous les modules.
 
@@ -96,7 +97,7 @@ N'oubliez jamais que la première étape pour résoudre tout problème que vous 
 
 !\[La feuille de configuration du monde\](./Tutoriel - Maître du jeu, première partie \_ Foundry Virtual Tabletop\_files/the-world-configuration-sheet-2023-06-05.webp)
 
-La feuille de configuration du monde vous permet de spécifier les détails de votre monde de jeu et de les modifier ultérieurement.
+La fiche de configuration du monde vous permet de spécifier les détails de votre monde de jeu et de les modifier ultérieurement.
 
 Maintenant que vous disposez d'un **système de jeu**, accédez à l' onglet **Mondes**; à partir de là, vous créerez votre tout premier monde de jeu ! Cliquez sur le bouton « Créer un monde » de cet onglet pour afficher un menu de dialogue.
 
@@ -106,28 +107,22 @@ Le bouton **Editer le monde** peut être utilisé à tout moment après la créa
 
 #### Le menu Créer un monde
 
-Nom du Monde
-
+**Nom du Monde**
 Le nom que les joueurs verront lors de la connexion au jeu et la manière dont le monde sera désigné dans l'interface utilisateur.
 
-Chemin de données
-
+**Chemin de données**
 Le nom du dossier dans le dossier Worlds où vos données seront stockées. Comme il sera utilisé dans les URL Web, il **ne peut pas contenir d'espaces ni de caractères spéciaux**. Utilisez plutôt des tirets pour séparer plusieurs termes. (Exemple : **ma-premiere-campagne** est mieux que **« ma première campagne »** .)
 
-Système de jeu
-
+**Système de jeu**
 Les règles que le monde utilisera. Un système de jeu ne peut pas être modifié une fois que le monde est créé, alors assurez-vous d'utiliser le bon système.
 
-Image d'arrière-plan
-
+**Image d'arrière-plan**
 Une image que vous et vos joueurs verrez lorsque vous vous connecterez au Monde du jeu pour une session. Cette image sera étirée pour s'adapter à la fenêtre du navigateur, il est donc recommandé d'utiliser une image suffisamment grande pour fonctionner comme fond d'écran du bureau.
 
-Prochaine session
-
+**Prochaine session**
 Vous permet de définir la date et l'heure de la prochaine session de jeu. Ces informations seront visibles par tous les joueurs depuis l'écran de connexion de votre monde de jeu. Ceci est purement facultatif. La date et l'heure sont automatiquement localisées dans le fuseau horaire correct de l'utilisateur.
 
-Description du monde
-
+**Description du monde**
 Fournit une description textuelle de votre monde, permettant des informations thématiques supplémentaires ou une brève description de votre environnement, des points de l'intrigue actuels ou d'autres informations que vos joueurs verront lors de la connexion.
 
 Une fois que vous avez rempli ces champs à votre guise, cliquez sur Créer un monde pour finaliser votre monde de jeu !
@@ -138,10 +133,10 @@ Foundry VTT propose un certain nombre d'aventures et de campagnes déjà prépar
 
 #### Menu d'installation du monde du jeu
 
-1.  Depuis l' écran **de configuration**, accédez à l'onglet Mondes
+1.  Depuis l' **écran de configuration**, accédez à l'onglet Mondes
 2.  Cliquez sur le bouton « **Installer un monde** » en haut du menu
-3.  Un navigateur d'installation de package apparaîtra vous permettant de voir tous les mondes de jeu actuellement disponibles pour Foundry VTT
-4.  Vous pouvez rechercher cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages
+3.  Un navigateur pour l'installation de package apparaîtra vous permettant de voir tous les mondes de jeu actuellement disponibles pour Foundry VTT
+4.  Vous pouvez rechercher dans cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages
 5.  Une fois que vous avez choisi un monde de jeu, cliquez sur le bouton d'installation à droite du titre du monde et FVTT le téléchargera et l'installera pour vous.
 
 Comme pour les systèmes de jeu, les mondes de jeu qui n'ont pas encore été officiellement publiés peuvent également être installés manuellement à l'aide du `world.json` à renseigner dans le champ URL du manifeste.
@@ -152,7 +147,7 @@ Comme pour les systèmes de jeu, les mondes de jeu qui n'ont pas encore été of
 
 Une vue filtrée de l'onglet des mondes du jeu.
 
-Lorsque vous avez créé plusieurs mondes ou installé plusieurs systèmes et modules, il peut être difficile d'en trouver un en particulier. Pour accéder rapidement à un package spécifique, vous pouvez utiliser l'entrée Filtre en haut à gauche de chaque onglet. Commencez simplement à saisir le nom du package que vous recherchez et la liste se filtrera pour afficher uniquement les éléments qui correspondent. S'il n'y a aucun package correspondant dans cet onglet, vous verrez un message « Aucun package ne correspond à votre recherche. » et vous souhaiterez peut-être consulter l'installateur du package pour le télécharger.
+Lorsque vous avez créé plusieurs mondes ou installé plusieurs systèmes et modules, il peut être difficile d'en trouver un en particulier. Pour accéder rapidement à un package spécifique, vous pouvez utiliser l'entrée Filtre en haut à gauche de chaque onglet. Commencez simplement à saisir le nom du package que vous recherchez et la liste se filtrera pour afficher uniquement les éléments qui correspondent. S'il n'y a aucun package correspondant dans cet onglet, vous verrez un message « Aucun package ne correspond à votre recherche.» et vous souhaiterez peut-être lancer l'installateur de package pour le télécharger.
 
 ## Lancez votre nouveau monde
 
@@ -162,7 +157,7 @@ L'écran de connexion au monde vous permet de vous connecter à un monde de jeu 
 
 Une fois votre monde de jeu créé, cliquez simplement sur le bouton « Lancer » (bouton "Play" sur la vignette du monde) pour lancer le monde et vous amener à l'écran de connexion du jeu. À partir de là, vous pouvez sélectionner le nom d'utilisateur pour vous connecter (par défaut, tous les mondes commencent avec un seul compte Gamemaster sans mot de passe) ou revenir au menu de configuration.
 
-> **Retour à la configuration :** si vous souhaitez revenir aux menus de configuration à partir de la page de connexion, vous pouvez cliquer sur le bouton **Retour à l'accueil** pour fermer le monde et revenir aux menu principal de configuration de Foundry VTT. Si vous avez défini un mot de passe administrateur pour votre logiciel, vous devrez le fournir pour utiliser cette option.
+> **Retour à la configuration :** si vous souhaitez revenir aux menus de configuration à partir de la page de connexion, vous pouvez cliquer sur le bouton **Retour à l'accueil** pour fermer le monde et revenir aux menu principal de configuration de Foundry VTT. Si vous avez défini un **mot de passe administrateur** pour votre logiciel, vous devrez le fournir pour utiliser cette option.
 {.is-info}
 
 **Sélectionnez le joueur Gamemaster et connectez-vous.**
