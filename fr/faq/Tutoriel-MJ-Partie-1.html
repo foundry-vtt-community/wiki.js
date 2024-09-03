@@ -2,70 +2,65 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T18:47:16.370Z
+date: 2024-09-03T19:42:33.825Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: ckeditor
 dateCreated: 2024-09-03T17:59:36.379Z
 -->
 
-<p>&nbsp;</p>
-<h1>Tutoriel - Maître du jeu, première partie</h1>
-<h2>&nbsp;</h2>
-<h2>Aperçu</h2>
+<h1 class="toc-header" id="tutoriel-maître-du-jeu-première-partie"> Tutoriel - Maître du jeu, première partie</h1>
+<h2 class="toc-header" id="aperçu"> Aperçu</h2>
 <p>Foundry Virtual Tabletop est une application puissante dotée de nombreuses fonctionnalités. Elle peut donc être difficile à utiliser pour un nouveau maître du jeu, même si vous avez déjà utilisé un logiciel de jeu de table virtuel. Cet article fournit une introduction de base à l'interface de Foundry VTT et vous donne toutes les étapes de démarrage nécessaires à la configuration d'un jeu pour vos joueurs. Cet article vous présentera :</p>
 <ul>
-  <li><strong>Le menu principal.</strong> Tout le monde doit commencer quelque part, et c'est ici que chaque utilisateur commence avec Foundry VTT !</li>
-  <li><strong>Installation de systèmes de jeu.</strong> Les systèmes de jeu contiennent toutes les règles et la tuyauterie nécessaire pour exécuter un jeu et stocker des informations à son sujet.</li>
-  <li><strong>Créer (ou installer) des mondes de jeu.</strong> Les mondes de jeu utilisent un système de jeu pour disposer d'un endroit lieu où toutes les données et informations peuvent vivre. Chaque monde de jeu est en fait une campagne autonome avec des scènes, des personnages, des objets et autres éléments similaires.</li>
-  <li><strong>Lancement des jeux.</strong> Une fois qu'un système est installé et qu'un monde de jeu est créé, vous voudrez le démarrer pour voir ce qu'il contient.</li>
-  <li><strong>L'interface utilisateur de Foundry.</strong> L'interface utilisateur de Foundry est assez simple, mais il est toujours utile de savoir de quoi on parle&nbsp;!</li>
+<li><strong>Le menu principal.</strong> Tout le monde doit commencer quelque part, et c'est ici que chaque utilisateur commence avec Foundry VTT !</li>
+<li><strong>Installation de systèmes de jeu.</strong> Les systèmes de jeu contiennent toutes les règles et la tuyauterie nécessaire pour exécuter un jeu et stocker des informations à son sujet.</li>
+<li><strong>Créer (ou installer) des mondes de jeu.</strong> Les mondes de jeu utilisent un système de jeu pour disposer d'un endroit lieu où toutes les données et informations peuvent vivre. Chaque monde de jeu est en fait une campagne autonome avec des scènes, des personnages, des objets et autres éléments similaires.</li>
+<li><strong>Lancement des jeux.</strong> Une fois qu'un système est installé et qu'un monde de jeu est créé, vous voudrez le démarrer pour voir ce qu'il contient.</li>
+<li><strong>L'interface utilisateur de Foundry.</strong> L'interface utilisateur de Foundry est assez simple, mais il est toujours utile de savoir de quoi on parle&nbsp;!</li>
 </ul>
-<h2>Le menu principal</h2>
-<figure class="image image_resized image-style-align-right" style="width:42.28%;"><img src="/dnd-modules/foundry-vtt-configuration-setup-2023-06-05.webp">
-  <figcaption><i>Le menu de configuration et d'installation de Foundry Virtual Tabletop.</i></figcaption>
-</figure>
+<h2 class="toc-header" id="le-menu-principal"> Le menu principal</h2>
+<p><img alt="" src="/dnd-modules/foundry-vtt-configuration-setup-2023-06-05.webp"></p>
+<p><em>Le menu de configuration et d'installation de Foundry Virtual Tabletop.</em></p>
 <p>Le menu principal de Foundry VTT permet de gérer les mondes, les systèmes de jeu, les modules et divers paramètres de configuration du logiciel lui-même.</p>
-<h4>Mondes</h4>
+<h4 class="toc-header" id="mondes"> Mondes</h4>
 <p>Ce panneau est celui qui s'affiche par défaut lors du premier chargement de Foundry. Il contient tous les mondes de jeu que vous avez créés pour y exécuter des parties. Lorsque Foundry est lancé pour la première fois, cette liste sera vide (comme illustré à droite), mais sera rapidement remplie de campagnes dans lesquelles vous et vos joueurs pourrez vous aventurer.</p>
-<h4>Systèmes</h4>
+<h4 class="toc-header" id="systèmes"> Systèmes</h4>
 <p>Ce panneau répertorie tous les systèmes de jeu actuellement installés et vous permet de les mettre à jour vers leurs versions les plus récentes si nécessaire. Les systèmes de jeu sont essentiels à la création de mondes de jeu et à l'exécution de sessions de jeu.</p>
-<h4>Modules</h4>
+<h4 class="toc-header" id="modules"> Modules</h4>
 <p>Ce panneau répertorie tous les modules actuellement installés et disponibles pour être utilisés dans un monde de jeu. Ce panneau vous permet également de mettre à jour les modules vers leur version la plus récente si nécessaire. Les modules ne font rien par eux-mêmes et doivent être chargés à partir d'un jeu en direct. Cette série de didacticiels ne passera pas en revue les modules car ils ne sont pas nécessaires à l'utilisation des différents ensembles d'outils de Foundry.</p>
-<h4>Configuration</h4>
+<h4 class="toc-header" id="configuration"> Configuration</h4>
 <p>Ce panneau répertorie différents paramètres de configuration que vous pouvez utiliser pour affiner le comportement de Foundry.</p>
-<blockquote>
-  <p>Lorsque vous lancez Foundry Virtual Tabletop pour la première fois, il est recommandé d'accéder à l'onglet Configuration et de définir un mot de passe administrateur. Ce mot de passe est crypté et vous permet de sécuriser Foundry VTT pour empêcher l'accès au menu de configuration principal. Il est également nécessaire d'utiliser la fonction Retour à la configuration à partir de la page de connexion de tout monde actuellement hébergé.</p>
+<blockquote class="is-warning">
+<p>Lorsque vous lancez Foundry Virtual Tabletop pour la première fois, il est recommandé d'accéder à l'onglet Configuration et de définir un mot de passe administrateur. Ce mot de passe est crypté et vous permet de sécuriser Foundry VTT pour empêcher l'accès au menu de configuration principal. Il est également nécessaire d'utiliser la fonction Retour à la configuration à partir de la page de connexion de tout monde actuellement hébergé.</p>
 </blockquote>
-<h4>Mise à jour du logiciel</h4>
+<h4 class="toc-header" id="mise-à-jour-du-logiciel"> Mise à jour du logiciel</h4>
 <p>Ce panneau vous permet de voir la version actuelle de Foundry et si une version plus récente est disponible. Vous pouvez mettre à jour votre version de Foundry à partir de ce menu, et même basculer vers différentes branches de test, à condition qu'une soit actuellement disponible.</p>
-<h2>Installation d'un système de jeu</h2>
-<figure class="image image_resized image-style-align-right" style="width:51.43%;"><img src="./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/the-game-system-browser-2023-06-05.webp" alt="Le navigateur du système de jeu">
-  <figcaption>Les systèmes de jeu peuvent être facilement installés à l'aide du navigateur.</figcaption>
-</figure>
+<h2 class="toc-header" id="installation-dun-système-de-jeu"> Installation d'un système de jeu</h2>
+<p>![Le navigateur du système de jeu](./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/the-game-system-browser-2023-06-05.webp)</p>
+<p>Les systèmes de jeu peuvent être facilement installés à l'aide du navigateur.</p>
 <p>Avant de pouvoir créer votre premier monde, vous devez d'abord installer un <strong>système</strong>. Les systèmes de jeu définissent les règles selon lesquelles votre monde fonctionne, qu'il s'agisse de l'un des ensembles de règles les plus courants d'un grand éditeur ou que vous préfériez utiliser quelque chose comme le système Simple Worldbuilding. Chaque monde est associé à un <strong>système de jeu. Sans un système de jeu</strong> installé, il est impossible de créer un monde.</p>
 <p>Foundry VTT fournit un système d'installation de packages disponible depuis l'écran de configuration pour l'installation des <strong>mondes de jeu</strong>, <strong>des systèmes de jeu</strong> et <strong>des modules complémentaires</strong>. Le bouton «&nbsp;Installer&nbsp;» en bas de chacun de ces onglets sur l'écran de navigation vous permettra d'installer le type de packages pour cet onglet.</p>
-<h4>Menu d'installation du système de jeu</h4>
+<h4 class="toc-header" id="menu-dinstallation-du-système-de-jeu"> Menu d'installation du système de jeu</h4>
 <ol>
-  <li>Depuis l' <strong>écran de configuration,</strong> accédez à l'onglet Systèmes de jeu</li>
-  <li>Cliquez sur le bouton « <strong>Installer un système de jeu</strong>» en haut du menu</li>
-  <li>Un navigateur d'installation de package apparaîtra vous permettant de voir tous les systèmes de jeu actuellement disponibles pour Foundry VTT</li>
-  <li>Vous pouvez rechercher cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages</li>
-  <li>Une fois que vous avez choisi un système de jeu, cliquez sur le bouton d'installation à droite du nom du système et FVTT le téléchargera et l'installera pour vous</li>
+<li>Depuis l' <strong>écran de configuration,</strong> accédez à l'onglet Systèmes de jeu</li>
+<li>Cliquez sur le bouton « <strong>Installer un système de jeu</strong>» en haut du menu</li>
+<li>Un navigateur d'installation de package apparaîtra vous permettant de voir tous les systèmes de jeu actuellement disponibles pour Foundry VTT</li>
+<li>Vous pouvez rechercher cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages</li>
+<li>Une fois que vous avez choisi un système de jeu, cliquez sur le bouton d'installation à droite du nom du système et FVTT le téléchargera et l'installera pour vous</li>
 </ol>
 <p>Les systèmes de jeu qui n'ont pas encore été officiellement publiés peuvent également être installés manuellement si vous disposez d'un lien vers le fichier <code>system.json</code>(appelé URL <strong>du manifeste</strong> ) pour ce système, en collant l'URL dans le champ URL du Manifeste et en cliquant sur le bouton Installer.</p>
-<h4>Mise à jour des systèmes de jeu</h4>
+<h4 class="toc-header" id="mise-à-jour-des-systèmes-de-jeu"> Mise à jour des systèmes de jeu</h4>
 <p>Pour rappel, il est conseillé de mettre à jour périodiquement les systèmes installés depuis l'onglet Système de jeu de Foundry VTT. Vous pouvez mettre à jour les systèmes de jeu individuellement en cliquant sur le bouton «&nbsp;Effectuer la mise à jour&nbsp;» associé dans l'entrée du système, ou utiliser le bouton «&nbsp;Tout mettre à jour&nbsp;» en haut de l'onglet pour vérifier si des mises à jour sont disponibles sur tous vos systèmes installés, qui seront ensuite automatiquement appliquées si une mise à jour est disponible.</p>
-<h4>À propos des modules</h4>
+<h4 class="toc-header" id="à-propos-des-modules"> À propos des modules</h4>
 <p>Certains utilisateurs ont tendance à se précipiter pour installer des modules complémentaires sans avoir au préalable appris à utiliser les fonctionnalités de base de Foundry VTT. Bien que les modules offrent une grande variété de personnalisations et de modifications du fonctionnement des fonctionnalités de base de Foundry VTT, ils peuvent entraîner des problèmes de compatibilité et doivent être installés par petits incréments pour vous permettre d'être certain des fonctionnalités ajoutées par des modules pris en charge par la communauté et de celles qui font partie du logiciel de base.</p>
 <p>N'oubliez jamais que la première étape pour résoudre tout problème que vous pourriez rencontrer dans Foundry VTT est de désactiver tous les modules.</p>
-<h2>Créer un nouveau monde</h2>
-<figure class="image"><img src="./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/the-world-configuration-sheet-2023-06-05.webp" alt="La feuille de configuration du monde">
-  <figcaption>La feuille de configuration du monde vous permet de spécifier les détails de votre monde de jeu et de les modifier ultérieurement.</figcaption>
-</figure>
+<h2 class="toc-header" id="créer-un-nouveau-monde"> Créer un nouveau monde</h2>
+<p>![La feuille de configuration du monde](./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/the-world-configuration-sheet-2023-06-05.webp)</p>
+<p>La feuille de configuration du monde vous permet de spécifier les détails de votre monde de jeu et de les modifier ultérieurement.</p>
 <p>Maintenant que vous disposez d'un <strong>système de jeu</strong>, accédez à l' onglet <strong>Mondes</strong>; à partir de là, vous créerez votre tout premier monde de jeu&nbsp;! Cliquez sur le bouton «&nbsp;Créer un monde&nbsp;» de cet onglet pour afficher un menu de dialogue.</p>
-<h4>Modifier un monde existant</h4>
+<h4 class="toc-header" id="modifier-un-monde-existant"> Modifier un monde existant</h4>
 <p>Le bouton <strong>Editer le monde</strong> peut être utilisé à tout moment après la création d'un monde, ce qui vous permet d'afficher à nouveau ce menu afin de modifier les détails de votre monde de jeu tels que la description, la prochaine session, l'image d'arrière-plan ou le titre ! Il peut également être utilisé pour <strong>réinitialiser les modules actifs</strong> ou <strong>réinitialiser les clés d'accès utilisateur</strong> sans avoir à lancer le monde au préalable. Si vous rencontrez des problèmes pour lancer votre monde ou vous connecter, modifiez simplement le monde et cochez la case appropriée pour réinitialiser les modules ou les clés d'accès utilisateur si nécessaire.</p>
-<h4>Le menu Créer un monde</h4>
+<h4 class="toc-header" id="le-menu-créer-un-monde"> Le menu Créer un monde</h4>
 <p>Nom du Monde</p>
 <p>Le nom que les joueurs verront lors de la connexion au jeu et la manière dont le monde sera désigné dans l'interface utilisateur.</p>
 <p>Chemin de données</p>
@@ -79,89 +74,89 @@ dateCreated: 2024-09-03T17:59:36.379Z
 <p>Description du monde</p>
 <p>Fournit une description textuelle de votre monde, permettant des informations thématiques supplémentaires ou une brève description de votre environnement, des points de l'intrigue actuels ou d'autres informations que vos joueurs verront lors de la connexion.</p>
 <p>Une fois que vous avez rempli ces champs à votre guise, cliquez sur Créer un monde pour finaliser votre monde de jeu !</p>
-<h2>Installation d'un monde de jeu</h2>
+<h2 class="toc-header" id="installation-dun-monde-de-jeu"> Installation d'un monde de jeu</h2>
 <p>Foundry VTT propose un certain nombre d'aventures et de campagnes déjà préparées avec tout ce dont vous avez besoin pour les exécuter avec vos joueurs. Similaires à l'installation des systèmes de jeu, ces mondes peuvent être installés à partir de l'onglet Mondes et installeront automatiquement tout le contenu, y compris le système de jeu pour vous.</p>
-<h4>Menu d'installation du monde du jeu</h4>
+<h4 class="toc-header" id="menu-dinstallation-du-monde-du-jeu"> Menu d'installation du monde du jeu</h4>
 <ol>
-  <li>Depuis l' écran <strong>de configuration</strong>, accédez à l'onglet Mondes</li>
-  <li>Cliquez sur le bouton « <strong>Installer un monde</strong> » en haut du menu</li>
-  <li>Un navigateur d'installation de package apparaîtra vous permettant de voir tous les mondes de jeu actuellement disponibles pour Foundry VTT</li>
-  <li>Vous pouvez rechercher cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages</li>
-  <li>Une fois que vous avez choisi un monde de jeu, cliquez sur le bouton d'installation à droite du titre du monde et FVTT le téléchargera et l'installera pour vous.</li>
+<li>Depuis l' écran <strong>de configuration</strong>, accédez à l'onglet Mondes</li>
+<li>Cliquez sur le bouton « <strong>Installer un monde</strong> » en haut du menu</li>
+<li>Un navigateur d'installation de package apparaîtra vous permettant de voir tous les mondes de jeu actuellement disponibles pour Foundry VTT</li>
+<li>Vous pouvez rechercher cette liste avec le champ de recherche ou filtrer la liste à l'aide des catégories de packages</li>
+<li>Une fois que vous avez choisi un monde de jeu, cliquez sur le bouton d'installation à droite du titre du monde et FVTT le téléchargera et l'installera pour vous.</li>
 </ol>
 <p>Comme pour les systèmes de jeu, les mondes de jeu qui n'ont pas encore été officiellement publiés peuvent également être installés manuellement à l'aide du <code>world.json</code> à renseigner dans le champ URL du manifeste.</p>
-<h2>Recherche des mondes, systèmes et modules installés</h2>
-<figure class="image"><img src="./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/filter-packages-demo-2023-06-05.webp" alt="Démo des packages de filtrage">
-  <figcaption>Une vue filtrée de l'onglet des mondes du jeu.</figcaption>
-</figure>
+<h2 class="toc-header" id="recherche-des-mondes-systèmes-et-modules-installés"> Recherche des mondes, systèmes et modules installés</h2>
+<p>![Démo des packages de filtrage](./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/filter-packages-demo-2023-06-05.webp)</p>
+<p>Une vue filtrée de l'onglet des mondes du jeu.</p>
 <p>Lorsque vous avez créé plusieurs mondes ou installé plusieurs systèmes et modules, il peut être difficile d'en trouver un en particulier. Pour accéder rapidement à un package spécifique, vous pouvez utiliser l'entrée Filtre en haut à gauche de chaque onglet. Commencez simplement à saisir le nom du package que vous recherchez et la liste se filtrera pour afficher uniquement les éléments qui correspondent. S'il n'y a aucun package correspondant dans cet onglet, vous verrez un message « Aucun package ne correspond à votre recherche. » et vous souhaiterez peut-être consulter l'installateur du package pour le télécharger.</p>
-<h2>Lancez votre nouveau monde</h2>
-<figure class="image"><img src="./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/game-worlds-user-login-screen-2023-06-05.webp" alt="Mondes de jeu - Écran de connexion utilisateur">
-  <figcaption>L'écran de connexion au monde vous permet de vous connecter à un monde de jeu actif ou de revenir à la configuration.</figcaption>
-</figure>
+<h2 class="toc-header" id="lancez-votre-nouveau-monde"> Lancez votre nouveau monde</h2>
+<p>![Mondes de jeu - Écran de connexion utilisateur](./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/game-worlds-user-login-screen-2023-06-05.webp)</p>
+<p>L'écran de connexion au monde vous permet de vous connecter à un monde de jeu actif ou de revenir à la configuration.</p>
 <p>Une fois votre monde de jeu créé, cliquez simplement sur le bouton «&nbsp;Lancer&nbsp;» (bouton "Play" sur la vignette du monde) pour lancer le monde et vous amener à l'écran de connexion du jeu. À partir de là, vous pouvez sélectionner le nom d'utilisateur pour vous connecter (par défaut, tous les mondes commencent avec un seul compte Gamemaster sans mot de passe) ou revenir au menu de configuration.</p>
-<blockquote>
-  <p><strong>Retour à la configuration&nbsp;:</strong> si vous souhaitez revenir aux menus de configuration à partir de la page de connexion, vous pouvez cliquer sur le bouton<i><strong> </strong></i><strong>Retour à l'accueil</strong> pour fermer le monde et revenir aux menu principal de configuration de Foundry VTT. Si vous avez défini un mot de passe administrateur pour votre logiciel, vous devrez le fournir pour utiliser cette option.</p>
+<blockquote class="is-info">
+<p><strong>Retour à la configuration&nbsp;:</strong> si vous souhaitez revenir aux menus de configuration à partir de la page de connexion, vous pouvez cliquer sur le bouton <strong>Retour à l'accueil</strong> pour fermer le monde et revenir aux menu principal de configuration de Foundry VTT. Si vous avez défini un mot de passe administrateur pour votre logiciel, vous devrez le fournir pour utiliser cette option.</p>
 </blockquote>
 <p><strong>Sélectionnez le joueur Gamemaster et connectez-vous.</strong></p>
-<h2>Introduction à l'interface utilisateur</h2>
-<figure class="image"><img src="./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/gm-ui-map-2021-01-27.jpg" alt="Carte de l'interface utilisateur GM">
-  <figcaption>Cette image de l'interface utilisateur décrit les principaux éléments d'interface que vous rencontrerez pour la première fois dans un monde nouvellement créé.</figcaption>
-</figure>
+<h2 class="toc-header" id="introduction-à-linterface-utilisateur"> Introduction à l'interface utilisateur</h2>
+<p>![Carte de l'interface utilisateur GM](./Tutoriel - Maître du jeu, première partie _ Foundry Virtual Tabletop_files/gm-ui-map-2021-01-27.jpg)</p>
+<p>Cette image de l'interface utilisateur décrit les principaux éléments d'interface que vous rencontrerez pour la première fois dans un monde nouvellement créé.</p>
 <p>Une fois que vous avez rejoint la session de jeu, vous verrez l'interface utilisateur principale que vous et vos joueurs utiliserez pour planifier et jouer à des jeux dans FVTT. L'image ci-dessous détaille les principaux éléments.</p>
-<p>Barre de navigation de la scène</p>
-<p>Utilisé pour basculer entre les scènes actuellement disponibles.</p>
-<p>Onglets de la barre latérale</p>
-<p>Utilisé pour accéder aux données des différents documents stockés dans votre monde.</p>
-<p>Indicateur de pause de jeu</p>
-<p>Lorsque le jeu est en pause, une horloge tournante apparaît. En pause, les joueurs ne peuvent pas déplacer leurs jetons ni manipuler les portes.</p>
-<p>Outils de contrôles</p>
-<p>Utilisé pour changer d'outil sur vos <a href="https://foundryvtt.com/article/scenes/">scènes</a> afin de contrôler les différents objets placés sur le canevas. Chacun de icônes de contrôle fournit différent outils. Les outils de contrôle disponibles et que les joueurs peuvent utiliser incluent&nbsp;:</p>
-<p>Menu d'outils</p>
-<p>Outils de token (<i> </i>)</p>
-<p>Contient tous les outils nécessaires pour sélectionner et contrôler <a href="https://foundryvtt.com/article/actors/">les acteurs</a> .</p>
-<p>Outils de gabarit (<i> </i>)</p>
-<p>Contient les outils nécessaires à l'utilisation <a href="https://foundryvtt.com/article/measurement/">des mesures et des modèles</a> .</p>
-<p>Outils de tuile (<i> </i>)</p>
-<p>Outils de création, d'édition et de gestion <a href="https://foundryvtt.com/article/tiles/">de tuiles</a> .</p>
-<p>Outils de dessin (<i> </i>)</p>
-<p>Outils nécessaires à la création, à l'édition et à la gestion <a href="https://foundryvtt.com/article/drawings/">des outils de dessin</a> .</p>
-<p>Outils de mur (<i> </i>)</p>
-<p>Outils nécessaires à la création, à la modification et à la gestion <a href="https://foundryvtt.com/article/walls/">des murs</a> .</p>
-<p>Outils de lumière (<i> </i>)</p>
-<p>Outils nécessaires à la création, à l'édition et à la gestion <a href="https://foundryvtt.com/article/lighting/">de l'éclairage</a> .</p>
-<p>Outils du son d'ambiance (<i> </i>)</p>
-<p>Outils nécessaires à la création, l'édition et la gestion <a href="https://foundryvtt.com/article/ambient-sound/">des sons ambiants</a> .</p>
-<p>Notes (<i> </i>)</p>
-<p>Outils nécessaires à la création, à la modification et à la gestion <a href="https://foundryvtt.com/article/journal/">des entrées de journaux</a> .</p>
-<p>Barres latérales des répertoires</p>
-<p>Messages du tchat (<i> </i>)</p>
-<p>Cet onglet affiche <a href="https://foundryvtt.com/article/chat/">les messages de discussion</a> et les résultats des lancers de dés et permet aux utilisateurs d'envoyer leurs propres messages.</p>
-<p>Rencontres de combat (<i> </i>)</p>
-<p>Cet onglet affiche toutes <a href="https://foundryvtt.com/article/combat/">les rencontres de combat</a> actuellement actives , indiquant l'initiative et l'ordre du combat.</p>
-<p>Acteurs (<i> </i>)</p>
-<p>Cet onglet contient <a href="https://foundryvtt.com/article/actors/">les acteurs</a> que les joueurs utiliseront pour suivre leurs personnages.</p>
-<p>Objets (<i> </i>)</p>
-<p>Cet onglet stocke les fiches d'informations sur <a href="https://foundryvtt.com/article/items/">les objets</a>, qui peuvent être n'importe quoi, des armes et armures aux sorts et capacités.</p>
-<p>Journaux (<i> </i>)</p>
-<p>Cet onglet stocke <a href="https://foundryvtt.com/article/journal/">les entrées de journal</a> et les pages de journal qui contiennent des informations et des traditions que les joueurs peuvent lire et modifier.</p>
-<p>Tables aléatoires (<i> </i>)</p>
-<p>Cet onglet contient <a href="https://foundryvtt.com/article/roll-tables/">les tables aléatoires</a> qui peuvent être utilisés pour déterminer des résultats aléatoires à partir d'une liste de résultats.</p>
-<p>Playlists (<i> </i>)</p>
-<p>Cet onglet donne accès aux paramètres de volume globaux et au contrôleur <a href="https://foundryvtt.com/article/playlists/">des Playlists</a> qui affiche l'audio en cours de lecture.</p>
-<p>Ensemble de cartes (<i> </i>)</p>
-<p>Cet onglet donne accès à la barre latérale <a href="https://foundryvtt.com/article/cards/">Cartes</a> , qui stocke les jeux de cartes, les mains et les pioches dont les utilisateurs auront besoin pour utiliser les cartes.</p>
-<p>Compendiums (<i> </i>)</p>
-<p>Donne accès à la barre latérale <a href="https://foundryvtt.com/article/compendium/">des Compendiums</a> , qui stocke les documents qui ne sont pas réellement nécessaires. La plupart des joueurs n'auront pas besoin d'accéder à cet onglet.</p>
-<p>Paramètres (<i> </i>)</p>
-<p>Ouvre la barre latérale <a href="https://foundryvtt.com/article/settings/">Paramètres du jeu</a> , qui permet la configuration ou la personnalisation de votre expérience Foundry VTT.</p>
-<p>Exporter le contenu du tchat (<i> </i>)</p>
-<p>Ce bouton est utilisé pour enregistrer une copie de tous les messages qui apparaissent actuellement dans votre journal de tchat dans un fichier texte brut.</p>
-<p>Effacer le tchat (<i> </i>)</p>
+<p><strong>Barre de navigation de la scène</strong></p>
+<div style="text-indent: 1em;">Utilisée pour basculer entre les scènes actuellement disponibles.</div>
+<p><strong>Onglets de la barre latérale</strong></p>
+<div style="text-indent: 1em;">Utilisés pour accéder aux données des différents documents stockés dans votre monde.</div>
+<p><strong>Indicateur de pause de jeu</strong></p>
+<div style="text-indent: 1em;">Lorsque le jeu est en pause, une horloge tournante apparaît. En pause, les joueurs ne peuvent pas déplacer leurs jetons ni manipuler les portes.</div>
+<p><strong>Outils de contrôles</strong></p>
+<div style="text-indent: 1em;">Utilisés pour changer d'outil sur vos scènes afin de contrôler les différents objets placés sur le canevas. Chacun de icônes de contrôle fournit différent outils. Les outils de contrôle disponibles et que les joueurs peuvent utiliser incluent&nbsp;:</div>
+<details>
+<summary>Détail du Menu des outils</summary>
+ <strong>Outils de token</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg">)
+<p>Contient tous les outils nécessaires pour sélectionner et contrôler <a class="is-external-link" href="https://foundryvtt.com/article/actors/">les acteurs</a> .</p>
+<p><strong>Outils de gabarit</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/ruler-combined.svg">)</p>
+<p>Contient les outils nécessaires à l'utilisation <a class="is-external-link" href="https://foundryvtt.com/article/measurement/">des mesures et des modèles</a> .</p>
+<p><strong>Outils de tuile</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cubes.svg">)</p>
+<p>Outils de création, d'édition et de gestion <a class="is-external-link" href="https://foundryvtt.com/article/tiles/">de tuiles</a> .</p>
+<p><strong>Outils de dessin</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/pencil.svg">)</p>
+<p>Outils nécessaires à la création, à l'édition et à la gestion <a class="is-external-link" href="https://foundryvtt.com/article/drawings/">des outils de dessin</a> .</p>
+<p><strong>Outils de mur</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/landmark.svg">)</p>
+<p>Outils nécessaires à la création, à la modification et à la gestion <a class="is-external-link" href="https://foundryvtt.com/article/walls/">des murs</a> .</p>
+<p><strong>Outils de lumière</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/lightbulb.svg">)</p>
+<p>Outils nécessaires à la création, à l'édition et à la gestion <a class="is-external-link" href="https://foundryvtt.com/article/lighting/">de l'éclairage</a> .</p>
+<p><strong>Outils du son d'ambiance</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/volume-low.svg">)</p>
+<p>Outils nécessaires à la création, l'édition et la gestion <a class="is-external-link" href="https://foundryvtt.com/article/ambient-sound/">des sons ambiants</a> .</p>
+<p><strong>Notes</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/bookmark.svg">)</p>
+<p>Outils nécessaires à la création, à la modification et à la gestion <a class="is-external-link" href="https://foundryvtt.com/article/journal/">des entrées de journaux</a> .</p>
+</details>
+<details><summary>Détails des barres latérales des répertoires</summary>
+<p><strong>Messages du tchat</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/comments.svg">)<br>
+Cet onglet affiche <a class="is-external-link" href="https://foundryvtt.com/article/chat/">les messages de discussion</a> et les résultats des lancers de dés et permet aux utilisateurs d'envoyer leurs propres messages.</p>
+<p><strong>Rencontres de combat</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/swords.svg">)<br>
+Cet onglet affiche toutes <a class="is-external-link" href="https://foundryvtt.com/article/combat/">les rencontres de combat</a> actuellement actives , indiquant l'initiative et l'ordre du combat.</p>
+<p><strong>Acteurs</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/users.svg">)<br>
+Cet onglet contient <a class="is-external-link" href="https://foundryvtt.com/article/actors/">les acteurs</a> que les joueurs utiliseront pour suivre leurs personnages.</p>
+<p><strong>Objets</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/suitcase.svg"> )<br>
+Cet onglet stocke les fiches d'informations sur <a class="is-external-link" href="https://foundryvtt.com/article/items/">les objets</a>, qui peuvent être n'importe quoi, des armes et armures aux sorts et capacités.</p>
+<p><strong>Journaux</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book.svg">)<br>
+Cet onglet stocke <a class="is-external-link" href="https://foundryvtt.com/article/journal/">les entrées de journal</a> et les pages de journal qui contiennent des informations et des traditions que les joueurs peuvent lire et modifier.</p>
+<p><strong>Tables aléatoires</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/table-list.svg">)<br>
+Cet onglet contient <a class="is-external-link" href="https://foundryvtt.com/article/roll-tables/">les tables aléatoires</a> qui peuvent être utilisés pour déterminer des résultats aléatoires à partir d'une liste de résultats.</p>
+<p><strong>Playlists</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/music.svg">)<br>
+Cet onglet donne accès aux paramètres de volume globaux et au contrôleur des <a class="is-external-link" href="https://foundryvtt.com/article/playlists/">Playlists</a> qui affiche l'audio en cours de lecture.</p>
+<p><strong>Ensemble de cartes</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cards.svg">)<br>
+Cet onglet donne accès à la barre latérale des <a class="is-external-link" href="https://foundryvtt.com/article/cards/">Cartes</a> , qui stocke les jeux de cartes, les mains et les pioches dont les utilisateurs auront besoin pour utiliser les cartes.</p>
+<p><strong>Compendiums</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book-atlas.svg">)<br>
+Donne accès à la barre latérale des <a class="is-external-link" href="https://foundryvtt.com/article/compendium/">Compendiums</a> , qui stocke les documents qui ne sont pas réellement nécessaires. La plupart des joueurs n'auront pas besoin d'accéder à cet onglet.</p>
+<p><strong>Paramètres</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/gears.svg">)<br>
+Ouvre la barre latérale <a class="is-external-link" href="https://foundryvtt.com/article/settings/">Paramètres du jeu</a> , qui permet la configuration ou la personnalisation de votre expérience Foundry VTT.</p>
+<p><strong>Exporter le contenu du tchat</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/floppy-disk.svg">)<br>
+Ce bouton est utilisé pour enregistrer une copie de tous les messages qui apparaissent actuellement dans votre journal de tchat dans un fichier texte brut.</p>
+<p><strong>Effacer le tchat</strong> (<img height="16" width="16" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/trash.svg">)</p>
 <p>Ce bouton supprime tous les messages du journal de tchat.</p>
-<h4>Conclusion de la partie 1</h4>
+</details>
+<h4 class="toc-header" id="conclusion-de-la-partie-1"> Conclusion de la partie 1</h4>
 <p>Ceci conclut la première partie du didacticiel de démarrage&nbsp;!</p>
 <ul>
-  <li>Continuer vers <a href="https://foundryvtt.com/article/tutorial-two/">le didacticiel - Maître du jeu, deuxième partie</a> .</li>
-  <li>Référez vos joueurs au <a href="https://foundryvtt.com/article/player-orientation/">Tutoriel - Orientation du joueur</a> .</li>
+<li>Continuer vers <a class="is-external-link" href="https://foundryvtt.com/article/tutorial-two/">le didacticiel - Maître du jeu, deuxième partie</a> .</li>
+<li>Référez vos joueurs au <a class="is-external-link" href="https://foundryvtt.com/article/player-orientation/">Tutoriel - Orientation du joueur</a> .</li>
 </ul>
