@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T19:52:35.799Z
+date: 2024-09-03T20:09:04.946Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -22,9 +22,20 @@ Foundry Virtual Tabletop est une application puissante dotée de nombreuses fonc
 
 ## Le menu principal
 
-![](/dnd-modules/foundry-vtt-configuration-setup-2023-06-05.webp)
+<table align="right" width="344">
+      <tr>
+        <td><img align="right" width="344" height="182" src="https://foundryvtt.wiki/dnd-modules/foundry-vtt-configuration-setup-2023-06-05.webp"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Le menu de configuration et d'installation de Foundry Virtual Tabletop.</em>
+        </td>
+    </tr>
+</table>
+  <figure>
 
-*Le menu de configuration et d'installation de Foundry Virtual Tabletop.*
+  <figcaption align="right">
+  </figcaption>
+</figure>
 
 Le menu principal de Foundry VTT permet de gérer les mondes, les systèmes de jeu, les modules et divers paramètres de configuration du logiciel lui-même.
 
