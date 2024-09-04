@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-04T09:54:50.897Z
+date: 2024-09-04T09:56:41.816Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -59,9 +59,15 @@ Ce panneau vous permet de voir la version actuelle de Foundry et si une version 
 
 ## Installation d'un système de jeu
 
-!\[Le navigateur du système de jeu\](./Tutoriel - Maître du jeu, première partie \_ Foundry Virtual Tabletop\_files/the-game-system-browser-2023-06-05.webp)
-
-Les systèmes de jeu peuvent être facilement installés à l'aide du navigateur.
+<table align="right" width="344">
+      <tr>
+        <td><img align="right" width="344" height="347" src="https://foundryvtt.wiki/dnd-modules/the-game-system-browser-2023-06-05.webp"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Les systèmes de jeu peuvent être facilement installés à l'aide du navigateur.</em>
+        </td>
+    </tr>
+</table>
 
 Avant de pouvoir créer votre premier monde, vous devez d'abord installer un **système**. Les systèmes de jeu définissent les règles selon lesquelles votre monde fonctionne, qu'il s'agisse de l'un des ensembles de règles les plus courants d'un grand éditeur ou que vous préfériez utiliser quelque chose comme le système Simple WorldBuilding. Chaque monde est associé à un **système de jeu**. Sans système de jeu installé, il est impossible de créer un monde.
 
