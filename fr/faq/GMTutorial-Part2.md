@@ -1,8 +1,8 @@
 ---
 title: Tutoriel MJ - Partie 2
-description: Tutoriel - MJ Partie 2 · Présentation · Configuration des utilisateurs · Création d'objets · Création d'une scène · Inviter des joueurs · Rencontres de combat.
+description: Tutoriel - MJ Partie 2 · Présentation · Configuration des utilisateurs · Création d'objets · Création d'une scène · Inviter des joueurs · Rencontres de combat. Traduit depuis https://foundryvtt.com/article/tutorial-two/
 published: true
-date: 2024-09-04T11:46:10.528Z
+date: 2024-09-04T11:48:38.926Z
 tags: faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-04T07:47:43.999Z
