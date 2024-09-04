@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-03T20:45:33.632Z
+date: 2024-09-04T09:54:50.897Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -31,11 +31,6 @@ Foundry Virtual Tabletop est une application puissante dotée de nombreuses fonc
         </td>
     </tr>
 </table>
-  <figure>
-
-  <figcaption align="right">
-  </figcaption>
-</figure>
 
 Le menu principal de Foundry VTT permet de gérer les mondes, les systèmes de jeu, les modules et divers paramètres de configuration du logiciel lui-même.
 
@@ -95,9 +90,17 @@ N'oubliez jamais que la première étape pour résoudre tout problème que vous 
 
 ## Créer un nouveau monde
 
-!\[La feuille de configuration du monde\](./Tutoriel - Maître du jeu, première partie \_ Foundry Virtual Tabletop\_files/the-world-configuration-sheet-2023-06-05.webp)
 
-La fiche de configuration du monde vous permet de spécifier les détails de votre monde de jeu et de les modifier ultérieurement.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="423" src="https://foundryvtt.wiki/dnd-modules/the-world-configuration-sheet-2023-06-05.webp"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>La fiche de configuration du monde vous permet de spécifier les détails de votre monde de jeu et de les modifier ultérieurement.</em>
+        </td>
+    </tr>
+</table>
+
 
 Maintenant que vous disposez d'un **système de jeu**, accédez à l' onglet **Mondes**; à partir de là, vous créerez votre tout premier monde de jeu ! Cliquez sur le bouton « Créer un monde » de cet onglet pour afficher un menu de dialogue.
 
@@ -107,22 +110,22 @@ Le bouton **Editer le monde** peut être utilisé à tout moment après la créa
 
 #### Le menu Créer un monde
 
-**Nom du Monde**
+**Nom du Monde** *(World Title)*
 Le nom que les joueurs verront lors de la connexion au jeu et la manière dont le monde sera désigné dans l'interface utilisateur.
 
-**Chemin de données**
+**Chemin de données** *(Data Path)*
 Le nom du dossier dans le dossier Worlds où vos données seront stockées. Comme il sera utilisé dans les URL Web, il **ne peut pas contenir d'espaces ni de caractères spéciaux**. Utilisez plutôt des tirets pour séparer plusieurs termes. (Exemple : **ma-premiere-campagne** est mieux que **« ma première campagne »** .)
 
-**Système de jeu**
+**Système de jeu** *(Game System)*
 Les règles que le monde utilisera. Un système de jeu ne peut pas être modifié une fois que le monde est créé, alors assurez-vous d'utiliser le bon système.
 
-**Image d'arrière-plan**
+**Image d'arrière-plan** *(Background Image)*
 Une image que vous et vos joueurs verrez lorsque vous vous connecterez au Monde du jeu pour une session. Cette image sera étirée pour s'adapter à la fenêtre du navigateur, il est donc recommandé d'utiliser une image suffisamment grande pour fonctionner comme fond d'écran du bureau.
 
-**Prochaine session**
+**Prochaine session** *(Next Session)*
 Vous permet de définir la date et l'heure de la prochaine session de jeu. Ces informations seront visibles par tous les joueurs depuis l'écran de connexion de votre monde de jeu. Ceci est purement facultatif. La date et l'heure sont automatiquement localisées dans le fuseau horaire correct de l'utilisateur.
 
-**Description du monde**
+**Description du monde** *(World Description)*
 Fournit une description textuelle de votre monde, permettant des informations thématiques supplémentaires ou une brève description de votre environnement, des points de l'intrigue actuels ou d'autres informations que vos joueurs verront lors de la connexion.
 
 Une fois que vous avez rempli ces champs à votre guise, cliquez sur Créer un monde pour finaliser votre monde de jeu !
@@ -143,20 +146,39 @@ Comme pour les systèmes de jeu, les mondes de jeu qui n'ont pas encore été of
 
 ## Recherche des mondes, systèmes et modules installés
 
-!\[Démo des packages de filtrage\](./Tutoriel - Maître du jeu, première partie \_ Foundry Virtual Tabletop\_files/filter-packages-demo-2023-06-05.webp)
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="216" src="https://foundryvtt.wiki/dnd-modules/filter-packages-demo-2023-06-05.webp"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Une vue filtrée de l'onglet des mondes du jeu..</em>
+        </td>
+    </tr>
+</table>
 
-Une vue filtrée de l'onglet des mondes du jeu.
 
 Lorsque vous avez créé plusieurs mondes ou installé plusieurs systèmes et modules, il peut être difficile d'en trouver un en particulier. Pour accéder rapidement à un package spécifique, vous pouvez utiliser l'entrée Filtre en haut à gauche de chaque onglet. Commencez simplement à saisir le nom du package que vous recherchez et la liste se filtrera pour afficher uniquement les éléments qui correspondent. S'il n'y a aucun package correspondant dans cet onglet, vous verrez un message « Aucun package ne correspond à votre recherche.» et vous souhaiterez peut-être lancer l'installateur de package pour le télécharger.
-
+<br>
+<br>
 ## Lancez votre nouveau monde
 
-!\[Mondes de jeu - Écran de connexion utilisateur\](./Tutoriel - Maître du jeu, première partie \_ Foundry Virtual Tabletop\_files/game-worlds-user-login-screen-2023-06-05.webp)
-
-L'écran de connexion au monde vous permet de vous connecter à un monde de jeu actif ou de revenir à la configuration.
+<table align="right" width="345" height="400">
+      <tr>
+        <td><img align="right" width="345" height="245" src="https://foundryvtt.wiki/dnd-modules/game-worlds-user-login-screen-2023-06-05.webp"></td>
+    </tr>
+    <tr>
+        <td align="center" height="140"><em>L'écran de connexion au monde vous permet de vous connecter à un monde de jeu actif ou de revenir à la configuration.</em>
+        </td>
+    </tr>
+</table>
 
 Une fois votre monde de jeu créé, cliquez simplement sur le bouton « Lancer » (bouton "Play" sur la vignette du monde) pour lancer le monde et vous amener à l'écran de connexion du jeu. À partir de là, vous pouvez sélectionner le nom d'utilisateur pour vous connecter (par défaut, tous les mondes commencent avec un seul compte Gamemaster sans mot de passe) ou revenir au menu de configuration.
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 > **Retour à la configuration :** si vous souhaitez revenir aux menus de configuration à partir de la page de connexion, vous pouvez cliquer sur le bouton **Retour à l'accueil** pour fermer le monde et revenir aux menu principal de configuration de Foundry VTT. Si vous avez défini un **mot de passe administrateur** pour votre logiciel, vous devrez le fournir pour utiliser cette option.
 {.is-info}
 
@@ -164,54 +186,53 @@ Une fois votre monde de jeu créé, cliquez simplement sur le bouton « Lancer�
 
 ## Introduction à l'interface utilisateur
 
-!\[Carte de l'interface utilisateur GM\](./Tutoriel - Maître du jeu, première partie \_ Foundry Virtual Tabletop\_files/gm-ui-map-2021-01-27.jpg)
-
-Cette image de l'interface utilisateur décrit les principaux éléments d'interface que vous rencontrerez pour la première fois dans un monde nouvellement créé.
+![gm-ui-map-2021-01-27.jpg](/dnd-modules/gm-ui-map-2021-01-27.jpg =1152x521){.align-center}
+*Cette image de l'interface utilisateur décrit les principaux éléments d'interface que vous rencontrerez pour la première fois dans un monde nouvellement créé.*
 
 Une fois que vous avez rejoint la session de jeu, vous verrez l'interface utilisateur principale que vous et vos joueurs utiliserez pour planifier et jouer à des jeux dans FVTT. L'image ci-dessous détaille les principaux éléments.
 
-**Barre de navigation de la scène**
+**Barre de navigation de la scène** *(Scene Navigation Bar)*
 Utilisée pour basculer entre les scènes actuellement disponibles.
 
-**Onglets de la barre latérale**
+**Onglets de la barre latérale** *(Sidebar tabs)*
 Utilisés pour accéder aux données des différents documents stockés dans votre monde.
 
 <details><summary>Détails des barres latérales des répertoires</summary>
 
-**Messages du tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/comments.svg" width=16>)  
+**Messages du tchat** *(Chat Log)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/comments.svg" width=16>)  
 Cet onglet affiche [les messages de discussion](https://foundryvtt.com/article/chat/) et les résultats des lancers de dés et permet aux utilisateurs d'envoyer leurs propres messages.
 
-**Rencontres de combat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/swords.svg" width=16>)  
+**Rencontres de combat** *(Combat Tracker)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/swords.svg" width=16>)  
 Cet onglet affiche toutes [les rencontres de combat](https://foundryvtt.com/article/combat/) actuellement actives , indiquant l'initiative et l'ordre du combat.
 
-**Acteurs** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/users.svg" width=16>)  
+**Acteurs** *(Actors)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/users.svg" width=16>)  
 Cet onglet contient [les acteurs](https://foundryvtt.com/article/actors/) que les joueurs utiliseront pour suivre leurs personnages.
 
-**Objets** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/suitcase.svg" width=16>)  
+**Objets** *(Items)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/suitcase.svg" width=16>)  
 Cet onglet stocke les fiches d'informations sur [les objets](https://foundryvtt.com/article/items/), qui peuvent être n'importe quoi, des armes et armures aux sorts et capacités.
 
-**Journaux** (<img src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book.svg" width=16>)  
+**Journaux** *(Journal Entries)* (<img src = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book.svg" width=16>)  
 Cet onglet stocke [les entrées de journal](https://foundryvtt.com/article/journal/) et les pages de journal qui contiennent des informations et des traditions que les joueurs peuvent lire et modifier.
 
-**Tables aléatoires** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/table-list.svg" width=16>)  
+**Tables aléatoires** *(Rollable Tables)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/table-list.svg" width=16>)  
 Cet onglet contient [les tables aléatoires](https://foundryvtt.com/article/roll-tables/) qui peuvent être utilisés pour déterminer des résultats aléatoires à partir d'une liste de résultats.
 
-**Playlists** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/music.svg" width=16>)  
+**Playlists** *(Playlists)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/music.svg" width=16>)  
 Cet onglet donne accès aux paramètres de volume globaux et au contrôleur des [Playlists](https://foundryvtt.com/article/playlists/) qui affiche l'audio en cours de lecture.
 
 **Ensemble de cartes** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cards.svg" width=16>)  
 Cet onglet donne accès à la barre latérale des [Cartes](https://foundryvtt.com/article/cards/) , qui stocke les jeux de cartes, les mains et les pioches dont les utilisateurs auront besoin pour utiliser les cartes.
 
-**Compendiums** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book-atlas.svg" width=16>)  
+**Compendiums** *(Compendium Packs)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/book-atlas.svg" width=16>)  
 Donne accès à la barre latérale des [Compendiums](https://foundryvtt.com/article/compendium/) , qui stocke les documents qui ne sont pas réellement nécessaires. La plupart des joueurs n'auront pas besoin d'accéder à cet onglet.
 
-**Paramètres** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/gears.svg" width=16>)  
+**Paramètres** *(Settings)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/gears.svg" width=16>)  
 Ouvre la barre latérale [Paramètres du jeu](https://foundryvtt.com/article/settings/) , qui permet la configuration ou la personnalisation de votre expérience Foundry VTT.
 
-**Exporter le contenu du tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/floppy-disk.svg" width=16>)  
+**Exporter le contenu du tchat** *(Export Chat Log)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/floppy-disk.svg" width=16>)  
 Ce bouton est utilisé pour enregistrer une copie de tous les messages qui apparaissent actuellement dans votre journal de tchat dans un fichier texte brut.
 
-**Effacer le tchat** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/trash.svg" width=16>)
+**Effacer le tchat** *(Clear Chat Log)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/trash.svg" width=16>)
 Ce bouton supprime tous les messages du journal de tchat.
 </details>
 
@@ -219,34 +240,34 @@ Ce bouton supprime tous les messages du journal de tchat.
 **Indicateur de pause de jeu**
 Lorsque le jeu est en pause, une horloge tournante apparaît. En pause, les joueurs ne peuvent pas déplacer leurs jetons ni manipuler les portes.
 
-**Outils de contrôles**
+**Outils de contrôles** *(Layer Controls)*
 Utilisés pour changer d'outil sur vos scènes afin de contrôler les différents objets placés sur le canevas. Chacun des icônes de contrôle fournit différents outils. Les outils de contrôle disponibles et que les joueurs peuvent utiliser incluent :
 
 
 <details><summary>Détail des outils de contrôle</summary> 
 
-  **Outils de token** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width=16>)
+  **Outils de token** *(Basic Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width=16>)
 Contient tous les outils nécessaires pour sélectionner et contrôler [les tokens](https://foundryvtt.com/article/actors/) .
 
-**Outils de gabarit** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/ruler-combined.svg" width=16>)
+**Outils de gabarit** *(Measurement Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/ruler-combined.svg" width=16>)
 Contient les outils nécessaires à l'utilisation [des mesures et des gabarits](https://foundryvtt.com/article/measurement/) .
 
-**Outils de tuile** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cubes.svg" width=16>)
+**Outils de tuile** *(Tile Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/cubes.svg" width=16>)
 Outils de création, d'édition et de gestion [des tuiles](https://foundryvtt.com/article/tiles/) .
 
-**Outils de dessin** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/pencil.svg" width=16>)
+**Outils de dessin** *(Drawing Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/pencil.svg" width=16>)
 Outils nécessaires à la création, à l'édition et à la gestion [des dessins](https://foundryvtt.com/article/drawings/) .
 
-**Outils de mur** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/landmark.svg" width=16>)
+**Outils de mur** *(Wall Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/landmark.svg" width=16>)
 Outils nécessaires à la création, à la modification et à la gestion [des murs](https://foundryvtt.com/article/walls/) .
 
-**Outils de lumière** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/lightbulb.svg" width=16>)
+**Outils de lumière** *(Lighting Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/lightbulb.svg" width=16>)
 Outils nécessaires à la création, à l'édition et à la gestion [de l'éclairage](https://foundryvtt.com/article/lighting/) .
 
-**Outils du son d'ambiance** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/volume-low.svg" width=16>)
+**Outils du son d'ambiance** *(Ambient Sound Controls)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/volume-low.svg" width=16>)
 Outils nécessaires à la création, l'édition et la gestion [des sons d'ambiance](https://foundryvtt.com/article/ambient-sound/) .
 
-**Notes** (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/bookmark.svg" width=16>)
+**Notes** *(Journal Notes)* (<img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/bookmark.svg" width=16>)
 Outils nécessaires à la création, à la modification et à la gestion [des entrées de journaux](https://foundryvtt.com/article/journal/) .
 </details>
 
