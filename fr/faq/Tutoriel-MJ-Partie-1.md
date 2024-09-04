@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-04T09:56:41.816Z
+date: 2024-09-04T09:58:22.449Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -168,12 +168,12 @@ Lorsque vous avez créé plusieurs mondes ou installé plusieurs systèmes et mo
 <br>
 ## Lancez votre nouveau monde
 
-<table align="right" width="345" height="400">
+<table align="right" width="345">
       <tr>
         <td><img align="right" width="345" height="245" src="https://foundryvtt.wiki/dnd-modules/game-worlds-user-login-screen-2023-06-05.webp"></td>
     </tr>
     <tr>
-        <td align="center" height="140"><em>L'écran de connexion au monde vous permet de vous connecter à un monde de jeu actif ou de revenir à la configuration.</em>
+        <td align="center"><em>L'écran de connexion au monde vous permet de vous connecter à un monde de jeu actif ou de revenir à la configuration.</em>
         </td>
     </tr>
 </table>
