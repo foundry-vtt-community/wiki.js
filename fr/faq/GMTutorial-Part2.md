@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 2
 description: Tutoriel - MJ Partie 2 · Présentation · Configuration des utilisateurs · Création d'objets · Création d'une scène · Inviter des joueurs · Rencontres de combat.
 published: true
-date: 2024-09-04T08:35:23.291Z
+date: 2024-09-04T11:46:10.528Z
 tags: faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-04T07:47:43.999Z
@@ -20,9 +20,15 @@ Maintenant que votre monde est configuré, vous allez vouloir configurer des com
 
 ## Configuration des utilisateurs
 
-[![Mise en route – Gestion des utilisateurs](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-user-management-2021-01-13.jpg)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-user-management-2021-01-13.jpg)
-
-L'écran de gestion des utilisateurs vous permet de créer, de modifier et de supprimer des comptes utilisateurs sur votre monde de jeu.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="181" src="https://foundryvtt.wiki/dnd-modules/getting-started-user-management-2021-01-13.jpg"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>L'écran de gestion des utilisateurs vous permet de créer, de modifier et de supprimer des comptes utilisateurs sur votre monde de jeu</em>
+        </td>
+    </tr>
+</table>
 
 Avant que les joueurs puissent rejoindre une session, vous devrez configurer des noms d'utilisateur et (éventuellement) des mots de passe pour eux. Pour ce faire, cliquez sur l'icône Paramètres du jeu (icône à trois engrenages) dans la barre latérale droite, puis cliquez sur Configurer les joueurs. À partir de là, vous devriez voir l'utilisateur Gamemaster et un bouton indiquant «Créer un utilisateur supplémentaire». En cliquant sur ce bouton, Foundry créera un nouvel emplacement d'utilisateur générique, généralement nommé «Joueur 2» ou similaire.
 
@@ -32,9 +38,15 @@ Une fois que tous les comptes de joueurs nécessaires ont été créés, cliquez
 
 ### Créer et affecter des acteurs
 
-[![Premiers pas – Autorisations des acteurs](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-actor-permissions-2021-01-13.jpg)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-actor-permissions-2021-01-13.jpg "Voir une image plus grande")
-
-La fenêtre Configuration des droits de l'acteur vous permet de déterminer qui a le contrôle d'un acteur et de ses données.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="222" src="https://foundryvtt.wiki/dnd-modules/getting-started-actor-permissions-2021-01-13.jpg"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>La fenêtre Configuration des droits de l'acteur vous permet de déterminer qui a le contrôle d'un acteur et de ses données.</em>
+        </td>
+    </tr>
+</table>
 
 Les acteurs sont les créatures, les joueurs, les ennemis et les alliés que vous et vos joueurs utiliserez pour jouer au jeu. Ils contiennent des données sur les capacités, les attributs, les pouvoirs, etc. Pour créer un nouvel acteur, sélectionnez le répertoire des acteurs dans la barre latérale droite en cliquant sur l'icône qui ressemble à un groupe de personnes.
 
@@ -62,9 +74,15 @@ Pour donner un objet à un acteur, ouvrez simplement la fiche de l'acteur et fai
 
 ## Créer une scène
 
-[![Premiers pas – Créer une scène](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-making-a-scene-2021-01-15.jpg)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-making-a-scene-2021-01-15.jpg "Voir une image plus grande")
-
-Ceci est un exemple du strict minimum nécessaire pour créer une scène dans Foundry VTT.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="165" src="https://foundryvtt.wiki/dnd-modules/getting-started-making-a-scene-2021-01-15.jpg"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Ceci est un exemple du strict minimum nécessaire pour créer une scène dans Foundry VTT.</em>
+        </td>
+    </tr>
+</table>
 
 Pour créer une nouvelle scène :
 
@@ -89,9 +107,15 @@ Lorsque vous avez plusieurs scènes, vous pouvez soit cliquer sur le nom de la s
 
 ### Créer des Murs
 
-[![Tutoriel Scène de taverne](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/tutorial-tavern-scene-2020-05-24.png)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/tutorial-tavern-scene-2020-05-24.png "Voir une image plus grande")
-
-This is an example of the provided tavern map with walls and doors placed.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="204" src="https://foundryvtt.wiki/dnd-modules/tutorial-tavern-scene-2020-05-24.png"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Ceci est un exemple de placement de murs et portes sur l'image de la taverne founrie en lien.</em>
+        </td>
+    </tr>
+</table>
 
 Maintenant que vous avez une scène, vous devrez placer des murs pour déterminer comment la lumière se répand, ainsi que les limites des pièces et du terrain. Par défaut, toutes les nouvelles scènes ont la vision activée, ce qui signifie que les acteurs avec vision ne pourront voir la carte que si elle est éclairée et que leur ligne de vue le permet. La plupart du temps, les acteurs personnages joueurs auront la vision activée. Les murs sont un moyen de déterminer la partie d'une zone qu'un acteur avec la vision peut voir.
 
@@ -112,8 +136,16 @@ Vous pouvez en apprendre davantage sur les lumières dans l’ article [Eclairag
 
 ### Placer les acteurs dans une scène
 
-[![Mise en route – Placement de jetons (webp)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-placing-tokens-webp-2021-01-19.webp)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-placing-tokens-webp-2021-01-19.webp "Voir une image plus grande")
-Les acteurs peuvent être facilement placés dans une scène en les faisant glisser depuis le répertoire des acteurs.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="204" src="https://foundryvtt.wiki/dnd-modules/getting-started-placing-tokens-webp-2021-01-19.webp"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Les acteurs peuvent être facilement placés dans une scène en les faisant glisser depuis le répertoire des acteurs.</em>
+        </td>
+    </tr>
+</table>
+
 
 Une fois que vous avez créé et configuré une scène, que vous vous êtes habitué à déplacer votre vue et que vous avez posé des murs et des lumières, vous souhaiterez faire entrer un ou plusieurs acteurs dans la scène. Pour ce faire, sélectionnez l'icône Répertoire des acteurs à droite de l'icône de l'onglet Scènes, puis  glissez-déplacez un acteur du répertoire vers la scène active. Cela placera un jeton représentant l'acteur dans la scène, et son propriétaire pourra voir la scène grâce à la vision de ce jeton (s'il a une vision).
 
@@ -134,8 +166,16 @@ Vous pouvez en savoir plus sur la configuration des commandes de Foundry VTT dan
 
 ## Inviter des Joueurs
 
-![Liens d'invitation au jeu - Fermé](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/game-invitation-links-closed-2021-12-15.jpg)
-L'application "Liens d'invitation à la partie" vous permet d'inviter facilement vos joueurs à votre jeu.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="156" src="https://foundryvtt.wiki/dnd-modules/game-invitation-links-closed-2021-12-15.jpg"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>L'application "Liens d'invitation à la partie" vous permet d'inviter facilement vos joueurs à votre jeu.</em>
+        </td>
+    </tr>
+</table>
+
 
 Une fois vos utilisateurs, acteurs, objets et scènes créés, vous aurez besoin de joueurs. Inviter des joueurs à votre jeu est très simple : dans la barre latérale droite, cliquez sur l'onglet Paramètres du jeu (l'icône en forme d'engrenage), puis cliquez sur Liens d'invitation. Une fenêtre apparaîtra avec deux adresses IP. La première est destinée aux utilisateurs qui se trouvent sur le même réseau local que votre installation de Foundry, et la deuxième est votre adresse IP publique pour les connexions Internet externes. Dans les deux cas, les utilisateurs peuvent coller ces liens dans un navigateur Web et rejoindre votre partie.
 
@@ -147,12 +187,19 @@ Si vous hébergez via une connexion IPV4, la fenêtre de l'application "Liens d'
 
 #### Obfuscation des liens
 
-Pour éviter que les utilisateurs qui diffusent des jeux Foundry VTT ne révèlent accidentellement leurs liens d'invitation de jeu à leur public, le lien d'invitation à distance est masqué par défaut. Un bouton a été fourni pour permettre de basculer la visibilité du lien, mais cliquer sur le lien masqué copiera l'adresse dans votre presse-papiers pour un collage pratique.
+Pour éviter que les utilisateurs qui diffusent des parties sur Foundry VTT ne révèlent accidentellement leurs liens d'invitation de jeu à leur public, le lien d'invitation à distance est masqué par défaut. Un bouton a été fourni pour permettre de basculer la visibilité du lien, mais cliquer sur le lien masqué copiera l'adresse dans votre presse-papiers pour un collage pratique.
 
 ## Rencontres de combat
 
-[![Mise en route – Activer/désactiver l'état de combat](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-toggle-combat-state-2021-01-15.jpg)](./Tutoriel - Maître du jeu, deuxième partie _ Foundry Virtual Tabletop_files/getting-started-toggle-combat-state-2021-01-15.jpg "Voir une image plus grande")
-Un clic droit sur un jeton et un clic sur cette icône activeront ou désactiveront le placement de ce jeton dans le suivi de combat.
+<table align="right" width="345">
+      <tr>
+        <td><img align="right" width="345" height="243" src="https://foundryvtt.wiki/dnd-modules/getting-started-toggle-combat-state-2021-01-15.jpg"></td>
+    </tr>
+    <tr>
+        <td align="center"><em>Un clic droit sur un jeton et un clic sur cette icône activeront ou désactiveront le placement de ce jeton dans le suivi de combat.</em>
+        </td>
+    </tr>
+</table>
 
 Parfois, les scènes sont vouées à la violence et aux combats, ou bien elles nécessitent que vous suiviez ce que font les autres à chaque instant. Pour cela, vous devez utiliser le suivi des combats. Pour utiliser le suivi des combats, il vous suffit de sélectionner un acteur dans une scène, de faire un clic droit dessus et de cliquer sur l'icône représentant une épée et un bouclier. Cela les place dans une nouvelle rencontre et vous permet de commencer à suivre les combats.
 
