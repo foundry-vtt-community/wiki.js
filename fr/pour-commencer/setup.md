@@ -2,7 +2,7 @@
 title: 0.1. Pour commencer
 description: 
 published: true
-date: 2024-09-05T00:43:54.181Z
+date: 2024-09-05T00:45:11.264Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z
@@ -10,7 +10,9 @@ dateCreated: 2020-10-19T10:37:32.287Z
 
 Veuillez consulter le [Tutoriel](https://foundryvtt.com/article/tutorial/) officiel disponible sur le site de FoundryVTT, ou en français  [Tutoriel-en-français](https://foundryvtt.wiki/fr/faq/Tutoriel-MJ-Partie-1) ***(traduction du tutoriel officiel par @DavidR_007)***
 
-En complément, nous avons créé ce guide pour vous guider dans vos premiers pas.
+En complément, nous avons créé cette page pour vous guider dans vos premiers pas et les outils dont vous aurez sans doute besoin.
+
+<br>
 
 ## Téléchargement
 Foundry est disponible via votre page de profil d'utilisateur sur [FoundryVTT.com](https://foundryvtt.com).  Votre page de profil d'utilisateur est disponible en cliquant sur votre nom d'utilisateur en haut à droite de n'importe quelle page.  Sur cette page, cliquez sur "Licences achetées" sous votre avatar et votre nom d'utilisateur.  Vous trouverez une liste de liens de téléchargement pour Windows, MacOS et Linux sous vos licences.
