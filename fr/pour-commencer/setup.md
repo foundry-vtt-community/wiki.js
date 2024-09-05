@@ -2,7 +2,7 @@
 title: 0.1. Pour commencer
 description: 
 published: true
-date: 2024-09-05T00:35:11.191Z
+date: 2024-09-05T00:39:02.756Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z
@@ -47,14 +47,16 @@ Afin de bien commencer dans FVTT et son utilisation, nous avons fait une liste d
 - Les sites ***.to*** : une serie de site pouvant convertir des fichiers en d'autres formats
     - [PDF](https://www.pdf.to/?lang=fr) / [Word](https://www.word.to/?lang=fr) / [JPEG](https://www.jpeg.to/?lang=fr) / [MP3](https://www.mp3.to/?lang=fr) / [MP4](https://www.mp4.to/?lang=fr) / [PNG](https://www.png.to/?lang=fr) / [WebM](https://www.webm.to/?lang=fr) / [WebP](https://www.webp.to/?lang=fr) / [MKV](https://www.mkv.to/?lang=fr) / [EPUB](https://www.epub.to/?lang=fr) / [JPG](https://www.jpg.to/?lang=fr) / [MOV](https://www.mov.to/?lang=fr)
 
-
 <br>
+  
 ### Les logiciels sous licences payantes
 - [DungeonDraft](https://dungeondraft.net/) : **Prix actuel de 19.99$, Windows64, MacOS64**. 
 La première particularité de ce logiciel payant, c'est qu'il est sans abonnement, vous achetez une fois la licence et vous avez un logiciel permettant de créer des Donjons, Maisons etc... pour vos parties. La deuxième c'est qu'il existe un module pour FVTT permettant l'importation de vos cartes directement avec les murs/portes/lumière dynamique, si vous exportez au format **.dd2vtt**
 - [WonderDraft](https://www.wonderdraft.net/) : **Prix actuel de 29.99$, Windows64, MacOS64, Linux64**. 
 Logiciel payant permettant de créer des cartes de monde.
+  
 <BR>
+
 ### Les logiciels avec ou sans abonnement
 - [Dungeonfog](https://www.dungeonfog.com/) : Logiciel de cartes de batailles en tout genre. Abonnement de **4.90€/mois** ou **49.90€/an**, possibilité d'avoir une license commerciale à **99.90€/an**
 - [Inkarnate](https://inkarnate.com/) : Logiciel de cartes de batailles ou de villes-régions-mondes, soit en version gratuite avec l'accès à peu d'assets mais c'est suffisant pour faire des cartes basiques, soit en abonnement de **5€/mois** ou de **25€/an**.
