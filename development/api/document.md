@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2024-08-16T21:22:57.962Z
+date: 2024-09-05T19:17:50.454Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -567,7 +567,7 @@ async _preCreate(data, options, user) {
 }
 ```
 
-#### 2. [`Hooks.call('preCreate[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preCreateDocument)
+#### 2. [`Hooks.call('preCreate[DocumentName]')`](https://foundryvtt.com/api/functions/hookEvents.preCreateDocument.html)
 
 Modules are recommended to hook into the sequentially called `pre` hooks to make changes to the impending update `change`.
 
@@ -626,7 +626,7 @@ _onCreate(data, options, userId) {
 
 As of v12, the call to `super._onCreate` will call `this.system._onCreate` if the `system` property is an instance of a `TypeDataModel`.
 
-#### 5. [`Hooks.callAll('create[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#createDocument)
+#### 5. [`Hooks.callAll('create[DocumentName]')`](https://foundryvtt.com/api/functions/hookEvents.createDocument.html)
 
 Similar to `_onCreate`, modules are encouraged to use `create` hooks to react to new Document creation.
 
@@ -653,7 +653,7 @@ async _preUpdate(changed, options, user) {
 
 As of v12, the call to `super._preUpdate` will call `this.system._preUpdate` if the `system` property is an instance of a `TypeDataModel`.
 
-#### 2. [`Hooks.call('preUpdate[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preUpdateDocument)
+#### 2. [`Hooks.call('preUpdate[DocumentName]')`](https://foundryvtt.com/api/functions/hookEvents.preUpdateDocument.html)
 
 Modules are recommended to hook into the sequentially called `pre` hooks to make changes to the impending update `change`.
 
@@ -709,7 +709,7 @@ _onUpdate(changed, options, userId) {
 
 As of v12, the call to `super._onUpdate` will call `this.system._onUpdate` if the `system` property is an instance of a `TypeDataModel`.
 
-#### 5. [`Hooks.callAll('update[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#updateDocument)
+#### 5. [`Hooks.callAll('update[DocumentName]')`](https://foundryvtt.com/api/functions/hookEvents.updateDocument.html)
 
 Similar to `_onUpdate`, modules are encouraged to use `update` hooks to react to Document updates.
 
@@ -720,7 +720,7 @@ The delete event cycle has much the same characteristics of the Update and Creat
 Runs Locally:
 
 1. [`Document#_preDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_preDelete)
-2. [`Hooks.call('preDelete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#preDeleteDocument)
+2. [`Hooks.call('preDelete[DocumentName]')`](https://foundryvtt.com/api/functions/hookEvents.preDeleteDocument.html)
 3. Database entry is Deleted
 
 As of v12, the call to `super._preDelete` will call `this.system._preDelete` if the `system` property is an instance of a `TypeDataModel`.
@@ -728,7 +728,7 @@ As of v12, the call to `super._preDelete` will call `this.system._preDelete` if 
 Runs on all connected Clients:
 
 4. [`Document#_onDelete`](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_onDelete)
-5. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/modules/hookEvents.html#deleteDocument)
+5. [`Hooks.callAll('delete[DocumentName]')`](https://foundryvtt.com/api/functions/hookEvents.deleteDocument.html)
 
 As of v12, the call to `super._onDelete` will call `this.system._onDelete` if the `system` property is an instance of a `TypeDataModel`.
 
