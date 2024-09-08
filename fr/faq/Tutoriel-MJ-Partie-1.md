@@ -2,7 +2,7 @@
 title: Tutoriel MJ - Partie 1
 description: Une introduction de base à la configuration de Foundry VTT axée sur le MJ, fournissant toutes les étapes de départ nécessaires à la configuration d'un jeu pour vos joueurs. Traduit depuis https://foundryvtt.com/article/tutorial/
 published: true
-date: 2024-09-04T11:47:58.035Z
+date: 2024-09-08T07:47:26.541Z
 tags: tutorial, faq, foundryvtt, mj, tutoriel
 editor: markdown
 dateCreated: 2024-09-03T17:59:36.379Z
@@ -282,5 +282,5 @@ Outils nécessaires à la création, à la modification et à la gestion [des en
 
 Ceci conclut la première partie du didacticiel de démarrage !
 
--   Continuer vers [le didacticiel - Maître du jeu, deuxième partie](/fr/faq/GMTutorial-Part2)
--   Référez vos joueurs au [Tutoriel - Orientation du joueur](https://foundryvtt.com/article/player-orientation/) .
+-   Continuer vers le didacticiel - [Maître du jeu, deuxième partie](/fr/faq/GMTutorial-Part2)
+-   Référez vos joueurs au [Tutoriel - Premmier pas des joueurs](/fr/faq/Tutoriel_Players1).
