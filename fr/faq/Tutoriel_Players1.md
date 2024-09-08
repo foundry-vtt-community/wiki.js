@@ -2,7 +2,7 @@
 title: Tutoriel - Premiers pas des Joueurs 
 description:  Cet article est destiné aux joueurs. Il est destiné à aider les joueurs : Grâce à ces compétences, les joueurs seront bien équipés pour profiter de leur première partie de Foundry ! Traduit depuis https://foundryvtt.com/article/player-orientation/
 published: true
-date: 2024-09-08T07:57:13.318Z
+date: 2024-09-08T07:59:31.365Z
 tags: faq, tutoriel, joueur
 editor: markdown
 dateCreated: 2024-09-08T06:30:42.748Z
@@ -12,10 +12,10 @@ dateCreated: 2024-09-08T06:30:42.748Z
 
 De nombreux articles de la base de connaissances présentent Foundry du point de vue d'un maître de jeu, mais cet article est destiné aux joueurs. Il est destiné à aider les joueurs à savoir comment :
 
--   [Rejoindre des sessions et revendiquez des personnages](<#Rejoindre une session de jeu>)
--   [Découvrir l'interface utilisateur de Foundry](<#Introduction à linterface utilisateur>)
--   [Accéder à leurs fiches de personnages](<#Votre fiche de personnage>)
--   [Déplacer leurs personnages sur la carte](<#Naviguer dans une scène>)
+-   [Rejoindre des sessions et revendiquez des personnages](<#rejoindre-une session-de-jeu>)
+-   [Découvrir l'interface utilisateur de Foundry](<#introduction-à-l-interface-utilisateur>)
+-   [Accéder à leurs fiches de personnages](<#votre-fiche-de-personnage>)
+-   [Déplacer leurs personnages sur la carte](<#naviguer-dans-une-scène>)
 
 Avec ces compétences, les joueurs seront bien équipés pour profiter de leur première partie de Foundry !
 
