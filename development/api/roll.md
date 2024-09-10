@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-09-08T04:22:47.809Z
+date: 2024-09-10T17:20:24.796Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -29,6 +29,8 @@ Roll#terms // `#` indicates instance method or property
 ## Overview
 
 Rolls are a critical piece of Foundry's infrastructure and useful to every tabletop roleplaying game, but their actual usage is entirely dependent on the system or module.
+
+Code for Roll and its related classes can be found in `yourFoundryInstallPath/resources/app/client-esm/dice/`
 
 ---
 ## Key Concepts
