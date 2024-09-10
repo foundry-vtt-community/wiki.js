@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-08-19T03:14:04.662Z
+date: 2024-09-10T17:21:22.188Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -29,7 +29,7 @@ Application#render // `#` indicates instance method or property
 
 ApplicationV2 is an entirely new set of classes that serve as a complete alternative to the original Application class. If you are building a new UI element in Foundry and otherwise only plan to support Version 12 and later, it is strongly recommended you use ApplicationV2 instead of the original Application class.
 
-Code for ApplicationV2 and its related classes can be found at `yourFoundryInstallPath\resources\app\client-esm\applications`.
+Code for ApplicationV2 and its related classes can be found at `yourFoundryInstallPath/resources/app/client-esm/applications`.
 
 ---
 ## Key Concepts
