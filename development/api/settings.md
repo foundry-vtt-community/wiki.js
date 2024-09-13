@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-09-13T18:29:47.257Z
+date: 2024-09-13T20:28:51.936Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -16,6 +16,9 @@ Settings are a general way for packages to persist and store data without being 
 
 *Official Documentation*
 - [ClientSettings](https://foundryvtt.com/api/classes/client.ClientSettings.html)
+- [WorldSettings](https://foundryvtt.com/api/classes/client.WorldSettings.html)
+- [Setting](https://foundryvtt.com/api/classes/client.Setting.html)
+- [SettingsConfig](https://foundryvtt.com/api/classes/client.SettingsConfig.html)
 
 **Legend**
 
@@ -205,6 +208,16 @@ game.settings.get('myModuleName', 'myNumber'); // NaN
 
 For more information on the basic primitive constructors and how they convert values, [this article](https://javascript.info/type-conversions) has a good overview.
 
+### Registered Settings vs. World Database
+
+On the backend, Settings are fairly simple [documents](/en/development/api/document); they have an `_id`, `key`, `value`, and `_stats` field. They are the only document type to not have a `flags` field. Unlike every other primary document, their world collection is *not* a property of the `Game` class directly; instead, `game.settings` accesses the singleton instance of `ClientSettings`, which then has the actual WorldSettings instance as a sub-property. This is in part because there are actually *two* places to store settings; WorldSettings is shared database, but localStorage provides per-client settings separate from Foundry's normal document-based DB operations.
+
+Where settings registration comes in is providing safeguards for the returned values
+- The `get` and `set` operations check if a setting has been registered
+- If a setting *is* registered, then the `type` gets used to cast the JSON stringified `value` of the Setting document, which is returned by the `get` operation
+
+The other pieces of the registration are used by the SettingsConfig application for `config: true`; if you provide a `DataField` instance for the type, it will call that field's `toInput` function, and then appropriately label with the `name` and `hint` properties.
+
 ---
 
 ## Specific Use Cases
@@ -221,6 +234,122 @@ This callback will fire on all clients for world scoped settings, but only local
 
 > Because this `value` argument is not necessarily the same value that would be returned from `settings.get`, it is safer to get the new value in this callback if you intend to operate on it.
 {.is-warning}
+
+
+### Setting Registration Examples
+
+This section will provide snippets and screenshots for the various common setting configurations. These snippets have the minimum number of options required to display the setting and may require tweaking for your specific use case. They also make use of `foundry.data.fields` to make it easier to further customize the type behavior.
+
+#### Boolean
+![](https://i.imgur.com/RhykzIe.png)
+
+```js
+game.settings.register('core', 'myCheckbox', {
+  name: 'My Boolean',
+  config: true,
+  type: new foundry.data.fields.BooleanField(),
+});
+
+game.settings.get('core', 'myCheckbox'); // false
+```
+
+#### String/Text Input
+![](https://i.imgur.com/EIj75IZ.png)
+
+```js
+game.settings.register('core', 'myInput', {
+  name: 'My Text',
+  config: true,
+  type: new foundry.data.fields.StringField(),
+});
+
+game.settings.get('core', 'myInput'); // 'Foo'
+```
+
+### Select Input
+![](https://i.imgur.com/vTTz6Oh.png)
+
+```js
+game.settings.register('core', 'mySelect', {
+  name: 'My Select',
+  config: true,
+  type: new foundry.data.fields.StringField({
+    choices: {
+      "a": "Option A",
+      "b": "Option B"
+    },
+  }),
+});
+
+game.settings.get('core', 'mySelect'); // 'a'
+```
+
+The `key` of the `choices` object is what is stored in the setting when the user selects an option from the dropdown.
+
+The `value`s of the `choices` object are automatically run through [`game.i18n.localize`](https://foundryvtt.com/api/Localization.html#localize) before being displayed in the Setting UI.
+
+### Number Input
+![](https://i.imgur.com/99B0E4V.png)
+
+```js
+game.settings.register('core', 'myNumber', {
+  name: 'My Number',
+  config: true,
+  type: new foundry.data.fields.NumberField(),
+});
+
+game.settings.get('core', 'myNumber'); // 1
+```
+
+### Number Range Slider
+![](https://i.imgur.com/e4rxxYq.png)
+
+```js
+game.settings.register('core', 'myRange', {
+  name: 'My Number Range',
+  config: true,
+  type: new foundry.data.fields.NumberField({
+    min: 0, max: 100, step: 10, 
+    initial: 0, nullable: false
+  }),
+});
+
+game.settings.get('core', 'myRange'); // 50
+```
+
+### File Picker
+![](https://i.imgur.com/uzKq9h3.png)
+
+```js
+game.settings.register('core', 'myFile', {
+  name: 'My File',
+  config: true,
+  type: String,
+  filePicker: true,
+});
+
+game.settings.get('core', 'myFile'); // 'path/to/file'
+```
+
+#### File Picker Types
+
+The following can be given to the `filePicker` option to change the behavior of the File Picker UI when it is opened. These are useful if you need the user to select only an image for instance.
+
+- `'audio'`      - Displays audio files only
+- `'image'`      - Displays image files only
+- `'video'`      - Displays video files only
+- `'imagevideo'` - Displays images and video files
+- `'folder'` 		 - Allows selection of a directory (beware, it does not enforce directory selection)
+- `'font'`       - Display font files only
+- `'graphics'`   - Display 3D files only
+- `'text'`       - Display text files only
+- `'any'` - No different than `true`
+
+#### Directory Picker
+
+If the setting is registered with either the default `filePicker: true` or `filePicker: 'folder'` it is possible for a user to select a directory instead of a file. This is not forced however and the user might still select a file.
+
+When saved, the directory path is the only string which is saved and does not contain information about the source which the directory was chosen from. Without strict assumptions and checking those assumptions, this kind of setting has a high chance of causing errors or unexpected behavior (e.g. creating a folder on the user's local storage instead of their configured S3 bucket).
 
 ### Setting Menus
 
@@ -290,125 +419,3 @@ Happens when `game.settings.register` is called with an invalid first argument. 
 ### Cannot set a setting before Game is Ready
 
 Foundry has a hard limit in `ClientSettings##setWorld` that prevents modifying the game settings prior to `ready`. This means any "module setup" type dialogs should wait until `Hooks.once("ready"`.
-
----
-
-## Setting Registration Examples
-
-This section will provide snippets and screenshots for the various common setting configurations. These snippets have the minimum number of options required to display the setting and may require tweaking for your specific use case.
-
-### Boolean
-![](https://i.imgur.com/RhykzIe.png)
-
-```js
-game.settings.register('core', 'myCheckbox', {
-  name: 'My Boolean',
-  config: true,
-  type: Boolean,
-});
-
-game.settings.get('core', 'myCheckbox'); // false
-```
-
-### String/Text Input
-![](https://i.imgur.com/EIj75IZ.png)
-
-```js
-game.settings.register('core', 'myInput', {
-  name: 'My Text',
-  config: true,
-  type: String,
-});
-
-game.settings.get('core', 'myInput'); // 'Foo'
-```
-
-### Select Input
-![](https://i.imgur.com/vTTz6Oh.png)
-
-```js
-game.settings.register('core', 'mySelect', {
-  name: 'My Select',
-  config: true,
-  type: String,
-  choices: {
-    "a": "Option A",
-    "b": "Option B"
-  },
-});
-
-game.settings.get('core', 'mySelect'); // 'a'
-```
-
-There is no validation done on settings with `choices` to prevent `settings.set` from setting an invalid value.
-
-The `key` of the `choices` object is what is stored in the setting when the user selects an option from the dropdown.
-
-The `value`s of the `choices` object are automatically run through [`game.i18n.localize`](https://foundryvtt.com/api/Localization.html#localize) before being displayed in the Setting UI.
-
-### Number Input
-![](https://i.imgur.com/99B0E4V.png)
-
-```js
-game.settings.register('core', 'myNumber', {
-  name: 'My Number',
-  config: true,
-  type: Number,
-});
-
-game.settings.get('core', 'myNumber'); // 1
-```
-
-### Number Range Slider
-![](https://i.imgur.com/e4rxxYq.png)
-
-```js
-game.settings.register('core', 'myRange', {
-  name: 'My Number Range',
-  config: true,
-  type: Number,
-  range: {
-    min: 0,
-    max: 100,
-    step: 10
-  }
-});
-
-game.settings.get('core', 'myRange'); // 50
-```
-
-There is no validation done on settings with a `range` to prevent `settings.set` from setting a number that is out of bounds.
-
-### File Picker
-![](https://i.imgur.com/uzKq9h3.png)
-
-```js
-game.settings.register('core', 'myFile', {
-  name: 'My File',
-  config: true,
-  type: String,
-  filePicker: true,
-});
-
-game.settings.get('core', 'myFile'); // 'path/to/file'
-```
-
-#### File Picker Types
-
-The following can be given to the `filePicker` option to change the behavior of the File Picker UI when it is opened. These are useful if you need the user to select only an image for instance.
-
-- `'audio'`      - Displays audio files only
-- `'image'`      - Displays image files only
-- `'video'`      - Displays video files only
-- `'imagevideo'` - Displays images and video files
-- `'folder'` 		 - Allows selection of a directory (beware, it does not enforce directory selection)
-- `'font'`       - Display font files only
-- `'graphics'`   - Display 3D files only
-- `'text'`       - Display text files only
-- `'any'` - No different than `true`
-
-#### Directory Picker
-
-If the setting is registered with either the default `filePicker: true` or `filePicker: 'folder'` it is possible for a user to select a directory instead of a file. This is not forced however and the user might still select a file.
-
-When saved, the directory path is the only string which is saved and does not contain information about the source which the directory was chosen from. Without strict assumptions and checking those assumptions, this kind of setting has a high chance of causing errors or unexpected behavior (e.g. creating a folder on the user's local storage instead of their configured S3 bucket).
