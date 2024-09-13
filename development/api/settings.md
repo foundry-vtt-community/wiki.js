@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-09-13T18:16:43.776Z
+date: 2024-09-13T18:29:47.257Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -183,6 +183,12 @@ const someVariable = game.settings.get('myModuleName','myModuleSetting');
 
 console.log(someVariable); // expected to be 'foo'
 ```
+
+#### Setting Defaults
+
+Unless a setting has actively been saved to the world database with a call to `game.settings.set`, it will fill in with the registered `default`. This means that if you update the default, it will automatically apply to not only new users but also current ones. This *can* be useful, but also means that you can't rely on a setting's value to detect "old" users in the caes of a setting that is tracking things like previous module versions if you aren't actively creating a database entry.
+
+One way to check if there's a database-backed value is to call [`game.settings.storage.get("world").getSetting`](https://foundryvtt.com/api/classes/client.WorldSettings.html#getSetting), which accesses the actual world collection of setting documents (comparable to `game.actors`). If that returns `undefined`, there's no underlying DB entry for the setting and it's just going to use the default. Note that the key is the concatenated `namespace` and `settingName`, e.g. `core.compendiumConfiguration`.  
 
 #### Returned Value Type
 
