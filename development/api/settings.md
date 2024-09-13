@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-05-05T18:13:12.329Z
+date: 2024-09-13T17:52:53.814Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -10,7 +10,7 @@ dateCreated: 2021-11-17T15:31:39.865Z
 
 # Settings
 
-![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
+![Up to date as of v12](https://img.shields.io/static/v1?label=FoundryVTT&message=v12&color=informational)
 
 Settings are a general way for packages to persist and store data without being attached to a [document](/en/development/api/document).
 
@@ -47,19 +47,19 @@ If you wish to store data specific to a user across any devices they might use, 
 
 Client settings are always editable by any user, as they are device-specific. This works well for display-based settings.
 
-World settings have a global permission level that is shared with the ability to enable or disable modules. By default, only Assistant GMs and Game Masters can edit world settings. This is a critical limitation that may require [sockets](/en/development/api/sockets) to work around.
+World settings have a global permission level ("Modify Configuration Settings") that is shared with the ability to enable or disable modules. By default, only Assistant GMs and Game Masters can edit world settings. This is a critical limitation that may require [sockets](/en/development/api/sockets) to work around.
 
 ---
 
 ## API Interactions
 
-The `ClientSettings` is a singleton class instantiated as part of the [game](/en/development/api/game) object.
+The `ClientSettings` are a singleton class instantiated as part of the [game](/en/development/api/game) object.
 
 ### Registering a Setting
 
 *See [Setting Types](#setting-types) below for examples about the different types of settings that can be registered.*
 
-> Settings MUST be registered during the `init` hook.
+> Settings should be registered during the `init` hook.
 {.is-info}
 
 All settings must be registered before they can be set or accessed. This needs to be done with [`game.settings.register`](https://foundryvtt.com/api/classes/client.ClientSettings.html#register), with `game.settings` being an instance of `ClientSettings`.
@@ -101,8 +101,8 @@ game.settings.register('myModuleName', 'mySettingName', {
 - `config` defaults to `undefined` which behaves the same as `false`
 - `requiresReload` is useful for settings that make changes during the `init` or `setup` hooks.
 - `scope` defaults to "client"
-- You can pass a data model as the `type` for complex settings that need data validation.
-- `filePicker`
+- You can pass a data model or data field as the `type` for complex settings that need data validation.
+- `filePicker` restricts what kinds of files can be chosen for the setting
 
 #### Setting Types
 
@@ -146,11 +146,10 @@ When registering a setting, instead of passing a hard-coded string to `name` or 
 
 ### Setting a Setting's value
 
-
 > Settings with `scope: world` cannot be `set` until the `ready` hook.
 {.is-info}
 
-A setting's value can be set with [`game.settings.set`](https://foundryvtt.com/api/classes/client.ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a user with the "Modify Configuration Settings" permission (by default this is only Game Master and Assistant GM users), and that `scope: client` settings will only persist on the user's local machine.
+A setting's value can be set with [`game.settings.set`](https://foundryvtt.com/api/classes/client.ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a user with the "Modify Configuration Settings" permission (by default this is only Game Master and Assistant GM users), while `scope: client` settings will only persist on the user's local machine.
 
 ```js
 const whateverValue = 'foo';
@@ -173,7 +172,7 @@ Note that `JSON.stringify` will prefer to use a value's `toJSON()` method if one
 
 #### Type Constraints
 
-If you wish to improve validation when updating a complex setting, you should consider a data model. If you're just using `String` or `Number`, it will run the new value through those primitives first before storing to the database (e.g. if the setting is `type: Number`, and someone passes `set(scope, key, "5")`, the setting will run `Number("5")` to cast the type).
+If you wish to improve validation when updating a complex setting, you should consider a data model or data field. If you're just using `String` or `Number`, it will run the new value through those primitives first before storing to the database (e.g. if the setting is `type: Number`, and someone passes `set(scope, key, "5")`, the setting will run `Number("5")` to cast the type).
 
 
 ### Getting a Setting's value
