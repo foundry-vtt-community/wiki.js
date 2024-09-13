@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-09-13T18:02:41.616Z
+date: 2024-09-13T18:16:43.776Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -172,8 +172,7 @@ Note that `JSON.stringify` will prefer to use a value's `toJSON()` method if one
 
 #### Type Constraints
 
-If you wish to improve validation when updating a complex setting, you should consider a data model or data field. If you're just using `String` or `Number`, it will run the new value through those primitives first before storing to the database (e.g. if the setting is `type: Number`, and someone passes `set(scope, key, "5")`, the setting will run `Number("5")` to cast the type).
-
+If you wish to improve validation when updating a complex setting, you should consider a data model or data field. If you're just using `String` or `Number`, it will run the new value through those primitives first before storing to the database (e.g. if the setting is `type: Number`, and someone passes `set(scope, key, "5")`, the setting will run `Number("5")` to cast the type). `StringField` and `NumberField` will accomplish similar casting behavior but also allow further refinements, such as whether a blank string is allowed or whether to enforce that the number is an integer.
 
 ### Getting a Setting's value
 
