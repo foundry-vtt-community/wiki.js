@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-09-13T17:52:53.814Z
+date: 2024-09-13T18:02:41.616Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -284,8 +284,7 @@ Happens when `game.settings.register` is called with an invalid first argument. 
 
 ### Cannot set a setting before Game is Ready
 
-> Stub
-> This section is a stub, you can help by contributing to it.
+Foundry has a hard limit in `ClientSettings##setWorld` that prevents modifying the game settings prior to `ready`. This means any "module setup" type dialogs should wait until `Hooks.once("ready"`.
 
 ---
 
