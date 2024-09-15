@@ -2,7 +2,7 @@
 title: Converting to ApplicationV2
 description: A guide to convert an Application to ApplicationV2
 published: true
-date: 2024-06-27T20:59:24.863Z
+date: 2024-09-15T13:40:53.457Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T06:46:59.385Z
@@ -12,6 +12,44 @@ dateCreated: 2024-05-28T06:46:59.385Z
 
 # Example
 Here is an example of a FormApplication that will be used in this guide.
+
+```javascript
+class TemplateApplication extends FormApplication {
+	static get defaultOptions() {
+		return foundry.utils.mergeObject(super.defaultOptions, {
+		  id: "foo-form",
+			title: `My Module: ${game.i18n.localize("FOO.form.title")}`,
+			template: "./modules/foo/templates/form.hbs",
+			classes: ["form"],
+			width: 640,
+			height: "auto",
+			closeOnSubmit: true,
+		});
+	}
+
+	getData() {
+		const setting = game.settings.get("foo", "config");
+		return {
+		  setting
+		}
+	}
+
+	async activateListeners(html) {
+		super.activateListeners(html);
+		html.find("input[name=something]").on("click", /* ... */);
+		html.find("button[name=reset]").on("click", async (event) => {
+		  await game.settings.set("foo", "config", {});
+		});
+	}
+
+  async _updateObject(event, formData) {
+    await Promise.all(
+      Object.entries(formData)
+      	.map(([key, value]) => game.settings.set("foo", key, value));
+    );
+  }
+}
+```
 
 ```js
 class TemplateApplication extends FormApplication {
