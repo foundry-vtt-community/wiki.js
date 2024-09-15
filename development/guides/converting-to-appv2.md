@@ -2,7 +2,7 @@
 title: Converting to ApplicationV2
 description: A guide to convert an Application to ApplicationV2
 published: true
-date: 2024-09-15T13:40:53.457Z
+date: 2024-09-15T13:41:24.293Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T06:46:59.385Z
@@ -17,7 +17,7 @@ Here is an example of a FormApplication that will be used in this guide.
 class TemplateApplication extends FormApplication {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
-		  id: "foo-form",
+		  	id: "foo-form",
 			title: `My Module: ${game.i18n.localize("FOO.form.title")}`,
 			template: "./modules/foo/templates/form.hbs",
 			classes: ["form"],
