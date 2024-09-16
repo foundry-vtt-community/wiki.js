@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2024-09-16T21:18:09.315Z
+date: 2024-09-16T21:23:29.886Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -130,28 +130,26 @@ En fonction de ce que vous désirez, certains commutateurs peuvent être optionn
 - Le commutateur ***autoplay*** est obligatoire dans notre utilisation, afin que l'audio se lancer lorsque le monde est lancé.
 > `<audio autoplay=""></audio>`
 {.is-success}
-- Si vous voulez que votre audio boucle
+- Si vous voulez que votre audio boucle.
 > `<audio loop="" autoplay=""></audio>`
 {.is-success}
 - Si vous voulez avoir un panneau de contrôle apparant dans la fenêtre d'édition de votre monde.
 > `<audio controls="" autoplay=""></audio>`
 {.is-success}
-- Si vous voulez une boucle et un panneau de contrôle
+- Si vous voulez une boucle et un panneau de contrôle.
 > `<audio loop="" controls="" autoplay="">`
 {.is-success}
-- Si votre audio est un MP3, il faudra mettre le ***type*** en <u>***audio/mpeg***</u>
-> `<source src="/<Chemin>/<Nom>.mp3" type="audio/mpeg">`
+- Si votre audio est un MP3, il faudra mettre.
+> `src="/<Chemin>/<Nom>.mp3"`
 {.is-success}
-- Si votre audio est un OGG, il faudra mettre le ***type*** en <u>***audio/ogg***</u> et le codec en <u>***codecs=vorbis***</u>
-> `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
+- Si votre audio est un OGG, il faudra mettre.
+> `src="/<Chemin>/<Nom>.ogg"`
 {.is-success}
 
 <br>
 
-> Attention, afin que la source soit lue, il faut que la source soit placée entre les balises audio comme sur l'exemple 
-> `<audio loop="" controls="" autoplay="">`
-> `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
-> `</audio>`
+> Attention, afin que la source soit lue, il faut que la source soit bien placée entre les balises audio comme sur l'exemple ci-dessous 
+> `<audio loop="" controls="" autoplay="" src="/<Chemin>/<Nom>.ogg" type="audio/ogg"></audio>`
 {.is-warning}
 
 <br>
