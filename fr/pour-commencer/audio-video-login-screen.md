@@ -2,7 +2,7 @@
 title: 4.3 Audio, Vidéo, Page de connexion
 description: Comment mettre une image et/ou du son sur la page de connexion
 published: true
-date: 2023-02-01T01:04:11.372Z
+date: 2024-09-16T21:18:09.315Z
 tags: audio, video, login, screen
 editor: markdown
 dateCreated: 2023-01-31T17:20:28.017Z
@@ -46,7 +46,7 @@ Nous nous sommes souvent aperçu que sur Foundry nous n'utilisions pas la totali
 
 Nous nous sommes donc atelés à faire une autre présentation afin d'avoir le strict minimum, plus compact et de pouvoir profiter d'une belle illustration ou encore, comme pour le sujet qui nous concerne, une petite vidéo.
 <br>
-<img src="https://puu.sh/Jy4oy/801517e986.jpg">
+<img src="https://puu.sh/Kf4jy/2892eb0035.jpg">
 
 Si cela vous intéresse, il suffit d'installer ce module et de suivre les instructions.
 > - [Module Foundry, Login compact](https://gitlab.com/sasmira/_fr-core-logon)
@@ -62,7 +62,7 @@ Par contre nous avons que Foundry peut lire tous les formats comme le JPG/PNG/WE
 Si vous êtes experts en création de vidéo, vous serez sans doute ce que vous voulez comme introduction, voir la créer de toute pièce, pour les autres il existe quelques solutions plus ou moins facile à prendre en main.
 <br>
 ### La facilité pour récupérer une vidéo
-Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous. Il faudra juste faire attention au format de la vidéo et qu'elle soit en MP4 ou WEBM. Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)***.
+Vous êtes une "quiche" en informatique, en création de vidéo, etc, etc ... il existe donc une solution pour vous. Il faudra juste faire attention au format de la vidéo et qu'elle soit en MP4 ou WEBM. Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[File-converter](https://github.com/Tichau/FileConverter)***.
 Une fois le convertisseur installé, faire un clic droit sur la vidéo, et choisir dans le menu du convertisseur, le format que vous désirez, MP4 ou WEBM. Pour question de rapidité, nous vous conseillons d'encoder en MP4 de préférence et en WEBM pour un gain de taille de vidéo.
 
 > <u>***Dans un usage strictement personnel :***</u> *[Outil de téléchargement multi-usage, JDownloader2](https://jdownloader.org/jdownloader2) permet de télécharger plus ou moins ce que vous voulez et par la même occasion, permet de télécharger les vidéos Youtube, par exemple.*
@@ -75,7 +75,7 @@ Pour les sachants qui sachent faire du montage vidéo, il vous faudra une vidéo
 
 <br>
 
-### Convertion de la vidéo
+### Conversion de la vidéo
 Maintenant que nous une vidéo au format <u>**MP4 ou WEBM**</u>, il va nous falloir la transformer en <u>**WEBP Animé**</u> afin que Foundry puisse la jouer sur la page de connexion de votre partie.
 Pour cela nous allons utiliser le site de **[webp.to](https://webp.to/?lang=fr)** et en fonction de votre format de vidéo vous avez le choix entre :
 - [MP4 à WebP](https://webp.to/mp4-webp/)
@@ -84,7 +84,7 @@ Pour cela nous allons utiliser le site de **[webp.to](https://webp.to/?lang=fr)*
 Il faudra suivre les instructions sur à la page et attendre le résultat que vous pourrez télécharger sur le site. En fonction de la taille de votre vidéo, le résultat final peut prendre beaucoup de temps.
 
 Une fois que vous avez votre image au format <u>**WEBP**</u>, copier la directement dans le répertoire de votre monde, à sa racine par exemple, puis indiquer le chemin en éditant votre monde, comme pour une image standard ***(En exemple ci-dessous)***.
-<img src="https://puu.sh/Jy5YM/f1e09e3835.png">
+<img src="https://puu.sh/Kf4uz/628b37d493.jpg">
 
 <br>
 
@@ -95,7 +95,7 @@ En ce qui concerne le son, deux choix s'offrent à vous pour le format :
 - OGG *(Une certaine préférence pour ce dernier qui fonctionnait mieux sous foundry)*.
 - MP3.
 
-Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[file-converter](https://framalibre.org/content/file-converter)***.
+Si ce n'est pas le cas, vous pouvez utiliser facilement le convertisseur tous formats ***[File-converter](https://github.com/Tichau/FileConverter)***.
 
 Maintenant que nous avons pris le choix d'un format, nous avons un autre choix pour la liste audio.
 - Récupérer la piste audio de la vidéo
@@ -105,24 +105,23 @@ Maintenant que nous avons pris le choix d'un format, nous avons un autre choix p
 
 ### Utiliser une piste audio différente comme une musique
 La méthode la plus simple :
-- Éditer votre world en cliquant sur ***éditer***.
-- Dans la partie ***Description du monde*** sélectionnez la ***Source HTML*** comme sur la capture d'écran ci-dessous
-<img src="https://puu.sh/Jy6xV/c5b3af515c.png">
+Éditer votre **<u>Monde</u>** en cliquant sur ***éditer***.
+1. Le Thème de la page d'accueil devra être **<u>Défaut</u>** (Il se peut qu'en étant en mode **<u>Minimaliste</u>** le son ne fonctionne pas)
+2. Dans la partie ***Description du monde*** sélectionnez la ***Source HTML*** comme sur la capture d'écran ci-dessous
+<img src="https://puu.sh/Kf4vr/2aaaf9b8cb.jpg">
 - Appliquez la syntaxe suivante dans la fenêtre  de la ***Source HTML***
-> `<audio loop="" controls="" autoplay="">`
->     `<source src="/<Chemin>/<Nom>.ogg" type="audio/ogg; codecs=vorbis">`
-> `</audio>`
+> `<audio loop="" controls="" autoplay="" src="/<Chemin>/<Nom>.ogg" type="audio/ogg"></audio>`
 {.is-info}
 
-<img src="https://puu.sh/Jy6xF/199281033f.png">
+<img src="https://puu.sh/Kf4wZ/d7a1acbb24.jpg">
 
 - Valider en cliquant sur la ***Disquette*** à côté de la ***Source HTML*** et non en cliquant sur ***Mettre à jour le monde***.
 
-<img src="https://puu.sh/Jy6y7/9827406454.png">
+<img src="https://puu.sh/Kf4xr/6f4c39001b.jpg">
 
 Si vous avez bien fait votre manipulation, en réouvrant la fenêtre d'édition, vous devriez votre le lecteur multimédia, mais aussi entendre l'audio se jouer.
 
-<img src="https://puu.sh/Jy6zq/fb21f53671.png">
+<img src="https://puu.sh/Kf4xC/f6531c82b9.jpg">
 
 <br>
 
