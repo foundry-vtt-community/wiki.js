@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-09-10T17:21:22.188Z
+date: 2024-10-01T17:38:27.025Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -124,7 +124,7 @@ The `actions` object is a Record of functions that automatically get bound as `c
 // for proper class definition you'd need to use HandlebarsApplicationMixin
 // but it's not used here because these are properties of the base ApplicationV2 class
 class MyApplication extends ApplicationV2 {
-	static DEFAULT_OPTIONS = {
+  static DEFAULT_OPTIONS = {
   	actions: {
     	myAction: MyApplication.myAction
     }
