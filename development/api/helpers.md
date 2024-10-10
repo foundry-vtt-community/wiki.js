@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-08-01T12:13:58.429Z
+date: 2024-08-01T12:14:00.691Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z

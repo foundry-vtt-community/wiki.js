@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-07-07T01:51:36.675Z
+date: 2024-07-07T01:51:38.533Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z

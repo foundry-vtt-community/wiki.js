@@ -2,7 +2,7 @@
 title: Development Resources
 description: 
 published: true
-date: 2024-07-10T15:44:06.521Z
+date: 2024-07-10T15:44:08.214Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z

@@ -2,7 +2,7 @@
 title: Translations
 description: Community made translations of Foundry VTT and various game systems available for it.
 published: true
-date: 2024-05-22T19:15:06.343Z
+date: 2024-05-22T19:15:09.410Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:06.218Z

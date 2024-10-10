@@ -2,7 +2,7 @@
 title: Converting to ApplicationV2
 description: A guide to convert an Application to ApplicationV2
 published: true
-date: 2024-09-15T13:46:14.505Z
+date: 2024-09-15T13:46:16.208Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T06:46:59.385Z

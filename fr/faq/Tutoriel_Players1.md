@@ -2,7 +2,7 @@
 title: Tutoriel - Premiers pas des Joueurs 
 description:  Cet article est destiné aux joueurs. Il est destiné à aider les joueurs : Grâce à ces compétences, les joueurs seront bien équipés pour profiter de leur première partie de Foundry ! Traduit depuis https://foundryvtt.com/article/player-orientation/
 published: true
-date: 2024-09-08T08:00:37.726Z
+date: 2024-09-08T08:00:39.789Z
 tags: faq, tutoriel, joueur
 editor: markdown
 dateCreated: 2024-09-08T06:30:42.748Z

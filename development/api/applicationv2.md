@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-10-09T19:41:42.110Z
+date: 2024-10-09T19:41:45.451Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z

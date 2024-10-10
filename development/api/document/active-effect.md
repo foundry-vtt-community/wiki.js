@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2024-07-29T03:12:13.433Z
+date: 2024-07-29T03:12:17.296Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z

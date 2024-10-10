@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-06-16T14:31:58.161Z
+date: 2024-06-16T14:32:02.805Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z

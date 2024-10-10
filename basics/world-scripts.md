@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-06-19T19:01:55.944Z
+date: 2024-06-19T19:01:57.898Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z

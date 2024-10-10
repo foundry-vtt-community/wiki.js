@@ -2,7 +2,7 @@
 title: GreenSock
 description: Enabling and accessing the powerful GreenSock animation API in your system or module.
 published: true
-date: 2024-07-07T04:09:47.223Z
+date: 2024-07-07T04:09:48.999Z
 tags: greensock
 editor: markdown
 dateCreated: 2022-02-06T08:13:05.793Z

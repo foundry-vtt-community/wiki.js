@@ -2,7 +2,7 @@
 title: 07. Extending the ActorSheet class
 description: 
 published: true
-date: 2024-03-29T16:17:49.832Z
+date: 2024-03-29T16:17:51.613Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:58.947Z

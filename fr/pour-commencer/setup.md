@@ -2,7 +2,7 @@
 title: 0.1. Pour commencer
 description: 
 published: true
-date: 2024-09-05T00:45:11.264Z
+date: 2024-09-05T00:45:13.177Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-19T10:37:32.287Z

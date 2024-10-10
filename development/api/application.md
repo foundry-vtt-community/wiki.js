@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-07-07T09:23:43.700Z
+date: 2024-07-07T09:23:45.741Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z

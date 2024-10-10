@@ -2,7 +2,7 @@
 title: Actor
 description: One of the most fundamental documents within Foundry Virtual Tabletop is the Actor, as they are the protagonists, allies, monsters, antagonists, and persons within the World that you create.
 published: true
-date: 2024-07-30T18:16:08.799Z
+date: 2024-07-30T18:16:13.052Z
 tags: docs
 editor: markdown
 dateCreated: 2024-07-26T16:55:14.280Z
