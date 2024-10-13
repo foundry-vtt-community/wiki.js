@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-07-31T04:35:12.521Z
+date: 2024-10-13T19:29:37.671Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -49,7 +49,9 @@ In the DataModel constructor, the data is first run through `DataModel#_initiali
 
 This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer. Unlike `_initializeSource`, this runs after every document update.
 
-**TypeDataField**: This field stands out because it grabs a reference to `CONFIG?.[this.documentName]?.dataModels?.[type]` to check if there's a class to instantiate for the `system` property, otherwise it's created as a plain object. This means that `system` is baseline an open-ended field, 
+**TypeDataField**: This field stands out because it grabs a reference to `CONFIG?.[this.documentName]?.dataModels?.[type]` to check if there's a class to instantiate for the `system` property, otherwise it's created as a plain object. This means that `system` is baseline an open-ended ObjectField; it will save any data so long as you don't directly try to save `'doc.system': false` or some kind of non-object value. 
+
+If you're only using `template.json` to define properties, any missing properties will get filled in from the template but otherwise it provides no other validation or handling; if a user updates a property to be a boolean but your `template.json` value is a string, Foundry won't reject the update, but if a user deletes a property provided by `template.json` then it will replace that property with the default.
 
 ## ClientDocument
 
