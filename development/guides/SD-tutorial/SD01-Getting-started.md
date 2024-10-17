@@ -2,7 +2,7 @@
 title: 01. Getting Started
 description: 
 published: true
-date: 2024-06-17T14:19:11.205Z
+date: 2024-10-17T01:10:54.858Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:35:18.520Z
@@ -17,7 +17,7 @@ When building a new system, you have several options to choose from. You can cop
 First, clone the Boilerplate repository
 
 ```bash
-git clone git@gitlab.com:asacolips-projects/foundry-mods/boilerplate.git
+git clone https://github.com/asacolips-projects/boilerplate.git
 ```
 
 Second, install the dependencies for the generator. You'll need [node.js](https://nodejs.org/en) installed, ideally version 20 or higher. Once you have node, execute the following from inside the `boilerplate` directory.
