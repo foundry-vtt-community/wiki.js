@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-21T18:06:41.685Z
+date: 2024-10-21T18:08:12.584Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -10,7 +10,7 @@ dateCreated: 2024-10-21T17:36:21.736Z
 
 # Tour Management
 
-<p><img alt="Up to date as of v12" src="https://img.shields.io/badge/FoundryVTT-v11-informational"></p>
+![Up to date as of 11](https://img.shields.io/badge/FoundryVTT-v11-informational)
 
 As you like to show the mechanics of your module or system to your new users, you may do it by tours.
 
