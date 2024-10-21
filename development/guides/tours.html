@@ -2,13 +2,24 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-21T17:38:12.013Z
+date: 2024-10-21T17:49:24.224Z
 tags: tours
 editor: ckeditor
 dateCreated: 2024-10-21T17:36:21.736Z
 -->
 
-<p>&nbsp;</p>
+<h1>Tour Management</h1>
+<p>As you like to show the mechanics of your module or system to your new users, you may do it by tours.</p>
+<h4>Chat usage Tour (Example)</h4>
+<p>In this example, you can see how to</p>
+<ul>
+  <li>register your tours from multiple JSON files</li>
+  <li>add multiple steps to a clean JSON file</li>
+  <li>bound the position of a steps window to an element's ID (#chat-form)</li>
+  <li>run code before entering a step of a tour (e.g. writing a chat message)</li>
+  <li>switching the active tab to the right one due to be able to address the elements ID (#chat-form is in tab “chat” and not “settings” where you star the tour)</li>
+</ul>
+<h4>myTours.js</h4>
 <pre><code class="language-javascript">Hooks.once("init", async function () {
 	registerMyTours();
 }
@@ -37,7 +48,7 @@ async function registerMyTours() {
     console.error("MyTour | Error registering tours: ",error);
   }
 }</code></pre>
-<p>&nbsp;</p>
+<h4>Chat.json</h4>
 <pre><code class="language-javascript">{
     "title": "Chat Guide",
     "description": "Howto use the chat",
