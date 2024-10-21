@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-10-21T18:16:49.201Z
+date: 2024-10-21T18:20:53.295Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -196,6 +196,13 @@ Un monde, c'est ta partie de JDR, ta table de jeu, quoi. On créée un monde à 
 * Le bouquin de règles = le système Foundry
 * La table et le scénario = le monde Foundry
 * Les accessoires (musique, dessins, dés) = les modules Foundry
+
+## C'est quoi qui est gratuit ? Et qui est payant ?
+
+La totalité des systèmes de jeu sont gratuits. Et parmi les modules, il en exist ds gratuits (la plupart) et des payants (qu'on appelle aussi modules Premium, cf ci-dessous).
+
+Ces modules payants (ie Premium) peuvent être des campagnes complètes (ie par exemple Pax Elfica chez les 12 Singes), des petits scénarios, des recueils de maps/cartes, des modules de contenus (par exemple le module "core" pour Warhammer contient l'intégralité du livre de base), etc. Ces modules payants sont toujours optionnels, vous n'êtes jamais obligé de les acheter.
+
 
 ## J'ai vu qu'il y a avait des modules "premium". C'est quoi ?
 
