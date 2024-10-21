@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-07-07T01:51:38.533Z
+date: 2024-10-21T05:34:06.354Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -177,7 +177,7 @@ Translating package-provided types, e.g. `character` and `npc` as possible Actor
 System and module defined type data models support the static method LOCALIZATION_PREFIXES to ease the burden of defining the `hint` and `label` fields. This is especially helpful for custom region behavior types because the configuration form is automatically generated from the schema using the hint and label fields.
 
 ```js
-export default class MyBehavior extends foundry.data.regionBehaviors.RegionBehaviorType {
+export default class MyModel extends foundry.abstract.DataModel {
 
   static LOCALIZATION_PREFIXES = ["NESTED.Path"];
 
