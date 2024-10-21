@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-08-26T14:43:06.432Z
+date: 2024-10-21T18:16:41.980Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -138,7 +138,7 @@ Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie
 
 ## Y’a quoi comme jeux dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 7/05/2024, on recense 311+ « systems », qu'on peut parcourir ici  : https://foundryvtt.com/packages/systems.
+Dans Foundry, les « jeux » sont appelés « systems ». Au 7/05/2024, on recense 311+ « systems », qu'on peut parcourir ici  : https://foundryvtt.com/packages/systems. **La totalité des sysstèmes sont gratuits.** 
 Une liste succincte d'exemples : 
 - 13th age,
 - Appel de Cthulhu, DeltGreen
