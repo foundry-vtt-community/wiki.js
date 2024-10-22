@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-22T14:30:17.353Z
+date: 2024-10-22T14:31:51.597Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -53,7 +53,7 @@ async function registerMyTours() {
   try {
     game.tours.register(moduleName, 'format', await MyTour.fromJSON('/modules/'+moduleName+'/tours/chat.json'));
     if(game.user.isGM) {
-      game.tours.register(moduleName, 'stardateSettings', await StardateTour.fromJSON('/modules/'+moduleName+'/tours/settings.json'));
+      game.tours.register(moduleName, 'settings', await MyTour.fromJSON('/modules/'+moduleName+'/tours/settings.json'));
     }
   } catch (error) {
     console.error("MyTour | Error registering tours: ",error);
