@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-21T18:08:12.584Z
+date: 2024-10-22T14:28:16.795Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -27,7 +27,7 @@ In this example, you can see how to
 #### myTours.js
 
 ```javascript
-Hooks.once("init", async function () {
+Hooks.once("setup", async function () {
 	registerMyTours();
 }
 // necessary to toggle tab from settings to chat before you are able to target #chat
