@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-22T14:29:25.802Z
+date: 2024-10-22T14:30:17.353Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -23,6 +23,7 @@ In this example, you can see how to
 -   bound the position of a steps window to an element's ID (#chat-form)
 -   run code before entering a step of a tour (e.g. writing a chat message)
 -   switching the active tab to the right one due to be able to address the elements ID (#chat-form is in tab “chat” and not “settings” where you star the tour)
+-	manage access for GM only
 
 #### myTours.js
 
