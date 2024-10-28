@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-28T13:25:16.993Z
+date: 2024-10-28T13:28:09.523Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -111,6 +111,7 @@ The JSON for a tour may contain several fields one can use for
   "description": "...",
   "canBeResumed": false, // once started resume at last step
   "display": true // visible in tour list
+  "closeWindows": false, // default closes all on tour.start()  
   "steps": [ // array of objects each with possible fields
   	"id" "nameOfStep",
     "selector": "#htmlTagID", // htmlElementTyp[parameter-name=\"name\"]
