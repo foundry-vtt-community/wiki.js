@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-28T12:36:56.034Z
+date: 2024-10-28T12:38:42.942Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -142,7 +142,7 @@ To get faster finding the right selector here you can find some examples.
     "steps": [
         {
             "id": "configSettings",
-            "selector": "button[data-action=\"configure\"]", 
+            "selector": "button[data-action=\"configure\"]", // html element "button" with [parameter] data-action="configure"
             "title": "Config Tour",
             "content": "MYTRANSLATION.tours.configSettings",
             "sidebarTab" "settings" // {"chat", "combat", "scenes", "actors", "items", "journal", "tables", "cards", "playlists", "compedium", "settings"}
