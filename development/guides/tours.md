@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-28T13:28:09.523Z
+date: 2024-10-28T13:53:27.550Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -172,6 +172,27 @@ To get faster finding the right selector here you can find some examples.
 	]
 }
 ```
+
+#### Settings Tour
+
+To be able guiding your users through the settings one have to know how to trigger this:
+1) Hooks renderFormApplication (maybe check if it is settings)
+2) closeWindow: false (tour.start will close settings instead)
+3) tour.start() on click event
+
+```javascript
+Hooks.on("renderFormApplication", (app, html, data) => {
+  html.find('#client-settings').prevObject[0].querySelectorAll("[data-tab='MyModuleSettingName']").forEach(element => {
+    element.addEventListener('click', (event) => {
+      const tour = game.tours.get("myModuleName.tourName"); // find by console.log(game.tours)
+      tour.start();
+    });
+  });
+});
+```
+
+
+
 #### Tour API
 
 If you like to create more complex tours using interaction and training for your users, you want to take a look at the API-Documentation of the [Tours Class](https://foundryvtt.com/api/classes/client.Tour.html).
