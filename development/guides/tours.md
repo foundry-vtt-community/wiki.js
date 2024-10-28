@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-28T12:38:42.942Z
+date: 2024-10-28T13:25:16.993Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -117,7 +117,7 @@ The JSON for a tour may contain several fields one can use for
     "title": "...",
     "content": "...",
     "sidebarTab": "chat", // {"chat", "combat", "scenes", "actors", "items", "journal", "tables", "cards", "playlists", "compedium", "settings"}
-		""
+		"tooltipDirection": "RIGHT" // {"UP", "CENTER", "RIGHT", "LEFT", ...}
   ],
   "suggestedNextTours": [
   	"core.uiOverview",
