@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-10-28T18:36:51.331Z
+date: 2024-10-28T18:40:53.494Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -305,7 +305,7 @@ The `templates` property of a part is used by `HandlebarsApplication#_preFirstRe
 
 Two important caveats to using this property
 - If you are otherwise overriding `_preFirstRender`, you must call `await super._preFirstRender(context, options);` to preserve this handling
-- The `templates` property only accepts a string array, so there's no way to reference these partials as a key-value record for more succinct references in the handlebars.
+- The `templates` property only accepts a string array, so there's no way to reference these partials as a key-value record for more succinct references in the handlebars. You need to externally call `loadTemplates` if you wish to register templates with an ID.
 
 ---
 ## Specific Use Cases
