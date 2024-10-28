@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-22T14:32:08.914Z
+date: 2024-10-28T09:32:34.841Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -79,6 +79,41 @@ async function registerMyTours() {
                 "parent": "sidebar",
                 "id": "chat"
             }
+           
+        },
+        {
+            "id": "stepTwo",
+        	// ...
+        }
+	]
+}
+```
+#### Type of Tours
+
+There are common tours one can start manually but also special tours types inherit from *Tours* Class as:
+- CanvasTour
+- SetupTour
+- SidebarTour
+
+Each type of tour has specific methods to interact with their domain.
+(Todo: explain by example)
+
+#### Selectors
+
+To get faster finding the right selector here you can find some examples.
+```javascript
+{
+    "title": "Configuration Settings",
+    "description": "Howto mark the Button Configuration Settings for Tours",
+    "canBeResumed": false,
+    "display": true,
+    "steps": [
+        {
+            "id": "configSettings",
+            "selector": "button[data-action=\"configure\"]",
+            "title": "Config Tour",
+            "content": "MYTRANSLATION.tours.configSettings",
+            "sidebarTab" "settings" // {"chat", "combat", "scenes", "actors", "items", "journal", "tables", "cards", "playlists", "compedium", "settings"}
            
         },
         {
