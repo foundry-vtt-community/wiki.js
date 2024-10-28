@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-28T09:32:34.841Z
+date: 2024-10-28T12:36:56.034Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -98,6 +98,38 @@ There are common tours one can start manually but also special tours types inher
 Each type of tour has specific methods to interact with their domain.
 (Todo: explain by example)
 
+#### Fields
+
+The JSON for a tour may contain several fields one can use for
+- progress flow
+- visibility in tour lists
+- resumable
+
+```javascript
+{
+	"title": "MYMODULE.title", // see below at "localization"
+  "description": "...",
+  "canBeResumed": false, // once started resume at last step
+  "display": true // visible in tour list
+  "steps": [ // array of objects each with possible fields
+  	"id" "nameOfStep",
+    "selector": "#htmlTagID", // htmlElementTyp[parameter-name=\"name\"]
+    "title": "...",
+    "content": "...",
+    "sidebarTab": "chat", // {"chat", "combat", "scenes", "actors", "items", "journal", "tables", "cards", "playlists", "compedium", "settings"}
+		""
+  ],
+  "suggestedNextTours": [
+  	"core.uiOverview",
+    "myModule.tourName" // find names by typing 'game.tours' in browser-console
+  ],
+  "localization": { // this should be done in language/en.json 
+  	"MYMODULE.title": "bla bla",
+    "MYMODULE.description": "foobar"
+  }
+}
+```
+
 #### Selectors
 
 To get faster finding the right selector here you can find some examples.
@@ -110,7 +142,7 @@ To get faster finding the right selector here you can find some examples.
     "steps": [
         {
             "id": "configSettings",
-            "selector": "button[data-action=\"configure\"]",
+            "selector": "button[data-action=\"configure\"]", 
             "title": "Config Tour",
             "content": "MYTRANSLATION.tours.configSettings",
             "sidebarTab" "settings" // {"chat", "combat", "scenes", "actors", "items", "journal", "tables", "cards", "playlists", "compedium", "settings"}
@@ -124,6 +156,21 @@ To get faster finding the right selector here you can find some examples.
 }
 ```
 
+
+```javascript
+{
+    "title": "..",
+    "description": "...",
+    "display": true,
+    "steps": [
+        {
+            "id": "configSettings",
+            "selector": ".tabs>a[data-tab='actors']", // .class "tabs" with chield > element "a" and [parameter] "data-tab"
+            //...
+        }
+	]
+}
+```
 #### Tour API
 
 If you like to create more complex tours using interaction and training for your users, you want to take a look at the API-Documentation of the [Tours Class](https://foundryvtt.com/api/classes/client.Tour.html).
