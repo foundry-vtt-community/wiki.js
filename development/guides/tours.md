@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-29T08:01:09.507Z
+date: 2024-10-29T08:01:28.714Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -207,7 +207,7 @@ Hooks.once("ready", async function () {
   }
 });
 ```
-Tipp: If you open a window like client-settings you should call tour.start() within a timeout function
+**Tipp:** If you open a window like client-settings you should call tour.start() within a timeout function
 ```javascript
 setTimeout(function(){ 
   game.tours.get("myModuleName.tourName").start();
