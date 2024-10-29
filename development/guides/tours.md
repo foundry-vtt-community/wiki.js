@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-29T07:47:42.699Z
+date: 2024-10-29T07:47:45.507Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
