@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-29T07:45:09.308Z
+date: 2024-10-29T07:46:16.794Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -182,7 +182,7 @@ To be able guiding your users through the settings one have to know how to trigg
 
 ```javascript
 Hooks.on("renderFormApplication", (app, html, data) => {
-  if(html[0].id == "client-settings") {
+  if(html[0].id == "client-settings") { // else Tour-Management Window also will get the listener
     html.find('#client-settings').prevObject[0].querySelectorAll("[data-tab='MyModuleSettingName']").forEach(element => {
       element.addEventListener('click', (event) => {
         const tour = game.tours.get("myModuleName.tourName"); // find by console.log(game.tours)
