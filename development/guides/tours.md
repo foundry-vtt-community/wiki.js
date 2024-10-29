@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-10-29T07:07:55.469Z
+date: 2024-10-29T07:26:50.749Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -190,6 +190,10 @@ Hooks.on("renderFormApplication", (app, html, data) => {
   });
 });
 ```
+
+#### Start Tour at first login
+
+If you like to start the tour once module is activated and players log in, you can do this by checking the status of the tour. Have in mind you also can check if the user isGM if it is a settings tour.
 
 ```javascript
 Hooks.once("ready", async function () {
