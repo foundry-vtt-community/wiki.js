@@ -2,7 +2,7 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-08-01T12:14:00.691Z
+date: 2024-10-29T20:57:17.528Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
@@ -232,7 +232,7 @@ Foundry has a "toasts" system available at `ui.notifications`. Its methods, `inf
 
 The following are walkthroughs of more complicated helpers or utils in the context of an overall package implementation.
 
-### SelectOptions
+### SelectOptions Example
 
 This worked example assumes you're using the Boilerplate system development template or some other structure in which you have a `config.mjs` file for your system's constants and use `context` as the object that `getData` returns.
 
