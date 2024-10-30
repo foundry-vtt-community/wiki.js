@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2024-10-30T18:38:30.510Z
+date: 2024-10-30T18:51:05.232Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -402,6 +402,8 @@ node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryu
 <a id="D22" href="#D22">D22.</a>  You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
 
 ![Foundry Launched](/images/oracle/image29.webp)
+
+>You may see a Deprecation Warnings such as `[DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead.` This warning can be safely ignored. {.is-info}
 
 <a id="D23" href="#D23">D23.</a>  Test the connection to Foundry by opening `http://<public IP address>:30000` in a new browser tab, where `<public IP address>` is the Public IP Address noted earlier in the guide.
 
