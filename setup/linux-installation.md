@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-10-30T18:46:34.687Z
+date: 2024-10-30T18:50:05.005Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -251,7 +251,9 @@ node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
 
 >If you do not see the above output ending with `Server started and listening on port 30000`, review step [C6](#C6) to ensure you replaced `<user>` with the current user. {.is-info}
 
->If you are installing on a Raspberry Pi, an ARM device or VM, or potentially some other UNIX OS and are seeing a GLIBC or DLOPEN error, see [section H](#H) in this guide. {.is-warning}
+>If you are installing on a Raspberry Pi, an ARM device or VM, or potentially some other UNIX OS and are seeing a GLIBC or DLOPEN error, see [section H](#H) in this guide. 
+>
+>You may also see a Deprecation Warning such as `[DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead.`. This warning can be safely ignored. {.is-warning}
 
 <a id="C8" href="#C8">C8.</a>	Test the connection to Foundry by opening `http://<IP address>:30000` in a new browser tab, where `<IP address>` is the either the external IP address of your cloud server or server internal IP address in your home network. 
 
