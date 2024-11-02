@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-11-01T18:07:01.584Z
+date: 2024-11-02T16:38:02.484Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -45,7 +45,7 @@ class MyTour extends Tour {
         	speaker: ChatMessage.getSpeaker({alias: "MyTour", color: "#ff0000"})
       	});
     	} else {
-      	console.log("STA Stardate | Tours _preStep: ",currentStep.id);
+      	console.log("MyTours | Tours _preStep: ",currentStep.id);
     	}
   	}
 }
@@ -131,6 +131,38 @@ The JSON for a tour may contain several fields one can use for
   }
 }
 ```
+
+The field suggestedNextTour**s** is not able to take more then one tour (by Tours Class ![](https://img.shields.io/badge/FoundryVTT-v12-informational)). At this point also the following workaround for **conditional suggestedNextTour** could help out:
+
+```javascript
+class MyTour extends Tour {
+  async _preStep() {
+      await super._preStep();
+      const currentStep = this.currentStep;
+      if(currentStep.id == "chat") {
+        ChatMessage.create({
+          content: "<h2>Demo MyTour</h2>",
+          speaker: ChatMessage.getSpeaker({alias: "MyTour", color: "#ff0000"})
+        });
+        switch(game.settings.get(moduleName, "chatMode")) {
+          case "shutUpAndListenTheGM":
+            this.config.suggestedNextTours = [moduleName+".strongGMwordsMSG"];
+            break;
+          case "haveFun":
+            this.config.suggestedNextTours = [moduleName+".funGMgreatings"];
+            break;
+          case "headCinemaTeamwork":
+            this.config.suggestedNextTours = [moduleName+".cinemaWishings"];
+            break;
+          default:
+            console.log("MyTours | Tours chatMode: ",game.settings.get(moduleName, "chatMode"));
+            break
+        }
+      } 
+    }
+}
+```
+
 
 #### Selectors
 
