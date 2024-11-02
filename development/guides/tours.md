@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-11-02T16:38:05.645Z
+date: 2024-11-02T16:39:02.949Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -140,10 +140,6 @@ class MyTour extends Tour {
       await super._preStep();
       const currentStep = this.currentStep;
       if(currentStep.id == "chat") {
-        ChatMessage.create({
-          content: "<h2>Demo MyTour</h2>",
-          speaker: ChatMessage.getSpeaker({alias: "MyTour", color: "#ff0000"})
-        });
         switch(game.settings.get(moduleName, "chatMode")) {
           case "shutUpAndListenTheGM":
             this.config.suggestedNextTours = [moduleName+".strongGMwordsMSG"];
