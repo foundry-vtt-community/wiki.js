@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-11-02T16:39:19.941Z
+date: 2024-11-02T16:40:24.135Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -131,7 +131,7 @@ The JSON for a tour may contain several fields one can use for
   }
 }
 ```
-
+#### Conditional next Tour
 The field suggestedNextTour**s** is not able to take more then one tour (by Tours Class ![](https://img.shields.io/badge/FoundryVTT-v12-informational)). At this point also the following workaround for **conditional suggestedNextTour** could help out:
 
 ```javascript
