@@ -2,7 +2,7 @@
 title: Tours
 description: Systems and Modules sometimes are not intuitiv to new players or even experienced players or GMs. To hint them getting the point early you may want to create a tour through your meachanics.
 published: true
-date: 2024-11-02T16:39:02.949Z
+date: 2024-11-02T16:39:19.941Z
 tags: tours
 editor: markdown
 dateCreated: 2024-10-21T17:36:21.736Z
@@ -151,7 +151,6 @@ class MyTour extends Tour {
             this.config.suggestedNextTours = [moduleName+".cinemaWishings"];
             break;
           default:
-            console.log("MyTours | Tours chatMode: ",game.settings.get(moduleName, "chatMode"));
             break
         }
       } 
