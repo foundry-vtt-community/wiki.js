@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-10-30T18:50:05.005Z
+date: 2024-11-04T16:23:56.785Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -151,7 +151,7 @@ sudo apt upgrade -y
 
 >If after entering the correct password, you receive an error: `<user> is not in the sudoers file` or similar, then you must login as **root** and complete ther [User Setup](#user-setup). {.is-warning}
 
-<a id="B6" href="#B6">B6.</a> Add the `nodejs` v20 repository to the system package manager:
+<a id="B6" href="#B6">B6.</a> Add the `nodejs` v22 repository to the system package manager:
 
 
   
