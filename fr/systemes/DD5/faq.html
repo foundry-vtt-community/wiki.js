@@ -2,7 +2,7 @@
 title: 00 - Foire aux questions
 description: FAQ du système 5e.
 published: true
-date: 2024-11-06T08:47:53.370Z
+date: 2024-11-06T08:49:17.219Z
 tags: 
 editor: ckeditor
 dateCreated: 2024-11-06T08:21:53.159Z
@@ -116,6 +116,35 @@ dateCreated: 2024-11-06T08:21:53.159Z
 <p>&nbsp;</p>
 <hr>
 <p><span class="text-big"><strong>J. </strong></span><strong>Restauration vers une version antérieure du système et récupération d'une sauvegarde.</strong></p>
-<p><a href="https://gist.github.com/MaxPat931/a05b6d5727b953f1c14cf568018f2fba#restoring-from-a-backup">This guide</a> assumes that you have made a Backup of your world prior to launching it in the new system version (Foundry will prompt you to make this <a href="https://foundryvtt.com/article/backups/">backup</a> automatically)</p>
-<p>Uninstall dnd5e, and install a previous version's manifest URL from the <a href="https://github.com/foundryvtt/dnd5e/releases">Releases</a> page.<br>Then head to your Worlds, right click on the world and Restore Latest Backup or Manage Backup and choose the backup to restore from. Keep in mind you may also need to revert any modules you have updated as well.</p>
-<p><a href="/dnd-modules/downgradeandrestore.webm">/dnd-modules/downgradeandrestore.webm</a></p>
+<p>Ce guide suppose que vous avez créé une sauvegarde de votre monde avant de le lancer dans la nouvelle version du système (Foundry vous demandera automatiquement de faire cette sauvegarde).</p>
+<ol>
+  <li><strong>Désinstaller le système DnD5e actuel :</strong></li>
+</ol>
+<ul>
+  <li>Aller dans l'onglet "Modules" de Foundry VTT.</li>
+  <li>Rechercher le module "dnd5e" et le désinstaller.</li>
+</ul>
+<ol>
+  <li><strong>Installer la version précédente du système :</strong></li>
+</ol>
+<ul>
+  <li>Accéder à la page de publication de la version précédente souhaitée sur GitHub : <a href="https://github.com/foundryvtt/dnd5e">https://github.com/foundryvtt/dnd5e</a></li>
+  <li>Choisir la version que vous souhaitez utiliser (ex : 2.4.1).</li>
+  <li>Copier l'URL du fichier "system.json" fourni sur la page.</li>
+  <li>Dans Foundry VTT, aller dans l'onglet "Modules".</li>
+  <li>Cliquer sur le bouton "Installer un module par manifeste URL".</li>
+  <li>Coller l'URL copiée et cliquer sur "Installer le module".</li>
+</ul>
+<ol>
+  <li><strong>Restaurer la sauvegarde du monde :</strong></li>
+</ol>
+<ul>
+  <li>Aller dans l'onglet "Monde" de Foundry VTT.</li>
+  <li>Faire un clic droit sur le monde affecté.</li>
+  <li>Sélectionner "Gérer les sauvegardes"</li>
+  <li>Choisir la sauvegarde que vous souhaitez restaurer.</li>
+</ul>
+<p><strong>Important :</strong></p>
+<p>Assurez-vous que la version de la sauvegarde correspond à la version du système installée à l'étape 2. En restaurant une sauvegarde, vous perdrez toutes les modifications effectuées sur le monde depuis la création de la sauvegarde.&nbsp;</p>
+<p><strong>Rappel :</strong></p>
+<p>&nbsp;Il est fortement conseillé de toujours effectuer une sauvegarde avant de lancer une mise à jour du système pour éviter toute perte de données.</p>
