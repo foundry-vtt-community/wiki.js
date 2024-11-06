@@ -2,7 +2,7 @@
 title: 00 - Foire aux questions
 description: FAQ du système 5e.
 published: true
-date: 2024-11-06T08:39:18.268Z
+date: 2024-11-06T08:47:53.370Z
 tags: 
 editor: ckeditor
 dateCreated: 2024-11-06T08:21:53.159Z
@@ -55,35 +55,67 @@ dateCreated: 2024-11-06T08:21:53.159Z
 <p><strong>Autres aventures WotC</strong><br>L'importateur D&amp;DBeyond peut également importer des aventures officielles auxquelles vous avez accès dans DnDBeyond, voir la section <strong>J</strong> ci-dessous, pour plus d'informations.</p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>D. </strong></span><strong>What modules do I need?</strong></p>
-<p>No modules are required to run and play DnD5e in Foundry, but there is a wide variety of modules available.&nbsp;<br>We do not provide a list of "generally recommended modules" because everyone plays their game differently, there are users that run with less than 10 modules, and users that run with over 100. We recommend never blindly installing modules from a list another user provides, as they may or may not be relevant to your needs and wants. Adding modules to your game also means added complexity, so it is always recommended to read a module's documentation prior to install to make sure you are familiar with what it provides and how it works. Using modules that you have not taken the time to personally vet is likely to lead to issues with configuration and troubleshooting down the line. We strongly recommend getting comfortable with the base DnD5e system's capabilities. Once you are familiar with what features come out of the box, then we are happy to provide recommendations if you are seeking solutions for a specific feature you are looking for, e.g. "I want to see 3D dice roll across my screen when using features or rolling damage" "I would recommend Dice So Nice for that"</p>
+<p><span class="text-big"><strong>D. </strong></span><strong>Quels modules me faut-il ?</strong></p>
+<p>Aucun module n'est nécessaire pour jouer à DnD5e sur Foundry, mais il en existe une grande variété. Nous ne fournissons pas de liste de "modules généralement recommandés" car chacun joue différemment, certains utilisateurs utilisant moins de 10 modules et d'autres plus de 100. Nous vous recommandons de ne jamais installer aveuglément des modules à partir d'une liste fournie par un autre utilisateur, car ils peuvent ne pas correspondre à vos besoins et envies.<br>Ajouter des modules à votre jeu signifie également augmenter la complexité. Il est donc toujours recommandé de lire la documentation d'un module avant l'installation pour vous assurer de bien comprendre ce qu'il propose et comment il fonctionne. Utiliser des modules que vous n'avez pas pris le temps de vérifier personnellement risque de causer des problèmes de configuration et de dépannage par la suite.<br>Nous vous recommandons fortement de vous familiariser avec les fonctionnalités de base du système DnD5e. Une fois que vous connaissez les fonctionnalités intégrées, nous serons heureux de vous fournir des recommandations si vous recherchez des solutions pour une fonctionnalité spécifique, par exemple : <i>"Je veux voir des dés 3D rouler sur mon écran lorsque j'utilise des fonctionnalités ou que je lance des dégâts"</i> - <i>"Je vous recommanderais Dice So Nice pour cela"</i></p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>E. </strong></span><strong>How can I automate items/spells/features?</strong></p>
-<p>The goal of the DnD5e system is to replicate the tabletop experience, by integrating the SRD content and rules into the game system.<br>The core implementation for some level of automation is the use of Active Effects.<br>First, take a look at the github wiki's guide to core Active Effects, there is a good amount of customization you can do <a href="https://github.com/foundryvtt/dnd5e/wiki/Active-Effect-Guide">https://github.com/foundryvtt/dnd5e/wiki/Active-Effect-Guide</a></p>
-<p>Luckily the DnD5e community has a robust offering of modules that can assist you in spending every waking moment trying to figure out how to automate some weird niche use case that you cant live without.<br>You are welcome to ask questions and discuss these modules in the dnd5e channel of course. However, these modules will not be discussed here in the FAQ as we do not wish to imply that any of these modules are recommended, and each users preferred modules and configurations are unique.&nbsp;</p>
-<p>You may also be interested in joining the Posney's Foundry Automation server for even more automation discussion related to MidiQOL and its associated modules: <a href="https://discord.gg/Xd4NEvw5d7">https://discord.gg/Xd4NEvw5d7</a></p>
+<p><span class="text-big"><strong>E. </strong></span><strong>Comment automatiser les objets, sorts et aptitudes.</strong></p>
+<p>Le système DnD5e vise à reproduire l'expérience du jeu de table en intégrant le contenu et les règles du SRD au système de jeu. L'automatisation de base utilise les "Effets Actifs".<br>Tout d'abord, jetez un coup d'œil au guide du wiki github sur les effets actifs de base, il y a une bonne quantité de personnalisation que vous pouvez faire <a href="https://github.com/foundryvtt/dnd5e/wiki/Active-Effect-Guide">https://github.com/foundryvtt/dnd5e/wiki/Active-Effect-Guide.</a></p>
+<p>Heureusement, la communauté DnD5e a une offre robuste de modules qui peuvent vous aider à passer chaque moment éveillé à essayer de comprendre comment automatiser un cas d'utilisation de niche bizarre dont vous ne pouvez pas vous passer.</p>
+<p>Vous êtes bien sûr invités à poser des questions et à discuter de ces modules dans le canal dnd5e. Cependant, ces modules ne seront pas abordés ici dans la FAQ, car nous ne souhaitons pas suggérer que l'un de ces modules est recommandé, chaque utilisateur ayant ses propres préférences en matière de modules et de configurations.</p>
+<p>Vous pourriez également être intéressé par le serveur d’automatisation de Foundry de Posney pour encore plus de discussions sur l’automatisation en lien avec MidiQoL et ses modules associés :<a href="https://discord.gg/Xd4NEvw5d7"> https://discord.gg/Xd4NEvw5d7</a></p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>F. </strong></span><strong>How to: Wildshape/Polymorph</strong></p>
-<p>To use the built-in Wild Shape feature, open the character sheet of the actor that you would like to transform, then drag the actor they should transform into onto that character sheet (e.g. open the Druid's character sheet and drag the Wolf actor onto it). In the resulting pop-up dialog, click the Wild Shape button. This must be done by the Gamemaster, unless the System Setting "Allow Polymorphing" is enabled, the player must also have "Observer" access to the actors they can transform into and the permissions to "Create New Actors" and "Create New Tokens". To exit Wild Shape, open the actor sheet and click the Restore Transformation button in the sheet's title bar. Because Players cannot have permissions to delete actors, if used by a player the transformed actor will remain, if used by the Gamemaster the transformed actor will be deleted.</p>
-<p>Unsoluble has a great video guide available here <a href="https://www.youtube.com/watch?v=YjcugG_akk4">https://www.youtube.com/watch?v=YjcugG_akk4</a><br>(As of 2.1.0 Unlinked Tokens can use the Restore Transformation feature, this video was recorded prior to version 2.1.0)</p>
+<p><span class="text-big"><strong>F. </strong></span><strong>Comment utiliser la polymorphie.</strong></p>
+<p>Voici comment utiliser la polymorphie intégrée.</p>
+<p><strong>Pour le Maître du Jeu (MJ) :</strong></p>
+<ol>
+  <li>Ouvrez la fiche de personnage de l'acteur qui souhaite se transformer.</li>
+  <li>Glissez-déposez l'acteur en lequel il veut se transformer sur la fiche de personnage. Par exemple, ouvrez la fiche de personnage du druide et faites glisser l'acteur Loup dessus.</li>
+  <li>Dans la fenêtre contextuelle qui apparaît, cliquez sur le bouton "Polymorphie".</li>
+</ol>
+<p><strong>Pour les joueurs (si autorisé) :</strong></p>
+<ol>
+  <li>Le MJ doit activer le paramètre "Autoriser la polymorphie" dans les paramètres du système.</li>
+  <li>Le joueur doit avoir l'accès "Observateur" aux acteurs en lesquels il peut se transformer.</li>
+  <li>Le joueur doit avoir les permissions "Créer de nouveaux acteurs" et "Créer de nouveaux jetons".</li>
+  <li>Suivez les mêmes étapes que le MJ décrites précédemment.</li>
+</ol>
+<p><strong>Pour annuler la métamorphose :</strong></p>
+<ol>
+  <li>Ouvrez la fiche de l'acteur transformé.</li>
+  <li>Cliquez sur le bouton "Restaurer la transformation" dans la barre de titre de la fiche</li>
+</ol>
+<p><strong>Vidéo explicative :</strong> Unsoluble propose un excellent guide vidéo ici : <a href="https://www.youtube.com/watch?v=YjcugG_akk4">https://www.youtube.com/watch?v=YjcugG_akk4</a></p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>G. </strong></span><strong>How to: Create Spell Scrolls</strong></p>
-<p>There are two ways to create a Spell Scroll from a spell, either by using the Right Click context menu and using the "Create Scroll" option or by dragging a Spell onto an Actor's Inventory tab. A dialog will be displayed with options as to what description should be shown and what levels the spell should be created at (defaults to the spell's base level). A reference to the spell scroll rules or their entire text from the SRD rules will be added to the spell's description.</p>
+<p><span class="text-big"><strong>G. </strong></span><strong>Comment créer des parchemins de sort.</strong></p>
+<p>Il existe deux façons de créer un parchemin de sort à partir d’un objet de type <i>sort </i>:</p>
+<ol>
+  <li>En utilisant le menu contextuel (clic droit) et en sélectionnant l’option « Créer un parchemin ».</li>
+  <li>En faisant glisser un sort dans l’onglet Inventaire d’un acteur.</li>
+</ol>
+<p>Un dialogue s’affichera avec les options suivantes :</p>
+<ul>
+  <li>Choisir la description à afficher.</li>
+  <li>Sélectionner le niveau auquel le sort doit être créé (par défaut, le niveau de base du sort).</li>
+</ul>
+<p>Une référence aux règles des parchemins de sort ou leur texte complet provenant des règles SRD sera ajoutée à la description du sort.</p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>H. </strong></span><strong>Making changes to the system with World Scripts</strong></p>
-<p>If you are looking to make a change to the system that isn't provided by an existing feature or module, such as increasing the Maximum Level Cap, adding Damage types, and more, you want to create a World Script. A World Script is similar to a macro, but is executed automatically when the world is loaded, based on what you hook onto. More information about their use, how to configure them, and example scripts is available on the github repo here: <a href="https://github.com/foundryvtt/dnd5e/wiki/Modifying-Your-Game-with-Scripts">https://github.com/foundryvtt/dnd5e/wiki/Modifying-Your-Game-with-Scripts</a></p>
+<p><span class="text-big"><strong>H. </strong></span><strong>Modifier le système avec les "World Script".</strong></p>
+<p>Si vous souhaitez modifier le système d'une manière qui n'est pas fournie par une fonctionnalité ou un module existant, comme augmenter le niveau maximum, ajouter des types de dégâts, etc., vous devez créer un world script.</p>
+<p>Un world script est similaire à une macro, mais il est exécuté automatiquement lorsque le monde est chargé, en fonction de ce que vous lui raccrochez. Vous trouverez plus d'informations sur leur utilisation, leur configuration et des exemples de scripts dans le dépôt Github ici : <a href="https://github.com/foundryvtt/dnd5e/wiki/Modifying-Your-Game-with-Scripts">https://github.com/foundryvtt/dnd5e/wiki/Modifying-Your-Game-with-Scripts</a></p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>I. </strong></span><strong>D&amp;DBeyond Importer Module</strong></p>
-<p>The D&amp;DBeyond Importer module can be used to import the content you have access to on DnDBeyond into Foundry. This includes Characters, Spells, Items, Monsters, Adventures, Encounters, Classes, and Races. <strong>Note that Monster importing requires a patreon subscription or setting up your own proxy service.</strong><br>For an overview of what features the module provides, and a link to download the module manifest, see the Foundry Package listing here: <a href="https://foundryvtt.com/packages/ddb-importer">https://foundryvtt.com/packages/ddb-importer</a></p>
-<p>To ask questions, or get setup or troubleshooting assistance, join MrPrimate's Discord Server here: <a href="https://discord.gg/WzPuRuDJVP">https://discord.gg/WzPuRuDJVP</a><br>To view the import status of an Adventure, check here : <a href="https://docs.ddb.mrprimate.co.uk/status.html">https://docs.ddb.mrprimate.co.uk/status.html</a></p>
+<p><span class="text-big"><strong>I. </strong></span><strong>Module d'importation D&amp;DBeyond.</strong></p>
+<p>Le module D&amp;DBeyond Importer vous permet d'importer le contenu auquel vous avez accès sur DnDBeyond dans Foundry. Cela comprend les personnages, sorts, objets, monstres, aventures, rencontres, classes et races. <strong>Notez que l'importation de monstres nécessite un abonnement Patreon ou la mise en place de votre propre service proxy.</strong></p>
+<p>Pour un aperçu des fonctionnalités proposées par le module et un lien vers le téléchargement du manifeste du module, consultez la liste des modules Foundry ici : <a href="https://foundryvtt.com/packages/ddb-importer">https://foundryvtt.com/packages/ddb-importer</a></p>
+<p>Pour poser des questions, obtenir de l'aide pour la configuration ou le dépannage, rejoignez le serveur Discord de MrPrimate ici : <a href="https://discord.gg/WzPuRuDJVP">https://discord.gg/WzPuRuDJVP</a></p>
+<p>Pour consulter l'état d'importation d'une aventure, rendez-vous ici : <a href="https://docs.ddb.mrprimate.co.uk/status.html">https://docs.ddb.mrprimate.co.uk/status.html</a></p>
 <p>&nbsp;</p>
 <hr>
-<p><span class="text-big"><strong>J. </strong></span><strong>Reverting to a previous System version and Restoring from a Backup</strong></p>
+<p><span class="text-big"><strong>J. </strong></span><strong>Restauration vers une version antérieure du système et récupération d'une sauvegarde.</strong></p>
 <p><a href="https://gist.github.com/MaxPat931/a05b6d5727b953f1c14cf568018f2fba#restoring-from-a-backup">This guide</a> assumes that you have made a Backup of your world prior to launching it in the new system version (Foundry will prompt you to make this <a href="https://foundryvtt.com/article/backups/">backup</a> automatically)</p>
 <p>Uninstall dnd5e, and install a previous version's manifest URL from the <a href="https://github.com/foundryvtt/dnd5e/releases">Releases</a> page.<br>Then head to your Worlds, right click on the world and Restore Latest Backup or Manage Backup and choose the backup to restore from. Keep in mind you may also need to revert any modules you have updated as well.</p>
 <p><a href="/dnd-modules/downgradeandrestore.webm">/dnd-modules/downgradeandrestore.webm</a></p>
