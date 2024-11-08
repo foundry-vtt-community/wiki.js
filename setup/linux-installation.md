@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-11-08T20:06:06.288Z
+date: 2024-11-08T20:06:55.110Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -314,7 +314,7 @@ pm2 save
   }
   
   https:// {
-  		tls internal {
+      tls internal {
       		on_demand
       }
       
