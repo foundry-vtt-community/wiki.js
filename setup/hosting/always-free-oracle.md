@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2024-11-08T19:54:39.941Z
+date: 2024-11-08T20:03:34.525Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -513,7 +513,7 @@ Leave all other options as they are.
 
 <a id="D37" href="#D37">D37.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-<a id="D38" href="#D38">D38.</a>  Test your site by opening a new browser tab to your domain name. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+<a id="D38" href="#D38">D38.</a>  Test your site by opening a new browser tab to your domain name or the public IP of your instance. When connecting to the bare IP, your browser may show a warning that you can click through. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 >Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
 
