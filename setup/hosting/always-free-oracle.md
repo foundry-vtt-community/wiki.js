@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2024-11-08T19:52:48.237Z
+date: 2024-11-08T19:54:39.941Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -458,9 +458,11 @@ sudo apt install caddy
 ```
 sudo nano /etc/caddy/Caddyfile
 ```
-<a id="D32" href="#D32">D32.</a>  Delete all the text, and replace it with (making sure to replace the `your.hostname.com` portion with your actual domain name, do **NOT** put `http://` or `https://` in front of it):
+<a id="D32" href="#D32">D32.</a>  Delete all the text, and replace it with (making sure to replace the `your.hostname.com` portion with your actual domain name, do **NOT** put `http://` or `https://` in front of it). If you do not have a domain name, leave the text as-is without modification. 
 
 >You can delete text in `nano` by using the arrow keys to move the cursor and pressing the <kbd>delete</kbd> or <kbd>backspace</kbd> keys to delete text. {.is-info} 
+
+>Do not modify the `https:// { ... }` block at all, whether you have a domain name or not. {.is-warning}
 
 ```
 # This replaces the existing content in /etc/caddy/Caddyfile
