@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-11-04T16:23:56.785Z
+date: 2024-11-08T20:01:26.248Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -283,7 +283,11 @@ pm2 save
 
 ## Set up the Caddy Reverse Proxy
 
-> This section assumes that you have a valid domain name with an A record pointing to your `<public IP address>`. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns) if you are hosting on a home network) to get a free domain and point it to `<public IP address>`. Having a domain name is required for this section. {.is-info}
+>We recommend that you have a valid domain name with an A record pointing to `<public IP address>` to complete this section. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`.  (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns) if you are hosting on a home network)
+>
+>Having a valid domain name results in an HTTPS connection without insecure connection warnings from your and your players' browsers. 
+>
+>If you do not have a domain name, you may continue with this section which will set up self-signed certificates for the bare IP connection to your VM, allowing an HTTPS connection but one that will prompt browsers to show a warning before clicking through to connect.{.is-info}
 
 
 <a id="C13" href="#C13">C13.</a> Run the following command to begin editing the Caddyfile:
@@ -292,12 +296,12 @@ pm2 save
   sudo nano /etc/caddy/Caddyfile
   ```
   
-<a id="C14" href="#C14">C14.</a> Follow the steps below according to your relevant setup:
 
-<details><summary>Cloud-hosted server ▼ </summary>
+<a id="C14" href="#C14">C14.</a> Delete all the text, and replace it with (making sure to replace the `your.hostname.com` portion with your actual domain name, do **NOT** put `http://` or `https://` in front of it). If you do not have a domain name, leave the text as-is without modification. 
 
+>You can delete text in `nano` by using the arrow keys to move the cursor and pressing the <kbd>delete</kbd> or <kbd>backspace</kbd> keys to delete text. {.is-info} 
 
-  <a id="C15a" href="#C15a">C15a.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` portion with your actual domain name:
+>Do not modify the `https:// { ... }` block at all, whether you have a domain name or not. {.is-warning}
   
   ```
   # This replaces the existing content in /etc/caddy/Caddyfile
@@ -305,7 +309,15 @@ pm2 save
   # A CONFIG SECTION FOR YOUR HOSTNAME
   
   your.hostname.com {
-      # PROXY ALL REQUEST TO PORT 30000
+      reverse_proxy localhost:30000
+      encode zstd gzip
+  }
+  
+  https:// {
+  		tls internal {
+      		on_demand
+      }
+      
       reverse_proxy localhost:30000
       encode zstd gzip
   }
@@ -314,52 +326,21 @@ pm2 save
   # https://caddyserver.com/docs/caddyfile
   ```
   
-</details>
 
-<details><summary>Home network server ▼ </summary>
-  
-  <a id="C15b" href="#C15b">C15b.</a> Delete all the text and replace with the following, making sure to replace the `your.hostname.com` and `your.internal.ip.address` portions with your actual domain name and server internal IP address:
-  
-  ```
-  # This replaces the existing content in /etc/caddy/Caddyfile
 
-  # A CONFIG SECTION FOR YOUR IP AND HOSTNAME
-  
-  {
-      default_sni your.internal.ip.address
-  }
-  
-  your.internal.ip.address {
-      # PROXY ALL REQUEST TO PORT 30000
-      tls internal
-      reverse_proxy localhost:30000
-      encode zstd gzip
-  }
-  
-  your.hostname.com {
-      # PROXY ALL REQUEST TO PORT 30000
-      reverse_proxy localhost:30000
-      encode zstd gzip
-  }
+<a id="C15" href="#C15">C15.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-  # Refer to the Caddy docs for more information:
-  # https://caddyserver.com/docs/caddyfile
-  ```
-</details>
-
-<a id="C16" href="#C16">C16.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
-
-<a id="C17" href="#C17">C17.</a>	Restart Caddy to pick up the new settings by:
+<a id="C16" href="#C16">C16.</a>	Restart Caddy to pick up the new settings by:
 ```
 sudo service caddy restart
 ```
 >Caddy handles all forwarding to HTTPS as well as the encryption certificates. No further configuration is needed to get those working. {.is-info}
 
-<a id="C18" href="#C18">C18.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
+<a id="C17" href="#C17">C17.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
 ```
 nano ~/foundryuserdata/Config/options.json
 ```
-<a id="C19" href="#C19">C19.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are. The `hostname` parameter will tell Foundry to use a hostname in the Internet Invite Link. Replace `<your.domain.name>` with your actual domain name.
+<a id="C18" href="#C18">C18.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are. The `hostname` parameter will tell Foundry to use a hostname in the Internet Invite Link. Replace `<your.domain.name>` with your actual domain name.
 ```
 ...
 "proxyPort": 443,
@@ -371,15 +352,15 @@ nano ~/foundryuserdata/Config/options.json
 ```
 >Make sure your hostname is in **quotes** as above, and be sure not to delete any commas or other JSON elements while editing this file. Change ONLY the values afer the `:` {.is-warning}
 
-<a id="C20" href="#C20">C20.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
+<a id="C19" href="#C19">C19.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
 
-<a id="C21" href="#C21">C21.</a> Restart Foundry to pick up the changes to configuration: 
+<a id="C20" href="#C20">C20.</a> Restart Foundry to pick up the changes to configuration: 
 
 ```
 pm2 restart foundry
 ```
 
-<a id="C22" href="#C22">C22.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
+<a id="C21" href="#C21">C21.</a>	Test your site by opening a new browser tab to `http://your.domain.name` or `http://server.internal.IP.address`. Your browser may show a warning when connecting to the bare IP, you should be able to click through it. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
 
 >Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. 
 > 
