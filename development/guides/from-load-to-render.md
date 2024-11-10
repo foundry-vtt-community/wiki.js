@@ -2,7 +2,7 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-10-13T19:29:37.671Z
+date: 2024-11-10T00:32:25.508Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
@@ -128,7 +128,7 @@ After all documents have prepared their data for the first time the `setup` hook
 
 ## DocumentSheet
 
-*App V1*
+[*App V1*](/development/api/application)
 
 The final step in the journey to displaying a document involves the application class stack. Many classes extend `DocumentSheet`, which can be found in `client\apps\form.js`. This extends `FormApplication` which extends `Application`. There's a lot of logic here that isn't relevant to our goal, which is "How does the document data we've defined in the previous sections get displayed to an end user"; other features are covered in [Application](/en/development/api/application).
 
@@ -173,9 +173,83 @@ After the template is rendered, the `context` is handed off to the `renderDocume
 
 ## DocumentSheetV2
 
-*AppV2*
+[*AppV2*](/development/api/applicationv2)
 
-Alternatively, for `HandlebarsApplicationMixin(DocumentSheetV2)`,
+Alternatively, for `HandlebarsApplicationMixin(DocumentSheetV2)`, the relevant rendering processes involve three classes; `ApplicationV2`, `DocumentSheetV2`, and `HandlebarsApplicationMixin`, all of which can be found in the `resources/app/client-esm/applications/api` directory.
+
+### ApplicationV2#render
+
+The journey starts with `ApplicationV2#render({ force: true })`; this `options` object is of type [ApplicationRenderOptions](https://foundryvtt.com/api/interfaces/foundry.applications.types.ApplicationRenderOptions.html). Like AppV1, `force` controls whether to freshly-render an application not displayed on the screen. Unlike AppV1, `render` *is* asynchronous and returns a promise that resolves when the application is fully rendered.
+
+The `render` method then calls its private partner, `ApplicationV2##render`. This calls a series of protected functions, only some of which are used by the three classes used above. You can always extend or override these; just keep in mind that the choice of if and where to call `super` can impact expected functionality.
+
+1. `_canRender`, which in DocumentSheetV2 checks against the user's `viewPermission`.
+2. `_configureRenderOptions`, which is used by ApplicationV2 to update the window and position properties and by HandlebarsApplicationMixin to decide what parts to show (by default all).
+3. `_prepareContext`, which is left blank by default but very important for developers (details below).
+4. `_preFirstRender`, which is used by HandlebarsApplicationMixin to load the additional templates necessary for rendering.
+5. `_preRender`, which is left blank by default.
+6. `_renderFrame`, which is used by both ApplicationV2 and DocumentSheetV2 to initialize key application properties such as the close and UUID buttons.
+7. `_attachFrameListeners`, which is used by ApplicationV2 to attach listeners to the whole frame such as Form Submission handling.
+8. `_renderHTML`, which is implemented by HandlebarsApplicationMixin to generate the HTML of all the parts. This function calls `_preparePartContext` for additional support.
+9. `_replaceHTML`, which is implemented by HandlebarsApplicationMixin and replaces any previously rendered HTML for a part with the freshly generated HTML.
+10. `_insertElement`, which is used by ApplicationV2 to add the Application to the window.
+11. `_updateFrame`, which is used by ApplicationV2 to update the header bar properties.
+12. `_onFirstRender`, which is used by DocumentSheetV2 to add the application to the document's `apps` record. 
+13. `_onRender`, which is left blank by default. This is also the part where the `renderApplication` is called, but separate from this function so no `super` call is necessary.
+
+Broadly speaking, `ApplicationV2` handles the window frame + header, while `HandlebarsApplicationMixin` is responsible for the internal HTML. Everything until `_replaceHTML` is asynchronous and awaited, while from that point forwards everything is synchronous (although you can always call asynchronous code as a side effect; it just won't be awaited inside the `render` promise). 
+
+### \_prepareContext and \_preparePartContext
+
+The most important step for the typical developer and one that almost certainly needs overrides are the asynchronous functions [`_prepareContext`](https://foundryvtt.com/api/classes/foundry.applications.api.ApplicationV2.html#_prepareContext) (added by ApplicationV2) and `_preparePartContext` (added by HandlebarsApplicationV2). The docs do not currently provide the signature of the latter, so it's copied here for reference
+
+```js
+    /**
+     * Prepare context that is specific to only a single rendered part.
+     *
+     * It is recommended to augment or mutate the shared context so that downstream methods like _onRender have
+     * visibility into the data that was used for rendering. It is acceptable to return a different context object
+     * rather than mutating the shared context at the expense of this transparency.
+     *
+     * @param {string} partId                         The part being rendered
+     * @param {ApplicationRenderContext} context      Shared context provided by _prepareContext
+     * @param {HandlebarsRenderOptions} options       Options which configure application rendering behavior
+     * @returns {Promise<ApplicationRenderContext>}   Context data for a specific part
+     * @protected
+     */
+    async _preparePartContext(partId, context, options) {
+      context.partId = `${this.id}-${partId}`;
+      return context;
+    }
+```
+
+The reason this step is important is that the `context` object returned by these functions is fed into a `renderTemplate` call by `HandlebarsApplicationMixin#_renderHTML`. This is where all *display* logic should be handled, such as:
+- Associate labels
+- Enrich editor data
+- Split embedded documents up into categories (e.g. items by type and active effects by enabled)
+- Sort embedded documents
+- Construct `selectOptions` for dropdown fields
+
+A very basic `_prepareContext` call should look something like the following. `this.document` and `this.isEditable` are two getters defined by DocumentSheetV2.
+
+```js
+async _prepareContext(options) {
+  return {
+    document: this.document,
+    system: this.document.system,
+    fields: this.document.schema.fields,
+    systemFields: this.document.system.schema.fields,
+    isEditable: this.isEditable
+  }
+}
+```
+
+Then, in `_preparePartContext`, you can wrap your logic in a `switch(partId) {}` statement to prepare elements as needed. This can both reduce the amount of work if you're only selectively rendering parts (such as if a user only has limited permissions) as well as let you cleanly redefine variables across different parts.
+
+> Don't be afraid to delegate complex preparation logic to protected or private functions; `context.items = await this._prepareItems(context, options)` can help keep your `_prepareContext` function readable.
+{.is-info}
+
+After the context from `_preparePartContext` is used in the `renderTemplate` call it's discarded, so non-display logic should always happen in the earlier document preparation steps. Similarly, while the `context` object from `_prepareContext` is passed into many of the functions outlined earlier (e.g. `_onFirstRender`), it is not "saved" anywhere; it's not even passed to the `renderApplicationV2` hook.
 
 ## Conclusion
 
