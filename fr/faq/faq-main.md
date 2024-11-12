@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-11-12T12:38:34.906Z
+date: 2024-11-12T12:39:01.328Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -391,7 +391,7 @@ Oui, bien sûr. Les données de Foundry sont toutes placées au même endroit, d
 Donc changer de PC équivaut à recopier votre répertoire `worlds`, tout simplement.
 Cela sauvegardera toutes vos parties.
 Si vous voulez en plus récupérez vos systèmes et modules installés, il suffit de faire la même chose avec les répertoires `systems` et `modules`.
-Autrement dit, si vous voulez êtrecertain de tout tout tout sauvegarder, faire une sauvegarde du répertoire `Data` en entier.
+Autrement dit, si vous voulez êtrecertain de tout tout tout sauvegarder, faire une sauvegarde du répertoire `Data` en entier (et qui contiendra donc systems, modules, worlds, backups, etc)
 Pour remettre les données sur votre nouveau PC, recopier le contenu de ce `Data` ou de `worlds` à la place des répertoires `Data` ou `worlds` (respectivement) de votre nouveau PC. Relancez Foundry, et vous aurez tout récupéré.
 Notez que vous pouvez parfaitement avoir une installation de Foundry sur votre PC/Mac local (pour préparer vos parties par exemple) et une installation en ligne sur un serveur (TheForge par exemple), tout ça avec la même licence.
 
