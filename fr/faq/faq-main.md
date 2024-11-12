@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-11-12T12:43:50.980Z
+date: 2024-11-12T12:43:58.042Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
