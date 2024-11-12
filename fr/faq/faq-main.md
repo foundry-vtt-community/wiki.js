@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-11-12T12:39:01.328Z
+date: 2024-11-12T12:43:50.980Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -81,6 +81,10 @@ Il ya de nombreuses vidéos sur YT, mais celle-ci est régulièrement citée en 
 [cette vidéo est fréquemment citée comme une excellente introduction](https://www.youtube.com/watch?v=kEQlhdF1568&list=PLGgCMB0gYnLFWxyrCkUYwHY4vvA_yME7m)
 
 La chaine YT de Carter (https://www.youtube.com/@carterfoundryvtt) contient plein de tutos à jour, et les Chroniques de la Fonderie (https://www.youtube.com/results?search_query=chroniques+de+la+fonderie) peuvent aussi aider, comme indiqué plus haut.
+
+## Je suis pas trop vidéo, y'a pas un document explicatif ?
+
+Ce document (https://www.lahiette.com/leratierbretonnien/wp-content/uploads/2024/11/guide_fvtt.pdf) explique comment acheter et installer FoundryVTT sur son PC. La fin du document est dédiée au système Rêve de Dragon, mais la première partie est valable pour n'importe quel système de jeu.
 
 # Foundry et son installation 
 
