@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-10-28T18:40:53.494Z
+date: 2024-11-15T20:43:43.093Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -642,20 +642,7 @@ Hooks.once("init", () => {
 }
 ```
 
-
-### Non-Handlebars Rendering Frameworks
-
-The following are community implementations of non-handlebars rendering frameworks.
-
-- [Vue](https://github.com/mouse0270/fvtt-vue) by Mouse0270
-- [Svelte](https://github.com/ForgemasterModules/svelte-fvtt) by ForgemasterModules
-
----
-## Troubleshooting
-
-Here are some common problems people run into with applications in Foundry.
-
-### Using a button triggers full web page refresh
+### Easy form submission buttons
 
 1) Add the following to your `static PARTS`:
 ```js
@@ -673,6 +660,24 @@ buttons: [
 ```
 3) Move all your buttons to the buttons array above.
 4) Be sure the HTML template for your form declared in `static PARTS` doesn't contain a HTML `<form>` (change them to `<div>`).	Otherwise, your `formData` argument on the submit method will be empty.
+
+### Non-Handlebars Rendering Frameworks
+
+The following are community implementations of non-handlebars rendering frameworks.
+
+- [Vue](https://github.com/mouse0270/fvtt-vue) by Mouse0270
+- [Svelte](https://github.com/ForgemasterModules/svelte-fvtt) by ForgemasterModules
+
+---
+## Troubleshooting
+
+Here are some common problems people run into with applications in Foundry.
+
+### Using a button triggers full web page refresh
+
+By default, a button will trigger the `submit` process of whatever form it is in. AppV2 will attempt to capture this if you have form handling configured with `tag: "form"` and a registered `handler` in DEFAULT_OPTIONS, however if that is not the case then the default browser behavior is to submit the webpage - causing a full refresh.
+
+To fix this, add `type="button"` to the attributes of any button you don't want to trigger a submission event.
 
 ### Arrays in Forms
 
