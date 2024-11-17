@@ -2,7 +2,7 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-09-10T17:21:07.622Z
+date: 2024-11-17T02:05:01.688Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
@@ -116,6 +116,14 @@ For further context, `Roll#render` is called by two functions; `ChatMessage#_ren
 In combination with overriding `CHAT_TEMPLATE` and `TOOLTIP_TEMPLATE` you can do deep alterations of Foundry's default roll display across all possible invocations.
 
 The remainder of the array is used as part of chat message serialization; if you use a roll subclass but *don't* register it with `CONFIG.Dice.Rolls.push` the rolls will fail to be properly reconstructed as part of message initialization.
+
+### Roll.replaceFormulaData
+
+API Reference
+
+- [replaceFormulaData](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#replaceFormulaData)
+
+The replaceFormulaData function, a static method of the Roll class, can help users visualize the effect of their roll formulas by providing the "translated" formula. 
 
 ---
 ## Specific Use Cases
