@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-11-19T13:40:23.109Z
+date: 2024-11-19T13:40:30.032Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -43,7 +43,7 @@ Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’
 
 ## Y'a plein de vocabulaire que je comprends pas, comment faire ?
 
-Globalement, il a y a deux termes très importants : les systèmes, les modules et les mondes.
+Globalement, il a y a trois termes très importants : les systèmes, les modules et les mondes.
 
 Un système (ie systems en angliche), c'est un système de jeu : un JDR quoi. Par exemple, tu veux jouer à l'Appel de Cthulhu, et bien c'est le système Appel de Cthulhu. Tu veux jouer à Savage Worlds, et bien c'est le système Savage Worlds, etc, etc.
 
