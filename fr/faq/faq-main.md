@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-11-12T12:43:58.042Z
+date: 2024-11-19T13:39:56.218Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -43,7 +43,18 @@ Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’
 
 ## Y'a plein de vocabulaire que je comprends pas, comment faire ?
 
-Commence par lire la Knowledge Base de Foundry, disponible ici : https://foundryvtt.com/kb 
+Globalement, il a y a deux termes très importants : les systèmes, les modules et les mondes.
+
+Un système, c'est un système de jeu : un JDR quoi. Par exemple, tu veux jouer à l'Appel de Cthulhu, et bien c'est le système Appel de Cthulhu. Tu veux jouer à Savage Worlds, et bien c'est le système Savage Worlds, etc, etc.
+
+Un module, ce sont des extensions (ie des plugins, en quelque sorte) qui viennent améliorer ou ajouter des choses à ta partie. Il en existe de plusieurs catégories : 
+ - des modules qui apportent du contenu (ie des musiques, des illustrations, des cartes, etc...)
+  - des modules qui modifient ou changent le comportement de Foundry (ie gestion des combats, affichage différent, outils de dessin supplémentaires, etc etc)
+  - des modules de scénarios/campagnes complet, qui permettent d'avoir tout prêt des cartes, images et PNJs pour jouer/
+  
+ Un monde (ie world), et bien c'est ta partie. Si par exemple tu maitrises 1 table à DD5 et une autre table à Hawkmoon, et bien tu auras 2 mondes. Et si tu maitrises 3 parties différentes à DD5, et bien tu auras 3 mondes. Le nombre de monde possibme est infini, mais tu ne peux faire fonctionner qu'1 seul monde à un instant donné.
+ 
+Pour aller plus loin, tu peux rapidement lire la Knowledge Base de Foundry, disponible ici : https://foundryvtt.com/kb 
 Ensuite, selon ton système de jeu, regarde dans les émissions des Chroniques de la Fonderie : https://foundryvtt.wiki/fr/pages/choniquesfonderie et également sur la chaine YT de Carter : https://www.youtube.com/@carterfoundryvtt
 
 D'autres vidéos sont souvent disponibles sur YT également, à chercher selon ton système de jeu.
