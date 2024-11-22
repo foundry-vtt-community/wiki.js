@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2024-06-01T16:03:02.950Z
+date: 2024-11-22T08:03:02.897Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -10,9 +10,9 @@ dateCreated: 2023-11-26T13:13:16.296Z
 
 # Overview
 
-TrueNAS SCALE runs Linux and k3s - a version of Kubernetes - under the hood. It offers a GUI and deploying Foundry is relatively simple.
+TrueNAS SCALE runs Linux and Docker Compose under the hood. It offers a GUI and deploying Foundry is relatively simple.
 
-These instructions assume that you are at least somewhat-familar with TrueNAS and ZFS. Start there, make sure you have TrueNAS SCALE installed and one ZFS pool configured. Tested on SCALE 24.04.1.1 in June 2024.
+These instructions assume that you are at least somewhat-familar with TrueNAS and ZFS. Start there, make sure you have TrueNAS SCALE installed and one ZFS pool configured. Tested on SCALE 24.10.0.2 in November 2024.
 
 - Create two ZFS datasets, one for the Foundry app, one for its data
 - Download and unzip Foundry node.js code
@@ -42,13 +42,13 @@ That was the hardest part, particularly if you were not familiar with scp/ssh ye
 
 In the TrueNAS UI, go to Apps, click on Discover Apps in the top right and then Custom App in the top right.
 
-> TrueNAS Scale 24.04 does not have a way to set the hostname in the UI. To work around this, give the container Privileged Mode and use the hostname command, see below. It's not pretty, but it keeps the license across restarts.
+> TrueNAS Scale 24.10 does not have a way to set the hostname in the UI. To work around this, give the container Privileged Mode and use the hostname command, see below. It's not pretty, but it keeps the license across restarts.
 
 Any settings I do not mention stay at default, which is most of them.
 
 - Give it an `Application Name`, e.g. `foundry`
 - `Image repository` is `node`
-- `Image Tag` is `20`
+- `Image Tag` is `22`, or whatever [node version](https://nodejs.org/en/about/previous-releases) is Active LTS
 - `Image Pull Policy` is `Always`
 - `Container Cmd`, hit the Add button 1 time, and enter:
   - `/bin/sh`
