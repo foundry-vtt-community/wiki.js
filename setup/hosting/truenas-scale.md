@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2024-11-22T08:03:02.897Z
+date: 2024-11-22T08:04:41.552Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -95,7 +95,7 @@ You can of course at this point forward `30000` at your router and have your use
 - In CloudFlare, under SSL/TLS and Overview, choose either Full or Full (strict)
 - Test that you can get to your FoundryVTT instance via your domain name for it
 
-> This assumes that the only app you want to access via 443 is this single Foundry instance. If you have multiple apps, you'd need to place a reverse proxy like Traefik between. That is out of scope for these instructions, but look for TrueCharts which includes a Traefik setup.
+> This assumes that the only app you want to access via 443 is this single Foundry instance. If you have multiple apps, you'd need to place a reverse proxy like Traefik between. That is out of scope for these instructions.
 
 ## Dynamic DNS
 
