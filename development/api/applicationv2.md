@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-11-15T20:43:43.093Z
+date: 2024-11-24T20:10:49.422Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -10,8 +10,7 @@ dateCreated: 2024-04-18T15:30:54.955Z
 
 ![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
-Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. The ApplicationV2 class and its subclasses were introduced in Foundry V12, with the long-term goal of transitioning all applications to the new framework. The original [Application](/en/development/api/application) class isn't going away, but it is no longer the subject of active development.
-
+Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. They allow developers to render HTML windows to display information and provide an interactive UI, from dialogs to character sheets to so much more.
 
 *Official Documentation*
 
@@ -27,8 +26,6 @@ Application#render // `#` indicates instance method or property
 
 ## Overview
 
-ApplicationV2 is an entirely new set of classes that serve as a complete alternative to the original Application class. If you are building a new UI element in Foundry and otherwise only plan to support Version 12 and later, it is strongly recommended you use ApplicationV2 instead of the original Application class.
-
 Code for ApplicationV2 and its related classes can be found at `yourFoundryInstallPath/resources/app/client-esm/applications`.
 
 ---
@@ -36,7 +33,9 @@ Code for ApplicationV2 and its related classes can be found at `yourFoundryInsta
 
 Here are the core things to know about ApplicationV2, including comparisons to the original Application class.
 
-### Advantages of ApplicationV2
+### ApplicationV2 vs. Application
+
+The ApplicationV2 class and its subclasses were introduced in Foundry V12, with the long-term goal of transitioning all applications to the new framework. The original [Application](/en/development/api/application) class isn't going away any time soon, but it is no longer the subject of active development.  If you are building a new UI element in Foundry and otherwise only plan to support Version 12 and later, it is strongly recommended you use ApplicationV2 instead of the original Application class.
 
 - Native light/dark mode support
 - Better application window frames
@@ -70,6 +69,12 @@ Unlike the App V1, the base App V2 class handles forms natively, without relianc
 ## API Interactions
 
 The following section provides guidance for implementing ApplicationV2 and its related classes
+
+### Basic lifecycle
+
+Once the class has been defined, it can be rendered by calling `new MyApp.render(true)`. Once an application is visible on the screen, it can be refreshed with `myApp.render()` (or more commonly, `this.render()`).
+
+Similarly, `myApp.close()` will remove it from the UI, but the actual class instance will persist until the garbage collector deletes it. This means that if your retain a persistent reference (such as foundry's native handling of document sheets), application properties (like tab state) will persist between cycles of `close()` and `render(true)`.
 
 ### BASE_APPLICATION
 
@@ -278,7 +283,7 @@ Inside your handlebars template, you'll *only* have access to the data setup in 
 
 ##### \_preparePartContext
 
-The `HandlebarsApplicationMixin` provides an additional method for handling context that can be useful, especially in conjunction with only rendering some of the parts so only processes that are actually necessary happen. You can cleanly override this method and ignore the native `partId` property it adds. A common pattern is to use a [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement on `partId` and then handle part-specific logic in the cases.
+The `HandlebarsApplicationMixin` provides an additional method for handling context that can be useful, especially in conjunction with only rendering some of the parts so only processes that are actually necessary happen. You can cleanly override this method and ignore its addition of `partId` to the context.
 
 ```js
     /**
@@ -298,6 +303,8 @@ The `HandlebarsApplicationMixin` provides an additional method for handling cont
       return context;
     }
 ```
+
+However, a common pattern is to use a [switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement on the `partId` argument and then handle part-specific logic in the cases. This can allow you to both contextually override properties (tab info) or only do work if it's necessary (such as a limited sheet that doesn't render actor inventory).
 
 #### `templates`
 
