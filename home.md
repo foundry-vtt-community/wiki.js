@@ -2,7 +2,7 @@
 title: Home
 description: 
 published: true
-date: 2024-10-10T21:43:55.855Z
+date: 2024-11-24T15:21:18.779Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-14T17:58:11.311Z
@@ -22,7 +22,9 @@ dateCreated: 2021-05-14T17:58:11.311Z
 ## Official Resources
 <i class="fas fa-dice-d20"></i> [Foundry Virtual Tabletop website](http://foundryvtt.com)
 <i class="fab fa-discord"></i> [Discord](https://discordapp.com/invite/DDBZUDf)
+<i class="fas fa-cloud"></i> [Bluesky](https://bsky.app/profile/foundryvtt.bsky.social)
 <i class="fab fa-twitter"></i> [Twitter](https://twitter.com/FoundryVTT)
+<i class="fab fa-mastodon"></i> [Mastodon](https://mastodon.social/@foundryvtt@dice.camp)
 <i class="fab fa-youtube"></i> [YouTube](https://www.youtube.com/c/FoundryNet)
 <i class="fab fa-twitch"></i> [Twitch](https://www.twitch.tv/foundryvtt)
 <i class="fab fa-patreon"></i> [Patreon](https://www.patreon.com/foundryvtt/overview)
