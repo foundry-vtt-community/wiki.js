@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-11-26T16:35:44.918Z
+date: 2024-11-26T21:09:12.918Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -234,7 +234,7 @@ One way to leverage parts is to only show some of them sometimes. The correct pl
 ```js
 // This isn't DocumentSheet specific, but it's the most common place you'll want this
 class MyApplication extends HandlebarsApplicationMixin(DocumentSheetV2) {
-	static PARTS = {
+  static PARTS = {
   	header: { template: '' },
   	tabs: { template: '' },
   	description: { template: '' },
