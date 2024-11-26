@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-07-07T09:23:45.741Z
+date: 2024-11-26T16:36:22.929Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -10,7 +10,7 @@ dateCreated: 2024-02-13T19:36:31.269Z
 
 ![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
 
-Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. As of V12, the Application class has begun a (long) transition out of use - instead, [ApplicationV2](/en/development/api/applicationv2) should be preferred for new applications. See also [this guide](/en/development/guides/converting-to-appv2) for help changing over.
+Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. As of V12, the Application class has begun a (long) transition out of use - instead, [ApplicationV2](/en/development/api/applicationv2) should be preferred for new applications. See also [this guide](/en/development/guides/converting-to-appv2) for help changing over. The Application class will stop being supported in v16.
 
 The [Dialog](/en/development/api/dialog) subclass has its own page detailing its specific options because its configuration is so specific. It has an AppV2 equivalent in [DialogV2](/en/development/api/dialogv2).
 
