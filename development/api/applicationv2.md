@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-11-24T20:10:49.422Z
+date: 2024-11-26T16:35:44.918Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -35,7 +35,7 @@ Here are the core things to know about ApplicationV2, including comparisons to t
 
 ### ApplicationV2 vs. Application
 
-The ApplicationV2 class and its subclasses were introduced in Foundry V12, with the long-term goal of transitioning all applications to the new framework. The original [Application](/en/development/api/application) class isn't going away any time soon, but it is no longer the subject of active development.  If you are building a new UI element in Foundry and otherwise only plan to support Version 12 and later, it is strongly recommended you use ApplicationV2 instead of the original Application class.
+The ApplicationV2 class and its subclasses were introduced in Foundry V12, with the long-term goal of transitioning all applications to the new framework. The original [Application](/en/development/api/application) class won't be gone until version 16, giving a relatively long deprecation period of 4 full versions (v12 - v15).
 
 - Native light/dark mode support
 - Better application window frames
