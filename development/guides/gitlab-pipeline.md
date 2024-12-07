@@ -1,9 +1,9 @@
 ---
 title: Gitlab Pipeline
-description: 
+description: How to use gitlab to distribute your module.
 published: true
-date: 2024-12-05T01:42:27.416Z
-tags: git gitlab pipeline
+date: 2024-12-07T19:53:51.529Z
+tags: module, git, gitlab, pipeline
 editor: markdown
 dateCreated: 2024-12-05T01:42:27.416Z
 ---
