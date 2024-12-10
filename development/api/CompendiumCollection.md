@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-12-10T21:53:22.212Z
+date: 2024-12-10T22:06:44.192Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -401,7 +401,8 @@ When working across multiple computers, after pulling any updates to these files
 
 Note that Foundry does not use the unpacked (JSON/YAML) db files, it will continue to operate against the LDB files. Converting to upacked files is only a way to avoid tracking binary files in your source control management system (eg github) - either set .gitignore to ignore your binary db directory (eg /packs) or don't indiscriminately add files to commits.
 
-If you are distributing your compendiums (eg in a module) you will need to add a pipeline action to your project workflow such as:
+If you are distributing your compendiums (eg in a module) you will need to add a pipeline action to your project workflow such as:  
+*(for github)*
 ```
       - name: Install Dependencies
         run: npm ci
