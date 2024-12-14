@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE Docker
 published: true
-date: 2024-12-14T13:44:24.000Z
+date: 2024-12-14T13:50:15.029Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -121,7 +121,7 @@ A new major version of FoundryVTT may require a manual upgrade, instead of using
 - Verify you have a snapshot for your `foundry-data` volume. If not, make one now. This will allow you to roll back if there are issues with the upgrade
 - Create a new dataset, preset `Generic` or `Apps`. Give it a name, e.g. `foundry-12`
 - Download the NodeJS ZIP file for the new version, scp it over to the TrueNAS SCALE server, and unzip it into the new dataset
-- Edit your Foundry custom app, and under `Storage` and `Host Path Volumes`, point the `/app` entry to the new dataset you created
+- Edit your Foundry custom app, and under "Storage Configuration", point the existing `/app` Host Path entry to the new dataset you created
 
 This will start the new version, and you can then proceed to upgrade modules, migrate Worlds, and so on.
 
