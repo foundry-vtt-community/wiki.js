@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE Docker
 published: true
-date: 2024-12-14T10:29:54.906Z
+date: 2024-12-14T13:44:24.000Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -24,7 +24,11 @@ These instructions assume that you are at least somewhat-familar with TrueNAS an
 
 In the UI under Datasets, create two datasets. For example `apps/foundry-app` and `apps/foundry-data`, under the pool name. Do not place it under `ix-applications`, that is a system-managed dataset.
 
-Preset should be `Generic` or `Apps` for `foundry-app`. You can use `SMB` for `foundry-data`.
+Preset has to be `Generic` or `Apps` for `foundry-app`, to avoid permissions errors.
+
+You can use `SMB` for `foundry-data`.
+
+These can be under a common parent dataset. For example, I have `apps` as a case-sensitive, Generic, not shared dataset, then `foundry-app` under it the same, and `foundry-data` under it as SMB, case-insensitive.
 
 ## Download and unzip Foundry node.js code
 
