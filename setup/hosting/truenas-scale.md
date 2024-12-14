@@ -1,8 +1,8 @@
 ---
 title: TrueNAS SCALE
-description: Deploying Foundry on TrueNAS SCALE k3s
+description: Deploying Foundry on TrueNAS SCALE Docker
 published: true
-date: 2024-12-14T10:26:33.458Z
+date: 2024-12-14T10:29:54.906Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
