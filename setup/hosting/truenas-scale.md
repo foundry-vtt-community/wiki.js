@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE k3s
 published: true
-date: 2024-11-22T08:04:41.552Z
+date: 2024-12-14T10:26:33.458Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -47,30 +47,39 @@ In the TrueNAS UI, go to Apps, click on Discover Apps in the top right and then 
 Any settings I do not mention stay at default, which is most of them.
 
 - Give it an `Application Name`, e.g. `foundry`
-- `Image repository` is `node`
-- `Image Tag` is `22`, or whatever [node version](https://nodejs.org/en/about/previous-releases) is Active LTS
-- `Image Pull Policy` is `Always`
-- `Container Cmd`, hit the Add button 1 time, and enter:
+- "Image Configuration" `Repository` is `node`
+- "Image Configuration" `Tag` is `22`, or whatever [node version](https://nodejs.org/en/about/previous-releases) is Active LTS
+- "Image Configuration `Pull Policy` is `Always`
+
+- "Container Configuration" `Entrypoint`, hit the Add button 1 time, and enter:
   - `/bin/sh`
-- `Container Args`, hit the Add button 2 times, and enter:
+- "Container Configuration" `Command`, hit the Add button 2 times, and enter:
 	- `-c`
   - `hostname foundry && node /app/resources/app/main.js --port=30000 --headless --dataPath=/data`
-- `Port Forwarding`, hit the Add button, and enter:
+- "Container Configuration" `Restart Policy` is `Unless Stopped`
+
+- "Security Context Configuration"
+  - Check `Privileged Mode`
+
+- "Network Configuration" `Ports`, hit the Add button, and enter:
 	- `Container Port` to `30000`
   - `Node Port` to `30000`
-- `Storage`, under `Host Path Volumes` hit Add button twice, and enter:
-  - `Host Path` 1st entry, navigate to `/mnt/POOLNAME/apps/foundry-data`
-  - `Mount Path` 1st entry, set to `/data`
-  - `Host Path` 2nd entry, navigate to `/mnt/POOLNAME/apps/foundry-app`
-  - `Mount Path` 2nd entry, set to `/app`
-- `Workload Details`
-  - Check `Privileged Mode`
-- `Portal Configuration`, set:
-  - Check `Enable WebUI Portal`
-  - `Portal Name` to `Foundry`
+
+- `Portal Configuration`, click "Add":
+  - `Name` to `Foundry`
   - `Protocol for Portal` leave at `HTTP Protocol` for now
-  - Check `Use Node IP for Portal IP/Domain`
+  - Check `Use Node IP`
   - `Port` to `30000`
+  - `Path` to `/`
+
+- "Storage Configuration", under `Storage` hit Add button twice, and enter:
+  - `Type` 1st entry, set to `Host Path`
+  - `Mount Path` 1st entry, set to `/data`
+  - `Host Path` 1st entry, navigate to `/mnt/POOLNAME/apps/foundry-data`
+  - `Type` 2nd entry, set to `Host Path`
+  - `Mount Path` 2nd entry, set to `/app`
+  - `Host Path` 2nd entry, navigate to `/mnt/POOLNAME/apps/foundry-app`
+
 
 And that's it, deploy your app!
 
