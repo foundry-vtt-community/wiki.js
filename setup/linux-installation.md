@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-12-17T18:35:57.742Z
+date: 2024-12-17T18:50:25.241Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -30,7 +30,7 @@ This guide assumes that you have already installed linux, and have at least a ba
 The following is required to complete this guide:
 
 1. An existing server with a modern linux distribution installed with a minimum of 2GB of RAM, for example:
-a. A linux PC on your home network.
+a. A linux PC on your home network. *See note on [Port Forwarding](#port-forwarding)*
 b. A linux virtual machine on any host.
 c. A linux virtual private server or dedicated server in the cloud.
 2. A basic understanding of using a terminal that includes the ssh utility, such as:
@@ -41,6 +41,13 @@ a. A purchased domain name from a registrar like [Namecheap](https://namecheap.c
 b. A free subdomain from a free domain name service like [Duck DNS](http://duckdns.org).
 
 >The Foundry [minimum requirements](https://foundryvtt.com/article/requirements/) are 2GB RAM with 4GB recommended. Note that if you have other applications/services/etc that are using RAM in addition to Foundry, please consider more than 2GB. Essentially any CPU with at least one core should work. {.is-info}
+
+## Port Forwarding
+If you are planning to host on a PC on your home network, please double check that you are able to port forward. This guide assumes that you have already confirmed the ability to host on your home network, and set up port forwarding (if needed). 
+
+>If hosting on a PC on your home network, confirm your ability to host on your home network before continuing with this guide. {.is-info}
+
+See the Foundry documentation on [Port Forwarding](https://foundryvtt.com/article/port-forwarding/) for more info. 
 
 ## Preferred Linux Distribution
 
