@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-11-08T20:06:55.110Z
+date: 2024-12-17T18:35:57.742Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -283,11 +283,11 @@ pm2 save
 
 ## Set up the Caddy Reverse Proxy
 
->We recommend that you have a valid domain name with an A record pointing to `<public IP address>` to complete this section. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`.  (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns) if you are hosting on a home network)
+>We recommend that you have a valid domain name with an A record pointing to `<public IP address>` to complete this section. If you do not have a domain name, you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`.  (see [guide](https://foundryvtt.wiki/en/setup/hosting/ddns) if you are hosting on a home network)
 >
 >Having a valid domain name results in an HTTPS connection without insecure connection warnings from your and your players' browsers. 
 >
->If you do not have a domain name, you may continue with this section which will set up self-signed certificates for the bare IP connection to your VM, allowing an HTTPS connection but one that will prompt browsers to show a warning before clicking through to connect.{.is-info}
+>If you do not have a domain name, you may continue with this section which will set up self-signed certificates for the bare IP connection to your host, allowing an HTTPS connection but one that will prompt browsers to show a warning before clicking through to connect.{.is-info}
 
 
 <a id="C13" href="#C13">C13.</a> Run the following command to begin editing the Caddyfile:
