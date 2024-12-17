@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-12-17T18:50:25.241Z
+date: 2024-12-17T18:55:51.313Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -45,7 +45,7 @@ b. A free subdomain from a free domain name service like [Duck DNS](http://duckd
 ## Port Forwarding
 If you are planning to host on a PC on your home network, please double check that you are able to port forward. This guide assumes that you have already confirmed the ability to host on your home network, and set up port forwarding (if needed). 
 
->If hosting on a PC on your home network, confirm your ability to host on your home network before continuing with this guide. {.is-info}
+>If hosting on a PC on your home network, confirm your ability to host before continuing with this guide. {.is-info}
 
 See the Foundry documentation on [Port Forwarding](https://foundryvtt.com/article/port-forwarding/) for more info. 
 
