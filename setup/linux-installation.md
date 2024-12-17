@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-12-17T18:55:51.313Z
+date: 2024-12-17T19:10:40.674Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -48,6 +48,8 @@ If you are planning to host on a PC on your home network, please double check th
 >If hosting on a PC on your home network, confirm your ability to host before continuing with this guide. {.is-info}
 
 See the Foundry documentation on [Port Forwarding](https://foundryvtt.com/article/port-forwarding/) for more info. 
+
+This guide does not cover port forwarding, nor is it an alternative or way around requiring it. 
 
 ## Preferred Linux Distribution
 
