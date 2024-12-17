@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2024-11-08T20:07:25.134Z
+date: 2024-12-17T18:37:25.496Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -439,7 +439,7 @@ pm2 save
 
 ## Reverse Proxy and HTTPS Configuration with Caddy
 
->We recommend that you have a valid domain name with an A record pointing to `<public IP address>` to complete this section. If you do not have a domain name. you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`. 
+>We recommend that you have a valid domain name with an A record pointing to `<public IP address>` to complete this section. If you do not have a domain name, you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`. 
 >
 >Having a valid domain name results in an HTTPS connection without insecure connection warnings from your and your players' browsers. 
 >
