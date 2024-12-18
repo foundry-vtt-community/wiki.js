@@ -2,7 +2,7 @@
 title: World Scripts
 description: 
 published: true
-date: 2024-06-19T19:01:57.898Z
+date: 2024-12-18T21:17:35.876Z
 tags: 
 editor: markdown
 dateCreated: 2021-01-11T04:53:14.478Z
@@ -11,6 +11,8 @@ dateCreated: 2021-01-11T04:53:14.478Z
 > This is known to be up to date as of Foundry v12
 {.is-info}
 
+> **NOTE:** Unless you specifically want to add always-on code to one world only, you should instead add your scripts to a local *module*. There is a full guide for this [here](https://github.com/GamerFlix/foundryvtt-api-guide/blob/main/module_guide_create.md).
+> {.is-warning}
 
 World scripts, like modules and macros, are a way for users to define additional functionality for FoundryVTT.
 
