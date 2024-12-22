@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-12-17T19:10:40.674Z
+date: 2024-12-22T17:49:51.834Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -214,7 +214,8 @@ sudo npm install pm2 -g
 pm2 startup
 ```
 >***REQUIRED STEP*** 
->You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly.
+>You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly. {.is-info}
+
 <a id="C" />
 
 # C. Foundry and Reverse Proxy Setup
