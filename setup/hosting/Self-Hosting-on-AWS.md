@@ -2,14 +2,14 @@
 title: Self Hosting-on-AWS
 description: 
 published: true
-date: 2024-12-31T15:45:54.949Z
+date: 2024-12-31T17:05:22.578Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:51.723Z
 ---
 
 >**NOTE:** The AWS Free Tier provides 1GB of RAM. This is below the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server) for a dedicated Foundry server. You run the risk of running out of RAM and Foundry crashing, especially on heavier game systems, using many modules, or importing a lot of content into a world.
->This guide is out of date and is archived here for informational purposes only. {.is-warning}
+>This guide is out of date and is archived here for informational purposes only. Use at your own risk. {.is-warning}
 
 # Self-Hosting on AWS
 ## 1. Introduction, Requirements, and A Disclaimer
