@@ -2,11 +2,14 @@
 title: CSS Cascade Layers
 description: A guide to the CSS Cascade Layer system introduced in Foundry VTT v13
 published: true
-date: 2024-12-31T20:14:00.423Z
+date: 2024-12-31T21:19:28.296Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-31T20:13:49.920Z
 ---
+
+> Page is known to be up to date with Core Version 13.334
+{.is-info}
 
 ## TL;DR
 
