@@ -2,7 +2,7 @@
 title: CSS Cascade Layers
 description: A guide to the CSS Cascade Layer system introduced in Foundry VTT v13
 published: true
-date: 2024-12-31T21:19:28.296Z
+date: 2025-01-01T13:29:15.586Z
 tags: 
 editor: markdown
 dateCreated: 2024-12-31T20:13:49.920Z
@@ -16,6 +16,15 @@ dateCreated: 2024-12-31T20:13:49.920Z
 CSS Layers are a new part of the CSS standard which allows CSS authors to take more active control of the order in which CSS rules are applied. This makes it easier to isolate certain groups of rules to certain parts of the page.
 
 This is very useful for Foundry VTT module and system authors, who often need to isolate heavily styled app windows from Foundry's built-in styles.
+
+## Is this a breaking change in FVTT?
+
+Short answer: no.
+
+The core team introduced layers a while ago and then backed them out because the initial implementation broke some existing packages because of styles which were previously not overrides core suddenly being elevated in precedence.
+
+They have been reintroduced in Foundry VTT V13, with the addition of a `compatibility` layer which means that anything using V1 styles should stay the same. 
+
 
 ## Reading & References
 
