@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2024-12-17T18:37:25.496Z
+date: 2025-01-02T17:31:57.677Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -125,78 +125,62 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 ## Create a VCN (Virtual Cloud Network) and Security Policy
  
 
-<a id="C1" href="#C1">C1.</a> From the [**Get Started**](https://cloud.oracle.com/) page, click on **Set up a network with a wizard**. 
+<a id="C1" href="#C1">C1.</a> From the [**Get Started**](https://cloud.oracle.com/) page, click on the navigation menu (three horizontal lines) in the top right corner, then **Networking**, then **Virtual cloud networks**. 
 
-![Get Start Page](/images/oracle/image12.webp)
+<a id="C2" href="#C2">C2.</a> Click the **Start VCN Wizard** button, then **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
 
-<a id="C2" href="#C2">C2.</a> Choose **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
-
-![Start VCN Wizard](/images/oracle/image5.webp)
+>Occasionally, Oracle may ask you to select or re-select a **Compartment**. If you see a message about a missing Compartment, select the **Account Name (root)** compartment from the left hand menu, under List scope -> Compartment. {.is-warning}
 
 <a id="C3" href="#C3">C3.</a> Enter a **VCN Name**, such as `foundry`. 
 
-<a id="C4" href="#C4">C4.</a> Ensure that **USE DNS HOSTNAMES IN THIS VCN** is :white_medium_square:`unchecked`.
-
-![Create VCN](/images/oracle/image19.webp)
+<a id="C4" href="#C4">C4.</a> Ensure that **Use DNS hostnames in this VCN** is :white_medium_square:`unchecked`.
 
 <a id="C5" href="#C5">C5.</a> Click **Next** to proceed to the Review page.
 
 <a id="C6" href="#C6">C6.</a> Click **Create** to create the VCN. 
 
-<a id="C7" href="#C7">C7.</a> Once all steps here are marked "done" with a green checkmark :white_check_mark:, click **View Virtual Cloud Network**.
+<a id="C7" href="#C7">C7.</a> Once all steps here are marked "done" with a green checkmark :white_check_mark:, click **View VCN**.
 
-<a id="C8" href="#C8">C8.</a>  In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the **Public Subnet-foundry** link. 
+<a id="C8" href="#C8">C8.</a>  In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the **public subnet-foundry** link. 
 
-![VCN Created](/images/oracle/image20.webp)
-
-<a id="C9" href="#C9">C9.</a> Click **Default Security List** for foundry.
+<a id="C9" href="#C9">C9.</a> Click **Default Security List for foundry**.
 
 <a id="C10" href="#C10">C10.</a>  Click **Add Ingress Rules**.
 
 <a id="C11" href="#C11">C11.</a>  Ensure that **Stateless** is :ballot_box_with_check:`checked`.
 
-<a id="C12" href="#C12">C12.</a>  Enter `0.0.0.0/0` into the **SOURCE CIDR** field.
+<a id="C12" href="#C12">C12.</a>  Enter `0.0.0.0/0` into the **Source CIDR** field.
 
-<a id="C13" href="#C13">C13.</a>  Enter `80,443,30000` into the **DESTINATION PORT RANGE** field. 
-
-![Ingress Rules](/images/oracle/image25.webp)
+<a id="C13" href="#C13">C13.</a>  Enter `80,443,30000` into the **Destination Port Range** field. Then click **Add Ingress Rules**.
 
 
 >Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D38](#D38) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
-<a id="C14" href="#C14">C14.</a>  Click **Add Ingress Rules**.
+<a id="C14" href="#C14">C14.</a>  Repeat steps [C10 to C12](#C10), but only adding port 443 in step C13 and change `TCP` to `UDP` in **IP Protocol** before clicking **Add Ingress Rules**
+
+>Adding port 443 UDP here enabled HTTP/3 connectivity in Caddy later in this guide. {.is-info}
 
 >This completes the creation of a VCN with the correct security rules to allow connections to the Foundry host. {.is-info}
-
-<a id="C15" href="#C15">C15.</a>  Click **ORACLE Cloud** at the top left to return to the **Get Started** page to continue.
 
 
 
 ## Create a Compute VM (Virtual Machine) 
 
-<a id="C16" href="#C16">C16.</a>  From the **Get Started** page, click **Create a VM Instance**.
+<a id="C16" href="#C16">C16.</a>  From the **Get Started** page, click the navigation menu (three lines) then **Computer**, then **Instances**. On this page, click the **Create instance** button.
 
-![Create a VM Instance](/images/oracle/image23.webp)
+>Occasionally, Oracle may ask you to select or re-select a **Compartment**. If you see a message about a missing Compartment, select the **Account Name (root)** compartment from the left hand menu, under List scope -> Compartment. {.is-warning}
 
 <a id="C17" href="#C17">C17.</a>  On the next screen, enter a name for the VM instance. The name `foundry` is used for this guide. 
 
-![Compute Instance Name](/images/oracle/image14.webp)
-
 <a id="C18" href="#C18">C18.</a>  Leave the default **Availability Domain**. 
-
-![Change Image](/images/oracle/image4.webp)
 
 <a id="C19" href="#C19">C19.</a>  Click the **Change Image** button to select a new OS image.
 
-<a id="C20" href="#C20">C20.</a>  From the pop-out list, choose **Ubuntu** at the top, then :ballot_box_with_check:`check` **Canonical Ubuntu 22.04**. Ensure that the OS Version is **22.04**.
-
-<!-- ![Choose Ubuntu 22.04](/images/oracle/ubuntu-22.webp) -->
+<a id="C20" href="#C20">C20.</a>  From the pop-out list, choose **Ubuntu** at the top, then :ballot_box_with_check:`check` **Canonical Ubuntu Minimal 24.04* aarch64*. Ensure that the OS Version is **24.04**.
 
 <a id="C21" href="#C21">C21.</a>  Click **Select Image**.
 
-<a id="C22" href="#C22">C22.</a>  To change the type of VM to an Always Free Tier VM, click **Change Shape**.
-
-![Change Shape](/images/oracle/ubuntu-ampere.webp)
+<a id="C22" href="#C22">C22.</a>  To adjust the type of VM to an Always Free Tier VM with the resources for Foundry, click **Change Shape**.
 
 <a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Ampere**. 
 
@@ -230,20 +214,16 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
   
 </details>
 
-![Select Shape](/images/oracle/ampere-shape.webp)
-
 
 >If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.A1.Flex shape, then you will have to contact Oracle Support to resolve the issue. Choosing other shapes may incur charges. {.is-info}
 
 <a id="C25" href="#C25">C25.</a>  Click **Select Shape**.
 
-<a id="C26" href="#C26">C26.</a>  Scroll down to **Configure networking**.
+<a id="C26" href="#C26">C26.</a>  Scroll down to **Primary VNIC information**.
 
-<a id="C27" href="#C27">C27.</a>  Ensure that **foundry** is selected for Virtual cloud network in `<compartment name>`. This should appear by default.
+<a id="C27" href="#C27">C27.</a>  Ensure that **foundry** is selected for VCN in `<compartment name>`. This should appear by default.
 
-<a id="C28" href="#C28">C28.</a>  Ensure that **Public Subnet-foundry (Regional)** is selected for Subnet in `<compartment name>`. This should appear by default. 
-
-![Configure Networking](/images/oracle/image28.webp)
+<a id="C28" href="#C28">C28.</a>  Ensure that **public subnet-foundry (Regional)** is selected for Subnet in `<compartment name>`. This should appear by default. 
 
 <a id="C29" href="#C29">C29.</a>  Scroll down to **Add SSH keys**.
 
@@ -266,12 +246,12 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 >By specifying a larger Boot Volume you will be able to have up to roughly 190GB of storage for Foundry assets. However, doing so will prevent the use of multiple Compute VM instances that are provided with the Always Free Tier (not used in this guide). Think carefully about your desired future usage for the Always Free Tier before making this change. {.is-warning}
 
-<a id="C33" href="#C33">C33.</a>  All other options should be left at default. Click **Create**. 
+<a id="C33" href="#C33">C33.</a> All other options should be left at default. Click **Create**. 
 >If you receive an `Out of capacity for shape VM.Standard.A1.Flex in availability domain` error, then there are no more Always Free Tier instances available at the moment. You can try selecting a different Availability Domain above (double check that it is always-free tagged). Otherwise, according to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
 
-<a id="C34" href="#C34">C34.</a>  Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
+<a id="C34" href="#C34">C34.</a> Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
 
-<a id="C35" href="#C35">C35.</a>  Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
+<a id="C35" href="#C35">C35.</a> Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
 
