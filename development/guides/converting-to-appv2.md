@@ -2,7 +2,7 @@
 title: Converting to ApplicationV2
 description: A guide to convert an Application to ApplicationV2
 published: true
-date: 2024-09-15T13:46:16.208Z
+date: 2025-01-03T20:29:08.083Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T06:46:59.385Z
@@ -136,7 +136,7 @@ On `static DEFAULT_OPTIONS` we've declared a `handler: TemplateApplication.#onSu
 The main difference is that formData is the whole `FormDataExtended` instead of the its `object`.
 
 ```js
-#onSubmit(event, form, formData) {
+static #onSubmit(event, form, formData) {
     const settings = foundry.utils.expandObject(formData.object);
 	await Promise.all(
 		Object.entries(settings)
