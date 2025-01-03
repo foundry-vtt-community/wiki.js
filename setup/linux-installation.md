@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2024-12-29T13:22:28.326Z
+date: 2025-01-03T21:22:13.857Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -190,7 +190,7 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
   
 ```
 sudo apt update
-sudo apt install nodejs caddy unzip nano -y
+sudo apt install nodejs npm caddy unzip nano -y
 ```
 
 
