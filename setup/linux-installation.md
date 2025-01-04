@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-03T21:22:13.857Z
+date: 2025-01-04T19:08:26.035Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -49,7 +49,7 @@ If you are planning to host on a PC on your home network, please double check th
 
 See the Foundry documentation on [Port Forwarding](https://foundryvtt.com/article/port-forwarding/) for more info. You'll need to forward port 30000 (TCP) for just Foundry access, or 80 (TCP) and 443 (TCP + UDP) if using Caddy reverse proxy.
 
-This guide does not cover port forwarding, nor is it an alternative or way around requiring it. 
+This guide does not cover port forwarding, nor is it an alternative to port forwarding. If hosting on your PC at home over IPv4, you will need to port forward.
 
 ## Preferred Linux Distribution
 
