@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:50:52.426Z
+date: 2025-01-06T22:50:58.887Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -54,7 +54,7 @@ Un module, ce sont des extensions (ie des plugins, en quelque sorte) qui viennen
   
  Un monde (ie world en angliche), et bien c'est ta partie. Si par exemple tu maitrises 1 table à DD5 et une autre table à Hawkmoon, et bien tu auras 2 mondes. Et si tu maitrises 3 parties différentes à DD5, et bien tu auras 3 mondes. Le nombre de mondes possibles est infini, mais tu ne peux faire fonctionner qu'1 seul monde (ie 1 seule partie) à un instant donné.
  
- Installer des systèmes, des moodules et créer son monde est expliqué rapidement plus bas dans cette FAQ.
+ Installer des systèmes, des modules et créer son monde est expliqué rapidement plus bas dans cette FAQ.
  
 Pour aller plus loin, tu peux rapidement lire la Knowledge Base de Foundry, disponible ici : https://foundryvtt.com/kb 
 Ensuite, selon ton système de jeu, regarde dans les émissions des Chroniques de la Fonderie : https://foundryvtt.wiki/fr/pages/choniquesfonderie et également sur la chaine YT de Carter : https://www.youtube.com/@carterfoundryvtt
