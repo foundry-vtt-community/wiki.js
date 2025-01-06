@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:55:30.554Z
+date: 2025-01-06T22:56:04.719Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -139,7 +139,9 @@ Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra 
 
 ## Ca marche si j'héberge avec la 4G/5G ?
 
-Non, impossible. Les operateurs 4G ne permettent pas d'ouvrir des ports ou d'ouvrir sa connexion. Donc à moins de passer par des mécaniques de VPN avancées, la 4G est inutilisable pour partager son Foundry local.
+Non, impossible. Les operateurs 4G ne permettent pas d'ouvrir des ports ou d'ouvrir sa connexion. Donc à moins de passer par des mécaniques de VPN avancées, la 4G/5G est inutilisable pour partager son Foundry local. 
+
+On peut par contre l'utiliser pour se connecter à un serveur Foundry en tant que joueur.
 
 ## J’ai déjà un serveur, comment je fais ?
 
