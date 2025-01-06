@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:56:47.209Z
+date: 2025-01-06T22:57:22.656Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -211,6 +211,7 @@ Un système générique permet de plus de rapidement démarrer une table autour 
 ## Je vois qu'il y a des "systèmes". C'est quoi ?
 
 Les systèmes, ce sont les systèmes de jeu. Donc 1 système = 1 JDR. Pour pouvoir jouer à un jeu Y, il faut donc installer le système Y correspondant. 
+
 Exemple : je veux jouer à Warhammer, j'installe le système de jeu "Warhammer" en le cherchant dans l'interface "Systèmes".
 
 ## J’ai vu qu’il y avait aussi des modules, c’est quoi ?
