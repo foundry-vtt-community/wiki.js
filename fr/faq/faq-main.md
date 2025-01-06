@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2024-11-19T13:41:31.719Z
+date: 2025-01-06T22:49:48.574Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -29,7 +29,7 @@ C’est peut-être effectivement cher pour vous – et je peux le comprendre –
 
 ## 60 $ ? Et les joueurs doivent payer aussi ?
 
-C’est une question qui revient très souvent : donc, non bien sûr les joueurs ne payent pas. Une seule licence permet de faire jouer autant de joueurs que vous voulez à votre table. La seule contrainte est qu’il ne peut y a voir qu’1 seul jeu actif à un moment donné.
+C’est une question qui revient très souvent : donc, non bien sûr les joueurs ne payent pas. Une seule licence permet de faire jouer autant de joueurs que vous voulez à votre table. La seule contrainte est qu’il ne peut y a voir qu’1 seul jeu (ie qu'une seule partie de JDR) actif à un moment donné.
 
 ## Pourquoi c'est payant et pas gratuit ?
 
@@ -43,7 +43,7 @@ Non, les mises à jours de bugfixes et releases sont comprises dans le prix d’
 
 ## Y'a plein de vocabulaire que je comprends pas, comment faire ?
 
-Globalement, il a y trois termes/notions très importants sous FoundryVTT : les systèmes, les modules et les mondes.
+Globalement, il a y trois termes/notions très importants sous FoundryVTT : les systèmes (systems), les modules (modules) et les mondes (worlds).
 
 Un système (ie systems en angliche), c'est un système de jeu : un JDR quoi. Par exemple, tu veux jouer à l'Appel de Cthulhu, et bien c'est le système Appel de Cthulhu. Tu veux jouer à Savage Worlds, et bien c'est le système Savage Worlds, etc, etc.
 
