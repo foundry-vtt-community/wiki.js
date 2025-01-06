@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:52:57.332Z
+date: 2025-01-06T22:53:07.410Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -86,7 +86,7 @@ En payant 60 EUR (ou 50 EUR si promo), tu rémunères une équipe de rolistes d�
 
 Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut - je pense - en être conscient"
 
-## Bah finalement, on peut faire la même chose avec un de meeting vidéo et partage d’écran
+## Bah finalement, on peut faire la même chose avec un outil de meeting vidéo et partage d’écran
 
 Oui, tout à fait, et ça marche assez bien aussi. Les outils intégrés comme Roll20, Astral, FantasyGrounds, Foundry etc offrent toutefois des capacités des gestion des scènes, des actions, des PNJs qui sont difficilement atteignables avec un simple outil de meeting. Mais l’important c’est de jouer de toute manière.
 
