@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:52:38.905Z
+date: 2025-01-06T22:52:57.332Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -79,8 +79,11 @@ Cependant, il faut reconnaître qu’une partie du support et des documentations
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
 Voici un choix et une explication étayée - qui vaut ce qu'elle vaut : [cette page](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/). 
+
 De plus, le modèle de Foundry est un achat one-shot : tu disposes du soft, il est à toi à vie, et si jamais la société Foundry disparait, le code source sera disponible et pourra être repris par d'autres. Tout à l'opposé des modèles hébergés basés sur des abonnements ou des micro-transactions (Roll20, Lets'Role, etc).
+
 En payant 60 EUR (ou 50 EUR si promo), tu rémunères une équipe de rolistes développeurs de manière décente pour le travail fourni. Je précise d'ailleurs que l'équipe de Foundry est internationale, et qu'il y a même un Français dans la team officielle (SecretFire).
+
 Naturellement, c'est une affaire de goût et de choix, mais Foundry est un peu plus "qu'une licence à payer", c'est un modèle idéologique derrière également. On adhère ou pas, mais il faut - je pense - en être conscient"
 
 ## Bah finalement, on peut faire la même chose avec un de meeting vidéo et partage d’écran
