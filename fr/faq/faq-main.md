@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:53:18.690Z
+date: 2025-01-06T22:54:24.798Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -109,7 +109,9 @@ Ce document (https://www.lahiette.com/leratierbretonnien/wp-content/uploads/2024
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
-FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soit, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
+FoundryVTT, c'est comme disposer d'une sorte de super "Roll20" chez soi, en complète autonomie, et sans abonnement. Du coup, cette liberté et ce "pouvoir" implique effectivement un étape technique qui peut être ressentie comme plus ou moins difficile, selon ton affinité avec l'informatique. 
+
+Cependant, il y a plusieurs milliers d'utilisateurs en France (et plusieurs dizaines de milliers dans le monde) qui ont franchi ce pas, et tous ne sont pas des informaticiens, loin de là. De grands pouvoirs impliquent de grandes responsabilités :) (et encore, faut voir)
 
 Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce point lorsque nécessaire :)
 
