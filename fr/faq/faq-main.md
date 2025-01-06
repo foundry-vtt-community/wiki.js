@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:50:58.887Z
+date: 2025-01-06T22:52:38.905Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -57,6 +57,7 @@ Un module, ce sont des extensions (ie des plugins, en quelque sorte) qui viennen
  Installer des systèmes, des modules et créer son monde est expliqué rapidement plus bas dans cette FAQ.
  
 Pour aller plus loin, tu peux rapidement lire la Knowledge Base de Foundry, disponible ici : https://foundryvtt.com/kb 
+
 Ensuite, selon ton système de jeu, regarde dans les émissions des Chroniques de la Fonderie : https://foundryvtt.wiki/fr/pages/choniquesfonderie et également sur la chaine YT de Carter : https://www.youtube.com/@carterfoundryvtt
 
 D'autres vidéos sont souvent disponibles sur YT également, à chercher selon ton système de jeu.
@@ -71,7 +72,9 @@ Il peut de plus se transformer en assistant sur table, comme décrit ici par exe
 
 ## C’est tout en anglais ce machin !
 
-Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite bar « Baktov », ainsi que les systèmes D&D5 (Baktov également), Shadowrun, Starfinder, Savage Worlds (ça c’est bibi), Pathfinder 1 (wiki PF-FR) & Pathfinder 2 (rectulo) et Warhammer 4 (ça c’est bibi aussi). Cependant, pour l’instant, il faut reconnaître qu’une partie importante du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
+Oui, c’est vrai, les auteurs étant majoritairement américains ou anglo-saxons. Mais des traducteurs traduisent petit à petit les contenus : ainsi l’interface générale du jeu est traduite par la communauté FR de Foundry, ainsi que les systèmes D&D5, Shadowrun, Starfinder, Savage Worlds, Pathfinder 1 & 2, Warhammer 4, Forbidden Lands, Alien, etc.
+
+Cependant, il faut reconnaître qu’une partie du support et des documentations sont en anglais : si vraiment cette langue est pour vous hors de portée, je crains qu’il ne vous faille attendre… ou utiliser un autre outil, plus francisé.
 
 ## Bon OK, mais pourquoi s’intéresser autant à cet outil ? Et pas aux autres ?
 
