@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:54:24.798Z
+date: 2025-01-06T22:54:54.741Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -117,7 +117,13 @@ Le Discord FR de Foundry est justement là - entre autre - pour aider sur ce poi
 
 ## J’y connais rien en informatique, je peux m’en servir quand même ?
 
-Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir des ports dans son modem ADSL‘ dans votre moteur de recherche…) et que vous savez installer un programme sur votre ordinateur, il est probable que vous saurez vous en servir. Si tout ceci est déjà trop compliqué ou chiant (:)) pour vous, il faudra vous tourner ves les offres d’hébergement tiers, comme The Forge. Sinon, si un de vos joueurs est un peu informaticien, il peut probablement vous aider dans cette tâche. Il faut compter 3-4 Mbs d’upload montant pour héberger une partie chez vous, donc il est possible que vous ayez besoin d’un serveur tiers si votre connexion est lente. Il existe de l’aide à ce sujet sur le Wiki de Foundry. Un certains nombres d’utilisateurs présents sur le Discord FR de Foundy sont également capables d’apporter du support sur ces sujets.
+Si vous savez ouvrir des ports dans votre routeur ADSL/Fibre (tapez ‘ouvrir des ports dans son modem ADSL‘ dans votre moteur de recherche…) et que vous savez installer un programme sur votre ordinateur, il est probable que vous saurez vous en servir. 
+
+Si tout ceci est déjà trop compliqué ou chiant (:)) pour vous, il faudra vous tourner ves les offres d’hébergement tiers, comme The Forge. 
+
+Sinon, si un de vos joueurs est un peu informaticien, il peut probablement vous aider dans cette tâche. 
+
+Il faut compter 3-4 Mbs d’upload montant pour héberger une partie chez vous, donc il est possible que vous ayez besoin d’un serveur tiers si votre connexion est lente. Il existe de l’aide à ce sujet sur le Wiki de Foundry. Un certains nombres d’utilisateurs présents sur le Discord FR de Foundy sont également capables d’apporter du support sur ces sujets.
 
 ## Je n'ai pas de serveur, je peux le mettre sur mon PC ?
 
