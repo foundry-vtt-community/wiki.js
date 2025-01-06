@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:50:39.618Z
+date: 2025-01-06T22:50:52.426Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -52,7 +52,7 @@ Un module, ce sont des extensions (ie des plugins, en quelque sorte) qui viennen
  - des modules qui modifient ou changent le comportement de Foundry (ie gestion des combats, affichage différent, outils de dessin supplémentaires, etc etc)
   - des modules de scénarios/campagnes complet, qui permettent d'avoir tout prêt des cartes, des images et des PNJs pour jouer.
   
- Un monde (ie world en angliche), et bien c'est ta partie. Si par exemple tu maitrises 1 table à DD5 et une autre table à Hawkmoon, et bien tu auras 2 mondes. Et si tu maitrises 3 parties différentes à DD5, et bien tu auras 3 mondes. Le nombre de mondes possibles est infini, mais tu ne peux faire fonctionner qu'1 seul monde à un instant donné.
+ Un monde (ie world en angliche), et bien c'est ta partie. Si par exemple tu maitrises 1 table à DD5 et une autre table à Hawkmoon, et bien tu auras 2 mondes. Et si tu maitrises 3 parties différentes à DD5, et bien tu auras 3 mondes. Le nombre de mondes possibles est infini, mais tu ne peux faire fonctionner qu'1 seul monde (ie 1 seule partie) à un instant donné.
  
  Installer des systèmes, des moodules et créer son monde est expliqué rapidement plus bas dans cette FAQ.
  
