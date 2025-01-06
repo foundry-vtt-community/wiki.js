@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:49:48.574Z
+date: 2025-01-06T22:50:21.884Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -49,8 +49,8 @@ Un système (ie systems en angliche), c'est un système de jeu : un JDR quoi. Pa
 
 Un module, ce sont des extensions (ie des plugins, en quelque sorte) qui viennent améliorer ou ajouter des choses à ta partie. Il en existe de plusieurs catégories : 
  - des modules qui apportent du contenu (ie des musiques, des illustrations, des cartes, etc...)
-  - des modules qui modifient ou changent le comportement de Foundry (ie gestion des combats, affichage différent, outils de dessin supplémentaires, etc etc)
-  - des modules de scénarios/campagnes complet, qui permettent d'avoir tout prêt des cartes, images et PNJs pour jouer/
+ - des modules qui modifient ou changent le comportement de Foundry (ie gestion des combats, affichage différent, outils de dessin supplémentaires, etc etc)
+  - des modules de scénarios/campagnes complet, qui permettent d'avoir tout prêt des cartes, des images et des PNJs pour jouer.
   
  Un monde (ie world en angliche), et bien c'est ta partie. Si par exemple tu maitrises 1 table à DD5 et une autre table à Hawkmoon, et bien tu auras 2 mondes. Et si tu maitrises 3 parties différentes à DD5, et bien tu auras 3 mondes. Le nombre de monde possibme est infini, mais tu ne peux faire fonctionner qu'1 seul monde à un instant donné.
  
