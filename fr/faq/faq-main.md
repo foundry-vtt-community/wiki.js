@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:54:54.741Z
+date: 2025-01-06T22:55:30.554Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -133,10 +133,9 @@ Oui, bien sûr, c’est l’un des 3 modes d’installation. Dans ce cas, vous a
 
 Cela revient à faire tourner Foundry tout le temps, et donc à laisser allumer un PC/serveur quelque part. Ce "quelque part" peut-être chez vous, ou encore sur un service d'hébergement en ligne (Oracle, AWS, TheForge). A noter que chez vous, une petit Raspberry Pi peut parfaitement se transformer un serveur Foundry pour un coût énergétique réduit.
 
-
 ## Et il faut de la bande passante ?
 
-Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra au moins 4 Mbs montant (je dis bien montant) pour jouer confortablement. Donc si vous avez la fibre ou un "gros" ADSL, ca doit marcher. Sinon, il faut vous orienter vers un hébergement tiers.
+Oui, un peu, surtout en montant. Si vous jouez avec 4-5 joueurs, il vous faudra au moins 4 Mbs montant (je dis bien montant) pour jouer confortablement. Donc si vous avez la fibre ou un "gros" ADSL, ca marchera sans soucis. Sinon, il faut vous orienter vers un hébergement tiers.
 
 ## Ca marche si j'héberge avec la 4G/5G ?
 
