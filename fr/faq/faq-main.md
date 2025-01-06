@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:56:04.719Z
+date: 2025-01-06T22:56:47.209Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -156,13 +156,15 @@ Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus pop
 
 ## Je peux l'installer plusieurs fois ?
 
-Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pou jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
+Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pour jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
 
 ## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
 
 Tout d'abord, venir s'inscrire sur le Discord FR Foundry ( https://discord.gg/pPSDNJk ), puis lire cette FAQ :) 
+
 Ensuite, parcourir la "Knowledge Base" de Foundry : https://foundryvtt.com/kb
-Ensuite, selon le système de jeu qui t'interesse, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder si ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission présente en général un système de jeu français ou traduit : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
+
+Enfin, selon le système de jeu qui t'interesse, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder si ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission présente en général un système de jeu français ou traduit : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
 
 Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
 
