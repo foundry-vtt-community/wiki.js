@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-07T18:48:54.430Z
+date: 2025-01-07T21:25:15.480Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -350,7 +350,7 @@ sudo service caddy restart
 ```
 nano ~/foundryuserdata/Config/options.json
 ```
-<a id="C18" href="#C18">C18.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are. The `hostname` parameter will tell Foundry to use a hostname in the Internet Invite Link. Replace `<your.domain.name>` with your actual domain name.
+<a id="C18" href="#C18">C18.</a> Find the `proxySSL` and `proxyPort` parameters, and change them as below. Leave all other options as they are. The `hostname` parameter will tell Foundry to use a hostname in the Internet Invite Link. Replace `<your.domain.name>` with your actual domain name, if you have one. If not then do not modify the `hostname` field.
 ```
 ...
 "proxyPort": 443,
