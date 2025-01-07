@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-04T19:08:26.035Z
+date: 2025-01-07T18:48:54.430Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -190,7 +190,7 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
   
 ```
 sudo apt update
-sudo apt install nodejs npm caddy unzip nano -y
+sudo apt install nodejs caddy unzip nano -y
 ```
 
 
@@ -201,7 +201,7 @@ sudo apt install nodejs npm caddy unzip nano -y
 node --version
 npm --version
 ```
-`node` should return a version of 18 or greater. The `npm` version doesn't matter, but should return something. 
+`node` should return a version of 20 or greater. The `npm` version doesn't matter, but should return something. 
 
 <a id="B10" href="#B10">B10.</a> Install `pm2`:
 
