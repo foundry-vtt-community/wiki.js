@@ -2,7 +2,7 @@
 title: GreenSock
 description: Enabling and accessing the powerful GreenSock animation API in your system or module.
 published: true
-date: 2025-01-08T13:18:17.318Z
+date: 2025-01-08T13:21:32.144Z
 tags: greensock
 editor: markdown
 dateCreated: 2022-02-06T08:13:05.793Z
@@ -37,17 +37,19 @@ The `gsap` object serves as the access point for most of GreenSock's functionali
 // The gsap object can handle most animations on its own (see the GreenSock documentation for details):
 gsap.to("#turn-me-orange", {backgroundColor: "orange", duration: 2});
 ```
-### 2) Access Additional Functionality Through Plugins
-More specialized features are offered in the form of plugins (a full list of which can be found [here](https://greensock.com/docs/v3/Plugins)). Additional plugins should be imported by name alongside the default `gsap` object, and only as needed (to avoid unnecessary bloat). Finally, it's good practice to register any plugins you import with the `gsap` object --- this isn't always necessary, but it never hurts:
+### 2) Import Plugins to Unlock Even Greater Power
+More specialized features are offered in the form of plugins (a full list of which can be found [here](https://greensock.com/docs/v3/Plugins)). Plugins should be imported by name and only as needed (to avoid unnecessary bloat), from `"/scripts/greensock/esm/all.js"`:
 
 ```javascript
-import gsap, {
+import {
   MorphSVGPlugin,
   Physics2DPlugin,
   PixiPlugin,
   SplitText
 } from "/scripts/greensock/esm/all.js";
-
+```
+Finally, it's good practice to register any plugins you import with the `gsap` object --- this isn't always necessary, but it never hurts:
+```javascript
 gsap.registerPlugin(MorphSVGPlugin, Physics2DPlugin, PixiPlugin, SplitText);
 ```
 
@@ -55,6 +57,6 @@ gsap.registerPlugin(MorphSVGPlugin, Physics2DPlugin, PixiPlugin, SplitText);
 {.is-warning}
 
 ```javascript
-import gsap, {Draggable as Dragger} from "/scripts/greensock/esm/all.js";
+import {Draggable as Dragger} from "/scripts/greensock/esm/all.js";
 gsap.registerPlugin(Dragger);
 ```
