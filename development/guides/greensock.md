@@ -2,7 +2,7 @@
 title: GreenSock
 description: Enabling and accessing the powerful GreenSock animation API in your system or module.
 published: true
-date: 2024-07-07T04:09:48.999Z
+date: 2025-01-08T13:16:18.910Z
 tags: greensock
 editor: markdown
 dateCreated: 2022-02-06T08:13:05.793Z
@@ -18,7 +18,7 @@ A tutorial on GreenSock's features is beyond the scope of this article, but don'
 Enabling GreenSock in your Foundry project, then accessing it from within your scripts, isn't especially well-documented and is the main purpose of this guide.  Fortunately, the process isn't difficult — follow these few quick steps, and you'll be off to the races:
 
 ### 1) Add a Reference in Your `system.json`/`module.json` File
-Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `system.json`/`module.json` file. Be sure to put it *before* your main script file, e.g.:
+Add `"greensock/dist/gsap.min.js"` as an entry in the `"esmodules"` property of your `system.json`/`module.json` file. Be sure to put it *before* your main script file, e.g.:
 
 ```json
 {
@@ -26,20 +26,18 @@ Add `"greensock/esm/all.js"` as an entry in the `"esmodules"` property of your `
   "title": "My System",
   ...
   "esmodules": [
-    "greensock/esm/all.js",
+    "greensock/dist/gsap.min.js",
     "scripts/mysystem.js"
   ],
   ...
 }
 ```
-### 2) Import `gsap` and Any Desired Plugins As Needed in Your JavaScript Files
-The `gsap` object serves as the access point for most of GreenSock's functionality, and is the default export from `greensock/esm/all.js`. In many cases, this will be all you need to accomplish your animation goals:
+The `gsap` object serves as the access point for most of GreenSock's functionality, and is added to the global scope (i.e. you can access `gsap` from anywhere). In many cases, this will be all you need to accomplish your animation goals:
 ```javascript
-import gsap from "/scripts/greensock/esm/all.js";
-
 // The gsap object can handle most animations on its own (see the GreenSock documentation for details):
 gsap.to("#turn-me-orange", {backgroundColor: "orange", duration: 2});
 ```
+### 2) Access Additional Functionality Through Plugins
 More specialized features are offered in the form of plugins (a full list of which can be found [here](https://greensock.com/docs/v3/Plugins)). Additional plugins should be imported by name alongside the default `gsap` object, and only as needed (to avoid unnecessary bloat). Finally, it's good practice to register any plugins you import with the `gsap` object --- this isn't always necessary, but it never hurts:
 
 ```javascript
