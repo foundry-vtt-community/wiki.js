@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-11T15:07:43.037Z
+date: 2025-01-11T15:09:13.924Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -64,7 +64,7 @@ This guide supports most distributions based on Debian 11 or 12, including:
 
 Any distrition that uses the `apt` package managers *should* be compatible with this guide, as long as the [Distributions and Installations Types to Avoid](#distributions-and-installation-types-to-avoid) section is followed. 
 
-### Distributions and Installation Types to Avoid
+## Distributions and Installation Types to Avoid
 
 - **Amazon Linux 2**
 This AWS-specific distribution does not support Node 18+, and also includes a number of changes and customizations that are specific to AWS and are out of scope of a simple Foundry hosting setup. 
