@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-11T15:09:13.924Z
+date: 2025-01-11T15:10:35.635Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -75,7 +75,7 @@ These distributions *may* work to host Foundry, but the instructions below will 
 - Legacy or 32-bit **Raspberry Pi OS/Raspbian** 
 Current 64-bit Raspberry Pi OS works and is recommended, but older or 32-bit versions have limited support for newer Node versions or could bump into limitations down the line. 
 
-- Any distribution or setup that pre-installs a web server, admin management console, or other graphical server management system
+- Any distribution or setup that pre-installs a graphical web interface, admin management console, or other server management system
 This guide is **NOT** compatible with setups that include **Plesk**, **Webmin**, **cPanel**, **DirectAdmin** or similar locked down systems intended to be configured by GUI only. 
 
 >This guide requires 64 bit Debian 11 or 12 based distributions or higher. Using lower versions may not function properly. 32 bit OSs will have issues with RAM and NodeJS heap size. {.is-info}
