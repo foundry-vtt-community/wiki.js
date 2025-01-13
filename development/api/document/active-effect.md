@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2024-07-29T03:12:17.296Z
+date: 2025-01-13T03:46:00.031Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -52,8 +52,9 @@ The core functionality of Active Effects is provided by the `changes` array, whi
 
 - The `key` property uses dot notation for nested properties, e.g. `system.attributes.strength.value`
 - The `value` property is intelligently handled by the target properties corresponding `DataField` instance, if available
-- The `mode` property can be one of six values, 0-6. They correspond to:
-  0. Special
+- The `mode` property can be one of six [values](https://foundryvtt.com/api/v12/enums/foundry.CONST.ACTIVE_EFFECT_MODES.html), 0-6. They correspond to:
+
+  0. Custom, see [applyActiveEffect Hook](https://foundryvtt.wiki/en/development/api/document/active-effect#applyactiveeffect-hook) below on this page.
   1. Multiply
   2. Add
   3. Downgrade
@@ -102,7 +103,9 @@ It may be of interest to edit this method to condition the changes applied to th
 ```
 
 ### applyActiveEffect Hook
-
+The `applyActiveEffect` hook is triggered whenever an `ActiveEffect` with the `CUSTOM` mode is applied. This hook allows system or module developers to implement custom handling for such change.
+#### Hook Parameters
+The hookedFunction will have the following parameters
 ```js
 /**
  * A hook event that fires when a custom active effect is applied.
@@ -115,6 +118,38 @@ It may be of interest to edit this method to condition the changes applied to th
  * @param {object} changes                An object which accumulates changes to be applied
  */
 function applyActiveEffect(actor, change, current, delta, changes) {}
+```
+
+#### Usage
+System or module developers can use this hook to intercept and process custom logic for CUSTOM mode changes. Modifications to the changes object will be reflected in the final application of the effect.
+
+A practical example of a custom handle could be:
+
+```js
+// Calculates the average of the current value and the delta value
+Hooks.on("applyActiveEffect", (actor, change, current, delta, changes) => {
+  let update;
+  const ct = foundry.utils.getType(current);
+
+  switch (ct) {
+    case "number": {
+      // Average of two numbers
+      update = (current + delta) / 2;
+      break;
+    }
+    default: {
+      // Unsupported type, log a warning
+      console.warn(
+        `ActiveEffect "${change.key}" cannot calculate average for type: ${ct}`
+      );
+      update = current;
+      break;
+    }
+  }
+
+  changes[change.key] = update;
+});
+
 ```
 
 ### `type` and `system`
