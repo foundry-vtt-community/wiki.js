@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-11T15:10:35.635Z
+date: 2025-01-20T21:01:24.472Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -62,7 +62,7 @@ This guide supports most distributions based on Debian 11 or 12, including:
 3. 64 bit Raspberry Pi OS 
 
 
-Any distrition that uses the `apt` package managers *should* be compatible with this guide, as long as the [Distributions and Installations Types to Avoid](#distributions-and-installation-types-to-avoid) section is followed. 
+Any distribution that uses the `apt` package managers *should* be compatible with this guide, as long as the [Distributions and Installations Types to Avoid](#distributions-and-installation-types-to-avoid) section is followed. 
 
 ## Distributions and Installation Types to Avoid
 
