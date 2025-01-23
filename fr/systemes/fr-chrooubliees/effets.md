@@ -2,7 +2,7 @@
 title: Les effets
 description: Comment créer et utiliser les effets sur un personnage ou un objet
 published: true
-date: 2023-04-20T19:22:29.575Z
+date: 2025-01-23T17:27:05.107Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-02T08:50:41.844Z
@@ -105,26 +105,26 @@ Vous trouverez ici la liste des attributs les plus utiles pour simuler les capac
 Il faut utiliser les champs bonus ou malus lorsqu'ils existent.
 
 Les caractéristiques
-- data.stats.[stat].bonus : valeur positive pour un bonus, négative pour un malus
-- data.stats.[stat].skillbonus : bonus qui sera appliqué et visible lors du jet de la caractéristique 
-- data.stats.[stat].skillmalus : malus qui sera appliqué et visible lors du jet de la caractéristique 
+- system.stats.[stat].bonus : valeur positive pour un bonus, négative pour un malus
+- system.stats.[stat].skillbonus : bonus qui sera appliqué et visible lors du jet de la caractéristique 
+- system.stats.[stat].skillmalus : malus qui sera appliqué et visible lors du jet de la caractéristique 
 
 Les valeurs possibles pour [stat] sont : str|dex|con|int|wis|cha
 Par exemple, si vous voulez donner un bonus de +4 à la valeur de charisme : 
 	Clé : data.stats.cha.bonus Mode : Ajouter Valeur : 4
 
 Les attaques
-- data.attacks.melee.bonus : attaque de contact
-- data.attacks.ranged.bonus : attaque à distance
-- data.attacks.magic.bonus : attaque magique
+- system.attacks.melee.bonus : attaque de contact
+- system.attacks.ranged.bonus : attaque à distance
+- system.attacks.magic.bonus : attaque magique
 
 Pour donner un malus de 2, il faut mettre un bonus de -2.
 
 Les attributs secondaires
-- data.attributes.hp.bonus : Points de vie
-- data.attributes.fp.bonus : Points de chance (fortune points)
-- data.attributes.mp.bonus : Points de magie (Mana points)
-- data.attributes.rp.bonus : Points de recup (recovery points)
-- data.attributes.init.bonus : score d'initiative
-- data.attributes.def.bonus : score de def
-- data.attributes.def.malus : score de def
+- system.attributes.hp.bonus : Points de vie
+- system.attributes.fp.bonus : Points de chance (fortune points)
+- system.attributes.mp.bonus : Points de magie (Mana points)
+- system.attributes.rp.bonus : Points de recup (recovery points)
+- system.attributes.init.bonus : score d'initiative
+- system.attributes.def.bonus : score de def
+- system.attributes.def.malus : score de def
