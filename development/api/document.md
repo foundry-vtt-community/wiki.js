@@ -2,7 +2,7 @@
 title: Document
 description: An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by _id.
 published: true
-date: 2025-01-19T00:43:34.869Z
+date: 2025-01-29T07:05:49.855Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-15T16:03:42.636Z
@@ -486,7 +486,9 @@ actorFoo.update({
 
 ### Relationships between Primary Documents
 
-Sometimes it is desirable to create a relationship between documents which cannot be embedded within one another (e.g. Items within other Items). The best way to accomplish this is by recording the ID or UUID on one or both of the documents. Then, when you need to 
+Sometimes it is desirable to create a relationship between documents which cannot be embedded within one another (e.g. Items within other Items). The best way to accomplish this is by recording the ID or UUID on one of the documents. Then, when you need to use the connection, use `doc.collection.get(id)` to grab a sibling, or `fromUuid` or `fromUuidSync` if you're storing a UUID. 
+
+Helper functions like getters can simplify the process - store the ID/UUID as a string then have a helper function handle the retrieval. Helper functions can also work for a reverse lookup - in the dnd5e system, many items have a `system.container` property to track the appropriate bag or barrel, and then container items have a `contents` getter that searches through the parent collection for items with a `system.container` property that matches the ID of the container.
 
 #### Unlinked Actors/Tokens
 
