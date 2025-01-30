@@ -2,7 +2,7 @@
 title: TrueNAS SCALE
 description: Deploying Foundry on TrueNAS SCALE Docker
 published: true
-date: 2024-12-14T13:50:15.029Z
+date: 2025-01-30T11:57:12.603Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -93,6 +93,8 @@ You can now connect to Foundry at `http://IP-of-TrueNAS:30000` and give it a lic
 
 ## Remote access via https and CloudFlare
 
+> The instructions below assume that the only app you want to access via 443 is this single Foundry instance. If you have multiple apps, you'd need to place a reverse proxy like Nginx between. That is described in the [TrueNAS forums](https://forums.truenas.com/t/nginx-proxy-manager-configuration-tips-especially-if-you-are-stuck-at-deploying/14653)
+
 You can of course at this point forward `30000` at your router and have your users connect to that. But how cool would it be if they could use a domain name, and TLS worked for video/voice chat?
 
 - Create a login at CloudFlare
@@ -107,8 +109,6 @@ You can of course at this point forward `30000` at your router and have your use
 - On your router, create a port forwarding entry for TCP port `443` to go to `IP-of-TrueNAS` and port `30000`.
 - In CloudFlare, under SSL/TLS and Overview, choose either Full or Full (strict)
 - Test that you can get to your FoundryVTT instance via your domain name for it
-
-> This assumes that the only app you want to access via 443 is this single Foundry instance. If you have multiple apps, you'd need to place a reverse proxy like Traefik between. That is out of scope for these instructions.
 
 ## Dynamic DNS
 
