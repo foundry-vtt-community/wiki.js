@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-04T18:58:49.447Z
+date: 2025-02-04T19:33:37.872Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -22,7 +22,6 @@ Copy, paste, and run this command in Terminal:
 ```
 mkdir -p ~/Applications/Foundry/userdata
 ```
-
 >If you decide to spin up more than one Foundry instance in this way, you'll want to *modify* these folder names so that it is clear which is which. For example, you may want to use `/Foundry12/userdata` to indicate that this is a Foundry v12 instance. If you're doing this, you'll just need to watch for other times in the guide where these folder names are used, and tweak them as needed.
 
 This will create a few new folders inside your home directory, where we are going to store both the application and the userdata for this new Node instance.
@@ -85,7 +84,6 @@ brew install node@22
 
 # F. Install PM2
 <a id="F1" href="#F1">F1:</a> Now that Node is installed, we can use its `npm` package manager to install `pm2`, which will be what we use to start & stop this Foundry instance, and allow it to run in the background.
-
 ```
 npm install pm2@latest -g
 ```
@@ -98,10 +96,9 @@ Ignore the `npm notice` lines that show when this is complete.
 - If you are intending to have this Node instance running in the background, so that it will be accessible simultaneously with your desktop app's instance, then you will need to use a unique port when launching the Node host (`30001` for example), and will likely need to set up a second forwarding rule in your router.
 **Note that in this case a second Foundry license is also required, if others are going to be able to access both hosts at any time.**
 
-We'll assume you're going with port `30000`; edit the command below as needed.
+We'll assume you're going with port `30000`; edit the command below with a different port number if you're deciding to change it.
 
 <a id="G2" href="#G2">G2:</a> Launch Foundry via `pm2`:
-
 ```
 pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
 ```
@@ -114,7 +111,6 @@ As soon as you run this, macOS should throw a warning that the Node app was "not
 <a id="G4" href="#G4">G4:</a> Click the "Done" button in the "Not Opened" dialog. You should get a new dialog, which will now have an "Open Anyway" button. Click that. You will be prompted to enter your macOS user password. You can then close the System Settings app.
 
 <a id="G5" href="#G5">G5:</a> Back in Terminal, see if the Node instance is properly running still:
-
 ```
 pm2 list
 ```
@@ -125,7 +121,6 @@ You should see something like this:
 >If you see that the Status for the process is `errored`, this is *likely* due to having the Foundry desktop app still running, and using the same port. Either close the desktop app, or choose a unique port for each. Use `pm2 restart foundry` to retry after sorting this out. {.is-warning}
 
 <a id="G6" href="#G6">G6:</a> Save the setup of this `pm2` process:
-
 ```
 pm2 save
 ```
@@ -145,8 +140,30 @@ If you need to manually stop it (so that you can run your desktop app instance i
 ```
 pm2 stop foundry
 ```
-
 Likewise, you can use `pm2 start foundry` to start it again, and `pm2 restart foundry` any time you need to just restart the instance.
+
+# I. More Instances
+
+<a id="I1" href="#I1">I1:</a> Once you've done all the work to get this far, it's *very* easy to spin up more Node instances at any time, with the following considerations:
+- Each instance *always* needs its own unique userdata folder.
+- A new instance of the *same Foundry version* as an existing instance doesn't need its own app folder; can re-use the same one.
+- You'll want to start being more explicit with your folder and process naming, so that it's always clear what's what.
+
+<a id="I2" href="#I2">I2:</a> Here's a brief example of how to, say, add a v11 instance to your machine:
+1. In the `~/Applications` folder in your home directory, make a `Foundry11` folder.
+2. Download Foundry v11.315 from the website, unzip it, move the folder into `Foundry11`, and rename the folder `foundryapp`.
+3. Make a `userdata` folder here as well, alongside `foundryapp`.
+4. In Terminal, launch a new `pm2` process for v11, with:
+```
+pm2 start "node ~/Applications/Foundry11/foundryapp/resources/app/main.js --dataPath=$HOME/Applications/Foundry11/userdata --port=30011" --name foundry11
+```
+Note the changes there, compared to the initial launch command: The `Foundry11` folder in two places, the `foundry11` process name at the end, and a unique `port`.
+
+>It's helpful to make your ports easy to remember by tying them to the instance version, so `30011` here, and perhaps `30013` for a v13 instance.
+
+Once that's up, do a `pm2 save` to save it, and then manage it the same as described earlier, but with its unique process name — `pm2 stop foundry11` for example.
+
+Now your v11 instance will be available in your browser at <a href="http://localhost:30011">http://localhost:30011</a>
 
 # X. TL;DR
 <a id="X1" href="#X1">X1:</a> If you know what you're doing with the Terminal and file management on macOS, here's a no-guide list of the steps to take:
@@ -161,6 +178,6 @@ rm ~/Applications/Foundry/foundryvtt.zip
 sudo curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew install node@22
 npm install pm2@latest -g
-pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=~/Applications/Foundry/userdata --port=30000" --name foundry
+pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
 pm2 save
 ```
