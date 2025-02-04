@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-01-20T21:01:24.472Z
+date: 2025-02-04T21:17:46.720Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -629,3 +629,90 @@ pm2 start foundry
 ```
 
 Foundry should now start properly without the GLIBC error!
+<a id="I" />
+
+# (Optional) I. Multiple Instances
+## Objective
+
+This section describes how you should set up multiple Foundry instances without conflict, on the same host. It supplements the instructions in section [C](#C), so you'll need to adjust as you go keeping the instructions below in mind.
+
+## Why Multiple Instances? 
+
+There are a few reasons to have multiple instances of Foundry going at the same time, for example:
+
+- Having one gaming instance, and one "dev" instance with completely separate userdata locations to keep development away from "production."
+- Wanting to use game systems with different Foundry major version requirements. Sometimes, game systems may take a while to be updated to the latest (or may never be) but you'd like to use that at the same time as an updated one. 
+- Testing game systems or modules on a new in-development version of Foundry without touching your existing userdata and installation.
+
+## Foundry Licensing and Multiple Instances
+
+Please read and understand the terms of the [Foundry license](https://foundryvtt.com/article/license/) in regards to using it with [multiple instances](https://foundryvtt.com/article/faq/#license-usage).
+
+Basically, if you want to have more than one instance available to players at the same time you will need to have a separate Foundry license for that instance.
+
+## Multiple Instance Installation
+
+These instructions modify the ones in section [C](#C). Read through the whole section to understand what to do, and then you may want to refer back and forth and pay close attention to how you differentiate each instance in every command.
+
+
+<a id="I1" href="#I1">I1.</a> In steps [C3](#C3) through [C6](#C6), step [C10](#C10), and step [C17](#C17) nest the `foundry` and `foundryuserdata` folders one more level into a newly created folder reflecting the instance of Foundry. For example, your folder structure should look like:
+
+Installation folder: `/home/foundry/foundryv12/foundry`
+Userdata folder: `/home/foundry/foundryv12/foundryuserdata`
+
+Note the `foundryv12` here as an additional folder layer. Create as many of these additional folder layers as you'd like to have instances, for example `foundryv11`, `foundryv13`, `foundrydev` etc. 
+
+>It can be helpful to be descriptive with the name of this folder to keep track of which instance resides in which folder. Use `foundryv12` rather than `foundry1`, `foundry2`, etc. {.is-info}
+
+Repeat the relevant steps for each instance.
+
+<a id="I2" href="#I2">I2.</a> In steps [C10](C#10), add a `--port=` argument after `--dataPath=` and before the closing `"` and name each one uniquely.
+
+>Every instance of Foundry *should* have its own unique port, **unless** you can guarantee that no two instances will ever be launched at the same time. {.is-warning}
+
+It can be useful to number the ports to reflect major versions of foundry, for example you'd use `--port=30012` in the command for your Foundry v12 instance in step [C10](#C10):
+
+```
+pm2 start "node /home/<user>/foundryv12/foundry/resources/app/main.js --dataPath=/home/<user>/foundryv12/foundryuserdata --port=30012" --name foundryv12
+```
+
+Run this command for each instance, modifying the paths, port, and name for each as you go. 
+
+In step [C11](#C11) you would see each instance listed. 
+
+<a id="I3" href="#I3">I3.</a> Modify the Caddyfile in step [C14](#C14) to reflect multiple instances.
+
+>You can **only** use domain names to refer to multiple instances here. When connecting to the bare IP without a port number, you must choose which instance it forward to through the port number. If you want to connect to multiple instances without a domain name, you must specify the port when connecting to the bare IP. {.is-warning}
+
+When using subdomains, add additional blocks to the Caddyfile for each instance. For the bare IP, choose which instance to connect to by adjusting the IP in the `https:// { ... }` block. For example:
+
+```
+# This replaces the existing content in /etc/caddy/Caddyfile
+
+# A CONFIG SECTION FOR YOUR HOSTNAME
+
+foundryv12.hostname.com {
+    reverse_proxy localhost:30012
+    encode zstd gzip
+}
+
+foundryv13.hostname.com {
+    reverse_proxy localhost:30013
+    encode zstd gzip
+}
+
+https:// {
+    tls internal {
+        on_demand
+    }
+
+    reverse_proxy localhost:30012
+    encode zstd gzip
+}
+
+# Refer to the Caddy docs for more information:
+# https://caddyserver.com/docs/caddyfile
+
+```
+
+
