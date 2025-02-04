@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: Full guide for installing Foundry instances with Node & PM2 via Homebrew
 published: true
-date: 2025-02-04T20:06:35.980Z
+date: 2025-02-04T20:07:15.783Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -13,7 +13,7 @@ This guide will walk you through the process of spinning up one or more Node ins
 
 If you *really* know what you're doing, you can skip to the [TL;DR](#X1) list of brief steps at the very end.
 
->If you need help with any of this, head over to the <a href="https://discord.com/channels/170995199584108546/689889940590690323">#install-and-connection</a> channel on the <a href="https://discord.gg/foundryvtt">Foundry Discord server</a>. {.is-warning}
+>If you need help with any of this, head over to the <a href="https://discord.com/channels/170995199584108546/689889940590690323">#install-and-connection</a> channel on the <a href="https://discord.gg/foundryvtt">Foundry Discord server</a>. {.is-warning} 
 
 # B. Folder Setup
 >For each of the terminal commands in this guide, copy the whole line, paste it into the Terminal app at the prompt, and then hit Return or Enter. {.is-info}
