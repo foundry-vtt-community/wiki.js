@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-02-04T21:19:01.550Z
+date: 2025-02-04T21:20:42.246Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -660,7 +660,7 @@ These instructions modify the ones in section [C](#C). Read through this whole s
 Installation folder: `/home/foundry/foundryv12/foundry`
 Userdata folder: `/home/foundry/foundryv12/foundryuserdata`
 
-Note the `foundryv12` here as an additional folder layer. Create as many of these additional folder layers as you'd like to have instances, for example `foundryv11`, `foundryv13`, `foundrydev` etc. 
+Note the `foundryv12` here as an additional folder layer. Create as many of these additional folders as you'd like to have instances, for example `foundryv11`, `foundryv13`, `foundrydev` etc. 
 
 >It can be helpful to be descriptive with the name of this folder to keep track of which instance resides in which folder. Use `foundryv12` rather than `foundry1`, `foundry2`, etc. {.is-info}
 
