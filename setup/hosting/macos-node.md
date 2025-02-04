@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-04T19:33:37.872Z
+date: 2025-02-04T19:40:09.763Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -12,6 +12,8 @@ dateCreated: 2025-02-03T02:31:40.052Z
 This guide will walk you through the process of spinning up one or more Node instances of Foundry on a macOS host. It assumes you're running macOS 15 (Sequoia), but everything should still work under other recent versions, just some small UI details may be different.
 
 If you *really* know what you're doing, you can skip to the [TL;DR](#X1) list of brief steps at the very end.
+
+>If you need help with any of this, head over to the <a href="https://discord.com/channels/170995199584108546/689889940590690323">#install-and-connection</a> channel on the <a href="https://discord.gg/foundryvtt">Foundry Discord server</a>. {.is-warning}
 
 # B. Folder Setup
 >For each of the terminal commands in this guide, copy the whole line, paste it into the Terminal app at the prompt, and then hit Return or Enter. {.is-info}
@@ -148,6 +150,7 @@ Likewise, you can use `pm2 start foundry` to start it again, and `pm2 restart fo
 - Each instance *always* needs its own unique userdata folder.
 - A new instance of the *same Foundry version* as an existing instance doesn't need its own app folder; can re-use the same one.
 - You'll want to start being more explicit with your folder and process naming, so that it's always clear what's what.
+- Always keep in mind the <a href="https://foundryvtt.com/article/license/">terms</a> of the Foundry license, with respect to having multiple hosts available to others.
 
 <a id="I2" href="#I2">I2:</a> Here's a brief example of how to, say, add a v11 instance to your machine:
 1. In the `~/Applications` folder in your home directory, make a `Foundry11` folder.
