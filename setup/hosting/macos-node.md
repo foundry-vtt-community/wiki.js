@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-04T18:23:03.277Z
+date: 2025-02-04T18:58:49.447Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -103,7 +103,7 @@ We'll assume you're going with port `30000`; edit the command below as needed.
 <a id="G2" href="#G2">G2:</a> Launch Foundry via `pm2`:
 
 ```
-pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=~/Applications/Foundry/userdata --port=30000" --name foundry
+pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
 ```
 As soon as you run this, macOS should throw a warning that the Node app was "not opened" for security reasons. Don't click anything in this dialog, just ignore it for a moment (you can drag the dialog out of the way).
 
@@ -129,7 +129,24 @@ You should see something like this:
 ```
 pm2 save
 ```
+<a id="G7" href="#G7">G7:</a> Now try connecting to this host. You will use a web browser for this, which must be supported by Foundry (Chrome, Opera, Edge, or Firefox) and up to date. In this browser, go to <a href="http://localhost:30000">http://localhost:30000</a> (change the port number if you've set this up with a different one).
 
+You should be prompted to enter your Foundry license key (which can be the same as the one you used for your desktop app, if you're not going to be having both installations available to others at the same time).
+
+Save a bookmark for this address, and you're now ready to play on this instance.
+
+>Note that your userdata folder for this instance is at `~/Applications/Foundry/userdata`, in your home directory, which you can access and organize any time.
+
+# H. General Use
+
+<a id="H1" href="#H1">H1:</a> Now that you've launched this Node instance with `pm2`, it will remain running until you tell it to stop, including automatically relaunching itself after restarting your computer.
+
+If you need to manually stop it (so that you can run your desktop app instance instead, for example), launch the Terminal app, and do:
+```
+pm2 stop foundry
+```
+
+Likewise, you can use `pm2 start foundry` to start it again, and `pm2 restart foundry` any time you need to just restart the instance.
 
 # X. TL;DR
 <a id="X1" href="#X1">X1:</a> If you know what you're doing with the Terminal and file management on macOS, here's a no-guide list of the steps to take:
