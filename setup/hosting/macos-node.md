@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-04T17:07:13.242Z
+date: 2025-02-04T18:07:32.447Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -93,12 +93,32 @@ Ignore the `npm notice` lines that show when this is complete.
 
 # G. Launch Foundry
 
+<a id="G1" href="#G1">G1:</a> Now we're ready to launch this Foundry instance. It's important to pause here and consider what your situation is, because we have to choose a port to listen on:
+- If you are intending to swap between using your desktop app instance and this Node instance, then they can both use the same port (`30000`), and you won't need to worry about your router config.
+- If you are intending to have this Node instance running in the background, so that it will be accessible simultaneously with your desktop app's instance, then you will need to use a unique port when launching the Node host (`30001` for example), and will likely need to set up a second forwarding rule in your router.
+**Note that in this case a second Foundry license is also required, if others are going to be able to access both hosts at any time.**
 
+We'll assume you're going with port `30000`; edit the command below as needed.
+
+<a id="G2" href="#G2">G2:</a> Launch Foundry via `pm2`:
+
+```
+pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=~/Applications/Foundry/userdata" --name foundry
+```
+As soon as you run this, macOS should throw a warning that the Node app was "not opened" for security reasons. Don't click anything in this dialog, just ignore it for a moment (you can drag the dialog out of the way).
+
+<a id="G3" href="#G3">G3:</a> Open the `System Settings` app, go to the `Privacy & Security` section, scroll to the bottom, and click the `Allow Anyway` button next to the message about the Node app being blocked:
+
+![macos-node-security.webp](/setup/hosting/macos-node-security.webp)
+
+<a id="G4" href="#G4">G4:</a> Click the "Done" button in the "Not Opened" dialog. You should get a new dialog, which will now have an "Open Anyway" button. Click that. You will be prompted to enter your macOS user password.
+
+<a id="G5" href="#G5">G5:</a> 
 
 # X. TL;DR
-<a id="X1" href="#X1">X1:</a> If you generally know what you're doing with the Terminal and file management on macOS, here's a no-guide list of the steps to take:
+<a id="X1" href="#X1">X1:</a> If you know what you're doing with the Terminal and file management on macOS, here's a no-guide list of the steps to take:
 
->Please follow the actual full guide above if you don't already know what every one of these commands does.{.is-warning}
+>Please follow the full guide above if you don't already know what every one of these commands does.{.is-warning}
 
 ```
 mkdir -p ~/Applications/Foundry/userdata
