@@ -1,8 +1,8 @@
 ---
 title: Node hosts on macOS
 description: 
-published: false
-date: 2025-02-04T19:49:45.849Z
+published: true
+date: 2025-02-04T19:50:37.588Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
