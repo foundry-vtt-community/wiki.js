@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-04T19:40:09.763Z
+date: 2025-02-04T19:49:45.849Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -24,7 +24,7 @@ Copy, paste, and run this command in Terminal:
 ```
 mkdir -p ~/Applications/Foundry/userdata
 ```
->If you decide to spin up more than one Foundry instance in this way, you'll want to *modify* these folder names so that it is clear which is which. For example, you may want to use `/Foundry12/userdata` to indicate that this is a Foundry v12 instance. If you're doing this, you'll just need to watch for other times in the guide where these folder names are used, and tweak them as needed.
+>If you decide to spin up more than one Foundry instance in this way, you'll want to *modify* these folder names so that it is clear which is which. For example, you may want to use `/Foundry12/userdata` to indicate that this is a Foundry v12 instance. If you're doing this, you'll just need to watch for other times in the guide where these folder names are used, and tweak them as needed. See <a href="#I1">Section I</a> for more details.
 
 This will create a few new folders inside your home directory, where we are going to store both the application and the userdata for this new Node instance.
 
@@ -40,9 +40,9 @@ You should now be seeing something like this:
 
 ![macos-node-userdata.webp](/setup/hosting/macos-node-userdata.webp)
 
-# C. Foundry Download
+# C. Download Foundry
 
-<a id="C1" href="#C1">C1:</a> Go to your [Purchased Licenses](https://foundryvtt.com/me/licenses) page on the Foundry website (you'll need to log in first). Choose the version of the app you want, and then choose **Linux/NodeJS** in the Operating System dropdown. (We're not downloading a Mac app here, we're getting a Node binary.)
+<a id="C1" href="#C1">C1:</a> Go to your [Purchased Licenses](https://foundryvtt.com/me/licenses) page on the Foundry website (you'll need to be logged in). Choose the version of the app you want, and then choose **Linux/NodeJS** in the Operating System dropdown. (We're not downloading a Mac app here, we're getting a Node binary.)
 
 Click the Download button. When it's complete, find the zip file that was downloaded, and double-click it to unzip it. You will now have a folder named something like `FoundryVTT-12.331`. You can delete the zip file.
 
@@ -78,7 +78,7 @@ Enter this into the terminal:
 ```
 brew install node@22
 ```
-<a id="E2" href="#E2">E2:</a> When that install is complete, we will again need to copy/paste a command that is shown at the end. Select the line starting with `echo` > copy > paste at the prompt > Return/Enter.
+<a id="E2" href="#E2">E2:</a> When that install is complete, we will again need to copy/paste a command that is shown at the end. Select the line starting with `echo`, copy it, paste it at the prompt, hit Return/Enter.
 
 ![macos-node-nodepath.webp](/setup/hosting/macos-node-nodepath.webp)
 
