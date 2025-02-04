@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-04T18:07:32.447Z
+date: 2025-02-04T18:23:03.277Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -103,7 +103,7 @@ We'll assume you're going with port `30000`; edit the command below as needed.
 <a id="G2" href="#G2">G2:</a> Launch Foundry via `pm2`:
 
 ```
-pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=~/Applications/Foundry/userdata" --name foundry
+pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=~/Applications/Foundry/userdata --port=30000" --name foundry
 ```
 As soon as you run this, macOS should throw a warning that the Node app was "not opened" for security reasons. Don't click anything in this dialog, just ignore it for a moment (you can drag the dialog out of the way).
 
@@ -111,9 +111,25 @@ As soon as you run this, macOS should throw a warning that the Node app was "not
 
 ![macos-node-security.webp](/setup/hosting/macos-node-security.webp)
 
-<a id="G4" href="#G4">G4:</a> Click the "Done" button in the "Not Opened" dialog. You should get a new dialog, which will now have an "Open Anyway" button. Click that. You will be prompted to enter your macOS user password.
+<a id="G4" href="#G4">G4:</a> Click the "Done" button in the "Not Opened" dialog. You should get a new dialog, which will now have an "Open Anyway" button. Click that. You will be prompted to enter your macOS user password. You can then close the System Settings app.
 
-<a id="G5" href="#G5">G5:</a> 
+<a id="G5" href="#G5">G5:</a> Back in Terminal, see if the Node instance is properly running still:
+
+```
+pm2 list
+```
+You should see something like this:
+
+![macos-node-pm2list.webp](/setup/hosting/macos-node-pm2list.webp)
+
+>If you see that the Status for the process is `errored`, this is *likely* due to having the Foundry desktop app still running, and using the same port. Either close the desktop app, or choose a unique port for each. Use `pm2 restart foundry` to retry after sorting this out. {.is-warning}
+
+<a id="G6" href="#G6">G6:</a> Save the setup of this `pm2` process:
+
+```
+pm2 save
+```
+
 
 # X. TL;DR
 <a id="X1" href="#X1">X1:</a> If you know what you're doing with the Terminal and file management on macOS, here's a no-guide list of the steps to take:
@@ -128,4 +144,6 @@ rm ~/Applications/Foundry/foundryvtt.zip
 sudo curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew install node@22
 npm install pm2@latest -g
+pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=~/Applications/Foundry/userdata --port=30000" --name foundry
+pm2 save
 ```
