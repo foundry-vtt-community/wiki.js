@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: 
 published: false
-date: 2025-02-03T02:32:22.692Z
+date: 2025-02-04T17:07:13.242Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -29,7 +29,7 @@ This will create a few new folders inside your home directory, where we are goin
 
 <a id="B2" href="#B2">B2:</a> Let's verify that the folders were created, and open them up for the next steps.
 
-In the Finder, open your home directory (⌘-Shift-H, or use the Go menu).
+In the Finder, open your home directory (⌘-Shift-H, or use the Go menu > `Home`).
 
 Open the `Applications` folder, then you should be able to see and open the `Foundry` folder.
 
@@ -37,7 +37,7 @@ Open the `Applications` folder, then you should be able to see and open the `Fou
 
 You should now be seeing something like this:
 
-[image]
+![macos-node-userdata.webp](/setup/hosting/macos-node-userdata.webp)
 
 # C. Foundry Download
 
@@ -45,13 +45,13 @@ You should now be seeing something like this:
 
 Click the Download button. When it's complete, find the zip file that was downloaded, and double-click it to unzip it. You will now have a folder named something like `FoundryVTT-12.331`. You can delete the zip file.
 
-<a id="C2" href="#C2">C2:</a> Move this new folder into the `Foundry` folder we created earlier, which should still be open. You should now have something like this:
-
-[image]
+<a id="C2" href="#C2">C2:</a> Move this new folder into the `Foundry` folder we created earlier, which should still be open.
 
 <a id="C3" href="#C3">C3:</a> Rename this folder to `foundryapp`, so that we can refer to it more easily from now on.
 
-You should now have a `foundryapp` folder and a `userdata` folder, inside the `Foundry` folder.
+You should now have a `foundryapp` folder and a `userdata` folder, inside the `Foundry` folder, like this:
+
+![macos-node-foundryapp.webp](/setup/hosting/macos-node-foundryapp.webp)
 
 # D. Install Homebrew
 <a id="D1" href="#D1">D1:</a> Since macOS doesn't ship with Node, we need to install it. The simplest way to do that is via the [Homebrew](https://brew.sh/) package manager, which we'll download and install with this command:
@@ -62,20 +62,26 @@ sudo curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 
 This will take a minute or two to complete, with lots of activity scrolling by in Terminal.
 
-<a id="D2" href="#D2">D2:</a> When that is complete
+<a id="D2" href="#D2">D2:</a> When that is complete, you will see a **Next steps:** line, and a bunch of commands. Select all three commands, from the first `echo` to the last `"`, like so:
 
-[next steps]
+![macos-node-nextsteps.webp](/setup/hosting/macos-node-nextsteps.webp)
+
+Then copy that text (⌘C), paste it at the Terminal prompt (⌘V), and hit Return/Enter to run all three commands. They should complete immediately.
 
 # E. Install Node
 <a id="E1" href="#E1">E1:</a> Now we can install Node. We'll be using Node 22 here, which will work for Foundry v11, v12, and v13.
 
 >If you're installing some other version, check the [Release Notes](https://foundryvtt.com/releases/) for the first Prototype build of that version to see what Node versions it supports.
 
+Enter this into the terminal:
 ```
 brew install node@22
 ```
-<a id="E2" href="#E2">E2:</a>
-[fix path]
+<a id="E2" href="#E2">E2:</a> When that install is complete, we will again need to copy/paste a command that is shown at the end. Select the line starting with `echo` > copy > paste at the prompt > Return/Enter.
+
+![macos-node-nodepath.webp](/setup/hosting/macos-node-nodepath.webp)
+
+<a id="E3" href="#E3">E3:</a> After that, we need to refresh your Terminal session. Close the Terminal window, then go to the Shell menu and choose "New Window" (or hit ⌘N). Or, just quit the Terminal app and launch it again.
 
 # F. Install PM2
 <a id="F1" href="#F1">F1:</a> Now that Node is installed, we can use its `npm` package manager to install `pm2`, which will be what we use to start & stop this Foundry instance, and allow it to run in the background.
@@ -83,6 +89,11 @@ brew install node@22
 ```
 npm install pm2@latest -g
 ```
+Ignore the `npm notice` lines that show when this is complete.
+
+# G. Launch Foundry
+
+
 
 # X. TL;DR
 <a id="X1" href="#X1">X1:</a> If you generally know what you're doing with the Terminal and file management on macOS, here's a no-guide list of the steps to take:
