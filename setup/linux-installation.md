@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-02-04T21:24:12.131Z
+date: 2025-02-04T21:26:50.538Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -685,7 +685,7 @@ In step [C11](#C11) you would see each instance listed.
 
 <a id="I3" href="#I3">I3.</a> Modify the Caddyfile in step [C14](#C14) to reflect multiple instances.
 
->You can **only** use domain names to refer to multiple instances here. When connecting to the bare IP without a port number, you must choose which instance it forward to through the port number. If you want to connect to multiple instances without a domain name, you must specify the port when connecting to the bare IP. {.is-warning}
+>You can **only** use domain names to refer to multiple instances here. When connecting to the bare IP without a port number, you must choose which single instance to connect to through the port number in the `reverse_proxy` directive. If you want to connect to multiple instances without a domain name, you must specify the port when connecting to the bare IP. {.is-warning}
 
 When using subdomains, add additional blocks to the Caddyfile for each instance. For the bare IP, choose which instance to connect to by adjusting the IP in the `https:// { ... }` block. For example:
 
