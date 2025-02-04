@@ -1,8 +1,8 @@
 ---
 title: Node hosts on macOS
-description: 
+description: Full guide for installing Foundry instances with Node & PM2 via Homebrew
 published: true
-date: 2025-02-04T19:51:03.159Z
+date: 2025-02-04T19:53:56.779Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
