@@ -2,10 +2,77 @@
 title: Enrichers
 description: 
 published: true
-date: 2024-07-13T12:55:10.194Z
+date: 2025-02-07T07:21:29.755Z
 tags: 
 editor: ckeditor
 dateCreated: 2024-07-13T12:55:05.701Z
 -->
 
-<h1>What they are</h1><p>You should get to know <code>TextEditor.enrichHTML()</code>. &nbsp;This function takes text or HTML that would be displayed and “Foundy-izes” it. &nbsp;You can see this most typically in places like descriptions of Actors and Journal Entries, chat messages, etc.. &nbsp;This is the function that translates things like <code>@UUID[Actor.GQO6txTySEXZjitR]{Joe}</code>to a link to a pretty link to the actor, or <code>[[2d6]]</code> into a link you can click to automatically roll dice.</p><p>This function runs a number of default enrichers that provide the built in transforms that foundry core uses, but you can also customize it to do your own.</p><h1>What happens automatically</h1><p>There are 5 default enrichers:</p><ul>  <li>secrets: Technically, this isn't an enricher, but it removes things marked as unrevealed secrets from the HTML</li>  <li>documents: This transforms @UUID references to links that open up the associated document</li>  <li>links: This converts URLs into links</li>  <li>rolls: Converts [[roll]] to the results of a dice roll that are changed every time the page is viewed</li>  <li>embeds: Handle embedding of Documents into other text using @Embed[uuid]{label}</li></ul><h1>How to customize the behavior</h1><p>&nbsp;</p><h2>Disabling default enrichers</h2><p>You can easily prevent any of these default behaviors:</p><p><code>TextEditor.enrichHTML(content: string, options: { secrets: boolean, documents: boolean, links: boolean, embeds: boolean, rolls: boolean, rollData, …})</code></p><p>rollData is an object or function that provides extra context for inline rolls (beyond the scope of this article).</p><p>Simply pass in an <code>options</code> object with the enrichers you don't want set to false. &nbsp;They all default to true.</p><p>&nbsp;</p><h2>Adding your own</h2><p>In addition to the default enrichers, you can easily add your own. &nbsp;A couple things are important to note:</p><ol>  <li>Custom enrichers only get access to text nodes in the HTML that is passed in. &nbsp;So, you can't see existing HTML elements/attributes, though you can see the text inside them. &nbsp;</li>  <li>Custom enrichers are run AFTER the defaults. &nbsp;So if you need to override a default behavior, you'll have to turn off the corresponding default (see above) and provide a custom that handles every case you want - both the default behavior (if you still want parts) and your custom logic. &nbsp;For example, suppose you want to apply a custom css class to the roll results. &nbsp;If you leave the default in, you'll never see [[2d6]] in the text you parse, because it will already have been swapped out for the number (ex. “7”) by the time your enricher runs.</li></ol><p>Custom enrichers are configured with an object with the format:</p><pre><code class="language-plaintext"> enricherConfig = {    pattern: RefExp,    enricher: (match: RegExpMatchArray, options: Record&lt;string, any&gt;)=&gt;Promise&lt;HTMLElement | null&gt;,    replaceParent: boolean,  };</code></pre><p><code>pattern</code> is a regular expression that is what you want to search for (and replace) in the text passed to enrichHTML.</p><p><code>enricher</code> is your function that will be called for each match; it will be passed any options that are passed into enrichHTML so you can add your own custom options.</p><p>if <code>replaceParent</code> is true, not only the text will be replaced, but the parent element that it is in. &nbsp;This would let you, for example, add a class to a button (parent) that had specific text displayed in it.</p><p><code>enricher</code>should simply return a DOM HTML element that will be inserted in place of the matched text.</p><p>&nbsp;</p><p>To use your custom enricher, you simply add it to <code>CONFIG.TextEditor.enrichers</code></p><pre><code class="language-plaintext">CONFIG.TextEditor.enrichers.push(enricherConfig);</code></pre><p>It will then we used for every call to <code>TextEditor.enrichHTML</code>. &nbsp;</p><blockquote>  <p><strong>Warning! </strong>Best practice is to only add your enrichers in for calls to enrichHTML that <strong>you</strong> are making and then immediately remove them so that other parts of Foundry don't unexpectedly see your modifications (unless that's specifically what you're intending). &nbsp;An easy way to do this is to create your own function that you use instead of <code>TextEditor.enrichHTML</code></p></blockquote><p>Example of a custom enrichment function</p><pre><code class="language-plaintext">export const myEnrichHTML = async(text: string): Promise&lt;string&gt; =&gt; {  const enricherConfig = {     pattern: myRegex,    enricher: myEnricherFn,    replaceParent: false,  // or true, as you need  };  // add your enricher  CONFIG.TextEditor.enrichers.push(enricherConfig);    // call enrichHTML    const enrichedText = await TextEditor.enrichHTML(text || '', {    // any options you want to pass in for your enricher or to disable defaults  });      // remove your enricher  CONFIG.TextEditor.enrichers.filter((f): boolean =&gt; (f!=enricherConfig));  return enrichedText;}</code></pre><p>Then you'd just call <code>myEnrichHTML</code> whenever you wanted to apply your custom setup.</p>
+<h1>What they are</h1>
+<p>You should get to know <code>TextEditor.enrichHTML()</code>. &nbsp;This function takes text or HTML that would be displayed and “Foundy-izes” it. &nbsp;You can see this most typically in places like descriptions of Actors and Journal Entries, chat messages, etc.. &nbsp;This is the function that translates things like <code>@UUID[Actor.GQO6txTySEXZjitR]{Joe}</code>to a link to a pretty link to the actor, or <code>[[2d6]]</code> into a link you can click to automatically roll dice.</p>
+<p>This function runs a number of default enrichers that provide the built in transforms that foundry core uses, but you can also customize it to do your own.</p>
+<h1>What happens automatically</h1>
+<p>There are 5 default enrichers:</p>
+<ul>
+  <li>secrets: Technically, this isn't an enricher, but it removes things marked as unrevealed secrets from the HTML</li>
+  <li>documents: This transforms @UUID references to links that open up the associated document</li>
+  <li>links: This converts URLs into links</li>
+  <li>rolls: Converts [[roll]] to the results of a dice roll that are changed every time the page is viewed</li>
+  <li>embeds: Handle embedding of Documents into other text using @Embed[uuid]{label}</li>
+</ul>
+<h1>How to customize the behavior</h1>
+<p>&nbsp;</p>
+<h2>Disabling default enrichers</h2>
+<p>You can easily prevent any of these default behaviors:</p>
+<p><code>TextEditor.enrichHTML(content: string, options: { secrets: boolean, documents: boolean, links: boolean, embeds: boolean, rolls: boolean, rollData, …})</code></p>
+<p>rollData is an object or function that provides extra context for inline rolls (beyond the scope of this article).</p>
+<p>Simply pass in an <code>options</code> object with the enrichers you don't want set to false. &nbsp;They all default to true.</p>
+<p>&nbsp;</p>
+<h2>Adding your own</h2>
+<p>In addition to the default enrichers, you can easily add your own. &nbsp;A couple things are important to note:</p>
+<ol>
+  <li>Custom enrichers only get access to text nodes in the HTML that is passed in. &nbsp;So, you can't see existing HTML elements/attributes, though you can see the text inside them.</li>
+  <li>Custom enrichers are run AFTER the defaults. &nbsp;So if you need to override a default behavior, you'll have to turn off the corresponding default (see above) and provide a custom that handles every case you want - both the default behavior (if you still want parts) and your custom logic. &nbsp;For example, suppose you want to apply a custom css class to the roll results. &nbsp;If you leave the default in, you'll never see [[2d6]] in the text you parse, because it will already have been swapped out for the number (ex. “7”) by the time your enricher runs.</li>
+</ol>
+<p>Custom enrichers are configured with an object with the format:</p>
+<pre><code class="language-plaintext">
+ enricherConfig = {
+    pattern: RefExp,
+    enricher: (match: RegExpMatchArray, options: Record&lt;string, any&gt;)=&gt;Promise&lt;HTMLElement | null&gt;,
+    replaceParent: boolean,
+  };</code></pre>
+<p><code>pattern</code> is a regular expression that is what you want to search for (and replace) in the text passed to enrichHTML.</p>
+<p><code>enricher</code> is your function that will be called for each match; it will be passed any options that are passed into enrichHTML so you can add your own custom options.</p>
+<p>if <code>replaceParent</code> is true, not only the text will be replaced, but the parent element that it is in. &nbsp;This would let you, for example, add a class to a button (parent) that had specific text displayed in it.</p>
+<p><code>enricher</code>should simply return a DOM HTML element that will be inserted in place of the matched text.</p>
+<p>&nbsp;</p>
+<p>To use your custom enricher, you simply add it to <code>CONFIG.TextEditor.enrichers</code></p>
+<pre><code class="language-plaintext">CONFIG.TextEditor.enrichers.push(enricherConfig);</code></pre>
+<p>It will then we used for every call to <code>TextEditor.enrichHTML</code>. &nbsp;</p>
+<blockquote>
+  <p><strong>Warning! </strong>Best practice is to only add your enrichers in for calls to enrichHTML that <strong>you</strong> are making and then immediately remove them so that other parts of Foundry don't unexpectedly see your modifications (unless that's specifically what you're intending). &nbsp;An easy way to do this is to create your own function that you use instead of <code>TextEditor.enrichHTML</code></p>
+</blockquote>
+<p>Example of a custom enrichment function</p>
+<pre><code class="language-plaintext">export const myEnrichHTML = async(text: string): Promise&lt;string&gt; =&gt; {
+  const enricherConfig = { 
+    pattern: myRegex,
+    enricher: myEnricherFn,
+    replaceParent: false,  // or true, as you need
+  };
+
+  // add your enricher
+  CONFIG.TextEditor.enrichers.push(enricherConfig);
+  
+  // call enrichHTML  
+  const enrichedText = await TextEditor.enrichHTML(text || '', {
+    // any options you want to pass in for your enricher or to disable defaults
+  });    
+
+
+  // remove your enricher
+  CONFIG.TextEditor.enrichers = CONFIG.TextEditor.enrichers
+  	.filter((f): boolean =&gt; (f!=enricherConfig));
+
+  return enrichedText;
+}</code></pre>
+<p>Then you'd just call <code>myEnrichHTML</code> whenever you wanted to apply your custom setup.</p>
