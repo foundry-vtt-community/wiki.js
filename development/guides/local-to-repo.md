@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-08T22:50:18.827Z
+date: 2025-02-08T23:19:09.797Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -58,10 +58,30 @@ After pasting that in, replace the `my-user` and `my-module` parts with your own
 
 >**What this line does:** After your module has been installed on someone's host, this is the URL that Foundry checks to see if a newer version of your module is available; it's pointing at whatever the latest release is on your repository. Foundry will download *that* manifest, check the `version` listed inside, and compare that against the currently installed version.
 
-<a id="D4" href="#D4">D4:</a> 
+<a id="D4" href="#D4">D4:</a> Make another blank line after the `manifest` line we just added, then paste this:
 ```json
 "download": "https://github.com/my-user/my-module/releases/download/1.0.0/module.zip",
 ```
+Again, edit the `my-user` and `my-module` parts to be your own.
+
+>**What this line does:** This `download` URL points at the zip file that contains this specific version of your module. Note that the version numbers in the URL match the `version` of this manifest. We don't ever want to have a `download` URL that points at your repo's `releases/latest`, because that would prevent users from being able to download *older* versions of your module when needed.
+
+<a id="D5" href="#D5">D5:</a> Check your manifest for typos or anything that may have been missed. The section we changed should look something like this now (but with your own GitHub paths):
+```json
+{
+  "id": "my-module",
+  "title": "My Module",
+  "version": "1.0.0",
+  "manifest": "https://github.com/my-user/my-module/releases/latest/download/module.json",
+  "download": "https://github.com/my-user/my-module/releases/download/1.0.0/module.zip",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  }
+}
+```
+>Note that each line we added has a comma at the end. JSON is an extremely syntax-sensitive format, and your manifest will cease to work entirely if there are any errors. If you're ever in doubt, or want to double-check anyway, copy the entire text of the manifest, paste it into [jsonlint.com](https://jsonlint.com/), and hit the `Validate JSON` button. {.is-info}
+
 # E. Upload
 
 # F. Create a Release
