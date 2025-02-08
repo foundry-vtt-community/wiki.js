@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-08T22:18:03.061Z
+date: 2025-02-08T22:50:18.827Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -29,7 +29,7 @@ Since most module developers need this hosting *and also* benefit from version c
 
 <a id="C4" href="#C4">C4:</a> Ignore the rest of the settings, unless you know what you're doing with them, then hit `Create repository`
 
-<a id="C5" href="#C5">C5:</a> You now have a GitHub repo for your module. Copy the base URL for this repo now, as we'll need it in the next section. This will be something like `https://github.com/my-user/my-module-name`
+<a id="C5" href="#C5">C5:</a> You now have a GitHub repo for your module. Note the base URL for this repo now, as we'll need it in the next section. This will be something like `https://github.com/my-user/my-module`
 
 # D. Local Module Setup
 For various reasons, it will be better to do the following changes locally, rather than uploading them to the repo and making changes over there.
@@ -50,8 +50,18 @@ For various reasons, it will be better to do the following changes locally, rath
   }
 }
 ```
+<a id="D3" href="#D3">D3:</a> We're going to add two new lines to this manifest. Hit Enter/Return at the end of the `"version"` line to create a new blank line. On that line, paste this:
+```json
+"manifest": "https://github.com/my-user/my-module/releases/latest/download/module.json",
+```
+After pasting that in, replace the `my-user` and `my-module` parts with your own GitHub username and repo name, which we noted above in <a id="C5" href="#C5">C5</a>.
 
+>**What this line does:** After your module has been installed on someone's host, this is the URL that Foundry checks to see if a newer version of your module is available; it's pointing at whatever the latest release is on your repository. Foundry will download *that* manifest, check the `version` listed inside, and compare that against the currently installed version.
 
+<a id="D4" href="#D4">D4:</a> 
+```json
+"download": "https://github.com/my-user/my-module/releases/download/1.0.0/module.zip",
+```
 # E. Upload
 
 # F. Create a Release
