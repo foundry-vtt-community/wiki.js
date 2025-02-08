@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-08T23:19:09.797Z
+date: 2025-02-08T23:24:33.631Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -34,7 +34,7 @@ Since most module developers need this hosting *and also* benefit from version c
 # D. Local Module Setup
 For various reasons, it will be better to do the following changes locally, rather than uploading them to the repo and making changes over there.
 
->This guide will assume that you're hosting on a desktop PC. If your host is on a server somewhere else, you'll do the same steps (starting with <a id="D2" href="#D2">D2</a>), but after first downloading your module's files to your local machine, using FTP or whatever else you use to manage your remote files.
+>This guide will assume that you're hosting on a desktop PC. If your host is on a server somewhere else, you'll do the same steps (starting with <a id="D2" href="#D2">D2</a>), but after first downloading your module's files to your local machine, using FTP or whatever else you use to manage your remote files. {.is-info}
 
 <a id="D1" href="#D1">D1:</a> Find your module's folder in your userdata: While Foundry is running, right-click it in the Windows taskbar or macOS dock, and choose `Browse User Data`. Open the `Data` folder in there, then the `modules` folder. You will see your module's folder named with its `id`.
 
@@ -81,6 +81,8 @@ Again, edit the `my-user` and `my-module` parts to be your own.
 }
 ```
 >Note that each line we added has a comma at the end. JSON is an extremely syntax-sensitive format, and your manifest will cease to work entirely if there are any errors. If you're ever in doubt, or want to double-check anyway, copy the entire text of the manifest, paste it into [jsonlint.com](https://jsonlint.com/), and hit the `Validate JSON` button. {.is-info}
+
+<a id="D6" href="#D6">D6:</a> 
 
 # E. Upload
 
