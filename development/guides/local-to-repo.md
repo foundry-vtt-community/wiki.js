@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-08T22:02:05.432Z
+date: 2025-02-08T22:18:03.061Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -37,6 +37,20 @@ For various reasons, it will be better to do the following changes locally, rath
 >This guide will assume that you're hosting on a desktop PC. If your host is on a server somewhere else, you'll do the same steps (starting with <a id="D2" href="#D2">D2</a>), but after first downloading your module's files to your local machine, using FTP or whatever else you use to manage your remote files.
 
 <a id="D1" href="#D1">D1:</a> Find your module's folder in your userdata: While Foundry is running, right-click it in the Windows taskbar or macOS dock, and choose `Browse User Data`. Open the `Data` folder in there, then the `modules` folder. You will see your module's folder named with its `id`.
+
+<a id="D2" href="#D2">D2:</a> Inside your module's folder, find and open the `module.json` file in any text editor. It will look something like this, probably with some additional lines defining compendium packs:
+```json
+{
+  "id": "my-module",
+  "title": "My Module",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "12"
+  }
+}
+```
+
 
 # E. Upload
 
