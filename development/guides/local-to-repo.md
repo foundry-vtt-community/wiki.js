@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T07:20:37.902Z
+date: 2025-02-09T07:32:38.993Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -112,7 +112,7 @@ Right-click your module's folder, and compress it into a zip file:
 
 <a id="F3" href="#F3">F3:</a> Enter `1.0.0` as the `Release title` as well. This doesn't strictly need to match the tag, but it's a decent way to name your releases.
 
-<a id="F4" href="#F4">F4:</a> Write a `Description` if you like, but you can also leave this field blank. Ignore the "Set as a pre-release" and "Set as the latest release" checkboxes; leave them as-is.
+<a id="F4" href="#F4">F4:</a> Write a `Description` if you like, but you can also leave this field blank. Ignore the "Set as a pre-release" checkbox; leave it as-is.
 
 <a id="F5" href="#F5">F5:</a> Now we're going to drop two things into the zone where it says `Attach binaries by dropping them here`, from your computer:
 
@@ -120,14 +120,13 @@ Right-click your module's folder, and compress it into a zip file:
 - The `module.zip` file, from outside your module's folder, that we created earlier.
 
 The page should now look like this:
-
-![local-to-repo-new-release.webp](/development/guides/local-to-repo-new-release.webp)
+![local-to-repo-new-release-dark.webp](/development/guides/local-to-repo-new-release-dark.webp)
 
 <a id="F6" href="#F6">F6:</a> Click the green `Publish release` button. You will be taken to a new page for this release, showing its name, tag, and attached assets.
 
->We have just created a place on the web where the files for this specific version of your module now "live". The `module.json` asset is your module's Manifest, and the `module.zip` is the file that the manifest tells Foundry to download. {.is-info}
+>We have just created a place on the web where the files for this specific version of your module now live. The `module.json` asset is your module's Manifest, and the `module.zip` is the file that the manifest tells Foundry to download. {.is-info}
 
->You may have noticed that the contents of your module that we uploaded to the repository earlier were not actually involved at all in the end result. The publishing workflow automatically attached a `Source Code` zip to the release, but we created our own zip manually, and uploaded *that*. For various reasons, it's better to be intentional about the file we provide here, and not rely on the automatically-generated version. If you get into using automated release workflows, this practice will change slightly.
+>You may have noticed that the contents of your module that we uploaded to the repository earlier were not actually involved at all in the end result. The publishing workflow automatically attached a `Source Code` file to the release, but we created our own zip manually, and uploaded *that*. For various reasons, it's better to be intentional about the file we provide here, and not rely on the automatically-generated zip. If you get into using automated release workflows, this practice will change slightly.
 
 # G. Test
 
