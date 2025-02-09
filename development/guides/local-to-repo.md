@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T06:55:46.097Z
+date: 2025-02-09T07:14:18.566Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -84,7 +84,7 @@ Again, edit the `my-user` and `my-module` parts to be your own.
 
 <a id="D6" href="#D6">D6:</a> Now we'll create the zip file. Close the `module.json` file if it's still open, then navigate up a folder into `modules`, so that you can see the folder for your own module.
 
-Right-click it, and compress it into a zip file:
+Right-click your module's folder, and compress it into a zip file:
 - Windows 10: `Send to > Compressed (zipped) folder`
 - Windows 11: `Compress to > zip`
 - macOS: `Compress [folder name]`
@@ -124,6 +124,10 @@ The page should now look like this:
 ![local-to-repo-new-release.webp](/development/guides/local-to-repo-new-release.webp)
 
 <a id="F6" href="#F6">F6:</a> Click the green `Publish release` button. You will be taken to a new page for this release, showing its name, tag, and attached assets.
+
+>We have just created a place on the web where the files for this specific version of your module now "live". The `module.json` asset is your module's Manifest, and the `module.zip` is the file that the manifest tells Foundry to download. {.is-info}
+
+>You may have noticed that the contents of your module that we uploaded to the repository earlier were not actually involved at all in the end result. The publishing workflow automatically attached a `Source Code` zip to the release, but we created our own zip manually, and uploaded *that*. 
 
 # G. Test
 
