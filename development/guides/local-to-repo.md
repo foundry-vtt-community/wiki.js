@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-08T23:24:33.631Z
+date: 2025-02-09T06:55:46.097Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -64,7 +64,7 @@ After pasting that in, replace the `my-user` and `my-module` parts with your own
 ```
 Again, edit the `my-user` and `my-module` parts to be your own.
 
->**What this line does:** This `download` URL points at the zip file that contains this specific version of your module. Note that the version numbers in the URL match the `version` of this manifest. We don't ever want to have a `download` URL that points at your repo's `releases/latest`, because that would prevent users from being able to download *older* versions of your module when needed.
+>**What this line does:** This `download` URL points at a zip file that contains this specific version of your module (which doesn't exist yet, but we'll make it soon). Note that the version numbers in the URL match the `version` of this manifest. We don't ever want to have a `download` URL that points at your repo's `releases/latest`, because that would prevent users from being able to download *older* versions of your module when needed.
 
 <a id="D5" href="#D5">D5:</a> Check your manifest for typos or anything that may have been missed. The section we changed should look something like this now (but with your own GitHub paths):
 ```json
@@ -82,11 +82,48 @@ Again, edit the `my-user` and `my-module` parts to be your own.
 ```
 >Note that each line we added has a comma at the end. JSON is an extremely syntax-sensitive format, and your manifest will cease to work entirely if there are any errors. If you're ever in doubt, or want to double-check anyway, copy the entire text of the manifest, paste it into [jsonlint.com](https://jsonlint.com/), and hit the `Validate JSON` button. {.is-info}
 
-<a id="D6" href="#D6">D6:</a> 
+<a id="D6" href="#D6">D6:</a> Now we'll create the zip file. Close the `module.json` file if it's still open, then navigate up a folder into `modules`, so that you can see the folder for your own module.
+
+Right-click it, and compress it into a zip file:
+- Windows 10: `Send to > Compressed (zipped) folder`
+- Windows 11: `Compress to > zip`
+- macOS: `Compress [folder name]`
+
+<a id="D7" href="#D7">D7:</a> For ease of referring to this file in other places, rename it to `module.zip` now.
+
+>If your OS hides file extensions, make sure you're not accidentally naming it `module.zip.zip`.
 
 # E. Upload
+<a id="E1" href="#E1">E1:</a> Head back to your GitHub repository, and click the `uploading an existing file` link in the blue "Quick Setup" section.
+
+>Make sure that the Foundry app isn't running for the next step. Any time you're copying user data, you want to be sure none of your databases are still open. {.is-warning}
+
+<a id="E2" href="#E2">E2:</a> In your userdata on your computer, open up your module's folder (ignore the zip file for now), then drag all of its *contents* into the GitHub page, where it indicates you can drop files.
+
+<a id="E3" href="#E3">E3:</a> Edit the descriptive fields if you like, but you can also leave them as-is. Click the green `Commit changes` button.
+
 
 # F. Create a Release
+<a id="F1" href="#F1">F1:</a> On the right side of your GitHub page, you should see a Releases section. Click the `Create a new release` link there.
+
+<a id="F2" href="#F2">F2:</a> Click the `Choose a tag` dropdown, enter `1.0.0` as the tag, and either hit Enter/Return or click `Create new tag`.
+
+>You'll see a suggestion in the sidebar here about prefixing your versions with a `v`. For Foundry projects, do **not** do this. Foundry compares version numbers in a way that breaks down if you have a `v` in some cases but not in others, so it's best to avoid the practice entirely. {.is-info}
+
+<a id="F3" href="#F3">F3:</a> Enter `1.0.0` as the `Release title` as well. This doesn't strictly need to match the tag, but it's a decent way to name your releases.
+
+<a id="F4" href="#F4">F4:</a> Write a `Description` if you like, but you can also leave this field blank. Ignore the "Set as a pre-release" and "Set as the latest release" checkboxes; leave them as-is.
+
+<a id="F5" href="#F5">F5:</a> Now we're going to drop two things into the zone where it says `Attach binaries by dropping them here`, from your computer:
+
+- The `module.json` file, from inside your module's folder.
+- The `module.zip` file, from outside your module's folder, that we created earlier.
+
+The page should now look like this:
+
+![local-to-repo-new-release.webp](/development/guides/local-to-repo-new-release.webp)
+
+<a id="F6" href="#F6">F6:</a> Click the green `Publish release` button. You will be taken to a new page for this release, showing its name, tag, and attached assets.
 
 # G. Test
 
