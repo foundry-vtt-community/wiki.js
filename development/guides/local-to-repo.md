@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T18:54:12.945Z
+date: 2025-02-09T18:58:39.571Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -21,7 +21,7 @@ Since most module developers need this hosting *and also* benefit from version c
 <a id="B1" href="#B1">B1:</a> If you don't have one already, sign up for a new GitHub account [here](https://github.com/signup).
 
 # C. New Repository
-<a id="C1" href="#C1">C1:</a> From your GitHub dashboard after logging in, hit the green `Create repository` button.
+<a id="C1" href="#C1">C1:</a> From your GitHub dashboard after logging in, click the green `Create repository` button.
 
 <a id="C2" href="#C2">C2:</a> The `name` of this repository should typically be the same as the `id` of your module, for consistency, but it doesn't *really* matter what you choose here.
 
@@ -140,5 +140,6 @@ The page should now look like this:
 You should see a blue banner indicating that your module was installed successfully. If it worked, you can now delete the module folder that you moved in step [G1](#G1); your module is now inside `modules` again.
 
 # H. Official Listing
+<a id="H1" href="#H1">H1:</a> 
 
 # I. Updating Your Module
