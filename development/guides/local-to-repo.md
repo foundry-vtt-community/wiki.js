@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T18:25:29.618Z
+date: 2025-02-09T18:54:12.945Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -135,4 +135,10 @@ The page should now look like this:
 
 <a id="G2" href="#G2">G2:</a> Launch Foundry, go to the Add-on Modules tab in Setup, click the `Install Module` button.
 
-<a id="G3" href="#G3">G3:</a> In the `Manifest URL` field at the bottom of the Install Module window, paste in the URL that we copied in step [F7](#F7).
+<a id="G3" href="#G3">G3:</a> In the `Manifest URL` field at the bottom of the Install Module window, paste in the URL that we copied in step [F7](#F7), then click the `Install` button.
+
+You should see a blue banner indicating that your module was installed successfully. If it worked, you can now delete the module folder that you moved in step [G1](#G1); your module is now inside `modules` again.
+
+# H. Official Listing
+
+# I. Updating Your Module
