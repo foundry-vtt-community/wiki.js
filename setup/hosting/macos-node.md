@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: Full guide for installing Foundry instances with Node & PM2 via Homebrew
 published: true
-date: 2025-02-04T20:07:15.783Z
+date: 2025-02-09T18:23:40.602Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -24,7 +24,7 @@ Copy, paste, and run this command in Terminal:
 ```
 mkdir -p ~/Applications/Foundry/userdata
 ```
->If you decide to spin up more than one Foundry instance in this way, you'll want to *modify* these folder names so that it is clear which is which. For example, you may want to use `/Foundry12/userdata` to indicate that this is a Foundry v12 instance. If you're doing this, you'll just need to watch for other times in the guide where these folder names are used, and tweak them as needed. See <a href="#I1">Section I</a> for more details.
+>If you decide to spin up more than one Foundry instance in this way, you'll want to *modify* these folder names so that it is clear which is which. For example, you may want to use `/Foundry12/userdata` to indicate that this is a Foundry v12 instance. If you're doing this, you'll just need to watch for other times in the guide where these folder names are used, and tweak them as needed. See [Section I](#I1) for more details.
 
 This will create a few new folders inside your home directory, where we are going to store both the application and the userdata for this new Node instance.
 
