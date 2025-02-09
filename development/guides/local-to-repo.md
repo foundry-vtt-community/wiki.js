@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T07:39:54.734Z
+date: 2025-02-09T18:25:29.618Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -34,7 +34,7 @@ Since most module developers need this hosting *and also* benefit from version c
 # D. Local Module Setup
 For various reasons, it will be better to do the following changes locally, rather than uploading them to the repo and making changes over there.
 
->This guide will assume that you're hosting on a desktop PC. If your host is on a server somewhere else, you'll do the same steps (starting with <a id="D2" href="#D2">D2</a>), but after first downloading your module's files to your local machine, using FTP or whatever else you use to manage your remote files. {.is-info}
+>This guide will assume that you're hosting on a desktop PC. If your host is on a server somewhere else, you'll do the same steps (starting with [D2](#D2)), but after first downloading your module's files to your local machine, using FTP or whatever else you use to manage your remote files. {.is-info}
 
 <a id="D1" href="#D1">D1:</a> Find your module's folder in your userdata: While Foundry is running, right-click it in the Windows taskbar or macOS dock, and choose `Browse User Data`. Open the `Data` folder in there, then the `modules` folder. You will see your module's folder named with its `id`.
 
@@ -54,7 +54,7 @@ For various reasons, it will be better to do the following changes locally, rath
 ```json
 "manifest": "https://github.com/my-user/my-module/releases/latest/download/module.json",
 ```
-After pasting that in, replace the `my-user` and `my-module` parts with your own GitHub username and repo name, which we noted above in <a id="C5" href="#C5">C5</a>.
+After pasting that in, replace the `my-user` and `my-module` parts with your own GitHub username and repo name, which we noted above in [C5](#C5)</a>.
 
 >**What this line does:** After your module has been installed on someone's host, this is the URL that Foundry checks to see if a newer version of your module is available; it's pointing at whatever the latest release is on your repository. Foundry will download *that* manifest, check the `version` listed inside, and compare that against the currently installed version.
 
@@ -124,9 +124,15 @@ The page should now look like this:
 
 <a id="F6" href="#F6">F6:</a> Click the green `Publish release` button. You will be taken to a new page for this release, showing its name, tag, and attached assets.
 
+<a id="F7" href="#F7">F7:</a> Right-click on the attached `module.json` file, and choose `Copy Link Address` (or whatever your browser's command is for copying this URL). This is your **Manifest URL**.
+
 >We have just created a place on the web where the files for this specific version of your module now live. The `module.json` asset is your module's Manifest, and the `module.zip` is the file that the manifest tells Foundry to download. {.is-info}
 
 >You may have noticed that the contents of your module that we uploaded to the repository earlier were not actually involved at all in the end result. The publishing workflow automatically attached a `Source Code` file to the release, but we created our own zip manually, and uploaded *that*. For various reasons, it's better to be intentional about the file we provide here, and not rely on the automatically-generated zip. If you get into using automated release workflows, this practice will change slightly.
 
 # G. Test
+<a id="G1" href="#G1">G1:</a> Your module should now be manually installable in any Foundry host. Your *own* local host already has this module installed though, so to test this out, start by removing its folder from the `modules` folder (Foundry should still be closed at this point). You can drag it to your desktop, or anywhere else temporarily while we make sure the installation works. Can also remove the zip file we made.
 
+<a id="G2" href="#G2">G2:</a> Launch Foundry, go to the Add-on Modules tab in Setup, click the `Install Module` button.
+
+<a id="G3" href="#G3">G3:</a> In the `Manifest URL` field at the bottom of the Install Module window, paste in the URL that we copied in step [F7](#F7).
