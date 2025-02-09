@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T07:14:18.566Z
+date: 2025-02-09T07:20:37.902Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -127,7 +127,7 @@ The page should now look like this:
 
 >We have just created a place on the web where the files for this specific version of your module now "live". The `module.json` asset is your module's Manifest, and the `module.zip` is the file that the manifest tells Foundry to download. {.is-info}
 
->You may have noticed that the contents of your module that we uploaded to the repository earlier were not actually involved at all in the end result. The publishing workflow automatically attached a `Source Code` zip to the release, but we created our own zip manually, and uploaded *that*. 
+>You may have noticed that the contents of your module that we uploaded to the repository earlier were not actually involved at all in the end result. The publishing workflow automatically attached a `Source Code` zip to the release, but we created our own zip manually, and uploaded *that*. For various reasons, it's better to be intentional about the file we provide here, and not rely on the automatically-generated version. If you get into using automated release workflows, this practice will change slightly.
 
 # G. Test
 
