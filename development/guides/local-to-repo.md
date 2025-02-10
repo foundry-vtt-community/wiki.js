@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-10T03:45:06.400Z
+date: 2025-02-10T03:56:59.750Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -37,6 +37,8 @@ For various reasons, it will be better to do the following changes locally, rath
 >This guide will assume that you're hosting on a desktop PC. If your host is on a server somewhere else, you'll do the same steps (starting with [D2](#D2)), but after first downloading your module's files to your local machine, using FTP or whatever else you use to manage your remote files. {.is-info}
 
 <a id="D1" href="#D1">D1:</a> Find your module's folder in your userdata: While Foundry is running, right-click it in the Windows taskbar or macOS dock, and choose `Browse User Data`. Open the `Data` folder in there, then the `modules` folder. You will see your module's folder named with its `id`.
+
+>After using this shortcut to open your userdata location, it's best to make sure Foundry is closed from now on; we don't want your module's files to be potentially in use while we're making changes. {.is-warning}
 
 <a id="D2" href="#D2">D2:</a> Inside your module's folder, find and open the `module.json` file in any text editor. It will look something like this, probably with some additional lines defining compendium packs:
 ```json
@@ -139,9 +141,12 @@ The page should now look like this:
 
 You should see a blue banner indicating that your module was installed successfully. If it worked, you can now delete the module folder that you moved in step [G1](#G1); your module is now inside `modules` again.
 
+>Once your module is installable, it's now also **volatile**: Any time you update it, your local copy will be wiped out completely and replaced with a freshly downloaded copy, just like all other package updates. If you're going to continue working on your module locally — making changes, adding more content — you should **right-click it in Setup > Lock Module**, to keep it safe from this. {.is-warning}
+
 # H. (Optional) Official Listing
 Once your module is hosted and installable, you may choose to submit it to Foundry for review and potential listing in their index, which would give it a package page on [foundryvtt.com](https://foundryvtt.com) and make it available to be found via search in Foundry Setup.
 
 <a id="H1" href="#H1">H1:</a> To submit your module for review, go to [foundryvtt.com/creators/submit/](https://foundryvtt.com/creators/submit/), and fill out the form. Your `Package URL` is your GitHub repository's base URL, from step [C5](#C5).
 
 # I. Updating Your Module
+
