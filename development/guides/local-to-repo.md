@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-10T03:56:59.750Z
+date: 2025-02-10T04:06:08.694Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -141,7 +141,7 @@ The page should now look like this:
 
 You should see a blue banner indicating that your module was installed successfully. If it worked, you can now delete the module folder that you moved in step [G1](#G1); your module is now inside `modules` again.
 
->Once your module is installable, it's now also **volatile**: Any time you update it, your local copy will be wiped out completely and replaced with a freshly downloaded copy, just like all other package updates. If you're going to continue working on your module locally — making changes, adding more content — you should **right-click it in Setup > Lock Module**, to keep it safe from this. {.is-warning}
+>Once your module is installable, it's now also **volatile**: Any time you update it in Setup, your local copy will be wiped out completely and replaced with a freshly downloaded copy, just like all other package updates. If you're going to continue working on your module locally — making changes, adding more content — you should **right-click it in Setup > Lock Module**, to keep it safe from this. {.is-warning}
 
 # H. (Optional) Official Listing
 Once your module is hosted and installable, you may choose to submit it to Foundry for review and potential listing in their index, which would give it a package page on [foundryvtt.com](https://foundryvtt.com) and make it available to be found via search in Foundry Setup.
