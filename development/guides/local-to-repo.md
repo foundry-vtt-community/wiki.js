@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-09T18:58:39.571Z
+date: 2025-02-10T03:45:06.400Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -139,7 +139,9 @@ The page should now look like this:
 
 You should see a blue banner indicating that your module was installed successfully. If it worked, you can now delete the module folder that you moved in step [G1](#G1); your module is now inside `modules` again.
 
-# H. Official Listing
-<a id="H1" href="#H1">H1:</a> 
+# H. (Optional) Official Listing
+Once your module is hosted and installable, you may choose to submit it to Foundry for review and potential listing in their index, which would give it a package page on [foundryvtt.com](https://foundryvtt.com) and make it available to be found via search in Foundry Setup.
+
+<a id="H1" href="#H1">H1:</a> To submit your module for review, go to [foundryvtt.com/creators/submit/](https://foundryvtt.com/creators/submit/), and fill out the form. Your `Package URL` is your GitHub repository's base URL, from step [C5](#C5).
 
 # I. Updating Your Module
