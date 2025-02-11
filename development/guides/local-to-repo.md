@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-10T04:06:08.694Z
+date: 2025-02-11T19:09:30.313Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -147,6 +147,22 @@ You should see a blue banner indicating that your module was installed successfu
 Once your module is hosted and installable, you may choose to submit it to Foundry for review and potential listing in their index, which would give it a package page on [foundryvtt.com](https://foundryvtt.com) and make it available to be found via search in Foundry Setup.
 
 <a id="H1" href="#H1">H1:</a> To submit your module for review, go to [foundryvtt.com/creators/submit/](https://foundryvtt.com/creators/submit/), and fill out the form. Your `Package URL` is your GitHub repository's base URL, from step [C5](#C5).
+
+<a id="H2" href="#H2">H2:</a> Once your module has been approved, and you've got a package page for your module on the Foundry site, you can create a release for it there. Publishing a Foundry release puts your module into the searchable Foundry ecosystem, letting it be found and installed by users in Setup.
+
+While logged in as yourself on the Foundry site, go to your [Authored Packages](https://foundryvtt.com/me/packages) page, and hit the `Edit` link for your module.
+
+<a id="H3" href="#H3">H3:</a> Fill out the `Description` field if you haven't already, to give users context for what your module does.
+
+<a id="H4" href="#H4">H4:</a> At the bottom of the page, on the right side, hit the `+ Add` button to add a new release.
+
+<a id="H5" href="#H5">H5:</a> Fill in the fields as follows:
+- **Version Number:** Enter exactly the same number as the `tag` you used for this release on GitHub (so, `1.0.0` if following this guide). Do not use a `v` here (or anywhere).
+- **Package Manifest URL:** The same link we copied in [F7](#F7) — right-click the `module.json` asset attached to the release > Copy Link Address.
+- **Release Notes URL:** Typically this will just be the GitHub page for this specific release — the page you're taken to immediately after publishing the release. In the case of our example here, `https://github.com/my-user/my-module/releases/tag/1.0.0`
+- **Minimum Core Version:** The absolute minimum core Foundry version that is required to install your module. If you're unsure about this, use the whole number of the version you built the module with. So, if you're currently running `12.331`, for example, enter `12` here.
+- **Verified Core Version:** The specific version of core Foundry that you have verified your module works with, for sure. If it runs on `12.331`, enter `12.331` here. If your module is fairly straightfoward, or is just compendium packs, you can be more broad here and just enter `12`.
+- **Maximum Core Version:** Leave this field blank, *unless* you have tested your module in newer versions of core Foundry and you know that it doesn't function there.
 
 # I. Updating Your Module
 
