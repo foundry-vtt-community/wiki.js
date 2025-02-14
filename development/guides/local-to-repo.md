@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-11T19:09:30.313Z
+date: 2025-02-14T18:43:57.374Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -163,6 +163,8 @@ While logged in as yourself on the Foundry site, go to your [Authored Packages](
 - **Minimum Core Version:** The absolute minimum core Foundry version that is required to install your module. If you're unsure about this, use the whole number of the version you built the module with. So, if you're currently running `12.331`, for example, enter `12` here.
 - **Verified Core Version:** The specific version of core Foundry that you have verified your module works with, for sure. If it runs on `12.331`, enter `12.331` here. If your module is fairly straightfoward, or is just compendium packs, you can be more broad here and just enter `12`.
 - **Maximum Core Version:** Leave this field blank, *unless* you have tested your module in newer versions of core Foundry and you know that it doesn't function there.
+
+>You can edit any of these fields after the fact, including making changes to the version requirements, if for example you later discover that your module is also verified to work under Foundry v13. You don't need to publish a new release to have these changes go into effect.
 
 # I. Updating Your Module
 
