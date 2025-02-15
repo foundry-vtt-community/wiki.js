@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2025-02-15T19:47:57.345Z
+date: 2025-02-15T19:50:51.696Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -26,7 +26,7 @@ Here is a table of the approaches detailed within as well as notes on their comp
 | [Vicknesh](#vickneshs-docker-deployment-guide)    | complex    | Caddy for TLS      |                              |
 | [MBRound18's](#mbround18-foundryvtt-docker) | simple | auto restarts on issues | Simple drop in link and ready to go |
 | [BTBTravis'](#btbtravis-foundryvtt-docker) | moderate | fly.io deploy | Deploy to fly.io via Dockerfile |
-| [MarekXcz's](#MarekXczs-docker-compose-with-Cloudflare-on-Windows-setup) | moderate | Cloudflare tunnel | Self-hosted on Windows on home network |
+| [MarekXcz's](#marekxczs-guide) | moderate | Cloudflare tunnel | Self-hosted on Windows on home network |
 
 ---
 
@@ -308,7 +308,7 @@ Please visit the README in the [travisshears/foundry-vtt repository](
 https://git.sr.ht/~travisshears/foundry-vtt) for the most up to date instructions.
 
 ---
-
+<p id="marekxczs-guide"></p>
 # MarekXcz's docker-compose with Cloudflare on Windows setup
 > Disclaimer: I am not Docker expert nor Cloudflare expert. I came up with the solution below for my own needs and thought to share. If you think it can be optimized, feel free to update. 
 {.is-info}
