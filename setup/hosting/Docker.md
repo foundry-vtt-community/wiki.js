@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2025-02-15T19:50:51.696Z
+date: 2025-02-15T19:51:18.179Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -309,6 +309,7 @@ https://git.sr.ht/~travisshears/foundry-vtt) for the most up to date instruction
 
 ---
 <p id="marekxczs-guide"></p>
+
 # MarekXcz's docker-compose with Cloudflare on Windows setup
 > Disclaimer: I am not Docker expert nor Cloudflare expert. I came up with the solution below for my own needs and thought to share. If you think it can be optimized, feel free to update. 
 {.is-info}
