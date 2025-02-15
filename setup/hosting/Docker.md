@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2025-02-15T19:44:42.263Z
+date: 2025-02-15T19:47:57.345Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -26,6 +26,8 @@ Here is a table of the approaches detailed within as well as notes on their comp
 | [Vicknesh](#vickneshs-docker-deployment-guide)    | complex    | Caddy for TLS      |                              |
 | [MBRound18's](#mbround18-foundryvtt-docker) | simple | auto restarts on issues | Simple drop in link and ready to go |
 | [BTBTravis'](#btbtravis-foundryvtt-docker) | moderate | fly.io deploy | Deploy to fly.io via Dockerfile |
+| [MarekXcz's](#MarekXczs-docker-compose-with-Cloudflare-on-Windows-setup) | moderate | Cloudflare tunnel | Self-hosted on Windows on home network |
+
 ---
 
 # mikysan's simple dockerfile
