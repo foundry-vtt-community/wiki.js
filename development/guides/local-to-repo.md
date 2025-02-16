@@ -1,8 +1,8 @@
 ---
 title: Publishing a Module
 description: 
-published: false
-date: 2025-02-16T22:56:22.458Z
+published: true
+date: 2025-02-16T22:58:09.329Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
