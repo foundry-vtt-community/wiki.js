@@ -2,7 +2,7 @@
 title: Docker
 description: 
 published: true
-date: 2025-02-15T19:51:18.179Z
+date: 2025-02-16T13:05:40.930Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:34:32.550Z
@@ -21,7 +21,7 @@ Here is a table of the approaches detailed within as well as notes on their comp
 | [Jake](#jake)        | simple     |                    | Updated version of mikysan's |
 | [Felddy](#felddys-easy-one-step-docker-container)      | moderate     |                    | Set and Forget, Configurable           |
 | [trotroyanas](#trotroyanass-docker-compose-setup) | moderate   |                    |                              |
-| [thomasfa18](#mikysans-simple-dockerfile)  | moderate   |                    |                              |
+| [thomasfa18](#thomasfa18s-dockerhub-image)  | moderate   |                    |                              |
 | [DireckHit](#direckthits-guide-to-running-fvtt-docker-with-traefik-and-portainer)   | complex    | Traefik, Portainer | Good for Remote Hosting      |
 | [Vicknesh](#vickneshs-docker-deployment-guide)    | complex    | Caddy for TLS      |                              |
 | [MBRound18's](#mbround18-foundryvtt-docker) | simple | auto restarts on issues | Simple drop in link and ready to go |
