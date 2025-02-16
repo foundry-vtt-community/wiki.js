@@ -2,14 +2,20 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-16T22:38:55.376Z
+date: 2025-02-16T22:56:22.458Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
 ---
 
 # A. Overview
-Your content here
+This guide will help you take any locally-created module and make it available for others to install, by publishing releases on a public repository.
+
+If your goal is to publish a *premium* package that isn't freely available, you should follow Foundry's [Marketplace FAQ](https://www.foundryvtt.store/faq), reaching out to them for support if needed.
+
+>All of the same steps here apply to publishing a Game System as well; you'll just use `system` instead of `module` in various places.
+
+>Note that because the steps in this guide involve making your module's content downloadable by anyone, you should not include anything for which you don't have full distribution rights — including art assets, published intellectual property, etc. {.is-warning}
 
 # B. GitHub Account
 In order for Foundry clients to be able to install your module, its files need to be hosted somewhere on the public internet (premium modules have extra layers on top of what we'll cover here).
@@ -191,9 +197,11 @@ Now we'll upload the bare files of your module to your repository, so that the r
 
 <a id="I8" href="#I8">I8:</a> Leave the rest as-is, and hit the green `Commit changes` button.
 
->The entire process described in this section can be automated with a couple clicks if you choose to set up something like [GitHub Desktop](https://desktop.github.com/download/) on your local machine, but that is beyond the scope of this guide.
+>Most of the process described in this section can be automated with a few clicks if you choose to set up something like [GitHub Desktop](https://desktop.github.com/download/) on your local machine, but that is beyond the scope of this guide.
 
-<a id="I9" href="#I9">I9:</a> Now we publish a new Release: Click the `Releases` link over on the right side of your GitHub page, then click the `Draft a new release` button, in the upper right.
+Now we publish a new Release:
+
+<a id="I9" href="#I9">I9:</a> Click the `Releases` link over on the right side of your GitHub page, then click the `Draft a new release` button, in the upper right.
 
 <a id="I10" href="#I10">I10:</a> Hit the `Choose a tag` dropdown, and enter exactly the same `version` number you entered into the `module.json` file in step [I2](#I2). Again, no `v`.
 
