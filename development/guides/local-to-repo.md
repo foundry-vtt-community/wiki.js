@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: false
-date: 2025-02-14T18:43:59.744Z
+date: 2025-02-16T22:09:45.404Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -167,4 +167,39 @@ While logged in as yourself on the Foundry site, go to your [Authored Packages](
 >You can edit any of these fields after the fact, including making changes to the version requirements, if for example you later discover that your module is also verified to work under Foundry v13. You don't need to publish a new release to have these changes go into effect.
 
 # I. Updating Your Module
+Publishing a new version of your module is *mostly* the same as publishing the first release, as we did in [Section F](#F) (and then also in [Section G](#G) for the official Foundry release, if you're published there). We'll go through the process in detail here.
+
+After making all of your content/functionality changes to your module locally, we need to update its local manifest too:
+
+<a id="I1" href="#I1">I1:</a> With Foundry closed, go into your module's local folder, and open `module.json` in a text editor.
+
+<a id="I2" href="#I2">I2:</a> Find the `"version":` line, and enter a *new* version number, higher than the last, by whatever amount you feel is appropriate. If the last version was `1.0.0`, and this is update just has some small fixes, `1.0.1` would be appropriate. If it's an entirely new set of content or features, perhaps `2.0.0` would be better. As always, **do not prefix with a `v`**.
+
+<a id="I3" href="#I3">I3:</a> Find the `"download":` line, and edit the version number inside that path to match the new number you chose above. The `"manifest":` line doesn't need to change.
+
+<a id="I4" href="#I4">I4:</a> Save and close the `module.json` file.
+
+Now we'll upload the bare files of your module to your repository, so that the repo is up-to-date:
+
+<a id="I5" href="#I5">I5:</a> On the main page of your repo (the `<> Code` tab), click the `Add file` dropdown, and choose `Upload files`.
+
+<a id="I3" href="#I3">I3:</a> From inside your module's local folder, drag all of its *contents* into the `Drag files here...` zone in the GitHub page that we just opened — don't drag the entire module folder itself, as that will add another layer of folder depth that we don't want.
+
+<a id="I4" href="#I4">I4:</a> Change the `Commit changes` text that says "Add files via upload" to something more descriptive, like "Upload version 2 content" or "Fixed broken compendium links" or whatever else briefly describes the changes you've made in this update. You can elaborate in the `Description` field if you like.
+
+<a id="I5" href="#I5">I5:</a> Leave the rest as-is, and hit the green `Commit changes` button.
+
+>The entire process described in this section can be automated with a couple clicks if you choose to set up something like [GitHub Desktop](https://desktop.github.com/download/) on your local machine, but that is beyond the scope of this guide.
+
+<a id="I6" href="#I6">I6:</a> Now we publish a new Release: Click the `Releases` link over on the right side of your GitHub page, then click the `Draft a new release` button, in the upper right.
+
+<a id="I7" href="#I7">I7:</a> Hit the `Choose a tag` dropdown, and enter exactly the same `version` number you entered into the `module.json` file in step [I2](#I2). Again, no `v`.
+
+<a id="I8" href="#I8">I8:</a> Enter a title and a description. The title doesn't need to match the version number, but it's a reasonable practice.
+
+
+
+
+
+<a id="I12" href="#I12">I12:</a> 
 
