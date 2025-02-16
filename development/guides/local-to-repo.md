@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: true
-date: 2025-02-16T22:58:09.329Z
+date: 2025-02-16T23:11:47.551Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -175,7 +175,7 @@ While logged in as yourself on the Foundry site, go to your [Authored Packages](
 <a id="H6" href="#H6">H6:</a> Click the `Save Package` button when you're done.
 
 # I. Updating Your Module
-Publishing a new version of your module is *mostly* the same as publishing the first release, as we did in [Section F](#F) (and then also in [Section G](#G) for the official Foundry release, if you're published there). We'll go through the process in detail here.
+Publishing a new version of your module is *mostly* the same as publishing the first release, as we did in [Section F](#F) (and then also in [Section H](#H) for the official Foundry release, if you're published there). We'll go through the process in detail here.
 
 After making all of your content/functionality changes to your module locally, we need to update its local manifest too:
 
