@@ -2,7 +2,7 @@
 title: FreeBSD
 description: 
 published: true
-date: 2023-11-26T12:05:39.557Z
+date: 2025-02-19T19:28:59.042Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:57.469Z
@@ -18,6 +18,8 @@ The officially supported platforms for Foundry VTT are Linux, macOS and Windows.
 As of Foundry 11, it no longer works on FreeBSD out of the box. This is likely because FreeBSD does not ship with `glibc`, it uses `libc` instead.
 
 > In testing on TrueNAS Core, the below resolution did not work. Foundry v11+ might just not work on FreeBSD.
+
+> Conversely, testing this for Foundry v12 on FreeBSD 14.2, the instructions worked.
 
 This can be resolved by:
 1. Shut down your currently hosted Foundry VTT server instance. 
