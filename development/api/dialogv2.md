@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2024-11-24T03:09:51.817Z
+date: 2025-03-04T00:32:25.201Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -138,11 +138,68 @@ This sample dialog will return the value `advantage`, `standard`, or `disadvanta
 
 ### rejectClose
 
-The `rejectClose` property, by default `true`, causes a dialog to throw an error if it is closed, halting all execution. If you would prefer to continue despite the user closing the dialog, pass `rejectClose: false` for the dialog to return `null` instead. 
+The `rejectClose` property, by default `true` in v12 and `false` in v13, causes a dialog to throw an error if it is closed, halting all execution. If you would prefer to continue despite the user closing the dialog, pass `rejectClose: false` for the dialog to return `null` instead. 
 
 ## Specific Use Cases
 
 Here are some common tips and tricks while working with DialogV2
+
+### Creating inputs with JS
+
+By default, applications only return based on their buttons inputs. However, a common desire is taking simple inputs, such as situational bonuses for a dice roll or picking an option in a Select. The `foundry.applications.fields` [namespace](https://foundryvtt.com/api/modules/foundry.applications.fields.html) provides a number of functions to generate `input` and `select` elements that can be fed into your `content`.
+
+```js
+const fields = foundry.applications.fields;
+
+const textInput = fields.createNumberInput({ 
+  name: 'foo',
+  value: 'Starting Value'
+});
+
+const textGroup = fields.createFormGroup({
+	input: textInput,
+  label: "My text input",
+  hint: "Optional hint"
+});
+
+const selectInput = fields.createSelectInput({
+	options: [
+    {
+      label: "Option 1",
+      value: 'one'
+    }, { 
+      label: "Option 2",
+      value: 'two'
+    }
+  ],
+  name: 'fizz'
+})
+
+const selectGroup = fields.createFormGroup({
+	input: selectInput,
+  label: "My Select Input",
+  hint: "Another Hint"
+})
+
+const content = `${textGroup.outerHTML} ${selectGroup.outerHTML}` 
+```
+
+Alternatively, if you are working with data models, the [`toInput`](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html#toInput) and [`toFormGroup`](https://foundryvtt.com/api/classes/foundry.data.fields.DataField.html#toFormGroup) functions can help.
+
+```js
+const prop = 'foo.bar';
+
+const field = doc.system.schema.getField(prop);
+
+// If the field doesn't have a `label` and `hint` property,
+// or you want to customize the label and hint,
+// you can pass them into the first parameter of the function.
+const group = field.toFormGroup({}, { value: foundry.utils.getProperty(doc.system, prop) });
+
+const content = group.outerHTML;
+```
+
+However you construct it, that `content` can then be passed into a DialogV2 static function.
 
 ### Using renderTemplate to generate the `content`
 
@@ -157,6 +214,25 @@ const response = await foundry.applications.api.DialogV2.prompt({
   modal: true
 })
 ```
+
+### Returning form input
+
+If all the inputs in your Dialog have a `name` property, the [FormDataExtended](https://foundryvtt.com/api/classes/client.FormDataExtended.html) class can help collect that data and return it in a Foundry-friendly way. This is the same class that foundry uses to collect document sheet data.
+
+```js
+const data = foundry.applications.api.DialogV2.prompt({
+	window: { title: "My Dialog" },
+  content: '<input type="number" name="foobar">',
+  ok: {
+    label: "Save",
+    icon: "fa-solid fa-floppy-disk",
+    callback: (event, button, dialog) => new FormDataExtended(button.form).object
+  },
+  rejectClose: false
+})
+```
+
+When working with many inputs, this will give a flat object pairing all of the input `name` properties with the values submitted. If you need to transform the object to a nested structure, the [`foundry.utils.expandObject`](https://foundryvtt.com/api/functions/foundry.utils.expandObject.html) function can help.
 
 ### The `render` option
 
