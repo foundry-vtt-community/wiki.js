@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2025-03-04T00:32:25.201Z
+date: 2025-03-04T02:13:06.205Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -157,13 +157,13 @@ const textInput = fields.createNumberInput({
 });
 
 const textGroup = fields.createFormGroup({
-	input: textInput,
+  input: textInput,
   label: "My text input",
   hint: "Optional hint"
 });
 
 const selectInput = fields.createSelectInput({
-	options: [
+  options: [
     {
       label: "Option 1",
       value: 'one'
@@ -176,7 +176,7 @@ const selectInput = fields.createSelectInput({
 })
 
 const selectGroup = fields.createFormGroup({
-	input: selectInput,
+  input: selectInput,
   label: "My Select Input",
   hint: "Another Hint"
 })
@@ -221,7 +221,7 @@ If all the inputs in your Dialog have a `name` property, the [FormDataExtended](
 
 ```js
 const data = foundry.applications.api.DialogV2.prompt({
-	window: { title: "My Dialog" },
+  window: { title: "My Dialog" },
   content: '<input type="number" name="foobar">',
   ok: {
     label: "Save",
