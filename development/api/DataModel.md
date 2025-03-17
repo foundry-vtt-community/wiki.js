@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2024-12-17T02:58:45.827Z
+date: 2025-03-17T23:23:19.310Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -234,6 +234,43 @@ The various data fields may be a bit obscure, so here are a few examples for eac
 - TypeDataField: `Actor#system`, `Item#system`
 
 `EmbeddedCollectionField`, `EmbeddedCollectionDeltaField`, and `EmbeddedDocumentField` are for use by Foundry staff only. 
+
+### migrateData
+
+API Reference
+- [DataModel.migrateData](https://foundryvtt.com/api/classes/foundry.abstract.DataModel.html#migrateData)
+- [Document._addDataFieldMigration](https://foundryvtt.com/api/classes/foundry.abstract.Document.html#_addDataFieldMigration)
+
+The migrateData function is a powerful tool for developers making adjustments to their schemas. This function runs not only the first time a document is loaded in after a schema change, but in between any `create` or `update` call and the `preCreate`/`preUpdate` hook. This means that while it will sometimes receive the full, valid, document data, it may also receive only a portion of it. 
+
+This means migrateData is best suited for 1:1 mappings, such as changing property values or renaming a field. It's also notably *not* an asynchronous DB operation; it runs exclusively sychronously & locally. Changes made in migrateData will *not* be persisted back to the DB until the document otherwise performs a DB transaction, at which point the changes from migrateData will be included and saved.
+
+**Note:** In general, it's best to close this function out with `return super.migrateData(data)`; the actual return value is only sometimes used, but this also ensures any upstream adjustments also happen.
+
+#### Changing property values
+
+Sometimes, the value of a property needs to change. One common example is splitting off items with certain properties into a brand new item subtype. The migrateData function runs before class construction, so the resulting item will be constructed with appropriate new `system` data model instance.
+
+```js
+static migrateData(data) {
+	if ((data.type === 'feature') && (data?.system?.type === 'ancestry')) {
+  	data.type = 'ancestry';
+  }
+  
+  return super.migrateData(data)
+}
+```
+
+#### Field Renaming
+
+A simple way to implement these is with `Document._addDataFieldMigration`, which in its second and third arguments takes the string path of the two fields. For example, if one were to want to migrate a property from `flags` to `system`, you could use the following code. 
+
+```js
+static migrateData(data) {
+  foundry.abstract.Document._addDataFieldMigration(source, "flags.mySystem.stacks", "system.stacks");
+  return super.migrateData(data)
+}
+```
 
 ---
 ## Specific Use Cases
