@@ -2,7 +2,7 @@
 title: Adding Inputs
 description: Module-added inputs to system and core sheets
 published: true
-date: 2025-03-19T03:46:01.466Z
+date: 2025-03-19T04:04:29.132Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T16:04:29.278Z
@@ -10,7 +10,7 @@ dateCreated: 2025-03-18T16:04:29.278Z
 
 One extremely common desire for modules is to add a new input to an existing sheet, such as a system-provided character sheet or any of the core-provided sheets. Fortunately, if properly constructed, modules can easily use the core document submission and rendering process to manage their data.
 
-
+This guide assumes you already have a module with a script attached; everything covered here is working within those js files. This process can also be useful to systems wishing to add functionality to core-provided sheets; just use your system ID whenever the code would refer to the module ID.
 
 ## API Reference
 
@@ -20,7 +20,7 @@ This article makes use of the following concepts
 
 ## Walkthrough
 
-The total amount of code necessary for adding an input
+The total amount of code necessary for adding an input is fairly minimal, but it involves integrating multiple distinct parts of the foundry API.
 
 ### 1. Identify the render hook
 
