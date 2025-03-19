@@ -2,7 +2,7 @@
 title: Adding Inputs
 description: Module-added inputs to system and core sheets
 published: true
-date: 2025-03-19T04:33:15.530Z
+date: 2025-03-19T05:38:25.304Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T16:04:29.278Z
@@ -64,7 +64,7 @@ Hooks.on("renderCharacterSheet", (app, html, context, options) => {
 });
 ```
 
-
+The rest of the tutorial will cover what goes inside this hook callback.
 
 ### 2. Construct the input
 
