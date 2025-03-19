@@ -2,7 +2,7 @@
 title: Adding Inputs
 description: Module-added inputs to system and core sheets
 published: true
-date: 2025-03-18T16:04:29.278Z
+date: 2025-03-19T03:46:01.466Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T16:04:29.278Z
@@ -20,11 +20,17 @@ This article makes use of the following concepts
 
 ## Walkthrough
 
-The total amount of code necessary
+The total amount of code necessary for adding an input
 
 ### 1. Identify the render hook
 
-CONFIG.debug.hooks
+Foundry fires a "render hook" whenever an application is opened or refreshed. You can see these (and other) hooks in the console by toggling CONFIG.debug.hooks. The following script macro makes it easy to turn this behavior on and off.
+
+```js
+CONFIG.debug.hooks = !CONFIG.debug.hooks
+
+console.warn("Hook debugging set to", CONFIG.debug.hooks)
+```
 
 ### 2. Construct the input
 
@@ -37,3 +43,7 @@ querySelector, insertAdjacentElement
 ## Final construction
 
 Full example
+
+## Buttons
+
+Adding a button works largely the same, the main difference being that 
