@@ -2,7 +2,7 @@
 title: Adding Inputs
 description: Module-added inputs to system and core sheets
 published: true
-date: 2025-03-19T07:06:02.647Z
+date: 2025-03-20T06:20:45.869Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T16:04:29.278Z
@@ -148,7 +148,59 @@ Figuring out the parts and which one your input is going into will likely requir
 
 ## Final construction
 
-Full example
+The following example is taken from [Complete Card Management](https://github.com/MetaMorphic-Digital/complete-card-management/). It extracts the callback into a function, which provides two benefits.
+1. It's easier to add type annotations and other comments
+2. The function can be extracted to another file. For simplicity the export/import logic is excluded from the example.
+
+```js
+// Used throughout the module
+const MODULE_ID = "complete-card-management";
+
+/**
+ * Add Scene pile selection
+ * @param {SceneConfig} app
+ * @param {HTMLElement} html
+ * @param {Record<string, unknown>} context
+ * @param {Record<string, unknown>} options
+ */
+function renderSceneConfig(app, html, context, options) {
+  /** @type {Scene} */
+  const scene = app.document;
+
+  // You can build options out of anything iterable
+  // In this case, it's a list of card piles
+  const selectOptions = game.cards.reduce((arr, doc) => {
+    if (!doc.visible || (doc.type !== "pile") || !doc.canUserModify(game.user, "update")) return arr;
+    arr.push({value: doc.id, label: doc.name});
+    return arr;
+  }, []);
+
+  const input = foundry.applications.fields.createSelectInput({
+    name: `flags.${MODULE_ID}.canvasPile`,
+    value: scene.getFlag(MODULE_ID, "canvasPile"),
+    options: selectOptions,
+    blank: ""
+  });
+
+  const group = foundry.applications.fields.createFormGroup({
+    input,
+    label: "CCM.SceneConfig.CanvasPileLabel",
+    hint: "CCM.SceneConfig.CanvasPileHint",
+    localize: true
+  });
+
+  const basicOptions = html.querySelector(".tab[data-group=\"ambience\"][data-tab=\"basic\"]");
+
+  // append is another helpful function for mutating the DOM
+  basicOptions.append(group);
+
+  // Mutating the DOM can result in an app overflowing rather than growing.
+  // A call to setPosition will cure this.
+  app.setPosition();
+}
+
+Hooks.on("renderSceneConfig", renderSceneConfig)
+```
 
 ## Buttons
 
