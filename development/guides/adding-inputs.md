@@ -2,7 +2,7 @@
 title: Adding Inputs
 description: Module-added inputs to system and core sheets
 published: true
-date: 2025-03-20T06:20:45.869Z
+date: 2025-03-20T06:26:19.922Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-18T16:04:29.278Z
@@ -204,4 +204,6 @@ Hooks.on("renderSceneConfig", renderSceneConfig)
 
 ## Buttons
 
-Adding a button works largely the same, the main difference being that you then need to grab the constructed button element and add a click listener with whatever callback you wanted to use.
+Adding a button works largely the same, the main difference being that you then need to grab the constructed button element and add a click listener with whatever callback you wanted to use. It may be easier to write an HTML string or construct one with `renderTemplate` than try to go through `document.createElement("button")`; if so, the [`insertAdjacentHTML`](https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML) function will be helpful. 
+
+Once you've added the button to the DOM, you can use `querySelector("button").addEventListener("click", console.log)` to add a click function. Make sure to adjust the selector path and the callback.
