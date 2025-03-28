@@ -2,7 +2,7 @@
 title: Improving Intellisense
 description: Leveraging Foundry's type hints within VSCode
 published: true
-date: 2025-03-20T05:50:17.722Z
+date: 2025-03-28T00:12:14.105Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T05:50:17.722Z
@@ -12,7 +12,7 @@ dateCreated: 2025-03-20T05:50:17.722Z
 
 One common issue when writing code for Foundry is that you're entirely dependent on an external library, which is not naturally included in VSCode's intellisense support. This guide covers how to configure your repository to dramatically improve the type hints.
 
-**Note:** This guide is written for Foundry v13.338 and above, when Foundry fully migrated to ESM. Several key details differ for lower versions.
+**Note:** This guide is written for Foundry v13.339 and above; Foundry made major changes to its file layout in 13.338 and 13.339. Several key details differ for lower versions.
 
 ## 0. Prerequisites
 
@@ -101,14 +101,30 @@ The next part is setting up the actual type hints by creating a file named `jsco
     },
   },
   "exclude": ["node_modules", "**/node_modules/*"],
-  "include": ["your-package-root.mjs", "foundry/client/client.mjs"],
+  "include": ["your-package-root.mjs", "foundry/client/client.mjs", "foundry/client/global.d.mts"],
   "typeAcquisition": {
     "include": ["jquery"]
   }
 }
 ```
 
-Once this is done, you may need to restart vscode to see the changes. You should see that the `foundry` namespace now provides full intellisense support, e.g. `foundry.applications.api.DialogV2.prompt`. As of 13.338, most other global objects are constructed & assigned in such a way that they are not available.
+Once this is done, you may need to restart vscode to see the changes. You should see that the `foundry` namespace now provides full intellisense support, e.g. `foundry.applications.api.DialogV2.prompt`. One gap is this does not support the various "intentionally also global" classes and functions, such as `Hooks` or `fromUuid`. 
+
+If you want to add those, you can setup a .d.ts file, include it in your jsconfig, and then add the following.
+
+```ts
+declare global {
+  // not a real extension of course but simplest way for this to work with the intellisense.
+  /**
+   * A simple event framework used throughout Foundry Virtual Tabletop.
+   * When key actions or events occur, a "hook" is defined where user-defined callback functions can execute.
+   * This class manages the registration and execution of hooked callback functions.
+   */
+  class Hooks extends foundry.helpers.Hooks {}
+  const fromUuid = foundry.utils.fromUuid;
+  const fromUuidSync = foundry.utils.fromUuidSync;
+}
+```
 
 ## 3. Importing types
 
