@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: Full guide for installing Foundry instances with Node & PM2 via Homebrew
 published: true
-date: 2025-02-09T18:23:40.602Z
+date: 2025-03-30T18:02:17.112Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -100,10 +100,18 @@ Ignore the `npm notice` lines that show when this is complete.
 
 We'll assume you're going with port `30000`; edit the command below with a different port number if you're deciding to change it.
 
-<a id="G2" href="#G2">G2:</a> Launch Foundry via `pm2`:
+<a id="G2a" href="#G2a">G2a:</a> Launch Foundry v13 or later via `pm2`:
+```
+pm2 start "node ~/Applications/Foundry/foundryapp/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
+```
+
+>If you are installing Foundry v12 or earlier, then your `main.js` file will be in a slightly different location — use the following command instead: {.is-warning}
+
+<a id="G2b" href="#G2b">G2b:</a> Launch Foundry v12 or earlier via `pm2`:
 ```
 pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
 ```
+
 As soon as you run this, macOS should throw a warning that the Node app was "not opened" for security reasons. Don't click anything in this dialog, just ignore it for a moment (you can drag the dialog out of the way).
 
 <a id="G3" href="#G3">G3:</a> Open the `System Settings` app, go to the `Privacy & Security` section, scroll to the bottom, and click the `Allow Anyway` button next to the message about the Node app being blocked:
@@ -181,6 +189,6 @@ rm ~/Applications/Foundry/foundryvtt.zip
 sudo curl -o- https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew install node@22
 npm install pm2@latest -g
-pm2 start "node ~/Applications/Foundry/foundryapp/resources/app/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
+pm2 start "node ~/Applications/Foundry/foundryapp/main.js --dataPath=$HOME/Applications/Foundry/userdata --port=30000" --name foundry
 pm2 save
 ```
