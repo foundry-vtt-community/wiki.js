@@ -2,7 +2,7 @@
 title: Improving Intellisense
 description: Leveraging Foundry's type hints within VSCode
 published: true
-date: 2025-03-28T00:12:14.105Z
+date: 2025-04-04T13:04:49.594Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T05:50:17.722Z
@@ -101,7 +101,7 @@ The next part is setting up the actual type hints by creating a file named `jsco
     },
   },
   "exclude": ["node_modules", "**/node_modules/*"],
-  "include": ["your-package-root.mjs", "foundry/client/client.mjs", "foundry/client/global.d.mts"],
+  "include": ["your-package-root.mjs", "foundry/client/client.mjs", "foundry/client/global.d.mts", "foundry/common/server.mjs",],
   "typeAcquisition": {
     "include": ["jquery"]
   }
