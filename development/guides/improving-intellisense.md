@@ -2,7 +2,7 @@
 title: Improving Intellisense
 description: Leveraging Foundry's type hints within VSCode
 published: true
-date: 2025-04-09T20:32:43.599Z
+date: 2025-04-10T06:15:50.823Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T05:50:17.722Z
@@ -93,8 +93,8 @@ The next part is setting up the actual type hints by creating a file named `jsco
 ```json
 {
   "compilerOptions": {
-    "module": "ES2024",
-    "target": "ES2024",
+    "module": "ES2022",
+    "target": "ES2022",
     "paths": {
       "@client/*": ["./foundry/client/*"],
       "@common/*": ["./foundry/common/*"]
