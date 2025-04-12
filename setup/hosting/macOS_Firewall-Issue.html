@@ -1,0 +1,32 @@
+<!--
+title: macOS Firewall blocks Foundry VTT regardless of your settings
+description: You have port forwarding setup, your world link has a green checkmark, yet no one outside your network can connect. This is because macOS blocks ALL unsigned apps. 
+published: true
+date: 2025-04-12T22:47:06.358Z
+tags: macos, firewall, certificate, self-signed
+editor: ckeditor
+dateCreated: 2025-04-12T22:47:06.358Z
+-->
+
+<h1><strong>How to allow Foundry VTT to fully accept incoming connections to macOS 15 without turning off any firewalls:</strong></h1>
+<h2><i><strong>Notes</strong></i></h2>
+<ul>
+  <li>This "How To" assumes that you've correctly configured your router to allow FVTT traffic via Port Forwarding. (Within your world in FVTT the <strong>Game Settings &gt; Invitation Links</strong> window will display a circled green checkmark if this is working.)</li>
+  <li>In Step 9 below you'll need to know your macOS computer's login password.</li>
+</ul>
+<h2><i><strong>Step-by-Step</strong></i></h2>
+<ol>
+  <li>Open the "Keychain Access" app.</li>
+  <li>From the <strong>Keychain Access</strong> (process) menu select <strong>Certificate Assistant &gt; Create a Certificate…</strong>.</li>
+  <li>Name: You choose (I used "FVTT"); Identity Type: Self Signed Root; Certificate Type: Code Signing. Leave "Let me override defaults" unchecked.</li>
+  <li>Select "Create". (Your cert. is good for 1 year.)</li>
+  <li>After OK'ing the creation process you should be returned to the Keychain Access app.</li>
+  <li>Open the "Terminal" app.</li>
+  <li>Paste in: <code>codesign -fs FVTT --deep /Applications/Foundry\ Virtual\ Tabletop.app</code></li>
+  <li><strong>WARNING! Make sure to replace "</strong><i><strong>FVTT</strong></i><strong>" with the name you choose for your cert., if different.</strong></li>
+  <li>Press return on the keyboard and you'll be prompted to enter your Mac's "login" keychain password. (This is the password you use to login into your macOS computer.)</li>
+  <li><i>CAUTION: You should select "Allow All" or you'll be asked for your login password for each and every sub-app within the Foundry Virtual Tabletop.app package, and there's a lot of them.</i></li>
+  <li>After a bit of time the Terminal Window should simply return to the prompt.</li>
+  <li>If so: You're all set! You should now be able to access your FVTT world using the invitation link.</li>
+  <li>If not: You received an error message, so you'll need to figure out what's causing it.</li>
+</ol>
