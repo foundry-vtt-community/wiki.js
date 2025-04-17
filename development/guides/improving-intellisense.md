@@ -2,7 +2,7 @@
 title: Improving Intellisense
 description: Leveraging Foundry's type hints within VSCode
 published: true
-date: 2025-04-10T06:15:50.823Z
+date: 2025-04-17T23:49:06.680Z
 tags: 
 editor: markdown
 dateCreated: 2025-03-20T05:50:17.722Z
@@ -12,7 +12,7 @@ dateCreated: 2025-03-20T05:50:17.722Z
 
 One common issue when writing code for Foundry is that you're entirely dependent on an external library, which is not naturally included in VSCode's intellisense support. This guide covers how to configure your repository to dramatically improve the type hints.
 
-**Note:** This guide is written for Foundry v13.339 and above; Foundry made major changes to its file layout in 13.338 and 13.339. Several key details differ for lower versions.
+**Note:** This guide is written for Foundry v13.340 and above; Foundry made major changes to its file layout in 13.338 and 13.339. Several key details differ for lower versions.
 
 ## 0. Prerequisites
 
@@ -64,7 +64,7 @@ if (fs.existsSync("foundry-config.yaml")) {
   }
 
   // Javascript files
-  for (const p of ["client", "common"]) {
+  for (const p of ["client", "common", "tsconfig.json"]) {
     try {
       await fs.promises.symlink(path.join(fileRoot, p), path.join("foundry", p));
     } catch (e) {
