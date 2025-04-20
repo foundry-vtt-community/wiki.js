@@ -2,7 +2,7 @@
 title: Node hosts on macOS
 description: Full guide for installing Foundry instances with Node & PM2 via Homebrew
 published: true
-date: 2025-03-30T18:02:17.112Z
+date: 2025-04-20T05:06:07.744Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-03T02:31:40.052Z
@@ -42,7 +42,9 @@ You should now be seeing something like this:
 
 # C. Download Foundry
 
-<a id="C1" href="#C1">C1:</a> Go to your [Purchased Licenses](https://foundryvtt.com/me/licenses) page on the Foundry website (you'll need to be logged in). Choose the version of the app you want, and then choose **Linux/NodeJS** in the Operating System dropdown. (We're not downloading a Mac app here, we're getting the Node version.)
+<a id="C1" href="#C1">C1:</a> Go to your [Purchased Licenses](https://foundryvtt.com/me/licenses) page on the Foundry website (you'll need to be logged in). Choose the version of the app you want, and then choose **NodeJS** in the Operating System dropdown. (We're not downloading a Mac app here, we're getting the Node version.)
+
+If you're installing a v12 or earlier host, choose **Linux** in this dropdown, as those earlier versions were packaged alongside a desktop Linux app.
 
 Click the Download button. When it's complete, find the zip file that was downloaded, and double-click it to unzip it. You will now have a folder named something like `FoundryVTT-12.331`. You can delete the zip file.
 
