@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2025-03-27T19:10:34.060Z
+date: 2025-04-22T13:56:55.579Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -355,7 +355,7 @@ sudo apt-get install nano unzip -y
 ## Install and launch Foundry
 <a id="D16" href="#D16">D16.</a>  Login to [FoundryVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="D17" href="#D17">D17.</a>  Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="D17" href="#D17">D17.</a>  Select the recommended version and **NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -379,8 +379,19 @@ mkdir -p ~/foundryuserdata
 ```
 <a id="D21" href="#D21">D21.</a>  Test that Foundry runs successfully by running the following command:
 ```
-node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryuserdata
+node /home/ubuntu/foundry/main.js --dataPath=/home/ubuntu/foundryuserdata
 ```
+
+>Foundry v12 and earlier or MODULE NOT FOUND ERROR
+>  
+>The location of main.js changed for the NodeJS package (only) in Foundry v13 and onward. In all other packages, such as the Linux package, the launch command for main.js will need to be modified to:
+>  
+>  ```
+>  node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryuserdata
+>  ```
+>Both the command in this step and in D25 will need to be modified.
+>{.is-info}
+
 <a id="D22" href="#D22">D22.</a>  You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
 
 ![Foundry Launched](/images/oracle/image29.webp)
@@ -397,7 +408,7 @@ node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryu
 
 <a id="D25" href="#D25">D25.</a>  We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
 ```
-pm2 start "node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryuserdata" --name foundry
+pm2 start "node /home/ubuntu/foundry/main.js --dataPath=/home/ubuntu/foundryuserdata" --name foundry
 ```
 <a id="D26" href="#D26">D26.</a>  Double check pm2 has launched Foundry correctly:
 ```
