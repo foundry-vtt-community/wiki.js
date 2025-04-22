@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-04-22T13:54:43.590Z
+date: 2025-04-22T13:58:43.393Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -229,7 +229,7 @@ At the end of this section you will have a functional installation of Foundry us
 
 <a id="C1" href="#C1">C1.</a> Login to [FoundryVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
 
-<a id="C2" href="#C2">C2.</a>	Select the recommended version and **Linux/NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
+<a id="C2" href="#C2">C2.</a>	Select the recommended version and **NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
 
 > Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
 
@@ -262,9 +262,8 @@ node foundry/main.js --dataPath=/home/<user>/foundryuserdata
 >  
 >The location of main.js changed for the NodeJS package (only) in Foundry v13 and onward. In all other packages, such as the Linux package, the launch command for main.js will need to be modified to:
 >  
->  ```
->  node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
->  ```
+>`node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata`
+>
 >Both the command in this step and in C10 will need to be modified.
 >{.is-info}
 
@@ -289,7 +288,7 @@ node foundry/main.js --dataPath=/home/<user>/foundryuserdata
 
 <a id="C10" href="#C10">C10.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command. Be sure to replace `<user>` with the name of the actual user. There are two replacements:
 ```
-pm2 start "node /home/<user>/foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
+pm2 start "node /home/<user>/foundry/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
 ```
   
   
