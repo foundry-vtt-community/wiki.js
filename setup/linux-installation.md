@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-04-22T13:46:59.449Z
+date: 2025-04-22T13:54:43.590Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -258,14 +258,16 @@ cd ~
 node foundry/main.js --dataPath=/home/<user>/foundryuserdata
 ```
 
-<details><summary>Foundry v12 and earlier or MODULE NOT FOUND ERROR</summary>
-The location of `main.js` changed for the NodeJS package (only) in Foundry v13 and onward. In all other packages, such as the Linux package, the launch command for `main.js` will need to be:
-  
-  ```
-  node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
-  ```
-  
-</details>
+>Foundry v12 and earlier or MODULE NOT FOUND ERROR
+>  
+>The location of main.js changed for the NodeJS package (only) in Foundry v13 and onward. In all other packages, such as the Linux package, the launch command for main.js will need to be modified to:
+>  
+>  ```
+>  node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata
+>  ```
+>Both the command in this step and in C10 will need to be modified.
+>{.is-info}
+
 
 <a id="C7" href="#C7">C7.</a>	You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
 
@@ -289,6 +291,8 @@ The location of `main.js` changed for the NodeJS package (only) in Foundry v13 a
 ```
 pm2 start "node /home/<user>/foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
 ```
+  
+  
 <a id="C11" href="#C11">C11.</a>	Double check pm2 has launched Foundry correctly:
 ```
 pm2 list
