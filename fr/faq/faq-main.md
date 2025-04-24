@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-01-06T22:57:22.656Z
+date: 2025-04-24T11:36:25.215Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -234,7 +234,7 @@ Un monde, c'est ta partie de JDR, ta table de jeu, quoi. On créée un monde à 
 
 ## C'est quoi qui est gratuit ? Et qui est payant ?
 
-La totalité des systèmes de jeu sont gratuits. Et parmi les modules, il en exist ds gratuits (la plupart) et des payants (qu'on appelle aussi modules Premium, cf ci-dessous).
+La totalité des systèmes de jeu sont gratuits. Et parmi les modules, il en existe des gratuits (la plupart) et des payants (qu'on appelle aussi modules Premium, cf ci-dessous).
 
 Ces modules payants (ie Premium) peuvent être des campagnes complètes (ie par exemple Pax Elfica chez les 12 Singes), des petits scénarios, des recueils de maps/cartes, des modules de contenus (par exemple le module "core" pour Warhammer contient l'intégralité du livre de base), etc. Ces modules payants sont toujours optionnels, vous n'êtes jamais obligé de les acheter.
 
@@ -256,7 +256,7 @@ Exemple : Pour 'Warhammer", entrez "War"
 
 ## Comment je fais pour installer un module ?
 
-La méthode est identique à l'installation des sytsèmes, sauf que tout se passe dans l'onglet des modules.
+La méthode est identique à l'installation des systèmes, sauf que tout se passe dans l'onglet des modules.
 
 ## On m'a passé un lien vers un system.json ou un module.json. J'en fais quoi ?
 
