@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-04-30T12:22:28.752Z
+date: 2025-04-30T13:49:13.605Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -587,7 +587,7 @@ rm ~/foundry/foundryvtt.zip
 pm2 start foundry
 ```
 
->If you are updating from v12 or earlier to v13 or later, or are seeing pm2 error if you run `pm2 list`, or Foundry generally fails to start:
+>If you are **updating from v12 or earlier** to v13 or later, or are seeing pm2 error if you run `pm2 list`, or Foundry generally fails to start:
 >Run `pm2 stop foundry && pm2 delete foundry` then run the commands in steps [C10](#C10) through [C12](#C12). {.is-warning}
 
 <a id="G6" href="#G6">G6.</a> Check your node version using `node -v` against the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server). Head to [section F. Updating NodeJS](#F) if you need to update Node.js.
