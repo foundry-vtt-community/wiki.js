@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-04-30T13:53:48.662Z
+date: 2025-05-03T21:58:02.693Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -567,7 +567,7 @@ pm2 stop foundry
 mv foundry foundry-archive
 ```
 
-<a id="G3" href="#G3">G3.</a> Create the installation directory and download desired Foundry version using wget. You must use the Timed URL, and the Linux version. Be sure to wrap the URL with quotes below.
+<a id="G3" href="#G3">G3.</a> Create the installation directory and download desired Foundry version using wget. You must use the Timed URL and the Node.js version. Be sure to wrap the URL with quotes below.
 
 ```
 mkdir ~/foundry
