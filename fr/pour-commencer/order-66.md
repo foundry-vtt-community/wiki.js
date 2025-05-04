@@ -2,15 +2,17 @@
 title: ! Mise à jour v10
 description: Procédure de mise à jour vers une monté de version
 published: true
-date: 2022-09-15T22:37:34.986Z
+date: 2025-05-04T09:26:43.573Z
 tags: 
 editor: markdown
 dateCreated: 2021-12-20T12:19:28.031Z
 ---
 
-*Lors de la livraison d'une nouvelle version dite "Majeure" de Foundry VTT, tel que le passage de la v8 à la v9, et maintenant à la v10, nous recommandons fortement, et à chaque fois d'ailleurs, de ne pas se precipiter vers la nouvelle version, même si nous comprenons qu'elle devient à sa publication, le nouveau standard pour la VTT.
-Nous conseillons plus d'attendre quelques jours, histoire que tous les modules et systèmes gagnent en stabilité d'une part, mais aussi afin d'éviter aux moins experts en Informatique d'entre nous, de ne pas se retrouver plonger dans les méandres d'une VTT dysfonctionnelle.
-Pour les fous, les inconscients, les courageux ou les plus téméraires d'entre vous, nous avons décidé de faire une petite procédure, qui nous l'espérons, pourra vous aider, avant que l'irréparable soit commis et que nous devions éponger tous les cris, les S.O.S.*
+*À l’occasion de la publication d’une nouvelle version dite « majeure » de Foundry VTT — et plus généralement pour toute mise à jour — nous vous recommandons de ne pas vous précipiter pour effectuer la migration. Bien que cette version devienne aussitôt la nouvelle référence de la plateforme, il est préférable d’attendre quelques jours.*
+
+*Ce délai permet aux modules et systèmes de se stabiliser, et réduit le risque pour les utilisateurs moins familiers avec les aspects techniques de se retrouver confrontés à une instance de Foundry VTT instable ou partiellement fonctionnelle.*
+
+*Pour celles et ceux qui souhaitent néanmoins procéder immédiatement à la mise à jour, nous avons mis à disposition une procédure dédiée. Nous espérons qu’elle vous sera utile et qu’elle vous évitera des complications qui nécessiteraient ensuite une assistance en urgence.*
 
 # Mise à jour d'une version majeure de Foundry VTT
 
@@ -28,8 +30,8 @@ En premier lieu, nous allons devoir télécharger les différents exécutables n
 
 Vous trouverez sur le site [Foundry VTT](https://foundryvtt.com/), dans la Rubrique **"Pourchased Licenses"** de votre profil utilisateur, les différentes sources.
 
-> - Télécharger la version dans laquelle votre VTT est : **Actuellement en version 0.8.9 (build255)**,
-> - Télécharger la version cible : **Actuellement en v10 (buildXXX)**
+> - Télécharger la version dans laquelle votre VTT est : **Actuellement en version X.X.X (buildXXX)**,
+> - Télécharger la version cible : **Actuellement en vXX (buildXXX)**
 
 ![1.software.png](/setup/winstall/1.software.png)
 
