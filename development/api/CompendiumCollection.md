@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2024-12-10T22:06:44.192Z
+date: 2025-05-13T21:57:40.281Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -318,7 +318,9 @@ However, one key weakness of Foundry's native database structure is it relies on
 
 To help developers, here are two node scripts. These scripts rely on *locally* installing the foundry CLI, which you can do with `npm install @foundryvtt/foundryvtt-cli --save-dev`. This also assumes you've already initialized your module or system folder as a node package. `fs` and `path` are provided natively by node versions that support Foundry. **These scripts can ONLY be run while the compendiums are not in use by a Foundry world**.
 
-This first script coverts the LDB setup in the `packs` directory to YAML files in `src/packs`; you can change the `const yaml = true` to false if you prefer JSON.
+This first script coverts the LDB setup in the `packs` directory to YAML files in `src/packs`; you can change the `const yaml = true` to false if you prefer JSON. The `expandAdventures` will create the items from the adventure as their own files, instead of populating them inside the adventure yaml/json file. The `folders` define if you want to create a similar folders structure presented in the compendium.
+
+As you will see, there is "special handler" for the file names. It checks which type of document is passed, using some properties of these documents to find it.
 
 ```js
 import { extractPack } from "@foundryvtt/foundryvtt-cli";
@@ -327,15 +329,19 @@ import path from "path";
 
 const MODULE_ID = process.cwd();
 const yaml = true;
+const expandAdventures = true;
+const folders = true;
 
 const packs = await fs.readdir("./packs");
 for (const pack of packs) {
-  if (pack === ".gitattributes") continue;
+  if (pack === ".gitattributes" || pack === ".DS_Store") continue;
   console.log("Unpacking " + pack);
   const directory = `./src/packs/${pack}`;
   try {
     for (const file of await fs.readdir(directory)) {
-      await fs.unlink(path.join(directory, file));
+      const filePath = path.join(directory, file)
+      if (file.endsWith(yaml ? ".yml" : ".json")) await fs.unlink(filePath);
+      else fs.rm(filePath, { recursive: true })
     }
   } catch (error) {
     if (error.code === "ENOENT") console.log("No files inside of " + pack);
@@ -347,6 +353,8 @@ for (const pack of packs) {
     {
       yaml,
       transformName,
+      expandAdventures,
+      folders,
     }
   );
 }
@@ -354,14 +362,26 @@ for (const pack of packs) {
  * Prefaces the document with its type
  * @param {object} doc - The document data
  */
-function transformName(doc) {
+function transformName(doc, context) {
   const safeFileName = doc.name.replace(/[^a-zA-Z0-9А-я]/g, "_");
-  const type = doc._key.split("!")[1];
+  let type = doc._key?.split("!")[1];
+  if (!type) {
+    if ("playing" in doc)
+      type = "playlist";
+    else if (doc.sorting)
+      type = `folder_${doc.type}`;
+    else if (doc.walls)
+      type = "scene";
+    else if (doc.results)
+      type = "rollTable";
+    else if (doc.pages)
+      type = "journal";
+    else
+      type = doc.type;
+  }
   const prefix = ["actors", "items"].includes(type) ? doc.type : type;
 
-  return `${doc.name ? `${prefix}_${safeFileName}_${doc._id}` : doc._id}.${
-    yaml ? "yml" : "json"
-  }`;
+  return `${doc.name ? `${prefix}_${safeFileName}_${doc._id}` : doc._id}.${yaml ? "yml" : "json"}`;
 }
 
 ```
