@@ -1,8 +1,8 @@
 ---
 title: TrueNAS CE
-description: Deploying Foundry on TrueNAS SCALE Docker
+description: Deploying Foundry on TrueNAS CE Docker
 published: true
-date: 2025-05-15T17:14:12.550Z
+date: 2025-05-15T17:15:23.697Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
