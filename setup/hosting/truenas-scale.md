@@ -2,7 +2,7 @@
 title: TrueNAS CE
 description: Deploying Foundry on TrueNAS CE Docker
 published: true
-date: 2025-05-15T17:15:23.697Z
+date: 2025-05-15T17:16:22.187Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T13:13:16.296Z
@@ -36,7 +36,7 @@ Go to the official Foundry site, log in, and under Purchased Licenses download f
 
 On TrueNAS CE, enable the SSH service under System Settings -> Services. If you aren't using SSH keys, edit it and configure it to `Allow password authentication`.
 
-Using either WinSCP or scp directly, copy the ZIP file to the admin user of TrueNAS CE. If using scp from PowerShell this is `scp <FoundryVTT-version.zip> <admin-use>r@<IP-of-TrueNAS>:`.
+Using either WinSCP or scp directly, copy the ZIP file to the admin user of TrueNAS CE. If using scp from PowerShell this is `scp <FoundryVTT-version.zip> <admin-user>@<IP-of-TrueNAS>:`.
 
 Using either PuTTY or ssh directly, log into your TrueNAS server. If using ssh from PowerShell this is `ssh <admin-user>@<IP-of-TrueNAS>`. Once in, `sudo unzip <FoundryVTT-version.zip> -d /mnt/<POOLNAME>/apps/foundry-app`. This unzips the file you copied to the server into the dataset you created, as user `root`.
 
