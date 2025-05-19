@@ -2,8 +2,8 @@
 title: Improving Intellisense
 description: Leveraging Foundry's type hints within VSCode
 published: true
-date: 2025-04-17T23:49:06.680Z
-tags: 
+date: 2025-05-19T16:14:13.206Z
+tags: jsconfig, types
 editor: markdown
 dateCreated: 2025-03-20T05:50:17.722Z
 ---
@@ -134,3 +134,29 @@ If you do need to import types, you can do that with `@` references, such as the
 ```
 
 This can allow you to easily have full intellisense support for typing parameters and any other variable.
+
+## 4. Exclusion from other tools
+
+You may want to exclude the linked files from other tools in your workspace. This section is for example configurations to do so.
+
+### ESLint
+
+In your `.eslintrc.json`, add the following property:
+```json
+"ignorePatterns": [
+  "foundry/**/*"
+]
+```
+
+### VSCode workspace
+
+To keep your workspace clean, change the `files.exclude` setting to ignore the `foundry` directory.
+- For **yourself**: Open your local settings (*Ctrl + Alt + S*), go to (*Text Editor > Files > Exclude > Add Pattern*) and enter `foundry/`.
+- For **everyone**: Create or extend the `.vscode/settings.json` file:
+```json
+{
+  "files.exclude": {
+    "foundry/": true,
+  }
+}
+```
