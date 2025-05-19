@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2025-01-13T03:46:00.031Z
+date: 2025-05-19T18:04:11.338Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -15,10 +15,10 @@ Active Effects are a built-in way for users, systems, and modules to dynamically
 *Official documentation*
 
 - [Knowledge Base](https://foundryvtt.com/article/active-effects/)
-- [ActiveEffect](https://foundryvtt.com/api/classes/client.ActiveEffect.html)
-- [BaseActiveEffect](https://foundryvtt.com/api/classes/foundry.documents.BaseActiveEffect.html)
-- [Document](https://foundryvtt.com/api/classes/foundry.abstract.Document.html)
-- [ActiveEffectConfig](https://foundryvtt.com/api/classes/client.ActiveEffectConfig.html)
+- [ActiveEffect](https://foundryvtt.com/api/v13/classes/foundry.documents.ActiveEffect.html)
+- [BaseActiveEffect](https://foundryvtt.com/api/v13/classes/foundry.documents.BaseActiveEffect.html)
+- [Document](https://foundryvtt.com/api/v13/classes/foundry.abstract.Document.html)
+- [ActiveEffectConfig](https://foundryvtt.com/api/v13/classes/foundry.applications.sheets.ActiveEffectConfig.html)
 
 **Legend**
 ```js
