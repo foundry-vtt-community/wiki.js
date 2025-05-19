@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2025-05-19T18:04:11.338Z
+date: 2025-05-19T19:17:10.548Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -12,13 +12,21 @@ dateCreated: 2024-06-08T05:46:12.955Z
 
 Active Effects are a built-in way for users, systems, and modules to dynamically alter actor properties.
 
-*Official documentation*
+**Foundry VTT API Documentation Links**  
 
-- [Knowledge Base](https://foundryvtt.com/article/active-effects/)
-- [ActiveEffect](https://foundryvtt.com/api/v13/classes/foundry.documents.ActiveEffect.html)
-- [BaseActiveEffect](https://foundryvtt.com/api/v13/classes/foundry.documents.BaseActiveEffect.html)
-- [Document](https://foundryvtt.com/api/v13/classes/foundry.abstract.Document.html)
-- [ActiveEffectConfig](https://foundryvtt.com/api/v13/classes/foundry.applications.sheets.ActiveEffectConfig.html)
+*Core Classes* 
+- **[ActiveEffect](https://foundryvtt.com/api/v13/classes/foundry.documents.ActiveEffect.html)**  
+  *Active effects applied to documents.*  
+- **[BaseActiveEffect](https://foundryvtt.com/api/v13/classes/foundry.documents.BaseActiveEffect.html)**  
+  *Abstract base class for active effects.*  
+- **[Document](https://foundryvtt.com/api/v13/classes/foundry.abstract.Document.html)**  
+  *Parent class for all Foundry document types.*  
+
+#### **Configuration Classes**  
+- **[ActiveEffectConfig](https://foundryvtt.com/api/v13/classes/foundry.applications.sheets.ActiveEffectConfig.html)**  
+  *Latest implementation (FoundryVTT v13 or above).*  
+- **[ActiveEffectConfig (Legacy)](https://foundryvtt.com/api/v12/classes/client.ActiveEffectConfig.html)**  
+  *Deprecated version (FoundryVTT v12 or v11)*  
 
 **Legend**
 ```js
@@ -153,8 +161,7 @@ Hooks.on("applyActiveEffect", (actor, change, current, delta, changes) => {
 ```
 
 ### `type` and `system`
-> Stub
-> This section is a stub, you can help by contributing to it.
+From V12 onwards it is possible Modules and Systems can declare custom ActiveEffect subtypes, making them available for global use while storing subtype-specific data in the document’s `system` field.
 
 ___
 ## Specific Use Cases
