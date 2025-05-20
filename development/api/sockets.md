@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2025-05-20T15:08:51.842Z
+date: 2025-05-20T15:14:23.837Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -12,7 +12,7 @@ dateCreated: 2021-11-17T14:06:05.915Z
 
 ![Up to date as of v13](https://img.shields.io/static/v1?label=FoundryVTT&message=v13&color=informational)
 
-Sockets provide a way for different clients connected to the same server to communicate with each other. This page covers both directly using `game.socket` as well as interacting via registering queries.
+Sockets provide a way for different clients connected to the same server to communicate with each other. This page covers both directly using `game.socket` as well as the v13 feature of interacting via registering queries.
 
 *Official Documentation*
 
@@ -30,7 +30,7 @@ Socket#on // `#` indicates instance method or property
 
 Foundry Core uses socket.io v4 behind the scenes for its websocket connections between Server and Client. It exposes the active socket.io connection directly on `game.socket`, allowing packages to emit and respond to events they create. As such, most of the [socket.io documentation](https://socket.io/docs/v4/) is directly applicable to foundry's usage.
 
-Alternatively, one can register functions in `CONFIG.queries`, providing predefined handlers for inter-client communication.
+Alternatively, one can register functions in `CONFIG.queries`, providing predefined handlers for inter-client communication. Foundry includes two queries by default; `dialog` and `confirmTeleportToken`; the former of these is especially versatile and obviates many previous needs for sockets.
 
 This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other [Document operation](/en/development/api/document#event-cycles), such as creating a chat message or an update to an item.
 
@@ -92,7 +92,9 @@ const queryData = { foo: "bar" };
 
 // timeout is optional and is in *milliseconds*. 
 // Inline multiplication is an easy way to make sure your intended duration is more readable.
-user.query("my-module.someEvent", queryData, { timeout: 30 * 1000 });
+const queryValue = await user.query("my-module.someEvent", queryData, { timeout: 30 * 1000 });
+
+// Now queryValue will be the return of whatever function you ran, if relevant.
 ```
 
 ### Simple emission of a direct socket event
