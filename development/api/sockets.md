@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2024-05-07T05:30:33.372Z
+date: 2025-05-20T07:02:34.424Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -10,9 +10,9 @@ dateCreated: 2021-11-17T14:06:05.915Z
 
 # Sockets
 
-![Up to date as of v11](https://img.shields.io/static/v1?label=FoundryVTT&message=v11&color=informational)
+![Up to date as of v13](https://img.shields.io/static/v1?label=FoundryVTT&message=v13&color=informational)
 
-Sockets provide a way for different clients connected to the same server to communicate with each other.
+Sockets provide a way for different clients connected to the same server to communicate with each other. This page covers both directly using `game.socket` as well as interacting via registering queries.
 
 *Official Documentation*
 
@@ -30,62 +30,25 @@ Socket#on // `#` indicates instance method or property
 
 Foundry Core uses socket.io v4 behind the scenes for its websocket connections between Server and Client. It exposes the active socket.io connection directly on `game.socket`, allowing packages to emit and respond to events they create. As such, most of the [socket.io documentation](https://socket.io/docs/v4/) is directly applicable to foundry's usage.
 
-This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other [Document](/en/development/api/document) [update cycle event](/en/development/api/document#event-cycles).
+Alternatively, one can register functions in `CONFIG.queries`, providing predefined handlers for inter-client communication.
 
-> [`socketlib`](https://github.com/manuelVo/foundryvtt-socketlib) is a library module which provides useful abstractions for many common Foundry specific socket patterns.
-{.is-info}
+This is useful in cases where a package wants to send information or events to other connected clients directly without piggybacking on some other [Document operation](/en/development/api/document#event-cycles), such as creating a chat message or an update to an item.
 
 ---
 
 ## Key Concepts
 
-### Prerequisites
+For the purposes of this article, using `game.socket` will be referred to as *direct sockets*. Registering functions in `CONFIG.queries` will instead be reffered to as the *query system*.
 
-Before a package can send and receive socket events, it must request a socket namespace from the server. This is done by putting `"socket": true` in the manifest json.
-
-All socket messages from a package must be emitted with the event name `module.{module-name}` or `system.{system-id}` (e.g. `module.my-cool-module`).
-
-### Architectural Notes
-
-> The following information comes directly from Atropos on the Mothership Discord's `dev-support` channel. [*^[Link]^*](https://discord.com/channels/170995199584108546/811676497965613117/903652184003055677)
-{.is-info}
-
-> We use a pattern for the socket workflow that differentiates between the initial requester who receives an acknowledgement and all other connected clients who receive a broadcast.
-> 
-> This differentiation allows us to have handling on the initial requester side that can enclose the entire transaction into a single Promise. The basic pattern looks like this:
-> 
-> On the Server Side
-> ```js
-> socket.on(eventName, (request, ack) => {
->   const response = doSomethingWithRequest(request) // Construct an object to send as a response
->   ack(response); // This acknowledges completion of the task, sent back to the requesting client
->   socket.broadcast.emit(eventName, response);
-> });
-> ```
-> 
-> For the Requesting Client
-> ```js
-> new Promise(resolve => {
->   socket.emit(eventName, request, response => {
->     doSomethingWithResponse(response); // This is the acknowledgement function
->     resolve(response); // We can resolve the entire operation once acknowledged
->   });
-> });
-> ```
-> 
-> For all other Clients
-> ```js
-> socket.on(eventName, response => {
->   doSomethingWithResponse(response);  // Other clients only react to the broadcast
-> });
-> ```
-> 
-> Note in my example that both the requesting client and all other clients both `doSomethingWithResponse(response)`, but for the requesting client that work happens inside the acknowledgement which allows the entire transaction to be encapsulated inside a single Promise. 
-> 
-
-### Socket Data
+#### Socket Data
 
 Socket data *must* be JSON serializable; that is to say, it must consist only of [values valid in a JSON file](https://www.json.org/json-en.html). Complex data structures such as a Data Model instance or even Sets must be transformed back to simpler forms; also keep in mind that if possible you should keep the data in the transfer as minimal as possible. If you need to reference a document, just send the UUID rather than all of its data, as the other client can just fetch from the UUID.
+
+### Direct Sockets vs. Queries
+
+By default, direct sockets are emitted to *every* client, and it is the responsibility of the handler to perform any necessary filtering. By contrast, queries are always targeted, from one user to another, and so any mass-message system will need to call query each user separately. The upside is that each of those queries is its own promise that is fully and properly awaited for response by the queried user, unlike direct sockets which only returns a promise that confirms receipt by the *server*. 
+
+It's also worth noting that direct sockets do not have any built-in permission controls, while queries have the `QUERY_USER` permission which is available to all players by default.
 
 ---
 
@@ -93,7 +56,23 @@ Socket data *must* be JSON serializable; that is to say, it must consist only of
 
 These are common ways to interact with the Foundry socket framework.
 
-### Simple emission of a socket event
+### Direct Socket Prerequisities
+
+Before a package can directly send and receive socket events, it must request a socket namespace from the server. This is done by putting `"socket": true` in the manifest json.
+
+All socket messages from a package must be emitted with the event name `module.{module-name}` or `system.{system-id}` (e.g. `module.my-cool-module`).
+
+### Query Registration
+
+Registering a query is as simple as adding a new entry to `CONFIG.queries`. The key should be prefixed by your package ID, e.g. `my-module.someEvent`. Your function must return JSON-serializable data, as whatever it returns will be passed back to the querying client.
+
+```js
+CONFIG.queries["my-module.someEvent"] = (queryData, {timeout}) => JSONData;
+```
+
+The first argument, queryData, is whatever JSON-serializable info you want to provide to the queried client. The second argument, `queryOptions`, currently *only* may have `timeout` information. It is destructured in every usage, so you can't use it to pass any futher arbitrary options; the correct spot for community developers to add more info is into that `queryData` object.
+
+### Simple emission of a direct socket event
 
 Note that this socket event does not get broadcast to the emitting client.
 
@@ -293,3 +272,42 @@ Run through this checklist of common issues:
 2. Have you restarted the world since modifying the manifest JSON?
 3. Are you broadcasting with the correct namespace on your event? (Also mentioned in the Prerequisites section)
 4. Are you trying to respond to the broadcast from the emitting client? (Emitters do not recieve the broadcast, some strategies above for handling this.)
+
+
+## Architectural Notes
+
+> The following information comes directly from Atropos on the Mothership Discord's `dev-support` channel. [*^[Link]^*](https://discord.com/channels/170995199584108546/811676497965613117/903652184003055677)
+{.is-info}
+
+> We use a pattern for the socket workflow that differentiates between the initial requester who receives an acknowledgement and all other connected clients who receive a broadcast.
+> 
+> This differentiation allows us to have handling on the initial requester side that can enclose the entire transaction into a single Promise. The basic pattern looks like this:
+> 
+> On the Server Side
+> ```js
+> socket.on(eventName, (request, ack) => {
+>   const response = doSomethingWithRequest(request) // Construct an object to send as a response
+>   ack(response); // This acknowledges completion of the task, sent back to the requesting client
+>   socket.broadcast.emit(eventName, response);
+> });
+> ```
+> 
+> For the Requesting Client
+> ```js
+> new Promise(resolve => {
+>   socket.emit(eventName, request, response => {
+>     doSomethingWithResponse(response); // This is the acknowledgement function
+>     resolve(response); // We can resolve the entire operation once acknowledged
+>   });
+> });
+> ```
+> 
+> For all other Clients
+> ```js
+> socket.on(eventName, response => {
+>   doSomethingWithResponse(response);  // Other clients only react to the broadcast
+> });
+> ```
+> 
+> Note in my example that both the requesting client and all other clients both `doSomethingWithResponse(response)`, but for the requesting client that work happens inside the acknowledgement which allows the entire transaction to be encapsulated inside a single Promise. 
+> 
