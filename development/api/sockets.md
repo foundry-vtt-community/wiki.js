@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2025-05-20T07:06:16.377Z
+date: 2025-05-20T15:08:51.842Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -76,6 +76,24 @@ CONFIG.queries["my-module.someEvent"] = someEventHandler;
 ```
 
 The first argument, queryData, is whatever JSON-serializable info you want to provide to the queried client. The second argument, `queryOptions`, currently *only* may have `timeout` information. It is destructured in every usage, so you can't use it to pass any futher arbitrary options; the correct spot for community developers to add more info is into that `queryData` object.
+
+### Using Queries
+
+Invoking a query involves using the `User#query` method.
+
+```js
+// Your business logic will determine how to pick the user to query
+// The activeGM is a common choice for delegating permission-intensive actions
+const user = game.users.activeGM;
+
+// Your business logic will also dictate what you need to include in the payload
+// to deliver to the other client
+const queryData = { foo: "bar" };
+
+// timeout is optional and is in *milliseconds*. 
+// Inline multiplication is an easy way to make sure your intended duration is more readable.
+user.query("my-module.someEvent", queryData, { timeout: 30 * 1000 });
+```
 
 ### Simple emission of a direct socket event
 
