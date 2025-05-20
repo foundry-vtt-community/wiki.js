@@ -2,7 +2,7 @@
 title: Sockets
 description: API documentation for the Socket functionality available to packages.
 published: true
-date: 2025-05-20T07:02:34.424Z
+date: 2025-05-20T07:06:16.377Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T14:06:05.915Z
@@ -48,7 +48,7 @@ Socket data *must* be JSON serializable; that is to say, it must consist only of
 
 By default, direct sockets are emitted to *every* client, and it is the responsibility of the handler to perform any necessary filtering. By contrast, queries are always targeted, from one user to another, and so any mass-message system will need to call query each user separately. The upside is that each of those queries is its own promise that is fully and properly awaited for response by the queried user, unlike direct sockets which only returns a promise that confirms receipt by the *server*. 
 
-It's also worth noting that direct sockets do not have any built-in permission controls, while queries have the `QUERY_USER` permission which is available to all players by default.
+It's also worth noting that direct sockets do not have any built-in permission controls, while queries have the `QUERY_USER` permission which is available to all players by default but can be taken away by stricter GMs.
 
 ---
 
@@ -67,7 +67,12 @@ All socket messages from a package must be emitted with the event name `module.{
 Registering a query is as simple as adding a new entry to `CONFIG.queries`. The key should be prefixed by your package ID, e.g. `my-module.someEvent`. Your function must return JSON-serializable data, as whatever it returns will be passed back to the querying client.
 
 ```js
-CONFIG.queries["my-module.someEvent"] = (queryData, {timeout}) => JSONData;
+async someEventHandler(queryData, {timeout}) {
+	// do stuff
+  return jsonData;
+}
+
+CONFIG.queries["my-module.someEvent"] = someEventHandler;
 ```
 
 The first argument, queryData, is whatever JSON-serializable info you want to provide to the queried client. The second argument, `queryOptions`, currently *only* may have `timeout` information. It is destructured in every usage, so you can't use it to pass any futher arbitrary options; the correct spot for community developers to add more info is into that `queryData` object.
