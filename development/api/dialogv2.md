@@ -2,13 +2,13 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2025-03-04T02:13:06.205Z
+date: 2025-05-21T06:26:48.128Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
 ---
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 The DialogV2 class, introduced in v12 alongside [AppV2](/en/development/api/applicationv2), is a responsive and modern way to present basic choices to users.
 
@@ -79,8 +79,7 @@ The `confirm` static method provides a simple way to get a yes/no response. Yes 
 ```js
 const likesIceCream = await foundry.applications.api.DialogV2.confirm({
   window: { title: "Sweet Treat Check" },
-  content: "<p>Do you like ice cream?</p>", 
-  modal: true
+  content: "<p>Do you like ice cream?</p>"
 })
 ```
 
@@ -96,8 +95,7 @@ The `prompt` static method gives the user a simple input that can be properly `a
 ```js
 const proceed = await foundry.applications.api.DialogV2.prompt({
   window: { title: "Proceed" },
-  content: "<p>Do you wish to continue?</p>",
-  modal: true
+  content: "<p>Do you wish to continue?</p>"
 })
 ```
 
@@ -113,8 +111,7 @@ The `wait` static method is the most flexible of the three and covers a wide ran
 ```js
 const method = await foundry.applications.api.DialogV2.wait({
   window: { title: "D20 Roll" },
-  content: "<p>Roll Method?</p>",
-  modal: true,
+  content: "<p>Roll Method?</p>"
   // This example does not use i18n strings for the button labels, 
   // but they are automatically localized.
   buttons: [
@@ -136,9 +133,57 @@ const method = await foundry.applications.api.DialogV2.wait({
 
 This sample dialog will return the value `advantage`, `standard`, or `disadvantage` to the `method` constant - the values of each button's `action` property. If you provide a `callback` function, then the return of that function will be used in place of the `action`.
 
+### input 
+
+API Reference
+- [DialogV2.input](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#input)
+
+A simple variant of `prompt` that returns the form data by default. You can adjust the button's label or icon via the `ok` property.
+
+```js
+const data = await foundry.applications.api.DialogV2.input({
+  window: { title: "Favorite Color" },
+  content: `<input type="text" name="color">`,
+  ok: {
+    label: "Save",
+    icon: "fa-solid fa-floppy-disk",
+  }
+})
+
+// data.color will have the input value
+```
+
+When working with many inputs, this will give a flat object pairing all of the input `name` properties with the values submitted. If you need to transform the object to a nested structure, the [`foundry.utils.expandObject`](https://foundryvtt.com/api/functions/foundry.utils.expandObject.html) function can help.
+
 ### rejectClose
 
-The `rejectClose` property, by default `true` in v12 and `false` in v13, causes a dialog to throw an error if it is closed, halting all execution. If you would prefer to continue despite the user closing the dialog, pass `rejectClose: false` for the dialog to return `null` instead. 
+The `rejectClose` property, by default `true` in v12 and `false` in v13, causes a dialog to throw an error if it is closed, halting all execution. If you would prefer to throw if the user closes the dialog, pass `rejectClose: true`. 
+
+
+### query
+
+API Reference
+- [DialogV2.query](https://foundryvtt.com/api/classes/foundry.applications.api.DialogV2.html#query)
+
+The most complex of the static methods is `query`, which is a way for one user to prompt another user with a dialog, with proper handling of the inter-client communication via sockets and promises.
+
+```js
+// Assuming you have some other way of designating the `user`
+// Asks permission to proceed
+const dialogOptions = {
+  window: { title: "Proceed" },
+  content: "<p>Do you wish to continue?</p>"
+}
+
+const proceedA = await foundry.applications.api.DialogV2.query(user, "confirm", dialogOptions)
+
+// This is mostly equivalent to directly invoking User#query
+// with the exception of not having any way to specify the `timeout` option
+// which takes a number of milliseconds to wait before guaranteeing a return
+const proceedB = await user.query("dialog", { type: "confirm", config: dialogOptions }, { timeout: 30 * 1000 });
+```
+
+A particularly powerful use is combining `DialogV2.query` with the `"input"` type, which allows basically arbitrary data to be transferred between clients. This can be very useful for coordinating rolls and other similarly advanced info.
 
 ## Specific Use Cases
 
@@ -214,25 +259,6 @@ const response = await foundry.applications.api.DialogV2.prompt({
   modal: true
 })
 ```
-
-### Returning form input
-
-If all the inputs in your Dialog have a `name` property, the [FormDataExtended](https://foundryvtt.com/api/classes/client.FormDataExtended.html) class can help collect that data and return it in a Foundry-friendly way. This is the same class that foundry uses to collect document sheet data.
-
-```js
-const data = foundry.applications.api.DialogV2.prompt({
-  window: { title: "My Dialog" },
-  content: '<input type="number" name="foobar">',
-  ok: {
-    label: "Save",
-    icon: "fa-solid fa-floppy-disk",
-    callback: (event, button, dialog) => new FormDataExtended(button.form).object
-  },
-  rejectClose: false
-})
-```
-
-When working with many inputs, this will give a flat object pairing all of the input `name` properties with the values submitted. If you need to transform the object to a nested structure, the [`foundry.utils.expandObject`](https://foundryvtt.com/api/functions/foundry.utils.expandObject.html) function can help.
 
 ### The `render` option
 
