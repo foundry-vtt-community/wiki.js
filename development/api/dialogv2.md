@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2025-05-21T06:26:48.128Z
+date: 2025-05-21T06:29:51.840Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -266,6 +266,18 @@ API Reference
 - [DialogV2RenderCallback](https://foundryvtt.com/api/types/foundry.DialogV2RenderCallback.html)
 
 When using `confirm`, `prompt`, or `wait`, you can pass a function to the `render` property to trigger when the dialog finishes rendering. This can be useful for adding event listeners to the rendered HTML. 
+
+### Extending DialogV2
+
+One way to ensure common styling throughout your own use of DialogV2 is to have a consistent class you apply to it, such as the id for your package. You can extend DialogV2 and include information in the DEFAULT_OPTIONS that will then be used as additional defaults. You will then have to use this class instead of DialogV2, but that may be preferable to always invoking DialogV2's deeply nested namespace.
+
+```js
+class MyPackageDialog extends foundry.applications.api.DialogV2 {
+  static DEFAULT_OPTIONS = {
+    classes: ["my-package"]
+  }
+}
+```
 
 ## Troubleshooting
 
