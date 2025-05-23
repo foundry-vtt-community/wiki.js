@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2025-05-23T00:21:04.835Z
+date: 2025-05-23T07:09:57.704Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -396,6 +396,7 @@ import { promises as fs } from 'fs';
 
 const MODULE_ID = process.cwd();
 const yaml = true;
+const folders = true;
 
 const packs = await fs.readdir('./src/packs');
 for (const pack of packs) {
@@ -404,7 +405,7 @@ for (const pack of packs) {
   await compilePack(
     `${MODULE_ID}/src/packs/${pack}`,
     `${MODULE_ID}/packs/${pack}`,
-    { yaml }
+    { yaml, recursive: folders }
   );
 }
 
