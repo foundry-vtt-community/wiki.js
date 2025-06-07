@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-06-07T06:58:50.648Z
+date: 2025-06-07T06:59:45.053Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -453,6 +453,7 @@ Votre système ou module est alors prêt à être utilisé.
 ## Une de mes joueuses/joueurs ne voit pas les scènes (ie maps), tout est noir. C'est grave ?
 
 En général, c'est le signe que le navigateur a un conflit avec le driver du GPU (ie la carte graphique). Essayez les étape suivantes : 
+
 - Mettre à jour le navigateur utilisé
 - Mettre à jour le driver de la carte graphiqu
 - Vérifier qu'il reste 4 Go de disponible sur le disque C: (si vous êtes sous Windoze)
