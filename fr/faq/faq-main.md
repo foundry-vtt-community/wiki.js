@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-04-24T11:36:25.215Z
+date: 2025-06-07T06:58:50.648Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -172,7 +172,7 @@ Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie
 
 ## Y’a quoi comme jeux dessus ?
 
-Dans Foundry, les « jeux » sont appelés « systems ». Au 7/05/2024, on recense 311+ « systems », qu'on peut parcourir ici  : https://foundryvtt.com/packages/systems. **La totalité des systèmes sont gratuits.** 
+Dans Foundry, les « jeux » sont appelés « systems ». En Juin 2025, on recense 370+ « systems », qu'on peut parcourir ici  : https://foundryvtt.com/packages/systems. **La totalité des systèmes sont gratuits.** 
 Une liste succincte d'exemples : 
 - 13th age,
 - Appel de Cthulhu, DeltGreen
@@ -217,6 +217,7 @@ Exemple : je veux jouer à Warhammer, j'installe le système de jeu "Warhammer" 
 ## J’ai vu qu’il y avait aussi des modules, c’est quoi ?
 
 Les modules sont des extensions, comme des plugins, qui viennent ajouter des fonctionnalités au logiciel. Ces modules viennent donc ajouter des compléments aux « systèmes », en offrant des aides pour les MJ et les joueurs : 
+
 - effets spéciaux, 
 - des contenus (images, musiques, cartes, ...)
 - navigation dans les fichiers images, 
@@ -260,7 +261,7 @@ La méthode est identique à l'installation des systèmes, sauf que tout se pass
 
 ## On m'a passé un lien vers un system.json ou un module.json. J'en fais quoi ?
 
-Ces liens sont en fait une ancienne méthode d'installation des systèmes et modules, obsolète depuis 2 ans désormais. Donc, en priorité, vérifiez bien que votre système ou module n'est pas déja présent dans le "Marketplace" de Foundry (cf les 2 questions juste au-dessus sur l'installation des systèmes/modules). De plus, ces liens JSON pointent assez souvent sur des systèmes/modules plus mis à jour depuis longtemps, et qui ne fonctionneront donc pas sur votre installation de Foundry. Dans le doute, venez en discutez sur le Discord FR de Foundry. 
+Ces liens sont en fait une ancienne méthode d'installation des systèmes et modules, obsolète depuis plus de 3 ans désormais. Donc, en priorité, vérifiez bien que votre système ou module n'est pas déja présent dans le "Marketplace" de Foundry (cf les 2 questions juste au-dessus sur l'installation des systèmes/modules). De plus, ces liens JSON pointent assez souvent sur des systèmes/modules plus mis à jour depuis longtemps, et qui ne fonctionneront donc pas sur votre installation de Foundry. Dans le doute, venez en discutez sur le Discord FR de Foundry. 
 
 **Priviligiez toujours l'installation via le Markeplace de Foundry plutot que par des liens de .json.**
 
@@ -284,7 +285,7 @@ Une fois décompressé dans ce répertoire, redemarrez Foundry, et activez le mo
 
 C'est assez fréquent : il est conseillé d'utiliser un navigateur externe plutot que celui intégré à l'application Foundry, car celui-ci peut devenir incompatible après des mises à jour de votre OS (Mac/Windows) ou de votre driver graphique. Le principe : 
 
-1 - lancer Foundry
+1 - lancer l'application Foundry
 2 - lancer un navigateur  (Chrome, Chromium, Firefox, Edge, Opera, ....)
 3 - Se connecter en http://127.0.0.1:30000 ou https://127.0.0.1:30000 (si vous avez laissé le port 30000 par défaut bien sur, sinon à remplacer par le port utilisé)
 
@@ -292,6 +293,7 @@ C'est assez fréquent : il est conseillé d'utiliser un navigateur externe pluto
 ## Comment mes joueurs peuvent-il se connecter ?
 
 Si vous hébergez chez vous, il faut donner accès à votre PC depuis Internet. Pour cela, la manip est toujours la même : 
+
 1 - Désactiver UpNP dans Foundry (dans les réglages)
 2 - Sur votre box Fibre, ouvrir le port TCP 30000. 
 3 - Dans le firewall du PC/Mac Foundry, ouvrir le port 30000 TCP
@@ -385,6 +387,7 @@ Dans ce cas, vous aurez un support rapide et fiable en allant sur le Discord de 
 ## J'ai le soft, mais mes joueurs ne peuvent pas se connecter
 
 La règle pour déterminer les origines des soucis c'est ça : 
+
 1 - Tout les joueurs ont **tous** des problèmes de connexions -> Le problème est côté serveur (donc chez celui héberge typiquement).
 2 - Soit **1 ou 2 joueurs** (toujours les mêmes) ont des problèmes de connexions -> le problème est chez eux. Cela peut venir de leur connexion à eux, de leur PC ou de toute autre merdouille informatique. 
 
@@ -392,7 +395,7 @@ Si le problème est côté serveur, il faut vérifier votre bande passante et pr
 
 Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
 
-Une FAQ dédiée à ces problèmes est dispo ici https://foundryvtt.wiki/fr/pour-commencer/dcnx-upnp
+Une FAQ dédiée à ces problèmes est dispo ici https://foundryvtt.wiki/fr/pour-commencer/pbcnx
 
 ## Comment sont stockées les données  ?
 
