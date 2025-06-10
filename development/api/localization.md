@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2025-06-10T02:36:40.440Z
+date: 2025-06-10T02:38:50.590Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -178,7 +178,6 @@ System and module defined type data models support the static method LOCALIZATIO
 
 ```js
 export default class MyModel extends foundry.abstract.DataModel {
-
   static LOCALIZATION_PREFIXES = ["NESTED.Path"];
 
   static defineSchema() {
@@ -206,13 +205,11 @@ This would then pair with a `en.json` file that looks like the following. Note t
 }
 ```
 
-Even if you're not using TypeDataModel, you can manually invoke localizeDataModel, typically within the i18nInit hook.
+This is only called *automatically* for `system` data models, but you can manually invoke localizeDataModel to get the same results, typically within the i18nInit hook.
 
 ```js
-class MyModelClass extends DataModel {}
-
 Hooks.once("i18nInit", () => {
-  foundry.helpers.Localization.localizeDataModel(MyModelClass)
+  foundry.helpers.Localization.localizeDataModel(MyModel)
 })
 ```
 
