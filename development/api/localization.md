@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2024-10-21T05:34:06.354Z
+date: 2025-06-10T02:36:40.440Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -204,6 +204,16 @@ This would then pair with a `en.json` file that looks like the following. Note t
     }
   }
 }
+```
+
+Even if you're not using TypeDataModel, you can manually invoke localizeDataModel, typically within the i18nInit hook.
+
+```js
+class MyModelClass extends DataModel {}
+
+Hooks.once("i18nInit", () => {
+  foundry.helpers.Localization.localizeDataModel(MyModelClass)
+})
 ```
 
 ### Word Order and Grammar
