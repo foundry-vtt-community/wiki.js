@@ -2,7 +2,7 @@
 title: Converting to ApplicationV2
 description: A guide to convert an Application to ApplicationV2
 published: true
-date: 2025-01-03T20:29:08.083Z
+date: 2025-06-23T18:26:41.291Z
 tags: 
 editor: markdown
 dateCreated: 2024-05-28T06:46:59.385Z
@@ -73,7 +73,7 @@ Should now become
 
 ```js
 static DEFAULT_OPTIONS = {
-  id: "foo-form
+  id: "foo-form",
   form: {
     handler: TemplateApplication.#onSubmit,
     closeOnSubmit: true,
