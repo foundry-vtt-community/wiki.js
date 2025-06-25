@@ -1,8 +1,8 @@
 ---
 title: ApplicationV2 Conversion Guide
-description: This guide provides comprehensive instructions for converting FoundryVTT `Application` to `ApplicationV2`.
+description: Comprehensive guide for converting Applications to ApplicationV2.
 published: true
-date: 2025-06-25T08:34:21.067Z
+date: 2025-06-25T08:34:58.163Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-24T18:01:11.261Z
