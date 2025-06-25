@@ -2,7 +2,7 @@
 title: ApplicationV2 Conversion Guide
 description: 
 published: true
-date: 2025-06-24T18:01:11.261Z
+date: 2025-06-25T08:33:36.267Z
 tags: 
 editor: markdown
 dateCreated: 2025-06-24T18:01:11.261Z
@@ -48,81 +48,6 @@ html.addClass('active')
 html.querySelector('.my-button').addEventListener('click', handler)
 html.innerHTML = '<p>Content</p>'
 html.classList.add('active')
-```
-
-### Document Update API Changes
-
-```javascript
-// V12 Pattern (BREAKS in V13)
-this.object.update({ data: { results } })
-
-// V13 Pattern (REQUIRED)
-this.object.update({ system: { results } })
-```
-
-### Namespace Deprecations
-
-FoundryVTT V13 has moved many global objects into namespaced modules:
-
-**Applications & UX Objects:**
-```javascript
-// V12 Pattern (Deprecated)
-TextEditor.enrichHTML(content)
-FilePicker.browse()
-renderTemplate('template.html', data)
-
-// V13 Pattern (Required)
-foundry.applications.ux.TextEditor.implementation.enrichHTML(content)
-foundry.applications.apps.FilePicker.browse()
-foundry.applications.handlebars.renderTemplate('template.html', data)
-```
-
-**Canvas Objects:**
-```javascript
-// V12 Pattern (Deprecated)
-const ray = new Ray(origin, direction)
-NotesLayer.TOGGLE_SETTING
-
-// V13 Pattern (Required)
-const ray = new foundry.geometry.Ray(origin, direction)
-foundry.canvas.layers.NotesLayer.TOGGLE_SETTING
-```
-
-### Hook Name Changes
-
-```javascript
-// V12 (deprecated in V13)
-Hooks.on('renderChatMessage', (message, html, data) => {
-  // html is jQuery object in V12, DOM element in V13
-})
-
-// V13 (correct)
-Hooks.on('renderChatMessageHTML', (message, html, data) => {
-  // html is always a DOM element (not jQuery)
-  const messageContent = html.querySelector('.message-content')
-})
-```
-
-### Sheet Registration Requirement (V13.341)
-
-**CRITICAL**: All systems must explicitly register their sheets:
-
-```javascript
-// In your system's init hook
-Hooks.once('init', () => {
-  // Register Actor sheets
-  Actors.registerSheet('dcc', DCCActorSheet, {
-    types: ['Player'],
-    makeDefault: true,
-    label: 'DCC.SheetPlayer'
-  })
-
-  // Register Item sheets
-  Items.registerSheet('dcc', DCCItemSheet, {
-    makeDefault: true,
-    label: 'DCC.SheetItem'
-  })
-})
 ```
 
 ## CSS Layering and Variables
