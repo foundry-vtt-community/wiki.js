@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2024-11-26T21:09:12.918Z
+date: 2025-07-02T02:47:37.443Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -14,8 +14,8 @@ Applications are a core piece of Foundry's API that almost every developer will 
 
 *Official Documentation*
 
-- [ApplicationV2](https://foundryvtt.com/api/v12/classes/foundry.applications.api.ApplicationV2.html)
-- [DocumentSheetV2](https://foundryvtt.com/api/v12/classes/foundry.applications.api.DocumentSheetV2.html)
+- [ApplicationV2](https://foundryvtt.com/api/v13/classes/foundry.applications.api.ApplicationV2.html)
+- [DocumentSheetV2](https://foundryvtt.com/api/v13/classes/foundry.applications.api.DocumentSheetV2.html)
 
 **Legend**
 
@@ -82,7 +82,7 @@ In ApplicationV2 subclasses, the inheritanceChain determines how far up both `DE
 
 ### DEFAULT_OPTIONS
 
-One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`. 
+One property that's important to include is `static DEFAULT_OPTIONS`, which is an instance of  the [ApplicationConfiguration](https://foundryvtt.com/api/v13/interfaces/foundry.applications.types.ApplicationConfiguration.html) type. You can override or extend these options in individual instances of your application by passing an object into the constructor, e.g. `new MyApplication({ position: { width: 600 }})`. 
 
 There's no need to call `super.mergeObject` or anything here; subclasses by default merge their `DEFAULT_OPTIONS` into their parent class, all the way up to through the inheritance chain.
 
@@ -155,7 +155,7 @@ For those used to ApplicationV2, this largely replaces the role `activateListene
 
 #### Header Buttons
 
-ApplicationV2 provides a dropdown of header buttons, an alternative to the strictly in-line implementation from Application that caused problems when many different packages wanted to have header buttons. Instantiating these buttons involves the `window` object and its `controls` property, which is an array of [ApplicationHeaderControlsEntry](https://foundryvtt.com/api/v12/interfaces/foundry.applications.types.ApplicationHeaderControlsEntry.html).
+ApplicationV2 provides a dropdown of header buttons, an alternative to the strictly in-line implementation from Application that caused problems when many different packages wanted to have header buttons. Instantiating these buttons involves the `window` object and its `controls` property, which is an array of [ApplicationHeaderControlsEntry](https://foundryvtt.com/api/v13/interfaces/foundry.applications.types.ApplicationHeaderControlsEntry.html).
 
 ```js
 // for proper class definition you'd need to use HandlebarsApplicationMixin
@@ -389,9 +389,9 @@ If each of your tabs is a `part`, then you can store your `tabs` as `Record<part
 ### Text Enrichment
 
 API Reference
-- [TextEditor.enrichHTML](https://foundryvtt.com/api/classes/client.TextEditor.html#enrichHTML)
-- [HandlebarsHelpers.editor](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#editor)
-- [EnrichmentOptions](https://foundryvtt.com/api/interfaces/client.EnrichmentOptions.html)
+- [TextEditor.enrichHTML](https://foundryvtt.com/api/v13/classes/foundry.applications.ux.TextEditor.html#enrichhtml)
+- [HandlebarsHelpers.editor](https://foundryvtt.com/api/v13/functions/foundry.applications.handlebars.editor.html)
+- [EnrichmentOptions](https://foundryvtt.com/api/v13/interfaces/foundry.EnrichmentOptions.html)
 
 Text enrichment is the process of replacing and augmenting input text like `[[/roll 1d6]]` in the final rendered HTML. It's most commonly used with the `{{editor}}` Handlebars helper.
 
@@ -435,8 +435,8 @@ If you're just trying to display enriched text without providing an editor input
 
 API Reference
 
-- [DragDrop](https://foundryvtt.com/api/classes/client.DragDrop.html)
-- [DragDropConfiguration](https://foundryvtt.com/api/interfaces/client.DragDropConfiguration.html)
+- [DragDrop](https://foundryvtt.com/api/v13/classes/foundry.applications.ux.DragDrop.html)
+- [DragDropConfiguration](https://foundryvtt.com/api/v13/interfaces/foundry.DragDropConfiguration.html)
 
 The `DragDrop` helper class integrates dragging and dropping across different applications in the Foundry interface. The most common use is dragging and dropping documents from one location to another.
 
@@ -599,8 +599,8 @@ There you have it, a basic implementation of DragDrop in ApplicationV2!
 ### SearchFilter
 
 API Reference
-- [SearchFilter](https://foundryvtt.com/api/classes/client.SearchFilter.html)
-- [SearchFilterConfiguration](https://foundryvtt.com/api/interfaces/client.SearchFilterConfiguration.html)
+- [SearchFilter](https://foundryvtt.com/api/v13/classes/foundry.applications.ux.SearchFilter.html)
+- [SearchFilterConfiguration](https://foundryvtt.com/api/v13/interfaces/foundry.SearchFilterConfiguration.html)
 
 The `SearchFilter` helper class connects a text input box to filtering a list of results. It suppresses other events that might fire on the same input, instead activating the bound callback to modify the targeted HTML.
 
@@ -623,7 +623,7 @@ The body of this function must do the actual DOM manipulation; `rgx.test` is pro
 ### Registering Document Sheets
 
 API Reference
-- [DocumentSheetConfig.registerSheet](https://foundryvtt.com/api/classes/client.DocumentSheetConfig.html#registerSheet)
+- [DocumentSheetConfig.registerSheet](https://foundryvtt.com/api/v13/classes/foundry.applications.apps.DocumentSheetConfig.html#registersheet)
 
 When you define a new document sheet, you can register it in the `init` hook so it's configurable. 
 
