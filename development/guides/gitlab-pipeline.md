@@ -2,7 +2,7 @@
 title: Gitlab Pipeline
 description: How to use gitlab to distribute your module.
 published: true
-date: 2025-07-05T17:51:35.133Z
+date: 2025-07-05T17:58:01.969Z
 tags: module, git, gitlab, pipeline
 editor: markdown
 dateCreated: 2024-12-05T01:42:27.416Z
@@ -40,7 +40,7 @@ This file needs to reside in the root directory of the repo. Lets review the rel
 {
   "version": "1.0.0",
   "manifest": "https://Gitlab.com/my_account/my-module/-/raw/main/module.json",
-  "download": "https://Gitlab.com/my_account/my-module/-/releases/v1.0.0/downloads/v1.0.0.zip",
+  "download": "https://Gitlab.com/my_account/my-module/-/releases/v1.0.0/downloads/my-module-v1.0.0.zip",
 }
 ```
 
@@ -48,7 +48,7 @@ The version element is key to the whole pipeline. This will form the url for the
 
 The manifest value is the url to the module.json file in the root of your project(repo). It is made up of the Gitlab account (my_account), the branch (main) and the name of the file (module.json)
 
-The download url is a bit different. It points to your release NOT the repo. This is what messed me up the most. When you create a release it uploads the zip file to a special location. The url is Gitlab account (my_account), the release name (v1.0.0), and then the file name of the zip file. (v1.0.0.zip).
+The download url is a bit different. It points to your release NOT the repo. This is what messed me up the most. When you create a release it uploads the zip file to a special location. The url is Gitlab account (my_account), the release name (v1.0.0), and then the file name of the zip file. (my-module-v1.0.0.zip).
 
 ## Gitlab Authorization
 
@@ -56,7 +56,7 @@ This pipeline will need to use a project token. This token is created in the set
 
 ## The Pipeline Code
 
-There is a lot going on in this file. I think the best thing is to show a section of the file and then describe what I am doing and why. You could try to just c/p this file and it might work. I would give it a shot. If it doesn't then this should help you trouble shoot the issue. So with out further adieu here is the pipeline file.
+There is a lot going on in this file. I think the best thing is to show a section of the file and then describe what I am doing and why. You could try to just c/p this file and it might work. I would give it a shot. If it doesn't then this should help you trouble shoot the issue. So with out further adieu here is the pipeline file. An opinionated example can be found [here](https://gitlab.com/boyobejamin/foundryvtt-module-release-pipeline/-/raw/main/.gitlab-ci.yaml?ref_type=heads)
 
 ```
 # Set global variables
