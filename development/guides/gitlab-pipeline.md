@@ -2,7 +2,7 @@
 title: Gitlab Pipeline
 description: How to use gitlab to distribute your module.
 published: true
-date: 2024-12-07T19:53:51.529Z
+date: 2025-07-05T17:51:35.133Z
 tags: module, git, gitlab, pipeline
 editor: markdown
 dateCreated: 2024-12-05T01:42:27.416Z
@@ -68,7 +68,9 @@ variables:
 stages:
   - release
 
-image: alpine:latest
+image:
+  name: "gitlab/glab"
+  entrypoint: [""]
 ```
 
 The first variable can be set to enable verbose logging. This will help if you are having issues. We will only have one stage, I choose to call it release. You can call it whatever but you have to be consistent. The image is a a linux distribution that will will use to run our applications like zip and git.
@@ -86,13 +88,9 @@ Here we title the stage. Then indicate that this is the release stage. This has 
 ```
 before_script: |
     apk add --no-cache zip git
-    wget https://Gitlab.com/Gitlab-org/cli/-/releases/v1.50.0/downloads/glab_1.50.0_linux_amd64.tar.gz
-    tar -xzf glab_1.50.0_linux_amd64.tar.gz
-    mv bin/glab /usr/local/bin/glab
-    chmod +x /usr/local/bin/glab
 ```
 
-Here we get into the meat of the pipeline. We are running all of these commands on a linux computer via the bash shell. The Gitlab pipeline has three stages of scripts. Before, current, and after. The before_script is to prep the environment for the packaging and release. In order to interact with Gitlab we need to install a program that will allow us to make requests of Gitlab. We also need to install the zip program and the git program.
+Here we get into the meat of the pipeline. We are running all of these commands on a linux computer via the bash shell. The Gitlab pipeline has three stages of scripts. Before, current, and after. The before_script is to prep the environment for the packaging and release. We use an image that contains the `glab` cli tool to interact with the GitLab API to create a release. We also need to install the zip program and the git program.
 
 ```
     # Setup git configuration
@@ -131,19 +129,23 @@ This part takes the new module.json and commits it back into the repo. We need t
   script: |
 
     # Generate release file name.
-    export RELEASE_FILE_NAME=v${CI_COMMIT_TAG}.zip
-    export RELEASE_NAME=v${CI_COMMIT_TAG}
+    echo "[Info] Preparing Release ${CI_PROJECT_NAME} at ${CI_COMMIT_TAG}"
+    export RELEASE_FILE="${CI_PROJECT_DIR}/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.zip"
+    export RELEASE_NAME="v${CI_COMMIT_TAG}"
+    export MODULE_DIRECTORY="${CI_PROJECT_DIR}/src"
 ```
 
 Here we are taking global Gitlab variables and creating linux shell environment variables. We do this as the applications will need this information to work.
 
 ```
     # copy module.json to src
-    cp -v ./module.json src/module.json
+    echo "[Info] Bundling module... this may take some time"
+    cp -v "${CI_PROJECT_DIR}/module.json" "${MODULE_DIRECTORY}/module.json"
 
     # Package module
-    cd src
-    zip -r $RELEASE_FILE_NAME .
+    cd "${MODULE_DIRECTORY}"
+    zip -qr "${RELEASE_FILE}" .
+    cd ${CI_PROJECT_DIR}
 ```
 
 We need to make a second copy of the new module.json file in the /src dir. When Foundry instals this module it needs this information to make it run. However you will notice we don't commit this to the repo. We only need it for the release. Then we create the zip file for the release.
@@ -156,24 +158,45 @@ We need to make a second copy of the new module.json file in the /src dir. When 
 Here is where we get the token from the variable we set earlier on in the process.
 
 ```
-    # Get commit messages since last tag for changelog
-    LAST_TAG=$(git describe --tags --abbrev=0 HEAD^)
-    CHANGELOG=$(git log ${LAST_TAG}..HEAD --pretty=format:"* %s" --no-merges)
+# Get commit messages since last tag for changelog
+    if [[ $(git describe --tags | wc -l) -gt 1 ]]; then
+      echo "[Info] Generating changelog from ${LAST_TAG} to ${CI_COMMIT_TAG}"
+      # Get commit messages since last tag for changelog
 
-    # Format release notes with proper newlines
-    RELEASE_NOTES=$(echo -e "## Changelog (since ${LAST_TAG}):\n${CHANGELOG}")
+      LAST_TAG="$(git describe --tags --abbrev=0 HEAD^)"
+      CHANGELOG="$(git log ${LAST_TAG}..HEAD --pretty=format:"* %s" --no-merges)"
+
+      # Format release notes with proper newlines
+      RELEASE_NOTES="$(echo -e "## Changelog (since ${LAST_TAG}):\n${CHANGELOG}")"
+    else
+      echo "[Info] Congratulations on your first release!!!"
+      # If this is the first tag, keep the changelog short and sweet
+      CHANGELOG="$(git log  --pretty=format:"* %s"  --no-merges)"
+
+      # Format release notes with proper newlines
+      RELEASE_NOTES="$(echo -e "## Changelog:\n${CHANGELOG}")"
+    fi
 ```
 
 This part is a nice to have. This will take all of the commit messages from the last tag and add them to the change log on the release page. Help tell the users what is in the new release.
 
 ```
-    # Create release using formatted notes
-    glab release create $RELEASE_NAME \
-      --notes "$RELEASE_NOTES" \
-      "$RELEASE_FILE_NAME#$RELEASE_FILE_NAME"
+   echo "[Info] Authenticating to ${CI_SERVER_HOST}"
+   glab auth login \
+     --hostname "${CI_SERVER_HOST}" \
+     --job-token "${CI_JOB_TOKEN}"
 ```
 
-The final part is to actually create the release. The application glab is looking for an env variable called GITLAB_TOKEN by default. That is why you don't see it in this command. This will take the zipfile upload it to a special place so it is available for download by users.
+Authenticate to GitLab
+
+```
+    # Create release using formatted notes
+    glab release create "${RELEASE_NAME}" \
+      "${RELEASE_FILE}" \
+      --notes "${RELEASE_NOTES}"
+```
+
+The final part is to actually create the release. This will take the zipfile upload it to a special place so it is available for download by users.
 
 ## Trigger a Release
 
