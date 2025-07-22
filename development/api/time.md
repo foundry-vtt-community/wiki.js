@@ -2,7 +2,7 @@
 title: Time and Calendar
 description: In-world timekeeping and calendar configuration
 published: false
-date: 2025-07-22T19:33:11.382Z
+date: 2025-07-22T19:33:59.924Z
 tags: development, api, documentation
 editor: markdown
 dateCreated: 2025-07-22T19:33:11.382Z
@@ -43,7 +43,7 @@ The world time is stored in the `core.time` world [setting](/en/development/api/
 ### Time Configuration
 
 The main configurable parts of `CONFIG.time` are the Earth calendar and the world calendar. The first one can be used for IRL timekeeping, while the second one is used to track time in-world.
-Foundry provides a "Simplified Gregorian" calendar config out of the box for both, and a CalendarData class with helper methods.
+Foundry provides a "Simplified Gregorian" calendar config out of the box for both, and a `CalendarData` class with helper methods.
 
 ### Initialized Structure
 
