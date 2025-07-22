@@ -2,7 +2,7 @@
 title: Time and Calendar
 description: In-world timekeeping and calendar configuration
 published: false
-date: 2025-07-22T19:33:59.924Z
+date: 2025-07-22T19:35:07.433Z
 tags: development, api, documentation
 editor: markdown
 dateCreated: 2025-07-22T19:33:11.382Z
@@ -78,7 +78,7 @@ game
 
 The most common interaction with the calendar configuration is defining a custom world calendar. There are two main steps required to do so:
 
-1) Define your calendar.
+1) Define the calendar.
 The module or system will first need to define the calendar configuration. The data structure is described in the [API documentation](https://foundryvtt.com/api/v13/interfaces/foundry.data.types.CalendarConfig.html), but the default found in `foundry.data.SIMPLIFIED_GREGORIAN_CALENDAR_CONFIG` is a good starting point.
 
 ```js
@@ -123,7 +123,7 @@ const myCalendarConfig = {
 };
 ```
 
-2) Assign it to CONFIG.time.
+2) Assign it to `CONFIG.time`.
 The `init` hook is an appropriate place to set the calendar configuration.
 
 ```js
