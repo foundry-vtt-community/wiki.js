@@ -2,7 +2,7 @@
 title: Cloudflare Proxying & Tunnel
 description: Use Cloudflare's protection for your public-facing FoundryVTT server.
 published: true
-date: 2024-08-31T22:15:14.252Z
+date: 2025-07-23T21:53:49.793Z
 tags: cloudflare, proxy, tunnel, tls, https
 editor: ckeditor
 dateCreated: 2022-03-25T02:38:49.920Z
@@ -30,9 +30,9 @@ dateCreated: 2022-03-25T02:38:49.920Z
 <p>2. If you don't already own a domain, purchase one through Cloudflare <a href="https://dash.cloudflare.com/sign-up">here</a>. Cloudflare sells them at cost, which ranges from $6 (US) per year to $30 per year.</p>
 <p><strong><u>Note:</u> Wait at least 15 minutes before continuing. Sometimes you may have to wait up to 24 hours before the DNS settings are successfully changed. You will be notified when the nameservers are properly navigated to Cloudflare. Continue AFTER these have successfully been changed.</strong></p>
 <h3>Part 2: Setting up the Cloudflare Tunnel&nbsp;</h3>
-<p>1. Follow the instructions <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/">here</a> through step 1 to install <code>cloudflared </code>on the same computer/server as your Foundry installation.</p>
+<p>1. Follow the instructions <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/get-started/create-remote-tunnel/">here</a> through step 1 to install <code>cloudflared</code> on the same computer/server as your Foundry installation.</p>
 <p>2. After <code>cloudflared</code> is installed and connected, choose the “Public Hostname” option, select your domain name, leave the path blank, set the Type to “HTTP" and enter “localhost:30000” where 30000 is the port Foundry is running on. If you plan on using your domain for anything other than foundry, you can add a subdomain if you wish, such as <code>foundry.example.com</code>.</p>
-<p>3. Assuming everything went to plan, you should be able to refresh the webpage that has the named tunnel you just created and you should see a status of “Active”. If not, you may have to look up the docs, <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/">here</a> and see if something may have gone wrong.</p>
+<p>3. Assuming everything went to plan, you should be able to refresh the webpage that has the named tunnel you just created and you should see a status of “Active”. If not, you may have to look up the docs, <a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/">here</a> and see if something may have gone wrong.<br><i>Note: </i><code>cloudflared</code><i> is a service that by default starts when the installed machine starts. If you have having issues navigating to the webpage after setting up </i><code>cloudflared</code><i>, try restarting the service and the FoundryVTT server.</i></p>
 <h3>Part 3: Testing Connectivity</h3>
 <p>1. Ensure your foundry server is running.</p>
 <p>2. Navigate in your web browser to domain URL.</p>
