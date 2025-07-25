@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2024-06-13T20:53:40.466Z
+date: 2025-07-25T23:50:51.859Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -40,6 +40,15 @@ The Application class is responsible for rendering an HTMLElement into the Found
 - Advantages over Application
 - HandlebarsApplicationMixin
 
+### [Canvas](/en/development/api/canvas)
+
+Foundry's Canvas is the primary method by which Foundry fulfills its function as a Virtual Tabletop, providing a space to render maps full of rich details and complex interactions.
+
+#### Topics
+
+- Groups and Layers
+- Interactions and examples
+
 ### [Compendium Collection](/en/development/api/CompendiumCollection)
 Compendiums and how data is stored
 
@@ -66,6 +75,8 @@ API documentation for the Dialog UI class used to inform and prompt users with s
 - Prompt and Confirm factories
 - Form Inputs with Dialogs
 
+### [DialogV2](/en/development/api/dialogv2)
+The DialogV2 class, introduced in v12 alongside AppV2, is a responsive and modern way to present basic choices to users.
 
 ### [Document](/en/development/api/document)
 An extension of the base DataModel which defines a Document. Documents are special in that they are persisted to the database and referenced by \_id.
@@ -146,6 +157,13 @@ API documentation for the Socket functionality available to packages.
 - Emitting events
 - Responding to broadcasts
 
+### [Time and Calendar](/en/development/api/time)
+API documentation for timetracking and calendar configuration.
+
+#### Topics
+- Configuration
+- Creating a custom calendar
+- Working with time
 
 ---
 
@@ -165,15 +183,15 @@ Some guiding questions to ask:
 
 #### Examples of Credible External Sources
 
-- [Official Documentation](foundryvtt.com/api)
-- [Knowledge Base](foundryvtt.com/kb)
+- [Official Documentation](https://foundryvtt.com/api)
+- [Knowledge Base](https://foundryvtt.com/kb)
 - [Release Notes](https://foundryvtt.com/releases/)
 
 ### Relevant Version Annotation
 
 A shield.io badge must be placed at the top of every page which details the "core version we know this document is up to date as of." This allows readers and contributors alike to know at a glance if the document they're looking at is potentially out of date.
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 ```
 ![Up to date as of <VERSION>](https://img.shields.io/badge/FoundryVTT-v<VERSION>-informational)
