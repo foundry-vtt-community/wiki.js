@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2024-09-13T20:28:53.847Z
+date: 2025-07-25T23:38:05.709Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -10,15 +10,15 @@ dateCreated: 2021-11-17T15:31:39.865Z
 
 # Settings
 
-![Up to date as of v12](https://img.shields.io/static/v1?label=FoundryVTT&message=v12&color=informational)
+![Up to date as of v13](https://img.shields.io/static/v1?label=FoundryVTT&message=v13&color=informational)
 
 Settings are a general way for packages to persist and store data without being attached to a [document](/en/development/api/document).
 
 *Official Documentation*
-- [ClientSettings](https://foundryvtt.com/api/classes/client.ClientSettings.html)
-- [WorldSettings](https://foundryvtt.com/api/classes/client.WorldSettings.html)
-- [Setting](https://foundryvtt.com/api/classes/client.Setting.html)
-- [SettingsConfig](https://foundryvtt.com/api/classes/client.SettingsConfig.html)
+- [ClientSettings](https://foundryvtt.com/api/classes/foundry.helpers.ClientSettings.html)
+- [WorldSettings](https://foundryvtt.com/api/classes/foundry.documents.collections.WorldSettings.html)
+- [Setting](https://foundryvtt.com/api/classes/foundry.documents.Setting.html)
+- [SettingsConfig](https://foundryvtt.com/api/classes/foundry.applications.settings.SettingsConfig.html)
 
 **Legend**
 
@@ -42,9 +42,9 @@ The following elements are crucial to understanding settings.
 
 ### Scope
 
-Settings have a `scope` field which indicates if it's part of the device's localStorage (`scope: client`) or if it should be stored in the world's database (`scope: world`).
+Settings have a `scope` field which indicates if it's part of the device's localStorage (`scope: client`) or if it should be stored in the world's database (`scope: world`). Starting in v13, `scope: user` is also available, storing the setting value for the specific `User` across any devices they might use.
 
-If you wish to store data specific to a user across any devices they might use, consider instead storing the data as a [flag](/en/development/api/flags) on the user document. Alternatively, store the data as part of a object in the setting.
+If you are on a version older than v13 and you wish to store data specific to a user, consider instead storing the data as a [flag](/en/development/api/flags) on the user document. Alternatively, store the data as part of an object in the setting.
 
 ### Permissions
 
@@ -179,7 +179,7 @@ If you wish to improve validation when updating a complex setting, you should co
 
 ### Getting a Setting's value
 
-Settings can be read with [`game.settings.get`](https://foundryvtt.com/api/ClientSettings.html#get). 
+Settings can be read with [`game.settings.get`](https://foundryvtt.com/api/classes/foundry.helpers.ClientSettings.html#get). 
 
 ```js
 const someVariable = game.settings.get('myModuleName','myModuleSetting');
@@ -191,7 +191,7 @@ console.log(someVariable); // expected to be 'foo'
 
 Unless a setting has actively been saved to the world database with a call to `game.settings.set`, it will fill in with the registered `default`. This means that if you update the default, it will automatically apply to not only new users but also current ones. This *can* be useful, but also means that you can't rely on a setting's value to detect "old" users in the caes of a setting that is tracking things like previous module versions if you aren't actively creating a database entry.
 
-One way to check if there's a database-backed value is to call [`game.settings.storage.get("world").getSetting`](https://foundryvtt.com/api/classes/client.WorldSettings.html#getSetting), which accesses the actual world collection of setting documents (comparable to `game.actors`). If that returns `undefined`, there's no underlying DB entry for the setting and it's just going to use the default. Note that the key is the concatenated `namespace` and `settingName`, e.g. `core.compendiumConfiguration`.  
+One way to check if there's a database-backed value is to call [`game.settings.storage.get("world").getSetting`](https://foundryvtt.com/api/classes/foundry.documents.collections.WorldSettings.html#getsetting), which accesses the actual world collection of setting documents (comparable to `game.actors`). If that returns `undefined`, there's no underlying DB entry for the setting and it's just going to use the default. Note that the key is the concatenated `namespace` and `settingName`, e.g. `core.compendiumConfiguration`.  
 
 #### Returned Value Type
 
@@ -353,7 +353,7 @@ When saved, the directory path is the only string which is saved and does not co
 
 ### Setting Menus
 
-Sometimes a package is more complex than a few settings will allow a user to configure. In these cases it is recommended to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/classes/client.ClientSettings.html#registerMenu), and manage the configuration with a FormApplication or Dialog. Note that `registerMenu` does not register a setting by itself, simply a menu button.
+Sometimes a package is more complex than a few settings will allow a user to configure. In these cases it is recommended to register a settings menu with [`game.settings.registerMenu`](https://foundryvtt.com/api/classes/foundry.helpers.ClientSettings.html#registermenu), and manage the configuration with a FormApplication or Dialog. Note that `registerMenu` does not register a setting by itself, simply a menu button.
 
 Menus work best when used in conjunction with a registered setting of type `Object` which has been set to `config: false`. A menu could also be used to control many individual settings if desired.
 
