@@ -2,7 +2,7 @@
 title: Hooks
 description: API documentation for interacting with and creating Hooks
 published: true
-date: 2024-06-27T23:13:02.763Z
+date: 2025-07-25T23:19:04.995Z
 tags: development, api
 editor: markdown
 dateCreated: 2022-03-15T14:35:36.691Z
@@ -10,13 +10,13 @@ dateCreated: 2022-03-15T14:35:36.691Z
 
 # Hooks
 
-![Up to date as of v12](https://img.shields.io/static/v1?label=FoundryVTT&message=v12&color=informational)
+![Up to date as of v13](https://img.shields.io/static/v1?label=FoundryVTT&message=v13&color=informational)
 
 Hooks are an important method by which the core software, systems, and even modules can provide interaction points for other developers.
 
 *Official Documentation*
 - [Hook Events](https://foundryvtt.com/api/modules/hookEvents.html)
-- [Hooks](https://foundryvtt.com/api/classes/client.Hooks.html)
+- [Hooks](https://foundryvtt.com/api/classes/foundry.helpers.Hooks.html)
 
 *Note:* Not all core hook events are documented by the hook events page, and any system- or module-specific hooks may or may not be documented on that specific package's repository.
 
@@ -72,7 +72,7 @@ The `Hooks` class works entirely with static methods and is never actually insta
 
 There are two ways to register a hook callback with slightly different usecases:
 
-#### [`Hooks.on`](https://foundryvtt.com/api/classes/client.Hooks.html#on)
+#### [`Hooks.on`](https://foundryvtt.com/api/classes/foundry.helpers.Hooks.html#on)
 
 Used when the callback being registered should run every time the event is triggered.
 
@@ -84,7 +84,7 @@ function someFunction(hookArg1, hookArg2) {
 Hooks.on('hookEvent', someFunction);
 ```
 
-#### [`Hooks.once`](https://foundryvtt.com/api/classes/client.Hooks.html#once)
+#### [`Hooks.once`](https://foundryvtt.com/api/classes/foundry.helpers.Hooks.html#once)
 Used if the event might be triggered many times but the callback being registered should only run once.
 
 This is a convience method to make manually calling `Hooks.off` unecessary for this specific use case.
@@ -99,7 +99,7 @@ Hooks.once('hookEvent', oneTimeFunction);
 
 ### Unregistering a Callback
 
-#### [`Hooks.off`](https://foundryvtt.com/api/classes/client.Hooks.html#off)
+#### [`Hooks.off`](https://foundryvtt.com/api/classes/foundry.helpers.Hooks.html#off)
 
 Used when a particular use case calls for a Hook callback to be executed a specific number of times, or if some other control makes the callback unecessary.
 
@@ -127,7 +127,7 @@ It is possible to leverage the Hook API for your own use cases, rather than simp
 
 Remember Hooks must be synchronous and cannot `await` their registered callbacks.
 
-#### [`Hooks.call`](https://foundryvtt.com/api/classes/client.Hooks.html#call)
+#### [`Hooks.call`](https://foundryvtt.com/api/classes/foundry.helpers.Hooks.html#call)
 
 Calls the registered callbacks in order of registration, stopping when any of them explicitly returns `false`. This means not all registered callbacks might be called.
 
@@ -145,7 +145,7 @@ function someProcessWithHook(arg) {
 ```
 
 
-#### [`Hooks.callAll`](https://foundryvtt.com/apiclasses/client.Hooks.html#callAll)
+#### [`Hooks.callAll`](https://foundryvtt.com/api/classes/foundry.helpers.Hooks.html#callall)
 
 Calls the registered callbacks in order of registration, ensuring that all registered callbacks are called.
 
@@ -166,11 +166,13 @@ Below are some common patterns working with specific hooks
 
 ### Render hooks
 
+#### ApplicationV1
+
 One extremely common use for hooks is the various `render` hooks, which are triggered by instances of the [Application](/en/development/api/application) class. Whenever an application is rendered, a hook fires for it and each of its parent classes, e.g. `renderActorSheet` then `renderDocumentSheet` then `renderFormApplication` then `renderApplication`. Each of these event calls has the same information, the difference is just being able to specify how far up the inheritance tree you want to operate.
 
 All render hooks pass the same three arguments
 - `app`: The sheet class instance
-- `html`: A JQuery object of the application's rendered HTML
+- `html`: A jQuery object wrapping the application's rendered HTML
 - `data`: The result of the `getData` operation that was fed into the application's handlebars template
 
 A common usage pattern within these hooks is adding new inputs; by properly assigning the `name` property, you can have the application's native form handling do the work for you. Remember that you can't just assign arbitrary data to a data model, so you usually have to work with [flags](/en/development/api/flags) to define your additional data.
@@ -183,6 +185,27 @@ Hooks.on("renderActorSheet", (app, html, data) => {
   const myInput = `<input type="text" value="${myData}" name="flags.myModule.myFlag">`;
   // the jquery work here may be kinda complicated
   html.find(".some .selector").after(myInput);
+})
+```
+
+#### ApplicationV2
+
+The process described above stays mostly the same for [ApplicationV2](/en/development/api/applicationv2)'s render hooks (`renderApplicationV2`, `renderActorSheetV2`, and so on). The arguments passed by these hooks are
+- `app`: The sheet class instance
+- `element`: The root HTMLElement (*not* a jQuery object) of the rendered application
+- `context`: The result of the `_prepareContext` operation that was fed into the application's handlebars template
+- `options`: The application rendering options
+
+The equivalent code would be almost identical:
+
+```js
+Hooks.on("renderActorSheetV2", (app, html, context, options) => {
+  // The value after `??` controls the "default" value for the input
+	const myData = app.actor.getFlag("myModule", "myFlag", "myData") ?? "foobar";
+  // The `value` sets what shows in the input, and `name` is important for the form submission
+  const myInput = `<input type="text" value="${myData}" name="flags.myModule.myFlag">`;
+  // the jquery work here may be kinda complicated
+  html.querySelector(".some .selector").insertAdjacentHTML("afterend", myInput);
 })
 ```
 
@@ -235,7 +258,7 @@ Hooks that fire as part of Foundry's initialization process, such as `init`, are
 
 ### Object Reference Troubles
 
-Objects (this includes class instances as well as arrays) passed to hooks are *pass by reference* - any mutations made to them will also be present in the object instances used by the function that called them. If the arguments are re-assigned, that linkage breaks and changes will *not* be reflected. 
+Objects (this includes class instances as well as arrays) passed to hooks are *passed by reference* - any mutations made to them will also be present in the object instances used by the function that called them. If the arguments are re-assigned, that linkage breaks and changes will *not* be reflected. 
 
 By contrast, primitives - strings, numbers, booleans - will NOT see any changes made to them reflected in the original function.
 
