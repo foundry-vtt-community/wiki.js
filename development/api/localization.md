@@ -2,19 +2,19 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2025-06-10T02:38:50.590Z
+date: 2025-07-25T23:25:53.676Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
 ---
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 Localization, or i18n, is how Foundry supports playing in many different languages.
 
 **Official Documentation**
 - [Knowledge Base](https://foundryvtt.com/article/localization/)
-- [API](https://foundryvtt.com/api/classes/client.Localization.html)
+- [API](https://foundryvtt.com/api/classes/foundry.helpers.Localization.html)
 
 ## Overview
 
@@ -22,7 +22,7 @@ Localization allows Foundry to provide translated text content for UI elements o
 
 ## Key Concepts
 
-The Localization class is available at `yourFoundryInstall\resources\app\client\apps\i18n.js`
+The Localization class is available at `yourFoundryInstall\client\helpers\localization.mjs`
 
 ### Manifest Definition
 
