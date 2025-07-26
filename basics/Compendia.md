@@ -2,13 +2,13 @@
 title: Compendia
 description: 
 published: true
-date: 2023-01-27T19:51:21.976Z
+date: 2025-07-26T21:40:21.918Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
 ---
 
-# Overview
+## Overview
 Compendium Packs exist to reduce the strain on worlds that have been running for a long period of time. This includes situations where a world has accrued a large number of actors, items or scenes that, while not active, should not be deleted. Compendium Packs should be used to help you keep your world organized and reduce clutter.
 
 Compendiums can be add in several ways. They may come with a game system directly, providing Items, Actors, or rules, such as in the DnD5e system and the SRD content.  Compendium packs are also used by modules to store large amounts of content to be unpacked and added to an existing game world, such as part of a premium or exclusive content pack.
@@ -17,7 +17,7 @@ Compendiums can be add in several ways. They may come with a game system directl
 
 Each Compendium can only contain one type of document: Actors, Cards, Items, Journal Entries, Macro Commands, Playlists, Rollable Tables, or Scenes. Data contained in compendium packs are not loaded until needed, reducing the amount of data that a particular user must load when first joining a game.
 
-## Creating and Using Compendium Pack
+### Creating and Using Compendium Pack
 
 A Compendium can be easily created in any World. First, navigate to the Compendiums Sidebar Tab, and then click the `Create Compendium` button. Enter the name of the Compendium (for example "Player Characters") and choose the type of document that will be contained in from the Document Type dropdown. After your Compendium has been created, clicking upon the Compendium name in the Sidebar will open a new window that will allow you to drag and drop from a Sidebar Tab into the Compendium.
 
@@ -25,19 +25,19 @@ Compendium Packs and their contents are automatically sorted alphabetically.
 
 You can also export whole folders to compendiums by right clicking the folder and clicking the `Export to Compendium` option. This then gives you the ability to choose the destination pack (the compendium you want to export the folder's entities to), and if you want to overwrite existing entries with the same names. If the `Merge by name?` option is toggled off, then new copies of similar entities will be added. This is useful for storing multiple versions of the same document in a compendium.
 
-## Locking Compendiums
+### Locking Compendiums
 You can toggle a lock on a compendium by navigating to the Compendium Packs tab, right clicking on name of the compendium and choosing `Toggle Edit Lock`. This can help prevent making any unwanted changes. 
 
 
 **Entities in compendiums can now be edited directly!**
 This means you no longer have to import an entity in order to make any changes to it.
 
-# Linking Entities
+## Linking Entities
 
 Entities in compendiums can be linked just like the ones in your game world. They can be used in Journal Entries, Map notes, or Roll Tables. Simply drag and drop the entities from the compendium to the editable filed you want to link it to.
 This will show up as the standard linking format of `@Entitytype(EntityId)`. In journal any field that requires saving after editing, such as journal entries the link will not show up until after you save. Fields like roll tables, there will be no link button, only the full formated id. 
 
-# Sharing with players
+## Sharing with players
 
 You can allow your players to have access to compendiums by hiding the compendia. Navigate to the `Compendium Packs` tab on the sidebar, then right click on a compendium. Select `Toggle Visability`. An eye symbol with a line crossed out will appear next to those that you have hidden from your players. 
 
@@ -45,29 +45,30 @@ This can be usefull in that you may want to let your players have access to a co
 
 **NOTE:** Any compendium your players have access to, they will see all of the entities within.  
 
-# Importing Compendium Packs
+## Importing Compendium Packs
 
 If you would like to import all of the content in a compendium pack you can do so by right-clicking the pack in the Compendium sidebar then selecting the `Import All Content` option. This will open a dialog allowing you to change the name of the folder which the compendium pack's content should be imported into. It will use the compendium's name if you choose not to edit the name, or if you leave the field blank. You can also import a single entity by opening the compendium folder, right clicking on the entity, and choosing `Import Entry`. 
 
 Once content has been imported into a game world it becomes a localized part of that world, and any changes made to the documents will not be reflected in the compendium unless you also export the content back to the compendium, or create a new compendium with the changed documents.
 
-# Tips and Tricks
+## Tips and Tricks
 
-## `Do I need a compendium?`
+### `Do I need a compendium?`
 
 Storing unused Entities in a Compendium **greatly** reduces the time it takes to load your world. Even though each Actor, Item, or other document may be small, as their numbers start to rise into the hundreds the amount of data that gets transferred to each of your players when they join can cause your world to slow down over time. It is a best to practice good organization.
 
-## Sharing compendia between worlds
+### Sharing compendia between worlds
 
-You can use a tiny module to share content between worlds. This site will help you create a shared compendium in just a few clicks. 
+You can use a personal module to share content between worlds. Here's how to create it:
 
-[Site to create a tiny module for shared content between worlds](https://fgen.lffg.org/module/create)
+1) In Setup, go to the Add-on Modules tab, and hit the ⚙️ Create Module button.
+2) Give it a Title, like "Shared Packs" or something. Ignore the rest of the fields in the Basic Details tab.
+3) Go to the Compendium Packs tab, hit + Add Compendium Pack, and give the pack a Label (like "Shared Spells") and a Document Type (which would be Item if this was for spells). Set the Required System if this is an Actor or Item pack.
+4) Keep adding more packs with the + Add Compendium Pack button until you've got what you need. You can always edit this later and add more, though.
+5) Hit the Create Module button.
+6) In a world, go to the Game Settings sidebar > Manage Modules, and enable this new module.
+7) Go to the Compendium Packs sidebar > right-click one of your new packs > Toggle Edit Lock to allow changes to it.
+8) Open the pack, drag stuff into it. When you enable this module in another world on this same host, all of that stuff will be there, and available to use.
 
-Steps to use:
-1. Fill in the Module Name field and optionally the Actor/Description fields.
-2. Add whatever packs you want to have present in the module, filling in the name and type and adding more packs with the button as-needed.
-3. Click Generate Module, which will show the manifest URL below and copy the URL to your clipboard.
-4. Open up the module installation dialog in Foundry, paste the manifest into the Manifest URL field, and click Install.
-5. Open your world and activate the module in that world.  Module-based compendiums will be locked by default, so you will need to unlock them to add your content to them.
+If you'd prefer a video guide for this, there's one [here](https://www.youtube.com/watch?v=RaRtUkNdoig).
 
-For more information on shared compendiums, and how to make one yourself from scratch, you can watch the video from discord user unsoluble [here](https://www.youtube.com/watch?v=Q23cJJ36kX8).
