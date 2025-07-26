@@ -2,13 +2,13 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2025-07-02T02:47:37.443Z
+date: 2025-07-26T15:58:31.115Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
 ---
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 Applications are a core piece of Foundry's API that almost every developer will have to familiarize themselves with. They allow developers to render HTML windows to display information and provide an interactive UI, from dialogs to character sheets to so much more.
 
@@ -26,7 +26,7 @@ Application#render // `#` indicates instance method or property
 
 ## Overview
 
-Code for ApplicationV2 and its related classes can be found at `yourFoundryInstallPath/resources/app/client-esm/applications`.
+Code for ApplicationV2 and its related classes can be found at `yourFoundryInstallPath/resources/app/client/applications`.
 
 ---
 ## Key Concepts
@@ -45,7 +45,7 @@ The ApplicationV2 class and its subclasses were introduced in Foundry V12, with 
 - Improved a11y handling
 - Overall simpler and cleaner to implement
 
-Another major change is there's no more JQuery-by-default in AppV2; all internal functions work exclusively with base javascript DOM manipulation. JQuery is still fully included in Foundry, so developers who prefer it can call `const html = $(this.element)` to get a jquery representation of the application's rendered HTML.
+Another major change is there's no more jQuery-by-default in AppV2; all internal functions work exclusively with base javascript DOM manipulation. JQuery is still fully included in Foundry, so developers who prefer it can call `const html = $(this.element)` to get a jQuery representation of the application's rendered HTML.
 
 See [this guide](https://foundryvtt.wiki/en/development/guides/converting-to-appv2) for a detailed walkthrough of converting to AppV2.
 
@@ -72,7 +72,7 @@ The following section provides guidance for implementing ApplicationV2 and its r
 
 ### Basic lifecycle
 
-Once the class has been defined, it can be rendered by calling `new MyApp.render(true)`. Once an application is visible on the screen, it can be refreshed with `myApp.render()` (or more commonly, `this.render()`).
+Once the class has been defined, it can be rendered by calling `new MyApp().render(true)`. Once an application is visible on the screen, it can be refreshed with `myApp.render()` (or more commonly, `this.render()`).
 
 Similarly, `myApp.close()` will remove it from the UI, but the actual class instance will persist until the garbage collector deletes it. This means that if your retain a persistent reference (such as foundry's native handling of document sheets), application properties (like tab state) will persist between cycles of `close()` and `render(true)`.
 
@@ -151,7 +151,7 @@ This could pair with the following HTML to add the click event. You can use what
 <a data-action="myAction">Using a link for inline text</a>
 ```
 
-For those used to ApplicationV2, this largely replaces the role `activateListeners` played. If you have other event listeners to add, you can use `_onRender`, which is explored in the "Specific Use Cases" section.
+For those used to Application V1, this largely replaces the role `activateListeners` played. If you have other event listeners to add, you can use `_onRender`, which is explored in the "Specific Use Cases" section.
 
 #### Header Buttons
 
@@ -357,7 +357,9 @@ There are much less verbose implementations of the above code - the whole thing 
 
 ### Tabs
 
-ApplicationV2 includes partial support for tabs with the `changeTab` method and the `tabGroups` record. However, `HandlebarsApplicationMixin` will not automatically re-apply the relevant class adjustments on re-render automatically, meaning that developers are responsible for maintaining that status themselves.
+#### Tabs in V12
+
+ApplicationV2 in V12 includes partial support for tabs with the `changeTab` method and the `tabGroups` record. However, `HandlebarsApplicationMixin` will not automatically re-apply the relevant class adjustments on re-render automatically, meaning that developers are responsible for maintaining that status themselves.
 
 **Tab Navigation**. There's a handy Foundry-provided template for tabs at `templates/generic/tab-navigation.hbs` you may want to use. It expects an array or record of `ApplicationTab` supplied in a field named `tabs`. A record is preferable to an array because it can be more easily used in tab display. (*This is merely a typedef, you must actually construct the object yourself*)
 
@@ -385,6 +387,10 @@ If each of your tabs is a `part`, then you can store your `tabs` as `Record<part
 	{{! stuff }}
 </section>
 ```
+
+#### Tabs in V13
+
+The V13 implementation of ApplicationV2 has better tab support. See [Tabs in AppV2](/en/development/guides/Tabs-and-Templates/Tabs-in-AppV2) for additional information.
 
 ### Text Enrichment
 
