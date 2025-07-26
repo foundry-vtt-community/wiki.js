@@ -2,7 +2,7 @@
 title: Settings
 description: Provide user configuration for your package
 published: true
-date: 2025-07-25T23:38:05.709Z
+date: 2025-07-26T21:24:08.008Z
 tags: development, api, documentation, docs
 editor: markdown
 dateCreated: 2021-11-17T15:31:39.865Z
@@ -152,7 +152,7 @@ When registering a setting, instead of passing a hard-coded string to `name` or 
 > Settings with `scope: world` cannot be `set` until the `ready` hook.
 {.is-info}
 
-A setting's value can be set with [`game.settings.set`](https://foundryvtt.com/api/classes/client.ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a user with the "Modify Configuration Settings" permission (by default this is only Game Master and Assistant GM users), while `scope: client` settings will only persist on the user's local machine.
+A setting's value can be set with [`game.settings.set`](https://foundryvtt.com/api/classes/foundry.helpers.ClientSettings.html#set). It's important to note that a `scope: world` setting can only be set by a user with the "Modify Configuration Settings" permission (by default this is only Game Master and Assistant GM users), while `scope: client` settings will only persist on the user's local machine.
 
 ```js
 const whateverValue = 'foo';
