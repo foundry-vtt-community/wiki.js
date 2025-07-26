@@ -2,11 +2,13 @@
 title: Compendia
 description: 
 published: true
-date: 2025-07-26T21:40:21.918Z
+date: 2025-07-26T21:40:39.794Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:22:26.311Z
 ---
+
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 ## Overview
 Compendium Packs exist to reduce the strain on worlds that have been running for a long period of time. This includes situations where a world has accrued a large number of actors, items or scenes that, while not active, should not be deleted. Compendium Packs should be used to help you keep your world organized and reduce clutter.
