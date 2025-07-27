@@ -2,20 +2,21 @@
 title: Helpers and Utils
 description: Independently useful functions in the Foundry API
 published: true
-date: 2024-10-29T20:57:17.528Z
+date: 2025-07-27T00:41:29.353Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-26T16:09:16.281Z
 ---
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 Foundry has a LOT of generally useful functions that are not highlighted in other documentation. This page seeks to organize them 
 
 Official documentation
-- [Client Utils](https://foundryvtt.com/api/modules/client.html)
 - [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html)
-- [Handlebars Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
+- Handlebars Helpers
+	- [v12](https://foundryvtt.com/api/v12/classes/client.HandlebarsHelpers.html)
+  - [v13](https://foundryvtt.com/api/modules/foundry.applications.handlebars.html)
 - [Custom HTML Elements](https://foundryvtt.com/api/modules/foundry.applications.elements.html)
 - [Primitive Extensions](https://foundryvtt.com/api/modules/primitives.html)
   - [Array](https://foundryvtt.com/api/modules/primitives.Array.html)
@@ -45,37 +46,41 @@ The functions covered here are ultimately just shortcuts to things you can imple
 
 ### Utils
 
-Key files: `client\core\utils.js` and `common\utils\helpers.mjs`
+Key files: `common\utils\helpers.mjs`, `client\core\utils.js` (pre-v13 only), `client\utils\helpers.mjs` (v13+ only).
 
 These methods cover an enormous range of functions available within the Foundry application; some are niche, like `benchmark`, and others are workhorses that are constantly used, like `mergeObject`. There's no special requirements to using them; they each serve their own purpose.
 
 Note: The distinction between `client` and `common` is that the latter are also used by the Foundry server.
 
-> **Upcoming Deprecations**
-> As of v12, global calls to the functions available in [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html) are deprecated. For future compatibility, use the already-available `foundry.utils` namespace. The [Client Utils](https://foundryvtt.com/api/modules/client.html) are not changing (most importantly: `fromUuid`, `fromUuidSync`, and `getDocumentClass`).
+> **Deprecations**
+> As of v12, global calls to the functions available in [Common Utils](https://foundryvtt.com/api/modules/foundry.utils.html) are deprecated. For future compatibility, use the already-available `foundry.utils` namespace. The [Client Utils](https://foundryvtt.com/api/v12/modules/client.html) are not changing (most importantly: `fromUuid`, `fromUuidSync`, and `getDocumentClass`).
 {.is-warning}
 
 
 ### Handlebars Helpers
 
-Key files: `client\apps\templates.js`
+Key files: `client\apps\templates.js` (pre-v13 only), `client\applications\handlebars.mjs` (v13+ only)
 
 Foundry's [Applications](/en/development/api/application) use handlebars for rendering. To help with this, the core software has provided a number of default "Helpers" which you can reference in your `hbs` files via `{{helper arg1 option1="foo" option2=barVar}}`.
 
 You can nest handlebars helpers by using parentheses: `{{localize (concat "foo." barVar}}`.
 
-You can also invoke the HandlebarsHelpers class in your javascript; this is most useful for modules injecting dom elements as part of a render hook. One important note here is that the `options` properties *must* be passed inside of a property named `hash` inside another object, e.g.
+You can also invoke the handlebars helpers in your javascript; this is most useful for modules injecting dom elements as part of a render hook. One important note here is that the `options` properties *must* be passed inside of a property named `hash` inside another object, e.g.
 
 ```js
 let  value = 3
 const options: {sign: true}
 
+// Before v13:
 HandlebarsHelpers.numberFormat(value, {hash: options}) // returns '+3'
+
+// Since v13:
+foundry.applications.handlebars.numberFormat(value, {hash: options}) // returns '+3'
 ```
 
 ### Custom HTML ELements
 
-Key files: `client-esm\applications\elements`
+Key files: `client-esm\applications\elements`,  (pre-v13 only), `client\applications\elements` (v13+ only)
 
 As a more broadly applicable alternative to Handlebars Helpers, the core Foundry team has started implementing custom HTML elements. These are *not* tied to the Handlebars rendering engine and are less flexible as a result, but there are many aspects they *can* replace. 
 
@@ -103,13 +108,13 @@ The following section highlights some important utility functions every develope
 
 These methods are generally useful across the foundry API; functions available in `foundry.utils` are prefaced as such and should be called that way.
 
-### [fromUuid(uuid)](https://foundryvtt.com/api/modules/client.html#fromUuid) and [fromUuidSync(uuid)](https://foundryvtt.com/api/modules/client.html#fromUuidSync)
+### [fromUuid(uuid)](https://foundryvtt.com/api/functions/foundry.utils.fromUuid.html) and [fromUuidSync(uuid)](https://foundryvtt.com/api/functions/foundry.utils.fromUuidSync.html)
 
 Primary article: [CompendiumCollection](/en/development/api/CompendiumCollection)
 
 These functions allow you to grab a pointer to any document. `fromUuid` is asynchronous and always returns a pointer, while `fromUuidSync` is synchronous and will only return an index entry if the document is inside a compendium. Both are very useful for tracking down things like a token actor for an unlinked token, since those are nested several layers deep.
 
-#### [foundry.utils.deepClone(object, {strict=false}={})](https://foundryvtt.com/api/modules/foundry.utils.deepClone)
+#### [foundry.utils.deepClone(object, {strict=false}={})](https://foundryvtt.com/api/functions/foundry.utils.deepClone.html)
 
 Ordinarily, javascript passes objects and arrays by *reference* rather than by *value* - if you edit that object or array, it will *mutate* the original. When this is undesired, deepClone can help, with the caveat that deepClone will *not* help on any advanced data like a Set or another class. This is an important caveat when working with a system that has implemented [Data Models](/en/development/api/DataModel) for its types: the `system` property is a class instantiation and so will still be passed by reference if you call deepClone on the parent object.
 
@@ -117,7 +122,7 @@ Another common use for deepClone is while debugging; `console.log` on an object 
 
 Keep in mind that this kind of operation can be performance intensive and you should carefully evaluate why you need a fresh object rather than mutating the reference.
 
-#### [foundry.utils.mergeObject(original, other, options)](https://foundryvtt.com/api/modules/foundry.utils.mergeObject)
+#### [foundry.utils.mergeObject(original, other, options)](https://foundryvtt.com/api/functions/foundry.utils.mergeObject.html)
 
 Foundry makes heavy use of nested object properties, and combining objects is a frequent need. One basic use of `mergeObject` is updating `CONFIG` in an init hook.
 
@@ -143,16 +148,16 @@ This method is helpful when attempting to provide multi-version compatibility ac
 
 The most common targets for v1 are `game.version` and `game.system.version` for the core software and system versions respectively. It's important to check if a game system uses a leading `v` in their versioning definition so your comparisons can be accurate.
 
-#### [getDocumentClass(documentName)](https://foundryvtt.com/api/modules/client.html#getDocumentClass)
+#### [getDocumentClass(documentName)](https://foundryvtt.com/api/functions/foundry.utils.getDocumentClass.html)
 
 This is the canonical way to find the correct class for a document after configuration has happened.
 
 
 ### Handlebars Helpers
 
-[Foundry's helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html) augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html). In addition to the helpers highlighted below, there's a number of other input helpers like numberInput, rangeInput, etc. that can simplify your rendering logic.
+[Foundry's helpers](https://foundryvtt.com/api/modules/foundry.applications.handlebars.html) augment the [built-in helpers](https://handlebarsjs.com/guide/builtin-helpers.html). In addition to the helpers highlighted below, there's a number of other input helpers like numberInput, rangeInput, etc. that can simplify your rendering logic.
 
-#### [localize](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#localize)
+#### [localize](https://foundryvtt.com/api/functions/foundry.applications.handlebars.localize.html)
 
 Primary article: [Localization](/en/development/api/localization)
 
@@ -166,7 +171,7 @@ The localize helper represents two different functions; `game.i18n.localize` and
 {{localize "DOCUMENT.Create" type="Actor"}}
 ```
 
-#### [selectOptions](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#selectOptions)
+#### [selectOptions](https://foundryvtt.com/api/functions/foundry.applications.handlebars.selectOptions.html)
 
 The `selectOptions` Handlebars helper is provided by Foundry for more easily building the list of options in a `select` element. This is typically used in actor and item sheets, for offering the selection of one option among multiple. It can also be used in a `multi-select` element for choosing multiple options.
 
@@ -215,7 +220,7 @@ The following helpers are not emitted to the foundry API page, but are neverthel
 (or arg1 arg2 arg3 ...)
 ```
 
-One warning with these: Your primary application logic should still be occuring within `getData`, you should use these only sparingly.
+One warning with these: Your primary application logic should still be occuring within `getData`/`_prepareContext`, you should use these only sparingly.
 
 ### Primitive Extensions
 
@@ -224,7 +229,7 @@ One warning with these: Your primary application logic should still be occuring 
 
 ### Notifications
 
-API Documentation: [Notifications](https://foundryvtt.com/api/classes/client.Notifications.html)
+API Documentation: [Notifications](https://foundryvtt.com/api/classes/foundry.applications.ui.Notifications.html)
 
 Foundry has a "toasts" system available at `ui.notifications`. Its methods, `info`, `warn`, and `error` all call `notify`, which creates the toast then returns the ID of the notification. In some instances, you may wish to capture this ID for use with `remove` to programatically dismiss a toast. Notifications take an optional second argument where you can pass `{ localize: true }` so any warnings you add are i18n-friendly.
 
@@ -302,7 +307,7 @@ The final HTML generated will be this (assuming the initial value of system.mych
 ```
   
 **Output**
-  
+
 <select name="system.mychoice" style="border:1px solid black">
     <option value="alpha">First Choice</option>
     <option value="bravo" selected>Second Choice</option>
@@ -317,7 +322,7 @@ Ultimately, the `selectOptions` helper has the potential to significantly simpli
 You can display signed number that's editable as a number by combining `input type='text'`, `data-dtype='Number'`, and `Number#signedString()` or `{{numberFormat value sign=true}}`. 
 
 - A number input cannot display "+5", but a text input can.
-- `data-dtype='Number'` is a special property in Foundry that will cast the input from a string to a number as a FormApplication is submitted. ([FormDataExtended##castType](https://foundryvtt.com/api/classes/client.FormDataExtended.html#_castType))
+- `data-dtype='Number'` is a special property in Foundry that will cast the input from a string to a number as a FormApplication is submitted. ([FormDataExtended##castType](https://foundryvtt.com/api/v12/classes/client.FormDataExtended.html#_castType))
 - Either in your `getData` you can use `Number#signedString()` to derive the display value, or you can use the `numberFormat` helper with `sign=true`; it depends on how exactly you've structured your data which is better.
 
 ```handlebars
@@ -356,9 +361,15 @@ Sometimes it's necessary to check the inheritance chain. There's many ways to do
 ### formInput and formGroup
 
 API Reference
-- [formInput and formGroup](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html#formInput)
-- [FormInputConfig](https://foundryvtt.com/api/interfaces/foundry.applications.fields.FormInputConfig.html)
-- [FormGroupConfig](https://foundryvtt.com/api/interfaces/foundry.applications.fields.FormGroupConfig.html)
+- `formInput` and `formGroup`
+	- [v12](https://foundryvtt.com/api/v12/classes/client.HandlebarsHelpers.html#formInput)
+  - [v13](https://foundryvtt.com/api/functions/foundry.applications.handlebars.formInput.html)
+- `FormInputConfig`
+	- [v12](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
+  - [v13](https://foundryvtt.com/api/interfaces/foundry.data.types.FormInputConfig.html)
+- `FormGroupConfig`
+	- [v12](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
+  - [v13](https://foundryvtt.com/api/interfaces/foundry.data.types.FormGroupConfig.html)
 
 *Note: The **formField** helper is an alias for **formGroup**, they call the same HTML generation functions*
 
@@ -396,11 +407,11 @@ The primary difference between the two is that `formGroup` will render a label a
 - `formInput` optional arguments are an instance of [FormInputConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormInputConfig.html)
 - `formGroup` optional arguments are a union of FormInputConfig and [FormGroupConfig](https://foundryvtt.com/api/v12/interfaces/foundry.applications.fields.FormGroupConfig.html)
 
-One example of their implementation is the new UserConfig application, available at `resources\app\client-esm\applications\sheets\user-config.mjs` and its template `resources\app\templates\sheets\user-config.hbs`
+One example of their implementation is the UserConfig application, available at `client\applications\sheets\user-config.mjs` (`client-esm\applications\sheets\user-config.mjs` in v12) and its template `templates\sheets\user-config.hbs`
 
 #### The `widget` option
 
-One way to offload HTML construction from the Handlebars template to a javascript function is the `widget` option, which takes a function with the signature `(FormGroupConfig, FormInputConfig} => HTMLDivElement`\*. This is only available to the `formGroup` helper, not `formInput`, and its actual utility as compared to defining the structure in the template directly depends on the complxity of the application. 
+One way to offload HTML construction from the Handlebars template to a javascript function is the `widget` option, which takes a function with the signature `(FormGroupConfig, FormInputConfig) => HTMLDivElement`\*. This is only available to the `formGroup` helper, not `formInput`, and its actual utility as compared to defining the structure in the template directly depends on the complxity of the application. 
 
 \*The function could technically return any HTML element with a valid `outerHTML` property, not just a div.
 
