@@ -2,13 +2,13 @@
 title: Roll
 description: An interface and API for constructing and evaluating dice rolls. 
 published: true
-date: 2024-11-17T02:05:01.688Z
+date: 2025-07-27T14:31:31.438Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-03-13T20:34:57.466Z
 ---
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 Rolls are how Foundry handles randomization and the game math involving them.
 
@@ -30,12 +30,12 @@ Roll#terms // `#` indicates instance method or property
 
 Rolls are a critical piece of Foundry's infrastructure and useful to every tabletop roleplaying game, but their actual usage is entirely dependent on the system or module.
 
-Code for Roll and its related classes can be found in `yourFoundryInstallPath/resources/app/client-esm/dice/`.
+Code for Roll and its related classes can be found in `yourFoundryInstallPath/resources/app/client/dice/` (`yourFoundryInstallPath/resources/app/client-esm/dice/` before v13).
 
 ---
 ## Key Concepts
 
-Rolls work like normal javascript classes; code will frequently feature lines like `const roll = new Roll(formula, data)`, where the resulting `roll` variable is an instance of the Roll class. Also unlike other parts of Foundry, there aren't a ton of built-in static methods - most everything that matters is done as part of an instance of the class.
+Rolls work like normal JavaScript classes; code will frequently feature lines like `const roll = new Roll(formula, data)`, where the resulting `roll` variable is an instance of the Roll class. Also unlike other parts of Foundry, there aren't a ton of built-in static methods - most everything that matters is done as part of an instance of the class.
 
 ### Evaluation
 
@@ -67,15 +67,15 @@ Examples of things you might want to save into options:
 
 The `Roll` class has a large number of instance and static functions, the use of which may not be entirely obvious.
 
-### [Roll#alter](https://foundryvtt.com/api/classes/client.Roll.html#alter)
+### [Roll#alter](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#alter)
 
 This simple instance method will multiply or add to each of the dice terms in a formula. This won't cover all possible ways you may want to modify a roll, but is an efficient one for many common use cases, such as adding or subtracting dice from a die pool.
 
 ### Roll Rendering
 
 API Reference
-- [toMessage](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#toMessage)
-- [CHAT_TEMPLATE](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#CHAT_TEMPLATE)
+- [toMessage](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#tomessage)
+- [CHAT_TEMPLATE](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#chat_template)
 
 Foundry has built-in support for sending rolls to chat; often times just calling `roll.toMessage()` is sufficient. The first argument, `messageData`, uses the following defaults and then is passed into `new ChatMessage`.
 
@@ -121,9 +121,9 @@ The remainder of the array is used as part of chat message serialization; if you
 
 API Reference
 
-- [replaceFormulaData](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#replaceFormulaData)
+- [replaceFormulaData](https://foundryvtt.com/api/classes/foundry.dice.Roll.html#replaceformuladata)
 
-The replaceFormulaData function, a static method of the Roll class, can help users visualize the effect of their roll formulas by providing the "translated" formula. 
+The `replaceFormulaData` function, a static method of the Roll class, can help users visualize the effect of their roll formulas by providing the "translated" formula. 
 
 ---
 ## Specific Use Cases
