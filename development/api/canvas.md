@@ -2,20 +2,20 @@
 title: Canvas
 description: The visual game surface in Foundry Virtual Tabletop is managed by a WebGL-powered canvas which uses the PixiJS library.
 published: true
-date: 2024-08-16T01:38:00.167Z
+date: 2025-07-27T15:46:29.249Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-20T00:07:40.091Z
 ---
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 Foundry's Canvas is the primary method by which Foundry fulfills its function as a *Virtual Tabletop*, providing a space to render maps full of rich details and complex interactions.
 
 *Official Documentation*
 
 - [PixiJS](https://pixijs.com/)
-- [Canvas](https://foundryvtt.com/api/classes/client.Canvas.html)
+- [Canvas](https://foundryvtt.com/api/classes/foundry.canvas.Canvas.html)
 
 **Legend**
 
@@ -30,7 +30,7 @@ The most performance-intensive aspect of Foundry Virtual Tabletop, the game canv
 
 Fortunately, while the Canvas is very complex, most developers do not need to worry about it; the core software team spends significant amounts of time each major release refining and upgrading the canvas capabilities. The downside of this is that the canvas API is not very stable, and so has major breaking un-deprecated changes every version. The top of this page has a version marker; even more so than the other pages in the wiki's API documentation, if you are developing for a different core version than what this documents it is unlikely the information here will be accurate.
 
-Code for the Canvas class and its related classes can be found at `yourFoundryInstallPath/resources/app/client/pixi` as well as `yourFoundryInstallPath/resources/app/client-esm/canvas`.
+Code for the Canvas class and its related classes can be found at `yourFoundryInstallPath/resources/app/client/canvas`. Before v13, it was found at `yourFoundryInstallPath/resources/app/client/pixi` as well as `yourFoundryInstallPath/resources/app/client-esm/canvas`.
 
 ---
 ## Key Concepts
@@ -69,11 +69,19 @@ Systems and modules have many ways to interact with the canvas by modifying the 
 
 API Reference
 
-- [getSceneControlButtons](https://foundryvtt.com/api/functions/hookEvents.getSceneControlButtons.html)
-- [SceneControl](https://foundryvtt.com/api/interfaces/client.SceneControl.html)
-- [SceneControlTool](https://foundryvtt.com/api/interfaces/client.SceneControlTool.html)
+- `getSceneControlButtons`
+	- [v12](https://foundryvtt.com/api/v12/functions/hookEvents.getSceneControlButtons.html)
+  - [v13](https://foundryvtt.com/api/functions/hookEvents.getSceneControlButtons.html)
+- `SceneControl`
+	- [v12](https://foundryvtt.com/api/v12/interfaces/client.SceneControl.html)
+	- [v13](https://foundryvtt.com/api/interfaces/foundry.SceneControl.html)
+- `SceneControlTool`
+	- [v12](https://foundryvtt.com/api/v12/interfaces/client.SceneControlTool.html)
+  - [v13](https://foundryvtt.com/api/interfaces/foundry.SceneControlTool.html)
 
-The controls on the left side of the screen can be modified in the `getSceneControlButtons` hook. The only argument it passes is the current array of scene controls. To add new ones, you can use `controls.push` to add new elements, or [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) if you want to add your controls to a spot besides the bottom of the array.
+The controls on the left side of the screen can be modified in the `getSceneControlButtons` hook. The only argument it passes, `controls`, is the current set of scene controls.
+Before v13, this was an array of `SceneControl` objects. To add new ones, you would use `controls.push` to add new elements, or [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) if you want to add your controls to a spot besides the bottom of the array.
+Starting in v13, `controls` is instead an object, keyed by the control's name. A new one can be added directly to the object (`controls.myControl = { name: "myControl", title: "My Control", ...}`).
 
 - The `title` property of the scene control as well as individual tools are automatically localized. 
 - The `icon` property is expected to be a valid [FontAwesome](https://fontawesome.com/search?o=r&m=free) class, e.g. `"fa-solid fa-expand"`. 
