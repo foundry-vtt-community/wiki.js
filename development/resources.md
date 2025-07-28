@@ -2,102 +2,54 @@
 title: Development Resources
 description: 
 published: true
-date: 2024-07-10T15:44:08.214Z
+date: 2025-07-28T16:57:32.559Z
 tags: development, resource, tutorial, template, macro
 editor: markdown
 dateCreated: 2020-09-18T21:54:56.070Z
 ---
 
-![Up to date as of v11](https://img.shields.io/badge/FoundryVTT-v11-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 > Many old links have been removed from this page due to their content not being updated to modern Foundry.
 {.is-warning}
 
 
-# Official API
-Atropos has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/), generated from the JSDoc comments within every local installation of Foundry. You m
+## Official API
+Foundry has a Developer API Documentation section on the official `foundryvtt.com` website [here](https://foundryvtt.com/api/), generated from the JSDoc comments within every local installation of Foundry.
 
 You have two options for perusing the source code within `resources/app`:
-- The subfolders `common` and `client` break the classes up into individual files. Classes inside `common` use [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), so for example the base `Document` class is bundled and available at `foundry.abstract.Document` in your client. By contrast, the classes within `client` are all thrown directly into the global scope
+- The subfolders `common` and `client` break the classes up into individual files. Classes inside `common` use [JavaScript modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules), so for example the base `Document` class is bundled and available at `foundry.abstract.Document` in your client.
+Since v13, that is also true for `client` classes. Before v13, `client` classes were all thrown directly into the global scope (with a `client-esm` folder containing ones that were already converted to the modular approach).
 - Alternatively, `public/scripts/foundry.js` is the entire script as it's delivered to end users; note that it has some external imports for the esmodules content.
 
 It is advisable to open this file up and search it in your IDE, as all of the JSDoc comments are present and you can easily see what is really going on in the code.
 
-## Macros and Code examples
+## [Knowledge Base](https://foundryvtt.com/kb/)
+- [Introduction to Development](https://foundryvtt.com/article/intro-development/)
+- [Introduction to Module Development](https://foundryvtt.com/article/module-development/)
+- [Introduction to System Development](https://foundryvtt.com/article/system-development/)
+- [Introduction to System Data Models](https://foundryvtt.com/article/system-data-models/)
 
-### [Community Macros](https://github.com/foundry-vtt-community/macros)
-- Community contributed macros that can be downloaded as a module, a wide range of topics with pf1, pf2, and dnd5e system specific macros covered therein.
+
+## Official Discord Server
+The official [Discord](https://discord.gg/foundryvtt) is a great place to get up-to-date information and support. If you are looking for help, you might want to ask in the following channels:
+- `#macro-polo` for help with macros;
+- `#module-development` for help with developing your own module;
+- `#system-development` for help with developing your own system.
 
 ## Tutorials
 
 ### [Boilerplate System Development Tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD01-Getting-started)
-- Wiki hosted guide to accompany and explain the Boilerplate system as well as a lot of core system development concepts.
+Wiki hosted guide to accompany and explain the Boilerplate system as well as a lot of core system development concepts.
+[Boilerplate](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate) is a lightly opinionated boilerplate system that can be used as a starting point to build a custom system.
 
-## Templates and Starter Kits
-
-There are a variety of community-created module and system starter kits out there. These range from very opinionated to barely opinionated.
-
-
-### Basics for Modules
-
-#### [League Basic JS Module Template](https://github.com/League-of-Foundry-Developers/FoundryVTT-Module-Template)
-- Lightly Opinionated
-- **Supports:** Javascript
-- **Description:** A template repository for FoundryVTT module development that comes with versioned CI/CD.
-
-
-### Generators
-
-### System Development
-
-#### [Boilerplate System](https://gitlab.com/asacolips-projects/foundry-mods/boilerplate)
-- Lightly Opinionated
-- **Supports:** Javascript, SCSS
-- **Description:** This system is a boilerplate system that you can use as a starting point for building your own custom systems. It's similar to Simple World-building, but has examples of creating attributes in code rather than dynamically through the UI.
-
-
-### Javascript for Modules
-
-#### [TyphonJS's Demo Rollup Module](https://github.com/typhonjs-fvtt/demo-rollup-module)
-- Very Opinionated
-- Uses Rollup to bundle your module with examples of cleanly including node module libraries into final package
-- **Supports:** Javascript, Sass / SCSS / PostCSS, minification / mangling w/ sourcemaps, and auto creates versions using Github Actions.
-- **Description:** A starter project template demonstrating Rollup to bundle your module code regardless if you plan to include Node modules or not.
-
-
-### Typescript for Modules
-
-#### [League Basic TS Module Template](https://github.com/League-of-Foundry-Developers/foundry-typescript-template)
-- Lightly Opinionated
-- **Supports:** Typescript
-- **Description:** A template for typescript projects that uses manifest+ and auto creates versions using Github Actions.
-
-
-
-#### [Dragon Flagon TS Automated Module Template](https://github.com/flamewave000/fvtt-module-template)
-- Lightly Opinionated
-- This module template has an opinionated folder structure, but otherwise nothing else.
-- Fully Automated building, development watching, and bundling of the module.
-- **Uses**: Gulp and TypeScript
-- **Supports**: JavaScript, TypeScript, SourceMaps, Automated Bundling (.zip and manifest generation)
-- **Description**: A TypeScript+Gulp template for a more automated FoundryVTT module development. In this system, you perform minimal changes to the module.json as it is populated automatically based on the package.json and the files present. Will allow you to run a series of Gulp watchers that will automatically build/update files to your dev environment whenever you save a file you've changed.
-
+> The main Boilerplate branch and parts of the Boilerplate tutorial could be considered slightly outdated at the time of writing. Consider using the `v12` branch of the Boilerplate system, and [Data Models](/en/development/api/DataModel) instead of `template.json`.
+{.is-warning}
 
 ## Development Tools
 
 ### [foundry-vtt-types](https://github.com/League-of-Foundry-Developers/foundry-vtt-types)
-- A community effort to cover all of Foundry’s API with TypeScript type definitions. At the moment, there are type definitions for versions `0.7.x`, `0.8.x`, and `v9`. Work on support for `v11` and `v12` is ongoing.
-
+- A community effort to cover all of Foundry’s API with TypeScript type definitions.
 
 ### [Quench - End to End testing within Foundry](https://github.com/Ethaks/FVTT-Quench)
 - Allows devs to register end to end tests powered by Mocha (and also includes Chai), which are then run in-game in a native Foundry Application.
-
-
-### [1000Nettles' Foundry Magic L10n](https://github.com/1000nettles/foundry-magic-l10n)
-
-- This CLI tool allows you, a module or system developer, to generate 10 different localization files in the FoundryVTT "language file" format. This utilizes AWS Translate - a "fluent and accurate machine translation" engine. It takes your base English translations, and converts them into language files for you to download and include in your own modules and systems.
-
-
-### [NickEast's Foundry Project Creator Types](https://gitlab.com/foundry-projects/foundry-pc/foundry-pc-types) (now deprecated)
-- As of 0.6.6 a good set of typescript type declarations for `foundry.js`. Support has dwindled during the `0.7.x` lineup but this is still a good starting point. With 0.8.x coming out, NickEast has stated:
-> At this point I've moved to working with 0.8.x, which means my own type definitions are now pretty much "dead". I will start on my own "internal" definitions for 0.8.x, but I've yet to decide whether to start on a separate branch, or just make a clean slate... I'll keep everything open, but will focus on what I need instead of progressively increasing coverage.
