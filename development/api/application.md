@@ -2,7 +2,7 @@
 title: Application
 description: The standard application window that is rendered for a large variety of UI elements in Foundry VTT.
 published: true
-date: 2024-11-26T16:36:22.929Z
+date: 2025-08-24T12:41:29.873Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T19:36:31.269Z
@@ -19,7 +19,7 @@ The [Dialog](/en/development/api/dialog) subclass has its own page detailing its
 - [FormApplication](https://foundryvtt.com/api/classes/client.FormApplication.html)
 - [DocumentSheet](https://foundryvtt.com/api/classes/client.DocumentSheet.html)
 - [Built-in Helpers](https://handlebarsjs.com/guide/builtin-helpers.html)
-- [Foundry Handlebar Helpers](https://foundryvtt.com/api/classes/client.HandlebarsHelpers.html)
+- [Foundry Handlebar Helpers](https://foundryvtt.com/api/modules/foundry.applications.handlebars.html)
 
 **Legend**
 ```js
