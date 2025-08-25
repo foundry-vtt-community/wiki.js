@@ -2,7 +2,7 @@
 title: Data Model
 description: The abstract base class which defines the data schema contained within a Document.
 published: true
-date: 2025-03-17T23:23:19.310Z
+date: 2025-08-25T02:01:34.519Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-15T18:00:00.416Z
@@ -94,7 +94,7 @@ These two fields serve a similar purpose: They allow you to nest properties, so 
 
 ### DataField options
 
-There's quite a few options you can pass to DataField, which are officially documented [here](https://foundryvtt.com/api/interfaces/foundry.data.fields.DataFieldOptions.html). However, the most common change in a subclass is its handling of the options and what the defaults are. 
+There's quite a few options you can pass to DataField, which are officially documented [here](https://foundryvtt.com/api/interfaces/foundry.data.types.DataFieldOptions.html). However, the most common change in a subclass is its handling of the options and what the defaults are. 
 
 You can see a complete overview of DataFields and how they override or expand options summarized in [this sheet](https://docs.google.com/spreadsheets/d/e/2PACX-1vS1bbPl6AzD4wzrGWRk_r1CHfOeqj70mCo2fbrbWc9nYuyP7uIL6LOMxRFR2BoEMDRZb4stxhqJ2T0P/pubhtml). On it, asterixes mark how many levels of inheritance up the source of the value comes from, and underlined values indicated values forced in that field's constructor.
 
