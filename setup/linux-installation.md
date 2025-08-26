@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-05-26T21:03:42.528Z
+date: 2025-08-26T16:15:58.334Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -188,12 +188,13 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 
 
 
-<a id="B8" href="#B8">B8.</a> Install `nodejs`, `caddy`, `unzip`, and `nano`:
+<a id="B8" href="#B8">B8.</a> Install `nodejs`, `caddy`, `unzip`, `nano`, and `ncdu`:
 
+>The `ncdu` utility is installed here simply to have on hand. It is a handy tool to find folders taking up space. {.is-info}
   
 ```
 sudo apt update
-sudo apt install nodejs caddy unzip nano -y
+sudo apt install nodejs caddy unzip nano ncdu -y
 ```
 
 
