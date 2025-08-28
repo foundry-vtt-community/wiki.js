@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-06-07T06:59:45.053Z
+date: 2025-08-28T11:54:56.039Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -105,7 +105,7 @@ La chaine YT de Carter (https://www.youtube.com/@carterfoundryvtt) contient plei
 
 Ce document (https://www.lahiette.com/leratierbretonnien/wp-content/uploads/2024/11/guide_fvtt.pdf) explique comment acheter et installer FoundryVTT sur son PC. La fin du document est dédiée au système Rêve de Dragon, mais la première partie est valable pour n'importe quel système de jeu.
 
-# Foundry et son installation 
+# Foundry et son installation/mise à jour 
 
 ## J'ai lu ou entendu que Foundry, c'était un peu compliqué à installer. Du coup j'hésite...
 
@@ -157,6 +157,16 @@ Si, il y en a, notamment avec avec TheForge (https://forge-vtt.com/, le plus pop
 ## Je peux l'installer plusieurs fois ?
 
 Oui, tout à fait. Vous pouvez par exemple l'installer sur un serveur en ligne pour jouer, et sur votre PC en local pour préparer vos parties. Ou encore l'installer sur un PC fixe et un PC portable, etc. La licence Foundry l'autorise, du moment que vous n'avez qu'une seule instance en fonctionnement à un instant T.
+
+## Comment se passe les mises à jour ?
+
+Comme on l'a dit plus haut, Foundry, c'est une licence à vie. Autrement dit, pour chaque nouvelle version créée par l'équipe de FoundryVTT, tu peux la télécharger et l'installer, sans rien payer de plus. On peut distinguer deux cas : 
+
+- 1 : C'est une mise à jour mineure au sein d'un "palier" : genre v13 release 347 sur une v13 déja installée. Dans ce cas, il suffit d'utiliser l'outil de mise à jour intégré dans l'interface, et ça se fait tout seul.
+- 2 : C'est une mise à jour majeure, c'est à dire un changement de "palier" : de v12 à v13 par exemple. Dans ce cas, il faut procéder à une ré-installation complète. Sous Linux, si vous installez la nouvelle release dans le répertoire d'une release précédente, **effacez tout les fichiers de la release précédente**, puis dézipper la nouvelle à la place. Si vous ne supprimez pas le fichiers de la release précédente, vous aurez des problèmes au lancement des mondes. **ATTENTION** : Nous parlons bien ici de supprimer **les fichiers de l'application Foundry, en aucun cas de supprimer vos données de mondes/systèmes.**
+
+Une petite recommandation : lors d'une mise à jour majeur (ie vXX vers vXX+1), attendez quelques jours avant de procéder à son installation (sauf si vous êtes développeur en général). Notez qu'il est possible d'installer plusieurs versions différentes de Foundry également.
+
 
 ## Y'a plein de trucs et j'y comprends pas grand chose. Par ou commencer ?
 
