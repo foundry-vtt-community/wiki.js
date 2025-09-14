@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-08-26T16:15:58.334Z
+date: 2025-09-14T18:29:43.369Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -592,6 +592,14 @@ pm2 start foundry
 >Run `pm2 stop foundry && pm2 delete foundry`, check you have the right version of node as per step [G6](#G6) then run the commands in steps [C10](#C10) through [C12](#C12). {.is-warning}
 
 <a id="G6" href="#G6">G6.</a> Check your node version using `node -v` against the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server). Head to [section F. Updating NodeJS](#F) if you need to update Node.js.
+
+<a id="G7" href="#G7">G7.</a> Double check that you don't have duplicate PM2 instances of Foundry attempting to run. Run:
+
+```
+pm2 list
+```
+
+You should see only one instance of Foundry listed there (unless you've specifically set up more than one instance in the past). If you see more than one when there shouldn't be, run `pm2 stop all && pm2 delete all` then return to steps [C10](#C10) through [C12](#C12). Once done, check `pm2 list` once again. 
 
 >If you are installing on a Raspberry Pi, an ARM device or VM, or potentially some other UNIX OS and are seeing a GLIBC or DLOPEN error, see [section H](#H) in this guide. {.is-warning}
 
