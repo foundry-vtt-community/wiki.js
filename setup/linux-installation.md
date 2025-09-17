@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-09-14T18:30:29.514Z
+date: 2025-09-17T02:59:39.624Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -25,11 +25,11 @@ At the end of this guide you will have:
 
 ## Important Information and Requirements
 
-This guide assumes that you have already installed linux, and have at least a basic understanding of linux and how to use a commanbd line. 
+This guide assumes that you have already installed linux, and have at least a basic understanding of linux and how to use a command line. 
 
 The following is required to complete this guide:
 
-1. An existing server with a modern linux distribution installed with a minimum of 2GB of RAM, for example:
+1. An existing server with a modern 64-bit Linux distribution installed with a minimum of 2GB of RAM, for example:
 a. A linux PC on your home network. *See note on [Port Forwarding](#port-forwarding)*
 b. A linux virtual machine on any host.
 c. A linux virtual private server or dedicated server in the cloud.
