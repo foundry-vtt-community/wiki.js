@@ -2,14 +2,11 @@
 title: FreeBSD
 description: 
 published: true
-date: 2025-09-20T00:58:01.903Z
+date: 2025-09-20T00:58:29.883Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:57.469Z
 ---
-
->This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
-{.is-warning}
 
 # Foundry 11 and later
 
