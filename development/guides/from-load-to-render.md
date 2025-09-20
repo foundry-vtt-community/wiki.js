@@ -2,18 +2,18 @@
 title: From Load to Render
 description: Tracking the permutation of data from the server database to a document sheet rendering.
 published: true
-date: 2024-11-10T00:32:25.508Z
+date: 2025-09-20T21:53:16.446Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-13T08:07:20.057Z
 ---
 
 
-![Up to date as of v12](https://img.shields.io/badge/FoundryVTT-v12-informational)
+![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
 Data in Foundry progresses through many stages to be rendered in a document sheet. This guide is intended to be a reference for developers trying to understand where they should define data the order in which it is processed.
 
-This guide will reference file locations rather than the official API docs because this is focusing on the internal workings of methods that are not well-commented. All file paths are all relative to `foundryInstallPath\resources\app`. Technically your installation just loads the general `public\scripts\foundry.js` file, but the files in `client` and `common` are smaller and easier to follow.
+This guide will reference file locations rather than the official API docs because this is focusing on the internal workings of methods that are not well-commented. All file paths are all relative to `foundryInstallPath/resources/app`. Technically your installation just loads the general `public/scripts/foundry.mjs` file, but the files in `client` and `common` are smaller and easier to follow.
 
 **Legend**
 ```
@@ -26,28 +26,32 @@ The server loads up data from the various databases as part of opening a world f
 
 ### Game.getData
 
-Foundry begins its path with `client\tail.js`, which adds an event listener, `DOMContentLoaded`, that fires after all of the files Foundry is pulling in have loaded (e.g. all the `esmodules`). `Game.create` is called and the returned reference is stashed in `globalThis.game`. This method establishes a socket connection, uses it to fetch the raw data from the world databases with `Game.getData()`, and constructs the `Game` instance, putting all the raw database info in `game.data` - the first step of our Document journey.
+Foundry begins its path with `client/client.mjs`, which adds an event listener, `DOMContentLoaded`, that fires after all of the files Foundry is pulling in have loaded (e.g. all the `esmodules`). `Game.create` is called and the returned reference is stashed in `globalThis.game`. This method establishes a socket connection, uses it to fetch the raw data from the world databases with `Game.getData()`, and constructs the `Game` instance, putting all the raw database info in `game.data` - the first step of our Document journey.
 
 ### Calling the Document Constructor
 
-The next step is `Game#initialize`, where we get that `init` Hook call and `"Foundry VTT | Initializing Foundry Virtual Tabletop Game"` printed to console. This method eventually calls `Game#_initializeGameView`, which is really just a license-check wrapper for `Game#setupGame`. Inside *that* method we get `Game#initializePacks` and `Game#initializeDocuments`, the second step of our Document journey (after which the `setup` hook is called).
+The next step is `Game#initialize`, where we get that `init` Hook call and `"Foundry VTT | Initializing Foundry Virtual Tabletop Game"` printed to console. This method eventually calls `Game##initializeGameView`, which is really just a license-check wrapper for `Game#setupGame`. Inside *that* method we get `Game#initializePacks` and `Game#initializeDocuments`, the second step of our Document journey (after which the `setup` hook is called).
 
-The first of these two methods, `initializePacks`, only instantiates the indices of the packs. The second, `initializeDocuments`, loops through all of the document data stashed in `game.data`, calls the appropriate constructor, and then puts it in the appropriate world collection. For example, `game.data.actors` gets fed into `new Actor` and the result is poured inside `game.actors`. When all of these documents are loaded `"Foundry VTT | Prepared World Documents in ${Math.round(dt)}ms"` is printed to console.
+The first of these two methods, `initializePacks`, only instantiates the indices of the packs. The second, `initializeDocuments`, loops through all of the document data stashed in `game.data`, calls the appropriate constructor, and then puts it in the appropriate world collection. For example, `game.data.actors` gets fed into `new CONFIG.Actor.documentClass` and the result is poured inside `game.actors`. When all of these documents are loaded `"Foundry VTT | Prepared World Documents in ${Math.round(dt)}ms"` is printed to console.debug.
 
 The following sections describe what happens inside these constructor calls as well as what happens after a database `update`.
 
 ## DataModel
 
-The top level inheritance for documents traces back to the [DataModel](/en/development/api/DataModel) class, found in `common\abstract\data.mjs`, which controls the earliest steps of processing. These are run 
+API Reference: https://foundryvtt.com/api/classes/foundry.abstract.DataModel.html
+
+The top level inheritance for documents traces back to the [DataModel](/en/development/api/DataModel) class, found in `common/abstract/data.mjs`, which controls the earliest steps of processing. These are run 
 
 ### DataModel#\_initializeSource
-In the DataModel constructor, the data is first run through `DataModel#_initializeSource` and then stored in `_source`. This method applies `DataModel#migrateDataSafe`, `DataModel#cleanData`, and `DataModel#shimData`, ensuring the constructed document matches the specifications from its `schema` property before saving it in `_source`. After putting the cleaned up data in `_source`, `DataModel#validate` runs for one last check.
+In the DataModel constructor, the data is first run through `DataModel#_initializeSource` and then stored in `_source`. This method applies `DataModel#migrateDataSafe`, `DataModel#cleanData`, and `DataModel#shimData`, ensuring the constructed document matches the specifications from its `schema` property before saving it in `_source`. 
 
-**Validation**: Most validation occurs on the `DataField` level. If a validator returns a boolean, no further checks are needed - e.g. `_validateSpecial` will return either `true` or `false` if the `value` is `null` or `undefined`, but if it's neither then it will return `void` to pass the value on to be checked by `_validateType`. Unlike the other steps in `_initializeSource`, `validate` is re-run every update.
+DataModel then calls `_configure`, which does nothing in the base class but in Document is responsible for assigning the `parentCollection` and `pack` properties. After these adjustments, `DataModel#validate` runs for one last check.
+
+**Validation**: Most validation occurs on the `DataField` level. If a validator returns a boolean, no further checks are needed - e.g. `_validateSpecial` will return either `true` or `false` if the `value` is `null` or `undefined`, but if it's neither then it will return `void` to pass the value on to be checked by `_validateType`. Unlike the other steps in `_initializeSource`, `validate` is also called every update.
 
 ### DataModel#\_initialize
 
-This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer. Unlike `_initializeSource`, this runs after every document update.
+This method copies data from `_source` to the top level, using the `schema` field as a guide. Each property of the schema gets run through the appropriate `DataField#initialize` method, which performs operations like transforming a stored ID string in `ForeignDocumentField#initialize` to a pointer to the document instance. Unlike `_initializeSource`, this runs after every document update.
 
 **TypeDataField**: This field stands out because it grabs a reference to `CONFIG?.[this.documentName]?.dataModels?.[type]` to check if there's a class to instantiate for the `system` property, otherwise it's created as a plain object. This means that `system` is baseline an open-ended ObjectField; it will save any data so long as you don't directly try to save `'doc.system': false` or some kind of non-object value. 
 
@@ -55,18 +59,13 @@ If you're only using `template.json` to define properties, any missing propertie
 
 ## ClientDocument
 
-The next step is specific to client documents, as these processes are not run in the server. The `ClientDocumentMixin` is found in `client\data\abstract\client-document.js` and takes a `Document` as its argument, for example `BaseActor`. This document provides the necessary schema information for all of the other processes to work.
+API Reference: https://foundryvtt.com/api/classes/foundry.ClientDocument.html
+
+The next step is specific to client documents, as these processes are not run in the server. The `ClientDocumentMixin` is found in `client/documents/abstract/client-document.mjs` and takes a `Document` as its argument, for example `BaseActor`. This document provides the necessary schema information for all of the other processes to work.
 
 Our main function of concern here is `ClientDocument#prepareData`, which is wrapped by `ClientDocument#_safePrepareData` with error-catching protections. The actual function is quite straightforward:
 
 ```javascript
-    /**
-     * Prepare data for the Document. This method is called automatically by the DataModel#_initialize workflow.
-     * This method provides an opportunity for Document classes to define special data preparation logic.
-     * The work done by this method should be idempotent. There are situations in which prepareData may be called more
-     * than once.
-     * @memberof ClientDocumentMixin#
-     */
     prepareData() {
       const isTypeData = this.system instanceof foundry.abstract.TypeDataModel;
       if ( isTypeData ) this.system.prepareBaseData();
@@ -80,8 +79,6 @@ Our main function of concern here is `ClientDocument#prepareData`, which is wrap
 On initial world load, this call is deferred until after ALL documents have been created. Afterwards, it's called for a document after it's created or updated. It can be manually called again as a side effect of other operations that wouldn't otherwise trigger it.
 
 Everything here should be performed using standard javascript assignment (`=`). Calling `update` within `prepareData` or its subsidiary methods can easily trigger an infinite loop, as that `update` call then creates another `prepareData` call.
-
-When the docs state that this method should be idempotent, they mean that running `prepareData` more than once should result in the same end state as running it exactly once. Side effects should be self-validating to ensure they result in a consistent state.
 
 ### prepareBaseData
 
@@ -185,9 +182,9 @@ The `render` method then calls its private partner, `ApplicationV2##render`. Thi
 
 1. `_canRender`, which in DocumentSheetV2 checks against the user's `viewPermission`.
 2. `_configureRenderOptions`, which is used by ApplicationV2 to update the window and position properties and by HandlebarsApplicationMixin to decide what parts to show (by default all).
-3. `_prepareContext`, which is left blank by default but very important for developers (details below).
-4. `_preFirstRender`, which is used by HandlebarsApplicationMixin to load the additional templates necessary for rendering.
-5. `_preRender`, which is left blank by default.
+3. `_prepareContext`, which will prepare tabs for applications with a single tab group, and in DocumentSheetV2 will assign commonly referenced properties like `document` and `editable`. (details below).
+4. `_preFirstRender`, which is blank in ApplicationV2 & DocumentSheetV2 but implemented by some core applications.
+5. `_preRender`, which is used by HandlebarsApplicationMixin to load the additional templates necessary for rendering.
 6. `_renderFrame`, which is used by both ApplicationV2 and DocumentSheetV2 to initialize key application properties such as the close and UUID buttons.
 7. `_attachFrameListeners`, which is used by ApplicationV2 to attach listeners to the whole frame such as Form Submission handling.
 8. `_renderHTML`, which is implemented by HandlebarsApplicationMixin to generate the HTML of all the parts. This function calls `_preparePartContext` for additional support.
@@ -195,33 +192,15 @@ The `render` method then calls its private partner, `ApplicationV2##render`. Thi
 10. `_insertElement`, which is used by ApplicationV2 to add the Application to the window.
 11. `_updateFrame`, which is used by ApplicationV2 to update the header bar properties.
 12. `_onFirstRender`, which is used by DocumentSheetV2 to add the application to the document's `apps` record. 
-13. `_onRender`, which is left blank by default. This is also the part where the `renderApplication` is called, but separate from this function so no `super` call is necessary.
+13. `_onRender`, which is used by DocumentSheetV2 to disable inputs if the document is not editable.
+14. The `renderApplicationV2` hook is called but not awaited, so any asynchronous callbacks are not guaranteed to finish before the render proceeds.
+15. `_postRender`, which is blank in ApplicationV2 & DocumentSheetV2 but implemented by some core applications.
 
-Broadly speaking, `ApplicationV2` handles the window frame + header, while `HandlebarsApplicationMixin` is responsible for the internal HTML. Everything until `_replaceHTML` is asynchronous and awaited, while from that point forwards everything is synchronous (although you can always call asynchronous code as a side effect; it just won't be awaited inside the `render` promise). 
+Broadly speaking, `ApplicationV2` handles the window frame + header, while `HandlebarsApplicationMixin` is responsible for the internal HTML. Everything except `_replaceHTML`, `_insertElement`, and `_updateFrame` is asynchronous and awaited. 
 
 ### \_prepareContext and \_preparePartContext
 
-The most important step for the typical developer and one that almost certainly needs overrides are the asynchronous functions [`_prepareContext`](https://foundryvtt.com/api/classes/foundry.applications.api.ApplicationV2.html#_prepareContext) (added by ApplicationV2) and `_preparePartContext` (added by HandlebarsApplicationV2). The docs do not currently provide the signature of the latter, so it's copied here for reference
-
-```js
-    /**
-     * Prepare context that is specific to only a single rendered part.
-     *
-     * It is recommended to augment or mutate the shared context so that downstream methods like _onRender have
-     * visibility into the data that was used for rendering. It is acceptable to return a different context object
-     * rather than mutating the shared context at the expense of this transparency.
-     *
-     * @param {string} partId                         The part being rendered
-     * @param {ApplicationRenderContext} context      Shared context provided by _prepareContext
-     * @param {HandlebarsRenderOptions} options       Options which configure application rendering behavior
-     * @returns {Promise<ApplicationRenderContext>}   Context data for a specific part
-     * @protected
-     */
-    async _preparePartContext(partId, context, options) {
-      context.partId = `${this.id}-${partId}`;
-      return context;
-    }
-```
+The most important step for the typical developer and one that almost certainly needs overrides are the asynchronous functions [`_prepareContext`](https://foundryvtt.com/api/classes/foundry.applications.api.ApplicationV2.html#_preparecontext) (added by ApplicationV2) and [`_preparePartContext`](https://foundryvtt.com/api/classes/foundry.HandlebarsApplication.html#_preparepartcontext) (added by HandlebarsApplicationV2). 
 
 The reason this step is important is that the `context` object returned by these functions is fed into a `renderTemplate` call by `HandlebarsApplicationMixin#_renderHTML`. This is where all *display* logic should be handled, such as:
 - Associate labels
@@ -234,13 +213,12 @@ A very basic `_prepareContext` call should look something like the following. `t
 
 ```js
 async _prepareContext(options) {
-  return {
-    document: this.document,
+  const context = await super._prepareContext(options)
+  
+  return Object.assign(context, {
     system: this.document.system,
-    fields: this.document.schema.fields,
     systemFields: this.document.system.schema.fields,
-    isEditable: this.isEditable
-  }
+  })
 }
 ```
 
@@ -249,7 +227,7 @@ Then, in `_preparePartContext`, you can wrap your logic in a `switch(partId) {}`
 > Don't be afraid to delegate complex preparation logic to protected or private functions; `context.items = await this._prepareItems(context, options)` can help keep your `_prepareContext` function readable.
 {.is-info}
 
-After the context from `_preparePartContext` is used in the `renderTemplate` call it's discarded, so non-display logic should always happen in the earlier document preparation steps. Similarly, while the `context` object from `_prepareContext` is passed into many of the functions outlined earlier (e.g. `_onFirstRender`), it is not "saved" anywhere; it's not even passed to the `renderApplicationV2` hook.
+After the context from `_preparePartContext` is used in the `renderTemplate` call it's discarded, so non-display logic should always happen in the earlier document preparation steps. Similarly, while the `context` object from `_prepareContext` is passed into many of the functions outlined earlier (e.g. `_onFirstRender`), it is not "saved" anywhere.
 
 ## Conclusion
 
