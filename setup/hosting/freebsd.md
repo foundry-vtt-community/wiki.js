@@ -2,7 +2,7 @@
 title: FreeBSD
 description: 
 published: true
-date: 2025-02-19T19:28:59.042Z
+date: 2025-09-20T00:58:01.903Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:57.469Z
@@ -28,6 +28,17 @@ This can be resolved by:
 4. run `npm install classic-level --build-from-source`
 5. Relaunch your Foundry VTT server following your normal procedure.
 6. Enjoy FreeBSD. :)
+
+For Foundry v13, using the NodeJS deployment, the instructions differ slightly:
+1. Deploy Foundryv13 NodeJS to a directory of your choice.
+2. cd to that directory
+#Foundry v13 ships with a neutered node-gyp-build. Steps 3 and 4 will reattach the required plumbing.
+3. run 'rm -rf node_modules/node-gyp-build'
+4. run 'npm i node-gyp-build'
+#We want to be certain classic-level gets rebuilt against FreeBSD
+5. run 'rm -rf node_modules/classic-lecel'
+5. run 'npm i classic-level'
+6. Launch Foundry as described in the documentation.
 
 # Base install directly on FreeBSD, not for NAS
 
