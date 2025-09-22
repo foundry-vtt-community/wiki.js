@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-09-22T13:10:38.043Z
+date: 2025-09-22T13:12:37.944Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -505,11 +505,13 @@ Maintenant chaque joueur a une feuille de personnage qui lui est affectée.
 
 ## Je veux éditer un compendium d'un système de jeu ou d'un module
 
-Pas de soucis, mais il faut respecter la règle numéro 1 : ne jamais éditer directement le compendium d'un système ou d'un module (sauf si vous savez vraiment - mais vraiment vraiment ce que vous faites). Pourquoi ? Because à la prochaine mise à jour, vos modifications seront perdues.
+Pas de soucis, mais il faut respecter la règle numéro 1 : **ne jamais éditer directement le compendium d'un système ou d'un module** (sauf si vous savez vraiment - mais vraiment vraiment - ce que vous faites). Pourquoi ? Because à la prochaine mise à jour, vos modifications seront perdues.
+
 La méthode recommandées est donc : 
-1 - Importer tout le compendium dans le monde (dans un monde vierge, même, c'est mieux)
-2 - Editer les items dans le monde, indépendamment de qui ou de quoi que ce soit.
-3 - Fermer son monde
-4 - Ensuite, selon ce qu'on veu faire, tu ré-importer les données du monde dans un compendium local ou partagé, ou bien zipper le monde et l'envoyer à quelqu'un chargé de l'intégration/consolidation dans un éventuel système ou module.
+
+1 - Importer le compendium que vous souhaitez modifier dans le monde (dans un monde vierge, même, c'est mieux)
+2 - Editer les données importées dans le monde, comme vous le souhaitez, indépendamment de qui ou de quoi que ce soit.
+3 - Fermer son monde après chaque session de mise à jour, pour bien sauvegarder ses données modifées.
+4 - Une fois les données modifiées complètement, selon ce qu'on veut faire, ré-importer les données du monde dans un compendium local ou partagé, ou bien zipper le monde et l'envoyer à quelqu'un chargé de l'intégration/consolidation dans un éventuel système ou module.
 5 - (option) : et tant que ce qui est modifié n'est pas intégré correctement ailleurs à 100%, garder le monde bien au chaud avec ses datas, au cas ou :)
 
