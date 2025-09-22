@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-08-28T11:54:56.039Z
+date: 2025-09-22T13:10:38.043Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -502,3 +502,14 @@ Dans l'onglet des Acteurs, faire un clic-droit sur la feuille de personnage et c
 2. Affecter chaque personnage à un joueur
 En bas à gauche de Foundry, ouvrir la liste des joueurs (elle n'affiche, en mode réduit, que les joueurs connectés) afin de voir tous les comptes des joueurs. Faire un clic droit sur le compte d'un joueur et choisir l'option "Configuration du joueur". Dans la fenêtre qui apparait, sélectionner le personnage et enregistrer la configuration. Répéter cette action pour chaque Personnage Joueur.
 Maintenant chaque joueur a une feuille de personnage qui lui est affectée. 
+
+## Je veux éditer un compendium d'un système de jeu ou d'un module
+
+Pas de soucis, mais il faut respecter la règle numéro 1 : ne jamais éditer directement le compendium d'un système ou d'un module (sauf si vous savez vraiment - mais vraiment vraiment ce que vous faites). Pourquoi ? Because à la prochaine mise à jour, vos modifications seront perdues.
+La méthode recommandées est donc : 
+1 - Importer tout le compendium dans le monde (dans un monde vierge, même, c'est mieux)
+2 - Editer les items dans le monde, indépendamment de qui ou de quoi que ce soit.
+3 - Fermer son monde
+4 - Ensuite, selon ce qu'on veu faire, tu ré-importer les données du monde dans un compendium local ou partagé, ou bien zipper le monde et l'envoyer à quelqu'un chargé de l'intégration/consolidation dans un éventuel système ou module.
+5 - (option) : et tant que ce qui est modifié n'est pas intégré correctement ailleurs à 100%, garder le monde bien au chaud avec ses datas, au cas ou :)
+
