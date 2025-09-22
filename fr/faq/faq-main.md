@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-09-22T13:12:37.944Z
+date: 2025-09-22T13:14:59.135Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -514,4 +514,7 @@ La méthode recommandées est donc :
 3 - Fermer son monde après chaque session de mise à jour, pour bien sauvegarder ses données modifées.
 4 - Une fois les données modifiées complètement, selon ce qu'on veut faire, ré-importer les données du monde dans un compendium local ou partagé, ou bien zipper le monde et l'envoyer à quelqu'un chargé de l'intégration/consolidation dans un éventuel système ou module.
 5 - (option) : et tant que ce qui est modifié n'est pas intégré correctement ailleurs à 100%, garder le monde bien au chaud avec ses datas, au cas ou :)
+
+Il peut-être utile également de faire un petit test : modifiez  1 ou 2 données avec la méthode ci-dessus, puis fermez le monde, relancez le et vérifiez que vos modifications sont bien là. Si tout va bien, vous pouvez continuer. Si elles ne sont pas là, venez demander de l'aide sur le canal #support-utilisation du Discord FR, qu'on vous aide à comprendre ce qu'il s'est (mal) passé.
+
 
