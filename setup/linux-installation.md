@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-09-17T02:59:39.624Z
+date: 2025-09-29T16:26:15.436Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -702,6 +702,8 @@ It can be useful to number the ports to reflect major versions of foundry, for e
 ```
 pm2 start "node /home/<user>/foundryv12/foundry/resources/app/main.js --dataPath=/home/<user>/foundryv12/foundryuserdata --port=30012" --name foundryv12
 ```
+
+>**NOTE**: Different versions of Foundry have different locations of `main.js`. Be sure you know where it is located for the version you are launching and adjust the above command accordingly. {.is-warning}
 
 Run this command for each instance, modifying the paths, port, and name for each as you go. 
 
