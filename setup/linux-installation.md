@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-09-29T16:30:32.930Z
+date: 2025-09-29T19:38:40.673Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -256,14 +256,14 @@ mkdir -p ~/foundryuserdata
 <a id="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command. Replace the `<user>` portion with the name of the user currently being used.
 ```
 cd ~
-node foundry/main.js --dataPath=/home/<user>/foundryuserdata
+node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata
 ```
 
 >Foundry v12 and earlier or MODULE NOT FOUND ERROR
 >  
 >The location of main.js changed for the NodeJS package (only) in Foundry v13 and onward. In all other packages, such as the Linux package, the launch command for main.js will need to be modified to:
 >  
->`node foundry/resources/app/main.js --dataPath=/home/<user>/foundryuserdata`
+>`node $HOME/foundry/resources/app/main.js --dataPath=$HOME/foundryuserdata`
 >
 >Both the command in this step and in C10 will need to be modified.
 >{.is-info}
@@ -289,7 +289,7 @@ node foundry/main.js --dataPath=/home/<user>/foundryuserdata
 
 <a id="C10" href="#C10">C10.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command. Be sure to replace `<user>` with the name of the actual user. There are two replacements:
 ```
-pm2 start "node /home/<user>/foundry/main.js --dataPath=/home/<user>/foundryuserdata" --name foundry
+pm2 start "node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata" --name foundry
 ```
   
   
@@ -702,7 +702,7 @@ Repeat the relevant steps for each instance.
 It can be useful to number the ports to reflect major versions of foundry, for example you'd use `--port=30012` in the command for your Foundry v12 instance in step [C10](#C10):
 
 ```
-pm2 start "node /home/<user>/foundryv12/foundry/resources/app/main.js --dataPath=/home/<user>/foundryv12/foundryuserdata --port=30012" --name foundryv12
+pm2 start "node $HOME/foundryv12/foundry/resources/app/main.js --dataPath=$HOME/foundryv12/foundryuserdata --port=30012" --name foundryv12
 ```
 
 >**NOTE**: Different versions of Foundry have different locations of `main.js`. Be sure you know where it is located for the version you are launching and adjust the above command accordingly. {.is-warning}
