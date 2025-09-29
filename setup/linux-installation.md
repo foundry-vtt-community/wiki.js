@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-09-29T16:29:36.402Z
+date: 2025-09-29T16:30:32.930Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -659,6 +659,8 @@ Foundry should now start properly without the GLIBC error!
 # (Optional) I. Multiple Instances
 ## Objective
 
+>This section is for **advanced users** who are already familiar with how to host and run Foundry in linux with pm2. This section cannot be completed step-by-step without modifying each step to account for your particular install situation. It provides broad directions for getting multiple instances of Foundry running only. You must be able to understand the commands below and adjust accordingly. {.is-info}
+
 This section describes how you should set up multiple Foundry instances without conflict, on the same host. It supplements the instructions in section [C](#C), so you'll need to adjust as you go keeping the instructions below in mind.
 
 ## Why Multiple Instances? 
@@ -670,8 +672,6 @@ There are a few reasons to have multiple instances of Foundry going at the same 
 - Testing game systems or modules on a new in-development version of Foundry without touching your existing userdata and installation.
 
 ## Foundry Licensing and Multiple Instances
-
->This section is for **advanced users** who are already familiar with how to host and run Foundry in linux with pm2. This section cannot be completed step-by-step without modifying each step to account for your particular install situation. It provides broad directions for getting multiple instances of Foundry running only. You must be able to understand the commands below and adjust accordingly. {.is-info}
 
 Please read and understand the terms of the [Foundry license](https://foundryvtt.com/article/license/) in regards to using it with [multiple instances](https://foundryvtt.com/article/faq/#license-usage).
 
