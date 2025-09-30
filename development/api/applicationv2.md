@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2025-07-26T15:58:31.115Z
+date: 2025-09-30T22:08:41.737Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -703,7 +703,10 @@ Foundry only natively handles arrays of primitives in its forms - that is, an ar
 The following script macro will toggle the color scheme between light and dark.
 
 ```js
-const color = game.settings.get('core', 'colorScheme');
+const uiConfig = game.settings.get('core', 'uiConfig');
+const color = uiConfig.colorScheme.applications;
 const newColor = color === 'light' ? 'dark' : 'light';
-game.settings.set('core', 'colorScheme', newColor)
+uiConfig.colorScheme.applications = newColor;
+uiConfig.colorScheme.interface = newColor;
+await game.settings.set('core', 'uiConfig', uiConfig)
 ```
