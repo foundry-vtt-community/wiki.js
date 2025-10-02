@@ -2,27 +2,27 @@
 title: Windows
 description: 
 published: true
-date: 2024-03-01T22:36:29.805Z
+date: 2025-10-02T14:33:07.845Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:33:50.041Z
 ---
 
->This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
-{.is-warning}
+> This article was automatically imported from the previous wiki and may contain inaccurate or outdated information.
 
 ## Basic Setup
-1. Download the latest Windows setup file from [Patreon](https://patreon.com/foundryvtt/posts)
-2. Run `FoundryVTT-0.4.0-Setup.exe` to install Foundry VTT (note: your version might not show 0.4.0)
-Note: If you are running Windows 10 you may see the following warning:    
-![https://i.imgur.com/aTfmxeq.png](https://i.imgur.com/aTfmxeq.png)    
-Click More Info, then Run Anyway:    
-![https://i.imgur.com/nBjS6J6.png](https://i.imgur.com/nBjS6J6.png)    
-3. Follow the instructions to install Foundry.
-Note: If you select Run Foundry VTT at the end of installation you may be prompted to allow it through your Windows firewall. Click Allow:     
-![https://i.imgur.com/Q5FMI1O.png](https://i.imgur.com/Q5FMI1O.png)    
-4. If you see this screen you have successfully installed Foundry VTT:    
-![https://i.imgur.com/CnGbXAK.jpg](https://i.imgur.com/CnGbXAK.jpg)    
+
+1.  Download the latest Windows setup file from [Patreon](https://patreon.com/foundryvtt/posts)
+2.  Run `FoundryVTT-0.4.0-Setup.exe` to install Foundry VTT (note: your version might not show 0.4.0)  
+    Note: If you are running Windows 10 you may see the following warning:  
+    ![https://i.imgur.com/aTfmxeq.png](https://i.imgur.com/aTfmxeq.png)  
+    Click More Info, then Run Anyway:  
+    ![https://i.imgur.com/nBjS6J6.png](https://i.imgur.com/nBjS6J6.png)
+3.  Follow the instructions to install Foundry.  
+    Note: If you select Run Foundry VTT at the end of installation you may be prompted to allow it through your Windows firewall. Click Allow:  
+    ![https://i.imgur.com/Q5FMI1O.png](https://i.imgur.com/Q5FMI1O.png)
+4.  If you see this screen you have successfully installed Foundry VTT:  
+    ![https://i.imgur.com/CnGbXAK.jpg](https://i.imgur.com/CnGbXAK.jpg)
 
 If you need to launch Foundry again (for example you reboot your PC), you will can run `FoundryVTT.exe` from the folder you installed Foundry VTT in, or you can click the link in the Start Menu or Desktop.
 
@@ -32,7 +32,7 @@ Hamachi is a really simple tool which allows you to create a virtual private net
 
 After installing it it will prompt you to create an account so sort out such formalities.
 
-After that you will be met with this little screen. 
+After that you will be met with this little screen.
 
 ### Hosting
 
@@ -54,34 +54,35 @@ To get it manually Right Click on the host > Copy IpV4
 
 ## ZeroTier
 
-If your party+GM is more than 5 people, you cannot use Hamachi without paying a subscription since it allows a network of 5 people maximum.
-One good solution is ZeroTier.
+If your party+GM is more than 5 people, you cannot use Hamachi without paying a subscription since it allows a network of 5 people maximum.  
+One good solution is ZeroTier.  
 These are the steps to create a virtual network and create your Foundry session.
 
 For GMs
-1.	Download Zerotier from https://www.zerotier.com/download/
-2.	Install it
-3.	Register yourself from https://my.zerotier.com/login. A free subscription is enough for our purpose.
-4.	Once registered, go to https://my.zerotier.com/network and create a new network. Make it public.
-5.	Once created, in the network properties you should have an alphanumeric network id (something like 0dddb752f775c1e2). Select and copy (Ctrl+c) it.
-6.	In the system tray you should have this icon ![](https://i.imgur.com/gNesEDY.png) . Clicking on it will open a menu. Click on join a network and insert the network id copied at point 5. Click ok.
-7.	Now your pc is in a virtual network. In the page `https://my.zerotier.com/network/<networkid>` at the section “Member” you should see your address (mac), your managed IPs, Last seen, Physical IP. Copy your Managed IPs
+
+1.  Download Zerotier from [https://www.zerotier.com/download/](https://www.zerotier.com/download/)
+2.  Install it
+3.  Register yourself from [https://my.zerotier.com/login](https://my.zerotier.com/login). A free subscription is enough for our purpose.
+4.  Once registered, go to [https://my.zerotier.com/network](https://my.zerotier.com/network) and create a new network. Make it public.
+5.  Once created, in the network properties you should have an alphanumeric network id (something like 0dddb752f775c1e2). Select and copy (Ctrl+c) it.
+6.  In the system tray you should have this icon ![](https://i.imgur.com/gNesEDY.png) . Clicking on it will open a menu. Click on join a network and insert the network id copied at point 5. Click ok.
+7.  Now your pc is in a virtual network. In the page `https://my.zerotier.com/network/<networkid>` at the section “Member” you should see your address (mac), your managed IPs, Last seen, Physical IP. Copy your Managed IPs
 
 For each player:
-1.	Download Zerotier from https://www.zerotier.com/download/
-2.	Install it
-3.	In the system tray you should have this icon ![](https://i.imgur.com/gNesEDY.png) . Clicking on it will open a menu. Click on join a network and insert the network id of your GM (point 5). Click ok. Now be sure there is something like this on your Zerotier tray:   
+
+1.  Download Zerotier from [https://www.zerotier.com/download/](https://www.zerotier.com/download/)
+2.  Install it
+3.  In the system tray you should have this icon ![](https://i.imgur.com/gNesEDY.png) . Clicking on it will open a menu. Click on join a network and insert the network id of your GM (point 5). Click ok. Now be sure there is something like this on your Zerotier tray:
 
 Now the GM must append :30000 to his ZeroTier Managed IP (see point 7 above). Voilà, this is the FVTT invitation link.
 
 > Zerotier installs on your pc as an automatic service. It means unless you set it as manual on you Services list it will run as soon as your OS is started, so you don't need to "run" it, unlike Hamachi. You are always connected to the vpn it creates.
-{.is-warning}
-  
+
 ## ngrok
 
-ngrok is an option to host games even if port forwarding and VPNs (Hamachi/ZeroTier) failed you.
+ngrok is an option to host games even if port forwarding and VPNs (Hamachi/ZeroTier) failed you.  
 Basically, it's a program which does port forwarding for you while bypassing NATs and firewalls.
-  
+
 It's free, but some people get confused because there are paid subscription options that list 4/8/12/20 tunnels. Tunnels seemingly have nothing to do with the number of players the GM can host.
-  
+
 For more information, visit the [ngrok guide for hosting Foundry](/en/setup/hosting/ngrok).
