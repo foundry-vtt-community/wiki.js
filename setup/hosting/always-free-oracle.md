@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2025-04-22T13:56:55.579Z
+date: 2025-10-02T19:52:34.342Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -12,7 +12,7 @@ dateCreated: 2021-04-21T17:55:20.522Z
 # A. Overview
 ## Objective 
 
-This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. 
+This guide provides steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using [Oracle Cloud](https://www.oracle.com/cloud/free/) with optional backups and S3 integration at no cost with no time limit. 
 
 * You will end up with:
 
@@ -29,7 +29,7 @@ This guide provides easy to follow steps for a relatively simple installation of
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
 
 The following is required to complete this guide:
-1.  Basic understanding of using a terminal that includes the ssh utility, such as:
+1.  Understanding of using a terminal that includes the ssh utility, such as:
 a.  Powershell in Windows.
 b.  Terminal in Linux and MacOS.
 2.  Notepad or other text editor.
@@ -44,6 +44,8 @@ b.  A free subdomain from a service like [Duck DNS](http://duckdns.org).
 If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
 
 Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C31) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/foundryvtt).
+
+Oracle often changes the layout and labeling of their console, meaning the descriptions before logging into your instance via SSH may not be accurate. This guide assumes that you are able to navigate through in the event this happens.
 
 >Was your A1 **instance disabled** or **reclaimed**? 
 >
