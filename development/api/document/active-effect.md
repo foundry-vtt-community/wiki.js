@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2025-10-14T22:05:59.464Z
+date: 2025-10-14T22:14:04.968Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -82,7 +82,8 @@ Each change in an Active Effect includes the following properties:
   An integer (0–5) indicating how the `value` should be applied to the target property.  
   The available modes are defined in [`CONST.ACTIVE_EFFECT_MODES`](https://foundryvtt.com/api/v13/variables/CONST.ACTIVE_EFFECT_MODES.html).
 
-  | Mode | Name        | Description | Example(s) |
+
+| Mode | Name        | Description | Example(s) |
 |------|-------------|-------------|------------|
 | `0`  | **Custom**  | The effect is handled programmatically by a system or module. No automatic application is performed. Use the [`applyActiveEffect` hook](https://foundryvtt.wiki/en/development/api/document/active-effect#applyactiveeffect-hook) to define custom logic. |  |
 | `1`  | **Multiply** | Multiplies the base value by the effect value. Only applies to numeric values. | `2 * 3 = 6` |
