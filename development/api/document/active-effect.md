@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2025-10-14T21:56:34.244Z
+date: 2025-10-14T22:05:59.464Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -246,43 +246,52 @@ Starting in **Version 12**, Foundry VTT allows **modules and game systems** to d
 - A **combat automation tool** might use a `TriggerEffect` subtype that activates based on initiative or damage thresholds.
 
 ## Specific Use Cases
+###  Attribute Key Suggestions for Active Effects
+One common challenge when configuring Active Effects is knowing which attribute keys are valid and will produce meaningful changes. Since effects rely on precise data paths (e.g., `system.attributes.hp.value`), it's easy for users to make mistakes or feel uncertain about what to enter.
 
-> *My system users want to know what they can fill in as Attribute Keys that the ActiveEffect can actually change..*
+To improve usability, you can enhance the Active Effect configuration dialog by injecting a `<datalist>` element that provides autocomplete suggestions for valid attribute keys. This helps users discover supported paths and reduces trial-and-error.
 
-You could add the following helper Hook to your system, which adds a `<datalist>` to the ActiveEffects configuration application dialogue.
+#### Implementation Example
+
+Add the following hook to your system or module to attach a `<datalist>` to the `key` input field:
+
 ```js
 /**
- * Adding a multselect helper for showing Actor attributes in ActiveEffect dialogue
+ * Adds a datalist helper for suggesting valid Actor attribute keys in the ActiveEffect config dialog.
  */
-Hooks.on("renderActiveEffectConfig", async (activeEffectConfig, html, data) => {
-  const effectsSection = html[0].querySelector("section[data-tab='effects']");
-  const inputFields = effectsSection.querySelectorAll(".key input");
+Hooks.on("renderActiveEffectConfig", (activeEffectConfig, html, data) => {
+  const effectsSection = html.querySelector("section[data-tab='effects']");
+  if (!effectsSection) return;
+
   const datalist = document.createElement("datalist");
-  const attributeKeyOptions = {};
+  datalist.id = "attribute-key-list";
 
-  datalist.id = 'attribute-key-list';
-  inputFields.forEach((inputField) => {
-    inputField.setAttribute('list', 'attribute-key-list');
-  });
+  const inputFields = effectsSection.querySelectorAll(".key input");
+  inputFields.forEach(input => input.setAttribute("list", datalist.id));
 
-  for (const datamodel in CONFIG.Actor.dataModels) {
-    CONFIG.Actor.dataModels[datamodel].schema.apply(function() {
-      if ( !(this instanceof foundry.data.fields.SchemaField) ) {
-        attributeKeyOptions[this.fieldPath] = this.label;
+  const attributeKeys = [];
+
+  for (const model of Object.values(CONFIG.Actor.dataModels)) {
+    model.schema.apply(function() {
+      if (!(this instanceof foundry.data.fields.SchemaField)) {
+        attributeKeys.push({
+          key: this.fieldPath,
+          label: this.label, 
+        });
       }
     });
   }
 
-  const sortedKeys =  Object.keys(attributeKeyOptions).sort();
-  sortedKeys.forEach(key => {
-    const attributeKeyOption = document.createElement("option");
-    attributeKeyOption.value = key;
-    if ( !!attributeKeyOptions[key] )
-      attributeKeyOption.label = attributeKeyOptions[key];
-    datalist.appendChild(attributeKeyOption);
-  });
+  attributeKeys
+    .sort((a, b) => a.key.localeCompare(b.key))
+    .forEach(({ key, label }) => {
+      const option = document.createElement("option");
+      option.value = key;
+      if (label) option.label = label;
+      datalist.appendChild(option);
+    });
 
-  effectsSection.append(datalist);
+  effectsSection.appendChild(datalist);
 });
 ```
 
