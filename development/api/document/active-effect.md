@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2025-10-14T22:14:58.537Z
+date: 2025-10-14T22:30:34.943Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -109,8 +109,6 @@ An intrepid developer can work around this - there are a number of systems and m
 ## API Interactions
 
 Here are the most common things to know about 
-
-### CRUD Operations
 
 ### CRUD Operations for Active Effects
 
