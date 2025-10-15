@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-10-15T00:27:25.138Z
+date: 2025-10-15T00:28:50.588Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -253,7 +253,7 @@ rm ~/foundry/foundryvtt.zip
 ```
 mkdir -p ~/foundryuserdata
 ```
-<a id="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command. Replace the `<user>` portion with the name of the user currently being used.
+<a id="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command.
 ```
 cd ~
 node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata
@@ -273,7 +273,7 @@ node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata
 
 ![Foundry Launched](/images/oracle/image29.webp)
 
->If you do not see the above output ending with `Server started and listening on port 30000`, review step [C6](#C6) to ensure you replaced `<user>` with the current user. {.is-info}
+>If you do not see the above output ending with `Server started and listening on port 30000`, review step [C6](#C6). {.is-info}
 
 >If you are installing on a Raspberry Pi, an ARM device or VM, or potentially some other UNIX OS and are seeing a GLIBC or DLOPEN error, see [section H](#H) in this guide. 
 >
