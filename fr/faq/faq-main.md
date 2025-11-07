@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-09-22T13:14:59.135Z
+date: 2025-11-07T06:44:37.003Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -178,7 +178,7 @@ Enfin, selon le système de jeu qui t'interesse, aller regarder 1 ou 2 vidéos s
 
 Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
 
-# Comment jouer et questions associées 
+# Comment jouer, questions associées et problèmes 
 
 ## Y’a quoi comme jeux dessus ?
 
@@ -406,6 +406,16 @@ Si le problème est côté serveur, il faut vérifier votre bande passante et pr
 Si le problème est côté joueurs, il est souvent du soit à leur mauvaise connexion internet (et là on y peut pas grand chose), soit à un PC trop ancien/faiblard. Dans ce dernier cas, faites leur baisser le framerate à 15fps dans les réglages de Foundry.
 
 Une FAQ dédiée à ces problèmes est dispo ici https://foundryvtt.wiki/fr/pour-commencer/pbcnx
+
+## J'ai l'impression que le jeu ne fonctionne pas correctement ou bien comme il devrait
+
+Si votre monde n'a pas l'air de fonctionner comme il devrait (ie fiche qui ne s'ouvre plus, automatisation qui ne fait rien, messages d'erreur bizarre, etc, etc), voici la marche à suivre pour localiser le problème : 
+
+1. Désactivez tout les modules non-essentiels (contenus, automatisations, etc, etc) et ré-essayez. Si le problème n'existe plus c'est donc un de ces modules qui rentre en conflit avec le système de jeu, et il convient donc de l'identifier puis de le desactiver.
+2. Depuis votre navigateur, faites F12 (la touche), et regarder dans l'onglet "Console" qui s'affiche. Si vous voyez des messages écrits en **rouge**, notez les, puis venez les copier/coller sur le Discord FR dans le canal du système de jeu. Un membre pourra regarder et vous aider au diagnostic.
+3. Essayez également la même chose mais dans un monde complètement vierge. Si cela fonctionne dans ce monde et pas dans l'autre, refaites bien les étapes 1 et 2.
+4. Si vraiment rien ne permet de localiser le souci,  prenez des captures d'écran précises et venez expliquer en détail avec les captures ce qu'il se passe sur un des canaux du Discord Foundry FR.
+	
 
 ## Comment sont stockées les données  ?
 
