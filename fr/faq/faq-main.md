@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-11-07T06:44:37.003Z
+date: 2025-11-07T06:45:03.205Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -407,7 +407,7 @@ Si le problème est côté joueurs, il est souvent du soit à leur mauvaise conn
 
 Une FAQ dédiée à ces problèmes est dispo ici https://foundryvtt.wiki/fr/pour-commencer/pbcnx
 
-## J'ai l'impression que le jeu ne fonctionne pas correctement ou bien comme il devrait
+## J'ai l'impression que le jeu ne fonctionne pas correctement ou bien comme il le devrait (ou "Ca fonctionnait avant et ça marche plus")
 
 Si votre monde n'a pas l'air de fonctionner comme il devrait (ie fiche qui ne s'ouvre plus, automatisation qui ne fait rien, messages d'erreur bizarre, etc, etc), voici la marche à suivre pour localiser le problème : 
 
