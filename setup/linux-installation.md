@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-10-15T00:28:50.588Z
+date: 2025-11-10T15:29:44.236Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -548,7 +548,7 @@ You've now successfully updated NodeJS and should be good to go!
 You may want to reboot your instance to apply all updates, such as a kernel update. 
 <a id="G" />
 
-# (Optional) G. Performing a Clean Reinstall/Update
+# (Optional) G. Performing a Clean Update/Reinstall
 ## Objective
 
 This will guide you through the steps needed to clear a current installation, and download the install a fresh version of Foundry - either an update or the same version. Your userdata will not be touched or affected at all.
