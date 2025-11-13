@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2025-11-13T17:00:24.508Z
+date: 2025-11-13T17:02:35.720Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -327,34 +327,24 @@ import { extractPack } from "@foundryvtt/foundryvtt-cli";
 import { promises as fs } from "fs";
 import path from "path";
 
-const MODULE_ID = process.cwd();
+const PACKAGE_ID = process.cwd();
 const yaml = true;
 const expandAdventures = true;
 const folders = true;
 
 const packs = await fs.readdir("./packs");
 for (const pack of packs) {
-  if (pack === ".gitattributes" || pack === ".DS_Store") continue;
+  if (pack.startsWith(".") continue;
   console.log("Unpacking " + pack);
-  const directory = `./src/packs/${pack}`;
-  try {
-    for (const file of await fs.readdir(directory)) {
-      const filePath = path.join(directory, file)
-      if (file.endsWith(yaml ? ".yml" : ".json")) await fs.unlink(filePath);
-      else fs.rm(filePath, { recursive: true })
-    }
-  } catch (error) {
-    if (error.code === "ENOENT") console.log("No files inside of " + pack);
-    else console.log(error);
-  }
   await extractPack(
-    `${MODULE_ID}/packs/${pack}`,
-    `${MODULE_ID}/src/packs/${pack}`,
+    `${PACKAGE_ID}/packs/${pack}`,
+    `${PACKAGE_ID}/src/packs/${pack}`,
     {
       yaml,
       transformName,
       expandAdventures,
       folders,
+      clean: true
     }
   );
 }
@@ -364,21 +354,7 @@ for (const pack of packs) {
  */
 function transformName(doc, context) {
   const safeFileName = doc.name.replace(/[^a-zA-Z0-9А-я]/g, "_");
-  let type = doc._key?.split("!")[1];
-  if (!type) {
-    if ("playing" in doc)
-      type = "playlist";
-    else if (doc.sorting)
-      type = `folder_${doc.type}`;
-    else if (doc.walls)
-      type = "scene";
-    else if (doc.results)
-      type = "rollTable";
-    else if (doc.pages)
-      type = "journal";
-    else
-      type = doc.type;
-  }
+
   const prefix = ["Actor", "Item"].includes(context.documentType) ? doc.type : context.documentType;
 
   let name = `${doc.name ? `${prefix}_${safeFileName}_${doc._id}` : doc._id}.${yaml ? "yml" : "json"}`;
@@ -394,7 +370,7 @@ This second script does the reverse - it takes the unpacked files from `src/pack
 import { compilePack } from '@foundryvtt/foundryvtt-cli';
 import { promises as fs } from 'fs';
 
-const MODULE_ID = process.cwd();
+const PACKAGE_ID = process.cwd();
 const yaml = true;
 const folders = true;
 
@@ -403,8 +379,8 @@ for (const pack of packs) {
   if (pack === '.gitattributes') continue;
   console.log('Packing ' + pack);
   await compilePack(
-    `${MODULE_ID}/src/packs/${pack}`,
-    `${MODULE_ID}/packs/${pack}`,
+    `${PACKAGE_ID}/src/packs/${pack}`,
+    `${PACKAGE_ID}/packs/${pack}`,
     { yaml, recursive: folders }
   );
 }
