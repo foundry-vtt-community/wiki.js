@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2025-11-13T17:02:35.720Z
+date: 2025-11-13T17:03:41.302Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -320,7 +320,7 @@ To help developers, here are two node scripts. These scripts rely on *locally* i
 
 This first script coverts the LDB setup in the `packs` directory to YAML files in `src/packs`; you can change the `const yaml = true` to false if you prefer JSON. The `expandAdventures` will create the items from the adventure as their own files, instead of populating them inside the adventure yaml/json file. The `folders` define if you want to create a similar folders structure presented in the compendium.
 
-As you will see, there is "special handler" for the file names. It checks which type of document is passed, using some properties of these documents to find it.
+As you will see, there is "special handler" for the file names. Most document types will be prefixed by their document type, but Actors and Items will be prefixed by their document subtype (e.g. "npc" or "spell").
 
 ```js
 import { extractPack } from "@foundryvtt/foundryvtt-cli";
