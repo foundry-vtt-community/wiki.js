@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2025-05-23T07:09:57.704Z
+date: 2025-11-13T17:00:24.508Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -379,7 +379,7 @@ function transformName(doc, context) {
     else
       type = doc.type;
   }
-  const prefix = ["actors", "items"].includes(type) ? doc.type : type;
+  const prefix = ["Actor", "Item"].includes(context.documentType) ? doc.type : context.documentType;
 
   let name = `${doc.name ? `${prefix}_${safeFileName}_${doc._id}` : doc._id}.${yaml ? "yml" : "json"}`;
   if ( context.folder ) name = path.join(context.folder, name);
