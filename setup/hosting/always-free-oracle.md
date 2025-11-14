@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2025-10-02T19:52:34.342Z
+date: 2025-11-14T17:33:26.695Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -28,6 +28,8 @@ This guide provides steps for a relatively simple installation of Foundry plus a
 ## Important Information and Requirements
 This guide assumes that you are not an existing customer with [Oracle Cloud](https://www.oracle.com/cloud/free/) and that the services set up fall within the Oracle Always Free Tier resulting in no monthly charges. Potential pitfalls or notes to be aware of when using the Always Free Tier will be highlighted wherever appropriate. 
 
+This guide also assumes that you are able to navigate the Oracle interface without additional assistance beyond general instructions, and that you are technical enough to understand the requirements below without additional assistance.
+
 The following is required to complete this guide:
 1.  Understanding of using a terminal that includes the ssh utility, such as:
 a.  Powershell in Windows.
@@ -44,8 +46,6 @@ b.  A free subdomain from a service like [Duck DNS](http://duckdns.org).
 If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. 
 
 Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C31) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/foundryvtt).
-
-Oracle often changes the layout and labeling of their console, meaning the descriptions before logging into your instance via SSH may not be accurate. This guide assumes that you are able to navigate through in the event this happens.
 
 >Was your A1 **instance disabled** or **reclaimed**? 
 >
@@ -126,77 +126,64 @@ At the end of this section, you will have a registered account with Oracle Cloud
 ## Objective
 At the end of this section, you will have set up a Compute VM (Virtual Machine) with Ubuntu 22.04 as well as a VCN (Virtual Cloud Network) required to host Foundry. 
 
-## Create a VCN (Virtual Cloud Network) and Security Policy
- 
-
-<a id="C1" href="#C1">C1.</a> From the [**Get Started**](https://cloud.oracle.com/) page, click on the navigation menu (three horizontal lines) in the top right corner, then **Networking**, then **Virtual cloud networks**. 
-
-<a id="C2" href="#C2">C2.</a> Click the **Start VCN Wizard** button, then **VCN with Internet Connectivity** and click **Start VCN Wizard**. 
+>Section C has been significantly simplified and generalized due to frequent changes to the Oracle console. As this guide is intended for more advanced users, it leaves the exact navigation instructions open for those users to find the correct sections themselves. {.is-info}
 
 >Occasionally, Oracle may ask you to select or re-select a **Compartment**. If you see a message about a missing Compartment, select the **Account Name (root)** compartment from the left hand menu, under List scope -> Compartment. {.is-warning}
 
-<a id="C3" href="#C3">C3.</a> Enter a **VCN Name**, such as `foundry`. 
+## Create a VCN (Virtual Cloud Network) and Security Policy
+ 
 
-<a id="C4" href="#C4">C4.</a> Ensure that **Use DNS hostnames in this VCN** is :white_medium_square:`unchecked`.
+<a id="C1" href="#C1">C1.</a> From the [**Get Started**](https://cloud.oracle.com/) page, navigate to **Networking**, -> **Virtual cloud networks** (VCN). 
 
-<a id="C5" href="#C5">C5.</a> Click **Next** to proceed to the Review page.
+<a id="C2" href="#C2">C2.</a> Create a new VCN with the following properties:
 
-<a id="C6" href="#C6">C6.</a> Click **Create** to create the VCN. 
+**VCN Name**: `foundry`
+**Use DNS hostnames in this VCN**: :white_medium_square:`unchecked`.
 
-<a id="C7" href="#C7">C7.</a> Once all steps here are marked "done" with a green checkmark :white_check_mark:, click **View VCN**.
 
-<a id="C8" href="#C8">C8.</a>  In this next section, we will create a security policy to allow external connections to the VCN. This is required to make Foundry accessible to the internet. To start, click on the **public subnet-foundry** link. 
+<a id="C3" href="#C3">C3.</a> In the **Public Subnet** for the VCN created, modify the default security list to include the following **Ingress Rules**:
 
-<a id="C9" href="#C9">C9.</a> Click **Default Security List for foundry**.
-
-<a id="C10" href="#C10">C10.</a>  Click **Add Ingress Rules**.
-
-<a id="C11" href="#C11">C11.</a>  Ensure that **Stateless** is :ballot_box_with_check:`checked`.
-
-<a id="C12" href="#C12">C12.</a>  Enter `0.0.0.0/0` into the **Source CIDR** field.
-
-<a id="C13" href="#C13">C13.</a>  Enter `80,443,30000` into the **Destination Port Range** field. Then click **Add Ingress Rules**.
+**Stateless**: :ballot_box_with_check:`checked`
+**Source CIDR**: `0.0.0.0/0`
+**Desination Ports and Protocols**: `80 TCP, 443 TCP/UDP, 30000 TCP`
 
 
 >Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D38](#D38) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
 
-<a id="C14" href="#C14">C14.</a>  Repeat steps [C10 to C12](#C10), but only adding port 443 in step C13 and change `TCP` to `UDP` in **IP Protocol** before clicking **Add Ingress Rules**
-
 >Adding port 443 UDP here enabled HTTP/3 connectivity in Caddy later in this guide. {.is-info}
-
->This completes the creation of a VCN with the correct security rules to allow connections to the Foundry host. {.is-info}
-
 
 
 ## Create a Compute VM (Virtual Machine) 
 
-<a id="C16" href="#C16">C16.</a>  From the **Get Started** page, click the navigation menu (three lines) then **Computer**, then **Instances**. On this page, click the **Create instance** button.
+<a id="C4" href="#C4">C4.</a>  From the **Get Started** page, navigate to **Compute** -> **Instances**.
 
 >Occasionally, Oracle may ask you to select or re-select a **Compartment**. If you see a message about a missing Compartment, select the **Account Name (root)** compartment from the left hand menu, under List scope -> Compartment. {.is-warning}
 
-<a id="C17" href="#C17">C17.</a>  On the next screen, enter a name for the VM instance. The name `foundry` is used for this guide. 
+<a id="C5" href="#C5">C5.</a> Create a compute instance with the following properties:
 
-<a id="C18" href="#C18">C18.</a>  Leave the default **Availability Domain**. 
+**Name**: `foundry`
+**Availability Domain**: `default` (optionally any other AD that is marked `always-free`)
+**Image**: `Ubuntu 24.04 aarch64`
+**Shape**: `VM.Standard.A1.Flex`
+**RAM**: `4GB`
+**Cores**: `1` 
+**VCN**: `foundry` (created above)
+**Subnet**: `public-subnet-foundry`
+**Boot Volume Size**: `Up to 200GB` (ensure you do not allocate more than 200GB between all volumes you may create)
 
-<a id="C19" href="#C19">C19.</a>  Click the **Change Image** button to select a new OS image.
 
-<a id="C20" href="#C20">C20.</a>  From the pop-out list, choose **Ubuntu** at the top, then :ballot_box_with_check:`check` **Canonical Ubuntu Minimal 24.04* aarch64*. Ensure that the OS Version is **24.04.**
+>**If you have upgraded your account to Pay As You Go to avoid instance reclaiming** you may optionally choose more than 4GB of RAM or 1 CPU core. {.is-info}
 
-<a id="C21" href="#C21">C21.</a>  Click **Select Image**.
+<a id="C6" href="#C6">C6.</a>  Before completing the creation of your compute instance, be sure to   **Save Private Key**. Save this key file in an easily accessible and memorable folder. Rename this key to `foundry.key`. 
 
-<a id="C22" href="#C22">C22.</a>  To adjust the type of VM to an Always Free Tier VM with the resources for Foundry, click **Change Shape**.
 
-<a id="C23" href="#C23">C23.</a>  In the pop-out window, click **Ampere**. 
+>Due to security restrictions, in Windows it is recommended to save the foundry.key file in the Documents folder or similar user-specific folder. 
+>
+>In Linux or MacOS, you may need to `chmod 600` the keyfile if ssh reports an error due to the keyfile being too open.
+{.is-info}
 
-<a id="C24" href="#C24">C24.</a>  Then, :ballot_box_with_check:`check` the **VM.Standard.A1.Flex shape**. Reduce the RAM to 4GB.
-
-<details><summary>Why 4GB and not the default 6GB? ▼</summary>
-
-  As of January, 2023 Oracle stated that thay may begin reclaiming "idle" instances. One measure of idleness is RAM usage. Foundry does not need more than 4GB of RAM, and not raising it higher will ensure that more than 10% of RAM will be used at all times. 
-  
-  For more information see: [Always Free Tier Documentation](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#:~:text=a%20private%20subnet.-,Idle%20Compute%20Instances,-Important)
-
-</details>
+> You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
+{.is-danger}
 
 <details><summary>How many CPU cores and how much RAM should I use? ▼</summary>
 
@@ -211,51 +198,21 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 </details>
 
 <details><summary>What if I can't choose the VM.Standard.A1.Flex shape? ▼</summary>
+  
+  If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.A1.Flex shape, then you will have to contact Oracle Support to resolve the issue. Choosing other shapes may incur charges. 
 	
   You may try switching to another Availability Domain (checking to ensure it is tagged `always-free`) to see if there are A1 instances in other Availability Domains within your home region. The number of Availability Domains differs in each reagion, with some regions only having 1.
 
- 	If no Availability Domains in your home region have A1 shapes available, you will have to check back periodically for new availability. This may happen at any time as others free up resources or Oracle adds more A1 resources to the region. It may take a few days, keep checking back regularly.
+  If no Availability Domains in your home region have A1 shapes available, you will have to check back periodically for new availability. This may happen at any time as others free up resources or Oracle adds more A1 resources to the region. It may take a few days, keep checking back regularly.
   
 </details>
 
-
->If this shape is not available to select, your account may still be provisioning. Wait until the provisioning banner at the top of the page disappears and try again. This may take a few hours in some cases. If your account is provisioned but you do not see the VM.Standard.A1.Flex shape, then you will have to contact Oracle Support to resolve the issue. Choosing other shapes may incur charges. {.is-info}
-
-<a id="C25" href="#C25">C25.</a>  Click **Select Shape**.
-
-<a id="C26" href="#C26">C26.</a>  Scroll down to **Primary VNIC information**.
-
-<a id="C27" href="#C27">C27.</a>  Ensure that **foundry** is selected for VCN in `<compartment name>`. This should appear by default.
-
-<a id="C28" href="#C28">C28.</a>  Ensure that **public subnet-foundry (Regional)** is selected for Subnet in `<compartment name>`. This should appear by default. 
-
-<a id="C29" href="#C29">C29.</a>  Scroll down to **Add SSH keys**.
-
-<a id="C30" href="#C30">C30.</a>  Click on **Save Private Key**. Save this key file in an easily accessible and memorable folder. Rename this key to `foundry.key`. 
-
-![Save Private Key](/images/oracle/image17.webp)
-
->Due to security restrictions, in Windows it is recommended to save the foundry.key file in the Documents folder or similar user-specific folder. 
->
->In Linux or MacOS, you may need to `chmod 600` the keyfile if ssh reports an error due to the keyfile being too open.
-{.is-info}
-
-> You must download this key and keep it safe. This key is required to connect to your instance, and it will not be shown again. 
-{.is-danger}
-
-<a id="C31" href="#C31">C31.</a> Scroll down to **Boot Volume**.
-
-<a id="C32" href="#C32">C32.</a> Optionally, :ballot_box_with_check:`check` the **Specify a custom boot volume size** option and enter up to `200` in the **Boot volume size (GB)** box that appears.
->Leaving the default boot volume size will provide you with roughly 40GB of storage for Foundry, which is usually more than enough for even the most asset-heavy campaigns. {.is-info}
-
->By specifying a larger Boot Volume you will be able to have up to roughly 190GB of storage for Foundry assets. However, doing so will prevent the use of multiple Compute VM instances that are provided with the Always Free Tier (not used in this guide). Think carefully about your desired future usage for the Always Free Tier before making this change. {.is-warning}
-
-<a id="C33" href="#C33">C33.</a> All other options should be left at default. Click **Create**. 
+<a id="C7" href="#C7">C7.</a> All other options should be left at default. Click **Create**. 
 >If you receive an `Out of capacity for shape VM.Standard.A1.Flex in availability domain` error, then there are no more Always Free Tier instances available at the moment. You can try selecting a different Availability Domain above (double check that it is always-free tagged). Otherwise, according to the [FAQ](https://www.oracle.com/cloud/free/faq.html), more should become available within a few days. Check back regularly to see when they become available. {.is-info}
 
-<a id="C34" href="#C34">C34.</a> Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
+<a id="C8" href="#C8">C8.</a> Once the large yellow square changes from <span style="color:goldenrod">**Provisioning**</span> to <span style="color:green">**Running**</span>, the instance is ready to be used. 
 
-<a id="C35" href="#C35">C35.</a> Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
+<a id="C9" href="#C9">C9.</a> Copy the **Public IP Address** and save it somewhere for future reference. This IP address is needed to connect to your VM. 
 
 >This page contains a lot of very useful information about your Computer VM, and is a central place where adjustments can be made later on if needed. {.is-info}
 
@@ -272,7 +229,7 @@ In many terminals, you can paste text with <kbd>right-click</kbd> or <kbd>shift<
 
 > In Windows, you can navigate to the folder in File Explorer. Then, hold the shift key and right click within the folder and choose Open Powershell window here.{.is-info}
 
-<a id="D2" href="#D2">D2.</a> Run the ssh command where `<public ip address>` is the Public IP Address (do not include the `<>` brackets) of your Compute VM as noted in step [C35](#C35) above. 
+<a id="D2" href="#D2">D2.</a> Run the ssh command where `<public ip address>` is the Public IP Address (do not include the `<>` brackets) of your Compute VM as noted in step [C9](#C9) above. 
 
 ```
 ssh -i foundry.key ubuntu@<public ip address>
@@ -280,13 +237,11 @@ ssh -i foundry.key ubuntu@<public ip address>
 
 >If you receive a `connection refused` error, the instance is probably still starting up and needs another minute or two before it can accept connections. Wait two minutes and try again.
 >
->If you receive an error about the keyfile being too open, see the info at step [C30](#C30). {.is-info}
+>If you receive an error about the keyfile being too open, see the info at step [C6](#C6). {.is-info}
 
 <a id="D3" href="#D3">D3.</a> You will likely be prompted to accept the ECDSA key. Type `yes` and hit <kbd>enter</kbd> to accept and continue.
 
 <a id="D4" href="#D4">D4.</a> You should see a prompt showing **ubuntu@foundry:~$**. 
-
-![Ubuntu Prompt](/images/oracle/image9.webp)
 
 >All commands going forward are to be entered when you see the **ubuntu@foundry:~$** prompt only. If you do not see the prompt then make sure the previous step is not still running. Some commands may take a minute or two to process. {.is-warning}
 
@@ -300,235 +255,34 @@ sudo apt-get upgrade -y
 
 >You may be prompted for choices during the `upgrade` command above. Simply hit <kbd>enter</kbd> to accept the defaults and continue. {.is-info}
 
-<a id="D6" href="#D6">D6.</a> Once complete, the instance is ready to continue. 
-
-> All further commands in this section should continue to be entered into this terminal in the order written. Do not close the terminal until the end of the guide. {.is-info}
-
-
-## Open Ports in iptables
-
-> The Ubuntu image from Oracle has blocked network traffic and requires adding a rule to iptables to allow HTTP, HTTPS, and Foundry traffic. {.is-warning}
-
-<a id="D7" href="#D7">D7.</a> We need to use iptables to open the ports within Ubuntu to allow network traffic on the needed ports. We can do that by:
+<a id="D6" href="#D6">D6.</a> We need to use iptables to open the ports within Ubuntu to allow network traffic on the needed ports. We can do that by:
 ```
 sudo iptables -I INPUT 5 -m state --state NEW -p tcp --match multiport --dports 80,443,30000 -j ACCEPT
 sudo netfilter-persistent save
 ```
 
-<a id="D8" href="#D8">D8.</a> The instance is now ready to accept connections.
+> All further commands should continue to be entered into this terminal in the order written. Do not close the terminal until the end of the guide. {.is-info}
 
+<a id="D7" href="#D7">D7.</a> Complete all the steps from the [**System Setup**](https://foundryvtt.wiki/en/setup/linux-installation#system-setup) section in the Linux Installation Guide, stopping at the end of Section C.
 
-## Install nodejs, pm2, nano, and unzip
-> Nodejs is required to launch and run Foundry, and pm2 will be used to manage starting and stopping Foundry. {.is-info}
-
-<a id="D9" href="#D9">D9.</a> Run the following commands to install nodejs:
-```
-sudo apt install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt update
-sudo apt install -y nodejs
-```
-<a id="D10" href="#D10">D10.</a>  Check that node was installed correctly by verifying these commands return versions:
-```
-node --version
-npm --version
-```
-<a id="D11" href="#D11">D11.</a>  Then install pm2:
-```
-sudo npm install pm2 -g
-```
-<a id="D12" href="#D12">D12.</a>  Check that pm2 is installed correctly by running:
-```
-pm2 --version
-```
-<a id="D13" href="#D13">D13.</a>  Allow pm2 to start and stop Foundry when the instance restarts:
-```
-pm2 startup
-sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
-```
-<a id="D14" href="#D14">D14.</a>  Run the following command to install unzip:
-```
-sudo apt-get install nano unzip -y
-```
-<a id="D15" href="#D15">D15.</a>  The software needed to launch and manage Foundry is now successfully installed.
-
-## Install and launch Foundry
-<a id="D16" href="#D16">D16.</a>  Login to [FoundryVTT](https://foundryvtt.com) and navigate to the **Purchased Licenses** page. 
-
-<a id="D17" href="#D17">D17.</a>  Select the recommended version and **NodeJS** in the downloads options. Click on the :link:`Timed URL` button to copy a download url. 
-
-> Be sure to click the :link:`Timed URL` and not the :download:`Download` button to copy and authenticated temporary download link. This link will expire in 5 minutes, after which it will need to be copied again from the gear. {.is-info}
-
-<a id="D18" href="#D18">D18.</a>  Run the following commands, pasting the download url where you see `<download url>`. In most terminals, you can right click to paste the copied url.
-```
-mkdir ~/foundry
-wget --output-document ~/foundry/foundryvtt.zip "<download url>"
-```
-> Make sure to include the quote symbols before and after the `<download url>` or the file may not download properly. {.is-info}
-
-<a id="D19" href="#D19">D19.</a>  Once downloaded, extract Foundry and cleanup the zip file:
-```
-unzip ~/foundry/foundryvtt.zip -d ~/foundry/
-rm ~/foundry/foundryvtt.zip
-```
-> If you get an error when unzipping Foundry, please ensure you've downloaded the **Linux/NodeJS** version and if not, repeat step [D17](#D17). {.is-warning}
-
-<a id="D20" href="#D20">D20.</a>  Create the User Data folder for Foundry to store data:
-```
-mkdir -p ~/foundryuserdata
-```
-<a id="D21" href="#D21">D21.</a>  Test that Foundry runs successfully by running the following command:
-```
-node /home/ubuntu/foundry/main.js --dataPath=/home/ubuntu/foundryuserdata
-```
-
->Foundry v12 and earlier or MODULE NOT FOUND ERROR
->  
->The location of main.js changed for the NodeJS package (only) in Foundry v13 and onward. In all other packages, such as the Linux package, the launch command for main.js will need to be modified to:
->  
->  ```
->  node /home/ubuntu/foundry/resources/app/main.js --dataPath=/home/ubuntu/foundryuserdata
->  ```
->Both the command in this step and in D25 will need to be modified.
->{.is-info}
-
-<a id="D22" href="#D22">D22.</a>  You should see these <span style="color:green">info</span> lines at the end of the output, indicating that Foundry is successfully running. 
-
-![Foundry Launched](/images/oracle/image29.webp)
-
->You may see a Deprecation Warnings such as `[DEP0040] DeprecationWarning: The punycode module is deprecated. Please use a userland alternative instead.` This warning can be safely ignored. {.is-info}
-
-<a id="D23" href="#D23">D23.</a>  Test the connection to Foundry by opening `http://<public IP address>:30000` in a new browser tab, where `<public IP address>` is the Public IP Address noted earlier in the guide.
-
->You should see a Foundry screen asking for a license key at this point. If you do not see a Foundry screen at this point likely the steps taken in [Create a VCN and Security Policy](#create-a-vcn-virtual-cloud-network-and-security-policy), or [Open Ports in iptables](#open-ports-in-iptables) were incorrect, or an incorrect IP address was used. Review the steps to ensure that no errors were made and try again. {.is-info}
-
-<a id="D24" href="#D24">D24.</a>  In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as below, and a blinking cursor at **ubuntu@foundry:~$**.
-
-![Stop Foundry](/images/oracle/image24.webp)
-
-<a id="D25" href="#D25">D25.</a>  We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
-```
-pm2 start "node /home/ubuntu/foundry/main.js --dataPath=/home/ubuntu/foundryuserdata" --name foundry
-```
-<a id="D26" href="#D26">D26.</a>  Double check pm2 has launched Foundry correctly:
-```
-pm2 list
-```
-![pm2 List](/images/oracle/image1.webp)
->If the **status** column does not show <span style="color:green">online</span> then review step [D25](#D25) above before continuing. {.is-warning}
-
-<a id="D27" href="#D27">D27.</a>  Check to see if Foundry is running correctly by again connecting a browser tab to `http://<public IP address>:30000`. 
-
-> If you don’t see a Foundry screen in the browser at this point, carefully check the pm2 command in step 25. You can use commands like `pm2 stop`, `pm2 list`, and `pm2 delete` to remove any extra entries in the list. {.is-info}
-
-<a id="D28" href="#D28">D28.</a>  If the connection to Foundry is successful, use the following command to save Foundry so that it will start automatically:
-```
-pm2 save
-```
-<a id="D29" href="#D29">D29.</a>  Foundry is now launched and is fully functional. You can test the interface and functions within Foundry at the `http://<public IP address>:30000` address as you like.
-
-> If you do not wish to set up a domain or reverse proxy, you can stop here and continue to use Foundry in this way. {.is-info}
-
-
-## Reverse Proxy and HTTPS Configuration with Caddy
-
->We recommend that you have a valid domain name with an A record pointing to `<public IP address>` to complete this section. If you do not have a domain name, you can use a service like [Duck DNS](http://duckdns.org) to get a free domain and point it to `<public IP address>`. 
->
->Having a valid domain name results in an HTTPS connection without insecure connection warnings from your and your players' browsers. 
->
->If you do not have a domain name, you may continue with this section which will set up self-signed certificates for the bare IP connection to your VM, allowing an HTTPS connection but one that will prompt browsers to show a warning before clicking through to connect.{.is-info}
-
-
-<a id="D30" href="#D30">D30.</a>  Install Caddy to use as a reverse proxy by running the following commands:
-```
-sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
-sudo apt update
-sudo apt install caddy
-```
-<a id="D31" href="#D31">D31.</a>  Now that Caddy is installed and running, modify the Caddyfile to include a reverse proxy to Foundry. Open the Caddyfile:
-```
-sudo nano /etc/caddy/Caddyfile
-```
-<a id="D32" href="#D32">D32.</a>  Delete all the text, and replace it with the text below (making sure to replace the `your.hostname.com` portion with your actual domain name, do **NOT** put `http://` or `https://` in front of it). If you do not have a domain name, leave the text as-is without modification. 
-
->You can delete text in `nano` by using the arrow keys to move the cursor and pressing the <kbd>delete</kbd> or <kbd>backspace</kbd> keys to delete text. {.is-info} 
-
->Do not modify the `https:// { ... }` block at all, whether you have a domain name or not. {.is-warning}
-
-```
-# This replaces the existing content in /etc/caddy/Caddyfile
-
-# A CONFIG SECTION FOR YOUR HOSTNAME
-your.hostname.com {
-    # PROXY ALL REQUEST TO PORT 30000
-    reverse_proxy localhost:30000
-    encode zstd gzip
-}
-
-https:// {
-    tls internal {
-    		on_demand
-    }
-    
-    reverse_proxy localhost:30000
-    encode zstd gzip
-}
-
-# Refer to the Caddy docs for more information:
-# https://caddyserver.com/docs/caddyfile
-```
-<a id="D33" href="#D33">D33.</a>  Press <kbd>ctrl</kbd>-<kbd>x</kbd> and then <kbd>y</kbd>, and then <kbd>enter</kbd> to save the changes to the file. 
-
-<a id="D34" href="#D34">D34.</a>  Restart Caddy to pick up the new settings by:
-```
-sudo service caddy restart
-```
->Caddy handles all forwarding to HTTPS as well as the encryption certificates. No further configuration is needed to get those working. {.is-info}
-
-<a id="D35" href="#D35">D35.</a> Tell Foundry that we are running behind a reverse proxy by changing the `options.json` file. Open the file for editing by:
-```
-nano /home/ubuntu/foundryuserdata/Config/options.json
-```
-<a id="D36" href="#D36">D36.</a> Find the `hostname`, `proxySSL` and `proxyPort` parameters, and change them as below (making sure to replace the `your.hostname.com` portion with your actual domain name, do **NOT** put `http://` or `https://` in front of it).
-Leave all other options as they are.
-```
-...
-"hostname": "your.hostname.com",
-...
-"proxyPort": 443,
-...
-"proxySSL": true,
-...
-```
->Make sure to not delete any commas or other JSON elements while editing this file. Ensure that the hostname still has the quotes around it, and change ONLY the values afer the `:` {.is-warning}
-
-<a id="D37" href="#D37">D37.</a> Press <kbd>ctrl</kbd>-<kbd>x</kbd> then <kbd>y</kbd> and <kbd>enter</kbd> to save your changes.
-
-<a id="D38" href="#D38">D38.</a>  Test your site by opening a new browser tab to your domain name or the public IP of your instance. When connecting to the bare IP, your browser may show a warning that you can click through. If everything is working, you will see Foundry load and the site will have the encrypted lock icon. It is now ready for use and no further configuration is needed. 
-
->Sometimes DNS records can take a few minutes and up to a couple hours to be recognized across the internet. If you receive an error along the lines of `server IP address could not be found` or `having trouble finding that site` then the DNS records may just need more time. Wait a few minutes and try again. {.is-warning}
 
 ## Final Words and Ongoing Maintenance
 
-<a id="D39" href="#D39">D39.</a> Restart the instance in order to apply any potentialy pending updates that require a restart and to test `pm2`'s ability to restart Foundry correctly. 
+<a id="D8" href="#D8">D8.</a> Restart the instance in order to apply any potentialy pending updates that require a restart and to test `pm2`'s ability to restart Foundry correctly. 
 
 ```
 sudo shutdown -r now
 ```
 
->Give the instance a few minutes to restart. You should be able to connect to Foundry without issue once it is fully restarted. You should also be able to `ssh` into instance as in [D2](#D2). If Foundry has not started up after a good 10 minutes, please check your `pm2` startup command as in [D13](#D13) as well as the `pm2` commands in [D26](#D26) to [D28](#D28). {.is-info}
+>Give the instance a few minutes to restart. You should be able to connect to Foundry without issue once it is fully restarted. You should also be able to `ssh` into instance as in [D2](#D2). If Foundry has not started up after a good 10 minutes, please check your `pm2` startup command. {.is-info}
 
-<a id="D40" href="#D40">D40.</a> It is good practice to keep your new instance up to date with security patches. To do so, log in to the instance periodically with ssh as in [D2](#D2) and run the following command: 
+<a id="D9" href="#D9">D9.</a> It is good practice to keep your new instance up to date with security patches. To do so, log in to the instance periodically with ssh as in [D2](#D2) and run the following command: 
 
 ```
 sudo apt update && sudo apt upgrade -y
 ``` 
 
-<a id="D41" href="#D41">D41.</a>Then, restart the instance as in [D39](#D39).
+<a id="D41" href="#D41">D41.</a>Then, restart the instance as in [D8](#D8).
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
