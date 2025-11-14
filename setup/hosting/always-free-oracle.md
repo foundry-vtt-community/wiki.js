@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2025-11-14T17:41:04.649Z
+date: 2025-11-14T17:44:15.009Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -148,9 +148,8 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 **Desination Ports and Protocols**: `80 TCP, 443 TCP/UDP, 30000 TCP`
 
 
->Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up (step [D38](#D38) in this guide) you may optionally remove that port as it will no longer be needed.{.is-info}
+>Ports 80 and 443 are required for HTTP and HTTPS, and 30000 is required for Foundry. Once a reverse proxy is set up you may optionally remove that port as it will no longer be needed. Adding port 443 UDP here enables HTTP/3 connectivity in Caddy. {.is-info}
 
->Adding port 443 UDP here enabled HTTP/3 connectivity in Caddy later in this guide. {.is-info}
 
 
 ## Create a Compute VM (Virtual Machine) 
