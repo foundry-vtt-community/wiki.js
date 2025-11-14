@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2025-11-14T17:33:26.695Z
+date: 2025-11-14T17:41:04.649Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -245,17 +245,7 @@ ssh -i foundry.key ubuntu@<public ip address>
 
 >All commands going forward are to be entered when you see the **ubuntu@foundry:~$** prompt only. If you do not see the prompt then make sure the previous step is not still running. Some commands may take a minute or two to process. {.is-warning}
 
-<a id="D5" href="#D5">D5.</a> First, update the system by running the following commands (this may take a few minutes to complete):
-```
-sudo apt-get update
-sudo apt-get upgrade -y
-```
-
-> Blocks like the above with multiple lines of commands should be run a single line at a time. This avoids some issues with some SSH clients messing with newlines if one pastes a block of text in and lets you stop if one of the commands throws an error rather than immediately running the next command. {.is-warning}
-
->You may be prompted for choices during the `upgrade` command above. Simply hit <kbd>enter</kbd> to accept the defaults and continue. {.is-info}
-
-<a id="D6" href="#D6">D6.</a> We need to use iptables to open the ports within Ubuntu to allow network traffic on the needed ports. We can do that by:
+<a id="D5" href="#D5">D5.</a> We need to use iptables to open the ports within Ubuntu to allow network traffic on the needed ports. We can do that by:
 ```
 sudo iptables -I INPUT 5 -m state --state NEW -p tcp --match multiport --dports 80,443,30000 -j ACCEPT
 sudo netfilter-persistent save
@@ -263,12 +253,12 @@ sudo netfilter-persistent save
 
 > All further commands should continue to be entered into this terminal in the order written. Do not close the terminal until the end of the guide. {.is-info}
 
-<a id="D7" href="#D7">D7.</a> Complete all the steps from the [**System Setup**](https://foundryvtt.wiki/en/setup/linux-installation#system-setup) section in the Linux Installation Guide, stopping at the end of Section C.
+<a id="D6" href="#D6">D6.</a> Complete all the steps from the [**System Setup**](https://foundryvtt.wiki/en/setup/linux-installation#system-setup) section in the Linux Installation Guide, stopping at the end of Section C.
 
 
 ## Final Words and Ongoing Maintenance
 
-<a id="D8" href="#D8">D8.</a> Restart the instance in order to apply any potentialy pending updates that require a restart and to test `pm2`'s ability to restart Foundry correctly. 
+<a id="D7" href="#D7">D7.</a> Restart the instance in order to apply any potentialy pending updates that require a restart and to test `pm2`'s ability to restart Foundry correctly. 
 
 ```
 sudo shutdown -r now
@@ -276,13 +266,13 @@ sudo shutdown -r now
 
 >Give the instance a few minutes to restart. You should be able to connect to Foundry without issue once it is fully restarted. You should also be able to `ssh` into instance as in [D2](#D2). If Foundry has not started up after a good 10 minutes, please check your `pm2` startup command. {.is-info}
 
-<a id="D9" href="#D9">D9.</a> It is good practice to keep your new instance up to date with security patches. To do so, log in to the instance periodically with ssh as in [D2](#D2) and run the following command: 
+<a id="D8" href="#D8">D8.</a> It is good practice to keep your new instance up to date with security patches. To do so, log in to the instance periodically with ssh as in [D2](#D2) and run the following command: 
 
 ```
 sudo apt update && sudo apt upgrade -y
 ``` 
 
-<a id="D41" href="#D41">D41.</a>Then, restart the instance as in [D8](#D8).
+<a id="D9" href="#D9">D9.</a>Then, restart the instance as in [D8](#D8).
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. However, if you want to set up backups or configure the S3 storage you can continue below. {.is-info}
 
