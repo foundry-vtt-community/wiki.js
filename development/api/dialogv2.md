@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2025-11-26T22:33:37.835Z
+date: 2025-11-26T22:33:48.885Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -278,9 +278,9 @@ Sometimes a Dialog needs extra click listeners. This can be accomplished by leve
 ```js
 const response = await foundry.applications.api.DialogV2.prompt({
   window: { title: "Proceed" },
-  content: '<button type="button" data-action="clickme">Click Me!</button>',
+  content: '<button type="button" data-action="clickMe">Click Me!</button>',
   actions: {
-    clickme: function (event, target) {
+    clickMe: function (event, target) {
 			console.log(this, event, target);
     }
   }
