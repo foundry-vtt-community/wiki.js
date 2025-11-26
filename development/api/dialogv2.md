@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2025-05-21T06:29:51.840Z
+date: 2025-11-26T22:33:37.835Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -266,6 +266,26 @@ API Reference
 - [DialogV2RenderCallback](https://foundryvtt.com/api/types/foundry.DialogV2RenderCallback.html)
 
 When using `confirm`, `prompt`, or `wait`, you can pass a function to the `render` property to trigger when the dialog finishes rendering. This can be useful for adding event listeners to the rendered HTML. 
+
+### Adding actions
+
+Sometimes a Dialog needs extra click listeners. This can be accomplished by leveraging the AppV2 actions framework.
+
+**In the HTML**: Add a `button` element with `type="button"` and  `data-action`; other attributes such as the inner content are up to you.
+
+**In the JS**: Pass an `actions` object with method callbacks matching the values of each `data-action` you want to use. An important note here is that arrow methods will *not* get you `this` as the Dialog reference; prefer anonymous functions or the like.
+
+```js
+const response = await foundry.applications.api.DialogV2.prompt({
+  window: { title: "Proceed" },
+  content: '<button type="button" data-action="clickme">Click Me!</button>',
+  actions: {
+    clickme: function (event, target) {
+			console.log(this, event, target);
+    }
+  }
+})
+```
 
 ### Extending DialogV2
 
