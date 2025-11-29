@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2025-11-13T17:03:41.302Z
+date: 2025-11-29T17:16:19.891Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -334,7 +334,7 @@ const folders = true;
 
 const packs = await fs.readdir("./packs");
 for (const pack of packs) {
-  if (pack.startsWith(".") continue;
+  if (pack.startsWith(".")) continue;
   console.log("Unpacking " + pack);
   await extractPack(
     `${PACKAGE_ID}/packs/${pack}`,
