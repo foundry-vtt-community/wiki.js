@@ -2,7 +2,7 @@
 title: Compendium Collection
 description: A collection of Document objects contained within a specific compendium pack.
 published: true
-date: 2025-11-29T17:16:19.891Z
+date: 2025-11-29T17:16:58.467Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-02-22T09:00:31.352Z
@@ -376,7 +376,7 @@ const folders = true;
 
 const packs = await fs.readdir('./src/packs');
 for (const pack of packs) {
-  if (pack === '.gitattributes') continue;
+  if (pack.startsWith(".")) continue;
   console.log('Packing ' + pack);
   await compilePack(
     `${PACKAGE_ID}/src/packs/${pack}`,
