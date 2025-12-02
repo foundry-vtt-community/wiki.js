@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-11-07T06:45:03.205Z
+date: 2025-12-02T06:31:07.975Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -177,6 +177,10 @@ Ensuite, parcourir la "Knowledge Base" de Foundry : https://foundryvtt.com/kb
 Enfin, selon le système de jeu qui t'interesse, aller regarder 1 ou 2 vidéos sur YT. Tu peux déja regarder si ton jeu est traité par les Chroniques de la Fonderie, une émission en français que nous essayons de réaliser mensuellement. Chaque émission présente en général un système de jeu français ou traduit : https://www.youtube.com/results?search_query=chroniques+de+la+fonderie 
 
 Liste ici : https://foundryvtt.wiki/fr/pages/choniquesfonderie 
+
+## Comment mettre l'interface en Français ?
+
+Il faut installer le module "fr traduction du core" et ensuite changer la langue dans les paramètres de Foundry.
 
 # Comment jouer, questions associées et problèmes 
 
