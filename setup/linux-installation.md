@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-12-07T06:52:06.454Z
+date: 2025-12-07T06:55:50.171Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -570,11 +570,11 @@ mv foundry foundry-archive
 
 >Back up your user data in case foundry overwrites the current folder. By following this guide, your user data folder should not be affected after a fresh installation, but it has happened to at least one user and it is for the best to keep a backup of that data.{.is-warning}
 
-<a id="G3" href="#G3">G3.</a> Create a backup/archive of your user data by creating a zip file of its contents. You may need to name the destination folder something like `foundryuserdata-2023-06-02.zip` in the case of multiple updates. If the data inside your folder is extensive or your drive space is limited, you may need to find an alternative backup solution such as using rsync to copy the files to another device.
+<a id="G3" href="#G3">G3.</a> Create a backup of your user data by creating a zip file of its contents. You may need to name the destination folder something like `foundryuserdata-2023-06-02.zip` in the case of multiple updates. If the data inside your folder is extensive or your drive space is limited, you may need to find an alternative backup solution such as using rsync to copy the files to another device.
 
 ```
 sudo apt-install -y zip
-zip ~/foundryuserdata.zip foundryuserdata/*
+zip -r ~/foundryuserdata.zip foundryuserdata/*
 ```
 
 <a id="G4" href="#G4">G4.</a> Create the installation directory and download desired Foundry version using wget. You must use the Timed URL and the Node.js version. Be sure to wrap the URL with quotes below.
