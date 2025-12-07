@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-11-10T15:29:44.236Z
+date: 2025-12-07T06:52:06.454Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -568,32 +568,41 @@ pm2 stop foundry
 mv foundry foundry-archive
 ```
 
-<a id="G3" href="#G3">G3.</a> Create the installation directory and download desired Foundry version using wget. You must use the Timed URL and the Node.js version. Be sure to wrap the URL with quotes below.
+>Back up your user data in case foundry overwrites the current folder. By following this guide, your user data folder should not be affected after a fresh installation, but it has happened to at least one user and it is for the best to keep a backup of that data.{.is-warning}
+
+<a id="G3" href="#G3">G3.</a> Create a backup/archive of your user data by creating a zip file of its contents. You may need to name the destination folder something like `foundryuserdata-2023-06-02.zip` in the case of multiple updates. If the data inside your folder is extensive or your drive space is limited, you may need to find an alternative backup solution such as using rsync to copy the files to another device.
+
+```
+sudo apt-install -y zip
+zip ~/foundryuserdata.zip foundryuserdata/*
+```
+
+<a id="G4" href="#G4">G4.</a> Create the installation directory and download desired Foundry version using wget. You must use the Timed URL and the Node.js version. Be sure to wrap the URL with quotes below.
 
 ```
 mkdir ~/foundry
 wget --output-document ~/foundry/foundryvtt.zip "<download url>"
 ```
 
-<a id="G4" href="#G4">G4.</a>	Once downloaded, extract Foundry and cleanup the zip file:
+<a id="G5" href="#G5">G5.</a>	Once downloaded, extract Foundry and cleanup the zip file:
 
 ```
 unzip ~/foundry/foundryvtt.zip -d ~/foundry/
 rm ~/foundry/foundryvtt.zip
 ```
 
-<a id="G5" href="#G5">G5.</a> Restart Foundry using pm2. 
+<a id="G6" href="#G6">G6.</a> Restart Foundry using pm2. 
 
 ```
 pm2 start foundry
 ```
 
 >If you are **UPDATING FROM v12 OR EARLIER** to v13 or later, or are seeing pm2 error if you run `pm2 list`, or Foundry generally fails to start:
->Run `pm2 stop foundry && pm2 delete foundry && pm2 flush`, check you have the right version of node as per step [G6](#G6) then run the commands in steps [C10](#C10) through [C12](#C12). {.is-warning}
+>Run `pm2 stop foundry && pm2 delete foundry && pm2 flush`, check you have the right version of node as per step [G7](#G7) then run the commands in steps [C10](#C10) through [C12](#C12). {.is-warning}
 
-<a id="G6" href="#G6">G6.</a> Check your node version using `node -v` against the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server). Head to [section F. Updating NodeJS](#F) if you need to update Node.js.
+<a id="G7" href="#G7">G7.</a> Check your node version using `node -v` against the [minimum requirements](https://foundryvtt.com/article/requirements/#dedicated-server). Head to [section F. Updating NodeJS](#F) if you need to update Node.js.
 
-<a id="G7" href="#G7">G7.</a> Double check that you don't have duplicate PM2 instances of Foundry attempting to run. Run:
+<a id="G8" href="#G8">G8.</a> Double check that you don't have duplicate PM2 instances of Foundry attempting to run. Run:
 
 ```
 pm2 list
