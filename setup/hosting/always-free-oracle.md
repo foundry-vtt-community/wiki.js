@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2025-11-14T17:46:56.887Z
+date: 2025-12-14T18:53:14.505Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -139,6 +139,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 **VCN Name**: `foundry`
 **Use DNS hostnames in this VCN**: :white_medium_square:`unchecked`.
+**IPv4 CIDR Blocks**: `10.0.0.0/24`
 
 
 <a id="C3" href="#C3">C3.</a> In the **Public Subnet** for the VCN created, modify the default security list to include the following **Ingress Rules**:
