@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-12-02T06:31:07.975Z
+date: 2025-12-23T08:13:46.287Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -357,7 +357,21 @@ Tout d'abord, il faut s’inscrire sur le Discord de FoundryVTT. Je sais, je me 
 Autrement dit, c’est certain, si vous avez déjà une expérience en programmation (et encore mieux en programmation Web), ça sera beaucoup plus facile 🙂 ! Ensuite, le bon point d’entrée, c’est de regarder le code d’un module/système proche de celui que vous voulez réalisez sous Gitlab ou Github, puis de partir de là comme base.
 
 Je suis – raisonnablement – disponible sur le Discord de Foundry (@LeRatierBretonnien), vous pouvez me contacter sur ce type de sujet en message privé.
- 
+
+## C'est quoi ces histoires de compendiums et de droits/licences/ayants-droits ?
+
+- Tout le contenu d'un JDR est par défaut propriété intelectuelle (PI) de l'éditeur/auteur et toute reproduction/ré-utilisation sans autorisations explicites est par défaut interdite.
+- Il y a naturellement des exceptions, mais elles doivent être explicites (par exemple licences OGL, ORC, etc.) ou spécifiquement indiquées par l'éditeur/auteur.
+- Par conséquent, dès que le l'on recopie le contenu (texte, dessins) d'un bouquin de JDR dans des compendiums, cela nécessite l'accord des ayants-droits, soit via une licence qui l'autorise, soit via une autorisation explicite.
+- Foundry LLC étant une société US, le monde anglo-saxon est particulièrement chatouilleux vis-à-vis des droits et des licences. Culturellement, on l'est beaucoup moins côté europe latine, il faut donc bien l'intégrer.
+- Tout système de jeu qui est soumis au "marketplace" Foundry est donc audité, avec une seule question principale : *Est-ce que ce système intègre du contenu sous licence/propriétaire?*
+- Si la réponse est non -> le système est accepté, et hop.
+- Si la réponse est oui -> Foundry LLC demande aux auteurs du système de prouver que le/les propriétaires de l'IP ont bien accordé leur autorisation pour publier sur Foundry le contenu recopié. C'est cette étape qu'il faut anticiper et éventuellement splitter en système + module de contenu séparé.
+
+PS : J'ai volontairement simplifié, car la gestion de la PI emploi des armées de juristes à temps complet, surtout du côté outre-atlantique. Mais globalement, le principe est résumé ci-dessus.
+
+L'article qui suit est une version plus complète et exhaustive, et détaille les principes résumé ci-dessous.
+
 ## J'ai ajouté des données à ma partie, et je veux les partager. j'ai le droit ?
 
 Si c’est bien vous qui avez librement créé TOUT le contenu qui se voit et se lit (le texte, les images, les vidéos, le code source des modules…) celui qui s’entend (les sons/musiques) et que ces contenus portent l’empreinte de votre personnalité (on dit alors qu’ils sont originaux) alors vous êtes dans la meilleure des configurations : vous pourrez montrer, y faire jouer et même diffuser/distribuer votre contenu puisque vous disposez a priori de droits d’auteur sur celui-ci.
