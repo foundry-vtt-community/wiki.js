@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-12-23T08:13:46.287Z
+date: 2025-12-23T09:36:32.008Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -367,6 +367,7 @@ Je suis – raisonnablement – disponible sur le Discord de Foundry (@LeRatierB
 - Tout système de jeu qui est soumis au "marketplace" Foundry est donc audité, avec une seule question principale : *Est-ce que ce système intègre du contenu sous licence/propriétaire?*
 - Si la réponse est non -> le système est accepté, et hop.
 - Si la réponse est oui -> Foundry LLC demande aux auteurs du système de prouver que le/les propriétaires de l'IP ont bien accordé leur autorisation pour publier sur Foundry le contenu recopié. C'est cette étape qu'il faut anticiper et éventuellement splitter en système + module de contenu séparé.
+- Naturellement, tout ceci n'est applicable que si vous souhaitez **distribuer** votre système ou module. Si vous avez recopié du texte/images d'un JDR dans foundry à votre usage uiquement personnel et pour vos propres parties, **il n'y a aucun problème**.
 
 PS : J'ai volontairement simplifié, car la gestion de la PI emploi des armées de juristes à temps complet, surtout du côté outre-atlantique. Mais globalement, le principe est résumé ci-dessus.
 
