@@ -2,7 +2,7 @@
 title: Self-Hosting LiveKit Audio/Video Server on Existing Linux Setup
 description: Configure your existing self-hosted Linux FoundryVTT server to also self-host your LiveKit A/V server to use within FoundryVTT
 published: true
-date: 2024-01-17T03:39:47.760Z
+date: 2025-12-29T03:34:30.442Z
 tags: linux, self-hosting, cloud, cloudflare, cloud host, a/v service, cloud hosting
 editor: markdown
 dateCreated: 2024-01-16T22:18:00.531Z
@@ -103,7 +103,7 @@ If using ufw, enter the follwoing:
 sudo ufw allow 22/tcp
 sudo ufw allow 80/tcp
 sudo ufw allow 443/tcp
-sudo ufw allow 7880-7881/tcp
+sudo ufw allow 7880:7881/tcp
 sudo ufw allow 3478/udp 
 sudo ufw allow 443/udp
 sudo ufw allow 50000:60000/udp
