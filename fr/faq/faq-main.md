@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2026-01-04T14:19:10.277Z
+date: 2026-01-04T14:21:37.951Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -366,7 +366,7 @@ La question que l'on peut se poser est alors : "Pourquoi c'est pas traduit en VF
 
 Le problème est plus compliqué qu'il n'y parait : 
 
-- Cas 1 : La maison d'édition FR qui a acheté les droits de traduction ne l'a pas forcément fait pour le contenu de type Web, et ne peut donc pas le faire.
+- Cas 1 : La maison d'édition FR qui a acheté les droits de traduction ne l'a pas forcément fait pour le contenu de type Web, et ne peut donc pas légalement traduire un module Foundry (considéré comme du web).
 - Cas 2 : La maison d'édition FR a l'ensemble des droits de traduction, mais il n'est pas du tout rentable de proposer une VF du module, au vu du nombre de ventes possibles.
 - Cas 3 : La maison d'édition est internationale, mais ne localise pas les modules Foundry, à nouveau à cause du nombre de ventes possibles dans la langue concernée.
 
