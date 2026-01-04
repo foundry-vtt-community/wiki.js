@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2025-12-23T09:36:32.008Z
+date: 2026-01-04T14:19:10.277Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -357,6 +357,19 @@ Tout d'abord, il faut s’inscrire sur le Discord de FoundryVTT. Je sais, je me 
 Autrement dit, c’est certain, si vous avez déjà une expérience en programmation (et encore mieux en programmation Web), ça sera beaucoup plus facile 🙂 ! Ensuite, le bon point d’entrée, c’est de regarder le code d’un module/système proche de celui que vous voulez réalisez sous Gitlab ou Github, puis de partir de là comme base.
 
 Je suis – raisonnablement – disponible sur le Discord de Foundry (@LeRatierBretonnien), vous pouvez me contacter sur ce type de sujet en message privé.
+
+## Comment ça se fait que le module/système du jeu XXXX en VO est pas traduit en Français (ou pas complètement traduit) ?
+
+Souvent, les systèmes en VO sont accompagnés de modules premiums (ie payants) qui offrent du contenu de jeu prêt à l'emploi dans des compendiums : "items" de jeu pré-remplis (ie compétences, talents, sorts, pouvoirs, etc, etc, etc), des PNJs pré-emplis, des scènes, des cartes, ... 
+
+La question que l'on peut se poser est alors : "Pourquoi c'est pas traduit en VF puisque le jeu existe en VF sous forme papier ?"
+
+Le problème est plus compliqué qu'il n'y parait : 
+
+- Cas 1 : La maison d'édition FR qui a acheté les droits de traduction ne l'a pas forcément fait pour le contenu de type Web, et ne peut donc pas le faire.
+- Cas 2 : La maison d'édition FR a l'ensemble des droits de traduction, mais il n'est pas du tout rentable de proposer une VF du module, au vu du nombre de ventes possibles.
+- Cas 3 : La maison d'édition est internationale, mais ne localise pas les modules Foundry, à nouveau à cause du nombre de ventes possibles dans la langue concernée.
+
 
 ## C'est quoi ces histoires de compendiums et de droits/licences/ayants-droits ?
 
