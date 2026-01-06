@@ -2,7 +2,7 @@
 title: FAQ Foundry
 description: 
 published: true
-date: 2026-01-04T14:21:37.951Z
+date: 2026-01-06T16:30:57.114Z
 tags: 
 editor: markdown
 dateCreated: 2020-10-20T11:11:27.841Z
@@ -12,6 +12,12 @@ dateCreated: 2020-10-20T11:11:27.841Z
 
 ## FoundryVTT, c'est quoi ?
 FoundryVTT est un logiciel permettant de jouer à des jeux de rôles sur table en mode connecté. La table physique devient ainsi "virtuelle", et le MJ et ses joueurs communiquent à distance via micro et webcam. [Un choix de cet outil expliqué ici](http://www.lahiette.com/leratierbretonnien/warhammer/table-virtuelles-de-jdr/)
+
+La grosse différence avec la plupart des autres outils VTT, c'est que FoundryVTT, c'est : 
+- Un logiciel à achat UNIQUE. Pas d'abonnement, rien du tout. Vous l'achetez et c'est à vous à vie.
+- C'est auto-hébergé par défaut, donc vous pouvez menez vos parties en local tout seul comme un grand.
+
+Tout ceci est détaillé plus bas, mais ce sont les points clés et différentiateurs de l'outil.
 
 ## OK, ça ressemble vachement à Roll20
 Oui, tout à fait, c'est dans la même catégorie de logiciels. Il existe à mon sens deux grandes catégories de logiciels de table virtuelles : les "clients lourds" et les applications webs. Les clients lourds sont des applications (des .exe quoi, pour les Windoziens) à installer sur<strong> chaque</strong> poste des joueurs. Les applications Web nécessitent un serveur (soit auto-hébergé, soit hébergé par un tiers) et le MJ et les joueurs utilisent simplement un navigateur (Chrome conseillé) pour y accéder. FoundryVTT  est dans la catégorie des applications web, comme Roll20 ou AstralTableTop.
