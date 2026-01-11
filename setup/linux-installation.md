@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2025-12-07T07:31:57.681Z
+date: 2026-01-11T16:04:16.172Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -568,7 +568,7 @@ pm2 stop foundry
 mv foundry foundry-archive
 ```
 
->Back up your user data in case foundry overwrites the current folder. By following this guide, your user data folder should not be affected after a fresh installation, but it has happened to at least one user and it is for the best to keep a backup of that data.{.is-warning}
+>Back up your user data in case foundry overwrites the current folder. By following this guide, your user data folder should not be affected after a fresh installation, but it is for the best to keep a backup of that data.{.is-warning}
 
 <a id="G3" href="#G3">G3.</a> Create a backup of your user data by creating a zip file of its contents. You may need to name the destination folder something like `foundryuserdata-2023-06-02.zip` in the case of multiple updates. If the data inside your folder is extensive or your drive space is limited, you may need to find an alternative backup solution such as using rsync to copy the files to another device.
 
