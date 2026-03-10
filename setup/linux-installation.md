@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-10T11:24:23.114Z
+date: 2026-03-10T11:26:05.194Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -724,7 +724,7 @@ Note the `foundryv14` here as an additional folder layer. Create as many of thes
 
 Repeat the relevant steps for each instance.
 
-<a id="I3" href="#I3">I3.</a> In steps [C10](C#10), add a `--port=` argument after `--dataPath=` and before the closing `"`, and name each instance uniquely.
+<a id="I3" href="#I3">I3.</a> In steps [C10](C#10), add a `nvm use <version> && ` command and `--port=` argument after `--dataPath=` and before the closing `"`, and name each instance uniquely.
 
 >Every instance of Foundry *should* have its own unique port, **unless** you can guarantee that no two instances will ever be launched at the same time. {.is-warning}
 
