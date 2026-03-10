@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-10T11:26:05.194Z
+date: 2026-03-10T11:33:17.853Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -698,7 +698,7 @@ Basically, if you want to have more than one instance available to players at th
 
 ## Multiple Instance Installation
 
-These instructions modify the ones in section [C](#C). Read through this whole section to understand what to do, and then you may want to refer back and forth and pay close attention to how you differentiate each instance in every command.
+These instructions modify the ones in section [C](#C). Read through this whole section to understand what to do, and then you may want to refer back and forth and pay close attention to how you differentiate each instance in every command. Run through each step in section C as normal, except as noted below.
 
 >Each Foundry instance **must** have its own userdata location. Do not try to share the userdata location between multiple instances as you will encounter errors. The instructions below will create separate userdata folders, installation folders, and have each instance use its own port. {.is-info}
 
