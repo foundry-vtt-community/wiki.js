@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-01-11T16:04:16.172Z
+date: 2026-03-10T11:24:23.114Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -672,6 +672,7 @@ Foundry should now start properly without the GLIBC error!
 
 This section describes how you should set up multiple Foundry instances without conflict, on the same host. It supplements the instructions in section [C](#C), so you'll need to adjust as you go keeping the instructions below in mind.
 
+
 ## Why Multiple Instances? 
 
 There are a few reasons to have multiple instances of Foundry going at the same time, for example:
@@ -679,6 +680,15 @@ There are a few reasons to have multiple instances of Foundry going at the same 
 - Having one gaming instance, and one "dev" instance with completely separate userdata locations to keep development away from "production."
 - Wanting to use game systems with different Foundry major version requirements. Sometimes, game systems may take a while to be updated to the latest (or may never be) but you'd like to use that at the same time as an updated one. 
 - Testing game systems or modules on a new in-development version of Foundry without touching your existing userdata and installation.
+
+>Different versions of Foundry may require different versions of NodeJS, necessitating some method of managing multiple versions of NodeJS on your host in order to run multiple versions of Foundry at once. This section will install Node Version Manager (NVM) in order to do so. 
+>
+>This change means that you must manage your NodeJS install(s) with NVM going forward and cannot use the steps in section [C](#C) of this guide to install or update NodeJS anymore. **Only use this section of the guide moving forward.** {.is-info}
+
+|Foundry Version|NodeJS Version|
+|-----------|-----------|
+|Foundry v10 to v13|NodeJS 20 or 22 (24 *will not work*)|
+|Foundry v14|NodeJS 24| 
 
 ## Foundry Licensing and Multiple Instances
 
@@ -693,34 +703,44 @@ These instructions modify the ones in section [C](#C). Read through this whole s
 >Each Foundry instance **must** have its own userdata location. Do not try to share the userdata location between multiple instances as you will encounter errors. The instructions below will create separate userdata folders, installation folders, and have each instance use its own port. {.is-info}
 
 
-<a id="I1" href="#I1">I1.</a> In steps [C3](#C3) through [C6](#C6), step [C10](#C10), and step [C17](#C17) nest the `foundry` and `foundryuserdata` folders one more level into a newly created folder reflecting the instance of Foundry. For example, your folder structure should look like:
+<a id="I1" href="#I1">I1.</a> Install Node Version Manager (NVM) and the required versions of NodeJS. Repeat the install command with the versions you wish to install.
 
-Installation folder: `/home/foundry/foundryv12/foundry`
-Userdata folder: `/home/foundry/foundryv12/foundryuserdata`
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+nvm install 24
+nvm install <version>
+```
 
-Note the `foundryv12` here as an additional folder layer. Create as many of these additional folders as you'd like to have instances, for example `foundryv11`, `foundryv13`, `foundrydev` etc. 
+You can now use the ```nvm use <version>``` command immediately before launching Foundry to specify which version of NodeJS to use for that specific Foundry version.
+
+<a id="I2" href="#I2">I2.</a> In steps [C3](#C3) through [C6](#C6), step [C10](#C10), and step [C17](#C17) nest the `foundry` and `foundryuserdata` folders one more level into a newly created folder reflecting the instance of Foundry. For example, your folder structure should look like:
+
+Installation folder: `/home/foundry/foundryv14/foundry`
+Userdata folder: `/home/foundry/foundryv14/foundryuserdata`
+
+Note the `foundryv14` here as an additional folder layer. Create as many of these additional folders as you'd like to have instances, for example `foundryv11`, `foundryv13`, `foundrydev` etc. 
 
 >It can be helpful to be descriptive with the name of this folder to keep track of which instance resides in which folder. Use `foundryv12` rather than `foundry1`, `foundry2`, etc. {.is-info}
 
 Repeat the relevant steps for each instance.
 
-<a id="I2" href="#I2">I2.</a> In steps [C10](C#10), add a `--port=` argument after `--dataPath=` and before the closing `"`, and name each instance uniquely.
+<a id="I3" href="#I3">I3.</a> In steps [C10](C#10), add a `--port=` argument after `--dataPath=` and before the closing `"`, and name each instance uniquely.
 
 >Every instance of Foundry *should* have its own unique port, **unless** you can guarantee that no two instances will ever be launched at the same time. {.is-warning}
 
-It can be useful to number the ports to reflect major versions of foundry, for example you'd use `--port=30012` in the command for your Foundry v12 instance in step [C10](#C10):
+It can be useful to number the ports to reflect major versions of foundry, for example you'd use `--port=30014` in the command for your Foundry v14 instance in step [C10](#C10):
 
 ```
-pm2 start "node $HOME/foundryv12/foundry/resources/app/main.js --dataPath=$HOME/foundryv12/foundryuserdata --port=30012" --name foundryv12
+nvm use 24 && pm2 start "node $HOME/foundryv14/foundry/main.js --dataPath=$HOME/foundryv14/foundryuserdata --port=30014" --name foundryv14
 ```
 
 >**NOTE**: Different versions of Foundry have different locations of `main.js`. Be sure you know where it is located for the version you are launching and adjust the above command accordingly. {.is-warning}
 
-Run this command for each instance, modifying the paths, port, and name for each as you go. 
+Run this command for each instance, modifying the node version, paths, port, and name for each as you go. 
 
 In step [C11](#C11) you would see each instance listed. 
 
-<a id="I3" href="#I3">I3.</a> Modify the Caddyfile in step [C14](#C14) to reflect multiple instances.
+<a id="I4" href="#I4">I4.</a> Modify the Caddyfile in step [C14](#C14) to reflect multiple instances.
 
 >You can **only** use domain names to refer to multiple instances here. When connecting to the bare IP without a port number, you must choose which single instance to connect to through the port number in the `reverse_proxy` directive. If you want to connect to multiple instances without a domain name, you must specify the port when connecting to the bare IP. {.is-warning}
 
@@ -731,8 +751,8 @@ When using subdomains, add additional blocks to the Caddyfile for each instance.
 
 # A CONFIG SECTION FOR YOUR HOSTNAME
 
-foundryv12.hostname.com {
-    reverse_proxy localhost:30012
+foundryv14.hostname.com {
+    reverse_proxy localhost:30014
     encode zstd gzip
 }
 
