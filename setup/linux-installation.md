@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-31T22:27:19.597Z
+date: 2026-03-31T22:27:26.234Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -427,7 +427,7 @@ At the end of this optional section, you will be able to directly access the fil
 ## Objective
 The minimum RAM requirement for hosting Foundry is 2GB (4GB recommended), however some systems or modules may use more than the minimum RAM. If your linux host has 2GB of RAM you can create a swapfile to try and mitigate some out-of-memory errors when using heavier modules, systems, or large compendiums. 
 
->Creating a swapfile **DOES NOT** grant more RAM, or guarantee that Foundry will run on a system with less than 2GB of RAM. It can potentially, maybe, help in some circumstances. Running Foundry on a system with less than 2GB of RAM is still unsupported, even with a swapfile, and may result in crashing. {.is-info}
+>Creating a swapfile **DOES NOT** grant more RAM, or guarantee that Foundry will run on a system with less than 2GB of RAM. It can potentially, maybe, help in some circumstances. Running Foundry on a system with less than 2GB of RAM is still unsupported, even with a swapfile, and may result in crashing. {.is-warning}
 
 ## Create and Enable Swapfile
 The instructions below are compatible with the <a href="#preferred-linux-distribution">preferred linux distributions</a>.
