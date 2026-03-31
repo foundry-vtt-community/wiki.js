@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-31T20:21:28.985Z
+date: 2026-03-31T20:25:56.646Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -485,7 +485,6 @@ You now have a swapfile enabled and should be protected against out-of-memory er
 
 As Foundry VTT is updated, the minimum requirements for NodeJS are also updated. If you've received a message stating that you must update NodeJS and you have used this guide (or similar guides, such as the Oracle Always Free guide, that use pm2 and the nodesource repo) then this section will describe how to update NodeJS to the latest version. 
 
->This section assumes you have one instance of Foundry running and is not compatible if you followed [Section I. Multiple Instances](#optional-i-multiple-instances). {.is-warning}
 
 ## Updating NodeJS
 This section assumes that you have set Foundry VTT to be managed by pm2 and have installed NodeJS through their repo as this guide describes. Please copy and paste the instructions carefully. 
