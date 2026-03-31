@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-10T11:33:17.853Z
+date: 2026-03-31T20:21:28.985Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -163,49 +163,42 @@ sudo apt upgrade -y
 
 >If after entering the correct password, you receive an error: `<user> is not in the sudoers file` or similar, then you must login as **root** and complete ther [User Setup](#user-setup). {.is-warning}
 
-<a id="B6" href="#B6">B6.</a> Add the `nodejs` v22 repository to the system package manager:
+<a id="B6" href="#B6">B6.</a> Install `nodejs` v24 using `nvm`:
 
-
+>Foundry v14 requires **NodeJS** 24. Earlier versions of Foundry are **not compatible** with NodeJS 24. See the [Compatibilty Table](#compatibility-table) for version info and [Section I. Multiple Instances](#optional-i-multiple-instances) for how to run multiple instances of different versions of Foundry. {.is-info}
   
 ```
-sudo apt install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 24
 ```
-
-
 
 <a id="B7" href="#B7">B7.</a> Add the `caddy` repository to the system package manager:
 
-
-  
 ```
 sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
 ```
 
-
-
-<a id="B8" href="#B8">B8.</a> Install `nodejs`, `caddy`, `unzip`, `nano`, and `ncdu`:
+<a id="B8" href="#B8">B8.</a> Install, `caddy`, `unzip`, `nano`, and `ncdu`:
 
 >The `ncdu` utility is installed here simply to have on hand. It is a handy tool to find folders taking up space. {.is-info}
   
 ```
 sudo apt update
-sudo apt install nodejs caddy unzip nano ncdu -y
+sudo apt install caddy unzip nano ncdu -y
 ```
 
-
-
-<a id="B9" href="#B9">B9.</a> Check that `nodejs` and `npm` are installed and the correct versions:
+<a id="B9" href="#B9">B9.</a> Check that `nvm`, `nodejs`, and `npm` are installed and the correct versions:
 
 ```
+nvm --version
 node --version
 npm --version
 ```
-`node` should return a version of 20 or greater. The `npm` version doesn't matter, but should return something. 
+
+`node` should return a version of 24 or greater. The `npm` and `nvm` versions don't matter, but should return something. 
 
 <a id="B10" href="#B10">B10.</a> Install `pm2`:
 
@@ -253,9 +246,11 @@ rm ~/foundry/foundryvtt.zip
 ```
 mkdir -p ~/foundryuserdata
 ```
-<a id="C6" href="#C6">C6.</a>	Test that Foundry runs successfully by running the following command.
+<a id="C6" href="#C6">C6.</a>	Set the NodeJS version to 24, and test that Foundry runs successfully by running the following command.
+
 ```
 cd ~
+nvm use 24
 node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata
 ```
 
@@ -288,10 +283,10 @@ node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata
 <a id="C9" href="#C9">C9.</a>	In the terminal window, press <kbd>ctrl</kbd>-<kbd>c</kbd> to stop the Foundry test. You should see the last few lines as below, and a blinking cursor at `<user>@<server>:~$`.
 
 <a id="C10" href="#C10">C10.</a>	We will now set Foundry to be managed by pm2 so that Foundry will always be running, even in the case where the instance has been restarted. To do so, run the following command:
+
 ```
 pm2 start "node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata" --name foundry
 ```
-  
   
 <a id="C11" href="#C11">C11.</a>	Double check pm2 has launched Foundry correctly:
 ```
@@ -490,13 +485,15 @@ You now have a swapfile enabled and should be protected against out-of-memory er
 
 As Foundry VTT is updated, the minimum requirements for NodeJS are also updated. If you've received a message stating that you must update NodeJS and you have used this guide (or similar guides, such as the Oracle Always Free guide, that use pm2 and the nodesource repo) then this section will describe how to update NodeJS to the latest version. 
 
+>This section assumes you have one instance of Foundry running and is not compatible if you followed [Section I. Multiple Instances](#optional-i-multiple-instances). {.is-warning}
+
 ## Updating NodeJS
 This section assumes that you have set Foundry VTT to be managed by pm2 and have installed NodeJS through their repo as this guide describes. Please copy and paste the instructions carefully. 
 
 <a id="F1" href="#F1">F1.</a> Stop any managed pm2 processes.
 
 ```
-pm2 stop all
+pm2 stop foundry
 ```
 
 <a id="F2" href="#F2">F2.</a> Remove the current pm2 from startup to allow for the upgrade. 
@@ -505,15 +502,12 @@ pm2 stop all
 pm2 unstartup
 ```
 
-<a id="F3" href="#F3">F3.</a> Add the new NodeJS version repository and update the installed version of NodeJS.
+<a id="F3" href="#F3">F3.</a> Install the new `nvm` and NodeJS versions. 
 
 ```
-sudo apt install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt update
-sudo apt upgrade
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 24
 ```
 
 <a id="F4" href="#F4">F4.</a> Set pm2 to use the upgraded version of NodeJS and set it to run on start again.
@@ -525,10 +519,11 @@ pm2 startup
 
 <a id="F5" href="#F5">F5.</a> pm2 will list a command to run after the `pm2 startup` was run. Copy and paste that into the commandline and run it to ensure pm2 will launch on startup. 
 
-<a id="F6" href="#F6">F6.</a> Restart any previously running pm2 managed processes. 
+<a id="F6" href="#F6">F6.</a> Set the new NodeJS version and restart any previously running pm2 managed processes. 
 
 ```
-pm2 start all
+nvm use 24
+pm2 start foundry --update-env
 ```
 
 <a id="F7" href="#F7">F7.</a> Check that Foundry is online. The output should show a green `online` indicator beside the Foundry process. 
@@ -552,6 +547,8 @@ You may want to reboot your instance to apply all updates, such as a kernel upda
 ## Objective
 
 This will guide you through the steps needed to clear a current installation, and download the install a fresh version of Foundry - either an update or the same version. Your userdata will not be touched or affected at all.
+
+>This section assumes you have one instance of Foundry running and is not compatible if you followed [Section I. Multiple Instances](#optional-i-multiple-instances). {.is-warning}
 
 ## Archiving Current Install and New Install
 Assuming that you have Foundry installed in `~/foundry` and your userdata in a separate location (likely `~/foundryuserdata`) and is managed by `pm2`. 
@@ -608,7 +605,7 @@ pm2 start foundry
 pm2 list
 ```
 
-You should see only one instance of Foundry listed there (unless you've specifically set up more than one instance in the past). If you see more than one when there shouldn't be, run `pm2 stop all && pm2 delete all` then return to steps [C10](#C10) through [C12](#C12). Once done, check `pm2 list` once again. 
+You should see only one instance of Foundry listed there. If you see more than one when there shouldn't be, run `pm2 stop all && pm2 delete all` then return to steps [C10](#C10) through [C12](#C12). Once done, check `pm2 list` once again. 
 
 >If you are installing on a Raspberry Pi, an ARM device or VM, or potentially some other UNIX OS and are seeing a GLIBC or DLOPEN error, see [section H](#H) in this guide. {.is-warning}
 
@@ -685,6 +682,7 @@ There are a few reasons to have multiple instances of Foundry going at the same 
 >
 >This change means that you must manage your NodeJS install(s) with NVM going forward and cannot use the steps in section [C](#C) of this guide to install or update NodeJS anymore. **Only use this section of the guide moving forward.** {.is-info}
 
+## Compatibility Table
 |Foundry Version|NodeJS Version|
 |-----------|-----------|
 |Foundry v10 to v13|NodeJS 20 or 22 (24 *will not work*)|
