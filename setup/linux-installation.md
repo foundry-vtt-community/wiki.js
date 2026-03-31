@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-31T20:33:02.174Z
+date: 2026-03-31T20:34:36.562Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -705,6 +705,7 @@ These instructions modify the ones in section [C](#C). Read through this whole s
 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
 nvm install 24
 nvm install <version>
 ```
