@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-03-31T20:25:56.646Z
+date: 2026-03-31T20:30:06.167Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -10,6 +10,7 @@ dateCreated: 2021-05-05T21:54:44.555Z
 
 # Recommended Linux Installation and Usage Guide
 
+<a id="A" />[]()
 
 # A. Overview
 ## Objective
@@ -85,7 +86,7 @@ If you get stuck on a particular step, please first ensure that all commands in 
 
 Troubleshooting assistance for this guide can be found on the official Foundry Discord. Copy the link from the specific step number (ie: C5) you are having difficulty with and then post in the **#install-and-connection** channel on the [Foundry Discord](https://discord.gg/foundryvtt).
 
-<a id="B" />
+<a id="B" />[]()
 
 # B. User and General System Setup
 ## Objective
@@ -149,15 +150,11 @@ We will now install the necessary software to run and manage Foundry behind a re
 
 <a id="B5" href="#B5">B5.</a> First, let's update the system to make sure we have everything as up-to-date as possible. This may take a few minutes.
 
-
-  
 ```
 sudo apt update
 sudo apt upgrade -y
 
 ```
-
-
 
 >You may be asked for a password the first time you use a `sudo` command. This is normal. Enter the password for the user. {.is-info}
 
@@ -213,7 +210,7 @@ pm2 startup
 >***REQUIRED STEP*** 
 >You will need to carefully review the output of the `pm2 startup` command. It will include a specific instruction on how to enable pm2 startup on your particular distribution. Copy and paste this command exactly. {.is-info}
 
-<a id="C" />
+<a id="C" />[]()
 
 # C. Foundry and Reverse Proxy Setup
 ## Objective
@@ -390,7 +387,8 @@ pm2 restart foundry
 >If you are hosting on your home network, you **must** use an external device to test the connection to the domain name. You can only test the connection to the internal IP address from within the network. {.is-warning}
 
 > This concludes the portion of the guide that sets Foundry up and running. You may now continue using Foundry this way without issue going forward. {.is-info}
-<a id="D" />
+
+<a id="D" />[]()
 
 # (Optional) D. Accessing Userdata Files with Cyberduck
 ## Objective
@@ -422,7 +420,8 @@ At the end of this optional section, you will be able to directly access the fil
 <a id="D7" href="#D7">D7.</a> Click the **Bookmark** menu, then **New Bookmark**. Close the window that pops up. 
 
 >You now have a bookmarked connection in Cyberduck to the location of your Foundry userdata directory. Simply launch Cyberduck and double click the bookmark to connect and manage your files. {.is-info}
-<a id="E" />
+
+<a id="E" />[]()
 
 # (Optional) E. Creating Swapfile
 ## Objective
@@ -478,13 +477,15 @@ NAME      TYPE      SIZE  USED PRIO
 
 
 You now have a swapfile enabled and should be protected against out-of-memory errors.
-<a id="F" />
+
+<a id="F" />[]()
 
 # (Optional) F. Updating NodeJS
 ## Objective
 
 As Foundry VTT is updated, the minimum requirements for NodeJS are also updated. If you've received a message stating that you must update NodeJS and you have used this guide (or similar guides, such as the Oracle Always Free guide, that use pm2 and the nodesource repo) then this section will describe how to update NodeJS to the latest version. 
 
+>This section assumes you have one instance of Foundry running and is not compatible if you followed [Section I. Multiple Instances](#optional-i-multiple-instances). {.is-warning}
 
 ## Updating NodeJS
 This section assumes that you have set Foundry VTT to be managed by pm2 and have installed NodeJS through their repo as this guide describes. Please copy and paste the instructions carefully. 
@@ -540,7 +541,7 @@ pm2 save
 You've now successfully updated NodeJS and should be good to go! 
 
 You may want to reboot your instance to apply all updates, such as a kernel update. 
-<a id="G" />
+<a id="G" />[]()
 
 # (Optional) G. Performing a Clean Update/Reinstall
 ## Objective
@@ -609,7 +610,7 @@ You should see only one instance of Foundry listed there. If you see more than o
 >If you are installing on a Raspberry Pi, an ARM device or VM, or potentially some other UNIX OS and are seeing a GLIBC or DLOPEN error, see [section H](#H) in this guide. {.is-warning}
 
 You should now have the new version of Foundry running and accessible as before!
-<a id="H" />
+<a id="H" />[]()
 
 # (Optional) H. GLIBC Error Fix
 ## Objective
@@ -658,7 +659,7 @@ pm2 start foundry
 ```
 
 Foundry should now start properly without the GLIBC error!
-<a id="I" /><a></a>
+<a id="I" />[]()
 
 
 # (Optional) I. Multiple Instances
