@@ -2,7 +2,7 @@
 title: ApplicationV2
 description: The Application class is responsible for rendering an HTMLElement into the Foundry Virtual Tabletop user interface.
 published: true
-date: 2025-09-30T22:08:41.737Z
+date: 2026-04-01T20:25:37.735Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-04-18T15:30:54.955Z
@@ -415,7 +415,7 @@ class MyApplication extends HandlebarsApplicationMixin(ApplicationV2) {
         // Only show secret blocks to owner
         secrets: this.document.isOwner,
         // For Actors and Items
-        rollData: this.document.getRollData
+        rollData: this.document.getRollData()
       }
     );
     
