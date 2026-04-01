@@ -2,7 +2,7 @@
 title: Tailscale Funnel
 description: For when normal port forwarding isn't possible but you still want to give easy access to your self-hosted Foundry instance
 published: true
-date: 2026-04-01T15:23:12.512Z
+date: 2026-04-01T15:29:01.102Z
 tags: hosting, setup, networking, self-hosting
 editor: ckeditor
 dateCreated: 2024-06-26T00:44:50.289Z
@@ -51,5 +51,5 @@ dateCreated: 2024-06-26T00:44:50.289Z
 <h3>I don't want my computer's hostname to be seen by my players!</h3>
 <p>You can change the name used on the Tailscale admin page - go to <a href="https://login.tailscale.com/admin/machines">https://login.tailscale.com/admin/machines</a>, click on your machine, click ‘machine settings’, then 'edit machine name'</p>
 <h3><br>Adjust Foundry's port to 10000</h3>
-<p><a href="https://tailscale.com/docs/features/tailscale-funnel#:~:text=Funnel%20can%20only%20listen%20on%20ports%20443%2C%208443%2C%20and%2010000.">According to Tailscale's Docs, the funnel feature only listens on ports 443, 8443, and 10000</a>. After running into several player connection issues with the funnel set to Foundry's defaul port 30000, I adjusted to 10000 and have players are now able to access the funnel server.</p>
+<p><a href="https://tailscale.com/docs/features/tailscale-funnel#:~:text=Funnel%20can%20only%20listen%20on%20ports%20443%2C%208443%2C%20and%2010000.">According to Tailscale's Docs, the funnel feature only listens on ports 443, 8443, and 10000</a>. After running into several player connection issues with the funnel set to Foundry's default port 30000, I adjusted to 10000 and players are now able to access the funnel server. Risk related to opening a regularly monitored port remain, use at your own risk and make sure that you take security precautions for any backdoor attacks.</p>
 <p>&nbsp;</p>
