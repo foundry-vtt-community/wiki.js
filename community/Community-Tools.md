@@ -2,7 +2,7 @@
 title: External Tools
 description: 
 published: true
-date: 2023-02-04T00:25:03.050Z
+date: 2026-04-06T23:13:35.140Z
 tags: tools
 editor: markdown
 dateCreated: 2020-09-23T00:24:58.400Z
@@ -26,6 +26,22 @@ A Foundry VTT Module was released on February 2023:
 
 ### Description
 DunGen is a Dungeon Generator that creates high resolution maps ready to import into Foundry VTT. Alongside the maps, you can also generate a full scene file including pre-built walls to take full advantage of Foundry's lighting feature in only a minute. You can see it in action in [this short video](https://youtu.be/2RlPpLOFkhc).
+
+---
+
+## Dungeon Flow
+
+* **Author**: joshuacc#9988
+* **Version**: 0.2.0
+* **Foundry VTT Compatibility**: 13+
+* **Translation Support**: EN
+
+### Link(s) to Tool
+* https://dungeonflow.app
+
+### Description
+
+Dungeon Flow takes a different approach to dungeon generation. You design your dungeon as a flow graph, laying out how rooms connect and where paths branch, loop, or bottleneck. The engine generates the map layout from that structure and populates rooms with encounters, traps, treasure, and descriptions. Don't like the layout? Regenerate it without losing your structure. Exports directly to Foundry VTT with walls and line-of-sight already built
 
 ---
 
