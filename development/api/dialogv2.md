@@ -2,7 +2,7 @@
 title: DialogV2
 description: A lightweight Application that renders a dialog containing a form with arbitrary content, and some buttons.
 published: true
-date: 2025-11-26T22:33:48.885Z
+date: 2026-04-12T01:49:17.023Z
 tags: documentation, docs
 editor: markdown
 dateCreated: 2024-06-12T23:19:13.654Z
@@ -111,7 +111,7 @@ The `wait` static method is the most flexible of the three and covers a wide ran
 ```js
 const method = await foundry.applications.api.DialogV2.wait({
   window: { title: "D20 Roll" },
-  content: "<p>Roll Method?</p>"
+  content: "<p>Roll Method?</p>",
   // This example does not use i18n strings for the button labels, 
   // but they are automatically localized.
   buttons: [
@@ -126,7 +126,7 @@ const method = await foundry.applications.api.DialogV2.wait({
   {
     label: "Disadvantage",
     action: "disadvantage",
-  },
+  }
   ]
 })
 ```
