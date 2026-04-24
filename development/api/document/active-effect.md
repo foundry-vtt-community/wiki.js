@@ -2,7 +2,7 @@
 title: Active Effect
 description: An embedded document that can be used to modify the attributes of other documents during prepareData
 published: true
-date: 2026-04-19T04:08:25.854Z
+date: 2026-04-24T02:07:54.967Z
 tags: documentation
 editor: markdown
 dateCreated: 2024-06-08T05:46:12.955Z
@@ -302,6 +302,44 @@ Hooks.on("renderActiveEffectConfig", (activeEffectConfig, html, data) => {
   effectsSection.appendChild(datalist);
 });
 ```
+
+---
+
+## Temporay Effects
+Active Effects can be configured to automatically expire after a specific duration or when a certain event occurs.
+### Key Properties
+The following properties are essential for managing these effects:
+- `isTemporary`: This boolean property returns true if the effect has a defined expiry event or if the duration value is a finite number.
+- `isExpiryTrackable`: This determines if an effect is eligible to be managed by the ActiveEffectRegistry. To be trackable, an effect must be persisted, active, embedded, and have a valid start time with a temporary duration.
+- `duration.label`: A derived string that provides a human-readable countdown or status of the effect, such as "3 rounds remaining" or "2 minutes ago". Useful for render on Actors Sheet.
+
+### Expiry Events
+In Foundry VTT v14+, temporary effects are managed by a central [Registry](https://foundryvtt.com/api/v14/classes/foundry.helpers.ActiveEffectRegistry.html). Any time a game event occurs the Registry executes a `refresh` cycle.
+
+The Expiry Event defines the specific trigger that removes an effect. These can be core events or custom events registered via `CONFIG.ActiveEffect.expiryEvents`.
+
+#### Core Expiry Events
+The core-system natively evaluates the following events via the `ActiveEffect#isExpiryEvent` method, defined on `CONST.ACTIVE_EFFECT_EXPIRY_EVENTS`:
+- `combatStart` / `combatEnd`: Triggers when a combat encounter begins or concludes.
+- `roundStart` / `roundEnd`: Triggers at the transition of combat rounds.
+- `turnStart` / `turnEnd`: Triggers when it becomes or cloncludes the turn of the combatant who owns the effect.
+
+#### The Refresh Lifecycle
+When an event triggers the Registry, it follows these steps for every active effect:
+1. **Duration Update**: The effect’s `duration.remaining`  is recalculated. If the remaining duration is still greater than 0, the Registry moves to the next effect.
+2. **Notification**: If the duration did change, the system calls `Actor#onUpdateEffectDurations`.
+	*System Note*: This is the ideal place to re-render UI elements that display countdowns.
+3. **Expiry Validation**: If the `duration.remaining` is 0 o less, the Registry calls `ActiveEffect#isExpiryEvent`.
+	- If it returns **true**, the effect is queued for expiration.
+	- If it returns **false**, the effect remains active (waiting for the correct trigger).
+4. **Final Expiry Action**: : Once the loop finishes, all queued effects are processed based on` CONFIG.ActiveEffect.expiryAction`:
+ - "**update**": Marks duration.expired = true. This suppresses the effect’s changes but keeps the document on the Actor.
+ - "**delete**": The Active Effect document is permanently removed.
+ 
+#### Customization
+Developers looking to customize how effects end should focus on two ways:
+ - You can manually call the `ActiveEffectRegistry#refresh` method with custom events if your system has unique timing needs (e.g., "End of Short Rest").
+ - By overriding `ActiveEffect#isExpiryEvent`, you can change the conditions under which a specific event satisfies an expiry requirement, allowing for logic that differs from core default assumptions.
 
 ### Status Effects
 > Stub
