@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-04-15T16:33:34.510Z
+date: 2026-05-05T15:19:44.465Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -64,6 +64,8 @@ This guide supports most distributions based on Debian 11 or 12, including:
 
 
 Any distribution that uses the `apt` package managers *should* be compatible with this guide, as long as the [Distributions and Installations Types to Avoid](#distributions-and-installation-types-to-avoid) section is followed. 
+
+Arch-based (such as CachyOS), Redhat/Fedora-based, containorized distros, or any distro that does not use the `apt` package manager is **not supported** by this guide. 
 
 ## Distributions and Installation Types to Avoid
 
