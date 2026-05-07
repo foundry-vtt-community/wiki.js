@@ -2,7 +2,7 @@
 title: Netbird Mesh
 description: Only use if you and everyone in your group are willing to install NetBird to access your self-hosted Foundry instance
 published: false
-date: 2026-05-07T19:55:47.065Z
+date: 2026-05-07T20:20:51.605Z
 tags: hosting, self-hosting, netbird, cgnat, vpn, wireguard
 editor: markdown
 dateCreated: 2026-05-07T19:55:47.065Z
@@ -10,50 +10,58 @@ dateCreated: 2026-05-07T19:55:47.065Z
 
 # NetBird Mesh Setup
 
-NetBird is a mesh VPN built on WireGuard. The company is headquartered in Berlin and the software is open source.
+NetBird is a mesh VPN built on WireGuard. It's open source and the company is based in Berlin, which is part of the appeal if you'd rather not route your gaming traffic through a US-based service.
 
-This guide uses NetBird's free hosted service to give your group private access to Foundry. Everyone installs NetBird, joins your network, and connects to the host computer's NetBird address. There is no port forwarding and no public exposure.
+This guide gets your group onto a private NetBird network so they can connect to your Foundry server without you having to port forward, expose anything publicly, or trust a third-party tunnel like Cloudflare. The catch is that everyone needs to install NetBird first. If your group is allergic to installing software, [Tailscale Funnel](/en/setup/hosting/tailscale) is the easier path — public URL, no install needed, but you're trusting a closed-source service for it.
 
-The trade-off is that everyone has to install NetBird before they can play. If your group will not install software, see [Tailscale Funnel](/en/setup/hosting/tailscale) or [Cloudflare Proxying & Tunnel](/en/setup/hosting/cloudflare-proxy-tunnel).
+The free hosted tier from NetBird covers up to 100 devices and 5 users, which is plenty for any home Foundry setup. Clients exist for Windows, macOS, Linux, iOS, and Android, so nobody is going to be left out.
 
-NetBird's free tier covers up to 100 devices and 5 users. Clients run on Windows, macOS, Linux, iOS, and Android.
+## Setting up the host
 
-## Setup
+First, install NetBird on the computer running Foundry. The official install instructions for every supported OS are at <https://docs.netbird.io/get-started/install> — pick yours and follow along. Once it's installed, run `netbird up` (or use the system tray app on Windows and macOS) and authenticate with your NetBird account.
 
-### Host
+Now log into the dashboard at <https://app.netbird.io/peers>. Your host should show up in the peer list within a few seconds. Take note of its NetBird IP — it'll be a `100.x.x.x` address. That's the address everyone will use to reach Foundry.
 
-Install NetBird on the computer running Foundry from <https://docs.netbird.io/how-to/installation>. Run `netbird up` (or use the GUI on Windows and macOS) and authenticate.
+If `100.91.42.17` is ugly to you (and it is, let's be honest), you can rename the host in the dashboard and NetBird will give it a real hostname like `foundry.netbird.cloud` instead. Worth doing.
 
-Open <https://app.netbird.io/peers>. The host will appear in the peer list. Note its NetBird IP — it looks like `100.x.x.x`.
+## Adding your group
 
-### Adding your group
+There are two ways to get your group onto the network: invite them by email, or hand out a setup key.
 
-Invite each person by email from the **Users** page in the dashboard, or generate a setup key from the **Setup Keys** page and share it.
+The email route is the easier one for non-technical players. Go to **Team → Users** in the dashboard and click **Invite User** for each person. They'll get a link, sign up for their own NetBird account, and join your network automatically.
 
-Email invites are simpler — each person creates their own NetBird account and joins your network automatically. Setup keys skip the account creation but require sharing the key.
+The setup key route skips the account creation step — go to **Setup Keys** in the dashboard, generate a key, and share it through whatever chat you use. Faster, but anyone with the key can join, so don't paste it into your campaign's public Discord.
 
-### Each person in the group
+## What each person in the group does
 
-Install NetBird from <https://docs.netbird.io/how-to/installation>, then sign in or paste the setup key.
+Each person installs NetBird from <https://docs.netbird.io/get-started/install>, signs in (or pastes the setup key), and then opens `http://<host-ip>:30000` in their browser, where `<host-ip>` is the address you noted earlier.
 
-Open `http://<host-netbird-ip>:30000` in a browser, replacing `<host-netbird-ip>` with the IP from the host setup.
+That's it for the connection part. From here it should look exactly like a normal Foundry session.
 
-If you want a friendlier address than `100.x.x.x`, rename the host in the dashboard. NetBird assigns it a hostname under your network domain like `foundry.netbird.cloud`.
+## Locking it down
 
-## Locking down the network
+By default, NetBird creates a `Default` policy that allows every peer on your network to talk to every other peer on every port. That's fine for a small private network where you trust everyone, but if you want to be careful — say, prevent a compromised group member's machine from poking at your host on anything other than Foundry — you can replace it with a tighter policy.
 
-By default, anyone on your NetBird network can reach the host. Set up an ACL on the **Access Control** page to restrict the group to only port 30000.
+The flow is roughly:
 
-Set a password on the Gamemaster account in any Foundry world.
+1. Go to **Access Control → Groups** and create two groups: one for the host (e.g. `foundry-host`) and one for your group (e.g. `players`). Assign each peer to the right group from the **Peers** page.
+2. Go to **Access Control → Policies** and click **Add policy**. Set source to `players`, destination to `foundry-host`, protocol to TCP, port to 30000.
+3. Once the new policy is in place, delete the `Default` policy. Without that step, the default rules still apply and the new restriction does nothing.
 
-## Privacy
+Set a password on the GM account in your Foundry world either way. Sounds obvious, but a lot of people skip it because it's a private network. It's the last line of defense if anyone unexpected gets onto your network somehow.
 
-NetBird's hosted control plane sees connection metadata — which devices are connected, when, and their public IPs. It cannot decrypt your Foundry traffic, which is encrypted end-to-end by WireGuard between devices.
+## On privacy
 
-## Troubleshooting
+The hosted version of NetBird means NetBird's company can see metadata about your network — which devices are connected, when, and what their public IPs are. They cannot see your Foundry traffic itself, because WireGuard handles end-to-end encryption between your devices and the private keys never touch their servers. But the metadata visibility is there.
 
-**Someone can't connect.** Check <https://app.netbird.io/peers>. If they show as offline, their NetBird client isn't running. If they show as connected but can't reach Foundry, the host's firewall is blocking port 30000 — check `ufw`, `firewalld`, or `iptables` on Linux, or Windows Defender Firewall on Windows.
+If that bothers you, the alternative is self-hosting NetBird's control plane on your own VPS, which removes their visibility entirely. That's a bigger project than this guide covers, but the official docs at <https://docs.netbird.io/selfhosted/selfhosted-quickstart> are a starting point.
 
-**Someone reaches the host but Foundry doesn't load.** Foundry isn't running on the host. Check `http://localhost:30000` from the host itself.
+## Things that go wrong
 
-**ACLs are blocking someone.** Confirm they're included in the policy that allows port 30000 to the host.
+**Someone can't connect at all.** Check <https://app.netbird.io/peers>. If their device shows offline, the NetBird client isn't running on their end — tell them to start it.
+
+**They show as connected but can't reach Foundry.** The host's firewall is blocking port 30000 from the NetBird interface. On Linux check `ufw`, `firewalld`, or `iptables` — the NetBird interface is `wt0`. On Windows check Windows Defender Firewall.
+
+**The host is up but Foundry doesn't load.** Foundry isn't actually running on the host, or it's listening on a different port. From the host machine itself, check `http://localhost:30000` to confirm Foundry is up.
+
+**You set up an ACL and now nothing works.** Either the new policy doesn't include the right peer or port, or you forgot to delete the `Default` policy after creating the new one. Check **Access Control → Policies** and make sure the right rule is in place and the Default is gone.
