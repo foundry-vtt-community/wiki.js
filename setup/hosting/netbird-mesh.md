@@ -2,7 +2,7 @@
 title: Netbird Mesh
 description: Only use if you and everyone in your group are willing to install NetBird to access your self-hosted Foundry instance
 published: false
-date: 2026-05-07T20:20:51.605Z
+date: 2026-05-07T20:21:04.015Z
 tags: hosting, self-hosting, netbird, cgnat, vpn, wireguard
 editor: markdown
 dateCreated: 2026-05-07T19:55:47.065Z
