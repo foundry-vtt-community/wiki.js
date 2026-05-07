@@ -2,7 +2,7 @@
 title: Netbird Mesh
 description: Only use if you and everyone in your group are willing to install NetBird to access your self-hosted Foundry instance
 published: false
-date: 2026-05-07T20:21:04.015Z
+date: 2026-05-07T20:24:59.797Z
 tags: hosting, self-hosting, netbird, cgnat, vpn, wireguard
 editor: markdown
 dateCreated: 2026-05-07T19:55:47.065Z
@@ -20,7 +20,7 @@ The free hosted tier from NetBird covers up to 100 devices and 5 users, which is
 
 First, install NetBird on the computer running Foundry. The official install instructions for every supported OS are at <https://docs.netbird.io/get-started/install> — pick yours and follow along. Once it's installed, run `netbird up` (or use the system tray app on Windows and macOS) and authenticate with your NetBird account.
 
-Now log into the dashboard at <https://app.netbird.io/peers>. Your host should show up in the peer list within a few seconds. Take note of its NetBird IP — it'll be a `100.x.x.x` address. That's the address everyone will use to reach Foundry.
+Now log into the NetBird dashboard at <https://netbird.io> and head to the **Peers** section. Your host should show up in the peer list within a few seconds. Take note of its NetBird IP — it'll be a `100.x.x.x` address. That's the address everyone will use to reach Foundry.
 
 If `100.91.42.17` is ugly to you (and it is, let's be honest), you can rename the host in the dashboard and NetBird will give it a real hostname like `foundry.netbird.cloud` instead. Worth doing.
 
@@ -58,7 +58,7 @@ If that bothers you, the alternative is self-hosting NetBird's control plane on 
 
 ## Things that go wrong
 
-**Someone can't connect at all.** Check <https://app.netbird.io/peers>. If their device shows offline, the NetBird client isn't running on their end — tell them to start it.
+**Someone can't connect at all.** Check the **Peers** page in the dashboard. If their device shows offline, the NetBird client isn't running on their end — tell them to start it.
 
 **They show as connected but can't reach Foundry.** The host's firewall is blocking port 30000 from the NetBird interface. On Linux check `ufw`, `firewalld`, or `iptables` — the NetBird interface is `wt0`. On Windows check Windows Defender Firewall.
 
