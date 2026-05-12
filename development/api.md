@@ -2,7 +2,7 @@
 title: API Documentation
 description: 
 published: true
-date: 2025-07-25T23:50:51.859Z
+date: 2026-05-12T14:41:47.340Z
 tags: 
 editor: markdown
 dateCreated: 2020-09-23T00:25:27.383Z
@@ -189,7 +189,7 @@ Some guiding questions to ask:
 
 ### Relevant Version Annotation
 
-A shield.io badge must be placed at the top of every page which details the "core version we know this document is up to date as of." This allows readers and contributors alike to know at a glance if the document they're looking at is potentially out of date.
+A shields.io badge must be placed at the top of every page which details the "core version we know this document is up to date as of." This allows readers and contributors alike to know at a glance if the document they're looking at is potentially out of date.
 
 ![Up to date as of v13](https://img.shields.io/badge/FoundryVTT-v13-informational)
 
