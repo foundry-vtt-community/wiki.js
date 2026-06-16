@@ -2,7 +2,7 @@
 title: Always Free Oracle Cloud Hosting Guide for Foundry
 description: This guide provides easy to follow steps for a relatively simple installation of Foundry plus a reverse proxy using Caddy at the end of which you will have a functional cloud-hosted Foundry installation using Oracle Cloud.
 published: true
-date: 2026-06-16T16:51:32.795Z
+date: 2026-06-16T16:55:33.722Z
 tags: foundry, oracle, free, linux, reverse proxy, cloud, https, cloud host, host, foundryvtt, always free, oci, ssl
 editor: markdown
 dateCreated: 2021-04-21T17:55:20.522Z
@@ -60,6 +60,10 @@ While this guide is written to target the Always Free Tier and should not result
 All information in this guide is accurate as of the date it was written. 
 
 >Oracle at its sole discretion may remove access to free tier accounts at any point without warning. {.is-warning} 
+
+>As of **June 14, 2026** Oracle has changed the limits of the Always Free Tier to 2 CPU cores and 12GB of RAM (the 200GB volume space remains unchanged). Users who have previously created instances above these new free limits may see charges. 
+>
+>**If you followed this guide exactly before this date you would remain within the new free tier.** {.is-info}
 
 # B. Account Setup
 ## Objective
@@ -188,7 +192,7 @@ At the end of this section, you will have set up a Compute VM (Virtual Machine) 
 
 <details><summary>How many CPU cores and how much RAM should I use? ▼</summary>
 
-  As of June 7, 2021 Oracle offers [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 4 Ampere cores and 24GB of RAM spread over up to 4 instances, for free. This guide recommends the selection of 1 core and 4GB of RAM as that is more than enough to run Foundry. 
+  As of June 14, 2026 Oracle offers reduced but still [significant and flexible resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm#compute) for their Always Free Tier instances. You can now have up to 2 Ampere cores and 12GB of RAM spread over up to 4 instances, for free. This guide recommends the selection of 1 core and 4GB of RAM as that is more than enough to run Foundry. 
   
   An additional core may help increase performance of Foundry slightly and a few more gigs of RAM could help in the most extreme cases for resource-intensive modules. You can flexibly edit the shape after creation if you want to adjust the resources after creation. 
   
