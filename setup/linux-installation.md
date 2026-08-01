@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-06-15T21:16:39.724Z
+date: 2026-08-01T01:01:23.444Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -285,6 +285,11 @@ node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata
 
 ```
 pm2 start "node $HOME/foundry/main.js --dataPath=$HOME/foundryuserdata" --name foundry
+```
+
+>On versions v14.365 and newer, the file path for the main.js file has changed slightly. Please try this command instead if you are having issues with pm2 giving you "Cannot find module" errors.{.is-warning}
+```
+pm2 start "node $HOME/foundry/resources/app/main.js --dataPath=$HOME/foundryuserdata" --name foundry
 ```
   
 <a id="C11" href="#C11">C11.</a>	Double check pm2 has launched Foundry correctly:
