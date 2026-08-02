@@ -2,13 +2,15 @@
 title: Babele MODによる日本語化
 description: Babele MODを使用した辞典の日本語化の解説です。
 published: true
-date: 2022-10-15T00:09:07.246Z
+date: 2026-08-02T07:37:51.838Z
 tags: 
 editor: markdown
 dateCreated: 2022-10-14T15:03:47.104Z
 ---
 
 # Babele MODによる日本語化
+追記：2026/08/02
+Babele v2.8.0以降では翻訳ファイルが従来形式だと適用されない恐れがあるので、共同翻訳形式で作成することをおすすめします。
 
 最終更新：2022/10/15
 
