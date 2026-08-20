@@ -2,7 +2,7 @@
 title: Publishing a Module
 description: 
 published: true
-date: 2025-02-16T23:11:47.551Z
+date: 2026-08-20T18:21:25.975Z
 tags: 
 editor: markdown
 dateCreated: 2025-02-07T22:15:43.217Z
@@ -92,14 +92,19 @@ Again, edit the `my-user` and `my-module` parts to be your own.
 
 <a id="D6" href="#D6">D6:</a> Now we'll create the zip file. Close the `module.json` file if it's still open, then navigate up a folder into `modules`, so that you can see the folder for your own module.
 
-Right-click your module's folder, and compress it into a zip file:
-- Windows 10: `Send to > Compressed (zipped) folder`
-- Windows 11: `Compress to > zip`
-- macOS: `Compress [folder name]`
+<a id="D6a" href="#D6a">D6a:</a> In your GUI file explorer, right-click your module's folder, and compress it into a zip file:
+ - Windows 10: `Send to > Compressed (zipped) folder`
+ - Windows 11: `Compress to > zip`
+ - MacOS: `Compress [folder name]`
+ - Linux: Different Linux GUI file explorers will have different context menu items, but most will have something similar to the above `Compress` functions that you can use.
 
-<a id="D7" href="#D7">D7:</a> For ease of referring to this file in other places, rename it to `module.zip` now.
+For ease of referring to this file in other places, rename it to `module.zip` now.
 
 >If your OS hides file extensions, make sure you're not accidentally naming it `module.zip.zip`.
+
+<a id="D6b" href="#D6b">D6b:</a> (Alternate) On your command line interface:
+ - Linux/MacOS CLI: run `zip -r module.zip <folder-name>` where `<folder-name>` is replaced with the name of your module folder.
+   - The `zip` commandline app is pre-installed on MacOS and most Linux distros, but if you don't have it, you'll need to install it or a similar to app to create your `module.zip` file.
 
 # E. Upload
 <a id="E1" href="#E1">E1:</a> Head back to your GitHub repository, and click the `uploading an existing file` link in the blue "Quick Setup" section.
@@ -181,7 +186,10 @@ After making all of your content/functionality changes to your module locally, w
 
 <a id="I1" href="#I1">I1:</a> With Foundry closed, go into your module's local folder, and open `module.json` in a text editor.
 
-<a id="I2" href="#I2">I2:</a> Find the `"version":` line, and enter a *new* version number, higher than the last, by whatever amount you feel is appropriate. If the last version was `1.0.0`, and this is update just has some small fixes, `1.0.1` would be appropriate. If it's an entirely new set of content or features, perhaps `2.0.0` would be better. As always, **do not prefix with a `v`**.
+<a id="I2" href="#I2">I2:</a> Find the `"version":` line, and enter a *new* version number, higher than the last, by whatever amount you feel is appropriate. If the last version was `1.0.0`, and this is update just has some small fixes, `1.0.1` would be appropriate. If it's enhancements to existing features or small additions, `1.1.0` might be appropriate. If it's an entirely new set of content or features or if you are increasing the `compatibility` `minimum` value, `2.0.0` would be better. As always, **do not prefix with a `v`**.
+
+>A method for using version numbers like this is called "Semantic Versioning" or "SemVer" for short. You can learn the formal SemVer technique here: https://semver.org/ 
+Foundry does not require the use of SemVer, but does require newer releases to have higher version numbers.  {.is-info}
 
 <a id="I3" href="#I3">I3:</a> Find the `"download":` line, and edit the version number inside that path to match the new number you chose above. The `"manifest":` line doesn't need to change.
 
