@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-08-01T01:05:51.524Z
+date: 2026-08-25T10:56:08.887Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -202,7 +202,7 @@ npm --version
 <a id="B10" href="#B10">B10.</a> Install `pm2`:
 
 ```
-sudo npm install pm2 -g
+npm install pm2 -g
 ```
 <a id="B11" href="#B11">B11.</a> Add `pm2` to startup as the current user. Be sure to carefully read the `blue notice` and follow all instructions given:
 
