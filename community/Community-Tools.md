@@ -2,13 +2,33 @@
 title: External Tools
 description: 
 published: true
-date: 2026-04-06T23:13:35.140Z
+date: 2026-09-22T18:32:30.028Z
 tags: tools
 editor: markdown
 dateCreated: 2020-09-23T00:24:58.400Z
 ---
 
 Foundry tools that work across all or most systems are noted here. These differ from modules as they are not integrated or loaded into Foundry VTT, but instead work externally and provide you with files or code you can import, such as a scene file.
+
+## cros.land Statblock Generator
+
+* **Author**: Kenji Crosland (Discord: kenjic). Free to use; development is supported through Patreon.
+* **Version**: Web app, updated continuously. No install.
+* **Foundry VTT Compatibility**: Exports in the format the [5e Statblock Importer](https://foundryvtt.com/packages/5e-statblock-importer) module reads (that module lists v2.3.15, verified with Foundry Virtual Tabletop 14.357, minimum 12.331). I don't run Foundry Virtual Tabletop myself; the export was built to match the importer's format and users report it working. Corrections welcome.
+* **System Compatibility (If applicable)**: dnd5e
+* **Translation Support**: English only.
+
+### Link(s) to Tool
+* https://cros.land/ai-powered-dnd-5e-monster-statblock-generator/
+
+### Description
+An AI-powered web tool that generates monster statblocks compatible with fifth edition. Pick a challenge rating and a combat role and it builds a full statblock in either the 2014 or the 2024 layout, and can convert a statblock from one to the other. AC, hit points, attack bonus and save DC follow curves fitted to the official monsters, and damage per round comes from the Dungeon Master's Guide bands.
+
+Nothing to install on the web side. Generate a statblock in the browser, copy the Foundry VTT export, then paste it into the 5e Statblock Importer module (by Aioros) to create an actor. Reported working by users rather than tested by me, so please correct this entry if you hit problems. The tool also exports Homebrewery markdown and Improved Initiative JSON.
+
+The free tier allows 5 AI generations per 24 hours, shared between generating statblocks and converting them between editions. There is no signup, and a Patreon membership removes the limit.
+
+---
 
 ## DunGen
 
