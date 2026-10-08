@@ -2,7 +2,7 @@
 title: Localization
 description: A helper class which assists with localization (i18n) and string translation
 published: true
-date: 2025-07-25T23:25:53.676Z
+date: 2026-10-08T14:38:50.870Z
 tags: 
 editor: markdown
 dateCreated: 2024-02-26T18:35:05.621Z
@@ -270,8 +270,8 @@ languageIds:
   - handlebars
 
 # An array of RegExes to find the key usage. **The key should be captured in the first match group**.
-# You should unescape RegEx strings in order to fit in the YAML file
-# To help with this, you can use https://www.freeformatter.com/json-escape.html
+# Unescape RegEx strings before placing them in this YAML file.
+# JSON Unescape decodes one layer: https://jsonviewertool.com/json-unescape
 usageMatchRegex:
   # The following example shows how to detect `t("your.i18n.keys")`
   # the `{key}` will be placed by a proper keypath matching regex,
