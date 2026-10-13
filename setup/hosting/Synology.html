@@ -2,13 +2,14 @@
 title: Synology
 description: A brief guide on setting up foundry on synology.
 published: true
-date: 2022-05-19T13:21:28.720Z
+date: 2026-10-13T14:21:45.030Z
 tags: 
 editor: ckeditor
 dateCreated: 2020-11-10T02:09:22.459Z
 -->
 
 <h1>Introduction</h1>
+<p><strong>[2026-10-13] &nbsp;Be aware before you start that Synology supports only the LTS NodeJS, the latest of which is as of this note is v22. &nbsp;The current editions of Foundry VTT requires v24.</strong></p>
 <p>Your Synology NAS is a great place to host Foundry VTT. It is also quite easy to setup HTTPS thanks to the great integration of Let's Encrypt, the free certificate provider.</p>
 <h2>Setting up Foundry VTT on your NAS</h2>
 <h4>Prerequisites</h4>
@@ -19,7 +20,7 @@ dateCreated: 2020-11-10T02:09:22.459Z
 <h4>Two ways for setting up Foundry VTT on Synology</h4>
 <ul>
   <li>Self-hosting as a base Linux, with some slight changes in the steps. This requires to install NodeJS and run the provided command lines.</li>
-  <li>Run a Docker image and set it up to download your licensed version of Foundry VTT. It can run permanently and be toggled on or off in Docker&nbsp;</li>
+  <li>Run a Docker image and set it up to download your licensed version of Foundry VTT. It can run permanently and be toggled on or off in Docker</li>
 </ul>
 <p>Both allows to run it permanently. The Docker way involves no command line and can be performed by non too technical people.</p>
 <h2>Configuring HTTPS (SSL) on your Foundry VTT web site</h2>
