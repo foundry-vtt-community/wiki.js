@@ -2,7 +2,7 @@
 title: Recommended Linux Installation Guide
 description: Sets up Foundry on linux with Caddy as reverse proxy.
 published: true
-date: 2026-08-25T10:56:08.887Z
+date: 2026-10-23T19:35:57.535Z
 tags: 
 editor: markdown
 dateCreated: 2021-05-05T21:54:44.555Z
@@ -54,9 +54,9 @@ This guide does not cover port forwarding, nor is it an alternative to port forw
 
 ## Preferred Linux Distribution
 
-This guide includes instructions for a number of linux distributions, as described below. If you do not have a strong reason for another distribution, we recommend **Ubuntu 24.04**. 
+This guide includes instructions for a number of linux distributions, as described below. If you do not have a strong reason for another distribution, we recommend **Ubuntu 26.04**. 
 
-This guide supports most distributions based on Debian 11 or 12, including:
+This guide supports most distributions based on Debian 12+, including:
 
 1. Debian
 2. Ubuntu
@@ -81,7 +81,7 @@ Current 64-bit Raspberry Pi OS works and is recommended, but older or 32-bit ver
 - Any distribution or setup that pre-installs a graphical web interface, admin management console, or other server management system
 This guide is **NOT** compatible with setups that include **Plesk**, **Webmin**, **cPanel**, **DirectAdmin**, **Virtualmin** or similar locked down systems intended to be configured by GUI only. 
 
->This guide requires 64 bit Debian 11 or 12 based distributions or higher. Using lower versions may not function properly. 32 bit OSs will have issues with RAM and NodeJS heap size. {.is-info}
+>This guide requires 64 bit Debian 12 based distributions or higher. Using lower versions may not function properly. 32 bit OSs will have issues with RAM and NodeJS heap size. {.is-info}
 
 ## Getting Help
 If you get stuck on a particular step, please first ensure that all commands in black text quotes entered *exactly* as they appear. If multiple commands are included in the black text quotes, copy and paste each line individually and ensure it completes before moving on to the next line.
